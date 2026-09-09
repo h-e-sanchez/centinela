@@ -66,7 +66,8 @@ estática (sin build). [`/datos.html`](https://h-e-sanchez.github.io/centinela/d
 deja explorar 3 corridas reales del motor y ajustar el umbral de alerta en vivo — la
 clasificación se recalcula en el navegador con la misma aritmética que `src/motor.py`,
 pero los datos en sí no se generan ahí (el RNG de JS no reproduce el de Python). El
-modelo de Power BI queda incrustado en la página principal una vez publicado.
+modelo de Power BI queda incrustado en la página principal una vez publicado. Relato,
+mapa de páginas y backlog en [`ROADMAP.md`](ROADMAP.md).
 
 ## English
 
