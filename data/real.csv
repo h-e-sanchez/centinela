@@ -1,0 +1,181 @@
+anio,mes,centro_costo,componente,monto
+2026,1,Operaciones,mano_de_obra,3367977.0
+2026,2,Operaciones,mano_de_obra,5272944.0
+2026,3,Operaciones,mano_de_obra,5227931.0
+2026,4,Operaciones,mano_de_obra,5088220.0
+2026,5,Operaciones,mano_de_obra,5277300.0
+2026,6,Operaciones,mano_de_obra,5590541.0
+2026,7,Operaciones,mano_de_obra,5040689.0
+2026,8,Operaciones,mano_de_obra,6232119.0
+2026,9,Operaciones,mano_de_obra,5110296.0
+2026,10,Operaciones,mano_de_obra,5281191.0
+2026,11,Operaciones,mano_de_obra,5088007.0
+2026,12,Operaciones,mano_de_obra,5286984.0
+2026,1,Operaciones,materiales,801240.0
+2026,2,Operaciones,materiales,706773.0
+2026,3,Operaciones,materiales,671449.0
+2026,4,Operaciones,materiales,646228.0
+2026,5,Operaciones,materiales,663343.0
+2026,6,Operaciones,materiales,661573.0
+2026,7,Operaciones,materiales,662299.0
+2026,8,Operaciones,materiales,656048.0
+2026,9,Operaciones,materiales,681793.0
+2026,10,Operaciones,materiales,688856.0
+2026,11,Operaciones,materiales,681092.0
+2026,12,Operaciones,materiales,698575.0
+2026,1,Operaciones,mantencion,2659084.0
+2026,2,Operaciones,mantencion,2630755.0
+2026,3,Operaciones,mantencion,2621423.0
+2026,4,Operaciones,mantencion,2557871.0
+2026,5,Operaciones,mantencion,2540911.0
+2026,6,Operaciones,mantencion,2597405.0
+2026,7,Operaciones,mantencion,2582837.0
+2026,8,Operaciones,mantencion,2641811.0
+2026,9,Operaciones,mantencion,2677701.0
+2026,10,Operaciones,mantencion,2542681.0
+2026,11,Operaciones,mantencion,3526002.0
+2026,12,Operaciones,mantencion,2570209.0
+2026,1,Comercial,comisiones,1751065.0
+2026,2,Comercial,comisiones,2124621.0
+2026,3,Comercial,comisiones,2163889.0
+2026,4,Comercial,comisiones,2088462.0
+2026,5,Comercial,comisiones,2308973.0
+2026,6,Comercial,comisiones,1765059.0
+2026,7,Comercial,comisiones,2234960.0
+2026,8,Comercial,comisiones,2147830.0
+2026,9,Comercial,comisiones,2194566.0
+2026,10,Comercial,comisiones,2792380.0
+2026,11,Comercial,comisiones,2111656.0
+2026,12,Comercial,comisiones,2094403.0
+2026,1,Comercial,marketing,5624047.0
+2026,2,Comercial,marketing,6060662.0
+2026,3,Comercial,marketing,6197433.0
+2026,4,Comercial,marketing,5961491.0
+2026,5,Comercial,marketing,7748994.0
+2026,6,Comercial,marketing,6040165.0
+2026,7,Comercial,marketing,6233895.0
+2026,8,Comercial,marketing,6247387.0
+2026,9,Comercial,marketing,3801629.0
+2026,10,Comercial,marketing,5995780.0
+2026,11,Comercial,marketing,6037654.0
+2026,12,Comercial,marketing,6016759.0
+2026,1,Comercial,viajes,5664696.0
+2026,2,Comercial,viajes,5590816.0
+2026,3,Comercial,viajes,5622852.0
+2026,4,Comercial,viajes,5540039.0
+2026,5,Comercial,viajes,7391854.0
+2026,6,Comercial,viajes,6700748.0
+2026,7,Comercial,viajes,5814207.0
+2026,8,Comercial,viajes,5517171.0
+2026,9,Comercial,viajes,5757772.0
+2026,10,Comercial,viajes,5578190.0
+2026,11,Comercial,viajes,5364336.0
+2026,12,Comercial,viajes,5542132.0
+2026,1,Administracion y Finanzas,arriendo,6934210.0
+2026,2,Administracion y Finanzas,arriendo,7470681.0
+2026,3,Administracion y Finanzas,arriendo,7061437.0
+2026,4,Administracion y Finanzas,arriendo,7293325.0
+2026,5,Administracion y Finanzas,arriendo,7207380.0
+2026,6,Administracion y Finanzas,arriendo,7568014.0
+2026,7,Administracion y Finanzas,arriendo,6933272.0
+2026,8,Administracion y Finanzas,arriendo,6923303.0
+2026,9,Administracion y Finanzas,arriendo,6967634.0
+2026,10,Administracion y Finanzas,arriendo,6952032.0
+2026,11,Administracion y Finanzas,arriendo,7212412.0
+2026,12,Administracion y Finanzas,arriendo,7032253.0
+2026,1,Administracion y Finanzas,servicios_basicos,1161611.0
+2026,2,Administracion y Finanzas,servicios_basicos,1131345.0
+2026,3,Administracion y Finanzas,servicios_basicos,1177652.0
+2026,4,Administracion y Finanzas,servicios_basicos,1123894.0
+2026,5,Administracion y Finanzas,servicios_basicos,1161680.0
+2026,6,Administracion y Finanzas,servicios_basicos,1119464.0
+2026,7,Administracion y Finanzas,servicios_basicos,1159751.0
+2026,8,Administracion y Finanzas,servicios_basicos,1116824.0
+2026,9,Administracion y Finanzas,servicios_basicos,1377126.0
+2026,10,Administracion y Finanzas,servicios_basicos,1128610.0
+2026,11,Administracion y Finanzas,servicios_basicos,1194701.0
+2026,12,Administracion y Finanzas,servicios_basicos,1134650.0
+2026,1,Administracion y Finanzas,software,3655523.0
+2026,2,Administracion y Finanzas,software,3793508.0
+2026,3,Administracion y Finanzas,software,3657720.0
+2026,4,Administracion y Finanzas,software,3891439.0
+2026,5,Administracion y Finanzas,software,3803267.0
+2026,6,Administracion y Finanzas,software,3819386.0
+2026,7,Administracion y Finanzas,software,3662486.0
+2026,8,Administracion y Finanzas,software,3727982.0
+2026,9,Administracion y Finanzas,software,3580250.0
+2026,10,Administracion y Finanzas,software,3747477.0
+2026,11,Administracion y Finanzas,software,3633287.0
+2026,12,Administracion y Finanzas,software,3622528.0
+2026,1,Personas,capacitacion,730912.0
+2026,2,Personas,capacitacion,707238.0
+2026,3,Personas,capacitacion,713151.0
+2026,4,Personas,capacitacion,692346.0
+2026,5,Personas,capacitacion,742954.0
+2026,6,Personas,capacitacion,717210.0
+2026,7,Personas,capacitacion,767541.0
+2026,8,Personas,capacitacion,735655.0
+2026,9,Personas,capacitacion,713323.0
+2026,10,Personas,capacitacion,712847.0
+2026,11,Personas,capacitacion,752187.0
+2026,12,Personas,capacitacion,734644.0
+2026,1,Personas,beneficios,2219533.0
+2026,2,Personas,beneficios,2101239.0
+2026,3,Personas,beneficios,2169969.0
+2026,4,Personas,beneficios,2147401.0
+2026,5,Personas,beneficios,2928099.0
+2026,6,Personas,beneficios,2106770.0
+2026,7,Personas,beneficios,2164463.0
+2026,8,Personas,beneficios,2056128.0
+2026,9,Personas,beneficios,2144378.0
+2026,10,Personas,beneficios,2092097.0
+2026,11,Personas,beneficios,2171611.0
+2026,12,Personas,beneficios,2054391.0
+2026,1,Personas,reclutamiento,4354927.0
+2026,2,Personas,reclutamiento,4054522.0
+2026,3,Personas,reclutamiento,4256676.0
+2026,4,Personas,reclutamiento,4402443.0
+2026,5,Personas,reclutamiento,5016754.0
+2026,6,Personas,reclutamiento,4523213.0
+2026,7,Personas,reclutamiento,4235402.0
+2026,8,Personas,reclutamiento,4148235.0
+2026,9,Personas,reclutamiento,4291759.0
+2026,10,Personas,reclutamiento,4271059.0
+2026,11,Personas,reclutamiento,4306485.0
+2026,12,Personas,reclutamiento,4299961.0
+2026,1,Tecnologia,licencias,823813.0
+2026,2,Tecnologia,licencias,684221.0
+2026,3,Tecnologia,licencias,676678.0
+2026,4,Tecnologia,licencias,718709.0
+2026,5,Tecnologia,licencias,697969.0
+2026,6,Tecnologia,licencias,694481.0
+2026,7,Tecnologia,licencias,930261.0
+2026,8,Tecnologia,licencias,463573.0
+2026,9,Tecnologia,licencias,425073.0
+2026,10,Tecnologia,licencias,720629.0
+2026,11,Tecnologia,licencias,691519.0
+2026,12,Tecnologia,licencias,717096.0
+2026,1,Tecnologia,infraestructura_cloud,2029398.0
+2026,2,Tecnologia,infraestructura_cloud,2028859.0
+2026,3,Tecnologia,infraestructura_cloud,2034649.0
+2026,4,Tecnologia,infraestructura_cloud,2026985.0
+2026,5,Tecnologia,infraestructura_cloud,1931465.0
+2026,6,Tecnologia,infraestructura_cloud,2012983.0
+2026,7,Tecnologia,infraestructura_cloud,1983009.0
+2026,8,Tecnologia,infraestructura_cloud,1945829.0
+2026,9,Tecnologia,infraestructura_cloud,1971752.0
+2026,10,Tecnologia,infraestructura_cloud,2036564.0
+2026,11,Tecnologia,infraestructura_cloud,1927347.0
+2026,12,Tecnologia,infraestructura_cloud,1986801.0
+2026,1,Tecnologia,soporte,5359499.0
+2026,2,Tecnologia,soporte,5677698.0
+2026,3,Tecnologia,soporte,5072740.0
+2026,4,Tecnologia,soporte,7209185.0
+2026,5,Tecnologia,soporte,5585557.0
+2026,6,Tecnologia,soporte,5319449.0
+2026,7,Tecnologia,soporte,5298155.0
+2026,8,Tecnologia,soporte,5357051.0
+2026,9,Tecnologia,soporte,5384476.0
+2026,10,Tecnologia,soporte,5288179.0
+2026,11,Tecnologia,soporte,5579370.0
+2026,12,Tecnologia,soporte,5275089.0

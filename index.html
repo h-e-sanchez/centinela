@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>centinela — seguimiento de desviación presupuestaria</title>
+<meta name="description" content="Motor de seguimiento de desviación Presupuesto vs. Real por centro de costo, con alertas por umbral configurable. Datos 100% sintéticos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* tema día/noche — mismo patrón que consulta/index.html: defecto siempre claro,
+     el oscuro se activa solo por elección explícita guardada en localStorage. */
+  (function () {
+    var root = document.documentElement;
+    var read = function () { try { return JSON.parse(localStorage.getItem("centinela:theme") || "null"); } catch (e) { return null; } };
+    var current = function () { return read() === "dark" ? "dark" : "light"; };
+    if (current() === "dark") root.dataset.theme = "dark";
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("theme-toggle");
+      if (!btn) return;
+      var paint = function () {
+        var c = current();
+        btn.textContent = c === "dark" ? "día" : "noche";
+        btn.setAttribute("aria-pressed", String(c === "dark"));
+      };
+      paint();
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        if (next === "dark") root.dataset.theme = "dark"; else root.removeAttribute("data-theme");
+        try { localStorage.setItem("centinela:theme", JSON.stringify(next)); } catch (e) {}
+        paint();
+      });
+    });
+  })();
+</script>
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <h1>centinela</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
+      <p class="tagline">Motor de seguimiento de desviación Presupuesto vs. Real por centro de costo,
+        con alertas por umbral configurable — datos 100% sintéticos.</p>
+    </header>
+
+    <section id="motor">
+      <h2>Motor</h2>
+      <p class="hint">Un CLI en Python (sin dependencias externas) cruza un presupuesto planificado
+        contra la ejecución real, calcula la desviación en $ y % por línea, y clasifica cada una en
+        <span class="estado ok">ok</span>, <span class="estado alerta">alerta</span> o
+        <span class="estado critica">crítica</span> según un umbral configurable. Ninguna celda se
+        omite: una línea presupuestada sin gasto real (o viceversa) se completa con monto 0 explícito,
+        no desaparece de la agregación.</p>
+      <table>
+        <thead><tr><th>Centro de costo</th><th>Componente</th><th class="num">Presupuesto</th><th class="num">Real</th><th class="num">Desv. %</th><th>Estado</th></tr></thead>
+        <tbody>
+          <tr><td>Tecnología</td><td>licencias</td><td class="num">$699.020</td><td class="num">$425.073</td><td class="num">-39,2%</td><td><span class="estado critica">crítica</span></td></tr>
+          <tr><td>Operaciones</td><td>mantención</td><td class="num">$2.562.720</td><td class="num">$3.526.002</td><td class="num">+37,6%</td><td><span class="estado critica">crítica</span></td></tr>
+          <tr><td>Comercial</td><td>marketing</td><td class="num">$6.023.534</td><td class="num">$5.624.047</td><td class="num">-6,6%</td><td><span class="estado alerta">alerta</span></td></tr>
+          <tr><td>Administración y Finanzas</td><td>software</td><td class="num">$3.664.414</td><td class="num">$3.655.523</td><td class="num">-0,2%</td><td><span class="estado ok">ok</span></td></tr>
+        </tbody>
+      </table>
+      <p class="hint" style="margin-top: var(--sp-3)">Ejemplo real de una corrida con la semilla por
+        defecto — ver el repo para el código y correrlo con tus propios datos:
+        <a href="https://github.com/h-e-sanchez/centinela">github.com/h-e-sanchez/centinela</a>.</p>
+    </section>
+
+    <section id="modelo">
+      <h2>Modelo</h2>
+      <p class="hint">Las mismas medidas, en Power BI — modelo público, publicado con
+        <a href="docs/how-to-pbi.md">"Publicar en la Web"</a> sobre los datos sintéticos de ejemplo
+        (nunca con datos reales de un empleador).</p>
+      <div class="pbi-embed">
+        <!-- PENDIENTE: iframe de Power BI. Reemplazar este div por el <iframe> que entrega
+             "Publicar en la Web" (ver docs/how-to-pbi.md § Publicar como modelo público). -->
+        <div class="placeholder">Modelo Power BI pendiente de publicar — ver <a href="docs/how-to-pbi.md">docs/how-to-pbi.md</a>.</div>
+      </div>
+    </section>
+
+    <section id="portafolio">
+      <h2>Portafolio</h2>
+      <p class="hint">Este repo es parte de un portafolio más amplio de herramientas de datos —
+        todas con el mismo compromiso: datos sintéticos o del propio visitante, nunca datos reales
+        de un empleador.</p>
+      <div class="callout">
+        <strong>consulta</strong> — motor OLAP embebido en el cliente: SQL sobre CSV y Parquet con
+        DuckDB-WASM, 100% en el navegador, sin backend y sin que el archivo salga del equipo.
+        <a href="https://h-e-sanchez.github.io/consulta/">Ver demo</a> ·
+        <a href="https://github.com/h-e-sanchez/consulta">repo</a>
+      </div>
+    </section>
+
+    <footer>
+      <p class="english">
+        <strong>English:</strong> A dependency-free Python CLI that reconciles a planned budget
+        against actual spend per cost center, computes the $ and % deviation, and classifies each
+        line as ok / warning / critical against a configurable threshold — no cell is dropped, a
+        budgeted line with no matching actual (or vice versa) is filled with an explicit zero rather
+        than silently disappearing from the aggregation. The same logic is modeled in Power BI (DAX
+        measures documented in <code>docs/how-to-pbi.md</code>) and published publicly above via
+        Power BI's "Publish to Web" — synthetic data only, never a real employer's numbers.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
