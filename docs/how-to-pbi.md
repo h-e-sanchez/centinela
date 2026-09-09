@@ -15,7 +15,9 @@
    `monto_real` respectivamente. Reemplazar los valores nulos resultantes por `0` en
    ambas columnas (Transformar → Reemplazar valores) — esto replica en Power Query la
    misma "completitud de grilla" que aplica el motor Python: una celda sin dato real
-   nunca desaparece de la agregación, se cuenta como `0` explícito.
+   nunca desaparece de la agregación, se cuenta como `0` explícito. La columna
+   `grupo_cuenta` (Ingresos / Costos / Gastos Operacionales) viene igual en ambos
+   orígenes — quedarse con una sola copia tras la combinación, no duplicarla.
 3. **Agregar una columna de fecha** en `desviacion` vía Power Query
    (`= #date([anio], [mes], 1)`) para poder relacionarla con el calendario.
 4. **Tabla `Calendario`** (dimensión de fechas, para que funcione time intelligence):
@@ -72,14 +74,28 @@ Líneas en Crítica = CALCULATE(COUNTROWS(desviacion), desviacion[Estado Semáfo
 % Líneas en Alerta = DIVIDE([Líneas en Alerta], COUNTROWS(desviacion))
 ```
 
+```dax
+% Cumplimiento = DIVIDE([Monto Real], [Monto Presupuesto])
+```
+
+```dax
+// Subtotal de Estado de Resultados — el mismo Resultado Operacional que calcula
+// `python -m src.main --estado-resultados`, expresado en DAX filtrando por grupo_cuenta.
+Resultado Operacional =
+CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Ingresos")
+    - CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Costos")
+    - CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Gastos Operacionales")
+```
+
 ## Visuales sugeridos
 
 | Visual | Medidas | Corte |
 |---|---|---|
-| Tarjetas KPI | `Monto Presupuesto`, `Monto Real`, `Desviación %` | (sin corte, totales del período) |
+| Tarjetas KPI | `Monto Presupuesto`, `Monto Real`, `Desviación %`, `% Cumplimiento` | (sin corte, totales del período) |
 | Matriz condicional (formato por `Estado Semáforo`) | `Monto Presupuesto`, `Monto Real`, `Desviación %` | `centro_costo` × `componente` |
 | Línea de tiempo | `Monto Presupuesto`, `Monto Real` | `Calendario[Mes]` |
 | Barras apiladas | `Líneas en Alerta`, `Líneas en Crítica` | `centro_costo` |
+| Tarjeta / cascada | `Resultado Operacional` | `grupo_cuenta` (Ingresos/Costos/Gastos Operacionales), estilo Estado de Resultados — ver [demo](https://h-e-sanchez.github.io/centinela/estado-resultados.html) |
 | Tabla detalle | todas las columnas de `desviacion` + `Estado Semáforo` | filtrada a `Estado Semáforo <> "OK"` |
 
 ## Publicar como modelo público
@@ -109,7 +125,7 @@ usar "Publicar en la Web" con datos reales de una empresa** — para eso existe
 2. Abrir Power BI Desktop, cargar `presupuesto.csv` y `real.csv`.
 3. Combinar en Power Query según el paso 2 de "Modelo de datos" arriba.
 4. Crear la tabla `Calendario` y la relación.
-5. Crear la columna calculada `Estado Semáforo` y las 6 medidas.
+5. Crear la columna calculada `Estado Semáforo` y las 9 medidas.
 6. Armar el layout con los visuales sugeridos.
 7. Publicar en la Web (ver sección anterior) y pegar el `<iframe>` en `index.html`.
 8. Exportar 1-2 capturas de pantalla del reporte para el README (opcional).

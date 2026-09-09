@@ -69,6 +69,26 @@ def test_semillas_distintas_producen_reales_distintos(tmp_path):
 
 def test_columnas_esperadas(tmp_path):
     presupuesto, real = _generar(tmp_path)
-    columnas_esperadas = {"anio", "mes", "centro_costo", "componente", "monto"}
+    columnas_esperadas = {"anio", "mes", "centro_costo", "componente", "grupo_cuenta", "monto"}
     assert set(presupuesto[0].keys()) == columnas_esperadas
     assert set(real[0].keys()) == columnas_esperadas
+
+
+def test_incluye_una_linea_de_ingresos(tmp_path):
+    presupuesto, _ = _generar(tmp_path)
+    grupos = {f["grupo_cuenta"] for f in presupuesto}
+    assert grupos == {"Ingresos", "Costos", "Gastos Operacionales"}
+
+
+def test_ingresos_superan_a_costos_y_gastos_en_presupuesto(tmp_path):
+    # No es un requisito duro del motor, pero sí de los datos de ejemplo: un
+    # negocio sintético con Resultado Operacional negativo todos los meses no
+    # sirve para demostrar el caso "ok" del semáforo.
+    presupuesto, _ = _generar(tmp_path, meses=1)
+    por_grupo = {}
+    for f in presupuesto:
+        por_grupo[f["grupo_cuenta"]] = por_grupo.get(f["grupo_cuenta"], 0.0) + float(f["monto"])
+    resultado_operacional = (
+        por_grupo["Ingresos"] - por_grupo["Costos"] - por_grupo["Gastos Operacionales"]
+    )
+    assert resultado_operacional > 0

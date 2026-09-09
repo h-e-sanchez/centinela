@@ -151,6 +151,10 @@ th, td { text-align: left; padding: 6px var(--sp-3); border-bottom: 1px solid va
 th { font-family: var(--sans); font-weight: 600; color: var(--muted); }
 td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
 
+/* Fila de subtotal (ej. Resultado Operacional en el Estado de Resultados) —
+   se distingue de las líneas de detalle sin depender solo del <strong>. */
+tr.subtotal td { border-top: 2px solid var(--border-strong); background: var(--surface-2); }
+
 .estado { font-family: var(--mono); font-size: 0.82em; padding: 1px 6px; border-radius: var(--r); }
 .estado.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, transparent); }
 .estado.alerta { color: var(--alerta); background: color-mix(in srgb, var(--alerta) 16%, transparent); }

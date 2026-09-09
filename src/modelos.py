@@ -9,6 +9,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+# Grupo/naturaleza de cuenta — la clasificación mínima que permite armar un Estado de
+# Resultados (Ingresos - Costos - Gastos Operacionales = Resultado Operacional) en vez
+# de solo una lista plana de líneas con desviación. Deliberadamente 3 grupos, no el P&L
+# completo de 4+ niveles (Costo de Venta / Margen Bruto / Gastos Admin-Ventas por
+# separado) — el modelo sintético no sostiene esa granularidad con datos reales.
+GRUPOS_CUENTA = ("Ingresos", "Costos", "Gastos Operacionales")
+
 
 @dataclass(frozen=True)
 class LineaPresupuesto:
@@ -16,6 +23,7 @@ class LineaPresupuesto:
     mes: int
     centro_costo: str
     componente: str
+    grupo_cuenta: str
     monto: float
 
 
@@ -25,6 +33,7 @@ class LineaReal:
     mes: int
     centro_costo: str
     componente: str
+    grupo_cuenta: str
     monto: float
 
 
@@ -54,8 +63,24 @@ class LineaDesviacion:
     mes: int
     centro_costo: str
     componente: str
+    grupo_cuenta: str
     monto_presupuesto: float
     monto_real: float
     desviacion_monto: float
     desviacion_pct: float | None  # None cuando monto_presupuesto es 0
     estado: str  # "ok" | "alerta" | "critica"
+
+
+@dataclass(frozen=True)
+class ResumenGrupo:
+    """Un subtotal — de un grupo de cuenta (Ingresos/Costos/Gastos Operacionales) o
+    del Resultado Operacional derivado. Misma forma que LineaDesviacion sin las
+    columnas de detalle (centro de costo/componente), porque ya es una agregación.
+    """
+
+    nombre: str
+    monto_presupuesto: float
+    monto_real: float
+    desviacion_monto: float
+    desviacion_pct: float | None
+    estado: str

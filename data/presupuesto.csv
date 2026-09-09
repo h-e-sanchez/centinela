@@ -1,181 +1,217 @@
-anio,mes,centro_costo,componente,monto
-2026,1,Operaciones,mano_de_obra,5295701.0
-2026,2,Operaciones,mano_de_obra,5295701.0
-2026,3,Operaciones,mano_de_obra,5295701.0
-2026,4,Operaciones,mano_de_obra,5295701.0
-2026,5,Operaciones,mano_de_obra,5295701.0
-2026,6,Operaciones,mano_de_obra,5295701.0
-2026,7,Operaciones,mano_de_obra,5295701.0
-2026,8,Operaciones,mano_de_obra,5295701.0
-2026,9,Operaciones,mano_de_obra,5295701.0
-2026,10,Operaciones,mano_de_obra,5295701.0
-2026,11,Operaciones,mano_de_obra,5295701.0
-2026,12,Operaciones,mano_de_obra,5295701.0
-2026,1,Operaciones,materiales,687581.0
-2026,2,Operaciones,materiales,687581.0
-2026,3,Operaciones,materiales,687581.0
-2026,4,Operaciones,materiales,687581.0
-2026,5,Operaciones,materiales,687581.0
-2026,6,Operaciones,materiales,687581.0
-2026,7,Operaciones,materiales,687581.0
-2026,8,Operaciones,materiales,687581.0
-2026,9,Operaciones,materiales,687581.0
-2026,10,Operaciones,materiales,687581.0
-2026,11,Operaciones,materiales,687581.0
-2026,12,Operaciones,materiales,687581.0
-2026,1,Operaciones,mantencion,2562720.0
-2026,2,Operaciones,mantencion,2562720.0
-2026,3,Operaciones,mantencion,2562720.0
-2026,4,Operaciones,mantencion,2562720.0
-2026,5,Operaciones,mantencion,2562720.0
-2026,6,Operaciones,mantencion,2562720.0
-2026,7,Operaciones,mantencion,2562720.0
-2026,8,Operaciones,mantencion,2562720.0
-2026,9,Operaciones,mantencion,2562720.0
-2026,10,Operaciones,mantencion,2562720.0
-2026,11,Operaciones,mantencion,2562720.0
-2026,12,Operaciones,mantencion,2562720.0
-2026,1,Comercial,comisiones,2174081.0
-2026,2,Comercial,comisiones,2174081.0
-2026,3,Comercial,comisiones,2174081.0
-2026,4,Comercial,comisiones,2174081.0
-2026,5,Comercial,comisiones,2174081.0
-2026,6,Comercial,comisiones,2174081.0
-2026,7,Comercial,comisiones,2174081.0
-2026,8,Comercial,comisiones,2174081.0
-2026,9,Comercial,comisiones,2174081.0
-2026,10,Comercial,comisiones,2174081.0
-2026,11,Comercial,comisiones,2174081.0
-2026,12,Comercial,comisiones,2174081.0
-2026,1,Comercial,marketing,6023534.0
-2026,2,Comercial,marketing,6023534.0
-2026,3,Comercial,marketing,6023534.0
-2026,4,Comercial,marketing,6023534.0
-2026,5,Comercial,marketing,6023534.0
-2026,6,Comercial,marketing,6023534.0
-2026,7,Comercial,marketing,6023534.0
-2026,8,Comercial,marketing,6023534.0
-2026,9,Comercial,marketing,6023534.0
-2026,10,Comercial,marketing,6023534.0
-2026,11,Comercial,marketing,6023534.0
-2026,12,Comercial,marketing,6023534.0
-2026,1,Comercial,viajes,5575246.0
-2026,2,Comercial,viajes,5575246.0
-2026,3,Comercial,viajes,5575246.0
-2026,4,Comercial,viajes,5575246.0
-2026,5,Comercial,viajes,5575246.0
-2026,6,Comercial,viajes,5575246.0
-2026,7,Comercial,viajes,5575246.0
-2026,8,Comercial,viajes,5575246.0
-2026,9,Comercial,viajes,5575246.0
-2026,10,Comercial,viajes,5575246.0
-2026,11,Comercial,viajes,5575246.0
-2026,12,Comercial,viajes,5575246.0
-2026,1,Administracion y Finanzas,arriendo,7191347.0
-2026,2,Administracion y Finanzas,arriendo,7191347.0
-2026,3,Administracion y Finanzas,arriendo,7191347.0
-2026,4,Administracion y Finanzas,arriendo,7191347.0
-2026,5,Administracion y Finanzas,arriendo,7191347.0
-2026,6,Administracion y Finanzas,arriendo,7191347.0
-2026,7,Administracion y Finanzas,arriendo,7191347.0
-2026,8,Administracion y Finanzas,arriendo,7191347.0
-2026,9,Administracion y Finanzas,arriendo,7191347.0
-2026,10,Administracion y Finanzas,arriendo,7191347.0
-2026,11,Administracion y Finanzas,arriendo,7191347.0
-2026,12,Administracion y Finanzas,arriendo,7191347.0
-2026,1,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,2,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,3,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,4,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,5,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,6,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,7,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,8,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,9,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,10,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,11,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,12,Administracion y Finanzas,servicios_basicos,1152041.0
-2026,1,Administracion y Finanzas,software,3664414.0
-2026,2,Administracion y Finanzas,software,3664414.0
-2026,3,Administracion y Finanzas,software,3664414.0
-2026,4,Administracion y Finanzas,software,3664414.0
-2026,5,Administracion y Finanzas,software,3664414.0
-2026,6,Administracion y Finanzas,software,3664414.0
-2026,7,Administracion y Finanzas,software,3664414.0
-2026,8,Administracion y Finanzas,software,3664414.0
-2026,9,Administracion y Finanzas,software,3664414.0
-2026,10,Administracion y Finanzas,software,3664414.0
-2026,11,Administracion y Finanzas,software,3664414.0
-2026,12,Administracion y Finanzas,software,3664414.0
-2026,1,Personas,capacitacion,723479.0
-2026,2,Personas,capacitacion,723479.0
-2026,3,Personas,capacitacion,723479.0
-2026,4,Personas,capacitacion,723479.0
-2026,5,Personas,capacitacion,723479.0
-2026,6,Personas,capacitacion,723479.0
-2026,7,Personas,capacitacion,723479.0
-2026,8,Personas,capacitacion,723479.0
-2026,9,Personas,capacitacion,723479.0
-2026,10,Personas,capacitacion,723479.0
-2026,11,Personas,capacitacion,723479.0
-2026,12,Personas,capacitacion,723479.0
-2026,1,Personas,beneficios,2139785.0
-2026,2,Personas,beneficios,2139785.0
-2026,3,Personas,beneficios,2139785.0
-2026,4,Personas,beneficios,2139785.0
-2026,5,Personas,beneficios,2139785.0
-2026,6,Personas,beneficios,2139785.0
-2026,7,Personas,beneficios,2139785.0
-2026,8,Personas,beneficios,2139785.0
-2026,9,Personas,beneficios,2139785.0
-2026,10,Personas,beneficios,2139785.0
-2026,11,Personas,beneficios,2139785.0
-2026,12,Personas,beneficios,2139785.0
-2026,1,Personas,reclutamiento,4290165.0
-2026,2,Personas,reclutamiento,4290165.0
-2026,3,Personas,reclutamiento,4290165.0
-2026,4,Personas,reclutamiento,4290165.0
-2026,5,Personas,reclutamiento,4290165.0
-2026,6,Personas,reclutamiento,4290165.0
-2026,7,Personas,reclutamiento,4290165.0
-2026,8,Personas,reclutamiento,4290165.0
-2026,9,Personas,reclutamiento,4290165.0
-2026,10,Personas,reclutamiento,4290165.0
-2026,11,Personas,reclutamiento,4290165.0
-2026,12,Personas,reclutamiento,4290165.0
-2026,1,Tecnologia,licencias,699020.0
-2026,2,Tecnologia,licencias,699020.0
-2026,3,Tecnologia,licencias,699020.0
-2026,4,Tecnologia,licencias,699020.0
-2026,5,Tecnologia,licencias,699020.0
-2026,6,Tecnologia,licencias,699020.0
-2026,7,Tecnologia,licencias,699020.0
-2026,8,Tecnologia,licencias,699020.0
-2026,9,Tecnologia,licencias,699020.0
-2026,10,Tecnologia,licencias,699020.0
-2026,11,Tecnologia,licencias,699020.0
-2026,12,Tecnologia,licencias,699020.0
-2026,1,Tecnologia,infraestructura_cloud,1991282.0
-2026,2,Tecnologia,infraestructura_cloud,1991282.0
-2026,3,Tecnologia,infraestructura_cloud,1991282.0
-2026,4,Tecnologia,infraestructura_cloud,1991282.0
-2026,5,Tecnologia,infraestructura_cloud,1991282.0
-2026,6,Tecnologia,infraestructura_cloud,1991282.0
-2026,7,Tecnologia,infraestructura_cloud,1991282.0
-2026,8,Tecnologia,infraestructura_cloud,1991282.0
-2026,9,Tecnologia,infraestructura_cloud,1991282.0
-2026,10,Tecnologia,infraestructura_cloud,1991282.0
-2026,11,Tecnologia,infraestructura_cloud,1991282.0
-2026,12,Tecnologia,infraestructura_cloud,1991282.0
-2026,1,Tecnologia,soporte,5374133.0
-2026,2,Tecnologia,soporte,5374133.0
-2026,3,Tecnologia,soporte,5374133.0
-2026,4,Tecnologia,soporte,5374133.0
-2026,5,Tecnologia,soporte,5374133.0
-2026,6,Tecnologia,soporte,5374133.0
-2026,7,Tecnologia,soporte,5374133.0
-2026,8,Tecnologia,soporte,5374133.0
-2026,9,Tecnologia,soporte,5374133.0
-2026,10,Tecnologia,soporte,5374133.0
-2026,11,Tecnologia,soporte,5374133.0
-2026,12,Tecnologia,soporte,5374133.0
+anio,mes,centro_costo,componente,grupo_cuenta,monto
+2026,1,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,2,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,3,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,4,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,5,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,6,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,7,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,8,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,9,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,10,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,11,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,12,Ingresos,ventas_producto_a,Ingresos,27788536.0
+2026,1,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,2,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,3,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,4,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,5,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,6,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,7,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,8,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,9,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,10,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,11,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,12,Ingresos,ventas_producto_b,Ingresos,15500215.0
+2026,1,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,2,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,3,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,4,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,5,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,6,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,7,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,8,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,9,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,10,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,11,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,12,Ingresos,ventas_servicios,Ingresos,20500586.0
+2026,1,Operaciones,mano_de_obra,Costos,2174081.0
+2026,2,Operaciones,mano_de_obra,Costos,2174081.0
+2026,3,Operaciones,mano_de_obra,Costos,2174081.0
+2026,4,Operaciones,mano_de_obra,Costos,2174081.0
+2026,5,Operaciones,mano_de_obra,Costos,2174081.0
+2026,6,Operaciones,mano_de_obra,Costos,2174081.0
+2026,7,Operaciones,mano_de_obra,Costos,2174081.0
+2026,8,Operaciones,mano_de_obra,Costos,2174081.0
+2026,9,Operaciones,mano_de_obra,Costos,2174081.0
+2026,10,Operaciones,mano_de_obra,Costos,2174081.0
+2026,11,Operaciones,mano_de_obra,Costos,2174081.0
+2026,12,Operaciones,mano_de_obra,Costos,2174081.0
+2026,1,Operaciones,materiales,Costos,6023534.0
+2026,2,Operaciones,materiales,Costos,6023534.0
+2026,3,Operaciones,materiales,Costos,6023534.0
+2026,4,Operaciones,materiales,Costos,6023534.0
+2026,5,Operaciones,materiales,Costos,6023534.0
+2026,6,Operaciones,materiales,Costos,6023534.0
+2026,7,Operaciones,materiales,Costos,6023534.0
+2026,8,Operaciones,materiales,Costos,6023534.0
+2026,9,Operaciones,materiales,Costos,6023534.0
+2026,10,Operaciones,materiales,Costos,6023534.0
+2026,11,Operaciones,materiales,Costos,6023534.0
+2026,12,Operaciones,materiales,Costos,6023534.0
+2026,1,Operaciones,mantencion,Costos,5575246.0
+2026,2,Operaciones,mantencion,Costos,5575246.0
+2026,3,Operaciones,mantencion,Costos,5575246.0
+2026,4,Operaciones,mantencion,Costos,5575246.0
+2026,5,Operaciones,mantencion,Costos,5575246.0
+2026,6,Operaciones,mantencion,Costos,5575246.0
+2026,7,Operaciones,mantencion,Costos,5575246.0
+2026,8,Operaciones,mantencion,Costos,5575246.0
+2026,9,Operaciones,mantencion,Costos,5575246.0
+2026,10,Operaciones,mantencion,Costos,5575246.0
+2026,11,Operaciones,mantencion,Costos,5575246.0
+2026,12,Operaciones,mantencion,Costos,5575246.0
+2026,1,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,2,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,3,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,4,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,5,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,6,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,7,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,8,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,9,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,10,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,11,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,12,Comercial,comisiones,Gastos Operacionales,7191347.0
+2026,1,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,2,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,3,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,4,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,5,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,6,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,7,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,8,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,9,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,10,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,11,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,12,Comercial,marketing,Gastos Operacionales,1152041.0
+2026,1,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,2,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,3,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,4,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,5,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,6,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,7,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,8,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,9,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,10,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,11,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,12,Comercial,viajes,Gastos Operacionales,3664414.0
+2026,1,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,2,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,3,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,4,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,5,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,6,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,7,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,8,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,9,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,10,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,11,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,12,Administracion y Finanzas,arriendo,Gastos Operacionales,723479.0
+2026,1,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,2,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,3,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,4,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,5,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,6,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,7,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,8,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,9,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,10,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,11,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,12,Administracion y Finanzas,servicios_basicos,Gastos Operacionales,2139785.0
+2026,1,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,2,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,3,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,4,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,5,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,6,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,7,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,8,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,9,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,10,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,11,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,12,Administracion y Finanzas,software,Gastos Operacionales,4290165.0
+2026,1,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,2,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,3,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,4,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,5,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,6,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,7,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,8,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,9,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,10,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,11,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,12,Personas,capacitacion,Gastos Operacionales,699020.0
+2026,1,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,2,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,3,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,4,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,5,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,6,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,7,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,8,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,9,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,10,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,11,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,12,Personas,beneficios,Gastos Operacionales,1991282.0
+2026,1,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,2,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,3,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,4,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,5,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,6,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,7,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,8,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,9,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,10,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,11,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,12,Personas,reclutamiento,Gastos Operacionales,5374133.0
+2026,1,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,2,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,3,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,4,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,5,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,6,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,7,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,8,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,9,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,10,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,11,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,12,Tecnologia,licencias,Gastos Operacionales,4587061.0
+2026,1,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,2,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,3,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,4,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,5,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,6,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,7,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,8,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,9,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,10,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,11,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,12,Tecnologia,infraestructura_cloud,Gastos Operacionales,2153305.0
+2026,1,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,2,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,3,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,4,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,5,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,6,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,7,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,8,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,9,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,10,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,11,Tecnologia,soporte,Gastos Operacionales,4919493.0
+2026,12,Tecnologia,soporte,Gastos Operacionales,4919493.0

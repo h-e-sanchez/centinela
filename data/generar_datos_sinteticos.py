@@ -6,6 +6,11 @@ tests pueden verificar que el motor las clasifica exactamente donde deben
 caer. Ningún dato real de ningún empleador: centros de costo y componentes
 son genéricos.
 
+Cada centro de costo (incluida la línea de Ingresos) declara su grupo_cuenta
+("Ingresos" / "Costos" / "Gastos Operacionales") — la clasificación mínima que
+permite armar un Estado de Resultados (Resultado Operacional = Ingresos -
+Costos - Gastos Operacionales), no solo una lista plana de gastos.
+
 Uso:
     python data/generar_datos_sinteticos.py
     python data/generar_datos_sinteticos.py --anio 2026 --meses 12 --seed 42
@@ -20,29 +25,59 @@ from pathlib import Path
 
 SEMILLA = 42
 
-CENTROS_COSTO = {
-    "Operaciones": ["mano_de_obra", "materiales", "mantencion"],
-    "Comercial": ["comisiones", "marketing", "viajes"],
-    "Administracion y Finanzas": ["arriendo", "servicios_basicos", "software"],
-    "Personas": ["capacitacion", "beneficios", "reclutamiento"],
-    "Tecnologia": ["licencias", "infraestructura_cloud", "soporte"],
+# Rango de monto default para centros de costo/gasto. La línea de Ingresos usa un
+# rango propio, mucho mayor, para que el negocio sintético tenga margen positivo.
+RANGO_MONTO_BASE = (500_000, 8_000_000)
+RANGO_MONTO_INGRESOS = (15_000_000, 35_000_000)
+
+CENTROS = {
+    "Ingresos": {
+        "grupo_cuenta": "Ingresos",
+        "componentes": ["ventas_producto_a", "ventas_producto_b", "ventas_servicios"],
+        "rango_monto": RANGO_MONTO_INGRESOS,
+    },
+    "Operaciones": {
+        "grupo_cuenta": "Costos",
+        "componentes": ["mano_de_obra", "materiales", "mantencion"],
+        "rango_monto": RANGO_MONTO_BASE,
+    },
+    "Comercial": {
+        "grupo_cuenta": "Gastos Operacionales",
+        "componentes": ["comisiones", "marketing", "viajes"],
+        "rango_monto": RANGO_MONTO_BASE,
+    },
+    "Administracion y Finanzas": {
+        "grupo_cuenta": "Gastos Operacionales",
+        "componentes": ["arriendo", "servicios_basicos", "software"],
+        "rango_monto": RANGO_MONTO_BASE,
+    },
+    "Personas": {
+        "grupo_cuenta": "Gastos Operacionales",
+        "componentes": ["capacitacion", "beneficios", "reclutamiento"],
+        "rango_monto": RANGO_MONTO_BASE,
+    },
+    "Tecnologia": {
+        "grupo_cuenta": "Gastos Operacionales",
+        "componentes": ["licencias", "infraestructura_cloud", "soporte"],
+        "rango_monto": RANGO_MONTO_BASE,
+    },
 }
 
-RANGO_MONTO_BASE = (500_000, 8_000_000)
 TASA_DESVIACION_GRANDE = 0.08  # fracción de líneas con una desviación >=15% inyectada a propósito
 
 
 def generar_presupuesto(anio: int, meses: int, rng: random.Random) -> list[dict]:
     filas = []
-    for centro, componentes in CENTROS_COSTO.items():
-        for componente in componentes:
-            monto_base = rng.uniform(*RANGO_MONTO_BASE)
+    for centro, datos in CENTROS.items():
+        for componente in datos["componentes"]:
+            monto_base = rng.uniform(*datos["rango_monto"])
             for mes in range(1, meses + 1):
                 filas.append({
                     "anio": anio,
                     "mes": mes,
                     "centro_costo": centro,
                     "componente": componente,
+                    "grupo_cuenta": datos["grupo_cuenta"],
                     "monto": round(monto_base, 0),
                 })
     return filas
@@ -70,8 +105,9 @@ def generar_real(presupuesto: list[dict], rng: random.Random) -> list[dict]:
 
 def escribir_csv(filas: list[dict], ruta_salida: Path) -> None:
     ruta_salida.parent.mkdir(parents=True, exist_ok=True)
+    campos = ["anio", "mes", "centro_costo", "componente", "grupo_cuenta", "monto"]
     with ruta_salida.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["anio", "mes", "centro_costo", "componente", "monto"])
+        writer = csv.DictWriter(f, fieldnames=campos)
         writer.writeheader()
         writer.writerows(filas)
 
