@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>centinela — Datos</title>
+<meta name="description" content="Explora las 3 corridas de ejemplo del motor y ajusta el umbral de alerta en vivo — Estado de Resultados y detalle de líneas recalculados al vuelo. Datos 100% sintéticos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var root = document.documentElement;
+    var read = function () { try { return JSON.parse(localStorage.getItem("centinela:theme") || "null"); } catch (e) { return null; } };
+    var current = function () { return read() === "dark" ? "dark" : "light"; };
+    if (current() === "dark") root.dataset.theme = "dark";
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("theme-toggle");
+      if (!btn) return;
+      var paint = function () {
+        var c = current();
+        btn.textContent = c === "dark" ? "día" : "noche";
+        btn.setAttribute("aria-pressed", String(c === "dark"));
+      };
+      paint();
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        if (next === "dark") root.dataset.theme = "dark"; else root.removeAttribute("data-theme");
+        try { localStorage.setItem("centinela:theme", JSON.stringify(next)); } catch (e) {}
+        paint();
+      });
+    });
+  })();
+</script>
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <h1>Datos</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
+      <p class="tagline"><a href="index.html">← centinela</a> — 3 corridas reales del motor Python
+        (no generadas en el navegador), con el umbral de alerta recalculado en vivo con la misma
+        lógica del CLI.</p>
+    </header>
+
+    <section id="controles">
+      <p class="hint">El generador usa el RNG de Python (<code>random.Random</code>), que no se
+        reproduce con el mismo resultado en JavaScript — por eso estos son <strong>3 ejemplos
+        reales</strong> ya generados con <code>python data/exportar_ejemplos_web.py</code>, no una
+        semilla que "generas" acá. Lo que sí se recalcula en vivo, con exactamente la misma
+        aritmética que <code>src/motor.py</code>, es la clasificación ok/alerta/crítica según el
+        umbral que elijas.</p>
+      <div class="form-controls">
+        <label>ejemplo (semilla)
+          <select id="ejemplo-select">
+            <option value="42" selected>42 (default)</option>
+            <option value="7">7</option>
+            <option value="123">123</option>
+          </select>
+        </label>
+        <label>mes
+          <select id="mes-select"></select>
+        </label>
+        <label>umbral alerta (%)
+          <input type="number" id="umbral-pct" value="5" min="0" max="100" step="0.5">
+        </label>
+        <label>umbral crítico (%)
+          <input type="number" id="umbral-critico-pct" value="15" min="0" max="100" step="0.5">
+        </label>
+      </div>
+    </section>
+
+    <section id="eerr">
+      <h2>Estado de Resultados</h2>
+      <p class="hint">Columnas clave, no las 20+ de un export SAP real. La fila de
+        <strong>Resultado Operacional</strong> (Ingresos − Costos − Gastos Operacionales) es un
+        subtotal con su propio semáforo, no el promedio de las otras tres.</p>
+      <table id="tabla-eerr">
+        <thead><tr><th>Grupo</th><th class="num">Presupuesto</th><th class="num">Real</th><th class="num">Desv. %</th><th>Estado</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="detalle">
+      <h2>Detalle de líneas</h2>
+      <p class="hint" id="resumen-detalle"></p>
+      <div class="table-scroll">
+        <table id="tabla-detalle">
+          <thead><tr><th>Centro de costo</th><th>Componente</th><th>Grupo</th><th class="num">Presupuesto</th><th class="num">Real</th><th class="num">Desv. %</th><th>Estado</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p class="english">
+        <strong>English:</strong> 3 real runs of the Python engine (not generated in the browser —
+        Python's RNG does not reproduce the same output in JavaScript, so these are bundled
+        examples, not a live seed). What does recompute live, with the exact same arithmetic as
+        <code>src/motor.py</code>, is the ok/warning/critical classification against whatever
+        threshold you choose, including the Operating Result subtotal.
+      </p>
+    </footer>
+  </main>
+  <script src="datos.js"></script>
+</body>
+</html>

@@ -95,7 +95,7 @@ CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Ingresos")
 | Matriz condicional (formato por `Estado Semáforo`) | `Monto Presupuesto`, `Monto Real`, `Desviación %` | `centro_costo` × `componente` |
 | Línea de tiempo | `Monto Presupuesto`, `Monto Real` | `Calendario[Mes]` |
 | Barras apiladas | `Líneas en Alerta`, `Líneas en Crítica` | `centro_costo` |
-| Tarjeta / cascada | `Resultado Operacional` | `grupo_cuenta` (Ingresos/Costos/Gastos Operacionales), estilo Estado de Resultados — ver [demo](https://h-e-sanchez.github.io/centinela/estado-resultados.html) |
+| Tarjeta / cascada | `Resultado Operacional` | `grupo_cuenta` (Ingresos/Costos/Gastos Operacionales), estilo Estado de Resultados — ver [demo interactiva](https://h-e-sanchez.github.io/centinela/datos.html) |
 | Tabla detalle | todas las columnas de `desviacion` + `Estado Semáforo` | filtrada a `Estado Semáforo <> "OK"` |
 
 ## Publicar como modelo público
