@@ -3,15 +3,32 @@ from __future__ import annotations
 import pytest
 
 from src.modelos import LineaPresupuesto, LineaReal, ParametrosAlerta
-from src.motor import calcular_desviaciones, lineas_en_alerta, resumen_por_estado
+from src.motor import (
+    calcular_desviaciones,
+    lineas_en_alerta,
+    resumen_por_estado,
+    resumen_por_grupo,
+)
 
 
-def _presupuesto(monto: float, mes: int = 1, centro: str = "Operaciones", componente: str = "materiales"):
-    return LineaPresupuesto(anio=2026, mes=mes, centro_costo=centro, componente=componente, monto=monto)
+def _presupuesto(
+    monto: float, mes: int = 1, centro: str = "Operaciones", componente: str = "materiales",
+    grupo: str = "Costos",
+):
+    return LineaPresupuesto(
+        anio=2026, mes=mes, centro_costo=centro, componente=componente,
+        grupo_cuenta=grupo, monto=monto,
+    )
 
 
-def _real(monto: float, mes: int = 1, centro: str = "Operaciones", componente: str = "materiales"):
-    return LineaReal(anio=2026, mes=mes, centro_costo=centro, componente=componente, monto=monto)
+def _real(
+    monto: float, mes: int = 1, centro: str = "Operaciones", componente: str = "materiales",
+    grupo: str = "Costos",
+):
+    return LineaReal(
+        anio=2026, mes=mes, centro_costo=centro, componente=componente,
+        grupo_cuenta=grupo, monto=monto,
+    )
 
 
 def test_sin_desviacion_es_ok():
@@ -98,3 +115,72 @@ def test_lineas_en_alerta_excluye_las_ok():
 def test_parametros_alerta_rechaza_umbral_critico_menor_al_umbral():
     with pytest.raises(ValueError):
         ParametrosAlerta(umbral_pct=0.10, umbral_critico_pct=0.05)
+
+
+def test_grupo_cuenta_se_propaga_a_la_linea_de_desviacion():
+    filas = calcular_desviaciones(
+        [_presupuesto(10_000_000, componente="ventas_producto_a", grupo="Ingresos")],
+        [_real(10_000_000, componente="ventas_producto_a", grupo="Ingresos")],
+    )
+    assert filas[0].grupo_cuenta == "Ingresos"
+
+
+def test_resumen_por_grupo_calcula_resultado_operacional_sin_desviacion():
+    filas = calcular_desviaciones(
+        [
+            _presupuesto(10_000_000, componente="ventas", grupo="Ingresos"),
+            _presupuesto(4_000_000, componente="materiales", grupo="Costos"),
+            _presupuesto(2_000_000, componente="marketing", grupo="Gastos Operacionales"),
+        ],
+        [
+            _real(10_000_000, componente="ventas", grupo="Ingresos"),
+            _real(4_000_000, componente="materiales", grupo="Costos"),
+            _real(2_000_000, componente="marketing", grupo="Gastos Operacionales"),
+        ],
+    )
+    resumenes = {r.nombre: r for r in resumen_por_grupo(filas)}
+    assert resumenes["Ingresos"].monto_real == 10_000_000
+    assert resumenes["Costos"].monto_real == 4_000_000
+    assert resumenes["Gastos Operacionales"].monto_real == 2_000_000
+    resultado = resumenes["Resultado Operacional"]
+    assert resultado.monto_presupuesto == pytest.approx(4_000_000)  # 10M - 4M - 2M
+    assert resultado.monto_real == pytest.approx(4_000_000)
+    assert resultado.estado == "ok"
+
+
+def test_resumen_por_grupo_agrupa_multiples_lineas_del_mismo_grupo():
+    filas = calcular_desviaciones(
+        [
+            _presupuesto(1_000_000, componente="mano_de_obra", grupo="Costos"),
+            _presupuesto(1_000_000, componente="materiales", grupo="Costos"),
+        ],
+        [
+            _real(1_000_000, componente="mano_de_obra", grupo="Costos"),
+            _real(1_000_000, componente="materiales", grupo="Costos"),
+        ],
+    )
+    resumenes = {r.nombre: r for r in resumen_por_grupo(filas)}
+    assert resumenes["Costos"].monto_real == 2_000_000
+    assert resumenes["Ingresos"].monto_real == 0.0
+
+
+def test_resumen_por_grupo_clasifica_el_resultado_operacional_con_el_mismo_umbral():
+    # Ingresos caen 20% (crítico) mientras costos/gastos quedan igual -> el
+    # Resultado Operacional debe reflejar una desviación mucho mayor al 20% en
+    # términos relativos, y clasificarse como crítica con el umbral default.
+    filas = calcular_desviaciones(
+        [
+            _presupuesto(10_000_000, componente="ventas", grupo="Ingresos"),
+            _presupuesto(4_000_000, componente="materiales", grupo="Costos"),
+            _presupuesto(2_000_000, componente="marketing", grupo="Gastos Operacionales"),
+        ],
+        [
+            _real(8_000_000, componente="ventas", grupo="Ingresos"),  # -20%
+            _real(4_000_000, componente="materiales", grupo="Costos"),
+            _real(2_000_000, componente="marketing", grupo="Gastos Operacionales"),
+        ],
+    )
+    resultado = next(r for r in resumen_por_grupo(filas) if r.nombre == "Resultado Operacional")
+    # Presupuesto: 10M - 4M - 2M = 4M. Real: 8M - 4M - 2M = 2M. Desviación: -50%.
+    assert resultado.desviacion_pct == pytest.approx(-0.5)
+    assert resultado.estado == "critica"

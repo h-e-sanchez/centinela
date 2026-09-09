@@ -12,6 +12,11 @@
   desviación en $ y % por línea, y clasifica cada una en `ok` / `alerta` / `critica`
   según un umbral configurable — la comparación es estricta (`>`, no `>=`): una línea en
   exactamente el umbral no dispara.
+- **Jerarquía de cuentas mínima**: cada línea declara un `grupo_cuenta` (Ingresos / Costos
+  / Gastos Operacionales), lo que permite calcular un subtotal real de Estado de
+  Resultados — **Resultado Operacional = Ingresos − Costos − Gastos Operacionales** —
+  con su propio semáforo de desviación, no solo una lista plana de líneas
+  (`--estado-resultados`, ver [demo](https://h-e-sanchez.github.io/centinela/estado-resultados.html)).
 - **Completitud de grilla**: ninguna celda se omite. Una línea presupuestada sin gasto
   real (o viceversa) se completa con monto `0` explícito — evita el sesgo de subconteo
   típico al agregar eventos poco frecuentes.
@@ -38,6 +43,9 @@ python -m src.main
 # Umbral propio + exportar el detalle a CSV
 python -m src.main --umbral 0.08 --umbral-critico 0.20 --salida reporte_desviacion.csv
 
+# Estado de Resultados por mes (Ingresos / Costos / Gastos Operacionales / Resultado Operacional)
+python -m src.main --estado-resultados
+
 # Tests
 python -m pytest tests/ -q
 ```
@@ -63,6 +71,9 @@ A dependency-free Python engine that reconciles a planned budget against actual 
 per cost center, computes the deviation in absolute and percentage terms, and flags each
 line as ok / warning / critical against a configurable threshold. No cell is silently
 dropped — a budgeted line with no matching actual (or vice versa) is filled with an
-explicit zero, which avoids undercounting bias in sparse aggregations. The same logic is
-modeled in Power BI (DAX measures documented in `docs/how-to-pbi.md`) and published
-publicly via Power BI's "Publish to Web" feature — synthetic data only.
+explicit zero, which avoids undercounting bias in sparse aggregations. Each line also
+carries a minimal account hierarchy (Revenue / Cost of Sales / Operating Expenses), so
+the engine can roll up a real P&L subtotal — Operating Result — with its own deviation
+threshold, not just a flat list of line items. The same logic is modeled in Power BI (DAX
+measures documented in `docs/how-to-pbi.md`) and published publicly via Power BI's
+"Publish to Web" feature — synthetic data only.
