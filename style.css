@@ -168,3 +168,31 @@ footer {
 }
 
 .english { color: var(--muted); font-size: var(--fs-sm); }
+
+/* Controles de formulario (datos.html: selector de ejemplo/mes, umbrales) */
+.form-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-4);
+}
+.form-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+.form-controls select, .form-controls input {
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+  padding: 6px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r);
+  background: var(--surface);
+  color: var(--text);
+}
+.form-controls select:focus-visible, .form-controls input:focus-visible { outline: var(--focus); outline-offset: 1px; }
+
+/* Tabla ancha (detalle de líneas): scroll horizontal propio, nunca el body. */
+.table-scroll { overflow-x: auto; }

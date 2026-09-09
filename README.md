@@ -16,7 +16,7 @@
   / Gastos Operacionales), lo que permite calcular un subtotal real de Estado de
   Resultados — **Resultado Operacional = Ingresos − Costos − Gastos Operacionales** —
   con su propio semáforo de desviación, no solo una lista plana de líneas
-  (`--estado-resultados`, ver [demo](https://h-e-sanchez.github.io/centinela/estado-resultados.html)).
+  (`--estado-resultados`, ver [demo interactiva](https://h-e-sanchez.github.io/centinela/datos.html)).
 - **Completitud de grilla**: ninguna celda se omite. Una línea presupuestada sin gasto
   real (o viceversa) se completa con monto `0` explícito — evita el sesgo de subconteo
   típico al agregar eventos poco frecuentes.
@@ -62,8 +62,11 @@ sintéticos, nunca datos reales de un empleador) y queda incrustado en la demo.
 ## Demo
 
 [`h-e-sanchez.github.io/centinela`](https://h-e-sanchez.github.io/centinela/) — página
-estática (sin build), con un ejemplo de la salida del motor y el modelo de Power BI
-incrustado una vez publicado.
+estática (sin build). [`/datos.html`](https://h-e-sanchez.github.io/centinela/datos.html)
+deja explorar 3 corridas reales del motor y ajustar el umbral de alerta en vivo — la
+clasificación se recalcula en el navegador con la misma aritmética que `src/motor.py`,
+pero los datos en sí no se generan ahí (el RNG de JS no reproduce el de Python). El
+modelo de Power BI queda incrustado en la página principal una vez publicado.
 
 ## English
 
