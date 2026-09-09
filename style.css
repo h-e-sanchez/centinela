@@ -1,0 +1,166 @@
+/* centinela — reutiliza los tokens de diseño de consulta/docs/guia-de-estilo.md §9
+   ("base visual reutilizable para los próximos repos del portafolio"). A diferencia
+   de consulta, esta página nunca toca un archivo del visitante — no hereda el
+   requisito de cero peticiones salientes, así que las fuentes se cargan desde
+   Google Fonts en vez de vendorizarlas. */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f3f1ea;
+  --border: #e7e3d8;
+  --border-strong: #cbc4b3;
+  --text: #23211c;
+  --muted: #6a6357;
+  --faint: #978f7e;
+  --accent: #33518f;
+  --accent-weak: #e7ebf5;
+  --ok: #4f7a52;
+  --alerta: #a67a2e;
+  --critica: #b23c26;
+
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, Menlo, monospace;
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-sm: 0.84rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.6rem;
+  --fs-2xl: 2rem;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --r: 4px;
+  --shadow: 0 1px 2px rgb(30 25 15 / 0.05), 0 2px 6px rgb(30 25 15 / 0.04);
+  --focus: 2px solid var(--accent);
+  --t: 130ms ease;
+}
+
+:root[data-theme="dark"] {
+  --bg: #16140f;
+  --surface: #1e1b15;
+  --surface-2: #26221b;
+  --border: #322d24;
+  --border-strong: #443e32;
+  --text: #ece7db;
+  --muted: #a89f8c;
+  --faint: #776f5e;
+  --accent: #8aa9e6;
+  --accent-weak: #1a2338;
+  --ok: #7fae82;
+  --alerta: #d4a24e;
+  --critica: #e0765c;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.25), 0 2px 8px rgb(0 0 0 / 0.2);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+code, pre { font-family: var(--mono); font-size: 0.88em; }
+
+a { color: var(--accent); text-decoration: underline; text-decoration-color: var(--border-strong); }
+a:hover { text-decoration-color: var(--accent); }
+a:focus-visible { outline: var(--focus); outline-offset: 2px; }
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-4) 64px;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--sp-4);
+  margin-bottom: var(--sp-6);
+  position: relative;
+}
+
+.site-header h1 {
+  font-size: var(--fs-2xl);
+  margin: 0;
+}
+
+.tagline { color: var(--muted); font-size: var(--fs-md); margin: var(--sp-2) 0 0; }
+
+.theme-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: var(--sans);
+  font-size: var(--fs-sm);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r);
+  background: var(--surface);
+  color: var(--muted);
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: color var(--t), border-color var(--t);
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--accent); }
+
+section { margin-bottom: var(--sp-6); }
+h2 { font-size: var(--fs-xl); margin: 0 0 var(--sp-3); }
+.hint { color: var(--muted); font-size: var(--fs-sm); margin: 0 0 var(--sp-4); }
+
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--accent-weak);
+  border-radius: var(--r);
+  padding: var(--sp-3) var(--sp-4);
+  font-size: var(--fs-sm);
+}
+.callout.pendiente { border-left-color: var(--alerta); background: var(--surface-2); }
+
+.pbi-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+  overflow: hidden;
+}
+.pbi-embed iframe { width: 100%; height: 100%; border: none; }
+.pbi-embed .placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--sp-4);
+  text-align: center;
+  color: var(--muted);
+  font-size: var(--fs-sm);
+}
+
+table { border-collapse: collapse; width: 100%; font-size: var(--fs-sm); }
+th, td { text-align: left; padding: 6px var(--sp-3); border-bottom: 1px solid var(--border); }
+th { font-family: var(--sans); font-weight: 600; color: var(--muted); }
+td.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--mono); }
+
+.estado { font-family: var(--mono); font-size: 0.82em; padding: 1px 6px; border-radius: var(--r); }
+.estado.ok { color: var(--ok); background: color-mix(in srgb, var(--ok) 14%, transparent); }
+.estado.alerta { color: var(--alerta); background: color-mix(in srgb, var(--alerta) 16%, transparent); }
+.estado.critica { color: var(--critica); background: color-mix(in srgb, var(--critica) 16%, transparent); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-top: var(--sp-4);
+  color: var(--faint);
+  font-size: var(--fs-sm);
+}
+
+.english { color: var(--muted); font-size: var(--fs-sm); }
