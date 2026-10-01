@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "7799a05e9662fa2daf05",
+  "position": {
+    "x": 24,
+    "y": 76,
+    "z": 200,
+    "height": 112,
+    "width": 1232,
+    "tabOrder": 200
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Resultado Operacional"
+                }
+              },
+              "queryRef": "desviacion.Resultado Operacional",
+              "nativeQueryRef": "Resultado Operacional"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Resultado Operacional Presupuesto"
+                }
+              },
+              "queryRef": "desviacion.Resultado Operacional Presupuesto",
+              "nativeQueryRef": "Resultado Operacional Presupuesto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Real YTD"
+                }
+              },
+              "queryRef": "desviacion.Real YTD",
+              "nativeQueryRef": "Real YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Presupuesto YTD"
+                }
+              },
+              "queryRef": "desviacion.Presupuesto YTD",
+              "nativeQueryRef": "Presupuesto YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Desviación YTD %"
+                }
+              },
+              "queryRef": "desviacion.Desviación YTD %",
+              "nativeQueryRef": "Desviación YTD %"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

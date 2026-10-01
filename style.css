@@ -196,3 +196,74 @@ footer {
 
 /* Tabla ancha (detalle de líneas): scroll horizontal propio, nunca el body. */
 .table-scroll { overflow-x: auto; }
+
+/* ------------------------------------------------------------------ reporte.html
+   Reporte "estilo Power BI": KPI, visuales en tarjeta y la medida DAX de cada uno. */
+main.ancho { max-width: 980px; }
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--sp-3);
+}
+.kpi, .visual {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  box-shadow: var(--shadow);
+  padding: var(--sp-3) var(--sp-4);
+  position: relative;
+}
+.kpi-nombre { margin: 0; font-size: var(--fs-sm); color: var(--muted); padding-right: 40px; }
+.kpi-valor { margin: 4px 0 0; font-family: var(--mono); font-size: var(--fs-lg); font-weight: 500; }
+.kpi .btn-dax { position: absolute; top: var(--sp-2); right: var(--sp-2); }
+.kpi .dax pre { font-size: 0.74rem; }
+
+.visual-cab { display: flex; align-items: baseline; justify-content: space-between; gap: var(--sp-3); }
+.visual-cab h2 { font-size: var(--fs-lg); }
+
+.btn-dax {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r);
+  background: var(--surface-2);
+  color: var(--accent);
+  padding: 1px 7px;
+  cursor: pointer;
+}
+.btn-dax:hover, .btn-dax[aria-expanded="true"] { border-color: var(--accent); background: var(--accent-weak); }
+.btn-dax:focus-visible { outline: var(--focus); outline-offset: 2px; }
+
+.dax { margin-top: var(--sp-3); }
+.dax-meta { margin: var(--sp-2) 0 4px; font-size: var(--fs-sm); color: var(--muted); }
+.dax pre {
+  margin: 0;
+  padding: var(--sp-3);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow-x: auto;
+  line-height: 1.45;
+}
+
+.grafico svg { width: 100%; height: auto; display: block; }
+.grafico .grilla { stroke: var(--border); stroke-width: 1; }
+.grafico .eje { fill: var(--muted); font-family: var(--mono); font-size: 11px; }
+.grafico .eje.sel { fill: var(--accent); font-weight: 600; }
+.grafico .serie-ppto { fill: none; stroke: var(--faint); stroke-width: 2; stroke-dasharray: 5 4; }
+.grafico .serie-real { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+.grafico .punto-real { fill: var(--accent); }
+.grafico .barra.ok { fill: var(--ok); }
+.grafico .barra.alerta { fill: var(--alerta); }
+.grafico .barra.critica { fill: var(--critica); }
+.leyenda { font-size: var(--fs-sm); color: var(--muted); margin: var(--sp-2) 0 0; }
+.leyenda .sw { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin: 0 4px 0 10px; }
+.leyenda .sw-ppto { border-top: 2px dashed var(--faint); height: 0; }
+.leyenda .sw-real { background: var(--accent); }
+.eje-nota { color: var(--faint); }
+
+#t-matriz tr.nivel-1 td { font-weight: 600; background: var(--surface-2); }
+#t-matriz tr.nivel-2 td:first-child { padding-left: 28px; color: var(--muted); }
+/* Al abrir el DAX de un KPI, la tarjeta ocupa toda la fila para que la fórmula se lea. */
+.kpi:has(.dax:not([hidden])) { grid-column: 1 / -1; }

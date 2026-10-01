@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "406ff5bb96de7565d8a2",
+  "position": {
+    "x": 24,
+    "y": 200,
+    "z": 300,
+    "height": 508,
+    "width": 600,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "grupo_cuenta"
+                }
+              },
+              "queryRef": "desviacion.grupo_cuenta",
+              "nativeQueryRef": "grupo_cuenta",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "centro_costo"
+                }
+              },
+              "queryRef": "desviacion.centro_costo",
+              "nativeQueryRef": "centro_costo",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Monto Presupuesto"
+                }
+              },
+              "queryRef": "desviacion.Monto Presupuesto",
+              "nativeQueryRef": "Monto Presupuesto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Monto Real"
+                }
+              },
+              "queryRef": "desviacion.Monto Real",
+              "nativeQueryRef": "Monto Real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Desviación %"
+                }
+              },
+              "queryRef": "desviacion.Desviación %",
+              "nativeQueryRef": "Desviación %"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ingresos, costos y gastos'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

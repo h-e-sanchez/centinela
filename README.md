@@ -52,12 +52,15 @@ python -m pytest tests/ -q
 
 ## Modelo
 
-Las mismas medidas, documentadas para reconstruirlas en Power BI (medidas DAX, modelo
-de datos, visuales sugeridos) en [`docs/how-to-pbi.md`](docs/how-to-pbi.md). La
-construcción del `.pbix` es un paso manual — Power BI Desktop es una aplicación de
-escritorio, no algo que se pueda automatizar desde este repo. El modelo resultante se
-publica con la función gratuita "Publicar en la Web" de Power BI (siempre sobre datos
-sintéticos, nunca datos reales de un empleador) y queda incrustado en la demo.
+La misma lógica, como **proyecto de Power BI versionado en texto** en
+[`powerbi/`](powerbi/) (formato PBIP): modelo semántico en TMDL, con Power Query que lee
+los CSV de este repo desde GitHub, tabla de fechas, la columna `Estado Semáforo` y 15
+medidas DAX (montos, desviación, semáforo, Estado de Resultados y time intelligence), más
+el reporte en PBIR. [`reporte.html`](https://h-e-sanchez.github.io/centinela/reporte.html)
+recalcula ese reporte en el navegador y muestra la medida DAX de cada visual, leída en vivo
+desde el TMDL. El reporte interactivo se publica con "Publicar en la Web" (solo datos
+sintéticos) y queda incrustado en esa misma página. Detalle y pasos en
+[`docs/how-to-pbi.md`](docs/how-to-pbi.md).
 
 ## Demo
 
