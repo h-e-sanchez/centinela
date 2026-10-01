@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "004ae4913d33dcbc0a25",
   "position": {
     "x": 1046,
-    "y": 8,
+    "y": 10,
     "z": 200,
-    "height": 60,
+    "height": 64,
     "width": 210,
     "tabOrder": 200
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "desviacion.centro_costo",
               "nativeQueryRef": "centro_costo",
-              "active": true
+              "active": true,
+              "displayName": "Centro de costo"
             }
           ]
         }
@@ -47,9 +48,48 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -66,28 +106,35 @@
                   "Value": "'Centro de costo'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8939a36d45135826063e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "centro_costo"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "3ef5c9285fbe6f1625ea",
   "position": {
     "x": 24,
-    "y": 76,
+    "y": 88,
     "z": 300,
-    "height": 112,
+    "height": 100,
     "width": 1232,
     "tabOrder": 300
   },
@@ -23,11 +23,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Monto Presupuesto"
+                  "Property": "KPI Presupuesto"
                 }
               },
-              "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto"
+              "queryRef": "desviacion.KPI Presupuesto",
+              "nativeQueryRef": "KPI Presupuesto",
+              "displayName": "Presupuesto"
             },
             {
               "field": {
@@ -37,11 +38,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Monto Real"
+                  "Property": "KPI Real"
                 }
               },
-              "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real"
+              "queryRef": "desviacion.KPI Real",
+              "nativeQueryRef": "KPI Real",
+              "displayName": "Real"
             },
             {
               "field": {
@@ -55,21 +57,8 @@
                 }
               },
               "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
-                    }
-                  },
-                  "Property": "% Cumplimiento"
-                }
-              },
-              "queryRef": "desviacion.% Cumplimiento",
-              "nativeQueryRef": "% Cumplimiento"
+              "nativeQueryRef": "Desviación %",
+              "displayName": "Desviación"
             },
             {
               "field": {
@@ -83,7 +72,8 @@
                 }
               },
               "queryRef": "desviacion.Líneas en Alerta",
-              "nativeQueryRef": "Líneas en Alerta"
+              "nativeQueryRef": "Líneas en Alerta",
+              "displayName": "Líneas en alerta"
             },
             {
               "field": {
@@ -93,103 +83,144 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Resultado Operacional"
+                  "Property": "KPI Resultado Operacional"
                 }
               },
-              "queryRef": "desviacion.Resultado Operacional",
-              "nativeQueryRef": "Resultado Operacional"
+              "queryRef": "desviacion.KPI Resultado Operacional",
+              "nativeQueryRef": "KPI Resultado Operacional",
+              "displayName": "Resultado operacional"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'aboveValue'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "409748a886c7c0b664ae",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Monto Presupuesto"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "28773342790ab0d9b952",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Monto Real"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f5dd458b08083d801c0e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Desviación %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b902ce096082d3b0c065",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "% Cumplimiento"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "36242cec39063a0bd175",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Líneas en Alerta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e475ab202006541ad0e2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Resultado Operacional"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

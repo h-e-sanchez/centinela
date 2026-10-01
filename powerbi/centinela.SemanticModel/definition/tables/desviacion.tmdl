@@ -100,6 +100,50 @@ table desviacion
 		displayFolder: 5. Tiempo
 		lineageTag: 169215b6-1e01-58e0-b15a-fe947a4dba1b
 
+	/// Texto para tarjetas: millones con un decimal, sin escalado automático del visual.
+	measure 'KPI Presupuesto' = FORMAT([Monto Presupuesto] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: cba20ecd-ec3f-5629-997f-e5c777e1fa36
+
+	/// Texto para tarjetas.
+	measure 'KPI Real' = FORMAT([Monto Real] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 4d483d8d-fce3-5c6c-ae30-5cd7aa89ee3b
+
+	/// Texto para tarjetas.
+	measure 'KPI Resultado Operacional' = FORMAT([Resultado Operacional] / 1000000, "$ #,0.0;-$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 07b5ee1d-5ed2-5e67-8ba7-27d66095866a
+
+	/// Texto para tarjetas.
+	measure 'KPI Resultado Operacional Presupuesto' = FORMAT([Resultado Operacional Presupuesto] / 1000000, "$ #,0.0;-$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: c69f8bc4-1750-530a-aa5d-beab2d8ed2d3
+
+	/// Texto para tarjetas.
+	measure 'KPI Real YTD' = FORMAT([Real YTD] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 540e01ea-5d46-5062-b115-b71264506f9b
+
+	/// Texto para tarjetas.
+	measure 'KPI Presupuesto YTD' = FORMAT([Presupuesto YTD] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 08be9d64-523d-53a5-bf10-7ba7dc8410c0
+
+	/// Color hex del semáforo para formato condicional (barras y matriz): 5% alerta, 15% crítica.
+	measure 'Color Semáforo' =
+			VAR d = [Desviación %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(d), "#978F7E",
+			        ABS(d) > 0.15, "#B23C26",
+			        ABS(d) > 0.05, "#A67A2E",
+			        "#4F7A52"
+			    )
+		displayFolder: 3. Semáforo
+		lineageTag: dd12f78b-5f80-51f9-858c-3d68da444e50
+
 	column anio
 		dataType: int64
 		lineageTag: bcbaf994-619e-507f-872b-ab410dd7522b

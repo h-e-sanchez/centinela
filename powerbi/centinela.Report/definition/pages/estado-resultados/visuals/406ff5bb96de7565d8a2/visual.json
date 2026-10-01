@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "406ff5bb96de7565d8a2",
   "position": {
     "x": 24,
-    "y": 200,
+    "y": 202,
     "z": 300,
-    "height": 508,
+    "height": 504,
     "width": 600,
     "tabOrder": 300
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "desviacion.grupo_cuenta",
               "nativeQueryRef": "grupo_cuenta",
-              "active": true
+              "active": true,
+              "displayName": "Grupo de cuenta"
             },
             {
               "field": {
@@ -43,7 +44,8 @@
               },
               "queryRef": "desviacion.centro_costo",
               "nativeQueryRef": "centro_costo",
-              "active": true
+              "active": true,
+              "displayName": "Centro de costo"
             }
           ]
         },
@@ -61,7 +63,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto"
+              "nativeQueryRef": "Monto Presupuesto",
+              "displayName": "Presupuesto"
             },
             {
               "field": {
@@ -75,7 +78,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real"
+              "nativeQueryRef": "Monto Real",
+              "displayName": "Real"
             },
             {
               "field": {
@@ -89,13 +93,100 @@
                 }
               },
               "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %"
+              "nativeQueryRef": "Desviación %",
+              "displayName": "Desv. %"
             }
           ]
         }
       }
     },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "desviacion"
+                        }
+                      },
+                      "Property": "Color Semáforo"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "desviacion.Desviación %"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -112,84 +203,35 @@
                   "Value": "'Ingresos, costos y gastos'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ]
     }
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bd232ba27890bde0a6cd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "grupo_cuenta"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8ee6dc80321781097c0c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "centro_costo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "73b56257d730652be79c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Monto Presupuesto"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ed154205c0720c09075a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Monto Real"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4c981d7e358037abbb7a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "desviacion"
-              }
-            },
-            "Property": "Desviación %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

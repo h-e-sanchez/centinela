@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "735e78fcc8bd4e529580",
+  "name": "5c32c845d246e6ee7f17",
   "position": {
     "x": 24,
-    "y": 14,
-    "z": 0,
-    "height": 36,
+    "y": 50,
+    "z": 10,
+    "height": 24,
     "width": 760,
-    "tabOrder": 0
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "Estado de Resultados · acumulado del año",
+                    "value": "Datos 100% sintéticos · semilla 42 · semáforo: alerta >5%, crítica >15%",
                     "textStyle": {
-                      "fontSize": "20pt",
-                      "fontWeight": "bold",
-                      "color": "#23211C"
+                      "fontSize": "10pt",
+                      "fontWeight": "normal",
+                      "color": "#6A6357"
                     }
                   }
                 ]

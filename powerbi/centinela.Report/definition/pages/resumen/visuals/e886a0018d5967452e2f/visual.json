@@ -3,9 +3,9 @@
   "name": "e886a0018d5967452e2f",
   "position": {
     "x": 24,
-    "y": 16,
+    "y": 14,
     "z": 0,
-    "height": 44,
+    "height": 36,
     "width": 760,
     "tabOrder": 0
   },
@@ -19,15 +19,57 @@
               {
                 "textRuns": [
                   {
-                    "value": "centinela · Presupuesto vs. Real 2026",
+                    "value": "Presupuesto vs. Real · 2026",
                     "textStyle": {
                       "fontSize": "20pt",
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "color": "#23211C"
                     }
                   }
                 ]
               }
             ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

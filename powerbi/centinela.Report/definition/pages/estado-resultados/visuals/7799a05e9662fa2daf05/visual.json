@@ -3,9 +3,9 @@
   "name": "7799a05e9662fa2daf05",
   "position": {
     "x": 24,
-    "y": 76,
+    "y": 88,
     "z": 200,
-    "height": 112,
+    "height": 100,
     "width": 1232,
     "tabOrder": 200
   },
@@ -23,11 +23,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Resultado Operacional"
+                  "Property": "KPI Resultado Operacional"
                 }
               },
-              "queryRef": "desviacion.Resultado Operacional",
-              "nativeQueryRef": "Resultado Operacional"
+              "queryRef": "desviacion.KPI Resultado Operacional",
+              "nativeQueryRef": "KPI Resultado Operacional",
+              "displayName": "Resultado operacional"
             },
             {
               "field": {
@@ -37,11 +38,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Resultado Operacional Presupuesto"
+                  "Property": "KPI Resultado Operacional Presupuesto"
                 }
               },
-              "queryRef": "desviacion.Resultado Operacional Presupuesto",
-              "nativeQueryRef": "Resultado Operacional Presupuesto"
+              "queryRef": "desviacion.KPI Resultado Operacional Presupuesto",
+              "nativeQueryRef": "KPI Resultado Operacional Presupuesto",
+              "displayName": "RO presupuestado"
             },
             {
               "field": {
@@ -51,11 +53,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Real YTD"
+                  "Property": "KPI Real YTD"
                 }
               },
-              "queryRef": "desviacion.Real YTD",
-              "nativeQueryRef": "Real YTD"
+              "queryRef": "desviacion.KPI Real YTD",
+              "nativeQueryRef": "KPI Real YTD",
+              "displayName": "Real acumulado"
             },
             {
               "field": {
@@ -65,11 +68,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Presupuesto YTD"
+                  "Property": "KPI Presupuesto YTD"
                 }
               },
-              "queryRef": "desviacion.Presupuesto YTD",
-              "nativeQueryRef": "Presupuesto YTD"
+              "queryRef": "desviacion.KPI Presupuesto YTD",
+              "nativeQueryRef": "KPI Presupuesto YTD",
+              "displayName": "Presupuesto acumulado"
             },
             {
               "field": {
@@ -83,11 +87,140 @@
                 }
               },
               "queryRef": "desviacion.Desviación YTD %",
-              "nativeQueryRef": "Desviación YTD %"
+              "nativeQueryRef": "Desviación YTD %",
+              "displayName": "Desviación acumulada"
             }
           ]
         }
       }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'aboveValue'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   }
 }
