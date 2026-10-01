@@ -75,16 +75,21 @@ def _columnas_tmdl() -> dict[str, set[str]]:
     return tablas
 
 
-def _campos(nodo):
+def _campos(nodo, alias=None):
+    """Recorre el visual; las consultas guardadas por Desktop usan alias ("Source") declarados en "From"."""
+    alias = dict(alias or {})
     if isinstance(nodo, dict):
+        for d in nodo.get("From", []) if isinstance(nodo.get("From"), list) else []:
+            alias[d.get("Name")] = d.get("Entity")
         for tipo in ("Column", "Measure"):
             if tipo in nodo and "Property" in nodo[tipo]:
-                yield tipo, nodo[tipo]["Expression"]["SourceRef"]["Entity"], nodo[tipo]["Property"]
+                ref = nodo[tipo]["Expression"]["SourceRef"]
+                yield tipo, ref.get("Entity") or alias.get(ref.get("Source")), nodo[tipo]["Property"]
         for v in nodo.values():
-            yield from _campos(v)
+            yield from _campos(v, alias)
     elif isinstance(nodo, list):
         for v in nodo:
-            yield from _campos(v)
+            yield from _campos(v, alias)
 
 
 def test_visuales_solo_usan_campos_y_medidas_del_modelo():
@@ -98,3 +103,13 @@ def test_visuales_solo_usan_campos_y_medidas_del_modelo():
                 assert tabla == "desviacion" and prop in medidas, f"{ruta.parent.name}: medida {tabla}.{prop}"
             else:
                 assert prop in columnas.get(tabla, set()), f"{ruta.parent.name}: columna {tabla}.{prop}"
+
+
+def test_segmentadores_sin_seleccion_guardada():
+    # Un reporte público debe abrir en "Todas": una selección guardada en Desktop lo publica filtrado.
+    for ruta in (PBI / "centinela.Report" / "definition" / "pages").glob("*/visuals/*/visual.json"):
+        visual = json.loads(ruta.read_text(encoding="utf-8"))["visual"]
+        if visual["visualType"] != "slicer":
+            continue
+        for entrada in visual.get("objects", {}).get("general", []):
+            assert "filter" not in entrada.get("properties", {}), f"{ruta.parent.name}: segmentador con selección guardada"
