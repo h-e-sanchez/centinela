@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>centinela — reporte</title>
+<meta name="description" content="Ficha de un reporte de Power BI de la vitrina centinela: reporte interactivo, descargables sintéticos y guía.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="tema.js"></script>
+</head>
+<body>
+  <main class="ancho">
+    <header class="site-header">
+      <p class="migas"><a href="index.html">← centinela · vitrina de reportes</a></p>
+      <h1 id="f-titulo">Cargando…</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
+      <p class="tagline" id="f-resumen"></p>
+      <ul class="chips" id="f-habilidades" aria-label="Habilidades que demuestra"></ul>
+    </header>
+
+    <section id="interactivo">
+      <div class="visual-cab">
+        <h2>Reporte interactivo</h2>
+        <a id="f-pantalla" class="enlace-sec" target="_blank" rel="noopener">Abrir en pantalla completa ↗</a>
+      </div>
+      <div class="pbi-embed" id="f-embed"></div>
+      <p class="hint" style="margin-top: var(--sp-3)">Publicado con "Publicar en la Web" de Power BI.
+        Datos 100% sintéticos, nunca de un empleador.</p>
+    </section>
+
+    <section id="historias">
+      <h2>Qué muestra</h2>
+      <div class="historias" id="f-historias"></div>
+    </section>
+
+    <section id="descargas">
+      <h2>Descargas</h2>
+      <div class="descargas" id="f-descargas"></div>
+    </section>
+
+    <section id="guia">
+      <div class="visual-cab">
+        <h2>Guía</h2>
+        <a id="f-guia-md" class="enlace-sec" download>Descargar .md</a>
+      </div>
+      <article class="guia" id="f-guia"></article>
+    </section>
+
+    <section id="tecnico">
+      <h2>Para el equipo técnico</h2>
+      <ul class="enlaces" id="f-tecnico"></ul>
+    </section>
+
+    <footer>
+      <p class="english" id="f-english"><strong>English:</strong> A Power BI report from the centinela
+        showcase: interactive report, synthetic downloadable data (CSV, Excel, .pbix and the PBIP
+        project as code) and a short guide to its model and DAX measures.</p>
+    </footer>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="ficha.js"></script>
+</body>
+</html>

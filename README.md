@@ -1,7 +1,22 @@
 # centinela
 
-> Motor de seguimiento de desviación Presupuesto vs. Real por centro de costo, con
-> alertas por umbral configurable — completamente en Python, sin dependencias externas.
+> Vitrina de reportes Power BI de control de gestión: cada reporte trae su versión
+> interactiva, datos sintéticos descargables (CSV, Excel, .pbix y el proyecto PBIP como
+> código) y una guía corta del modelo. Detrás, un motor de desviación Presupuesto vs. Real
+> en Python, sin dependencias externas.
+
+**Vitrina:** <https://h-e-sanchez.github.io/centinela/>
+
+## Vitrina
+
+- `reportes/catalogo.json` describe cada reporte (resumen, habilidades, URL de Publicar en la
+  Web, descargas). `index.html` y `ficha.html?r=<slug>` se arman desde ahí: agregar un reporte
+  es crear `reportes/<slug>/` con su `guia.md` y sus descargas, sin escribir HTML.
+- `herramientas/empaquetar_descargas.py` genera los zip (reproducibles) y el Excel desde
+  `data/escenarios/` y `powerbi/`. El `.pbix` se exporta a mano desde Power BI Desktop.
+- `tests/test_vitrina.py` verifica que el catálogo esté completo, que las descargas estén al
+  día con sus fuentes, que la guía solo cite medidas del modelo y que la web no publique
+  datos de contacto.
 
 ## Diseño
 
@@ -39,6 +54,9 @@
 
 ```bash
 pip install -r requirements.txt -r requirements-dev.txt
+
+# Regenerar los descargables de la vitrina (requiere openpyxl, en requirements-dev.txt)
+python herramientas/empaquetar_descargas.py
 
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py

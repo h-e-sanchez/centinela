@@ -1,0 +1,90 @@
+{
+  "reportes": [
+    {
+      "slug": "presupuesto-vs-real",
+      "titulo": "Presupuesto vs. Real por industria",
+      "resumen": "Control de gestión de tres empresas sintéticas: KPI ejecutivos, semáforo de desviaciones, Estado de Resultados acumulado y una página que compara escenarios por industria.",
+      "tema": "Control de gestión · FP&A",
+      "fecha": "2026-10-01",
+      "destacado": true,
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9",
+      "portada": "portada.png",
+      "habilidades": [
+        "Power Query (M)",
+        "Modelo estrella",
+        "DAX y time intelligence",
+        "Formato condicional por medida",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Manufactura",
+          "resultado": "+20,4%",
+          "tono": "ok",
+          "texto": "Ingresos sobre el presupuesto, con peak en el cuarto trimestre, y costos controlados."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "+0,3%",
+          "tono": "neutro",
+          "texto": "La demanda de invierno estaba bien presupuestada: el real se mueve dentro del ruido."
+        },
+        {
+          "industria": "Salud",
+          "resultado": "−72,1%",
+          "tono": "critica",
+          "texto": "La campaña de invierno dispara los costos clínicos: resultado negativo de junio a agosto."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/centinela-datos-csv.zip",
+          "detalle": "presupuesto y real, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/centinela-datos.xlsx",
+          "detalle": "hojas presupuesto, real y diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/centinela.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/centinela-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Explorador con el DAX en vivo",
+          "url": "reporte.html"
+        },
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi"
+        },
+        {
+          "etiqueta": "Generador de escenarios y tests",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_escenarios.py"
+        }
+      ]
+    }
+  ],
+  "proximos": [
+    {
+      "titulo": "People Analytics: dotación y ausentismo",
+      "tema": "People Analytics",
+      "resumen": "Forecast de ausentismo con simulación y credibilidad actuarial, cobertura de turnos y costo de reemplazos."
+    },
+    {
+      "titulo": "Capital de trabajo: cobranza y DSO",
+      "tema": "Finanzas operativas",
+      "resumen": "Antigüedad de cartera, días promedio de cobro y priorización de deudores."
+    }
+  ]
+}

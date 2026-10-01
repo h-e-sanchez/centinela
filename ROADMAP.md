@@ -105,6 +105,17 @@ nunca con datos reales de un empleador.
 
 ---
 
+## Camino D — Vitrina de reportes — en curso
+
+La web pasa a ser una vitrina de reportes Power BI para reclutadores: portada con
+presentación breve y tarjetas, ficha por reporte (`ficha.html?r=<slug>`) con reporte
+interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hecho".
+
+- [x] Reporte #1: Presupuesto vs. Real por industria (catálogo, guía, descargas CSV, Excel y PBIP)
+- [ ] `.pbix` exportado desde Desktop y captura `portada.png` (manual)
+- [ ] Reporte #2: People Analytics, dotación y ausentismo
+- [ ] Reporte #3: Capital de trabajo, cobranza y DSO
+
 ## Backlog P1 — robustez
 
 - **CI bloqueada.** `.github/workflows/ci.yml` existe en el working tree pero no está
@@ -155,6 +166,13 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-01 — Vitrina de reportes
+
+`index.html` se reescribe como vitrina (presentación, destacado con el reporte publicado,
+tarjetas desde `reportes/catalogo.json`, "Cómo está hecho" y portafolio). Nueva ficha genérica
+`ficha.html` + `ficha.js` con guía renderizada (`marked`, cdnjs) y descargas que solo se
+muestran si el archivo existe. Empaquetador reproducible y `tests/test_vitrina.py`.
 
 ### 2026-10-01 — Reporte de Power BI publicado e incrustado
 
