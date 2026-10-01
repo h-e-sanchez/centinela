@@ -60,3 +60,41 @@ def test_tmdl_usa_tabs_y_utf8_sin_bom():
         assert not crudo.startswith(b"\xef\xbb\xbf"), f"{ruta.name} tiene BOM"
         for n, linea in enumerate(crudo.decode("utf-8").splitlines(), 1):
             assert not linea.startswith(" "), f"{ruta.name}:{n} indentado con espacios"
+
+
+def _columnas_tmdl() -> dict[str, set[str]]:
+    tablas = {}
+    for ruta in (PBI / "centinela.SemanticModel" / "definition" / "tables").glob("*.tmdl"):
+        texto = ruta.read_text(encoding="utf-8")
+        tabla = re.search(r"^table (?:'([^']+)'|(\S+))", texto, re.MULTILINE)
+        nombre_tabla = tabla.group(1) or tabla.group(2)
+        tablas[nombre_tabla] = {
+            m.group(1) or m.group(2)
+            for m in re.finditer(r"^\tcolumn (?:'((?:[^']|'')+)'|(\S+))", texto, re.MULTILINE)
+        }
+    return tablas
+
+
+def _campos(nodo):
+    if isinstance(nodo, dict):
+        for tipo in ("Column", "Measure"):
+            if tipo in nodo and "Property" in nodo[tipo]:
+                yield tipo, nodo[tipo]["Expression"]["SourceRef"]["Entity"], nodo[tipo]["Property"]
+        for v in nodo.values():
+            yield from _campos(v)
+    elif isinstance(nodo, list):
+        for v in nodo:
+            yield from _campos(v)
+
+
+def test_visuales_solo_usan_campos_y_medidas_del_modelo():
+    columnas = _columnas_tmdl()
+    medidas = _objetos_tmdl() - columnas["desviacion"]
+    visuales = list((PBI / "centinela.Report" / "definition" / "pages").glob("*/visuals/*/visual.json"))
+    assert visuales, "el reporte no tiene visuales"
+    for ruta in visuales:
+        for tipo, tabla, prop in _campos(json.loads(ruta.read_text(encoding="utf-8"))):
+            if tipo == "Measure":
+                assert tabla == "desviacion" and prop in medidas, f"{ruta.parent.name}: medida {tabla}.{prop}"
+            else:
+                assert prop in columnas.get(tabla, set()), f"{ruta.parent.name}: columna {tabla}.{prop}"

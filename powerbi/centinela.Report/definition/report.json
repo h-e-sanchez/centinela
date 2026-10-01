@@ -12,6 +12,7 @@
       "type": "RegisteredResources"
     }
   },
+  "layoutOptimization": "None",
   "resourcePackages": [
     {
       "name": "SharedResources",

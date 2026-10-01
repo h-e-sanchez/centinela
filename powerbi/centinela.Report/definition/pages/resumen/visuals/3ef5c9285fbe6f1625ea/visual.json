@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "3ef5c9285fbe6f1625ea",
+  "position": {
+    "x": 24,
+    "y": 76,
+    "z": 300,
+    "height": 112,
+    "width": 1232,
+    "tabOrder": 300
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Monto Presupuesto"
+                }
+              },
+              "queryRef": "desviacion.Monto Presupuesto",
+              "nativeQueryRef": "Monto Presupuesto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Monto Real"
+                }
+              },
+              "queryRef": "desviacion.Monto Real",
+              "nativeQueryRef": "Monto Real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Desviación %"
+                }
+              },
+              "queryRef": "desviacion.Desviación %",
+              "nativeQueryRef": "Desviación %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "% Cumplimiento"
+                }
+              },
+              "queryRef": "desviacion.% Cumplimiento",
+              "nativeQueryRef": "% Cumplimiento"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Líneas en Alerta"
+                }
+              },
+              "queryRef": "desviacion.Líneas en Alerta",
+              "nativeQueryRef": "Líneas en Alerta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Resultado Operacional"
+                }
+              },
+              "queryRef": "desviacion.Resultado Operacional",
+              "nativeQueryRef": "Resultado Operacional"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
