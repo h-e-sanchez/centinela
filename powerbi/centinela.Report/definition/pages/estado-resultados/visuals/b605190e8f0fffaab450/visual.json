@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b605190e8f0fffaab450",
   "position": {
     "x": 834,
@@ -136,5 +136,23 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "41f7deac63b5b8089c4d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "industria"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

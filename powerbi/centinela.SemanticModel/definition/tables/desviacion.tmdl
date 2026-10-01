@@ -196,14 +196,6 @@ table desviacion
 
 		annotation SummarizationSetBy = Automatic
 
-	column industria
-		dataType: string
-		lineageTag: 8a4a4a94-2093-5960-a0ab-16ed4e61bade
-		summarizeBy: none
-		sourceColumn: industria
-
-		annotation SummarizationSetBy = Automatic
-
 	column grupo_cuenta
 		dataType: string
 		lineageTag: d1274a78-004c-53f3-8706-2586b6beece2
@@ -258,6 +250,14 @@ table desviacion
 		dataType: string
 		lineageTag: 58dd9745-5424-5d24-bed7-4851f260d6a6
 		summarizeBy: none
+
+	column industria
+		dataType: string
+		lineageTag: 8a4a4a94-2093-5960-a0ab-16ed4e61bade
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
 
 	partition desviacion = m
 		mode: import

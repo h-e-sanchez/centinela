@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3fce20309931f6d1b4c0",
   "position": {
     "x": 24,
@@ -293,5 +293,65 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "03f88a2023a50e0733a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "industria"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "592647b40dab19b6ea71",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Resultado Operacional Presupuesto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5d3cb7db033c4387b204",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Resultado Operacional"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d0565bb096b7cb7ee9ce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Desviación RO %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
