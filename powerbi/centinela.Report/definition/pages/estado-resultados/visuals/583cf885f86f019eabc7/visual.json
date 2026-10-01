@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "583cf885f86f019eabc7",
   "position": {
     "x": 640,
@@ -272,5 +272,51 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "27dbda86d0cecd4b8645",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendario"
+              }
+            },
+            "Property": "Nombre Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "11aa7b37ce392b0e7037",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Presupuesto YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "325db842e42043bcd8cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Real YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

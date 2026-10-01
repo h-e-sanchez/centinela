@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "406ff5bb96de7565d8a2",
   "position": {
     "x": 24,
@@ -322,5 +322,79 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d51e6589b7c3ae00a004",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "grupo_cuenta"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4d678809359e3a1cc000",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "centro_costo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "279b250a6ba518b34b50",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Monto Presupuesto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c34cfd75005c43083340",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Monto Real"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a8157de50ed10920c6e8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Desviación %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
