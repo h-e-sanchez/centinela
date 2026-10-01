@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "3ef5c9285fbe6f1625ea",
   "position": {
     "x": 24,
@@ -103,5 +103,93 @@
         }
       }
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "409748a886c7c0b664ae",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Monto Presupuesto"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "28773342790ab0d9b952",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Monto Real"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f5dd458b08083d801c0e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Desviación %"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b902ce096082d3b0c065",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "% Cumplimiento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "36242cec39063a0bd175",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Líneas en Alerta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e475ab202006541ad0e2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Resultado Operacional"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

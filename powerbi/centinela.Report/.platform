@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "centinela"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "7f3fa980-02e9-4335-8621-3a600cf46979"
+  }
+}

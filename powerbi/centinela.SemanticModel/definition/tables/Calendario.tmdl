@@ -1,7 +1,7 @@
 /// Dimensión de fechas marcada como tabla de fechas (dataCategory Time + Date como clave).
 table Calendario
-	dataCategory: Time
 	lineageTag: 03f9cc20-8bad-5986-b67f-3dc7a592451f
+	dataCategory: Time
 
 	column Date
 		dataType: dateTime
@@ -30,11 +30,11 @@ table Calendario
 
 	column 'Nombre Mes'
 		dataType: string
-		sortByColumn: Mes
 		lineageTag: b26df71c-c8d4-52ae-b36f-8b477bac4e62
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [Nombre Mes]
+		sortByColumn: Mes
 
 	column Trimestre
 		dataType: string
@@ -45,7 +45,7 @@ table Calendario
 
 	partition Calendario = calculated
 		mode: import
-		source = ```
+		source =
 				ADDCOLUMNS(
 				    CALENDAR(DATE(MIN(desviacion[anio]), 1, 1), DATE(MAX(desviacion[anio]), 12, 31)),
 				    "Anio", YEAR([Date]),
@@ -53,5 +53,4 @@ table Calendario
 				    "Nombre Mes", FORMAT([Date], "mmm"),
 				    "Trimestre", "T" & QUARTER([Date])
 				)
-				```
 

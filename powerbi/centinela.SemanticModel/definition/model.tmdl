@@ -4,6 +4,7 @@ model Model
 	discourageImplicitMeasures
 	sourceQueryCulture: es-CL
 	dataAccessOptions
+		fastCombine
 		legacyRedirects
 		returnErrorValuesAsNull
 
@@ -11,5 +12,8 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["UrlDatos","desviacion"]
 
+annotation PBI_ProTooling = ["DevMode"]
+
 ref table desviacion
 ref table Calendario
+
