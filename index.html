@@ -3,89 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>centinela — seguimiento de desviación presupuestaria</title>
-<meta name="description" content="Motor de seguimiento de desviación Presupuesto vs. Real por centro de costo, con alertas por umbral configurable. Datos 100% sintéticos.">
+<title>centinela — vitrina de reportes Power BI</title>
+<meta name="description" content="Vitrina de reportes Power BI de Hernán Sánchez: control de gestión, FP&amp;A y People Analytics, cada uno con su reporte interactivo, datos sintéticos descargables y una guía del modelo.">
+<meta property="og:title" content="centinela — vitrina de reportes Power BI">
+<meta property="og:description" content="Reportes Power BI de control de gestión con datos sintéticos descargables, DAX documentado y el proyecto versionado en Git.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
-<script>
-  /* tema día/noche — mismo patrón que consulta/index.html: defecto siempre claro,
-     el oscuro se activa solo por elección explícita guardada en localStorage. */
-  (function () {
-    var root = document.documentElement;
-    var read = function () { try { return JSON.parse(localStorage.getItem("centinela:theme") || "null"); } catch (e) { return null; } };
-    var current = function () { return read() === "dark" ? "dark" : "light"; };
-    if (current() === "dark") root.dataset.theme = "dark";
-    document.addEventListener("DOMContentLoaded", function () {
-      var btn = document.getElementById("theme-toggle");
-      if (!btn) return;
-      var paint = function () {
-        var c = current();
-        btn.textContent = c === "dark" ? "día" : "noche";
-        btn.setAttribute("aria-pressed", String(c === "dark"));
-      };
-      paint();
-      btn.addEventListener("click", function () {
-        var next = current() === "dark" ? "light" : "dark";
-        if (next === "dark") root.dataset.theme = "dark"; else root.removeAttribute("data-theme");
-        try { localStorage.setItem("centinela:theme", JSON.stringify(next)); } catch (e) {}
-        paint();
-      });
-    });
-  })();
-</script>
+<script src="tema.js"></script>
 </head>
 <body>
-  <main>
-    <header class="site-header">
-      <h1>centinela</h1>
+  <main class="ancho">
+    <header class="site-header portada">
+      <p class="migas">centinela · vitrina de reportes Power BI</p>
+      <h1>Hernán Sánchez</h1>
       <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
-      <p class="tagline">Motor de seguimiento de desviación Presupuesto vs. Real por centro de costo,
-        con alertas por umbral configurable — datos 100% sintéticos.</p>
+      <p class="tagline">Ingeniero Civil Industrial. Control de gestión, FP&amp;A y People Analytics
+        con Power BI y Python: reportes que llegan a quien decide, trazables y sin trabajo manual
+        de por medio.</p>
+      <p class="perfil-enlaces">
+        <a href="https://www.linkedin.com/in/hern%C3%A1n-el%C3%ADas-s%C3%A1nchez-aguilera/" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/h-e-sanchez" rel="noopener">GitHub</a>
+      </p>
     </header>
 
-    <section id="motor">
-      <h2>Motor</h2>
-      <p class="hint">Un CLI en Python (sin dependencias externas) cruza un presupuesto planificado
-        contra la ejecución real, calcula la desviación en $ y % por línea, y clasifica cada una en
-        <span class="estado ok">ok</span>, <span class="estado alerta">alerta</span> o
-        <span class="estado critica">crítica</span> según un umbral configurable. Ninguna celda se
-        omite: una línea presupuestada sin gasto real (o viceversa) se completa con monto 0 explícito,
-        no desaparece de la agregación.</p>
-      <table>
-        <thead><tr><th>Centro de costo</th><th>Componente</th><th class="num">Presupuesto</th><th class="num">Real</th><th class="num">Desv. %</th><th>Estado</th></tr></thead>
-        <tbody>
-          <tr><td>Tecnología</td><td>soporte</td><td class="num">$4.919.493</td><td class="num">$6.874.745</td><td class="num">+39,7%</td><td><span class="estado critica">crítica</span></td></tr>
-          <tr><td>Ingresos</td><td>ventas_servicios</td><td class="num">$20.500.586</td><td class="num">$28.206.399</td><td class="num">+37,6%</td><td><span class="estado critica">crítica</span></td></tr>
-          <tr><td>Operaciones</td><td>materiales</td><td class="num">$6.023.534</td><td class="num">$5.624.047</td><td class="num">-6,6%</td><td><span class="estado alerta">alerta</span></td></tr>
-          <tr><td>Administración y Finanzas</td><td>arriendo</td><td class="num">$723.479</td><td class="num">$730.912</td><td class="num">+1,0%</td><td><span class="estado ok">ok</span></td></tr>
-        </tbody>
-      </table>
-      <p class="hint" style="margin-top: var(--sp-3)">Ejemplo real de una corrida con la semilla por
-        defecto — ver el repo para el código y correrlo con tus propios datos:
-        <a href="https://github.com/h-e-sanchez/centinela">github.com/h-e-sanchez/centinela</a>.
-        Cada línea también se clasifica por grupo de cuenta (Ingresos/Costos/Gastos
-        Operacionales) para armar un Estado de Resultados con subtotales —
-        <a href="datos.html">explora el dataset completo y ajusta el umbral en vivo →</a></p>
+    <section id="destacado" aria-label="Reporte destacado">
+      <noscript><p><a href="ficha.html">Ver el reporte destacado</a></p></noscript>
     </section>
 
-    <section id="modelo">
-      <h2>Modelo</h2>
-      <p class="hint">La misma lógica como proyecto de Power BI versionado en texto
-        (<a href="https://github.com/h-e-sanchez/centinela/tree/main/powerbi">PBIP: modelo en TMDL, 15 medidas DAX</a>).
-        <a href="reporte.html">Abre el reporte con el DAX de cada visual →</a></p>
-      <div class="pbi-embed">
-        <iframe title="Reporte de centinela en Power BI" src="https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9" loading="lazy" allowfullscreen></iframe>
+    <section id="reportes">
+      <h2>Reportes</h2>
+      <p class="hint">Cada reporte trae su versión interactiva, los datos sintéticos para descargar
+        (CSV, Excel, .pbix y el proyecto como código) y una guía corta del modelo y sus medidas.</p>
+      <div class="tarjetas" id="tarjetas"></div>
+    </section>
+
+    <section id="como-esta-hecho">
+      <h2>Cómo está hecho</h2>
+      <p class="hint">Para el equipo técnico: lo que hay detrás de los reportes.</p>
+      <div class="tarjetas compactas">
+        <a class="tarjeta-sec" href="https://github.com/h-e-sanchez/centinela/tree/main/powerbi">
+          <strong>Power BI como código</strong>
+          <span>Modelo en TMDL y reporte en PBIR versionados en Git, con tests que validan el esquema y que cada visual use medidas que existen.</span>
+        </a>
+        <a class="tarjeta-sec" href="reporte.html">
+          <strong>Explorador con DAX en vivo</strong>
+          <span>El mismo reporte recalculado en el navegador; cada visual muestra la medida DAX leída desde el modelo.</span>
+        </a>
+        <a class="tarjeta-sec" href="https://github.com/h-e-sanchez/centinela">
+          <strong>Motor en Python</strong>
+          <span>CLI sin dependencias que cruza presupuesto vs. real y clasifica desviaciones; probado con pytest.</span>
+        </a>
+        <a class="tarjeta-sec" href="datos.html">
+          <strong>Explorador de datos</strong>
+          <span>Tres corridas reales del motor con el umbral de alerta ajustable en vivo.</span>
+        </a>
       </div>
     </section>
 
     <section id="portafolio">
       <h2>Portafolio</h2>
-      <p class="hint">Este repo es parte de un portafolio más amplio de herramientas de datos —
-        todas con el mismo compromiso: datos sintéticos o del propio visitante, nunca datos reales
-        de un empleador.</p>
       <div class="callout">
-        <strong>consulta</strong> — motor OLAP embebido en el cliente: SQL sobre CSV y Parquet con
-        DuckDB-WASM, 100% en el navegador, sin backend y sin que el archivo salga del equipo.
+        <strong>consulta</strong>: SQL sobre CSV y Parquet con DuckDB-WASM, 100% en el navegador,
+        sin backend y sin que el archivo salga del equipo.
         <a href="https://h-e-sanchez.github.io/consulta/">Ver demo</a> ·
         <a href="https://github.com/h-e-sanchez/consulta">repo</a>
       </div>
@@ -93,15 +72,15 @@
 
     <footer>
       <p class="english">
-        <strong>English:</strong> A dependency-free Python CLI that reconciles a planned budget
-        against actual spend per cost center, computes the $ and % deviation, and classifies each
-        line as ok / warning / critical against a configurable threshold — no cell is dropped, a
-        budgeted line with no matching actual (or vice versa) is filled with an explicit zero rather
-        than silently disappearing from the aggregation. The same logic is modeled in Power BI (DAX
-        measures documented in <code>docs/how-to-pbi.md</code>) and published publicly above via
-        Power BI's "Publish to Web" — synthetic data only, never a real employer's numbers.
+        <strong>English:</strong> A Power BI showcase by Hernán Sánchez (management control, FP&amp;A
+        and People Analytics). Each report includes the interactive version, downloadable synthetic
+        data (CSV, Excel, .pbix and the PBIP project as code) and a short guide to its model and DAX
+        measures. Behind them: a dependency-free Python engine, Power BI versioned as code (TMDL and
+        PBIR) and tests that keep the data, the model and the pages telling the same story. Synthetic
+        data only, never a real employer's numbers.
       </p>
     </footer>
   </main>
+  <script src="vitrina.js"></script>
 </body>
 </html>
