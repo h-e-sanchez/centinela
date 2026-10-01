@@ -1,0 +1,385 @@
+industria,anio,mes,centro_costo,componente,grupo_cuenta,monto
+Manufactura,2026,1,Ingresos,ventas_linea_industrial,Ingresos,39227033.0
+Manufactura,2026,2,Ingresos,ventas_linea_industrial,Ingresos,38338708.0
+Manufactura,2026,3,Ingresos,ventas_linea_industrial,Ingresos,43607066.0
+Manufactura,2026,4,Ingresos,ventas_linea_industrial,Ingresos,44139940.0
+Manufactura,2026,5,Ingresos,ventas_linea_industrial,Ingresos,43596404.0
+Manufactura,2026,6,Ingresos,ventas_linea_industrial,Ingresos,42698934.0
+Manufactura,2026,7,Ingresos,ventas_linea_industrial,Ingresos,43897735.0
+Manufactura,2026,8,Ingresos,ventas_linea_industrial,Ingresos,43504840.0
+Manufactura,2026,9,Ingresos,ventas_linea_industrial,Ingresos,43537849.0
+Manufactura,2026,10,Ingresos,ventas_linea_industrial,Ingresos,48619567.0
+Manufactura,2026,11,Ingresos,ventas_linea_industrial,Ingresos,51861081.0
+Manufactura,2026,12,Ingresos,ventas_linea_industrial,Ingresos,54869226.0
+Manufactura,2026,1,Ingresos,ventas_linea_consumo,Ingresos,28356575.0
+Manufactura,2026,2,Ingresos,ventas_linea_consumo,Ingresos,27501511.0
+Manufactura,2026,3,Ingresos,ventas_linea_consumo,Ingresos,30854465.0
+Manufactura,2026,4,Ingresos,ventas_linea_consumo,Ingresos,30725138.0
+Manufactura,2026,5,Ingresos,ventas_linea_consumo,Ingresos,31315288.0
+Manufactura,2026,6,Ingresos,ventas_linea_consumo,Ingresos,31813586.0
+Manufactura,2026,7,Ingresos,ventas_linea_consumo,Ingresos,31219495.0
+Manufactura,2026,8,Ingresos,ventas_linea_consumo,Ingresos,31150241.0
+Manufactura,2026,9,Ingresos,ventas_linea_consumo,Ingresos,31448871.0
+Manufactura,2026,10,Ingresos,ventas_linea_consumo,Ingresos,33912127.0
+Manufactura,2026,11,Ingresos,ventas_linea_consumo,Ingresos,36742084.0
+Manufactura,2026,12,Ingresos,ventas_linea_consumo,Ingresos,38803331.0
+Manufactura,2026,1,Ingresos,servicios_postventa,Ingresos,5689576.0
+Manufactura,2026,2,Ingresos,servicios_postventa,Ingresos,5471380.0
+Manufactura,2026,3,Ingresos,servicios_postventa,Ingresos,6275250.0
+Manufactura,2026,4,Ingresos,servicios_postventa,Ingresos,6263233.0
+Manufactura,2026,5,Ingresos,servicios_postventa,Ingresos,6313226.0
+Manufactura,2026,6,Ingresos,servicios_postventa,Ingresos,6135802.0
+Manufactura,2026,7,Ingresos,servicios_postventa,Ingresos,6293188.0
+Manufactura,2026,8,Ingresos,servicios_postventa,Ingresos,6098241.0
+Manufactura,2026,9,Ingresos,servicios_postventa,Ingresos,5994773.0
+Manufactura,2026,10,Ingresos,servicios_postventa,Ingresos,6870481.0
+Manufactura,2026,11,Ingresos,servicios_postventa,Ingresos,7281579.0
+Manufactura,2026,12,Ingresos,servicios_postventa,Ingresos,7805232.0
+Manufactura,2026,1,Produccion,materias_primas,Costos,21378918.0
+Manufactura,2026,2,Produccion,materias_primas,Costos,20319121.0
+Manufactura,2026,3,Produccion,materias_primas,Costos,23818949.0
+Manufactura,2026,4,Produccion,materias_primas,Costos,23166423.0
+Manufactura,2026,5,Produccion,materias_primas,Costos,23489573.0
+Manufactura,2026,6,Produccion,materias_primas,Costos,23416312.0
+Manufactura,2026,7,Produccion,materias_primas,Costos,23560367.0
+Manufactura,2026,8,Produccion,materias_primas,Costos,23808815.0
+Manufactura,2026,9,Produccion,materias_primas,Costos,23745232.0
+Manufactura,2026,10,Produccion,materias_primas,Costos,25534915.0
+Manufactura,2026,11,Produccion,materias_primas,Costos,27311697.0
+Manufactura,2026,12,Produccion,materias_primas,Costos,28426574.0
+Manufactura,2026,1,Produccion,mano_de_obra_directa,Costos,10698428.0
+Manufactura,2026,2,Produccion,mano_de_obra_directa,Costos,10446368.0
+Manufactura,2026,3,Produccion,mano_de_obra_directa,Costos,11915406.0
+Manufactura,2026,4,Produccion,mano_de_obra_directa,Costos,12089879.0
+Manufactura,2026,5,Produccion,mano_de_obra_directa,Costos,11954979.0
+Manufactura,2026,6,Produccion,mano_de_obra_directa,Costos,12420436.0
+Manufactura,2026,7,Produccion,mano_de_obra_directa,Costos,11852527.0
+Manufactura,2026,8,Produccion,mano_de_obra_directa,Costos,11802203.0
+Manufactura,2026,9,Produccion,mano_de_obra_directa,Costos,12138325.0
+Manufactura,2026,10,Produccion,mano_de_obra_directa,Costos,13236408.0
+Manufactura,2026,11,Produccion,mano_de_obra_directa,Costos,13904678.0
+Manufactura,2026,12,Produccion,mano_de_obra_directa,Costos,14580537.0
+Manufactura,2026,1,Produccion,energia_planta,Costos,4136650.0
+Manufactura,2026,2,Produccion,energia_planta,Costos,3954415.0
+Manufactura,2026,3,Produccion,energia_planta,Costos,4403950.0
+Manufactura,2026,4,Produccion,energia_planta,Costos,4464085.0
+Manufactura,2026,5,Produccion,energia_planta,Costos,4564320.0
+Manufactura,2026,6,Produccion,energia_planta,Costos,4402552.0
+Manufactura,2026,7,Produccion,energia_planta,Costos,4502263.0
+Manufactura,2026,8,Produccion,energia_planta,Costos,4517094.0
+Manufactura,2026,9,Produccion,energia_planta,Costos,4478698.0
+Manufactura,2026,10,Produccion,energia_planta,Costos,4912753.0
+Manufactura,2026,11,Produccion,energia_planta,Costos,5220083.0
+Manufactura,2026,12,Produccion,energia_planta,Costos,5588034.0
+Manufactura,2026,1,Comercial,comisiones,Gastos Operacionales,2725109.0
+Manufactura,2026,2,Comercial,comisiones,Gastos Operacionales,2615868.0
+Manufactura,2026,3,Comercial,comisiones,Gastos Operacionales,2974719.0
+Manufactura,2026,4,Comercial,comisiones,Gastos Operacionales,2962579.0
+Manufactura,2026,5,Comercial,comisiones,Gastos Operacionales,3042852.0
+Manufactura,2026,6,Comercial,comisiones,Gastos Operacionales,2974493.0
+Manufactura,2026,7,Comercial,comisiones,Gastos Operacionales,2996838.0
+Manufactura,2026,8,Comercial,comisiones,Gastos Operacionales,3033719.0
+Manufactura,2026,9,Comercial,comisiones,Gastos Operacionales,2967444.0
+Manufactura,2026,10,Comercial,comisiones,Gastos Operacionales,3225728.0
+Manufactura,2026,11,Comercial,comisiones,Gastos Operacionales,3354713.0
+Manufactura,2026,12,Comercial,comisiones,Gastos Operacionales,3541546.0
+Manufactura,2026,1,Comercial,marketing,Gastos Operacionales,2230839.0
+Manufactura,2026,2,Comercial,marketing,Gastos Operacionales,2213720.0
+Manufactura,2026,3,Comercial,marketing,Gastos Operacionales,2544756.0
+Manufactura,2026,4,Comercial,marketing,Gastos Operacionales,2499307.0
+Manufactura,2026,5,Comercial,marketing,Gastos Operacionales,2509801.0
+Manufactura,2026,6,Comercial,marketing,Gastos Operacionales,2506299.0
+Manufactura,2026,7,Comercial,marketing,Gastos Operacionales,2540678.0
+Manufactura,2026,8,Comercial,marketing,Gastos Operacionales,2533501.0
+Manufactura,2026,9,Comercial,marketing,Gastos Operacionales,2510263.0
+Manufactura,2026,10,Comercial,marketing,Gastos Operacionales,2659057.0
+Manufactura,2026,11,Comercial,marketing,Gastos Operacionales,2913958.0
+Manufactura,2026,12,Comercial,marketing,Gastos Operacionales,3017147.0
+Manufactura,2026,1,Comercial,logistica_distribucion,Gastos Operacionales,3666255.0
+Manufactura,2026,2,Comercial,logistica_distribucion,Gastos Operacionales,3518421.0
+Manufactura,2026,3,Comercial,logistica_distribucion,Gastos Operacionales,4117186.0
+Manufactura,2026,4,Comercial,logistica_distribucion,Gastos Operacionales,3978467.0
+Manufactura,2026,5,Comercial,logistica_distribucion,Gastos Operacionales,4095584.0
+Manufactura,2026,6,Comercial,logistica_distribucion,Gastos Operacionales,4006907.0
+Manufactura,2026,7,Comercial,logistica_distribucion,Gastos Operacionales,3969024.0
+Manufactura,2026,8,Comercial,logistica_distribucion,Gastos Operacionales,3932293.0
+Manufactura,2026,9,Comercial,logistica_distribucion,Gastos Operacionales,3990938.0
+Manufactura,2026,10,Comercial,logistica_distribucion,Gastos Operacionales,4412231.0
+Manufactura,2026,11,Comercial,logistica_distribucion,Gastos Operacionales,4656330.0
+Manufactura,2026,12,Comercial,logistica_distribucion,Gastos Operacionales,4849600.0
+Manufactura,2026,1,Administracion,remuneraciones_administrativas,Gastos Operacionales,4339629.0
+Manufactura,2026,2,Administracion,remuneraciones_administrativas,Gastos Operacionales,4446924.0
+Manufactura,2026,3,Administracion,remuneraciones_administrativas,Gastos Operacionales,5041689.0
+Manufactura,2026,4,Administracion,remuneraciones_administrativas,Gastos Operacionales,4958756.0
+Manufactura,2026,5,Administracion,remuneraciones_administrativas,Gastos Operacionales,4952946.0
+Manufactura,2026,6,Administracion,remuneraciones_administrativas,Gastos Operacionales,4999827.0
+Manufactura,2026,7,Administracion,remuneraciones_administrativas,Gastos Operacionales,5129366.0
+Manufactura,2026,8,Administracion,remuneraciones_administrativas,Gastos Operacionales,4920867.0
+Manufactura,2026,9,Administracion,remuneraciones_administrativas,Gastos Operacionales,4967915.0
+Manufactura,2026,10,Administracion,remuneraciones_administrativas,Gastos Operacionales,5510305.0
+Manufactura,2026,11,Administracion,remuneraciones_administrativas,Gastos Operacionales,5711519.0
+Manufactura,2026,12,Administracion,remuneraciones_administrativas,Gastos Operacionales,5967217.0
+Manufactura,2026,1,Administracion,arriendo,Gastos Operacionales,1622376.0
+Manufactura,2026,2,Administracion,arriendo,Gastos Operacionales,1554507.0
+Manufactura,2026,3,Administracion,arriendo,Gastos Operacionales,1805939.0
+Manufactura,2026,4,Administracion,arriendo,Gastos Operacionales,1767340.0
+Manufactura,2026,5,Administracion,arriendo,Gastos Operacionales,1823900.0
+Manufactura,2026,6,Administracion,arriendo,Gastos Operacionales,1800086.0
+Manufactura,2026,7,Administracion,arriendo,Gastos Operacionales,1861653.0
+Manufactura,2026,8,Administracion,arriendo,Gastos Operacionales,1807583.0
+Manufactura,2026,9,Administracion,arriendo,Gastos Operacionales,1836874.0
+Manufactura,2026,10,Administracion,arriendo,Gastos Operacionales,1905997.0
+Manufactura,2026,11,Administracion,arriendo,Gastos Operacionales,2066208.0
+Manufactura,2026,12,Administracion,arriendo,Gastos Operacionales,2170470.0
+Manufactura,2026,1,Administracion,software,Gastos Operacionales,1108281.0
+Manufactura,2026,2,Administracion,software,Gastos Operacionales,1029374.0
+Manufactura,2026,3,Administracion,software,Gastos Operacionales,1217831.0
+Manufactura,2026,4,Administracion,software,Gastos Operacionales,1210644.0
+Manufactura,2026,5,Administracion,software,Gastos Operacionales,1227604.0
+Manufactura,2026,6,Administracion,software,Gastos Operacionales,1212823.0
+Manufactura,2026,7,Administracion,software,Gastos Operacionales,1200937.0
+Manufactura,2026,8,Administracion,software,Gastos Operacionales,1190610.0
+Manufactura,2026,9,Administracion,software,Gastos Operacionales,1177533.0
+Manufactura,2026,10,Administracion,software,Gastos Operacionales,1299799.0
+Manufactura,2026,11,Administracion,software,Gastos Operacionales,1376032.0
+Manufactura,2026,12,Administracion,software,Gastos Operacionales,1483638.0
+Energia,2026,1,Ingresos,venta_energia_contratos,Ingresos,50136232.0
+Energia,2026,2,Ingresos,venta_energia_contratos,Ingresos,50843177.0
+Energia,2026,3,Ingresos,venta_energia_contratos,Ingresos,53705574.0
+Energia,2026,4,Ingresos,venta_energia_contratos,Ingresos,54673743.0
+Energia,2026,5,Ingresos,venta_energia_contratos,Ingresos,55215447.0
+Energia,2026,6,Ingresos,venta_energia_contratos,Ingresos,65702125.0
+Energia,2026,7,Ingresos,venta_energia_contratos,Ingresos,66309727.0
+Energia,2026,8,Ingresos,venta_energia_contratos,Ingresos,64857022.0
+Energia,2026,9,Ingresos,venta_energia_contratos,Ingresos,54078273.0
+Energia,2026,10,Ingresos,venta_energia_contratos,Ingresos,55377727.0
+Energia,2026,11,Ingresos,venta_energia_contratos,Ingresos,55426514.0
+Energia,2026,12,Ingresos,venta_energia_contratos,Ingresos,50973169.0
+Energia,2026,1,Ingresos,venta_energia_spot,Ingresos,10924032.0
+Energia,2026,2,Ingresos,venta_energia_spot,Ingresos,11227688.0
+Energia,2026,3,Ingresos,venta_energia_spot,Ingresos,12015821.0
+Energia,2026,4,Ingresos,venta_energia_spot,Ingresos,12125968.0
+Energia,2026,5,Ingresos,venta_energia_spot,Ingresos,12229333.0
+Energia,2026,6,Ingresos,venta_energia_spot,Ingresos,14289409.0
+Energia,2026,7,Ingresos,venta_energia_spot,Ingresos,14220856.0
+Energia,2026,8,Ingresos,venta_energia_spot,Ingresos,14617254.0
+Energia,2026,9,Ingresos,venta_energia_spot,Ingresos,12043867.0
+Energia,2026,10,Ingresos,venta_energia_spot,Ingresos,11946726.0
+Energia,2026,11,Ingresos,venta_energia_spot,Ingresos,12020154.0
+Energia,2026,12,Ingresos,venta_energia_spot,Ingresos,11285546.0
+Energia,2026,1,Ingresos,peajes_transmision,Ingresos,7373106.0
+Energia,2026,2,Ingresos,peajes_transmision,Ingresos,7417339.0
+Energia,2026,3,Ingresos,peajes_transmision,Ingresos,8143488.0
+Energia,2026,4,Ingresos,peajes_transmision,Ingresos,7938457.0
+Energia,2026,5,Ingresos,peajes_transmision,Ingresos,7792812.0
+Energia,2026,6,Ingresos,peajes_transmision,Ingresos,9482398.0
+Energia,2026,7,Ingresos,peajes_transmision,Ingresos,9472530.0
+Energia,2026,8,Ingresos,peajes_transmision,Ingresos,9353906.0
+Energia,2026,9,Ingresos,peajes_transmision,Ingresos,8104530.0
+Energia,2026,10,Ingresos,peajes_transmision,Ingresos,8072908.0
+Energia,2026,11,Ingresos,peajes_transmision,Ingresos,7880601.0
+Energia,2026,12,Ingresos,peajes_transmision,Ingresos,7417211.0
+Energia,2026,1,Operacion,compras_energia,Costos,20180463.0
+Energia,2026,2,Operacion,compras_energia,Costos,19789754.0
+Energia,2026,3,Operacion,compras_energia,Costos,22149474.0
+Energia,2026,4,Operacion,compras_energia,Costos,21985079.0
+Energia,2026,5,Operacion,compras_energia,Costos,21754057.0
+Energia,2026,6,Operacion,compras_energia,Costos,26163635.0
+Energia,2026,7,Operacion,compras_energia,Costos,26150064.0
+Energia,2026,8,Operacion,compras_energia,Costos,25735107.0
+Energia,2026,9,Operacion,compras_energia,Costos,22132116.0
+Energia,2026,10,Operacion,compras_energia,Costos,22334971.0
+Energia,2026,11,Operacion,compras_energia,Costos,21764820.0
+Energia,2026,12,Operacion,compras_energia,Costos,20355638.0
+Energia,2026,1,Operacion,combustibles,Costos,12880532.0
+Energia,2026,2,Operacion,combustibles,Costos,13317793.0
+Energia,2026,3,Operacion,combustibles,Costos,13608916.0
+Energia,2026,4,Operacion,combustibles,Costos,14146010.0
+Energia,2026,5,Operacion,combustibles,Costos,13935689.0
+Energia,2026,6,Operacion,combustibles,Costos,16495171.0
+Energia,2026,7,Operacion,combustibles,Costos,16991214.0
+Energia,2026,8,Operacion,combustibles,Costos,16517876.0
+Energia,2026,9,Operacion,combustibles,Costos,14470598.0
+Energia,2026,10,Operacion,combustibles,Costos,13907149.0
+Energia,2026,11,Operacion,combustibles,Costos,14073608.0
+Energia,2026,12,Operacion,combustibles,Costos,12785168.0
+Energia,2026,1,Operacion,mantenimiento_centrales,Costos,5462811.0
+Energia,2026,2,Operacion,mantenimiento_centrales,Costos,5525174.0
+Energia,2026,3,Operacion,mantenimiento_centrales,Costos,5974569.0
+Energia,2026,4,Operacion,mantenimiento_centrales,Costos,6018224.0
+Energia,2026,5,Operacion,mantenimiento_centrales,Costos,5810547.0
+Energia,2026,6,Operacion,mantenimiento_centrales,Costos,7292662.0
+Energia,2026,7,Operacion,mantenimiento_centrales,Costos,7062265.0
+Energia,2026,8,Operacion,mantenimiento_centrales,Costos,7265097.0
+Energia,2026,9,Operacion,mantenimiento_centrales,Costos,5909360.0
+Energia,2026,10,Operacion,mantenimiento_centrales,Costos,6026328.0
+Energia,2026,11,Operacion,mantenimiento_centrales,Costos,6284845.0
+Energia,2026,12,Operacion,mantenimiento_centrales,Costos,5447986.0
+Energia,2026,1,Regulatorio,permisos_ambientales,Gastos Operacionales,1349047.0
+Energia,2026,2,Regulatorio,permisos_ambientales,Gastos Operacionales,1368687.0
+Energia,2026,3,Regulatorio,permisos_ambientales,Gastos Operacionales,1510631.0
+Energia,2026,4,Regulatorio,permisos_ambientales,Gastos Operacionales,1515600.0
+Energia,2026,5,Regulatorio,permisos_ambientales,Gastos Operacionales,1529033.0
+Energia,2026,6,Regulatorio,permisos_ambientales,Gastos Operacionales,1763176.0
+Energia,2026,7,Regulatorio,permisos_ambientales,Gastos Operacionales,1727460.0
+Energia,2026,8,Regulatorio,permisos_ambientales,Gastos Operacionales,1758450.0
+Energia,2026,9,Regulatorio,permisos_ambientales,Gastos Operacionales,1527905.0
+Energia,2026,10,Regulatorio,permisos_ambientales,Gastos Operacionales,1510477.0
+Energia,2026,11,Regulatorio,permisos_ambientales,Gastos Operacionales,1455969.0
+Energia,2026,12,Regulatorio,permisos_ambientales,Gastos Operacionales,1379274.0
+Energia,2026,1,Regulatorio,seguros,Gastos Operacionales,1878589.0
+Energia,2026,2,Regulatorio,seguros,Gastos Operacionales,1898693.0
+Energia,2026,3,Regulatorio,seguros,Gastos Operacionales,2016851.0
+Energia,2026,4,Regulatorio,seguros,Gastos Operacionales,2009279.0
+Energia,2026,5,Regulatorio,seguros,Gastos Operacionales,1962794.0
+Energia,2026,6,Regulatorio,seguros,Gastos Operacionales,2330149.0
+Energia,2026,7,Regulatorio,seguros,Gastos Operacionales,2361661.0
+Energia,2026,8,Regulatorio,seguros,Gastos Operacionales,2377813.0
+Energia,2026,9,Regulatorio,seguros,Gastos Operacionales,2017406.0
+Energia,2026,10,Regulatorio,seguros,Gastos Operacionales,1985654.0
+Energia,2026,11,Regulatorio,seguros,Gastos Operacionales,1965442.0
+Energia,2026,12,Regulatorio,seguros,Gastos Operacionales,1818533.0
+Energia,2026,1,Administracion,remuneraciones_administrativas,Gastos Operacionales,5424203.0
+Energia,2026,2,Administracion,remuneraciones_administrativas,Gastos Operacionales,5573274.0
+Energia,2026,3,Administracion,remuneraciones_administrativas,Gastos Operacionales,5791895.0
+Energia,2026,4,Administracion,remuneraciones_administrativas,Gastos Operacionales,5970005.0
+Energia,2026,5,Administracion,remuneraciones_administrativas,Gastos Operacionales,6040489.0
+Energia,2026,6,Administracion,remuneraciones_administrativas,Gastos Operacionales,7241638.0
+Energia,2026,7,Administracion,remuneraciones_administrativas,Gastos Operacionales,7087572.0
+Energia,2026,8,Administracion,remuneraciones_administrativas,Gastos Operacionales,7186336.0
+Energia,2026,9,Administracion,remuneraciones_administrativas,Gastos Operacionales,5964090.0
+Energia,2026,10,Administracion,remuneraciones_administrativas,Gastos Operacionales,5933004.0
+Energia,2026,11,Administracion,remuneraciones_administrativas,Gastos Operacionales,5939305.0
+Energia,2026,12,Administracion,remuneraciones_administrativas,Gastos Operacionales,5646463.0
+Energia,2026,1,Administracion,tecnologia,Gastos Operacionales,2334301.0
+Energia,2026,2,Administracion,tecnologia,Gastos Operacionales,2316815.0
+Energia,2026,3,Administracion,tecnologia,Gastos Operacionales,2624885.0
+Energia,2026,4,Administracion,tecnologia,Gastos Operacionales,2498787.0
+Energia,2026,5,Administracion,tecnologia,Gastos Operacionales,2523263.0
+Energia,2026,6,Administracion,tecnologia,Gastos Operacionales,2963611.0
+Energia,2026,7,Administracion,tecnologia,Gastos Operacionales,2940182.0
+Energia,2026,8,Administracion,tecnologia,Gastos Operacionales,3052491.0
+Energia,2026,9,Administracion,tecnologia,Gastos Operacionales,2556498.0
+Energia,2026,10,Administracion,tecnologia,Gastos Operacionales,2447520.0
+Energia,2026,11,Administracion,tecnologia,Gastos Operacionales,2485006.0
+Energia,2026,12,Administracion,tecnologia,Gastos Operacionales,2314778.0
+Salud,2026,1,Ingresos,prestaciones_ambulatorias,Ingresos,25779333.0
+Salud,2026,2,Ingresos,prestaciones_ambulatorias,Ingresos,19487691.0
+Salud,2026,3,Ingresos,prestaciones_ambulatorias,Ingresos,24617924.0
+Salud,2026,4,Ingresos,prestaciones_ambulatorias,Ingresos,24751387.0
+Salud,2026,5,Ingresos,prestaciones_ambulatorias,Ingresos,25452821.0
+Salud,2026,6,Ingresos,prestaciones_ambulatorias,Ingresos,28493422.0
+Salud,2026,7,Ingresos,prestaciones_ambulatorias,Ingresos,28685376.0
+Salud,2026,8,Ingresos,prestaciones_ambulatorias,Ingresos,28208130.0
+Salud,2026,9,Ingresos,prestaciones_ambulatorias,Ingresos,25012096.0
+Salud,2026,10,Ingresos,prestaciones_ambulatorias,Ingresos,24706792.0
+Salud,2026,11,Ingresos,prestaciones_ambulatorias,Ingresos,25605815.0
+Salud,2026,12,Ingresos,prestaciones_ambulatorias,Ingresos,25621435.0
+Salud,2026,1,Ingresos,hospitalizacion,Ingresos,33816298.0
+Salud,2026,2,Ingresos,hospitalizacion,Ingresos,26318529.0
+Salud,2026,3,Ingresos,hospitalizacion,Ingresos,33224680.0
+Salud,2026,4,Ingresos,hospitalizacion,Ingresos,33994361.0
+Salud,2026,5,Ingresos,hospitalizacion,Ingresos,33251844.0
+Salud,2026,6,Ingresos,hospitalizacion,Ingresos,36948480.0
+Salud,2026,7,Ingresos,hospitalizacion,Ingresos,37026993.0
+Salud,2026,8,Ingresos,hospitalizacion,Ingresos,36991036.0
+Salud,2026,9,Ingresos,hospitalizacion,Ingresos,32237565.0
+Salud,2026,10,Ingresos,hospitalizacion,Ingresos,33398132.0
+Salud,2026,11,Ingresos,hospitalizacion,Ingresos,33444893.0
+Salud,2026,12,Ingresos,hospitalizacion,Ingresos,33138940.0
+Salud,2026,1,Ingresos,pabellon,Ingresos,17451118.0
+Salud,2026,2,Ingresos,pabellon,Ingresos,13846796.0
+Salud,2026,3,Ingresos,pabellon,Ingresos,18094284.0
+Salud,2026,4,Ingresos,pabellon,Ingresos,17650122.0
+Salud,2026,5,Ingresos,pabellon,Ingresos,17505680.0
+Salud,2026,6,Ingresos,pabellon,Ingresos,19581523.0
+Salud,2026,7,Ingresos,pabellon,Ingresos,19736128.0
+Salud,2026,8,Ingresos,pabellon,Ingresos,19381984.0
+Salud,2026,9,Ingresos,pabellon,Ingresos,17606856.0
+Salud,2026,10,Ingresos,pabellon,Ingresos,17656189.0
+Salud,2026,11,Ingresos,pabellon,Ingresos,18128102.0
+Salud,2026,12,Ingresos,pabellon,Ingresos,17889643.0
+Salud,2026,1,Atencion clinica,remuneraciones_clinicas,Costos,31683926.0
+Salud,2026,2,Atencion clinica,remuneraciones_clinicas,Costos,26236389.0
+Salud,2026,3,Atencion clinica,remuneraciones_clinicas,Costos,31513523.0
+Salud,2026,4,Atencion clinica,remuneraciones_clinicas,Costos,30666769.0
+Salud,2026,5,Atencion clinica,remuneraciones_clinicas,Costos,31345998.0
+Salud,2026,6,Atencion clinica,remuneraciones_clinicas,Costos,41249473.0
+Salud,2026,7,Atencion clinica,remuneraciones_clinicas,Costos,40520750.0
+Salud,2026,8,Atencion clinica,remuneraciones_clinicas,Costos,42221379.0
+Salud,2026,9,Atencion clinica,remuneraciones_clinicas,Costos,31465531.0
+Salud,2026,10,Atencion clinica,remuneraciones_clinicas,Costos,30309523.0
+Salud,2026,11,Atencion clinica,remuneraciones_clinicas,Costos,31458738.0
+Salud,2026,12,Atencion clinica,remuneraciones_clinicas,Costos,31009331.0
+Salud,2026,1,Atencion clinica,honorarios_medicos,Costos,14560301.0
+Salud,2026,2,Atencion clinica,honorarios_medicos,Costos,12462465.0
+Salud,2026,3,Atencion clinica,honorarios_medicos,Costos,14645292.0
+Salud,2026,4,Atencion clinica,honorarios_medicos,Costos,14114649.0
+Salud,2026,5,Atencion clinica,honorarios_medicos,Costos,14307023.0
+Salud,2026,6,Atencion clinica,honorarios_medicos,Costos,18716831.0
+Salud,2026,7,Atencion clinica,honorarios_medicos,Costos,18863531.0
+Salud,2026,8,Atencion clinica,honorarios_medicos,Costos,19030593.0
+Salud,2026,9,Atencion clinica,honorarios_medicos,Costos,14953812.0
+Salud,2026,10,Atencion clinica,honorarios_medicos,Costos,14111071.0
+Salud,2026,11,Atencion clinica,honorarios_medicos,Costos,14728055.0
+Salud,2026,12,Atencion clinica,honorarios_medicos,Costos,14141482.0
+Salud,2026,1,Atencion clinica,insumos_medicos,Costos,9586550.0
+Salud,2026,2,Atencion clinica,insumos_medicos,Costos,7986235.0
+Salud,2026,3,Atencion clinica,insumos_medicos,Costos,9199780.0
+Salud,2026,4,Atencion clinica,insumos_medicos,Costos,9642190.0
+Salud,2026,5,Atencion clinica,insumos_medicos,Costos,9450414.0
+Salud,2026,6,Atencion clinica,insumos_medicos,Costos,12732276.0
+Salud,2026,7,Atencion clinica,insumos_medicos,Costos,13161684.0
+Salud,2026,8,Atencion clinica,insumos_medicos,Costos,12960287.0
+Salud,2026,9,Atencion clinica,insumos_medicos,Costos,9375626.0
+Salud,2026,10,Atencion clinica,insumos_medicos,Costos,9294687.0
+Salud,2026,11,Atencion clinica,insumos_medicos,Costos,9552839.0
+Salud,2026,12,Atencion clinica,insumos_medicos,Costos,9160171.0
+Salud,2026,1,Soporte,mantencion_equipos,Gastos Operacionales,3074569.0
+Salud,2026,2,Soporte,mantencion_equipos,Gastos Operacionales,2671781.0
+Salud,2026,3,Soporte,mantencion_equipos,Gastos Operacionales,3022043.0
+Salud,2026,4,Soporte,mantencion_equipos,Gastos Operacionales,3069669.0
+Salud,2026,5,Soporte,mantencion_equipos,Gastos Operacionales,3069272.0
+Salud,2026,6,Soporte,mantencion_equipos,Gastos Operacionales,3391744.0
+Salud,2026,7,Soporte,mantencion_equipos,Gastos Operacionales,3460507.0
+Salud,2026,8,Soporte,mantencion_equipos,Gastos Operacionales,3432189.0
+Salud,2026,9,Soporte,mantencion_equipos,Gastos Operacionales,3016681.0
+Salud,2026,10,Soporte,mantencion_equipos,Gastos Operacionales,3140877.0
+Salud,2026,11,Soporte,mantencion_equipos,Gastos Operacionales,3096335.0
+Salud,2026,12,Soporte,mantencion_equipos,Gastos Operacionales,3052330.0
+Salud,2026,1,Soporte,aseo_y_alimentacion,Gastos Operacionales,4041036.0
+Salud,2026,2,Soporte,aseo_y_alimentacion,Gastos Operacionales,3427197.0
+Salud,2026,3,Soporte,aseo_y_alimentacion,Gastos Operacionales,4155334.0
+Salud,2026,4,Soporte,aseo_y_alimentacion,Gastos Operacionales,4071036.0
+Salud,2026,5,Soporte,aseo_y_alimentacion,Gastos Operacionales,4108118.0
+Salud,2026,6,Soporte,aseo_y_alimentacion,Gastos Operacionales,4556957.0
+Salud,2026,7,Soporte,aseo_y_alimentacion,Gastos Operacionales,4611851.0
+Salud,2026,8,Soporte,aseo_y_alimentacion,Gastos Operacionales,4561650.0
+Salud,2026,9,Soporte,aseo_y_alimentacion,Gastos Operacionales,4126748.0
+Salud,2026,10,Soporte,aseo_y_alimentacion,Gastos Operacionales,4068787.0
+Salud,2026,11,Soporte,aseo_y_alimentacion,Gastos Operacionales,4130771.0
+Salud,2026,12,Soporte,aseo_y_alimentacion,Gastos Operacionales,4121150.0
+Salud,2026,1,Administracion,remuneraciones_administrativas,Gastos Operacionales,5600187.0
+Salud,2026,2,Administracion,remuneraciones_administrativas,Gastos Operacionales,4707002.0
+Salud,2026,3,Administracion,remuneraciones_administrativas,Gastos Operacionales,5530889.0
+Salud,2026,4,Administracion,remuneraciones_administrativas,Gastos Operacionales,5547667.0
+Salud,2026,5,Administracion,remuneraciones_administrativas,Gastos Operacionales,5527155.0
+Salud,2026,6,Administracion,remuneraciones_administrativas,Gastos Operacionales,6364800.0
+Salud,2026,7,Administracion,remuneraciones_administrativas,Gastos Operacionales,6278808.0
+Salud,2026,8,Administracion,remuneraciones_administrativas,Gastos Operacionales,6431179.0
+Salud,2026,9,Administracion,remuneraciones_administrativas,Gastos Operacionales,5801806.0
+Salud,2026,10,Administracion,remuneraciones_administrativas,Gastos Operacionales,5612038.0
+Salud,2026,11,Administracion,remuneraciones_administrativas,Gastos Operacionales,5479734.0
+Salud,2026,12,Administracion,remuneraciones_administrativas,Gastos Operacionales,5577901.0
+Salud,2026,1,Administracion,tecnologia,Gastos Operacionales,2241464.0
+Salud,2026,2,Administracion,tecnologia,Gastos Operacionales,1864814.0
+Salud,2026,3,Administracion,tecnologia,Gastos Operacionales,2235568.0
+Salud,2026,4,Administracion,tecnologia,Gastos Operacionales,2253659.0
+Salud,2026,5,Administracion,tecnologia,Gastos Operacionales,2228536.0
+Salud,2026,6,Administracion,tecnologia,Gastos Operacionales,2484311.0
+Salud,2026,7,Administracion,tecnologia,Gastos Operacionales,2484675.0
+Salud,2026,8,Administracion,tecnologia,Gastos Operacionales,2580637.0
+Salud,2026,9,Administracion,tecnologia,Gastos Operacionales,2238626.0
+Salud,2026,10,Administracion,tecnologia,Gastos Operacionales,2216065.0
+Salud,2026,11,Administracion,tecnologia,Gastos Operacionales,2231448.0
+Salud,2026,12,Administracion,tecnologia,Gastos Operacionales,2276123.0
