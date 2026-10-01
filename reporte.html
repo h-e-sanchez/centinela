@@ -59,6 +59,9 @@
     <section id="filtros">
       <h2>Filtros</h2>
       <div class="form-controls">
+        <label>industria
+          <select id="f-industria"></select>
+        </label>
         <label>mes
           <select id="f-mes"></select>
         </label>
@@ -67,7 +70,18 @@
         </label>
       </div>
       <p class="hint">Como un segmentador de Power BI: cambia el contexto de filtro de todos los
-        visuales a la vez.</p>
+        visuales a la vez. Tres industrias sintéticas con historias distintas: Manufactura
+        (positivo), Energía (neutro) y Salud (rojo, con la campaña de invierno de junio a agosto).
+        "Todas" es el consolidado.</p>
+    </section>
+
+    <section class="visual" id="v-escenarios">
+      <div class="visual-cab">
+        <h2>Escenarios por industria</h2>
+        <button type="button" class="btn-dax" data-medidas="Desviación RO %|Color Resultado">DAX</button>
+      </div>
+      <div class="table-scroll"><table id="t-escenarios"></table></div>
+      <div class="dax" hidden></div>
     </section>
 
     <section id="kpis" aria-label="Indicadores principales">
@@ -113,7 +127,8 @@
     <footer>
       <p class="english">
         <strong>English:</strong> The report built on centinela's Power BI semantic model,
-        recomputed in the browser from the same synthetic data (seed 42) the model loads. Every
+        recomputed in the browser from the same synthetic data the model loads: three industries with
+        different stories (manufacturing positive, energy neutral, healthcare red with a winter peak). Every
         visual can show the DAX measure behind it, read live from the TMDL file versioned in the
         repo, so the page and the model cannot drift apart. The interactive Power BI report itself
         is embedded at the top through "Publish to web" once it is published.

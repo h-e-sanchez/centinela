@@ -267,3 +267,5 @@ main.ancho { max-width: 980px; }
 #t-matriz tr.nivel-2 td:first-child { padding-left: 28px; color: var(--muted); }
 /* Al abrir el DAX de un KPI, la tarjeta ocupa toda la fila para que la fórmula se lea. */
 .kpi:has(.dax:not([hidden])) { grid-column: 1 / -1; }
+.estado.neutro { color: var(--muted); background: color-mix(in srgb, var(--faint) 18%, transparent); }
+#t-escenarios tr.seleccionada td { background: var(--accent-weak); font-weight: 600; }

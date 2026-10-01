@@ -371,6 +371,110 @@ cultureInfo es-CL
 			          }
 			        }
 			      ]
+			    },
+			    "desviacion.industria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "industria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Industria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.resultado_operacional_presupuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Resultado Operacional Presupuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "RO presupuestado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.resultado_operacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Resultado Operacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "RO real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Resultado operacional": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.desviación_ro_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Desviación RO %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Desv. %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Desviación del resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  }
 			}

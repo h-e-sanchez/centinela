@@ -144,6 +144,26 @@ table desviacion
 		displayFolder: 3. Semáforo
 		lineageTag: dd12f78b-5f80-51f9-858c-3d68da444e50
 
+	/// Desviación del Resultado Operacional contra su presupuesto (base: valor absoluto del presupuesto).
+	measure 'Desviación RO %' = DIVIDE([Resultado Operacional] - [Resultado Operacional Presupuesto], ABS([Resultado Operacional Presupuesto]))
+		formatString: 0.0%;-0.0%
+		displayFolder: 4. Estado de Resultados
+		lineageTag: 52a8f62c-97ce-5940-b745-2338dc5d79f5
+
+	/// Color del escenario según el Resultado Operacional: verde sobre +2%, rojo bajo -2%, gris si es neutro.
+	measure 'Color Resultado' =
+			VAR d = [Desviación RO %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(d), "#978F7E",
+			        d >= 0.02, "#4F7A52",
+			        d <= -0.02, "#B23C26",
+			        "#978F7E"
+			    )
+		displayFolder: 4. Estado de Resultados
+		lineageTag: b8a9d497-815d-5ad2-8c06-af52e119f96b
+
 	column anio
 		dataType: int64
 		lineageTag: bcbaf994-619e-507f-872b-ab410dd7522b
@@ -231,21 +251,29 @@ table desviacion
 		lineageTag: 58dd9745-5424-5d24-bed7-4851f260d6a6
 		summarizeBy: none
 
+	column industria
+		dataType: string
+		lineageTag: 8a4a4a94-2093-5960-a0ab-16ed4e61bade
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
 	partition desviacion = m
 		mode: import
 		source =
 				let
-				    Tipos = {{"anio", Int64.Type}, {"mes", Int64.Type}, {"centro_costo", type text}, {"componente", type text}, {"grupo_cuenta", type text}, {"monto", type number}},
+				    Tipos = {{"industria", type text}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"centro_costo", type text}, {"componente", type text}, {"grupo_cuenta", type text}, {"monto", type number}},
 				    Leer = (archivo as text) as table =>
 				        Table.TransformColumnTypes(
 				            Table.PromoteHeaders(
 				                Csv.Document(Web.Contents(UrlDatos & archivo), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.None]),
 				                [PromoteAllScalars = true]),
 				            Tipos, "en-US"),
-				    Presupuesto = Table.AddColumn(Table.RenameColumns(Leer("presupuesto.csv"), {{"monto", "monto_presupuesto"}}), "monto_real", each 0, type number),
-				    Real = Table.AddColumn(Table.RenameColumns(Leer("real.csv"), {{"monto", "monto_real"}}), "monto_presupuesto", each 0, type number),
+				    Presupuesto = Table.AddColumn(Table.RenameColumns(Leer("escenarios/presupuesto.csv"), {{"monto", "monto_presupuesto"}}), "monto_real", each 0, type number),
+				    Real = Table.AddColumn(Table.RenameColumns(Leer("escenarios/real.csv"), {{"monto", "monto_real"}}), "monto_presupuesto", each 0, type number),
 				    // Completitud de grilla: unir y agrupar, en vez de un join, deja cada línea con ambos montos (0 explícito si falta uno).
-				    Llaves = {"anio", "mes", "centro_costo", "componente", "grupo_cuenta"},
+				    Llaves = {"industria", "anio", "mes", "centro_costo", "componente", "grupo_cuenta"},
 				    Agrupado = Table.Group(Table.Combine({Presupuesto, Real}), Llaves, {
 				        {"monto_presupuesto", each List.Sum([monto_presupuesto]), type number},
 				        {"monto_real", each List.Sum([monto_real]), type number}}),

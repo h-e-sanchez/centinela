@@ -27,6 +27,10 @@ Qué ya está resuelto en el código:
 - **Origen de datos:** el parámetro `UrlDatos` apunta a la carpeta `data/` de este repo en
   GitHub (`raw.githubusercontent.com`). El modelo carga `presupuesto.csv` y `real.csv` sin
   rutas locales, y el refresco en el Power BI Service funciona con credencial anónima.
+- **Escenarios:** desde 2026-10-01 el modelo lee `data/escenarios/presupuesto.csv` y
+  `real.csv` (tres industrias, columna `industria`). El reporte tiene un segmentador Industria
+  ("Todas" = consolidado) y una página **Escenarios** que compara el Resultado Operacional de
+  cada industria con la medida `Color Resultado` (verde sobre +2%, rojo bajo −2%, gris neutro).
 - **Power Query:** une ambos archivos con `Table.Combine` + `Table.Group` (completitud de
   grilla: cada línea queda con presupuesto y real, 0 explícito si falta uno) y agrega `fecha`.
   Los montos se leen con cultura `en-US` porque vienen con punto decimal.

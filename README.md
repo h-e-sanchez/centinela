@@ -26,6 +26,12 @@
 - **Generador de datos sintéticos reproducible** (semilla fija): genera presupuesto y
   real con ruido controlado más un porcentaje de desviaciones grandes inyectadas a
   propósito, para que el motor tenga algo real que clasificar.
+- **Escenarios por industria** (`data/generar_escenarios.py`): tres empresas sintéticas
+  con estructura de cuentas y estacionalidad propias, cada una con una historia sobre el
+  Resultado Operacional: Manufactura positiva (+20%), Energía neutra (+0,3%) y Salud en
+  rojo (−72%, con resultado negativo en la campaña de invierno). Los tests verifican que
+  cada escenario cumpla su historia. Son la fuente del modelo de Power BI y de
+  `reporte.html`.
 - **Cero dependencias de runtime** — solo librería estándar. Dev deps (`pytest`, `ruff`)
   separadas en `requirements-dev.txt`.
 

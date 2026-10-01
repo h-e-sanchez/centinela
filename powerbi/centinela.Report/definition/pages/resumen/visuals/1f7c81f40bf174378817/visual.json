@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "b0e53f75ebf6fdaaba5e",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "1f7c81f40bf174378817",
   "position": {
-    "x": 852,
+    "x": 640,
     "y": 10,
-    "z": 100,
+    "z": 150,
     "height": 64,
     "width": 192,
-    "tabOrder": 100
+    "tabOrder": 150
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Calendario"
+                      "Entity": "desviacion"
                     }
                   },
-                  "Property": "Nombre Mes"
+                  "Property": "industria"
                 }
               },
-              "queryRef": "Calendario.Nombre Mes",
-              "nativeQueryRef": "Nombre Mes",
+              "queryRef": "desviacion.industria",
+              "nativeQueryRef": "industria",
               "active": true,
-              "displayName": "Mes"
+              "displayName": "Industria"
             }
           ]
         }
@@ -103,7 +103,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mes'"
+                  "Value": "'Industria'"
                 }
               }
             },
