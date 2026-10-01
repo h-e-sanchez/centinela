@@ -74,7 +74,7 @@ Python embebidas como JSON estático
 (clasificación ok/alerta/crítica, sumas por grupo) — ver "No hacer" más abajo para el
 porqué.
 
-## Camino C — Modelo Power BI — en curso
+## Camino C — Modelo Power BI — hecho
 
 **2026-10-01 — hecho como código:** proyecto PBIP en [`powerbi/`](powerbi/) (modelo TMDL
 completo, reporte PBIR con una página vacía) y [`reporte.html`](reporte.html), que recalcula
@@ -155,6 +155,12 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-01 — Reporte de Power BI publicado e incrustado
+
+Publicado con "Publicar en la Web" desde un tenant propio (dominio `cimad.net`, nunca el de un
+empleador) e incrustado en `index.html` (sección Modelo) y en `reporte.html`
+(`PBI_EMBED_URL`). Solo datos sintéticos.
 
 ### 2026-10-01 — Escenarios por industria
 
