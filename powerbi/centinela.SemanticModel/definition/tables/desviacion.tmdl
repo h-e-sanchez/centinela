@@ -169,6 +169,8 @@ table desviacion
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	/// Mismo criterio que src/motor.py: estricto (>), alerta >5%, crítica >15%.
 	column 'Estado Semáforo' =
 			VAR ppto = desviacion[monto_presupuesto]
