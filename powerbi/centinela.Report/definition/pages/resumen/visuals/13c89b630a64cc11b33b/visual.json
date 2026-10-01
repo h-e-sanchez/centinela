@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "13c89b630a64cc11b33b",
   "position": {
     "x": 24,
@@ -21,9 +21,8 @@
                   {
                     "value": "Datos 100% sintéticos · semilla 42 · semáforo: alerta >5%, crítica >15%",
                     "textStyle": {
-                      "fontSize": "10pt",
-                      "fontWeight": "normal",
-                      "color": "#6A6357"
+                      "fontSize": "8pt",
+                      "color": "#6a6357"
                     }
                   }
                 ]

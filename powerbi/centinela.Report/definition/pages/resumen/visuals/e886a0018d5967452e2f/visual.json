@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "e886a0018d5967452e2f",
   "position": {
     "x": 24,
@@ -21,9 +21,9 @@
                   {
                     "value": "Presupuesto vs. Real · 2026",
                     "textStyle": {
-                      "fontSize": "20pt",
                       "fontWeight": "bold",
-                      "color": "#23211C"
+                      "fontSize": "12pt",
+                      "color": "#23211c"
                     }
                   }
                 ]

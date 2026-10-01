@@ -17,3 +17,5 @@ annotation PBI_ProTooling = ["DevMode"]
 ref table desviacion
 ref table Calendario
 
+ref cultureInfo es-CL
+
