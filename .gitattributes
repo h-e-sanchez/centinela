@@ -1,0 +1,2 @@
+data/escenarios/*.csv text eol=lf
+data/escenarios-web.json text eol=lf
