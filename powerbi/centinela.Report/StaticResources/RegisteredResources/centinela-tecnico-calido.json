@@ -1,0 +1,29 @@
+{
+  "name": "centinela-tecnico-calido",
+  "dataColors": [
+    "#33518F",
+    "#A67A2E",
+    "#4F7A52",
+    "#B23C26",
+    "#6A6357",
+    "#8AA9E6",
+    "#D4A24E",
+    "#7FAE82"
+  ],
+  "background": "#FBFAF7",
+  "foreground": "#23211C",
+  "tableAccent": "#33518F",
+  "good": "#4F7A52",
+  "neutral": "#A67A2E",
+  "bad": "#B23C26",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "color": "#23211C"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "color": "#6A6357"
+    }
+  }
+}

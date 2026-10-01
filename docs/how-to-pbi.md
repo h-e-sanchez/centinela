@@ -1,5 +1,56 @@
 # Cómo construir el modelo en Power BI
 
+> **Desde 2026-10-01 el modelo ya está construido como código** en
+> [`powerbi/`](../powerbi/), en formato **PBIP** (Power BI Project): el modelo semántico en
+> TMDL y el reporte en PBIR, todo como texto versionado. Este documento sigue siendo la
+> especificación de referencia; la sección [Proyecto PBIP](#proyecto-pbip-en-el-repo) explica
+> qué falta hacer a mano y cómo publicarlo.
+
+## Proyecto PBIP en el repo
+
+```
+powerbi/
+├── centinela.pbip                     ← abrir este archivo en Power BI Desktop
+├── centinela.SemanticModel/
+│   ├── definition.pbism
+│   └── definition/                    ← TMDL: un archivo por tabla
+│       ├── model.tmdl  database.tmdl  expressions.tmdl  relationships.tmdl
+│       └── tables/desviacion.tmdl  tables/Calendario.tmdl
+└── centinela.Report/
+    ├── definition.pbir                ← apunta al modelo con byPath
+    ├── definition/                    ← PBIR: una página "Resumen", sin visuales todavía
+    └── StaticResources/               ← tema base CY24SU10 + tema «técnico cálido»
+```
+
+Qué ya está resuelto en el código:
+
+- **Origen de datos:** el parámetro `UrlDatos` apunta a la carpeta `data/` de este repo en
+  GitHub (`raw.githubusercontent.com`). El modelo carga `presupuesto.csv` y `real.csv` sin
+  rutas locales, y el refresco en el Power BI Service funciona con credencial anónima.
+- **Power Query:** une ambos archivos con `Table.Combine` + `Table.Group` (completitud de
+  grilla: cada línea queda con presupuesto y real, 0 explícito si falta uno) y agrega `fecha`.
+  Los montos se leen con cultura `en-US` porque vienen con punto decimal.
+- **Modelo:** hecho `desviacion` + dimensión `Calendario` (tabla calculada en DAX, marcada
+  como tabla de fechas) con relación por fecha.
+- **DAX:** la columna `Estado Semáforo` y 15 medidas en carpetas (Montos, Desviación,
+  Semáforo, Estado de Resultados, Tiempo con `TOTALYTD` y `DATEADD`), con formato y
+  descripción. `discourageImplicitMeasures` obliga a usar las medidas.
+
+Qué falta, a mano (Power BI Desktop de octubre de 2024 o posterior, por el formato PBIR del reporte):
+
+1. Abrir `powerbi/centinela.pbip`. Si Desktop pide credenciales para `raw.githubusercontent.com`,
+   elegir **Anónimo**. Luego **Actualizar** para cargar los datos.
+2. Armar los visuales de la tabla [Visuales sugeridos](#visuales-sugeridos) en la página
+   "Resumen". Para la matriz, usar formato condicional sobre `Desviación %` con las reglas
+   5% y 15% (las mismas del semáforo).
+3. **Guardar.** Desktop escribe los visuales como archivos `visual.json` dentro de
+   `centinela.Report/definition/pages/`: se hace commit de esos archivos como de cualquier
+   otro cambio. `.pbi/cache.abf` y `localSettings.json` quedan fuera por el `.gitignore`.
+
+La página [`reporte.html`](../reporte.html) recalcula el mismo reporte en el navegador y
+muestra cada medida leyéndola desde `tables/desviacion.tmdl`, así que cualquier cambio de
+DAX que se haga en Desktop y se guarde aparece ahí sin tocar el JavaScript.
+
 > Especificación del modelo y las medidas DAX, documentadas antes de construir el
 > `.pbix` en Power BI Desktop (paso manual — Claude Code no puede operar esa GUI, ver
 > README.md § Modelo). Fuente de datos: `data/presupuesto.csv` y `data/real.csv`
@@ -100,32 +151,54 @@ CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Ingresos")
 
 ## Publicar como modelo público
 
-Para que quede algo visible en `h-e-sanchez.github.io/centinela` (GitHub Pages no puede
-alojar un `.pbix` — es un formato de escritorio), se publica el reporte con la función
-gratuita de Power BI **"Publicar en la Web"**:
+GitHub Pages no puede alojar un reporte de Power BI: se publica en el Power BI Service con
+**"Publicar en la Web"**, que entrega un `<iframe>` público sin login.
 
-1. Subir el `.pbix` al Power BI Service (powerbi.com), a un workspace propio.
-2. Abrir el reporte publicado → Archivo → **Publicar en la Web** (no "Compartir" — ese
-   requiere que el destinatario tenga cuenta; "Publicar en la Web" genera un link
-   público sin login).
-3. Copiar el `<iframe>` que entrega el asistente y pegarlo en `index.html`, reemplazando
-   el placeholder marcado `<!-- PENDIENTE: iframe de Power BI -->`.
+### Cuenta: tenant propio, nunca la del empleador
+
+- Power BI **no acepta correos personales** (Gmail, Hotmail): exige un correo de trabajo o
+  de institución educativa.
+- **Nunca usar la cuenta de un empleador** para el portafolio: el reporte quedaría en su
+  tenant y "Publicar en la Web" suele estar bloqueado por su administrador.
+- Con un **dominio propio** (por ejemplo `cimad.net`), registrarse en
+  [powerbi.com](https://powerbi.com) con ese correo crea un tenant nuevo. Si nadie lo
+  administra, se toma el rol de administrador con el
+  [proceso de *admin takeover*](https://learn.microsoft.com/en-us/entra/identity/users/domains-admin-takeover)
+  (verificando el dominio con un registro TXT en el DNS).
+- Según la [documentación de Publicar en la Web](https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-publish-to-web),
+  publicar desde **Mi área de trabajo** requiere una licencia de Power BI (la gratuita
+  sirve) y que el administrador habilite la opción del tenant; desde un área de trabajo
+  compartida se necesita Pro o PPU.
+
+### Pasos
+
+1. **Habilitar la opción en el tenant** (como administrador): Portal de administración →
+   Configuración del inquilino → Configuración de exportación y uso compartido →
+   **Publicar en la web** → Habilitado.
+2. **Publicar desde Desktop:** Inicio → Publicar → **Mi área de trabajo**.
+3. En el Service, configurar la credencial del origen web como **Anónima** (Configuración
+   del modelo semántico → Credenciales del origen de datos).
+4. Abrir el reporte → Archivo → Insertar informe → **Publicar en la web (público)** →
+   Crear código para insertar.
+5. Copiar la URL del `src` del `<iframe>` (`https://app.powerbi.com/view?r=...`) y pegarla en
+   `PBI_EMBED_URL`, al inicio de [`reporte.js`](../reporte.js). La misma URL se puede usar en
+   el `<iframe>` de la sección Modelo de `index.html`, reemplazando el placeholder.
 
 **⚠️ Nota de privacidad — leer antes de publicar cualquier reporte con esta función:**
 "Publicar en la Web" hace el reporte **realmente público**: cualquier persona con el
-link lo ve, sin necesidad de iniciar sesión, y Microsoft puede indexarlo. Es aceptable
-acá porque **todos los datos son 100% sintéticos** (generados por
-`data/generar_datos_sinteticos.py`, sin ningún dato real de ningún empleador). **Nunca
-usar "Publicar en la Web" con datos reales de una empresa** — para eso existe
-"Compartir" (acceso restringido) o incrustación con Power BI Embedded.
+link lo ve, sin iniciar sesión, puede acceder a los datos del modelo aunque el reporte no
+los muestre, y Microsoft puede indexarlo. Es aceptable acá porque **todos los datos son
+100% sintéticos** (generados por `data/generar_datos_sinteticos.py`). **Nunca usar
+"Publicar en la Web" con datos reales de una empresa.**
 
 ## Pendiente (candidato, manual)
 
-1. Generar los CSV: `python data/generar_datos_sinteticos.py`.
-2. Abrir Power BI Desktop, cargar `presupuesto.csv` y `real.csv`.
-3. Combinar en Power Query según el paso 2 de "Modelo de datos" arriba.
-4. Crear la tabla `Calendario` y la relación.
-5. Crear la columna calculada `Estado Semáforo` y las 9 medidas.
-6. Armar el layout con los visuales sugeridos.
-7. Publicar en la Web (ver sección anterior) y pegar el `<iframe>` en `index.html`.
-8. Exportar 1-2 capturas de pantalla del reporte para el README (opcional).
+Los pasos 2 a 5 de la versión anterior (cargar CSV, Power Query, Calendario, DAX) ya están
+en el código de `powerbi/`. Queda:
+
+1. Abrir `powerbi/centinela.pbip` en Power BI Desktop y **Actualizar** (credencial anónima).
+2. Armar el layout con los visuales sugeridos en la página "Resumen" y **guardar**; hacer
+   commit de los `visual.json` que escribe Desktop.
+3. Crear el tenant propio y publicar en la Web (sección anterior); pegar la URL en
+   `PBI_EMBED_URL` de `reporte.js`.
+4. Exportar 1 o 2 capturas del reporte para el README (opcional).

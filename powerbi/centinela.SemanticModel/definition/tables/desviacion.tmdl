@@ -1,0 +1,211 @@
+/// Hecho único: una fila por año, mes, centro de costo y componente, con presupuesto y real.
+table desviacion
+	lineageTag: e2f6bfe0-3cea-50d2-b4e0-f81032472671
+
+	/// Suma del presupuesto en el contexto de filtro.
+	measure 'Monto Presupuesto' = SUM(desviacion[monto_presupuesto])
+		formatString: \$ #,##0
+		displayFolder: 1. Montos
+		lineageTag: 9c9e9c97-4352-50b3-a1d4-9d2501e21e2f
+
+	/// Suma de la ejecución real.
+	measure 'Monto Real' = SUM(desviacion[monto_real])
+		formatString: \$ #,##0
+		displayFolder: 1. Montos
+		lineageTag: 658afa86-f421-5baa-9d61-faf62b248663
+
+	/// Real menos presupuesto: positivo = sobregasto (o sobreventa en Ingresos).
+	measure 'Desviación $' = [Monto Real] - [Monto Presupuesto]
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 2. Desviación
+		lineageTag: e09ea996-f5f5-5886-a467-155a2f548baa
+
+	/// Desviación relativa; DIVIDE evita el error por presupuesto cero.
+	measure 'Desviación %' = DIVIDE([Desviación $], [Monto Presupuesto])
+		formatString: 0.0%;-0.0%
+		displayFolder: 2. Desviación
+		lineageTag: 11304183-7ca0-5296-9e3f-f24688d5b81f
+
+	/// Real sobre presupuesto.
+	measure '% Cumplimiento' = DIVIDE([Monto Real], [Monto Presupuesto])
+		formatString: 0.0%
+		displayFolder: 2. Desviación
+		lineageTag: de7fb996-13bb-5b00-9ac2-54f01f1e8b2b
+
+	/// Líneas en Alerta o Crítica (umbral 5%).
+	measure 'Líneas en Alerta' = CALCULATE(COUNTROWS(desviacion), desviacion[Estado Semáforo] <> "OK")
+		formatString: 0
+		displayFolder: 3. Semáforo
+		lineageTag: de1e7387-6818-589a-82a3-b7e43e9affad
+
+	/// Líneas sobre el umbral crítico (15%).
+	measure 'Líneas en Crítica' = CALCULATE(COUNTROWS(desviacion), desviacion[Estado Semáforo] = "Crítica")
+		formatString: 0
+		displayFolder: 3. Semáforo
+		lineageTag: fbcb72a4-eee3-59df-be3e-6dfd499162fc
+
+	/// Proporción de líneas fuera de umbral.
+	measure '% Líneas en Alerta' = DIVIDE([Líneas en Alerta], COUNTROWS(desviacion))
+		formatString: 0.0%
+		displayFolder: 3. Semáforo
+		lineageTag: 57b3fbf4-e223-5c2f-9ede-8dfd7964dd82
+
+	/// Ingresos − Costos − Gastos Operacionales, ejecución real.
+	measure 'Resultado Operacional' =
+			VAR ingresos = CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Ingresos")
+			VAR costos = CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Costos")
+			VAR gastos = CALCULATE([Monto Real], desviacion[grupo_cuenta] = "Gastos Operacionales")
+			RETURN ingresos - costos - gastos
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 4. Estado de Resultados
+		lineageTag: 60a754b1-2b8c-5212-9cf0-85f26df0589d
+
+	/// El mismo subtotal sobre el presupuesto.
+	measure 'Resultado Operacional Presupuesto' =
+			VAR ingresos = CALCULATE([Monto Presupuesto], desviacion[grupo_cuenta] = "Ingresos")
+			VAR costos = CALCULATE([Monto Presupuesto], desviacion[grupo_cuenta] = "Costos")
+			VAR gastos = CALCULATE([Monto Presupuesto], desviacion[grupo_cuenta] = "Gastos Operacionales")
+			RETURN ingresos - costos - gastos
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 4. Estado de Resultados
+		lineageTag: 616355c6-0058-5255-a759-bd2507023dac
+
+	/// Acumulado del año (time intelligence sobre la tabla Calendario).
+	measure 'Real YTD' = TOTALYTD([Monto Real], Calendario[Date])
+		formatString: \$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: fcf4c0ac-c7b3-5abe-ba81-744e509cbe15
+
+	/// Presupuesto acumulado del año.
+	measure 'Presupuesto YTD' = TOTALYTD([Monto Presupuesto], Calendario[Date])
+		formatString: \$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: 06172c43-b306-518e-8d05-be082bd0da97
+
+	/// Desviación acumulada del año.
+	measure 'Desviación YTD %' = DIVIDE([Real YTD] - [Presupuesto YTD], [Presupuesto YTD])
+		formatString: 0.0%;-0.0%
+		displayFolder: 5. Tiempo
+		lineageTag: 9350bea9-28af-5ef2-8a10-dcfa2c8e5368
+
+	/// Ejecución real del mes previo.
+	measure 'Real Mes Anterior' = CALCULATE([Monto Real], DATEADD(Calendario[Date], -1, MONTH))
+		formatString: \$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: 094ed395-f6bd-529e-92c9-8b8c03e7cf57
+
+	/// Variación contra el mes anterior.
+	measure 'Variación MoM %' = DIVIDE([Monto Real] - [Real Mes Anterior], [Real Mes Anterior])
+		formatString: 0.0%;-0.0%
+		displayFolder: 5. Tiempo
+		lineageTag: 169215b6-1e01-58e0-b15a-fe947a4dba1b
+
+	column anio
+		dataType: int64
+		lineageTag: bcbaf994-619e-507f-872b-ab410dd7522b
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		lineageTag: 6b44f863-7609-5402-8f2e-a5f08eeafcee
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column centro_costo
+		dataType: string
+		lineageTag: d63fc3dd-11ea-522d-827b-baaa435d1574
+		summarizeBy: none
+		sourceColumn: centro_costo
+
+		annotation SummarizationSetBy = Automatic
+
+	column componente
+		dataType: string
+		lineageTag: de55f77a-6ffa-5744-bceb-5b2f141e3ab4
+		summarizeBy: none
+		sourceColumn: componente
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_cuenta
+		dataType: string
+		lineageTag: d1274a78-004c-53f3-8706-2586b6beece2
+		summarizeBy: none
+		sourceColumn: grupo_cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto_presupuesto
+		dataType: double
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: a318f41d-76b0-5b64-b96f-b63177f6ddb5
+		summarizeBy: sum
+		sourceColumn: monto_presupuesto
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto_real
+		dataType: double
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: b3698031-446e-5a3a-967d-38d9ae5b352a
+		summarizeBy: sum
+		sourceColumn: monto_real
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ed4fd4f1-f6de-5ad8-bc9b-0dc34f3939d7
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Mismo criterio que src/motor.py: estricto (>), alerta >5%, crítica >15%.
+	column 'Estado Semáforo' =
+			VAR ppto = desviacion[monto_presupuesto]
+			VAR pct = DIVIDE(desviacion[monto_real] - ppto, ppto)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ppto = 0 && desviacion[monto_real] <> 0, "Crítica",
+			        ABS(pct) > 0.15, "Crítica",
+			        ABS(pct) > 0.05, "Alerta",
+			        "OK"
+			    )
+		dataType: string
+		lineageTag: 58dd9745-5424-5d24-bed7-4851f260d6a6
+		summarizeBy: none
+
+	partition desviacion = m
+		mode: import
+		source =
+				let
+				    Tipos = {{"anio", Int64.Type}, {"mes", Int64.Type}, {"centro_costo", type text}, {"componente", type text}, {"grupo_cuenta", type text}, {"monto", type number}},
+				    Leer = (archivo as text) as table =>
+				        Table.TransformColumnTypes(
+				            Table.PromoteHeaders(
+				                Csv.Document(Web.Contents(UrlDatos & archivo), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.None]),
+				                [PromoteAllScalars = true]),
+				            Tipos, "en-US"),
+				    Presupuesto = Table.AddColumn(Table.RenameColumns(Leer("presupuesto.csv"), {{"monto", "monto_presupuesto"}}), "monto_real", each 0, type number),
+				    Real = Table.AddColumn(Table.RenameColumns(Leer("real.csv"), {{"monto", "monto_real"}}), "monto_presupuesto", each 0, type number),
+				    // Completitud de grilla: unir y agrupar, en vez de un join, deja cada línea con ambos montos (0 explícito si falta uno).
+				    Llaves = {"anio", "mes", "centro_costo", "componente", "grupo_cuenta"},
+				    Agrupado = Table.Group(Table.Combine({Presupuesto, Real}), Llaves, {
+				        {"monto_presupuesto", each List.Sum([monto_presupuesto]), type number},
+				        {"monto_real", each List.Sum([monto_real]), type number}}),
+				    ConFecha = Table.AddColumn(Agrupado, "fecha", each #date([anio], [mes], 1), type date)
+				in
+				    ConFecha
+
+	annotation PBI_ResultType = Table
+

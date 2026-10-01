@@ -74,7 +74,14 @@ Python embebidas como JSON estático
 (clasificación ok/alerta/crítica, sumas por grupo) — ver "No hacer" más abajo para el
 porqué.
 
-## Camino C — Modelo Power BI — pendiente (manual)
+## Camino C — Modelo Power BI — en curso
+
+**2026-10-01 — hecho como código:** proyecto PBIP en [`powerbi/`](powerbi/) (modelo TMDL
+completo, reporte PBIR con una página vacía) y [`reporte.html`](reporte.html), que recalcula
+el reporte en el navegador con el DAX leído del TMDL. **Pendiente, manual:** abrir el PBIP
+en Desktop, armar los visuales, guardar (commit de los `visual.json`) y publicar con un
+tenant propio (dominio `cimad.net`). Los pasos de abajo quedan como referencia del modelo;
+la ruta vigente está en [`docs/how-to-pbi.md`](docs/how-to-pbi.md) § Proyecto PBIP.
 
 Power BI Desktop es una aplicación de escritorio: este paso no se puede automatizar desde
 el repo. Ruta resumida (idéntica a los 8 pasos de
@@ -148,6 +155,16 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-01 — Power BI como código + `reporte.html`
+
+Proyecto PBIP (TMDL + PBIR) en `powerbi/` con Power Query que lee los CSV desde GitHub, tabla
+de fechas calculada, `Estado Semáforo` y 15 medidas DAX. Nueva página `reporte.html`
+(KPI, tendencia, desviación por centro de costo, matriz con semáforo y Estado de
+Resultados) con el DAX de cada visual leído en vivo desde el TMDL; verificada contra
+`python -m src.main --estado-resultados` (diciembre: Resultado Operacional real
+$9.738.194, −12,5%, alerta). Test nuevo que impide que la página cite medidas que no
+existen en el modelo.
 
 ### 2026-09-09 — Roadmap inicial
 

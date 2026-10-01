@@ -1,0 +1,7 @@
+/// Carpeta pública con los CSV sintéticos del repo. Cambiarla por una ruta local
+/// (por ejemplo "C:\\centinela\\data\\") solo requiere reemplazar Web.Contents por File.Contents.
+expression UrlDatos = "https://raw.githubusercontent.com/h-e-sanchez/centinela/main/data/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: cf16a115-489f-552c-ab26-d1a15d4e4bfb
+
+	annotation PBI_ResultType = Text
+

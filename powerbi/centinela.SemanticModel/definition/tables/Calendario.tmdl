@@ -1,0 +1,57 @@
+/// Dimensión de fechas marcada como tabla de fechas (dataCategory Time + Date como clave).
+table Calendario
+	dataCategory: Time
+	lineageTag: 03f9cc20-8bad-5986-b67f-3dc7a592451f
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 2dcb0626-ff18-5e1a-98bc-eefa7768f12b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a8eeb20-28e6-5efb-851e-65929f20af0f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anio]
+
+	column Mes
+		dataType: int64
+		formatString: 0
+		lineageTag: 31dca5eb-dc63-575e-bc97-42937ad8bc54
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+	column 'Nombre Mes'
+		dataType: string
+		sortByColumn: Mes
+		lineageTag: b26df71c-c8d4-52ae-b36f-8b477bac4e62
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nombre Mes]
+
+	column Trimestre
+		dataType: string
+		lineageTag: 88259185-8f74-571b-b76d-88b1c9182cfb
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+	partition Calendario = calculated
+		mode: import
+		source = ```
+				ADDCOLUMNS(
+				    CALENDAR(DATE(MIN(desviacion[anio]), 1, 1), DATE(MAX(desviacion[anio]), 12, 31)),
+				    "Anio", YEAR([Date]),
+				    "Mes", MONTH([Date]),
+				    "Nombre Mes", FORMAT([Date], "mmm"),
+				    "Trimestre", "T" & QUARTER([Date])
+				)
+				```
+

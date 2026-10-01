@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>centinela — reporte (modelo Power BI)</title>
+<meta name="description" content="Reporte de desviación presupuesto vs. real construido sobre el modelo semántico de Power BI de centinela: KPI, tendencia, semáforo por centro de costo y la medida DAX detrás de cada visual. Datos 100% sintéticos.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* tema día/noche — mismo patrón que index.html */
+  (function () {
+    var root = document.documentElement;
+    var read = function () { try { return JSON.parse(localStorage.getItem("centinela:theme") || "null"); } catch (e) { return null; } };
+    var current = function () { return read() === "dark" ? "dark" : "light"; };
+    if (current() === "dark") root.dataset.theme = "dark";
+    document.addEventListener("DOMContentLoaded", function () {
+      var btn = document.getElementById("theme-toggle");
+      if (!btn) return;
+      var paint = function () {
+        var c = current();
+        btn.textContent = c === "dark" ? "día" : "noche";
+        btn.setAttribute("aria-pressed", String(c === "dark"));
+      };
+      paint();
+      btn.addEventListener("click", function () {
+        var next = current() === "dark" ? "light" : "dark";
+        if (next === "dark") root.dataset.theme = "dark"; else root.removeAttribute("data-theme");
+        try { localStorage.setItem("centinela:theme", JSON.stringify(next)); } catch (e) {}
+        paint();
+      });
+    });
+  })();
+</script>
+</head>
+<body>
+  <main class="ancho">
+    <header class="site-header">
+      <h1>Reporte</h1>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
+      <p class="tagline"><a href="index.html">← centinela</a> — el reporte del modelo semántico de
+        Power BI, recalculado en el navegador. Cada visual muestra la medida DAX que lo produce,
+        leída en vivo desde el archivo TMDL del repo.</p>
+    </header>
+
+    <section id="publicado">
+      <h2>Reporte publicado en Power BI</h2>
+      <div class="pbi-embed" id="pbi-embed">
+        <div class="placeholder">El reporte interactivo de Power BI se publica con "Publicar en la
+          Web" y aparece aquí. Mientras tanto, abajo está el mismo reporte calculado en el
+          navegador con el mismo modelo.</div>
+      </div>
+      <p class="hint" style="margin-top: var(--sp-3)">El proyecto completo está versionado como
+        texto en <a href="https://github.com/h-e-sanchez/centinela/tree/main/powerbi"><code>powerbi/</code></a>
+        (formato PBIP: modelo en TMDL, reporte en PBIR). Cómo se construyó y publicó:
+        <a href="https://github.com/h-e-sanchez/centinela/blob/main/docs/how-to-pbi.md">docs/how-to-pbi.md</a>.</p>
+    </section>
+
+    <section id="filtros">
+      <h2>Filtros</h2>
+      <div class="form-controls">
+        <label>mes
+          <select id="f-mes"></select>
+        </label>
+        <label>centro de costo
+          <select id="f-centro"></select>
+        </label>
+      </div>
+      <p class="hint">Como un segmentador de Power BI: cambia el contexto de filtro de todos los
+        visuales a la vez.</p>
+    </section>
+
+    <section id="kpis" aria-label="Indicadores principales">
+      <div class="kpis" id="kpi-grid"></div>
+    </section>
+
+    <section class="visual" id="v-tendencia">
+      <div class="visual-cab">
+        <h2>Presupuesto vs. real por mes</h2>
+        <button type="button" class="btn-dax" data-medidas="Monto Presupuesto|Monto Real">DAX</button>
+      </div>
+      <div class="grafico" id="g-tendencia"></div>
+      <div class="dax" hidden></div>
+    </section>
+
+    <section class="visual" id="v-centros">
+      <div class="visual-cab">
+        <h2>Desviación % por centro de costo</h2>
+        <button type="button" class="btn-dax" data-medidas="Desviación $|Desviación %">DAX</button>
+      </div>
+      <div class="grafico" id="g-centros"></div>
+      <div class="dax" hidden></div>
+    </section>
+
+    <section class="visual" id="v-matriz">
+      <div class="visual-cab">
+        <h2>Matriz con semáforo</h2>
+        <button type="button" class="btn-dax" data-medidas="Estado Semáforo|Líneas en Alerta|Líneas en Crítica">DAX</button>
+      </div>
+      <div class="table-scroll"><table id="t-matriz"></table></div>
+      <div class="dax" hidden></div>
+    </section>
+
+    <section class="visual" id="v-eerr">
+      <div class="visual-cab">
+        <h2>Estado de Resultados</h2>
+        <button type="button" class="btn-dax" data-medidas="Resultado Operacional|Resultado Operacional Presupuesto">DAX</button>
+      </div>
+      <div class="table-scroll"><table id="t-eerr"></table></div>
+      <div class="dax" hidden></div>
+    </section>
+
+    <footer>
+      <p class="english">
+        <strong>English:</strong> The report built on centinela's Power BI semantic model,
+        recomputed in the browser from the same synthetic data (seed 42) the model loads. Every
+        visual can show the DAX measure behind it, read live from the TMDL file versioned in the
+        repo, so the page and the model cannot drift apart. The interactive Power BI report itself
+        is embedded at the top through "Publish to web" once it is published.
+      </p>
+    </footer>
+  </main>
+  <script src="reporte.js"></script>
+</body>
+</html>
