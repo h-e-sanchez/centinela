@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "e886a0018d5967452e2f",
+  "name": "13c89b630a64cc11b33b",
   "position": {
     "x": 24,
-    "y": 12,
-    "z": 0,
-    "height": 40,
+    "y": 48,
+    "z": 10,
+    "height": 32,
     "width": 760,
-    "tabOrder": 0
+    "tabOrder": 10
   },
   "visual": {
     "visualType": "textbox",
@@ -19,11 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Presupuesto vs. Real · 2026",
+                    "value": "Datos 100% sintéticos · semilla 42 · semáforo: alerta >5%, crítica >15%",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontSize": "12pt",
-                      "color": "#23211c"
+                      "fontSize": "8pt",
+                      "color": "#6a6357"
                     }
                   }
                 ]

@@ -3,9 +3,9 @@
   "name": "406ff5bb96de7565d8a2",
   "position": {
     "x": 24,
-    "y": 200,
+    "y": 202,
     "z": 300,
-    "height": 508,
+    "height": 504,
     "width": 600,
     "tabOrder": 300
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "desviacion.grupo_cuenta",
               "nativeQueryRef": "grupo_cuenta",
-              "active": true
+              "active": true,
+              "displayName": "Grupo de cuenta"
             },
             {
               "field": {
@@ -43,7 +44,8 @@
               },
               "queryRef": "desviacion.centro_costo",
               "nativeQueryRef": "centro_costo",
-              "active": true
+              "active": true,
+              "displayName": "Centro de costo"
             }
           ]
         },
@@ -61,7 +63,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto"
+              "nativeQueryRef": "Monto Presupuesto",
+              "displayName": "Presupuesto"
             },
             {
               "field": {
@@ -75,7 +78,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real"
+              "nativeQueryRef": "Monto Real",
+              "displayName": "Real"
             },
             {
               "field": {
@@ -89,13 +93,189 @@
                 }
               },
               "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %"
+              "nativeQueryRef": "Desviación %",
+              "displayName": "Desv. %"
             }
           ]
         }
       }
     },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "desviacion"
+                        }
+                      },
+                      "Property": "Color Semáforo"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "desviacion.Desviación %"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "250D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.grupo_cuenta"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Presupuesto"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Real"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "80D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Desviación %"
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -112,6 +292,31 @@
                   "Value": "'Ingresos, costos y gastos'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -121,7 +326,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bd232ba27890bde0a6cd",
+        "name": "d51e6589b7c3ae00a004",
         "field": {
           "Column": {
             "Expression": {
@@ -135,7 +340,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8ee6dc80321781097c0c",
+        "name": "4d678809359e3a1cc000",
         "field": {
           "Column": {
             "Expression": {
@@ -149,7 +354,7 @@
         "type": "Categorical"
       },
       {
-        "name": "73b56257d730652be79c",
+        "name": "279b250a6ba518b34b50",
         "field": {
           "Measure": {
             "Expression": {
@@ -163,7 +368,7 @@
         "type": "Advanced"
       },
       {
-        "name": "ed154205c0720c09075a",
+        "name": "c34cfd75005c43083340",
         "field": {
           "Measure": {
             "Expression": {
@@ -177,7 +382,7 @@
         "type": "Advanced"
       },
       {
-        "name": "4c981d7e358037abbb7a",
+        "name": "a8157de50ed10920c6e8",
         "field": {
           "Measure": {
             "Expression": {

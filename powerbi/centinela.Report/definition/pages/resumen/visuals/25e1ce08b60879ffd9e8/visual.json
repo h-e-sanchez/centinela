@@ -3,10 +3,10 @@
   "name": "25e1ce08b60879ffd9e8",
   "position": {
     "x": 24,
-    "y": 200,
+    "y": 202,
     "z": 400,
     "height": 250,
-    "width": 700,
+    "width": 760,
     "tabOrder": 400
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "Calendario.Nombre Mes",
               "nativeQueryRef": "Nombre Mes",
-              "active": true
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto"
+              "nativeQueryRef": "Monto Presupuesto",
+              "displayName": "Presupuesto"
             },
             {
               "field": {
@@ -60,13 +62,170 @@
                 }
               },
               "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real"
+              "nativeQueryRef": "Monto Real",
+              "displayName": "Real"
             }
           ]
         }
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#978F7E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Presupuesto"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#33518F'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Real"
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dashed'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Presupuesto"
+          }
+        },
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Real"
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -80,7 +239,32 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Presupuesto vs. real por mes'"
+                  "Value": "'Ejecución mensual'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
                 }
               }
             }

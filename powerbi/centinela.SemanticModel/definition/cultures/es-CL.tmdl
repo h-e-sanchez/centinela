@@ -1,0 +1,378 @@
+cultureInfo es-CL
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "desviacion.centro_costo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "centro_costo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Centro de costo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.monto_presupuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Monto Presupuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Presupuesto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.monto_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Monto Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.componente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "componente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Componente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.desviación_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Desviación %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Desv. %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Desviación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_presupuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Presupuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Presupuesto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.líneas_en_alerta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Líneas en Alerta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Líneas en alerta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_resultado_operacional": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Resultado Operacional"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Resultado operacional": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.grupo_cuenta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "grupo_cuenta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Grupo de cuenta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.presupuesto_ytd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Presupuesto YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Presupuesto acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.real_ytd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Real YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_resultado_operacional_presupuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Resultado Operacional Presupuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "RO presupuestado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_real_ytd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Real YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_presupuesto_ytd": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Presupuesto YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Presupuesto acumulado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.desviación_ytd_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Desviación YTD %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Desviación acumulada": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.nombre_mes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Nombre Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

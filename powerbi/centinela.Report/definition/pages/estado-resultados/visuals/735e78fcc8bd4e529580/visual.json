@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "735e78fcc8bd4e529580",
   "position": {
     "x": 24,
-    "y": 16,
+    "y": 12,
     "z": 0,
-    "height": 44,
+    "height": 40,
     "width": 760,
     "tabOrder": 0
   },
@@ -21,13 +21,55 @@
                   {
                     "value": "Estado de Resultados · acumulado del año",
                     "textStyle": {
-                      "fontSize": "20pt",
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "12pt",
+                      "color": "#23211c"
                     }
                   }
                 ]
               }
             ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

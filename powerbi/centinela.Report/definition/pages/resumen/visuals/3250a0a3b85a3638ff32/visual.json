@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "3250a0a3b85a3638ff32",
   "position": {
     "x": 24,
-    "y": 462,
+    "y": 466,
     "z": 600,
-    "height": 246,
+    "height": 240,
     "width": 1232,
     "tabOrder": 600
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "desviacion.centro_costo",
               "nativeQueryRef": "centro_costo",
-              "active": true
+              "active": true,
+              "displayName": "Centro de costo"
             },
             {
               "field": {
@@ -43,7 +44,8 @@
               },
               "queryRef": "desviacion.componente",
               "nativeQueryRef": "componente",
-              "active": true
+              "active": true,
+              "displayName": "Componente"
             }
           ]
         },
@@ -61,7 +63,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto"
+              "nativeQueryRef": "Monto Presupuesto",
+              "displayName": "Presupuesto"
             },
             {
               "field": {
@@ -75,21 +78,8 @@
                 }
               },
               "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
-                    }
-                  },
-                  "Property": "Desviación $"
-                }
-              },
-              "queryRef": "desviacion.Desviación $",
-              "nativeQueryRef": "Desviación $"
+              "nativeQueryRef": "Monto Real",
+              "displayName": "Real"
             },
             {
               "field": {
@@ -103,111 +93,189 @@
                 }
               },
               "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %"
+              "nativeQueryRef": "Desviación %",
+              "displayName": "Desv. %"
             }
           ]
         }
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Rows"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "desviacion.centro_costo"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "desviacion"
+                        }
+                      },
+                      "Property": "Color Semáforo"
                     }
-                  },
-                  "Property": "centro_costo"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
                 }
               }
             ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "desviacion.componente"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
+            "metadata": "desviacion.Desviación %"
           }
-        ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Administracion y Finanzas'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Comercial'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Ingresos'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Operaciones'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Tecnologia'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Personas'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
         }
-      }
-    ],
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "470D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.centro_costo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "240D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Presupuesto"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "240D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Monto Real"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "200D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Desviación %"
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -221,7 +289,32 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Detalle por centro de costo y componente'"
+                  "Value": "'Detalle por centro de costo'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
                 }
               }
             }

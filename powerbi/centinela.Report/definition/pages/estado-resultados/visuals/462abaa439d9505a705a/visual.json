@@ -3,9 +3,9 @@
   "name": "462abaa439d9505a705a",
   "position": {
     "x": 1046,
-    "y": 8,
+    "y": 10,
     "z": 100,
-    "height": 60,
+    "height": 64,
     "width": 210,
     "tabOrder": 100
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "Calendario.Nombre Mes",
               "nativeQueryRef": "Nombre Mes",
-              "active": true
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         }
@@ -47,9 +48,48 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -64,6 +104,31 @@
               "expr": {
                 "Literal": {
                   "Value": "'Mes'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
                 }
               }
             }

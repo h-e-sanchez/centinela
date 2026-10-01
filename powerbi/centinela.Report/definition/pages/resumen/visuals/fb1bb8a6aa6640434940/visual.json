@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "fb1bb8a6aa6640434940",
   "position": {
-    "x": 740,
-    "y": 200,
+    "x": 800,
+    "y": 202,
     "z": 500,
     "height": 250,
-    "width": 516,
+    "width": 456,
     "tabOrder": 500
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "desviacion.centro_costo",
               "nativeQueryRef": "centro_costo",
-              "active": true
+              "active": true,
+              "displayName": "Centro de costo"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %"
+              "nativeQueryRef": "Desviación %",
+              "displayName": "Desviación"
             }
           ]
         }
@@ -69,7 +71,112 @@
         ]
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "desviacion"
+                        }
+                      },
+                      "Property": "Color Semáforo"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -83,7 +190,32 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Desviación % por centro de costo'"
+                  "Value": "'Desviación por centro de costo'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
                 }
               }
             }

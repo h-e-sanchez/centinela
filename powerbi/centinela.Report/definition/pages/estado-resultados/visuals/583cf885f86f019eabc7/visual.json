@@ -1,11 +1,11 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "583cf885f86f019eabc7",
   "position": {
     "x": 640,
-    "y": 200,
+    "y": 202,
     "z": 400,
-    "height": 508,
+    "height": 504,
     "width": 616,
     "tabOrder": 400
   },
@@ -28,7 +28,8 @@
               },
               "queryRef": "Calendario.Nombre Mes",
               "nativeQueryRef": "Nombre Mes",
-              "active": true
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         },
@@ -46,7 +47,8 @@
                 }
               },
               "queryRef": "desviacion.Presupuesto YTD",
-              "nativeQueryRef": "Presupuesto YTD"
+              "nativeQueryRef": "Presupuesto YTD",
+              "displayName": "Presupuesto acumulado"
             },
             {
               "field": {
@@ -60,13 +62,170 @@
                 }
               },
               "queryRef": "desviacion.Real YTD",
-              "nativeQueryRef": "Real YTD"
+              "nativeQueryRef": "Real YTD",
+              "displayName": "Real acumulado"
             }
           ]
         }
       }
     },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#978F7E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Presupuesto YTD"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#33518F'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Real YTD"
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "lineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dashed'"
+                }
+              }
+            },
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Presupuesto YTD"
+          }
+        },
+        {
+          "properties": {
+            "strokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "desviacion.Real YTD"
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "title": [
         {
           "properties": {
@@ -80,7 +239,32 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Acumulado del año: real vs. presupuesto'"
+                  "Value": "'Acumulado del año'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
                 }
               }
             }
@@ -88,5 +272,51 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "27dbda86d0cecd4b8645",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Calendario"
+              }
+            },
+            "Property": "Nombre Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "11aa7b37ce392b0e7037",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Presupuesto YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "325db842e42043bcd8cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Real YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
