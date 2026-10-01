@@ -156,6 +156,16 @@ name or data appears anywhere in this repo.
 
 ## Bitácora
 
+### 2026-10-01 — Escenarios por industria
+
+`data/generar_escenarios.py` crea tres industrias con historias distintas sobre el Resultado
+Operacional: Manufactura positiva (+20,4%), Energía neutra (+0,3%) y Salud en rojo (−72,1%,
+negativa de junio a agosto). El modelo de Power BI pasa a leer `data/escenarios/`, con columna
+`industria`, las medidas `Desviación RO %` y `Color Resultado`, un segmentador Industria en
+Resumen y Estado de Resultados, y la página nueva **Escenarios**. `reporte.html` suma el
+selector de industria y la tabla de escenarios. El motor CLI y `datos.html` siguen con los
+datos originales (semillas 42, 7 y 123).
+
 ### 2026-10-01 — Power BI como código + `reporte.html`
 
 Proyecto PBIP (TMDL + PBIR) en `powerbi/` con Power Query que lee los CSV desde GitHub, tabla

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "004ae4913d33dcbc0a25",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1f7c81f40bf174378817",
   "position": {
-    "x": 1064,
+    "x": 640,
     "y": 10,
-    "z": 200,
+    "z": 150,
     "height": 64,
     "width": 192,
-    "tabOrder": 200
+    "tabOrder": 150
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,13 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "centro_costo"
+                  "Property": "industria"
                 }
               },
-              "queryRef": "desviacion.centro_costo",
-              "nativeQueryRef": "centro_costo",
+              "queryRef": "desviacion.industria",
+              "nativeQueryRef": "industria",
               "active": true,
-              "displayName": "Centro de costo"
+              "displayName": "Industria"
             }
           ]
         }
@@ -103,7 +103,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Centro de costo'"
+                  "Value": "'Industria'"
                 }
               }
             },

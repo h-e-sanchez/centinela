@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "004ae4913d33dcbc0a25",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "8b9c15befb04db96d368",
   "position": {
-    "x": 1064,
+    "x": 1046,
     "y": 10,
-    "z": 200,
+    "z": 100,
     "height": 64,
-    "width": 192,
-    "tabOrder": 200
+    "width": 210,
+    "tabOrder": 100
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "desviacion"
+                      "Entity": "Calendario"
                     }
                   },
-                  "Property": "centro_costo"
+                  "Property": "Nombre Mes"
                 }
               },
-              "queryRef": "desviacion.centro_costo",
-              "nativeQueryRef": "centro_costo",
+              "queryRef": "Calendario.Nombre Mes",
+              "nativeQueryRef": "Nombre Mes",
               "active": true,
-              "displayName": "Centro de costo"
+              "displayName": "Mes"
             }
           ]
         }
@@ -103,7 +103,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Centro de costo'"
+                  "Value": "'Mes'"
                 }
               }
             },

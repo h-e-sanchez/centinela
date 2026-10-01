@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "b0e53f75ebf6fdaaba5e",
+  "name": "8d5ce064cb888761f595",
   "position": {
-    "x": 852,
-    "y": 10,
-    "z": 100,
-    "height": 64,
-    "width": 192,
-    "tabOrder": 100
+    "x": 560,
+    "y": 92,
+    "z": 300,
+    "height": 300,
+    "width": 696,
+    "tabOrder": 300
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,27 +32,93 @@
               "displayName": "Mes"
             }
           ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "industria"
+                }
+              },
+              "queryRef": "desviacion.industria",
+              "nativeQueryRef": "industria",
+              "active": true,
+              "displayName": "Industria"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Resultado Operacional"
+                }
+              },
+              "queryRef": "desviacion.Resultado Operacional",
+              "nativeQueryRef": "Resultado Operacional",
+              "displayName": "Resultado operacional"
+            }
+          ]
         }
       }
     },
     "objects": {
-      "data": [
+      "categoryAxis": [
         {
           "properties": {
-            "mode": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "false"
                 }
               }
             }
           }
         }
       ],
-      "header": [
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "showTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -103,7 +169,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Mes'"
+                  "Value": "'Resultado operacional mensual'"
                 }
               }
             },

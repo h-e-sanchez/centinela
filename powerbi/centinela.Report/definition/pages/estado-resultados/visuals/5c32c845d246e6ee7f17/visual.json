@@ -6,7 +6,7 @@
     "y": 48,
     "z": 10,
     "height": 32,
-    "width": 760,
+    "width": 600,
     "tabOrder": 10
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Datos 100% sintéticos · semilla 42 · semáforo: alerta >5%, crítica >15%",
+                    "value": "Datos 100% sintéticos · Todas = consolidado de 3 industrias · semáforo: alerta >5%, crítica >15%",
                     "textStyle": {
                       "fontSize": "10pt",
                       "fontWeight": "normal",

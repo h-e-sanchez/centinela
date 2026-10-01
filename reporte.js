@@ -1,7 +1,8 @@
 // reporte.js — el reporte del modelo Power BI de centinela, recalculado en el navegador.
 //
-// - Datos: data/ejemplos-web.json, semilla 42 (los mismos CSV que carga el modelo vía
-//   el parámetro UrlDatos), así los números coinciden con el reporte de Power BI.
+// - Datos: data/escenarios-web.json, generado desde data/escenarios/*.csv (los mismos CSV
+//   que carga el modelo vía el parámetro UrlDatos): tres industrias, así los números
+//   coinciden con el reporte de Power BI.
 // - DAX: se lee en vivo desde el TMDL versionado en powerbi/, no se copia aquí. La página
 //   y el modelo no pueden divergir.
 // - La aritmética espeja las medidas: SUM, DIVIDE (blank si el denominador es 0) y el
@@ -20,7 +21,10 @@ const clp = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP",
 const pct = (v) => (v === null ? "—" : (v * 100).toLocaleString("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "%");
 const millones = (v) => (v < 0 ? "-$" : "$") + (Math.abs(v) / 1e6).toLocaleString("es-CL", { maximumFractionDigits: 1 }) + " MM";
 
-const estado = { filas: [], dax: {}, mes: "todos", centro: "todos" };
+const estado = { datos: {}, filas: [], dax: {}, industria: "todas", mes: "todos", centro: "todos" };
+const NOMBRE_INDUSTRIA = { Manufactura: "Manufactura", Energia: "Energía", Salud: "Salud" };
+const ORDEN_INDUSTRIAS = ["Manufactura", "Energia", "Salud"]; // la historia: positivo → neutro → rojo
+const industrias = () => ORDEN_INDUSTRIAS.filter((i) => i in estado.datos);
 
 // -------------------------------------------------------------- "medidas"
 
@@ -210,7 +214,25 @@ function eerr() {
   $("#t-eerr").innerHTML = html + "</tbody>";
 }
 
+function escenarios() {
+  const fila = (nombre, filas) => {
+    const f = filas.filter((x) => estado.mes === "todos" || x.mes === Number(estado.mes));
+    const ppto = resultadoOperacional(f, "monto_presupuesto");
+    const real = resultadoOperacional(f, "monto_real");
+    const d = ppto ? (real - ppto) / Math.abs(ppto) : null;
+    // Mismo criterio que la medida Color Resultado: verde >= +2%, rojo <= -2%, gris si es neutro.
+    const [clase, texto] = d === null ? ["neutro", "—"] : d >= 0.02 ? ["ok", "Positivo"] : d <= -0.02 ? ["critica", "Rojo"] : ["neutro", "Neutro"];
+    const sel = estado.industria === nombre ? ' class="seleccionada"' : "";
+    return `<tr${sel}><td>${NOMBRE_INDUSTRIA[nombre] || nombre}</td><td class="num">${millones(ppto)}</td>` +
+      `<td class="num">${millones(real)}</td><td class="num">${pct(d)}</td><td><span class="estado ${clase}">${texto}</span></td></tr>`;
+  };
+  let html = '<thead><tr><th>Industria</th><th class="num">RO presupuestado</th><th class="num">RO real</th><th class="num">Desv. %</th><th>Escenario</th></tr></thead><tbody>';
+  for (const nombre of industrias()) html += fila(nombre, estado.datos[nombre]);
+  $("#t-escenarios").innerHTML = html + "</tbody>";
+}
+
 function render() {
+  escenarios();
   kpis();
   tendencia();
   centros();
@@ -233,15 +255,24 @@ async function iniciar() {
     iframe.loading = "lazy";
     $("#pbi-embed").replaceChildren(iframe);
   }
-  const [ejemplos, tmdl] = await Promise.all([
-    fetch("data/ejemplos-web.json").then((r) => r.json()),
+  const [datos, tmdl] = await Promise.all([
+    fetch("data/escenarios-web.json").then((r) => r.json()),
     fetch(TMDL).then((r) => (r.ok ? r.text() : "")).catch(() => ""),
   ]);
-  estado.filas = ejemplos["42"];
+  estado.datos = datos;
   estado.dax = parsearTmdl(tmdl);
+  const usarIndustria = (valor) => {
+    estado.industria = valor;
+    estado.filas = valor === "todas" ? Object.values(datos).flat() : datos[valor];
+    estado.centro = "todos";
+    opciones($("#f-centro"), [...new Set(estado.filas.map((f) => f.centro_costo))].sort(), (c) => c);
+  };
+  usarIndustria("todas");
 
+  $("#f-industria").replaceChildren(new Option("Todas (consolidado)", "todas"),
+    ...industrias().map((i) => new Option(NOMBRE_INDUSTRIA[i] || i, i)));
+  $("#f-industria").addEventListener("change", (e) => { usarIndustria(e.target.value); render(); });
   opciones($("#f-mes"), [...new Set(estado.filas.map((f) => f.mes))].sort((a, b) => a - b), (m) => MESES[m]);
-  opciones($("#f-centro"), [...new Set(estado.filas.map((f) => f.centro_costo))].sort(), (c) => c);
   $("#f-mes").addEventListener("change", (e) => { estado.mes = e.target.value; render(); });
   $("#f-centro").addEventListener("change", (e) => { estado.centro = e.target.value; render(); });
   document.addEventListener("click", (e) => {
