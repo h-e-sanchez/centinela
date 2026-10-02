@@ -2,13 +2,6 @@
 table desviacion
 	lineageTag: e2f6bfe0-3cea-50d2-b4e0-f81032472671
 
-	/// Industria filtrada, con tilde, o «Las tres empresas» sin filtro.
-	measure 'Portada empresa' =
-			VAR i = SELECTEDVALUE(desviacion[industria])
-			RETURN SWITCH(i, BLANK(), "Las tres empresas", "Energia", "Energía", i)
-		displayFolder: 0. Portada
-		lineageTag: 763bb19b-a7f6-5287-a81a-2dfc8247cea3
-
 	/// Presupuesto abreviado para la tarjeta.
 	measure 'Portada presupuesto' =
 			VAR v = [Monto Presupuesto]
@@ -43,7 +36,7 @@ table desviacion
 		lineageTag: 1decc561-5bce-54c4-9207-60e6f7ab2a06
 
 	/// Primera frase de la portada: cómo terminó el resultado.
-	measure 'Portada frase 1' = [Portada empresa] & ": resultado " & [Portada resultado] & " vs. presupuesto"
+	measure 'Portada frase 1' = "Resultado " & [Portada resultado] & " vs. presupuesto"
 		displayFolder: 0. Portada
 		lineageTag: 7db4f9a0-96bd-5bf5-a5b3-f52f55bda739
 
@@ -52,7 +45,7 @@ table desviacion
 			VAR top = TOPN(1, VALUES(desviacion[centro_costo]), ABS([Desviación $]), DESC)
 			VAR centro = MAXX(top, desviacion[centro_costo])
 			VAR d = CALCULATE([Desviación %], desviacion[centro_costo] = centro)
-			RETURN "Mayor desvío: " & centro & " (" & FORMAT(d, "+0.0%;-0.0%") & ")"
+			RETURN "Mayor desvío: " & centro & " " & FORMAT(d, "+0.0%;-0.0%")
 		displayFolder: 0. Portada
 		lineageTag: 3e7a1062-9749-585b-b29f-f341a2533d33
 

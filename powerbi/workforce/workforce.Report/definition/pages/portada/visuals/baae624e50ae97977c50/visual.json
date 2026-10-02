@@ -23,11 +23,11 @@
                       "Entity": "Calendario"
                     }
                   },
-                  "Property": "Mes Año"
+                  "Property": "Nombre Mes"
                 }
               },
-              "queryRef": "Calendario.Mes Año",
-              "nativeQueryRef": "Mes Año",
+              "queryRef": "Calendario.Nombre Mes",
+              "nativeQueryRef": "Nombre Mes",
               "active": true,
               "displayName": "Mes"
             }
@@ -49,6 +49,26 @@
               "queryRef": "ausencia_diaria.Tasa global %",
               "nativeQueryRef": "Tasa global %",
               "displayName": "Ausentismo"
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Calendario"
+                    }
+                  },
+                  "Property": "Anio"
+                }
+              },
+              "queryRef": "Calendario.Anio",
+              "nativeQueryRef": "Anio",
+              "active": true,
+              "displayName": "Año"
             }
           ]
         }
@@ -129,26 +149,6 @@
           }
         }
       ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#4F7A52'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "ausencia_diaria.Tasa global %"
-          }
-        }
-      ],
       "lineStyles": [
         {
           "properties": {
@@ -206,7 +206,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tasa de ausentismo por mes'"
+                  "Value": "'Tasa de ausentismo por mes: 2025 y 2026'"
                 }
               }
             },

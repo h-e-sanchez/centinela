@@ -2,18 +2,11 @@
 table personas
 	lineageTag: 24bc5f3e-0609-5b50-b04d-8915e8ca49c8
 
-	/// Industria filtrada, con tilde, o «Las tres empresas» sin filtro.
-	measure 'Portada empresa' =
-			VAR i = SELECTEDVALUE(sedes[industria])
-			RETURN SWITCH(i, BLANK(), "Las tres empresas", "Energia", "Energía", i)
-		displayFolder: 0. Portada
-		lineageTag: cba7e82b-df74-57ed-975b-ef24b22de9ce
-
 	/// Primera frase: tasa global y el mes de mayor ausentismo.
 	measure 'Portada frase 1' =
 			VAR meses = FILTER(VALUES(Calendario[Mes Año]), NOT ISBLANK([Tasa global %]))
 			VAR pico = MAXX(TOPN(1, meses, [Tasa global %], DESC), Calendario[Mes Año])
-			RETURN [Portada empresa] & ": " & FORMAT([Tasa global %], "0.0%") & " de ausentismo, pico en " & pico
+			RETURN FORMAT([Tasa global %], "0.0%") & " de ausentismo · pico " & pico
 		displayFolder: 0. Portada
 		lineageTag: f2b987aa-9b5e-5e2d-9d86-12f8f40f3eab
 
@@ -21,8 +14,7 @@ table personas
 	measure 'Portada frase 2' =
 			VAR sede = CALCULATE(SELECTEDVALUE(sedes[sede]), sedes[piloto] = 1)
 			VAR cambio = FORMAT([Cambio costo/hora piloto %], "+0%;-0%")
-			RETURN IF(ISBLANK(sede), "Pilotos de pool interno: " & cambio & " en costo por hora",
-			          "Piloto " & sede & ": " & cambio & " en costo por hora")
+			RETURN IF(ISBLANK(sede), "Pilotos: " & cambio & " costo/hora", "Piloto " & sede & ": " & cambio & " costo/hora")
 		displayFolder: 0. Portada
 		lineageTag: 95493e6b-d5e8-51ec-a96c-62bf61d11ce3
 
