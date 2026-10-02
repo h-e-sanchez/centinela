@@ -1,4 +1,4 @@
-/// Hecho único: una fila por año, mes, centro de costo y componente, con presupuesto y real.
+/// Hecho único: una fila por año, mes, sucursal y cuenta, con presupuesto, forecast y real (montos.csv pivoteado por versión).
 table desviacion
 	lineageTag: e2f6bfe0-3cea-50d2-b4e0-f81032472671
 
@@ -164,6 +164,112 @@ table desviacion
 		displayFolder: 4. Estado de Resultados
 		lineageTag: b8a9d497-815d-5ad2-8c06-af52e119f96b
 
+	/// Forecast 3+9: enero a marzo real, abril a diciembre re-proyectado con el run-rate del trimestre.
+	measure 'Monto Forecast' = SUM(desviacion[monto_forecast])
+		formatString: \$ #,##0
+		displayFolder: 1. Montos
+		lineageTag: 85d653cc-0534-57b3-8183-721b30945d97
+
+	/// Costos y gastos operacionales ejecutados (todo lo que no es ingreso).
+	measure 'Gasto Real' = CALCULATE([Monto Real], desviacion[grupo_cuenta] <> "Ingresos")
+		formatString: \$ #,##0
+		displayFolder: 1. Montos
+		lineageTag: 782cbca8-6eb6-5991-9a15-31581241dbf9
+
+	/// Efecto de la desviación en el Resultado Operacional: más ingreso suma, más gasto resta.
+	measure 'Impacto en Resultado $' =
+			VAR ingresos = CALCULATE([Desviación $], desviacion[grupo_cuenta] = "Ingresos")
+			VAR egresos = CALCULATE([Desviación $], desviacion[grupo_cuenta] <> "Ingresos")
+			RETURN ingresos - egresos
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 4. Estado de Resultados
+		lineageTag: d2438304-a712-5a3b-afec-7ad4919dde59
+
+	/// El mismo subtotal sobre el forecast.
+	measure 'Resultado Operacional Forecast' =
+			VAR ingresos = CALCULATE([Monto Forecast], desviacion[grupo_cuenta] = "Ingresos")
+			VAR costos = CALCULATE([Monto Forecast], desviacion[grupo_cuenta] = "Costos")
+			VAR gastos = CALCULATE([Monto Forecast], desviacion[grupo_cuenta] = "Gastos Operacionales")
+			RETURN ingresos - costos - gastos
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 4. Estado de Resultados
+		lineageTag: 339472ed-ac7a-5645-b2e3-57b1bbb4bee8
+
+	/// Real menos forecast: lo que ni siquiera el forecast de marzo anticipó.
+	measure 'Desviación vs Forecast $' = [Monto Real] - [Monto Forecast]
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 6. Forecast
+		lineageTag: 016c2c4a-a17d-5d0c-835c-9f979c5a6d17
+
+	/// Desviación relativa contra el forecast.
+	measure 'Desviación vs Forecast %' = DIVIDE([Desviación vs Forecast $], [Monto Forecast])
+		formatString: 0.0%;-0.0%
+		displayFolder: 6. Forecast
+		lineageTag: 35fe7a3b-d30c-5859-a772-6dd588a2ee14
+
+	/// Cuánto corrigió el forecast al presupuesto original.
+	measure 'Forecast vs Presupuesto %' = DIVIDE([Monto Forecast] - [Monto Presupuesto], [Monto Presupuesto])
+		formatString: 0.0%;-0.0%
+		displayFolder: 6. Forecast
+		lineageTag: c575318e-ba0e-5ffe-ae8f-0e9cfe6ddb82
+
+	/// Resultado Operacional real contra el del forecast.
+	measure 'Desviación RO vs Forecast %' = DIVIDE([Resultado Operacional] - [Resultado Operacional Forecast], ABS([Resultado Operacional Forecast]))
+		formatString: 0.0%;-0.0%
+		displayFolder: 6. Forecast
+		lineageTag: 4775ad1d-14cf-5e7a-9c0e-0b99b43af8fb
+
+	/// Real del mismo periodo del año anterior.
+	measure 'Real AA' = CALCULATE([Monto Real], SAMEPERIODLASTYEAR(Calendario[Date]))
+		formatString: \$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: 8c79a99b-b37c-5ba3-bc98-cc5ed4ca2c01
+
+	/// Crecimiento contra el mismo periodo del año anterior.
+	measure 'Var. interanual %' = DIVIDE([Monto Real] - [Real AA], [Real AA])
+		formatString: 0.0%;-0.0%
+		displayFolder: 5. Tiempo
+		lineageTag: 267e3803-5b26-5515-a7e4-f578d091b622
+
+	/// Suma de los últimos 12 meses hasta el periodo visible.
+	measure 'Real Móvil 12m' = CALCULATE([Monto Real], DATESINPERIOD(Calendario[Date], MAX(Calendario[Date]), -12, MONTH))
+		formatString: \$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: 7412610f-ee8e-578f-b870-00f71a329a48
+
+	/// Resultado Operacional del mismo periodo del año anterior.
+	measure 'Resultado Operacional AA' = CALCULATE([Resultado Operacional], SAMEPERIODLASTYEAR(Calendario[Date]))
+		formatString: \$ #,##0;-\$ #,##0
+		displayFolder: 5. Tiempo
+		lineageTag: dad32ab3-a31e-554e-9c06-38f0d5653941
+
+	/// Variación interanual del Resultado Operacional (base: valor absoluto del año anterior).
+	measure 'Var. RO interanual %' = DIVIDE([Resultado Operacional] - [Resultado Operacional AA], ABS([Resultado Operacional AA]))
+		formatString: 0.0%;-0.0%
+		displayFolder: 5. Tiempo
+		lineageTag: dc2c25be-d97c-58b2-887d-355b870a9cfa
+
+	/// Parte del gasto ejecutado que se mueve con la actividad.
+	measure 'Gasto variable %' = DIVIDE(CALCULATE([Monto Real], desviacion[tipo_gasto] = "Variable"), [Gasto Real])
+		formatString: 0.0%
+		displayFolder: 7. Estructura de gasto
+		lineageTag: 33e76e4c-7bb0-550b-9115-91d9fbd64760
+
+	/// Texto para tarjetas.
+	measure 'KPI Forecast' = FORMAT([Monto Forecast] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 25f83219-ae5c-57bf-9d73-2c3dd05fdf34
+
+	/// Texto para tarjetas.
+	measure 'KPI Real AA' = FORMAT([Real AA] / 1000000, "$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 0d2c80be-1806-5e37-9fff-b82b97dfa2e9
+
+	/// Texto para tarjetas.
+	measure 'KPI Impacto en Resultado' = FORMAT([Impacto en Resultado $] / 1000000, "$ #,0.0;-$ #,0.0") & " MM"
+		displayFolder: 0. Tarjetas ejecutivas
+		lineageTag: 3f7189de-f80d-50c1-943f-94477659080a
+
 	column anio
 		dataType: int64
 		lineageTag: bcbaf994-619e-507f-872b-ab410dd7522b
@@ -259,25 +365,57 @@ table desviacion
 
 		annotation SummarizationSetBy = Automatic
 
+	column sucursal
+		dataType: string
+		lineageTag: 4996e023-b626-5bf9-8c9d-3bd1091f804e
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		lineageTag: 1017e202-70fd-569e-a899-d492db3345f1
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_gasto
+		dataType: string
+		lineageTag: ff9a194d-1b11-5c1c-99a8-40986e0b5f8c
+		summarizeBy: none
+		sourceColumn: tipo_gasto
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto_forecast
+		dataType: double
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 5d58dbd3-ea8c-5cc0-9433-8041a841a563
+		summarizeBy: sum
+		sourceColumn: monto_forecast
+
+		annotation SummarizationSetBy = Automatic
+
 	partition desviacion = m
 		mode: import
 		source =
 				let
-				    Tipos = {{"industria", type text}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"centro_costo", type text}, {"componente", type text}, {"grupo_cuenta", type text}, {"monto", type number}},
-				    Leer = (archivo as text) as table =>
-				        Table.TransformColumnTypes(
-				            Table.PromoteHeaders(
-				                Csv.Document(Web.Contents(UrlDatos & archivo), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.None]),
-				                [PromoteAllScalars = true]),
-				            Tipos, "en-US"),
-				    Presupuesto = Table.AddColumn(Table.RenameColumns(Leer("escenarios/presupuesto.csv"), {{"monto", "monto_presupuesto"}}), "monto_real", each 0, type number),
-				    Real = Table.AddColumn(Table.RenameColumns(Leer("escenarios/real.csv"), {{"monto", "monto_real"}}), "monto_presupuesto", each 0, type number),
-				    // Completitud de grilla: unir y agrupar, en vez de un join, deja cada línea con ambos montos (0 explícito si falta uno).
-				    Llaves = {"industria", "anio", "mes", "centro_costo", "componente", "grupo_cuenta"},
-				    Agrupado = Table.Group(Table.Combine({Presupuesto, Real}), Llaves, {
-				        {"monto_presupuesto", each List.Sum([monto_presupuesto]), type number},
-				        {"monto_real", each List.Sum([monto_real]), type number}}),
-				    ConFecha = Table.AddColumn(Agrupado, "fecha", each #date([anio], [mes], 1), type date)
+				    Tipos = {{"version", type text}, {"industria", type text}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"centro_costo", type text}, {"componente", type text}, {"cuenta", type text}, {"tipo_gasto", type text}, {"grupo_cuenta", type text}, {"monto", type number}},
+				    Origen = Table.TransformColumnTypes(
+				        Table.PromoteHeaders(
+				            Csv.Document(Web.Contents(UrlDatos & "escenarios/montos.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				            [PromoteAllScalars = true]),
+				        Tipos, "en-US"),
+				    // Una columna por versión: cada línea queda con presupuesto, forecast y real (0 explícito si falta uno).
+				    Pivoteado = Table.Pivot(Origen, {"Presupuesto", "Forecast", "Real"}, "version", "monto", List.Sum),
+				    Renombrado = Table.RenameColumns(Pivoteado, {{"Presupuesto", "monto_presupuesto"}, {"Forecast", "monto_forecast"}, {"Real", "monto_real"}}),
+				    Montos = {"monto_presupuesto", "monto_forecast", "monto_real"},
+				    SinNulos = Table.ReplaceValue(Renombrado, null, 0, Replacer.ReplaceValue, Montos),
+				    ConTipos = Table.TransformColumnTypes(SinNulos, List.Transform(Montos, each {_, type number})),
+				    ConFecha = Table.AddColumn(ConTipos, "fecha", each #date([anio], [mes], 1), type date)
 				in
 				    ConFecha
 

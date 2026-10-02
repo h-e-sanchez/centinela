@@ -43,6 +43,27 @@ table Calendario
 		isNameInferred
 		sourceColumn: [Trimestre]
 
+	column 'Periodo Num'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b8ccef6d-ac18-529f-bad9-3b7be02ae542
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo Num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Año'
+		dataType: string
+		lineageTag: 04859e19-87e3-53bd-82a5-0ed012d28587
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Año]
+		sortByColumn: 'Periodo Num'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Calendario = calculated
 		mode: import
 		source =
@@ -51,6 +72,8 @@ table Calendario
 				    "Anio", YEAR([Date]),
 				    "Mes", MONTH([Date]),
 				    "Nombre Mes", FORMAT([Date], "mmm"),
-				    "Trimestre", "T" & QUARTER([Date])
+				    "Trimestre", "T" & QUARTER([Date]),
+				    "Periodo Num", YEAR([Date]) * 100 + MONTH([Date]),
+				    "Mes Año", FORMAT([Date], "mmm yyyy")
 				)
 

@@ -3,7 +3,7 @@
     {
       "slug": "presupuesto-vs-real",
       "titulo": "Presupuesto vs. Real por industria",
-      "resumen": "Control de gestión de tres empresas sintéticas: KPI ejecutivos, semáforo de desviaciones, Estado de Resultados acumulado y una página que compara escenarios por industria.",
+      "resumen": "Control de gestión de tres empresas sintéticas, 2025 y 2026, por sucursal y cuenta: KPI ejecutivos, semáforo, Estado de Resultados, Forecast 3+9, comparación interanual con grupo de cálculo, puente del resultado con drill y estructura de gasto fijo y variable.",
       "tema": "Control de gestión · FP&A",
       "fecha": "2026-10-01",
       "destacado": true,
@@ -17,6 +17,10 @@
         "Modelo estrella",
         "DAX y time intelligence",
         "Formato condicional por medida",
+        "Forecast 3+9",
+        "Grupo de cálculo",
+        "Parámetros de campo",
+        "Cascada y árbol de descomposición",
         "Proyecto PBIP versionado en Git"
       ],
       "historias": [
@@ -36,19 +40,19 @@
           "industria": "Salud",
           "resultado": "−72,1%",
           "tono": "critica",
-          "texto": "La campaña de invierno dispara los costos clínicos: resultado negativo de junio a agosto."
+          "texto": "La campaña de invierno dispara los costos clínicos: resultado negativo de junio a agosto. El forecast de marzo no lo anticipó y la mitad del sobregasto cae en la Clínica Poniente."
         }
       ],
       "descargas": [
         {
           "etiqueta": "Datos en CSV",
           "archivo": "descargas/centinela-datos-csv.zip",
-          "detalle": "presupuesto y real, con diccionario de columnas"
+          "detalle": "detalle por sucursal y cuenta (presupuesto, forecast y real) y el 2026 agregado, con diccionario"
         },
         {
           "etiqueta": "Datos en Excel",
           "archivo": "descargas/centinela-datos.xlsx",
-          "detalle": "hojas presupuesto, real y diccionario"
+          "detalle": "hojas montos, presupuesto, real y diccionario"
         },
         {
           "etiqueta": "Reporte .pbix",

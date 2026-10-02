@@ -1,0 +1,54 @@
+/// Parámetro de campo: el visitante elige la dimensión de la comparación interanual.
+table 'Comparar por'
+	lineageTag: 33968f4e-5240-56b2-9591-66476fe3e4cf
+
+	column 'Comparar por'
+		dataType: string
+		lineageTag: 467318cd-7f27-571c-af4c-a88aa7f3b82f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Comparar por Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Comparar por Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comparar por Campos'
+		dataType: string
+		isHidden
+		lineageTag: 4fbe9b16-7f00-533e-96bf-235ac2d59fa8
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Comparar por Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comparar por Orden'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 893fd419-9bd7-5994-9dee-45c6b6f471cc
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Comparar por' = calculated
+		mode: import
+		source =
+				{
+				    ("Industria", NAMEOF('desviacion'[industria]), 0),
+				    ("Sucursal", NAMEOF('desviacion'[sucursal]), 1),
+				    ("Centro de costo", NAMEOF('desviacion'[centro_costo]), 2),
+				    ("Tipo de gasto", NAMEOF('desviacion'[tipo_gasto]), 3),
+				    ("Grupo de cuenta", NAMEOF('desviacion'[grupo_cuenta]), 4)
+				}
+
+	annotation PBI_ResultType = Table
