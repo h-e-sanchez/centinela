@@ -65,6 +65,16 @@ cultureInfo es-CL
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "2026": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -110,6 +120,16 @@ cultureInfo es-CL
 			        },
 			        {
 			          "Desviación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Desv. vs presupuesto": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -466,6 +486,425 @@ cultureInfo es-CL
 			        },
 			        {
 			          "Desviación del resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Real vs. presupuesto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.monto_forecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Monto Forecast"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.desviación_vs_forecast_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Desviación vs Forecast %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Desv. vs forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Real vs. forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.tipo_gasto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "tipo_gasto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tipo de gasto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.sucursal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "sucursal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sucursal": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.desviación_ro_vs_forecast_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Desviación RO vs Forecast %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real vs. forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_forecast": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Forecast"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Forecast": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.forecast_vs_presupuesto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Forecast vs Presupuesto %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Forecast vs. presupuesto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.var__interanual_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Var. interanual %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Variación interanual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_real_aa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Real AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real año anterior": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.var__ro_interanual_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Var. RO interanual %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Resultado Operacional vs. año anterior": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.real_aa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Real AA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "2025": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.impacto_en_resultado_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Impacto en Resultado $"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Impacto en el resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.cuenta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "cuenta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cuenta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.gasto_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Gasto Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gasto real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.kpi_impacto_en_resultado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "KPI Impacto en Resultado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Impacto en el resultado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.gasto_variable_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Gasto variable %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gasto variable": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.mes_año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Mes Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "inteligencia_de_tiempo.cálculo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Inteligencia de tiempo",
+			          "ConceptualProperty": "Cálculo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cálculo": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
