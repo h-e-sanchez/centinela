@@ -1,4 +1,4 @@
-/// Parámetro de campo: el visitante elige qué versión del monto ver.
+/// Tabla desconectada: el visitante elige qué versión del monto ver y [Monto por medida] la resuelve con SWITCH.
 table Medida
 	lineageTag: 6edf1c76-237b-5671-bed7-1e756107ff03
 
@@ -9,25 +9,6 @@ table Medida
 		sourceColumn: [Value1]
 		sortByColumn: 'Medida Orden'
 
-		relatedColumnDetails
-			groupByColumn: 'Medida Campos'
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Medida Campos'
-		dataType: string
-		isHidden
-		lineageTag: 49077e59-5c1f-5712-9f13-79cf8463e1b5
-		summarizeBy: none
-		sourceColumn: [Value2]
-		sortByColumn: 'Medida Orden'
-
-		extendedProperty ParameterMetadata =
-				{
-				  "version": 3,
-				  "kind": 2
-				}
-
 		annotation SummarizationSetBy = Automatic
 
 	column 'Medida Orden'
@@ -35,8 +16,8 @@ table Medida
 		isHidden
 		formatString: 0
 		lineageTag: 0ebf805f-c0c0-58e1-b910-5c76e7fe6949
-		summarizeBy: sum
-		sourceColumn: [Value3]
+		summarizeBy: none
+		sourceColumn: [Value2]
 
 		annotation SummarizationSetBy = Automatic
 
@@ -44,10 +25,10 @@ table Medida
 		mode: import
 		source =
 				{
-				    ("Presupuesto", NAMEOF('desviacion'[Monto Presupuesto]), 0),
-				    ("Forecast", NAMEOF('desviacion'[Monto Forecast]), 1),
-				    ("Real", NAMEOF('desviacion'[Monto Real]), 2),
-				    ("Real año anterior", NAMEOF('desviacion'[Real AA]), 3)
+				    ("Presupuesto", 0),
+				    ("Forecast", 1),
+				    ("Real", 2),
+				    ("Real año anterior", 3)
 				}
 
 	annotation PBI_ResultType = Table

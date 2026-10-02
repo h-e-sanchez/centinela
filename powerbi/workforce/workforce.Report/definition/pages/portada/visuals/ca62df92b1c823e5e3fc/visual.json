@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "ca62df92b1c823e5e3fc",
   "position": {
     "x": 1024,
@@ -70,7 +70,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "i",
+                    "Name": "s",
                     "Entity": "sedes",
                     "Type": 0
                   }
@@ -84,7 +84,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "i"
+                                  "Source": "s"
                                 }
                               },
                               "Property": "industria"

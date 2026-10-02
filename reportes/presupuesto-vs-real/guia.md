@@ -27,7 +27,8 @@ Se generan con `data/generar_escenarios.py` (semilla fija), así que cualquiera 
 - **Power Query** lee `montos.csv` desde GitHub y lo pivotea por versión (`Table.Pivot`): cada línea queda con presupuesto, forecast y real, con 0 explícito si falta uno.
 - **Hecho `desviacion`** + **dimensión `Calendario`** (tabla calculada en DAX, marcada como tabla de fechas), relacionadas por fecha.
 - **Grupo de cálculo «Inteligencia de tiempo»:** Periodo, YTD, Año anterior, Var. interanual % y Móvil 12m sobre cualquier medida, sin duplicar medidas.
-- **Parámetros de campo:** «Comparar por» (industria, sucursal, centro de costo, tipo de gasto o grupo de cuenta) y «Medida» (presupuesto, forecast, real o real del año anterior).
+- **Parámetro de campo «Comparar por»:** industria, sucursal, centro de costo, tipo de gasto o grupo de cuenta.
+- **Segmentación «Medida»:** tabla desconectada y una medida `SWITCH` que muestra presupuesto, forecast, real o real del año anterior; con varias elegidas, cada una es una serie.
 - Las medidas implícitas están desactivadas: todo pasa por medidas DAX explícitas.
 
 ## Medidas clave

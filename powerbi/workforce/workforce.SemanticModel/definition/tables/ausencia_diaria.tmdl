@@ -116,3 +116,4 @@ table ausencia_diaria
 				    Tipado
 
 	annotation PBI_ResultType = Table
+

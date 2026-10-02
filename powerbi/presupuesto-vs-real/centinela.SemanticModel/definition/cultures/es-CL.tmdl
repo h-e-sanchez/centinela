@@ -423,6 +423,16 @@ cultureInfo es-CL
 			      "State": "Generated",
 			      "Terms": [
 			        {
+			          "Presupuesto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "RO presupuestado": {
 			            "State": "Suggested",
 			            "Source": {
@@ -443,6 +453,16 @@ cultureInfo es-CL
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
 			        {
 			          "RO real": {
 			            "State": "Suggested",
@@ -905,6 +925,90 @@ cultureInfo es-CL
 			      "Terms": [
 			        {
 			          "Cálculo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.portada_presupuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Portada presupuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Resultado presupuestado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.portada_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Portada real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Resultado real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.portada_resultado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Portada resultado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Desviación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "desviacion.monto_por_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "desviacion",
+			          "ConceptualProperty": "Monto por medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Monto": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",

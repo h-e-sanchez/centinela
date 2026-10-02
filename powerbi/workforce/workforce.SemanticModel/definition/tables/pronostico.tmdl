@@ -43,7 +43,7 @@ table pronostico
 		lineageTag: 52f1ef0d-ad53-50c5-86c7-d087f3566fe5
 
 	/// Exposición de la celda en 2025-2026: la base de la credibilidad.
-	measure 'Años-persona' = AVERAGEX(VALUES(pronostico[mes]), CALCULATE(SUM(pronostico[anios_persona])))
+	measure Años-persona = AVERAGEX(VALUES(pronostico[mes]), CALCULATE(SUM(pronostico[anios_persona])))
 		formatString: #,##0.0
 		displayFolder: 5. Pronóstico
 		lineageTag: 6e0bc9c7-45fe-5c65-b563-e7f977d82863
@@ -226,3 +226,4 @@ table pronostico
 				    ConFecha
 
 	annotation PBI_ResultType = Table
+

@@ -11,7 +11,7 @@
       "modelo": "powerbi/presupuesto-vs-real",
       "datos": "data/escenarios",
       "prefijo": "centinela",
-      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9",
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada",
       "portada": "portada.png",
       "habilidades": [
         "Power Query (M)",
@@ -93,7 +93,7 @@
       "modelo": "powerbi/workforce",
       "datos": "data/workforce",
       "prefijo": "workforce",
-      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMWRhYzAwZTMtMzNiMy00NzFlLWJkMTctMTNmNmE5OGVhNGUwIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9",
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMWRhYzAwZTMtMzNiMy00NzFlLWJkMTctMTNmNmE5OGVhNGUwIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada",
       "portada": "portada.png",
       "habilidades": [
         "People Analytics",

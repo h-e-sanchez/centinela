@@ -60,3 +60,4 @@ table estamentos
 				    Origen
 
 	annotation PBI_ResultType = Table
+

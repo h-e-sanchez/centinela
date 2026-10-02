@@ -9,7 +9,7 @@
 //   semáforo estricto (>) con alerta >5% y crítica >15%, igual que src/motor.py.
 
 // URL de "Publicar en la Web" (app.powerbi.com/view?r=...). Vacía = se muestra el aviso.
-const PBI_EMBED_URL = "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9";
+const PBI_EMBED_URL = "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada";
 
 const TMDL = "powerbi/presupuesto-vs-real/centinela.SemanticModel/definition/tables/desviacion.tmdl";
 const MESES = ["", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];

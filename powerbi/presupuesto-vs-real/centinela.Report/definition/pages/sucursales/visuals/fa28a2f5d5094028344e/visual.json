@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "fa28a2f5d5094028344e",
   "position": {
     "x": 800,
@@ -33,7 +33,7 @@
             }
           ]
         },
-        "Y": {
+        "Series": {
           "projections": [
             {
               "field": {
@@ -48,6 +48,25 @@
               },
               "queryRef": "Medida.Medida",
               "nativeQueryRef": "Medida"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Monto por medida"
+                }
+              },
+              "queryRef": "desviacion.Monto por medida",
+              "nativeQueryRef": "Monto por medida",
+              "displayName": "Monto"
             }
           ]
         }
@@ -155,5 +174,51 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5eb691b7e7a177134220",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "sucursal"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f03f283e689523460b8c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medida"
+              }
+            },
+            "Property": "Medida"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5748d3530111563a0bc0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "desviacion"
+              }
+            },
+            "Property": "Monto por medida"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
