@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>centinela — vitrina de reportes Power BI</title>
-<meta name="description" content="Vitrina de reportes Power BI de Hernán Sánchez: control de gestión, FP&amp;A y People Analytics, cada uno con su reporte interactivo, datos sintéticos descargables y una guía del modelo.">
-<meta property="og:title" content="centinela — vitrina de reportes Power BI">
+<title>centinela · reportes Power BI de control de gestión</title>
+<meta name="description" content="Reportes Power BI de control de gestión y FP&amp;A con datos sintéticos descargables, el modelo y el DAX a la vista. Por Hernán Sánchez.">
+<meta property="og:title" content="centinela · reportes Power BI de control de gestión">
 <meta property="og:description" content="Reportes Power BI de control de gestión con datos sintéticos descargables, DAX documentado y el proyecto versionado en Git.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
@@ -14,16 +14,13 @@
 <body>
   <main class="ancho">
     <header class="site-header portada">
-      <p class="migas">centinela · vitrina de reportes Power BI</p>
-      <h1>Hernán Sánchez</h1>
+      <h1>centinela</h1>
       <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
-      <p class="tagline">Ingeniero Civil Industrial. Control de gestión, FP&amp;A y People Analytics
-        con Power BI y Python: reportes que llegan a quien decide, trazables y sin trabajo manual
-        de por medio.</p>
-      <p class="perfil-enlaces">
+      <p class="firma">por Hernán Sánchez · Ingeniero Civil Industrial ·
         <a href="https://www.linkedin.com/in/hern%C3%A1n-el%C3%ADas-s%C3%A1nchez-aguilera/" rel="noopener">LinkedIn</a> ·
-        <a href="https://github.com/h-e-sanchez" rel="noopener">GitHub</a>
-      </p>
+        <a href="https://github.com/h-e-sanchez" rel="noopener">GitHub</a></p>
+      <p class="tagline">Reportes Power BI de control de gestión y FP&amp;A que llegan a quien decide:
+        trazables de punta a punta, con los datos y el modelo a la vista.</p>
     </header>
 
     <section id="destacado" aria-label="Reporte destacado">
@@ -62,22 +59,39 @@
 
     <section id="portafolio">
       <h2>Portafolio</h2>
-      <div class="callout">
-        <strong>consulta</strong>: SQL sobre CSV y Parquet con DuckDB-WASM, 100% en el navegador,
-        sin backend y sin que el archivo salga del equipo.
-        <a href="https://h-e-sanchez.github.io/consulta/">Ver demo</a> ·
-        <a href="https://github.com/h-e-sanchez/consulta">repo</a>
+      <p class="hint"><strong>Control de gestión, construido como software</strong> · portafolio de
+        Hernán Sánchez</p>
+      <div class="portafolio-compartido">
+        <div class="callout actual">
+          <span class="estas-aqui">estás aquí</span>
+          <strong>centinela</strong>: la vitrina. Reportes Power BI de control de gestión con datos
+          sintéticos, el modelo y el DAX a la vista.
+        </div>
+        <div class="callout">
+          <strong>consulta</strong>: el taller. SQL, perfilado y gráficos sobre CSV, Parquet o Excel,
+          sin que el archivo salga de tu equipo.
+          <a href="https://h-e-sanchez.github.io/consulta/">Abrir consulta</a> ·
+          <a href="https://github.com/h-e-sanchez/consulta">repo</a>
+        </div>
       </div>
     </section>
 
+    <section id="acerca">
+      <h2>Acerca de</h2>
+      <p>Soy Ingeniero Civil Industrial con 8 años en control de gestión, FP&amp;A y People Analytics.
+        Construyo con Python y Power BI las herramientas que uso: que la información llegue a quien
+        decide a tiempo, trazable y sin trabajo manual. Todo lo publicado aquí usa datos sintéticos.</p>
+      <p class="perfil-enlaces"><a href="https://www.linkedin.com/in/hern%C3%A1n-el%C3%ADas-s%C3%A1nchez-aguilera/" rel="noopener">LinkedIn</a> ·
+        <a href="https://github.com/h-e-sanchez" rel="noopener">GitHub</a></p>
+    </section>
+
     <footer>
+      <p class="firma-pie">Parte del portafolio <em>Control de gestión, construido como software</em> · por <a href="https://www.linkedin.com/in/hern%C3%A1n-el%C3%ADas-s%C3%A1nchez-aguilera/" rel="noopener">Hernán Sánchez</a> · datos 100% sintéticos: ninguna cifra ni regla de un empleador.</p>
       <p class="english">
-        <strong>English:</strong> A Power BI showcase by Hernán Sánchez (management control, FP&amp;A
-        and People Analytics). Each report includes the interactive version, downloadable synthetic
-        data (CSV, Excel, .pbix and the PBIP project as code) and a short guide to its model and DAX
-        measures. Behind them: a dependency-free Python engine, Power BI versioned as code (TMDL and
-        PBIR) and tests that keep the data, the model and the pages telling the same story. Synthetic
-        data only, never a real employer's numbers.
+        <strong>English:</strong> A Power BI showcase by Hernán Sánchez (management control, FP&amp;A,
+        People Analytics). Each report comes with its interactive version, downloadable data (CSV,
+        Excel, .pbix and the PBIP project as code) and a short guide to its model and DAX measures.
+        Synthetic data only.
       </p>
     </footer>
   </main>

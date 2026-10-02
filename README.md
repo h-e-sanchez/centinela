@@ -7,6 +7,10 @@
 
 **Vitrina:** <https://h-e-sanchez.github.io/centinela/>
 
+Parte del portafolio **Control de gestión, construido como software**: `centinela` es la
+vitrina (lo que ve quien decide) y [`consulta`](https://github.com/h-e-sanchez/consulta) es el
+taller (SQL, perfilado y gráficos sobre cualquier tabla, en el navegador).
+
 ## Vitrina
 
 - `reportes/catalogo.json` describe cada reporte (resumen, habilidades, URL de Publicar en la
@@ -36,8 +40,8 @@
   real (o viceversa) se completa con monto `0` explícito — evita el sesgo de subconteo
   típico al agregar eventos poco frecuentes.
 - **Parámetros separados de la lógica**: el umbral de alerta y el umbral crítico son
-  argumentos del CLI, no valores fijos en el código — los "diales" que un Analista de
-  Control de Gestión ajusta sin tocar una línea de Python.
+  argumentos del CLI, no valores fijos en el código — los "diales" que quien controla el
+  presupuesto ajusta sin tocar una línea de Python.
 - **Generador de datos sintéticos reproducible** (semilla fija): genera presupuesto y
   real con ruido controlado más un porcentaje de desviaciones grandes inyectadas a
   propósito, para que el motor tenga algo real que clasificar.
@@ -90,7 +94,7 @@ sintéticos) y queda incrustado en esa misma página. Detalle y pasos en
 
 [`h-e-sanchez.github.io/centinela`](https://h-e-sanchez.github.io/centinela/) — página
 estática (sin build). [`/datos.html`](https://h-e-sanchez.github.io/centinela/datos.html)
-deja explorar 3 corridas reales del motor y ajustar el umbral de alerta en vivo — la
+deja explorar 3 corridas del motor con datos sintéticos y ajustar el umbral de alerta en vivo — la
 clasificación se recalcula en el navegador con la misma aritmética que `src/motor.py`,
 pero los datos en sí no se generan ahí (el RNG de JS no reproduce el de Python). El
 reporte de Power BI está publicado con "Publicar en la Web" e incrustado en la página

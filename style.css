@@ -351,3 +351,15 @@ a.tarjeta-rep:hover { border-color: var(--accent); }
 #interactivo .visual-cab h2, #guia .visual-cab h2 { font-size: var(--fs-xl); }
 /* El encabezado es flex (h1 + botón de tema); migas, bajada, enlaces y chips ocupan su propia línea. */
 .site-header > p, .site-header > ul { flex-basis: 100%; }
+
+/* ------------------------------------------------------------------ relato de portafolio */
+.firma { margin: var(--sp-2) 0 0; font-size: var(--fs-sm); color: var(--muted); }
+.firma-pie { color: var(--muted); font-size: var(--fs-sm); }
+.portafolio-compartido { display: grid; gap: var(--sp-3); }
+.portafolio-compartido .callout { margin: 0; }
+.callout.actual { border-left-color: var(--faint); background: var(--surface-2); }
+.estas-aqui {
+  float: right; font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
+  border: 1px solid var(--border-strong); border-radius: 999px; padding: 0 8px; margin-left: var(--sp-2);
+}
+#acerca p { max-width: 68ch; }
