@@ -1,0 +1,265 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "fe8264392e93e8cd8a6b",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 900,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "unidades"
+                    }
+                  },
+                  "Property": "unidad"
+                }
+              },
+              "queryRef": "unidades.unidad",
+              "nativeQueryRef": "unidad",
+              "active": true,
+              "displayName": "Unidad"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "estamentos"
+                    }
+                  },
+                  "Property": "estamento"
+                }
+              },
+              "queryRef": "estamentos.estamento",
+              "nativeQueryRef": "estamento",
+              "active": true,
+              "displayName": "Estamento"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico"
+                    }
+                  },
+                  "Property": "Años-persona"
+                }
+              },
+              "queryRef": "pronostico.Años-persona",
+              "nativeQueryRef": "Años-persona"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico"
+                    }
+                  },
+                  "Property": "Z credibilidad"
+                }
+              },
+              "queryRef": "pronostico.Z credibilidad",
+              "nativeQueryRef": "Z credibilidad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico"
+                    }
+                  },
+                  "Property": "Tasa observada 2025-2026 %"
+                }
+              },
+              "queryRef": "pronostico.Tasa observada 2025-2026 %",
+              "nativeQueryRef": "Tasa observada 2025-2026 %",
+              "displayName": "Tasa observada"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico"
+                    }
+                  },
+                  "Property": "Tasa con credibilidad %"
+                }
+              },
+              "queryRef": "pronostico.Tasa con credibilidad %",
+              "nativeQueryRef": "Tasa con credibilidad %",
+              "displayName": "Tasa con credibilidad"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico"
+                    }
+                  },
+                  "Property": "Días esperados"
+                }
+              },
+              "queryRef": "pronostico.Días esperados",
+              "nativeQueryRef": "Días esperados"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Credibilidad por unidad y estamento: poca exposición → la tasa se acerca a la de la red'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cd5171aecec39be505dd",
+  "position": {
+    "x": 656,
+    "y": 468,
+    "z": 1100,
+    "height": 240,
+    "width": 600,
+    "tabOrder": 1100
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clinicas"
+                    }
+                  },
+                  "Property": "clinica"
+                }
+              },
+              "queryRef": "clinicas.clinica",
+              "nativeQueryRef": "clinica",
+              "active": true,
+              "displayName": "Clínica"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cobertura"
+                    }
+                  },
+                  "Property": "Costo/hora antes del piloto"
+                }
+              },
+              "queryRef": "cobertura.Costo/hora antes del piloto",
+              "nativeQueryRef": "Costo/hora antes del piloto",
+              "displayName": "Antes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cobertura"
+                    }
+                  },
+                  "Property": "Costo/hora con piloto"
+                }
+              },
+              "queryRef": "cobertura.Costo/hora con piloto",
+              "nativeQueryRef": "Costo/hora con piloto",
+              "displayName": "Con piloto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cobertura"
+                    }
+                  },
+                  "Property": "Cambio costo/hora %"
+                }
+              },
+              "queryRef": "cobertura.Cambio costo/hora %",
+              "nativeQueryRef": "Cambio costo/hora %",
+              "displayName": "Cambio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cobertura"
+                    }
+                  },
+                  "Property": "% cubierto con sobretiempo"
+                }
+              },
+              "queryRef": "cobertura.% cubierto con sobretiempo",
+              "nativeQueryRef": "% cubierto con sobretiempo",
+              "displayName": "% sobretiempo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Antes y después, por clínica'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

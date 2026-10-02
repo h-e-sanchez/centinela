@@ -1,0 +1,60 @@
+/// Días y horas hábiles contratados de cada persona en cada mes: el denominador de la tasa.
+table disponibilidad_mensual
+	lineageTag: c3d71e6e-934b-5f33-8dcd-c528c48b2ae5
+
+	/// Días hábiles en que cada persona estaba contratada.
+	measure 'Días disponibles' = SUM(disponibilidad_mensual[dias_habiles])
+		formatString: #,##0
+		displayFolder: 2. Ausentismo
+		lineageTag: 25f6ae1b-10e6-58fe-9fa8-cffb791d52fd
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 0d86347e-661e-5676-9bb9-54f6e4d7b669
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_persona
+		dataType: string
+		isHidden
+		lineageTag: 29964971-a932-5325-951a-cef56e9d99b6
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_habiles
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d178c854-5f66-5c11-8956-632b4b9cde6b
+		summarizeBy: sum
+		sourceColumn: dias_habiles
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: c725f9d3-72b9-51fc-9f5d-e66dbf6eba68
+		summarizeBy: sum
+		sourceColumn: horas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition disponibilidad_mensual = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("disponibilidad_mensual.csv", {{"fecha", type date}, {"id_persona", type text}, {"dias_habiles", Int64.Type}, {"horas", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

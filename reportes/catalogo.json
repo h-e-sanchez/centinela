@@ -76,14 +76,88 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_escenarios.py"
         }
       ]
+    },
+    {
+      "slug": "workforce",
+      "titulo": "Workforce: dotación, ausentismo y cobertura",
+      "resumen": "People Analytics de una red de clínicas sintética: dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con un piloto evaluado contra un grupo de control y pronóstico 2027 con credibilidad actuarial.",
+      "tema": "People Analytics",
+      "fecha": "2026-10-02",
+      "estado": "en-preparacion",
+      "destacado": false,
+      "modelo": "powerbi/workforce",
+      "datos": "data/workforce",
+      "prefijo": "workforce",
+      "embed_url": "",
+      "portada": "portada.png",
+      "habilidades": [
+        "People Analytics",
+        "DAX con fechas de ingreso y egreso",
+        "Parámetros de campo",
+        "Credibilidad de Bühlmann-Straub",
+        "Evaluación de un piloto con grupo de control",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Ausentismo",
+          "resultado": "6,5%",
+          "tono": "neutro",
+          "texto": "Tasa global sin licencias parentales: técnicos y auxiliares sobre el promedio, pico en mayo y mínimo en febrero."
+        },
+        {
+          "industria": "Piloto Norte",
+          "resultado": "−27%",
+          "tono": "ok",
+          "texto": "El pool interno baja el costo por hora cubierta mientras Centro y Sur, sin cambios, se mantienen."
+        },
+        {
+          "industria": "Bradford",
+          "resultado": "106",
+          "tono": "critica",
+          "texto": "Personas sobre 200 en el Factor Bradford: ausencias cortas y frecuentes que piden seguimiento."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/workforce-datos-csv.zip",
+          "detalle": "nueve tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/workforce-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/workforce.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/workforce-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/workforce"
+        },
+        {
+          "etiqueta": "Generador de datos y pronóstico",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_workforce.py"
+        },
+        {
+          "etiqueta": "Tests de calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_workforce.py"
+        }
+      ]
     }
   ],
   "proximos": [
-    {
-      "titulo": "People Analytics: dotación y ausentismo",
-      "tema": "People Analytics",
-      "resumen": "Forecast de ausentismo con simulación y credibilidad actuarial, cobertura de turnos y costo de reemplazos."
-    },
     {
       "titulo": "Capital de trabajo: cobranza y DSO",
       "tema": "Finanzas operativas",

@@ -1,0 +1,6 @@
+estamento,orden,valor_hora,factor_sobretiempo,factor_pool,factor_externo
+Directivos,1,30000,1.5,1.1,1.8
+Profesionales,2,15000,1.5,1.1,1.8
+Administrativos,3,6500,1.5,1.1,1.8
+Auxiliares,4,5500,1.5,1.1,1.8
+Técnicos,5,7500,1.5,1.1,1.8

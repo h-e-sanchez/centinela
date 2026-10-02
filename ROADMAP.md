@@ -36,6 +36,16 @@ explica una herramienta de seguimiento Presupuesto vs. Real: no se copia ninguna
 puntual, solo se elige el arquetipo de negocio que el mercado real demuestra que es común
 para este rol.
 
+### Reporte #2 — «Red Asistencial Ejemplo S.A.»
+
+Una red ficticia de tres clínicas (Norte, Centro y Sur), seis unidades, cinco estamentos y
+unas 600 personas, simulada día hábil a día hábil en 2025-2026
+([`data/generar_workforce.py`](data/generar_workforce.py)). La calibración sigue en orden de
+magnitud a la Dipres (*Radiografía del ausentismo laboral en el sector público*, 2024), al
+NHS y a la SUSESO, a escala de clínica privada. Desde julio de 2025 Norte cubre ausencias con
+un pool interno y Centro y Sur sirven de grupo de control. Ningún parámetro sale de un
+empleador real: el método (simulación y credibilidad) es genérico.
+
 ---
 
 ## Camino A — Motor (Python) — hecho
@@ -113,7 +123,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 
 - [x] Reporte #1: Presupuesto vs. Real por industria (catálogo, guía, descargas CSV, Excel y PBIP)
 - [ ] `.pbix` exportado desde Desktop y captura `portada.png` (manual)
-- [ ] Reporte #2: People Analytics, dotación y ausentismo
+- [x] Reporte #2: Workforce (dotación, ausentismo y cobertura): datos, modelo PBIP con 6 páginas, guía y descargas
+- [ ] Reporte #2: abrir en Desktop, revisar visuales, publicar en la web, `.pbix` y `portada.png` (manual)
 - [ ] Reporte #3: Capital de trabajo, cobranza y DSO
 
 ## Backlog P1 — robustez
@@ -166,6 +177,16 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-02 — Reporte #2: Workforce
+
+Generador `data/generar_workforce.py` (personas, episodios, ausencia diaria, disponibilidad,
+cobertura y pronóstico 2027 con Bühlmann-Straub y simulación de episodios) y
+`tests/test_workforce.py`, que verifica la calibración y la historia del piloto. Proyecto PBIP
+`powerbi/workforce/` con 12 tablas, parámetro de campo «Comparar por» y 6 páginas (resumen,
+dotación, ausentismo, patrones individuales, cobertura y pronóstico) con los visuales ya
+definidos en PBIR. Ficha y descargas publicadas como «en preparación» hasta publicarlo desde
+Desktop.
 
 ### 2026-10-02 — Vitrina con varios reportes
 

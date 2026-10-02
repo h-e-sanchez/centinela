@@ -1,0 +1,67 @@
+relationship 27c27b68-438b-565f-8286-9c4929111abd
+	fromColumn: personas.clinica
+	toColumn: clinicas.clinica
+
+relationship 4a6d5c11-181d-527c-8c6a-1d5a182fc1f7
+	fromColumn: personas.unidad
+	toColumn: unidades.unidad
+
+relationship 9d460423-9c73-58b6-aec4-b7c5af2e9104
+	fromColumn: personas.estamento
+	toColumn: estamentos.estamento
+
+relationship 46fa95d2-56d1-5857-adf0-0758e396c9fc
+	fromColumn: episodios.id_persona
+	toColumn: personas.id_persona
+
+relationship 3fac2a12-5241-5b69-9ca2-3ec9ee8ae282
+	fromColumn: episodios.fecha_inicio
+	toColumn: Calendario.Date
+
+relationship b0154daf-d72c-58b9-8b29-38271a053cda
+	fromColumn: ausencia_diaria.id_persona
+	toColumn: personas.id_persona
+
+relationship 8d6b3c6e-c5e9-5b84-9882-ba06ae7243d0
+	fromColumn: ausencia_diaria.fecha
+	toColumn: Calendario.Date
+
+relationship af715152-6e14-5d04-adb8-fe4f30d49d22
+	fromColumn: disponibilidad_mensual.id_persona
+	toColumn: personas.id_persona
+
+relationship 5203553b-b563-5415-b8a3-fd52999a79f5
+	fromColumn: disponibilidad_mensual.fecha
+	toColumn: Calendario.Date
+
+relationship 017a11fe-a207-5548-80f2-76b31040ecd9
+	fromColumn: cobertura.clinica
+	toColumn: clinicas.clinica
+
+relationship 809a0320-ac6b-522f-8743-72e19cad7680
+	fromColumn: cobertura.unidad
+	toColumn: unidades.unidad
+
+relationship 02ef1031-f5aa-56c4-81ef-da6aa67fc1b8
+	fromColumn: cobertura.estamento
+	toColumn: estamentos.estamento
+
+relationship eeb4c66d-24d1-537a-b9c3-ce43c8435885
+	fromColumn: cobertura.fecha
+	toColumn: Calendario.Date
+
+relationship 0e7d6b7e-3317-542a-9e98-1033eeec7b2b
+	fromColumn: pronostico.clinica
+	toColumn: clinicas.clinica
+
+relationship a4fd8897-e1d3-510f-95f4-8ad5129d9845
+	fromColumn: pronostico.unidad
+	toColumn: unidades.unidad
+
+relationship 7bfa2661-89c1-54a3-831e-6f9921db5faa
+	fromColumn: pronostico.estamento
+	toColumn: estamentos.estamento
+
+relationship 77ca8c0b-fb2a-58ac-a225-325599970d52
+	fromColumn: pronostico.fecha
+	toColumn: Calendario.Date

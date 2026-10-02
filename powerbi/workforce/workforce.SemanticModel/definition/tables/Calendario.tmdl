@@ -1,0 +1,108 @@
+/// Dimensión de fechas 2025-2027 (2027 es el año del pronóstico). Días hábiles = lunes a viernes.
+table Calendario
+	lineageTag: 511deebb-db4c-5772-bb33-5b2777432f75
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 0c69330d-d1b1-5b9b-822c-3d602a6705e4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: ced77128-97a7-5c5b-81ec-393a57129953
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anio]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f4543b1c-3285-5589-a011-db89aeb63dd9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Mes'
+		dataType: string
+		lineageTag: 1d398397-9620-51e2-9b9d-18e0b3b6086e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nombre Mes]
+		sortByColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Periodo Num'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 03b728a1-289e-53a7-8202-9e641275faf4
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo Num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Año'
+		dataType: string
+		lineageTag: a4cae817-5447-5600-8cfa-c99c49e9806c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Año]
+		sortByColumn: 'Periodo Num'
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinMes
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: cbad1b84-f933-5e4d-92b9-7011509932af
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [FinMes]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Es Hábil'
+		dataType: boolean
+		isHidden
+		lineageTag: d497c028-f11a-51a9-a10f-e14d0221ac40
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Es Hábil]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDAR(DATE(2025, 1, 1), DATE(2027, 12, 31)),
+				    "Anio", YEAR([Date]),
+				    "Mes", MONTH([Date]),
+				    "Nombre Mes", FORMAT([Date], "mmm"),
+				    "Periodo Num", YEAR([Date]) * 100 + MONTH([Date]),
+				    "Mes Año", FORMAT([Date], "mmm yyyy"),
+				    "FinMes", EOMONTH([Date], 0),
+				    "Es Hábil", WEEKDAY([Date], 2) <= 5
+				)
+
+	annotation PBI_ResultType = Table

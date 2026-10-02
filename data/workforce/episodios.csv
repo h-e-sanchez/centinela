@@ -1,0 +1,2449 @@
+id_episodio,id_persona,fecha_inicio,fecha_termino,dias_habiles,tipo,grupo_diagnostico
+E00001,P0188,2024-07-30,2025-01-13,120,Licencia parental,No aplica
+E00002,P0317,2024-09-17,2025-01-03,79,Licencia común,Salud mental
+E00003,P0234,2024-10-08,2025-03-24,120,Licencia parental,No aplica
+E00004,P0571,2024-11-08,2025-01-13,47,Licencia común,Salud mental
+E00005,P0291,2024-11-13,2025-02-24,74,Licencia común,Musculoesquelético
+E00006,P0339,2024-11-13,2025-01-01,36,Licencia común,Salud mental
+E00007,P0334,2024-11-20,2025-01-13,39,Licencia común,Musculoesquelético
+E00008,P0524,2024-11-27,2025-01-03,28,Licencia común,Musculoesquelético
+E00009,P0607,2024-12-10,2025-01-20,30,Licencia común,Musculoesquelético
+E00010,P0507,2024-12-11,2025-01-07,20,Licencia común,Musculoesquelético
+E00011,P0173,2024-12-12,2025-02-13,46,Licencia común,Musculoesquelético
+E00012,P0101,2024-12-16,2025-03-05,58,Licencia común,Musculoesquelético
+E00013,P0211,2024-12-18,2025-01-02,12,Licencia común,Salud mental
+E00014,P0227,2024-12-18,2025-01-13,19,Licencia común,Respiratorio
+E00015,P0419,2024-12-19,2025-01-08,15,Licencia común,Musculoesquelético
+E00016,P0451,2024-12-23,2025-02-18,42,Licencia común,Salud mental
+E00017,P0033,2024-12-25,2025-03-07,53,Licencia común,Salud mental
+E00018,P0428,2024-12-26,2025-01-13,13,Licencia común,Otros
+E00019,P0086,2024-12-27,2025-01-13,12,Licencia común,Salud mental
+E00020,P0212,2024-12-27,2025-06-12,120,Licencia parental,No aplica
+E00021,P0372,2024-12-27,2025-01-07,8,Licencia común,Musculoesquelético
+E00022,P0082,2024-12-30,2025-01-17,15,Licencia común,Musculoesquelético
+E00023,P0506,2024-12-30,2025-01-23,19,Licencia común,Musculoesquelético
+E00024,P0246,2024-12-31,2025-01-16,13,Licencia común,Salud mental
+E00025,P0285,2024-12-31,2025-01-07,6,Licencia común,Otros
+E00026,P0299,2024-12-31,2025-01-03,4,Licencia común,Salud mental
+E00027,P0371,2024-12-31,2025-01-16,13,Licencia común,Salud mental
+E00028,P0492,2024-12-31,2025-01-21,16,Licencia común,Musculoesquelético
+E00029,P0036,2025-01-01,2025-01-24,18,Licencia común,Musculoesquelético
+E00030,P0063,2025-01-01,2025-01-03,3,Licencia común,Musculoesquelético
+E00031,P0117,2025-01-01,2025-01-02,2,Licencia común,Otros
+E00032,P0177,2025-01-01,2025-01-03,3,Licencia común,Otros
+E00033,P0186,2025-01-01,2025-01-08,6,Licencia común,Respiratorio
+E00034,P0127,2025-01-02,2025-01-08,5,Licencia común,Otros
+E00035,P0564,2025-01-02,2025-01-08,5,Licencia común,Otros
+E00036,P0026,2025-01-03,2025-01-03,1,Licencia común,Respiratorio
+E00037,P0092,2025-01-03,2025-01-24,16,Licencia común,Respiratorio
+E00038,P0124,2025-01-03,2025-01-13,7,Licencia común,Respiratorio
+E00039,P0192,2025-01-03,2025-01-14,8,Sin goce,No aplica
+E00040,P0324,2025-01-03,2025-01-03,1,Permiso administrativo,No aplica
+E00041,P0376,2025-01-03,2025-01-22,14,Licencia común,Otros
+E00042,P0413,2025-01-03,2025-01-03,1,Permiso administrativo,No aplica
+E00043,P0421,2025-01-03,2025-01-03,1,Licencia común,Respiratorio
+E00044,P0490,2025-01-03,2025-01-08,4,Accidente laboral,No aplica
+E00045,P0573,2025-01-03,2025-03-04,43,Licencia común,Musculoesquelético
+E00046,P0063,2025-01-06,2025-01-14,7,Licencia común,Otros
+E00047,P0241,2025-01-06,2025-02-03,21,Licencia común,Musculoesquelético
+E00048,P0330,2025-01-06,2025-03-13,49,Licencia común,Musculoesquelético
+E00049,P0488,2025-01-06,2025-01-10,5,Licencia común,Musculoesquelético
+E00050,P0524,2025-01-06,2025-01-06,1,Permiso administrativo,No aplica
+E00051,P0424,2025-01-07,2025-02-06,23,Licencia común,Musculoesquelético
+E00052,P0021,2025-01-08,2025-01-23,12,Licencia común,Salud mental
+E00053,P0029,2025-01-08,2025-01-13,4,Licencia común,Musculoesquelético
+E00054,P0238,2025-01-08,2025-01-27,14,Licencia común,Otros
+E00055,P0399,2025-01-08,2025-01-10,3,Licencia común,Otros
+E00056,P0575,2025-01-08,2025-01-08,1,Licencia común,Musculoesquelético
+E00057,P0595,2025-01-08,2025-01-08,1,Permiso administrativo,No aplica
+E00058,P0598,2025-01-08,2025-02-05,21,Licencia común,Musculoesquelético
+E00059,P0040,2025-01-09,2025-01-10,2,Licencia común,Otros
+E00060,P0225,2025-01-09,2025-01-13,3,Licencia común,Otros
+E00061,P0314,2025-01-09,2025-01-13,3,Licencia común,Respiratorio
+E00062,P0352,2025-01-09,2025-01-24,12,Accidente laboral,No aplica
+E00063,P0617,2025-01-09,2025-01-17,7,Licencia común,Respiratorio
+E00064,P0025,2025-01-10,2025-01-22,9,Licencia común,Musculoesquelético
+E00065,P0112,2025-01-10,2025-01-15,4,Licencia común,Otros
+E00066,P0128,2025-01-10,2025-01-20,7,Accidente laboral,No aplica
+E00067,P0129,2025-01-10,2025-01-21,8,Licencia común,Otros
+E00068,P0317,2025-01-10,2025-01-20,7,Licencia común,Musculoesquelético
+E00069,P0480,2025-01-10,2025-06-26,120,Licencia parental,No aplica
+E00070,P0540,2025-01-10,2025-01-10,1,Permiso administrativo,No aplica
+E00071,P0326,2025-01-13,2025-01-14,2,Licencia común,Otros
+E00072,P0540,2025-01-13,2025-01-17,5,Licencia común,Respiratorio
+E00073,P0567,2025-01-13,2025-01-14,2,Sin goce,No aplica
+E00074,P0175,2025-01-14,2025-02-28,34,Licencia común,Musculoesquelético
+E00075,P0191,2025-01-14,2025-01-16,3,Licencia común,Respiratorio
+E00076,P0311,2025-01-14,2025-01-27,10,Licencia común,Musculoesquelético
+E00077,P0413,2025-01-14,2025-01-28,11,Licencia común,Respiratorio
+E00078,P0468,2025-01-14,2025-02-25,31,Licencia común,Salud mental
+E00079,P0011,2025-01-15,2025-01-15,1,Licencia común,Salud mental
+E00080,P0078,2025-01-15,2025-01-15,1,Licencia común,Otros
+E00081,P0118,2025-01-15,2025-01-16,2,Licencia común,Respiratorio
+E00082,P0122,2025-01-15,2025-02-03,14,Licencia común,Musculoesquelético
+E00083,P0461,2025-01-15,2025-01-15,1,Licencia común,Respiratorio
+E00084,P0527,2025-01-15,2025-02-11,20,Licencia común,Respiratorio
+E00085,P0240,2025-01-16,2025-02-10,18,Licencia común,Musculoesquelético
+E00086,P0323,2025-01-16,2025-02-18,24,Accidente laboral,No aplica
+E00087,P0339,2025-01-16,2025-01-31,12,Licencia común,Salud mental
+E00088,P0399,2025-01-16,2025-01-16,1,Permiso administrativo,No aplica
+E00089,P0490,2025-01-16,2025-01-28,9,Licencia común,Musculoesquelético
+E00090,P0646,2025-01-16,2025-01-17,2,Licencia común,Otros
+E00091,P0149,2025-01-17,2025-02-10,17,Licencia común,Otros
+E00092,P0476,2025-01-17,2025-02-04,13,Licencia común,Otros
+E00093,P0495,2025-01-17,2025-01-30,10,Licencia común,Musculoesquelético
+E00094,P0627,2025-01-17,2025-01-28,8,Licencia común,Musculoesquelético
+E00095,P0083,2025-01-20,2025-01-21,2,Sin goce,No aplica
+E00096,P0098,2025-01-20,2025-01-28,7,Licencia común,Respiratorio
+E00097,P0205,2025-01-20,2025-01-27,6,Licencia común,Salud mental
+E00098,P0362,2025-01-20,2025-01-23,4,Licencia común,Otros
+E00099,P0602,2025-01-20,2025-01-20,1,Licencia común,Respiratorio
+E00100,P0157,2025-01-21,2025-01-28,6,Licencia común,Musculoesquelético
+E00101,P0176,2025-01-21,2025-01-22,2,Licencia común,Respiratorio
+E00102,P0299,2025-01-21,2025-01-21,1,Permiso administrativo,No aplica
+E00103,P0546,2025-01-21,2025-03-11,36,Licencia común,Musculoesquelético
+E00104,P0581,2025-01-21,2025-01-21,1,Licencia común,Otros
+E00105,P0016,2025-01-22,2025-01-22,1,Licencia común,Musculoesquelético
+E00106,P0267,2025-01-22,2025-01-28,5,Licencia común,Otros
+E00107,P0300,2025-01-22,2025-02-20,22,Licencia común,Musculoesquelético
+E00108,P0075,2025-01-23,2025-01-27,3,Licencia común,Otros
+E00109,P0165,2025-01-23,2025-02-19,20,Licencia común,Salud mental
+E00110,P0358,2025-01-23,2025-01-24,2,Licencia común,Respiratorio
+E00111,P0504,2025-01-23,2025-01-28,4,Licencia común,Respiratorio
+E00112,P0522,2025-01-23,2025-05-22,86,Licencia común,Salud mental
+E00113,P0012,2025-01-24,2025-01-28,3,Licencia común,Respiratorio
+E00114,P0226,2025-01-24,2025-01-27,2,Licencia común,Respiratorio
+E00115,P0119,2025-01-27,2025-01-29,3,Licencia común,Otros
+E00116,P0161,2025-01-27,2025-02-17,16,Licencia común,Musculoesquelético
+E00117,P0532,2025-01-27,2025-02-04,7,Licencia común,Respiratorio
+E00118,P0581,2025-01-27,2025-02-27,24,Licencia común,Musculoesquelético
+E00119,P0036,2025-01-28,2025-01-28,1,Permiso administrativo,No aplica
+E00120,P0246,2025-01-28,2025-01-31,4,Licencia común,Respiratorio
+E00121,P0454,2025-01-28,2025-01-30,3,Licencia común,Respiratorio
+E00122,P0650,2025-01-28,2025-02-25,21,Licencia común,Musculoesquelético
+E00123,P0334,2025-01-29,2025-02-07,8,Licencia común,Respiratorio
+E00124,P0015,2025-01-30,2025-02-03,3,Licencia común,Respiratorio
+E00125,P0048,2025-01-30,2025-01-30,1,Licencia común,Otros
+E00126,P0082,2025-01-30,2025-01-30,1,Licencia común,Musculoesquelético
+E00127,P0541,2025-01-30,2025-02-03,3,Licencia común,Respiratorio
+E00128,P0278,2025-01-31,2025-02-03,2,Licencia común,Respiratorio
+E00129,P0302,2025-01-31,2025-02-27,20,Licencia común,Otros
+E00130,P0205,2025-02-03,2025-02-04,2,Licencia común,Otros
+E00131,P0361,2025-02-03,2025-03-19,33,Licencia común,Salud mental
+E00132,P0524,2025-02-03,2025-02-11,7,Licencia común,Otros
+E00133,P0309,2025-02-04,2025-02-07,4,Licencia común,Salud mental
+E00134,P0536,2025-02-04,2025-02-05,2,Licencia común,Otros
+E00135,P0496,2025-02-05,2025-02-06,2,Accidente laboral,No aplica
+E00136,P0049,2025-02-06,2025-02-11,4,Licencia común,Otros
+E00137,P0112,2025-02-06,2025-02-11,4,Licencia común,Respiratorio
+E00138,P0299,2025-02-06,2025-02-12,5,Licencia común,Musculoesquelético
+E00139,P0116,2025-02-07,2025-02-26,14,Licencia común,Salud mental
+E00140,P0325,2025-02-07,2025-02-07,1,Licencia común,Respiratorio
+E00141,P0489,2025-02-07,2025-02-12,4,Licencia común,Respiratorio
+E00142,P0171,2025-02-10,2025-02-27,14,Licencia común,Musculoesquelético
+E00143,P0553,2025-02-10,2025-02-13,4,Licencia común,Respiratorio
+E00144,P0564,2025-02-10,2025-03-13,24,Licencia común,Musculoesquelético
+E00145,P0078,2025-02-11,2025-03-12,22,Licencia común,Otros
+E00146,P0437,2025-02-11,2025-02-11,1,Sin goce,No aplica
+E00147,P0309,2025-02-12,2025-02-17,4,Licencia común,Respiratorio
+E00148,P0339,2025-02-12,2025-02-20,7,Licencia común,Otros
+E00149,P0345,2025-02-12,2025-02-19,6,Licencia común,Musculoesquelético
+E00150,P0362,2025-02-12,2025-03-05,16,Licencia común,Respiratorio
+E00151,P0463,2025-02-12,2025-02-28,13,Licencia común,Musculoesquelético
+E00152,P0476,2025-02-12,2025-02-19,6,Licencia común,Otros
+E00153,P0532,2025-02-13,2025-02-13,1,Permiso administrativo,No aplica
+E00154,P0096,2025-02-14,2025-02-26,9,Licencia común,Otros
+E00155,P0210,2025-02-14,2025-02-26,9,Licencia común,Musculoesquelético
+E00156,P0311,2025-02-14,2025-02-14,1,Permiso administrativo,No aplica
+E00157,P0426,2025-02-14,2025-02-14,1,Permiso administrativo,No aplica
+E00158,P0049,2025-02-17,2025-03-13,19,Licencia común,Musculoesquelético
+E00159,P0092,2025-02-17,2025-03-14,20,Licencia común,Musculoesquelético
+E00160,P0124,2025-02-17,2025-03-21,25,Licencia común,Musculoesquelético
+E00161,P0319,2025-02-17,2025-03-07,15,Licencia común,Respiratorio
+E00162,P0428,2025-02-17,2025-02-21,5,Licencia común,Otros
+E00163,P0436,2025-02-17,2025-02-28,10,Licencia común,Respiratorio
+E00164,P0311,2025-02-18,2025-02-20,3,Licencia común,Respiratorio
+E00165,P0597,2025-02-18,2025-04-07,35,Licencia común,Otros
+E00166,P0016,2025-02-19,2025-03-13,17,Accidente laboral,No aplica
+E00167,P0352,2025-02-19,2025-04-28,49,Licencia común,Musculoesquelético
+E00168,P0070,2025-02-20,2025-03-05,10,Licencia común,Respiratorio
+E00169,P0107,2025-02-20,2025-02-20,1,Licencia común,Respiratorio
+E00170,P0182,2025-02-20,2025-02-27,6,Licencia común,Respiratorio
+E00171,P0424,2025-02-20,2025-02-21,2,Licencia común,Otros
+E00172,P0502,2025-02-20,2025-02-20,1,Licencia común,Respiratorio
+E00173,P0524,2025-02-20,2025-02-24,3,Licencia común,Respiratorio
+E00174,P0083,2025-02-21,2025-03-12,14,Licencia común,Otros
+E00175,P0127,2025-02-21,2025-02-28,6,Licencia común,Musculoesquelético
+E00176,P0231,2025-02-21,2025-05-28,69,Licencia común,Salud mental
+E00177,P0257,2025-02-21,2025-03-05,9,Licencia común,Respiratorio
+E00178,P0372,2025-02-21,2025-05-01,50,Accidente laboral,No aplica
+E00179,P0048,2025-02-24,2025-05-05,51,Licencia común,Salud mental
+E00180,P0108,2025-02-24,2025-03-07,10,Licencia común,Salud mental
+E00181,P0271,2025-02-24,2025-02-25,2,Licencia común,Otros
+E00182,P0396,2025-02-24,2025-02-27,4,Licencia común,Respiratorio
+E00183,P0541,2025-02-25,2025-03-04,6,Licencia común,Otros
+E00184,P0419,2025-02-26,2025-02-27,2,Licencia común,Respiratorio
+E00185,P0476,2025-02-26,2025-02-26,1,Licencia común,Musculoesquelético
+E00186,P0631,2025-02-26,2025-02-26,1,Permiso administrativo,No aplica
+E00187,P0641,2025-02-26,2025-03-26,21,Licencia común,Otros
+E00188,P0656,2025-02-26,2025-05-19,59,Licencia común,Musculoesquelético
+E00189,P0130,2025-02-27,2025-03-03,3,Licencia común,Respiratorio
+E00190,P0194,2025-02-27,2025-02-28,2,Licencia común,Salud mental
+E00191,P0424,2025-02-27,2025-03-05,5,Licencia común,Musculoesquelético
+E00192,P0455,2025-02-27,2025-03-06,6,Licencia común,Otros
+E00193,P0230,2025-02-28,2025-02-28,1,Permiso administrativo,No aplica
+E00194,P0265,2025-02-28,2025-03-28,21,Licencia común,Otros
+E00195,P0526,2025-02-28,2025-03-17,12,Licencia común,Otros
+E00196,P0450,2025-03-03,2025-03-03,1,Licencia común,Respiratorio
+E00197,P0527,2025-03-03,2025-03-03,1,Permiso administrativo,No aplica
+E00198,P0657,2025-03-03,2025-03-05,3,Licencia común,Musculoesquelético
+E00199,P0075,2025-03-04,2025-03-10,5,Licencia común,Otros
+E00200,P0118,2025-03-04,2025-03-05,2,Licencia común,Respiratorio
+E00201,P0174,2025-03-04,2025-03-05,2,Licencia común,Respiratorio
+E00202,P0128,2025-03-05,2025-03-19,11,Licencia común,Otros
+E00203,P0311,2025-03-05,2025-03-06,2,Licencia común,Otros
+E00204,P0451,2025-03-05,2025-03-10,4,Licencia común,Respiratorio
+E00205,P0461,2025-03-05,2025-03-17,9,Licencia común,Musculoesquelético
+E00206,P0650,2025-03-05,2025-03-06,2,Licencia común,Respiratorio
+E00207,P0173,2025-03-06,2025-03-17,8,Licencia común,Otros
+E00208,P0238,2025-03-06,2025-03-07,2,Licencia común,Respiratorio
+E00209,P0241,2025-03-06,2025-03-10,3,Licencia común,Otros
+E00210,P0257,2025-03-06,2025-03-11,4,Licencia común,Respiratorio
+E00211,P0334,2025-03-06,2025-04-01,19,Accidente laboral,No aplica
+E00212,P0391,2025-03-06,2025-03-11,4,Licencia común,Otros
+E00213,P0436,2025-03-06,2025-03-06,1,Licencia común,Otros
+E00214,P0519,2025-03-06,2025-03-07,2,Licencia común,Respiratorio
+E00215,P0630,2025-03-06,2025-04-07,23,Licencia común,Musculoesquelético
+E00216,P0636,2025-03-06,2025-08-20,120,Licencia común,Salud mental
+E00217,P0021,2025-03-07,2025-03-07,1,Licencia común,Respiratorio
+E00218,P0174,2025-03-07,2025-03-24,12,Licencia común,Respiratorio
+E00219,P0506,2025-03-07,2025-03-07,1,Licencia común,Otros
+E00220,P0515,2025-03-07,2025-03-14,6,Licencia común,Respiratorio
+E00221,P0348,2025-03-10,2025-03-12,3,Licencia común,Otros
+E00222,P0460,2025-03-10,2025-03-17,6,Licencia común,Otros
+E00223,P0468,2025-03-10,2025-03-10,1,Licencia común,Respiratorio
+E00224,P0527,2025-03-10,2025-03-13,4,Licencia común,Respiratorio
+E00225,P0111,2025-03-11,2025-04-03,18,Sin goce,No aplica
+E00226,P0259,2025-03-11,2025-05-01,38,Licencia común,Salud mental
+E00227,P0303,2025-03-11,2025-04-16,27,Licencia común,Musculoesquelético
+E00228,P0371,2025-03-11,2025-03-31,15,Licencia común,Musculoesquelético
+E00229,P0419,2025-03-11,2025-03-11,1,Permiso administrativo,No aplica
+E00230,P0559,2025-03-11,2025-03-31,15,Licencia común,Otros
+E00231,P0118,2025-03-12,2025-03-12,1,Licencia común,Respiratorio
+E00232,P0455,2025-03-12,2025-03-14,3,Licencia común,Musculoesquelético
+E00233,P0485,2025-03-12,2025-03-14,3,Licencia común,Otros
+E00234,P0596,2025-03-12,2025-03-14,3,Licencia común,Respiratorio
+E00235,P0005,2025-03-13,2025-03-24,8,Licencia común,Respiratorio
+E00236,P0023,2025-03-13,2025-04-10,21,Accidente laboral,No aplica
+E00237,P0169,2025-03-13,2025-03-13,1,Permiso administrativo,No aplica
+E00238,P0411,2025-03-13,2025-04-02,15,Licencia común,Salud mental
+E00239,P0591,2025-03-13,2025-03-28,12,Licencia común,Respiratorio
+E00240,P0078,2025-03-14,2025-03-14,1,Permiso administrativo,No aplica
+E00241,P0175,2025-03-14,2025-03-20,5,Licencia común,Otros
+E00242,P0264,2025-03-14,2025-03-19,4,Licencia común,Otros
+E00243,P0336,2025-03-14,2025-03-14,1,Permiso administrativo,No aplica
+E00244,P0476,2025-03-14,2025-03-14,1,Permiso administrativo,No aplica
+E00245,P0527,2025-03-14,2025-03-26,9,Licencia común,Otros
+E00246,P0660,2025-03-14,2025-03-19,4,Licencia común,Respiratorio
+E00247,P0053,2025-03-17,2025-03-31,11,Licencia común,Otros
+E00248,P0166,2025-03-17,2025-03-17,1,Permiso administrativo,No aplica
+E00249,P0319,2025-03-17,2025-03-18,2,Licencia común,Otros
+E00250,P0347,2025-03-17,2025-04-03,14,Licencia común,Musculoesquelético
+E00251,P0608,2025-03-17,2025-03-28,10,Licencia común,Musculoesquelético
+E00252,P0317,2025-03-18,2025-03-26,7,Licencia común,Musculoesquelético
+E00253,P0481,2025-03-18,2025-03-18,1,Licencia común,Respiratorio
+E00254,P0646,2025-03-18,2025-03-19,2,Licencia común,Otros
+E00255,P0176,2025-03-19,2025-04-07,14,Licencia común,Respiratorio
+E00256,P0251,2025-03-19,2025-03-19,1,Licencia común,Otros
+E00257,P0404,2025-03-19,2025-04-07,14,Licencia común,Otros
+E00258,P0561,2025-03-19,2025-04-02,11,Licencia común,Musculoesquelético
+E00259,P0621,2025-03-19,2025-04-14,19,Licencia común,Musculoesquelético
+E00260,P0657,2025-03-19,2025-03-21,3,Licencia común,Respiratorio
+E00261,P0027,2025-03-20,2025-03-31,8,Licencia común,Musculoesquelético
+E00262,P0314,2025-03-20,2025-03-28,7,Licencia común,Respiratorio
+E00263,P0650,2025-03-20,2025-03-25,4,Licencia común,Musculoesquelético
+E00264,P0269,2025-03-21,2025-03-25,3,Licencia común,Respiratorio
+E00265,P0285,2025-03-21,2025-04-01,8,Licencia común,Otros
+E00266,P0339,2025-03-21,2025-03-21,1,Licencia común,Salud mental
+E00267,P0451,2025-03-21,2025-04-09,14,Licencia común,Otros
+E00268,P0455,2025-03-21,2025-04-01,8,Licencia común,Otros
+E00269,P0625,2025-03-21,2025-05-09,36,Licencia común,Salud mental
+E00270,P0078,2025-03-24,2025-03-26,3,Licencia común,Salud mental
+E00271,P0186,2025-03-24,2025-03-24,1,Permiso administrativo,No aplica
+E00272,P0188,2025-03-24,2025-03-26,3,Licencia común,Otros
+E00273,P0319,2025-03-24,2025-04-02,8,Licencia común,Respiratorio
+E00274,P0339,2025-03-24,2025-03-28,5,Licencia común,Respiratorio
+E00275,P0399,2025-03-24,2025-05-09,35,Licencia común,Salud mental
+E00276,P0490,2025-03-24,2025-03-31,6,Licencia común,Otros
+E00277,P0263,2025-03-25,2025-04-10,13,Licencia común,Musculoesquelético
+E00278,P0272,2025-03-25,2025-04-11,14,Licencia común,Otros
+E00279,P0298,2025-03-25,2025-03-26,2,Licencia común,Respiratorio
+E00280,P0653,2025-03-25,2025-09-08,120,Licencia parental,No aplica
+E00281,P0028,2025-03-26,2025-04-15,15,Licencia común,Respiratorio
+E00282,P0122,2025-03-26,2025-03-31,4,Licencia común,Salud mental
+E00283,P0515,2025-03-26,2025-03-28,3,Licencia común,Musculoesquelético
+E00284,P0287,2025-03-27,2025-03-27,1,Permiso administrativo,No aplica
+E00285,P0391,2025-03-27,2025-03-28,2,Licencia común,Respiratorio
+E00286,P0436,2025-03-27,2025-03-31,3,Licencia común,Musculoesquelético
+E00287,P0476,2025-03-27,2025-04-02,5,Licencia común,Respiratorio
+E00288,P0571,2025-03-27,2025-04-03,6,Licencia común,Otros
+E00289,P0419,2025-03-28,2025-04-04,6,Licencia común,Respiratorio
+E00290,P0569,2025-03-28,2025-05-15,35,Licencia común,Salud mental
+E00291,P0289,2025-03-31,2025-04-09,8,Licencia común,Salud mental
+E00292,P0086,2025-04-01,2025-04-15,11,Licencia común,Otros
+E00293,P0481,2025-04-01,2025-05-15,33,Licencia común,Otros
+E00294,P0144,2025-04-02,2025-04-04,3,Licencia común,Salud mental
+E00295,P0174,2025-04-02,2025-05-01,22,Licencia común,Otros
+E00296,P0591,2025-04-02,2025-04-03,2,Licencia común,Otros
+E00297,P0299,2025-04-03,2025-04-03,1,Licencia común,Respiratorio
+E00298,P0410,2025-04-03,2025-04-11,7,Accidente laboral,No aplica
+E00299,P0384,2025-04-04,2025-04-17,10,Licencia común,Respiratorio
+E00300,P0424,2025-04-04,2025-04-14,7,Licencia común,Respiratorio
+E00301,P0524,2025-04-04,2025-05-13,28,Licencia común,Musculoesquelético
+E00302,P0575,2025-04-04,2025-04-09,4,Licencia común,Salud mental
+E00303,P0084,2025-04-07,2025-04-14,6,Licencia común,Otros
+E00304,P0634,2025-04-07,2025-04-15,7,Licencia común,Otros
+E00305,P0036,2025-04-08,2025-04-09,2,Licencia común,Otros
+E00306,P0162,2025-04-08,2025-04-22,11,Licencia común,Musculoesquelético
+E00307,P0355,2025-04-08,2025-04-09,2,Sin goce,No aplica
+E00308,P0413,2025-04-08,2025-04-24,13,Accidente laboral,No aplica
+E00309,P0415,2025-04-08,2025-04-09,2,Licencia común,Respiratorio
+E00310,P0418,2025-04-08,2025-04-15,6,Licencia común,Musculoesquelético
+E00311,P0515,2025-04-08,2025-04-08,1,Permiso administrativo,No aplica
+E00312,P0623,2025-04-08,2025-04-09,2,Licencia común,Respiratorio
+E00313,P0080,2025-04-09,2025-04-09,1,Permiso administrativo,No aplica
+E00314,P0158,2025-04-09,2025-04-18,8,Licencia común,Otros
+E00315,P0628,2025-04-09,2025-05-28,36,Licencia común,Salud mental
+E00316,P0630,2025-04-09,2025-04-18,8,Licencia común,Respiratorio
+E00317,P0641,2025-04-09,2025-07-17,72,Licencia común,Musculoesquelético
+E00318,P0211,2025-04-10,2025-04-10,1,Licencia común,Respiratorio
+E00319,P0271,2025-04-10,2025-04-17,6,Licencia común,Otros
+E00320,P0470,2025-04-10,2025-04-17,6,Licencia común,Respiratorio
+E00321,P0564,2025-04-10,2025-04-16,5,Licencia común,Respiratorio
+E00322,P0118,2025-04-11,2025-04-11,1,Permiso administrativo,No aplica
+E00323,P0192,2025-04-11,2025-04-11,1,Permiso administrativo,No aplica
+E00324,P0339,2025-04-11,2025-04-15,3,Licencia común,Musculoesquelético
+E00325,P0448,2025-04-11,2025-09-25,120,Licencia parental,No aplica
+E00326,P0011,2025-04-14,2025-04-23,8,Licencia común,Musculoesquelético
+E00327,P0092,2025-04-14,2025-04-22,7,Licencia común,Respiratorio
+E00328,P0112,2025-04-14,2025-04-30,13,Licencia común,Otros
+E00329,P0246,2025-04-14,2025-04-15,2,Licencia común,Otros
+E00330,P0445,2025-04-14,2025-06-05,39,Accidente laboral,No aplica
+E00331,P0461,2025-04-14,2025-04-16,3,Licencia común,Musculoesquelético
+E00332,P0487,2025-04-14,2025-04-15,2,Licencia común,Respiratorio
+E00333,P0230,2025-04-15,2025-04-15,1,Licencia común,Otros
+E00334,P0402,2025-04-15,2025-04-17,3,Licencia común,Salud mental
+E00335,P0527,2025-04-15,2025-04-15,1,Licencia común,Otros
+E00336,P0144,2025-04-16,2025-04-23,6,Licencia común,Respiratorio
+E00337,P0173,2025-04-16,2025-04-30,11,Licencia común,Musculoesquelético
+E00338,P0223,2025-04-16,2025-06-20,48,Licencia común,Salud mental
+E00339,P0264,2025-04-16,2025-04-18,3,Licencia común,Respiratorio
+E00340,P0319,2025-04-16,2025-04-28,9,Licencia común,Otros
+E00341,P0597,2025-04-16,2025-04-17,2,Sin goce,No aplica
+E00342,P0012,2025-04-17,2025-05-21,25,Licencia común,Musculoesquelético
+E00343,P0050,2025-04-17,2025-05-14,20,Licencia común,Otros
+E00344,P0377,2025-04-17,2025-04-21,3,Licencia común,Otros
+E00345,P0429,2025-04-17,2025-04-22,4,Licencia común,Respiratorio
+E00346,P0591,2025-04-17,2025-04-24,6,Licencia común,Respiratorio
+E00347,P0021,2025-04-18,2025-04-25,6,Licencia común,Musculoesquelético
+E00348,P0291,2025-04-18,2025-05-14,19,Licencia común,Respiratorio
+E00349,P0469,2025-04-18,2025-04-24,5,Licencia común,Respiratorio
+E00350,P0512,2025-04-18,2025-04-25,6,Licencia común,Respiratorio
+E00351,P0576,2025-04-18,2025-04-28,7,Licencia común,Salud mental
+E00352,P0581,2025-04-18,2025-04-18,1,Permiso administrativo,No aplica
+E00353,P0612,2025-04-18,2025-04-23,4,Licencia común,Respiratorio
+E00354,P0644,2025-04-18,2025-04-22,3,Licencia común,Otros
+E00355,P0086,2025-04-21,2025-04-21,1,Permiso administrativo,No aplica
+E00356,P0094,2025-04-21,2025-04-22,2,Licencia común,Otros
+E00357,P0317,2025-04-21,2025-10-03,120,Licencia parental,No aplica
+E00358,P0424,2025-04-21,2025-05-01,9,Licencia común,Otros
+E00359,P0454,2025-04-21,2025-05-22,24,Licencia común,Salud mental
+E00360,P0543,2025-04-21,2025-04-21,1,Licencia común,Otros
+E00361,P0568,2025-04-21,2025-04-22,2,Licencia común,Otros
+E00362,P0570,2025-04-21,2025-04-22,2,Licencia común,Otros
+E00363,P0577,2025-04-21,2025-04-24,4,Sin goce,No aplica
+E00364,P0602,2025-04-21,2025-04-21,1,Permiso administrativo,No aplica
+E00365,P0660,2025-04-21,2025-04-30,8,Licencia común,Otros
+E00366,P0257,2025-04-22,2025-04-28,5,Licencia común,Salud mental
+E00367,P0300,2025-04-22,2025-05-05,10,Licencia común,Otros
+E00368,P0362,2025-04-22,2025-04-22,1,Permiso administrativo,No aplica
+E00369,P0133,2025-04-23,2025-06-02,29,Licencia común,Musculoesquelético
+E00370,P0428,2025-04-23,2025-04-23,1,Permiso administrativo,No aplica
+E00371,P0490,2025-04-23,2025-05-01,7,Licencia común,Respiratorio
+E00372,P0514,2025-04-23,2025-05-05,9,Licencia común,Musculoesquelético
+E00373,P0562,2025-04-23,2025-05-12,14,Licencia común,Otros
+E00374,P0015,2025-04-24,2025-04-24,1,Permiso administrativo,No aplica
+E00375,P0073,2025-04-24,2025-05-07,10,Licencia común,Respiratorio
+E00376,P0347,2025-04-24,2025-05-01,6,Licencia común,Respiratorio
+E00377,P0464,2025-04-24,2025-05-21,20,Licencia común,Otros
+E00378,P0384,2025-04-25,2025-06-11,34,Licencia común,Musculoesquelético
+E00379,P0024,2025-04-28,2025-05-01,4,Licencia común,Respiratorio
+E00380,P0036,2025-04-28,2025-06-06,30,Licencia común,Salud mental
+E00381,P0075,2025-04-28,2025-04-28,1,Permiso administrativo,No aplica
+E00382,P0264,2025-04-28,2025-04-29,2,Licencia común,Musculoesquelético
+E00383,P0412,2025-04-28,2025-08-04,71,Licencia común,Salud mental
+E00384,P0512,2025-04-28,2025-05-14,13,Licencia común,Otros
+E00385,P0154,2025-04-29,2025-04-30,2,Licencia común,Musculoesquelético
+E00386,P0208,2025-04-29,2025-05-05,5,Licencia común,Musculoesquelético
+E00387,P0260,2025-04-29,2025-04-30,2,Licencia común,Respiratorio
+E00388,P0395,2025-04-29,2025-05-02,4,Sin goce,No aplica
+E00389,P0520,2025-04-29,2025-05-09,9,Licencia común,Respiratorio
+E00390,P0540,2025-04-29,2025-05-16,14,Licencia común,Otros
+E00391,P0644,2025-04-29,2025-05-02,4,Licencia común,Respiratorio
+E00392,P0026,2025-04-30,2025-05-05,4,Licencia común,Musculoesquelético
+E00393,P0028,2025-04-30,2025-05-02,3,Licencia común,Respiratorio
+E00394,P0468,2025-04-30,2025-04-30,1,Permiso administrativo,No aplica
+E00395,P0527,2025-04-30,2025-05-09,8,Licencia común,Otros
+E00396,P0607,2025-04-30,2025-05-19,14,Licencia común,Otros
+E00397,P0040,2025-05-01,2025-05-19,13,Licencia común,Respiratorio
+E00398,P0207,2025-05-01,2025-05-01,1,Licencia común,Musculoesquelético
+E00399,P0263,2025-05-01,2025-05-15,11,Licencia común,Otros
+E00400,P0314,2025-05-01,2025-05-01,1,Permiso administrativo,No aplica
+E00401,P0436,2025-05-01,2025-05-02,2,Sin goce,No aplica
+E00402,P0439,2025-05-01,2025-05-05,3,Licencia común,Respiratorio
+E00403,P0456,2025-05-01,2025-05-02,2,Licencia común,Respiratorio
+E00404,P0504,2025-05-01,2025-05-06,4,Licencia común,Otros
+E00405,P0542,2025-05-01,2025-05-01,1,Licencia común,Respiratorio
+E00406,P0617,2025-05-01,2025-05-16,12,Licencia común,Musculoesquelético
+E00407,P0023,2025-05-02,2025-05-02,1,Permiso administrativo,No aplica
+E00408,P0024,2025-05-02,2025-05-20,13,Licencia común,Respiratorio
+E00409,P0060,2025-05-02,2025-05-20,13,Licencia común,Musculoesquelético
+E00410,P0092,2025-05-02,2025-05-09,6,Licencia común,Respiratorio
+E00411,P0169,2025-05-02,2025-05-08,5,Licencia común,Respiratorio
+E00412,P0425,2025-05-02,2025-05-02,1,Permiso administrativo,No aplica
+E00413,P0487,2025-05-02,2025-05-02,1,Permiso administrativo,No aplica
+E00414,P0021,2025-05-05,2025-05-14,8,Licencia común,Respiratorio
+E00415,P0461,2025-05-05,2025-05-14,8,Licencia común,Respiratorio
+E00416,P0542,2025-05-05,2025-05-05,1,Permiso administrativo,No aplica
+E00417,P0648,2025-05-05,2025-05-09,5,Licencia común,Musculoesquelético
+E00418,P0084,2025-05-06,2025-05-06,1,Permiso administrativo,No aplica
+E00419,P0363,2025-05-06,2025-05-08,3,Licencia común,Respiratorio
+E00420,P0429,2025-05-06,2025-05-15,8,Licencia común,Otros
+E00421,P0660,2025-05-06,2025-05-08,3,Licencia común,Respiratorio
+E00422,P0054,2025-05-07,2025-06-02,19,Licencia común,Respiratorio
+E00423,P0174,2025-05-07,2025-06-10,25,Licencia común,Salud mental
+E00424,P0211,2025-05-07,2025-05-08,2,Licencia común,Musculoesquelético
+E00425,P0345,2025-05-07,2025-05-14,6,Licencia común,Respiratorio
+E00426,P0369,2025-05-07,2025-05-09,3,Licencia común,Respiratorio
+E00427,P0394,2025-05-07,2025-05-07,1,Permiso administrativo,No aplica
+E00428,P0410,2025-05-07,2025-05-27,15,Licencia común,Respiratorio
+E00429,P0415,2025-05-07,2025-05-08,2,Licencia común,Respiratorio
+E00430,P0422,2025-05-07,2025-05-07,1,Sin goce,No aplica
+E00431,P0425,2025-05-07,2025-05-07,1,Licencia común,Respiratorio
+E00432,P0437,2025-05-07,2025-05-09,3,Accidente laboral,No aplica
+E00433,P0011,2025-05-08,2025-05-09,2,Licencia común,Otros
+E00434,P0063,2025-05-08,2025-05-09,2,Licencia común,Respiratorio
+E00435,P0099,2025-05-08,2025-05-20,9,Licencia común,Respiratorio
+E00436,P0335,2025-05-08,2025-05-14,5,Licencia común,Respiratorio
+E00437,P0375,2025-05-08,2025-05-20,9,Licencia común,Respiratorio
+E00438,P0376,2025-05-08,2025-05-30,17,Licencia común,Musculoesquelético
+E00439,P0428,2025-05-08,2025-05-09,2,Licencia común,Respiratorio
+E00440,P0519,2025-05-08,2025-05-09,2,Licencia común,Respiratorio
+E00441,P0091,2025-05-09,2025-05-09,1,Licencia común,Respiratorio
+E00442,P0160,2025-05-09,2025-05-09,1,Licencia común,Respiratorio
+E00443,P0162,2025-05-09,2025-08-28,80,Licencia común,Salud mental
+E00444,P0246,2025-05-09,2025-05-09,1,Licencia común,Respiratorio
+E00445,P0586,2025-05-09,2025-06-12,25,Licencia común,Musculoesquelético
+E00446,P0650,2025-05-09,2025-05-09,1,Permiso administrativo,No aplica
+E00447,P0019,2025-05-12,2025-05-12,1,Permiso administrativo,No aplica
+E00448,P0340,2025-05-12,2025-05-19,6,Licencia común,Otros
+E00449,P0404,2025-05-12,2025-05-20,7,Licencia común,Musculoesquelético
+E00450,P0415,2025-05-12,2025-05-12,1,Permiso administrativo,No aplica
+E00451,P0460,2025-05-12,2025-05-22,9,Licencia común,Respiratorio
+E00452,P0527,2025-05-12,2025-06-09,21,Licencia común,Salud mental
+E00453,P0091,2025-05-13,2025-05-30,14,Sin goce,No aplica
+E00454,P0101,2025-05-13,2025-06-02,15,Licencia común,Otros
+E00455,P0122,2025-05-13,2025-05-13,1,Licencia común,Respiratorio
+E00456,P0238,2025-05-13,2025-05-13,1,Permiso administrativo,No aplica
+E00457,P0501,2025-05-13,2025-05-15,3,Licencia común,Salud mental
+E00458,P0561,2025-05-13,2025-05-19,5,Accidente laboral,No aplica
+E00459,P0028,2025-05-14,2025-06-10,20,Licencia común,Otros
+E00460,P0097,2025-05-14,2025-05-14,1,Permiso administrativo,No aplica
+E00461,P0127,2025-05-14,2025-05-19,4,Licencia común,Musculoesquelético
+E00462,P0476,2025-05-14,2025-06-16,24,Licencia común,Salud mental
+E00463,P0488,2025-05-14,2025-08-07,62,Licencia común,Salud mental
+E00464,P0112,2025-05-15,2025-05-15,1,Permiso administrativo,No aplica
+E00465,P0246,2025-05-15,2025-05-22,6,Licencia común,Respiratorio
+E00466,P0345,2025-05-15,2025-05-15,1,Licencia común,Respiratorio
+E00467,P0469,2025-05-15,2025-05-15,1,Licencia común,Otros
+E00468,P0487,2025-05-15,2025-05-19,3,Licencia común,Otros
+E00469,P0646,2025-05-15,2025-05-21,5,Licencia común,Respiratorio
+E00470,P0112,2025-05-16,2025-06-05,15,Licencia común,Otros
+E00471,P0186,2025-05-16,2025-05-19,2,Accidente laboral,No aplica
+E00472,P0297,2025-05-16,2025-05-19,2,Licencia común,Otros
+E00473,P0405,2025-05-16,2025-05-20,3,Licencia común,Respiratorio
+E00474,P0655,2025-05-16,2025-05-16,1,Licencia común,Respiratorio
+E00475,P0046,2025-05-19,2025-05-19,1,Permiso administrativo,No aplica
+E00476,P0065,2025-05-19,2025-05-28,8,Licencia común,Musculoesquelético
+E00477,P0201,2025-05-19,2025-06-11,18,Licencia común,Salud mental
+E00478,P0377,2025-05-19,2025-06-02,11,Licencia común,Respiratorio
+E00479,P0502,2025-05-19,2025-06-06,15,Licencia común,Salud mental
+E00480,P0011,2025-05-20,2025-08-01,54,Licencia común,Salud mental
+E00481,P0176,2025-05-20,2025-05-20,1,Licencia común,Otros
+E00482,P0251,2025-05-20,2025-05-26,5,Licencia común,Salud mental
+E00483,P0388,2025-05-20,2025-05-23,4,Licencia común,Otros
+E00484,P0525,2025-05-20,2025-05-27,6,Licencia común,Musculoesquelético
+E00485,P0532,2025-05-20,2025-05-21,2,Licencia común,Musculoesquelético
+E00486,P0053,2025-05-21,2025-05-26,4,Licencia común,Respiratorio
+E00487,P0139,2025-05-21,2025-05-29,7,Licencia común,Respiratorio
+E00488,P0227,2025-05-21,2025-05-26,4,Licencia común,Respiratorio
+E00489,P0338,2025-05-21,2025-06-04,11,Accidente laboral,No aplica
+E00490,P0461,2025-05-21,2025-05-21,1,Permiso administrativo,No aplica
+E00491,P0542,2025-05-21,2025-06-09,14,Licencia común,Musculoesquelético
+E00492,P0660,2025-05-21,2025-05-23,3,Licencia común,Respiratorio
+E00493,P0001,2025-05-22,2025-05-26,3,Sin goce,No aplica
+E00494,P0075,2025-05-22,2025-05-22,1,Accidente laboral,No aplica
+E00495,P0098,2025-05-22,2025-05-22,1,Permiso administrativo,No aplica
+E00496,P0352,2025-05-22,2025-06-06,12,Licencia común,Otros
+E00497,P0425,2025-05-22,2025-05-29,6,Licencia común,Respiratorio
+E00498,P0623,2025-05-22,2025-06-27,27,Licencia común,Salud mental
+E00499,P0026,2025-05-23,2025-06-03,8,Licencia común,Respiratorio
+E00500,P0060,2025-05-23,2025-06-13,16,Licencia común,Otros
+E00501,P0127,2025-05-23,2025-05-26,2,Licencia común,Respiratorio
+E00502,P0154,2025-05-23,2025-05-29,5,Licencia común,Otros
+E00503,P0169,2025-05-23,2025-06-10,13,Licencia común,Respiratorio
+E00504,P0396,2025-05-23,2025-05-28,4,Licencia común,Respiratorio
+E00505,P0415,2025-05-23,2025-07-10,35,Licencia común,Salud mental
+E00506,P0490,2025-05-23,2025-06-02,7,Licencia común,Musculoesquelético
+E00507,P0610,2025-05-23,2025-08-22,66,Licencia común,Salud mental
+E00508,P0365,2025-05-26,2025-05-27,2,Licencia común,Otros
+E00509,P0451,2025-05-26,2025-06-25,23,Licencia común,Salud mental
+E00510,P0648,2025-05-26,2025-07-08,32,Licencia común,Salud mental
+E00511,P0085,2025-05-27,2025-05-30,4,Licencia común,Respiratorio
+E00512,P0311,2025-05-27,2025-05-27,1,Permiso administrativo,No aplica
+E00513,P0339,2025-05-27,2025-05-27,1,Permiso administrativo,No aplica
+E00514,P0428,2025-05-27,2025-07-01,26,Licencia común,Musculoesquelético
+E00515,P0491,2025-05-27,2025-06-02,5,Licencia común,Respiratorio
+E00516,P0581,2025-05-27,2025-06-18,17,Licencia común,Otros
+E00517,P0591,2025-05-27,2025-06-20,19,Licencia común,Salud mental
+E00518,P0021,2025-05-28,2025-05-29,2,Licencia común,Respiratorio
+E00519,P0264,2025-05-28,2025-06-11,11,Licencia común,Musculoesquelético
+E00520,P0311,2025-05-28,2025-05-29,2,Licencia común,Otros
+E00521,P0339,2025-05-28,2025-05-28,1,Permiso administrativo,No aplica
+E00522,P0386,2025-05-28,2025-05-28,1,Sin goce,No aplica
+E00523,P0395,2025-05-28,2025-06-10,10,Licencia común,Musculoesquelético
+E00524,P0515,2025-05-28,2025-06-11,11,Licencia común,Salud mental
+E00525,P0659,2025-05-28,2025-06-03,5,Licencia común,Otros
+E00526,P0118,2025-05-29,2025-05-29,1,Permiso administrativo,No aplica
+E00527,P0238,2025-05-29,2025-05-30,2,Licencia común,Otros
+E00528,P0299,2025-05-29,2025-05-29,1,Permiso administrativo,No aplica
+E00529,P0361,2025-05-29,2025-06-02,3,Licencia común,Salud mental
+E00530,P0413,2025-05-29,2025-06-18,15,Licencia común,Musculoesquelético
+E00531,P0619,2025-05-30,2025-06-23,17,Licencia común,Musculoesquelético
+E00532,P0675,2025-05-30,2025-05-30,1,Permiso administrativo,No aplica
+E00533,P0238,2025-06-02,2025-07-22,37,Licencia común,Musculoesquelético
+E00534,P0339,2025-06-02,2025-07-25,40,Accidente laboral,No aplica
+E00535,P0372,2025-06-02,2025-06-03,2,Licencia común,Otros
+E00536,P0492,2025-06-02,2025-06-03,2,Licencia común,Salud mental
+E00537,P0127,2025-06-03,2025-06-06,4,Licencia común,Respiratorio
+E00538,P0225,2025-06-03,2025-06-03,1,Permiso administrativo,No aplica
+E00539,P0386,2025-06-03,2025-07-01,21,Licencia común,Otros
+E00540,P0536,2025-06-03,2025-07-10,28,Accidente laboral,No aplica
+E00541,P0573,2025-06-03,2025-06-03,1,Permiso administrativo,No aplica
+E00542,P0621,2025-06-03,2025-06-03,1,Licencia común,Respiratorio
+E00543,P0490,2025-06-04,2025-06-04,1,Licencia común,Respiratorio
+E00544,P0573,2025-06-04,2025-06-16,9,Licencia común,Respiratorio
+E00545,P0063,2025-06-05,2025-06-06,2,Licencia común,Respiratorio
+E00546,P0096,2025-06-05,2025-06-05,1,Permiso administrativo,No aplica
+E00547,P0132,2025-06-05,2025-06-13,7,Licencia común,Otros
+E00548,P0218,2025-06-05,2025-06-05,1,Licencia común,Respiratorio
+E00549,P0323,2025-06-05,2025-06-06,2,Licencia común,Otros
+E00550,P0437,2025-06-05,2025-06-11,5,Licencia común,Respiratorio
+E00551,P0468,2025-06-05,2025-06-05,1,Permiso administrativo,No aplica
+E00552,P0628,2025-06-05,2025-06-06,2,Licencia común,Respiratorio
+E00553,P0678,2025-06-05,2025-06-25,15,Licencia común,Respiratorio
+E00554,P0040,2025-06-06,2025-06-06,1,Permiso administrativo,No aplica
+E00555,P0107,2025-06-06,2025-06-06,1,Permiso administrativo,No aplica
+E00556,P0118,2025-06-06,2025-06-17,8,Licencia común,Respiratorio
+E00557,P0175,2025-06-06,2025-06-12,5,Licencia común,Otros
+E00558,P0602,2025-06-06,2025-06-13,6,Licencia común,Respiratorio
+E00559,P0098,2025-06-09,2025-06-27,15,Accidente laboral,No aplica
+E00560,P0128,2025-06-09,2025-06-12,4,Licencia común,Respiratorio
+E00561,P0287,2025-06-09,2025-06-10,2,Licencia común,Respiratorio
+E00562,P0323,2025-06-09,2025-06-10,2,Licencia común,Respiratorio
+E00563,P0522,2025-06-09,2025-06-18,8,Licencia común,Respiratorio
+E00564,P0630,2025-06-09,2025-06-13,5,Licencia común,Respiratorio
+E00565,P0116,2025-06-10,2025-07-07,20,Licencia común,Otros
+E00566,P0121,2025-06-10,2025-06-10,1,Licencia común,Musculoesquelético
+E00567,P0347,2025-06-10,2025-06-10,1,Permiso administrativo,No aplica
+E00568,P0394,2025-06-10,2025-06-12,3,Licencia común,Musculoesquelético
+E00569,P0396,2025-06-10,2025-06-16,5,Licencia común,Respiratorio
+E00570,P0490,2025-06-10,2025-07-01,16,Licencia común,Respiratorio
+E00571,P0595,2025-06-10,2025-07-01,16,Licencia común,Otros
+E00572,P0627,2025-06-10,2025-07-23,32,Licencia común,Salud mental
+E00573,P0638,2025-06-10,2025-07-08,21,Licencia común,Respiratorio
+E00574,P0025,2025-06-11,2025-06-13,3,Licencia común,Respiratorio
+E00575,P0154,2025-06-11,2025-06-13,3,Licencia común,Otros
+E00576,P0211,2025-06-11,2025-06-17,5,Licencia común,Musculoesquelético
+E00577,P0112,2025-06-12,2025-06-17,4,Licencia común,Respiratorio
+E00578,P0227,2025-06-12,2025-06-18,5,Licencia común,Salud mental
+E00579,P0424,2025-06-12,2025-06-16,3,Licencia común,Respiratorio
+E00580,P0454,2025-06-12,2025-06-12,1,Permiso administrativo,No aplica
+E00581,P0463,2025-06-12,2025-06-18,5,Licencia común,Respiratorio
+E00582,P0468,2025-06-12,2025-06-17,4,Licencia común,Respiratorio
+E00583,P0502,2025-06-12,2025-07-04,17,Licencia común,Salud mental
+E00584,P0561,2025-06-12,2025-06-30,13,Licencia común,Musculoesquelético
+E00585,P0086,2025-06-13,2025-07-01,13,Licencia común,Salud mental
+E00586,P0175,2025-06-13,2025-06-17,3,Licencia común,Respiratorio
+E00587,P0225,2025-06-13,2025-06-13,1,Licencia común,Respiratorio
+E00588,P0289,2025-06-13,2025-06-17,3,Licencia común,Salud mental
+E00589,P0319,2025-06-13,2025-06-25,9,Licencia común,Otros
+E00590,P0388,2025-06-13,2025-06-23,7,Licencia común,Respiratorio
+E00591,P0395,2025-06-13,2025-06-13,1,Licencia común,Respiratorio
+E00592,P0464,2025-06-13,2025-06-13,1,Licencia común,Otros
+E00593,P0527,2025-06-13,2025-06-19,5,Licencia común,Respiratorio
+E00594,P0584,2025-06-13,2025-07-22,28,Licencia común,Musculoesquelético
+E00595,P0647,2025-06-13,2025-06-20,6,Licencia común,Respiratorio
+E00596,P0066,2025-06-16,2025-06-20,5,Licencia común,Musculoesquelético
+E00597,P0075,2025-06-16,2025-06-30,11,Licencia común,Respiratorio
+E00598,P0251,2025-06-16,2025-06-23,6,Licencia común,Otros
+E00599,P0282,2025-06-16,2025-06-16,1,Permiso administrativo,No aplica
+E00600,P0299,2025-06-16,2025-06-16,1,Permiso administrativo,No aplica
+E00601,P0471,2025-06-16,2025-06-17,2,Licencia común,Respiratorio
+E00602,P0186,2025-06-17,2025-06-17,1,Permiso administrativo,No aplica
+E00603,P0399,2025-06-17,2025-06-24,6,Licencia común,Respiratorio
+E00604,P0489,2025-06-17,2025-06-19,3,Licencia común,Respiratorio
+E00605,P0568,2025-06-17,2025-06-18,2,Licencia común,Respiratorio
+E00606,P0644,2025-06-17,2025-06-23,5,Licencia común,Respiratorio
+E00607,P0657,2025-06-17,2025-07-15,21,Licencia común,Musculoesquelético
+E00608,P0077,2025-06-18,2025-07-02,11,Licencia común,Otros
+E00609,P0257,2025-06-18,2025-06-18,1,Licencia común,Respiratorio
+E00610,P0377,2025-06-18,2025-06-18,1,Licencia común,Respiratorio
+E00611,P0425,2025-06-18,2025-07-02,11,Licencia común,Respiratorio
+E00612,P0596,2025-06-18,2025-06-18,1,Licencia común,Respiratorio
+E00613,P0617,2025-06-18,2025-07-01,10,Licencia común,Musculoesquelético
+E00614,P0028,2025-06-19,2025-06-20,2,Licencia común,Respiratorio
+E00615,P0041,2025-06-19,2025-07-28,28,Licencia común,Respiratorio
+E00616,P0118,2025-06-19,2025-06-19,1,Licencia común,Respiratorio
+E00617,P0350,2025-06-19,2025-06-19,1,Permiso administrativo,No aplica
+E00618,P0424,2025-06-19,2025-08-01,32,Licencia común,Musculoesquelético
+E00619,P0092,2025-06-20,2025-07-04,11,Licencia común,Musculoesquelético
+E00620,P0189,2025-06-20,2025-06-20,1,Permiso administrativo,No aplica
+E00621,P0228,2025-06-20,2025-07-02,9,Licencia común,Otros
+E00622,P0311,2025-06-20,2025-10-24,91,Licencia común,Salud mental
+E00623,P0456,2025-06-20,2025-07-15,18,Licencia común,Salud mental
+E00624,P0461,2025-06-20,2025-06-20,1,Permiso administrativo,No aplica
+E00625,P0023,2025-06-23,2025-06-23,1,Permiso administrativo,No aplica
+E00626,P0112,2025-06-23,2025-06-23,1,Permiso administrativo,No aplica
+E00627,P0294,2025-06-23,2025-06-27,5,Licencia común,Musculoesquelético
+E00628,P0338,2025-06-23,2025-06-25,3,Licencia común,Musculoesquelético
+E00629,P0639,2025-06-23,2025-06-23,1,Permiso administrativo,No aplica
+E00630,P0036,2025-06-24,2025-07-04,9,Licencia común,Otros
+E00631,P0257,2025-06-24,2025-06-25,2,Sin goce,No aplica
+E00632,P0314,2025-06-24,2025-07-03,8,Accidente laboral,No aplica
+E00633,P0591,2025-06-24,2025-07-03,8,Licencia común,Respiratorio
+E00634,P0323,2025-06-25,2025-07-10,12,Licencia común,Otros
+E00635,P0384,2025-06-25,2025-06-26,2,Licencia común,Respiratorio
+E00636,P0419,2025-06-25,2025-07-04,8,Licencia común,Otros
+E00637,P0461,2025-06-25,2025-07-01,5,Licencia común,Respiratorio
+E00638,P0532,2025-06-25,2025-07-01,5,Licencia común,Respiratorio
+E00639,P0602,2025-06-25,2025-07-14,14,Licencia común,Otros
+E00640,P0628,2025-06-26,2025-07-07,8,Licencia común,Respiratorio
+E00641,P0186,2025-06-27,2025-07-07,7,Licencia común,Otros
+E00642,P0345,2025-06-27,2025-07-03,5,Licencia común,Salud mental
+E00643,P0371,2025-06-27,2025-06-27,1,Permiso administrativo,No aplica
+E00644,P0451,2025-06-27,2025-07-29,23,Licencia común,Musculoesquelético
+E00645,P0513,2025-06-27,2025-06-27,1,Licencia común,Respiratorio
+E00646,P0646,2025-06-27,2025-07-16,14,Licencia común,Respiratorio
+E00647,P0027,2025-06-30,2025-06-30,1,Licencia común,Respiratorio
+E00648,P0085,2025-06-30,2025-06-30,1,Licencia común,Respiratorio
+E00649,P0157,2025-06-30,2025-07-24,19,Licencia común,Respiratorio
+E00650,P0382,2025-06-30,2025-06-30,1,Permiso administrativo,No aplica
+E00651,P0493,2025-06-30,2025-07-03,4,Licencia común,Respiratorio
+E00652,P0630,2025-06-30,2025-07-01,2,Licencia común,Respiratorio
+E00653,P0174,2025-07-02,2025-07-08,5,Licencia común,Respiratorio
+E00654,P0399,2025-07-02,2025-08-04,24,Licencia común,Salud mental
+E00655,P0422,2025-07-02,2025-07-02,1,Permiso administrativo,No aplica
+E00656,P0599,2025-07-02,2025-07-08,5,Licencia común,Respiratorio
+E00657,P0075,2025-07-03,2025-07-03,1,Licencia común,Otros
+E00658,P0175,2025-07-03,2025-07-18,12,Licencia común,Otros
+E00659,P0263,2025-07-03,2025-07-10,6,Licencia común,Respiratorio
+E00660,P0365,2025-07-03,2025-07-14,8,Licencia común,Musculoesquelético
+E00661,P0384,2025-07-03,2025-07-07,3,Licencia común,Respiratorio
+E00662,P0410,2025-07-03,2025-07-03,1,Permiso administrativo,No aplica
+E00663,P0564,2025-07-03,2025-07-04,2,Sin goce,No aplica
+E00664,P0358,2025-07-04,2025-07-11,6,Licencia común,Salud mental
+E00665,P0463,2025-07-04,2025-07-17,10,Licencia común,Musculoesquelético
+E00666,P0677,2025-07-04,2025-07-04,1,Licencia común,Respiratorio
+E00667,P0460,2025-07-07,2025-07-16,8,Licencia común,Musculoesquelético
+E00668,P0515,2025-07-07,2025-08-11,26,Licencia común,Otros
+E00669,P0678,2025-07-07,2025-07-07,1,Permiso administrativo,No aplica
+E00670,P0021,2025-07-08,2025-07-08,1,Licencia común,Respiratorio
+E00671,P0044,2025-07-08,2025-08-04,20,Licencia común,Respiratorio
+E00672,P0287,2025-07-08,2025-07-08,1,Permiso administrativo,No aplica
+E00673,P0314,2025-07-08,2025-07-11,4,Licencia común,Respiratorio
+E00674,P0338,2025-07-08,2025-07-25,14,Licencia común,Salud mental
+E00675,P0591,2025-07-08,2025-07-25,14,Licencia común,Otros
+E00676,P0330,2025-07-09,2025-07-10,2,Licencia común,Respiratorio
+E00677,P0461,2025-07-09,2025-07-10,2,Licencia común,Respiratorio
+E00678,P0039,2025-07-10,2025-07-15,4,Licencia común,Respiratorio
+E00679,P0052,2025-07-10,2025-07-15,4,Licencia común,Respiratorio
+E00680,P0081,2025-07-10,2025-08-01,17,Licencia común,Musculoesquelético
+E00681,P0226,2025-07-10,2025-07-15,4,Licencia común,Musculoesquelético
+E00682,P0375,2025-07-10,2025-07-24,11,Licencia común,Respiratorio
+E00683,P0392,2025-07-10,2025-07-10,1,Permiso administrativo,No aplica
+E00684,P0410,2025-07-10,2025-07-21,8,Licencia común,Otros
+E00685,P0490,2025-07-10,2025-07-15,4,Licencia común,Respiratorio
+E00686,P0568,2025-07-10,2025-07-16,5,Licencia común,Otros
+E00687,P0107,2025-07-11,2025-08-15,26,Licencia común,Otros
+E00688,P0186,2025-07-11,2025-07-21,7,Licencia común,Musculoesquelético
+E00689,P0352,2025-07-11,2025-07-18,6,Licencia común,Respiratorio
+E00690,P0502,2025-07-11,2025-07-11,1,Licencia común,Respiratorio
+E00691,P0028,2025-07-14,2025-07-15,2,Licencia común,Respiratorio
+E00692,P0080,2025-07-14,2025-07-14,1,Licencia común,Respiratorio
+E00693,P0522,2025-07-14,2025-07-16,3,Licencia común,Respiratorio
+E00694,P0621,2025-07-14,2025-07-14,1,Permiso administrativo,No aplica
+E00695,P0077,2025-07-15,2025-07-28,10,Licencia común,Respiratorio
+E00696,P0160,2025-07-15,2025-07-15,1,Licencia común,Otros
+E00697,P0203,2025-07-15,2025-08-28,33,Licencia común,Salud mental
+E00698,P0325,2025-07-15,2025-07-29,11,Licencia común,Respiratorio
+E00699,P0403,2025-07-15,2025-07-16,2,Licencia común,Respiratorio
+E00700,P0506,2025-07-15,2025-07-15,1,Licencia común,Otros
+E00701,P0524,2025-07-15,2025-07-18,4,Licencia común,Respiratorio
+E00702,P0575,2025-07-15,2025-07-23,7,Licencia común,Otros
+E00703,P0630,2025-07-15,2025-07-21,5,Accidente laboral,No aplica
+E00704,P0678,2025-07-15,2025-07-22,6,Licencia común,Respiratorio
+E00705,P0118,2025-07-16,2025-07-16,1,Licencia común,Respiratorio
+E00706,P0291,2025-07-16,2025-08-07,17,Licencia común,Salud mental
+E00707,P0519,2025-07-16,2025-07-17,2,Licencia común,Respiratorio
+E00708,P0563,2025-07-16,2025-07-17,2,Licencia común,Respiratorio
+E00709,P0456,2025-07-17,2025-07-23,5,Licencia común,Respiratorio
+E00710,P0116,2025-07-18,2025-07-21,2,Licencia común,Respiratorio
+E00711,P0173,2025-07-18,2025-07-21,2,Licencia común,Otros
+E00712,P0298,2025-07-18,2025-08-07,15,Licencia común,Respiratorio
+E00713,P0323,2025-07-18,2025-07-21,2,Licencia común,Respiratorio
+E00714,P0348,2025-07-18,2025-07-29,8,Licencia común,Otros
+E00715,P0413,2025-07-18,2025-07-21,2,Licencia común,Musculoesquelético
+E00716,P0490,2025-07-18,2025-08-13,19,Licencia común,Respiratorio
+E00717,P0013,2025-07-21,2025-07-23,3,Licencia común,Respiratorio
+E00718,P0036,2025-07-21,2025-07-22,2,Licencia común,Respiratorio
+E00719,P0086,2025-07-21,2025-07-24,4,Licencia común,Respiratorio
+E00720,P0218,2025-07-21,2025-07-21,1,Permiso administrativo,No aplica
+E00721,P0324,2025-07-21,2025-07-21,1,Permiso administrativo,No aplica
+E00722,P0378,2025-07-21,2025-08-04,11,Licencia común,Musculoesquelético
+E00723,P0101,2025-07-22,2025-07-22,1,Licencia común,Respiratorio
+E00724,P0299,2025-07-22,2025-08-08,14,Licencia común,Respiratorio
+E00725,P0302,2025-07-22,2025-07-22,1,Licencia común,Respiratorio
+E00726,P0352,2025-07-22,2025-07-22,1,Permiso administrativo,No aplica
+E00727,P0676,2025-07-22,2025-07-22,1,Permiso administrativo,No aplica
+E00728,P0246,2025-07-23,2025-07-29,5,Licencia común,Otros
+E00729,P0347,2025-07-23,2025-07-23,1,Permiso administrativo,No aplica
+E00730,P0357,2025-07-23,2025-08-05,10,Licencia común,Respiratorio
+E00731,P0519,2025-07-23,2025-07-23,1,Permiso administrativo,No aplica
+E00732,P0577,2025-07-23,2025-07-25,3,Licencia común,Respiratorio
+E00733,P0607,2025-07-23,2025-08-13,16,Licencia común,Musculoesquelético
+E00734,P0671,2025-07-23,2025-07-25,3,Licencia común,Salud mental
+E00735,P0252,2025-07-24,2025-07-24,1,Permiso administrativo,No aplica
+E00736,P0481,2025-07-24,2025-07-25,2,Licencia común,Respiratorio
+E00737,P0524,2025-07-24,2025-07-24,1,Permiso administrativo,No aplica
+E00738,P0186,2025-07-25,2025-07-25,1,Licencia común,Otros
+E00739,P0370,2025-07-25,2025-08-01,6,Licencia común,Respiratorio
+E00740,P0411,2025-07-25,2025-07-28,2,Licencia común,Respiratorio
+E00741,P0540,2025-07-25,2025-07-25,1,Licencia común,Respiratorio
+E00742,P0561,2025-07-25,2025-07-29,3,Accidente laboral,No aplica
+E00743,P0617,2025-07-25,2025-08-26,23,Accidente laboral,No aplica
+E00744,P0643,2025-07-25,2025-08-12,13,Licencia común,Otros
+E00745,P0016,2025-07-28,2025-07-28,1,Licencia común,Otros
+E00746,P0026,2025-07-28,2025-07-28,1,Permiso administrativo,No aplica
+E00747,P0036,2025-07-28,2025-07-28,1,Permiso administrativo,No aplica
+E00748,P0345,2025-07-28,2025-08-07,9,Licencia común,Otros
+E00749,P0454,2025-07-28,2025-07-28,1,Licencia común,Respiratorio
+E00750,P0604,2025-07-28,2025-07-28,1,Permiso administrativo,No aplica
+E00751,P0656,2025-07-29,2025-08-01,4,Licencia común,Salud mental
+E00752,P0118,2025-07-30,2025-08-01,3,Licencia común,Respiratorio
+E00753,P0186,2025-07-30,2025-07-30,1,Licencia común,Otros
+E00754,P0251,2025-07-30,2025-07-31,2,Licencia común,Respiratorio
+E00755,P0303,2025-07-30,2025-08-06,6,Licencia común,Respiratorio
+E00756,P0337,2025-07-30,2025-07-30,1,Permiso administrativo,No aplica
+E00757,P0439,2025-07-30,2025-07-30,1,Licencia común,Respiratorio
+E00758,P0454,2025-07-30,2025-07-30,1,Licencia común,Otros
+E00759,P0461,2025-07-30,2025-08-21,17,Licencia común,Musculoesquelético
+E00760,P0621,2025-07-30,2025-08-04,4,Licencia común,Respiratorio
+E00761,P0086,2025-07-31,2025-08-15,12,Licencia común,Respiratorio
+E00762,P0092,2025-07-31,2025-08-25,18,Licencia común,Otros
+E00763,P0263,2025-07-31,2025-08-15,12,Licencia común,Musculoesquelético
+E00764,P0352,2025-07-31,2025-08-13,10,Licencia común,Otros
+E00765,P0394,2025-07-31,2025-07-31,1,Permiso administrativo,No aplica
+E00766,P0529,2025-07-31,2025-08-19,14,Licencia común,Respiratorio
+E00767,P0469,2025-08-01,2025-08-01,1,Permiso administrativo,No aplica
+E00768,P0476,2025-08-01,2025-08-01,1,Licencia común,Respiratorio
+E00769,P0639,2025-08-01,2025-10-06,47,Licencia común,Respiratorio
+E00770,P0098,2025-08-04,2025-09-04,24,Licencia común,Salud mental
+E00771,P0496,2025-08-04,2025-08-19,12,Licencia común,Respiratorio
+E00772,P0506,2025-08-04,2025-08-04,1,Licencia común,Otros
+E00773,P0650,2025-08-04,2025-08-15,10,Licencia común,Respiratorio
+E00774,P0672,2025-08-04,2025-08-07,4,Licencia común,Otros
+E00775,P0682,2025-08-04,2025-08-27,18,Licencia común,Respiratorio
+E00776,P0325,2025-08-05,2025-08-12,6,Licencia común,Respiratorio
+E00777,P0207,2025-08-06,2025-08-25,14,Licencia común,Otros
+E00778,P0340,2025-08-06,2025-08-08,3,Licencia común,Respiratorio
+E00779,P0405,2025-08-06,2025-09-05,23,Licencia común,Salud mental
+E00780,P0640,2025-08-06,2025-08-11,4,Licencia común,Respiratorio
+E00781,P0157,2025-08-07,2025-08-07,1,Licencia común,Salud mental
+E00782,P0192,2025-08-07,2025-08-26,14,Licencia común,Otros
+E00783,P0415,2025-08-07,2025-08-20,10,Licencia común,Otros
+E00784,P0619,2025-08-07,2025-08-18,8,Licencia común,Salud mental
+E00785,P0693,2025-08-07,2025-08-19,9,Licencia común,Respiratorio
+E00786,P0100,2025-08-08,2025-08-15,6,Licencia común,Otros
+E00787,P0166,2025-08-08,2025-08-18,7,Licencia común,Respiratorio
+E00788,P0174,2025-08-08,2025-08-15,6,Licencia común,Otros
+E00789,P0303,2025-08-08,2025-08-11,2,Licencia común,Respiratorio
+E00790,P0527,2025-08-08,2025-08-25,12,Licencia común,Salud mental
+E00791,P0630,2025-08-08,2025-08-08,1,Permiso administrativo,No aplica
+E00792,P0211,2025-08-11,2025-09-08,21,Licencia común,Musculoesquelético
+E00793,P0403,2025-08-11,2025-08-28,14,Licencia común,Otros
+E00794,P0437,2025-08-11,2025-08-11,1,Permiso administrativo,No aplica
+E00795,P0454,2025-08-11,2025-10-13,46,Licencia común,Salud mental
+E00796,P0630,2025-08-11,2025-08-15,5,Licencia común,Respiratorio
+E00797,P0201,2025-08-12,2025-08-18,5,Licencia común,Respiratorio
+E00798,P0260,2025-08-12,2025-08-26,11,Licencia común,Salud mental
+E00799,P0413,2025-08-12,2025-08-12,1,Licencia común,Respiratorio
+E00800,P0687,2025-08-12,2025-08-13,2,Sin goce,No aplica
+E00801,P0591,2025-08-13,2025-08-13,1,Accidente laboral,No aplica
+E00802,P0655,2025-08-13,2025-08-18,4,Licencia común,Respiratorio
+E00803,P0037,2025-08-14,2025-08-14,1,Licencia común,Respiratorio
+E00804,P0124,2025-08-14,2025-08-14,1,Licencia común,Respiratorio
+E00805,P0319,2025-08-14,2025-08-22,7,Licencia común,Respiratorio
+E00806,P0323,2025-08-14,2025-08-19,4,Licencia común,Respiratorio
+E00807,P0465,2025-08-14,2025-08-29,12,Licencia común,Otros
+E00808,P0641,2025-08-14,2025-08-14,1,Permiso administrativo,No aplica
+E00809,P0112,2025-08-15,2025-08-19,3,Licencia común,Respiratorio
+E00810,P0188,2025-08-15,2025-08-21,5,Licencia común,Otros
+E00811,P0209,2025-08-15,2025-08-19,3,Licencia común,Respiratorio
+E00812,P0418,2025-08-15,2025-08-15,1,Licencia común,Otros
+E00813,P0425,2025-08-15,2025-08-22,6,Accidente laboral,No aplica
+E00814,P0628,2025-08-15,2025-08-15,1,Licencia común,Respiratorio
+E00815,P0339,2025-08-18,2025-08-18,1,Permiso administrativo,No aplica
+E00816,P0366,2025-08-18,2025-09-03,13,Licencia común,Respiratorio
+E00817,P0428,2025-08-18,2025-09-08,16,Licencia común,Otros
+E00818,P0460,2025-08-18,2025-08-19,2,Licencia común,Otros
+E00819,P0657,2025-08-18,2025-08-29,10,Licencia común,Otros
+E00820,P0324,2025-08-19,2025-08-22,4,Accidente laboral,No aplica
+E00821,P0343,2025-08-19,2025-08-19,1,Licencia común,Respiratorio
+E00822,P0384,2025-08-19,2025-08-19,1,Licencia común,Respiratorio
+E00823,P0464,2025-08-19,2025-08-21,3,Licencia común,Respiratorio
+E00824,P0476,2025-08-19,2025-08-26,6,Licencia común,Otros
+E00825,P0574,2025-08-19,2025-08-19,1,Permiso administrativo,No aplica
+E00826,P0680,2025-08-19,2025-08-21,3,Licencia común,Musculoesquelético
+E00827,P0683,2025-08-19,2025-08-19,1,Permiso administrativo,No aplica
+E00828,P0170,2025-08-20,2025-08-21,2,Licencia común,Respiratorio
+E00829,P0209,2025-08-20,2025-08-20,1,Licencia común,Respiratorio
+E00830,P0378,2025-08-20,2025-08-20,1,Licencia común,Salud mental
+E00831,P0394,2025-08-20,2025-08-22,3,Licencia común,Respiratorio
+E00832,P0570,2025-08-20,2025-08-21,2,Licencia común,Otros
+E00833,P0581,2025-08-20,2025-08-27,6,Licencia común,Respiratorio
+E00834,P0641,2025-08-20,2025-08-20,1,Licencia común,Otros
+E00835,P0109,2025-08-21,2025-09-15,18,Licencia común,Respiratorio
+E00836,P0139,2025-08-21,2025-10-14,39,Licencia común,Otros
+E00837,P0426,2025-08-21,2025-08-22,2,Licencia común,Respiratorio
+E00838,P0573,2025-08-21,2025-08-21,1,Permiso administrativo,No aplica
+E00839,P0384,2025-08-22,2025-08-22,1,Licencia común,Respiratorio
+E00840,P0461,2025-08-22,2025-08-26,3,Licencia común,Otros
+E00841,P0575,2025-08-22,2025-08-22,1,Licencia común,Respiratorio
+E00842,P0580,2025-08-22,2025-08-22,1,Accidente laboral,No aplica
+E00843,P0048,2025-08-25,2025-09-04,9,Accidente laboral,No aplica
+E00844,P0112,2025-08-25,2025-08-26,2,Licencia común,Respiratorio
+E00845,P0140,2025-08-25,2025-09-03,8,Licencia común,Respiratorio
+E00846,P0182,2025-08-25,2025-08-25,1,Permiso administrativo,No aplica
+E00847,P0190,2025-08-25,2025-08-26,2,Licencia común,Respiratorio
+E00848,P0246,2025-08-25,2025-08-25,1,Licencia común,Otros
+E00849,P0012,2025-08-26,2025-09-03,7,Licencia común,Respiratorio
+E00850,P0023,2025-08-26,2025-08-26,1,Permiso administrativo,No aplica
+E00851,P0028,2025-08-26,2025-09-12,14,Licencia común,Otros
+E00852,P0036,2025-08-26,2025-10-10,34,Licencia común,Salud mental
+E00853,P0060,2025-08-26,2025-08-26,1,Licencia común,Respiratorio
+E00854,P0194,2025-08-26,2025-08-29,4,Licencia común,Musculoesquelético
+E00855,P0319,2025-08-26,2025-09-03,7,Licencia común,Respiratorio
+E00856,P0399,2025-08-26,2025-08-27,2,Licencia común,Respiratorio
+E00857,P0451,2025-08-26,2025-08-27,2,Licencia común,Respiratorio
+E00858,P0607,2025-08-26,2025-09-03,7,Licencia común,Respiratorio
+E00859,P0693,2025-08-26,2025-09-11,13,Licencia común,Otros
+E00860,P0480,2025-08-27,2025-09-03,6,Licencia común,Otros
+E00861,P0600,2025-08-27,2025-08-27,1,Licencia común,Musculoesquelético
+E00862,P0625,2025-08-27,2025-08-28,2,Licencia común,Respiratorio
+E00863,P0647,2025-08-27,2025-09-12,13,Licencia común,Otros
+E00864,P0687,2025-08-27,2025-08-28,2,Licencia común,Respiratorio
+E00865,P0154,2025-08-28,2025-09-02,4,Licencia común,Musculoesquelético
+E00866,P0323,2025-08-28,2025-08-29,2,Licencia común,Respiratorio
+E00867,P0371,2025-08-28,2026-02-11,120,Licencia parental,No aplica
+E00868,P0451,2025-08-28,2025-09-03,5,Licencia común,Musculoesquelético
+E00869,P0591,2025-08-28,2025-08-28,1,Permiso administrativo,No aplica
+E00870,P0092,2025-08-29,2025-09-02,3,Licencia común,Respiratorio
+E00871,P0108,2025-08-29,2025-09-16,13,Licencia común,Respiratorio
+E00872,P0659,2025-08-29,2025-08-29,1,Licencia común,Otros
+E00873,P0118,2025-09-01,2026-02-03,112,Licencia común,Salud mental
+E00874,P0194,2025-09-01,2025-09-24,18,Licencia común,Salud mental
+E00875,P0399,2025-09-01,2025-12-17,78,Licencia común,Salud mental
+E00876,P0414,2025-09-01,2025-09-03,3,Licencia común,Otros
+E00877,P0422,2025-09-01,2025-09-03,3,Licencia común,Musculoesquelético
+E00878,P0023,2025-09-02,2025-09-09,6,Licencia común,Salud mental
+E00879,P0049,2025-09-02,2025-09-02,1,Licencia común,Respiratorio
+E00880,P0060,2025-09-02,2025-10-10,29,Licencia común,Salud mental
+E00881,P0251,2025-09-02,2025-09-05,4,Licencia común,Otros
+E00882,P0287,2025-09-02,2025-09-02,1,Permiso administrativo,No aplica
+E00883,P0378,2025-09-02,2025-09-12,9,Licencia común,Musculoesquelético
+E00884,P0437,2025-09-02,2025-09-04,3,Licencia común,Respiratorio
+E00885,P0460,2025-09-02,2025-09-09,6,Licencia común,Respiratorio
+E00886,P0490,2025-09-02,2025-09-12,9,Licencia común,Otros
+E00887,P0595,2025-09-02,2025-09-02,1,Permiso administrativo,No aplica
+E00888,P0602,2025-09-02,2025-09-05,4,Licencia común,Otros
+E00889,P0628,2025-09-02,2025-12-05,69,Licencia común,Musculoesquelético
+E00890,P0542,2025-09-03,2025-09-19,13,Licencia común,Otros
+E00891,P0112,2025-09-04,2025-09-08,3,Licencia común,Respiratorio
+E00892,P0319,2025-09-04,2025-10-09,26,Accidente laboral,No aplica
+E00893,P0325,2025-09-04,2025-09-08,3,Licencia común,Respiratorio
+E00894,P0411,2025-09-05,2025-09-08,2,Licencia común,Musculoesquelético
+E00895,P0586,2025-09-08,2025-09-09,2,Licencia común,Otros
+E00896,P0591,2025-09-08,2025-09-09,2,Licencia común,Musculoesquelético
+E00897,P0700,2025-09-08,2025-10-07,22,Licencia común,Musculoesquelético
+E00898,P0186,2025-09-09,2025-09-12,4,Licencia común,Musculoesquelético
+E00899,P0211,2025-09-09,2025-09-16,6,Licencia común,Respiratorio
+E00900,P0413,2025-09-09,2025-09-25,13,Licencia común,Respiratorio
+E00901,P0527,2025-09-09,2025-09-09,1,Permiso administrativo,No aplica
+E00902,P0685,2025-09-09,2025-09-10,2,Licencia común,Respiratorio
+E00903,P0019,2025-09-10,2025-10-06,19,Licencia común,Salud mental
+E00904,P0101,2025-09-10,2025-11-03,39,Licencia común,Musculoesquelético
+E00905,P0112,2025-09-10,2025-09-12,3,Licencia común,Otros
+E00906,P0702,2025-09-10,2025-09-17,6,Licencia común,Otros
+E00907,P0126,2025-09-11,2025-09-12,2,Licencia común,Otros
+E00908,P0305,2025-09-12,2025-09-12,1,Permiso administrativo,No aplica
+E00909,P0326,2025-09-12,2025-09-12,1,Licencia común,Respiratorio
+E00910,P0377,2025-09-12,2025-09-12,1,Permiso administrativo,No aplica
+E00911,P0391,2025-09-12,2025-09-12,1,Permiso administrativo,No aplica
+E00912,P0128,2025-09-15,2025-09-24,8,Licencia común,Respiratorio
+E00913,P0162,2025-09-15,2025-10-08,18,Licencia común,Musculoesquelético
+E00914,P0365,2025-09-15,2025-12-05,60,Licencia común,Salud mental
+E00915,P0075,2025-09-16,2025-09-17,2,Licencia común,Otros
+E00916,P0407,2025-09-16,2025-09-23,6,Licencia común,Otros
+E00917,P0461,2025-09-16,2025-09-22,5,Licencia común,Musculoesquelético
+E00918,P0476,2025-09-16,2025-09-24,7,Licencia común,Respiratorio
+E00919,P0026,2025-09-17,2025-10-10,18,Licencia común,Salud mental
+E00920,P0384,2025-09-17,2025-09-24,6,Licencia común,Salud mental
+E00921,P0468,2025-09-17,2025-09-17,1,Permiso administrativo,No aplica
+E00922,P0641,2025-09-17,2025-09-23,5,Licencia común,Otros
+E00923,P0678,2025-09-17,2025-09-22,4,Licencia común,Musculoesquelético
+E00924,P0119,2025-09-18,2025-10-13,18,Licencia común,Otros
+E00925,P0205,2025-09-18,2025-10-13,18,Licencia común,Musculoesquelético
+E00926,P0500,2025-09-18,2025-09-18,1,Licencia común,Respiratorio
+E00927,P0021,2025-09-19,2025-10-20,22,Licencia común,Salud mental
+E00928,P0127,2025-09-19,2025-09-19,1,Licencia común,Musculoesquelético
+E00929,P0323,2025-09-19,2025-09-26,6,Licencia común,Respiratorio
+E00930,P0421,2025-09-19,2025-10-03,11,Licencia común,Musculoesquelético
+E00931,P0092,2025-09-22,2025-09-22,1,Permiso administrativo,No aplica
+E00932,P0490,2025-09-22,2025-09-24,3,Licencia común,Otros
+E00933,P0001,2025-09-23,2025-09-24,2,Licencia común,Otros
+E00934,P0082,2025-09-23,2025-09-26,4,Licencia común,Respiratorio
+E00935,P0401,2025-09-23,2025-10-06,10,Licencia común,Musculoesquelético
+E00936,P0411,2025-09-23,2025-09-23,1,Licencia común,Otros
+E00937,P0657,2025-09-23,2025-09-23,1,Permiso administrativo,No aplica
+E00938,P0702,2025-09-23,2025-10-14,16,Licencia común,Musculoesquelético
+E00939,P0086,2025-09-24,2025-10-03,8,Licencia común,Otros
+E00940,P0175,2025-09-24,2025-11-05,31,Licencia común,Salud mental
+E00941,P0188,2025-09-24,2025-10-10,13,Licencia común,Musculoesquelético
+E00942,P0500,2025-09-24,2025-09-24,1,Permiso administrativo,No aplica
+E00943,P0515,2025-09-24,2025-09-24,1,Licencia común,Salud mental
+E00944,P0617,2025-09-24,2025-09-29,4,Licencia común,Otros
+E00945,P0174,2025-09-25,2025-09-30,4,Licencia común,Respiratorio
+E00946,P0648,2025-09-25,2025-09-25,1,Permiso administrativo,No aplica
+E00947,P0007,2025-09-26,2025-09-26,1,Licencia común,Respiratorio
+E00948,P0239,2025-09-26,2025-10-10,11,Licencia común,Respiratorio
+E00949,P0251,2025-09-26,2025-09-26,1,Permiso administrativo,No aplica
+E00950,P0526,2025-09-26,2025-09-29,2,Licencia común,Otros
+E00951,P0140,2025-09-29,2025-10-14,12,Licencia común,Salud mental
+E00952,P0194,2025-09-29,2025-10-02,4,Licencia común,Respiratorio
+E00953,P0577,2025-09-29,2025-09-29,1,Permiso administrativo,No aplica
+E00954,P0678,2025-09-29,2025-10-22,18,Licencia común,Musculoesquelético
+E00955,P0704,2025-09-29,2025-10-03,5,Licencia común,Respiratorio
+E00956,P0092,2025-09-30,2025-10-01,2,Licencia común,Otros
+E00957,P0112,2025-09-30,2025-10-02,3,Licencia común,Otros
+E00958,P0127,2025-09-30,2025-10-20,15,Licencia común,Otros
+E00959,P0223,2025-09-30,2025-10-09,8,Licencia común,Respiratorio
+E00960,P0264,2025-09-30,2025-12-12,54,Licencia común,Salud mental
+E00961,P0298,2025-09-30,2025-09-30,1,Permiso administrativo,No aplica
+E00962,P0426,2025-09-30,2025-09-30,1,Permiso administrativo,No aplica
+E00963,P0527,2025-09-30,2025-10-02,3,Licencia común,Otros
+E00964,P0174,2025-10-01,2025-10-10,8,Licencia común,Respiratorio
+E00965,P0051,2025-10-02,2025-10-20,13,Licencia común,Salud mental
+E00966,P0198,2025-10-02,2025-10-02,1,Permiso administrativo,No aplica
+E00967,P0285,2025-10-02,2025-11-19,35,Licencia común,Otros
+E00968,P0555,2025-10-02,2026-03-18,120,Licencia parental,No aplica
+E00969,P0339,2025-10-03,2025-10-06,2,Licencia común,Respiratorio
+E00970,P0468,2025-10-03,2025-10-16,10,Licencia común,Respiratorio
+E00971,P0054,2025-10-06,2025-10-07,2,Licencia común,Respiratorio
+E00972,P0291,2025-10-06,2025-10-17,10,Licencia común,Respiratorio
+E00973,P0394,2025-10-06,2025-10-08,3,Licencia común,Otros
+E00974,P0439,2025-10-06,2025-10-06,1,Licencia común,Respiratorio
+E00975,P0591,2025-10-06,2025-10-06,1,Permiso administrativo,No aplica
+E00976,P0679,2025-10-06,2025-10-21,12,Licencia común,Musculoesquelético
+E00977,P0680,2025-10-06,2025-10-06,1,Permiso administrativo,No aplica
+E00978,P0154,2025-10-07,2025-10-07,1,Permiso administrativo,No aplica
+E00979,P0218,2025-10-07,2025-10-07,1,Permiso administrativo,No aplica
+E00980,P0259,2025-10-07,2025-11-06,23,Licencia común,Otros
+E00981,P0451,2025-10-07,2025-10-27,15,Licencia común,Otros
+E00982,P0570,2025-10-07,2025-10-13,5,Licencia común,Respiratorio
+E00983,P0646,2025-10-07,2025-10-20,10,Licencia común,Respiratorio
+E00984,P0001,2025-10-08,2025-10-14,5,Licencia común,Respiratorio
+E00985,P0262,2025-10-08,2025-11-17,29,Licencia común,Musculoesquelético
+E00986,P0496,2025-10-08,2025-10-13,4,Licencia común,Respiratorio
+E00987,P0524,2025-10-08,2025-10-14,5,Licencia común,Respiratorio
+E00988,P0080,2025-10-09,2025-10-31,17,Licencia común,Otros
+E00989,P0107,2025-10-09,2025-10-09,1,Licencia común,Respiratorio
+E00990,P0155,2025-10-09,2025-10-09,1,Permiso administrativo,No aplica
+E00991,P0317,2025-10-09,2025-10-09,1,Permiso administrativo,No aplica
+E00992,P0384,2025-10-09,2025-10-13,3,Sin goce,No aplica
+E00993,P0419,2025-10-09,2025-10-16,6,Licencia común,Salud mental
+E00994,P0591,2025-10-09,2025-10-09,1,Licencia común,Respiratorio
+E00995,P0050,2025-10-10,2025-10-22,9,Licencia común,Respiratorio
+E00996,P0298,2025-10-10,2025-10-27,12,Licencia común,Otros
+E00997,P0319,2025-10-10,2025-10-10,1,Licencia común,Musculoesquelético
+E00998,P0591,2025-10-10,2026-01-06,63,Licencia común,Salud mental
+E00999,P0186,2025-10-13,2025-10-17,5,Licencia común,Respiratorio
+E01000,P0189,2025-10-13,2025-10-21,7,Licencia común,Respiratorio
+E01001,P0214,2025-10-13,2025-10-20,6,Licencia común,Otros
+E01002,P0343,2025-10-13,2025-10-14,2,Licencia común,Respiratorio
+E01003,P0448,2025-10-13,2025-10-14,2,Licencia común,Otros
+E01004,P0469,2025-10-13,2025-10-14,2,Licencia común,Musculoesquelético
+E01005,P0092,2025-10-14,2025-10-14,1,Permiso administrativo,No aplica
+E01006,P0099,2025-10-14,2025-10-14,1,Permiso administrativo,No aplica
+E01007,P0194,2025-10-14,2025-11-25,31,Licencia común,Otros
+E01008,P0206,2025-10-14,2025-10-23,8,Licencia común,Otros
+E01009,P0242,2025-10-14,2025-10-23,8,Licencia común,Musculoesquelético
+E01010,P0404,2025-10-14,2025-10-15,2,Licencia común,Musculoesquelético
+E01011,P0470,2025-10-14,2025-10-14,1,Licencia común,Respiratorio
+E01012,P0568,2025-10-14,2025-10-31,14,Licencia común,Respiratorio
+E01013,P0596,2025-10-14,2025-10-23,8,Licencia común,Respiratorio
+E01014,P0202,2025-10-15,2025-10-15,1,Permiso administrativo,No aplica
+E01015,P0317,2025-10-15,2025-10-27,9,Licencia común,Musculoesquelético
+E01016,P0493,2025-10-15,2025-10-17,3,Licencia común,Respiratorio
+E01017,P0601,2025-10-15,2025-10-17,3,Licencia común,Otros
+E01018,P0693,2025-10-15,2025-10-20,4,Licencia común,Respiratorio
+E01019,P0702,2025-10-15,2025-10-16,2,Licencia común,Respiratorio
+E01020,P0024,2025-10-16,2025-10-16,1,Permiso administrativo,No aplica
+E01021,P0092,2025-10-16,2025-10-16,1,Licencia común,Respiratorio
+E01022,P0524,2025-10-16,2025-10-22,5,Licencia común,Musculoesquelético
+E01023,P0092,2025-10-17,2026-01-21,69,Licencia común,Salud mental
+E01024,P0120,2025-10-17,2025-12-11,40,Licencia común,Salud mental
+E01025,P0345,2025-10-17,2025-10-24,6,Licencia común,Respiratorio
+E01026,P0075,2025-10-20,2025-11-06,14,Licencia común,Salud mental
+E01027,P0704,2025-10-20,2025-10-29,8,Licencia común,Respiratorio
+E01028,P0211,2025-10-21,2025-10-21,1,Permiso administrativo,No aplica
+E01029,P0218,2025-10-21,2025-10-29,7,Licencia común,Salud mental
+E01030,P0221,2025-10-21,2025-10-28,6,Licencia común,Respiratorio
+E01031,P0527,2025-10-21,2025-11-10,15,Licencia común,Otros
+E01032,P0553,2025-10-21,2025-10-30,8,Licencia común,Respiratorio
+E01033,P0641,2025-10-21,2025-10-21,1,Licencia común,Salud mental
+E01034,P0160,2025-10-22,2025-10-23,2,Licencia común,Musculoesquelético
+E01035,P0323,2025-10-22,2025-10-23,2,Licencia común,Otros
+E01036,P0348,2025-10-22,2025-10-22,1,Sin goce,No aplica
+E01037,P0405,2025-10-22,2025-10-31,8,Licencia común,Otros
+E01038,P0428,2025-10-22,2025-10-29,6,Licencia común,Musculoesquelético
+E01039,P0476,2025-10-22,2025-10-31,8,Licencia común,Respiratorio
+E01040,P0595,2025-10-22,2025-10-28,5,Licencia común,Respiratorio
+E01041,P0107,2025-10-23,2025-10-28,4,Licencia común,Respiratorio
+E01042,P0339,2025-10-23,2025-10-23,1,Sin goce,No aplica
+E01043,P0530,2025-10-23,2025-11-24,23,Licencia común,Otros
+E01044,P0610,2025-10-23,2025-11-26,25,Licencia común,Salud mental
+E01045,P0700,2025-10-23,2025-10-23,1,Permiso administrativo,No aplica
+E01046,P0701,2025-10-23,2025-10-23,1,Permiso administrativo,No aplica
+E01047,P0174,2025-10-24,2025-10-24,1,Permiso administrativo,No aplica
+E01048,P0098,2025-10-27,2025-10-27,1,Permiso administrativo,No aplica
+E01049,P0024,2025-10-28,2025-10-31,4,Licencia común,Otros
+E01050,P0174,2025-10-28,2025-11-17,15,Licencia común,Salud mental
+E01051,P0325,2025-10-28,2025-11-07,9,Licencia común,Musculoesquelético
+E01052,P0382,2025-10-28,2025-11-10,10,Licencia común,Musculoesquelético
+E01053,P0425,2025-10-28,2025-11-07,9,Licencia común,Musculoesquelético
+E01054,P0485,2025-10-28,2025-10-28,1,Permiso administrativo,No aplica
+E01055,P0268,2025-10-29,2025-10-29,1,Permiso administrativo,No aplica
+E01056,P0287,2025-10-29,2025-11-07,8,Licencia común,Respiratorio
+E01057,P0298,2025-10-29,2025-11-06,7,Licencia común,Musculoesquelético
+E01058,P0418,2025-10-29,2025-10-31,3,Licencia común,Respiratorio
+E01059,P0488,2025-10-29,2025-10-29,1,Licencia común,Respiratorio
+E01060,P0230,2025-10-30,2025-11-03,3,Licencia común,Otros
+E01061,P0314,2025-10-30,2025-11-04,4,Licencia común,Otros
+E01062,P0439,2025-10-30,2025-11-11,9,Licencia común,Otros
+E01063,P0630,2025-10-30,2025-10-30,1,Permiso administrativo,No aplica
+E01064,P0706,2025-10-30,2025-11-05,5,Licencia común,Otros
+E01065,P0039,2025-10-31,2025-11-04,3,Licencia común,Salud mental
+E01066,P0413,2025-10-31,2025-10-31,1,Permiso administrativo,No aplica
+E01067,P0515,2025-10-31,2025-11-19,14,Licencia común,Otros
+E01068,P0570,2025-10-31,2025-10-31,1,Licencia común,Respiratorio
+E01069,P0705,2025-10-31,2025-12-15,32,Licencia común,Otros
+E01070,P0257,2025-11-03,2025-12-19,35,Licencia común,Musculoesquelético
+E01071,P0323,2025-11-03,2025-11-03,1,Permiso administrativo,No aplica
+E01072,P0490,2025-11-03,2025-11-03,1,Licencia común,Respiratorio
+E01073,P0621,2025-11-03,2025-12-09,27,Licencia común,Musculoesquelético
+E01074,P0623,2025-11-03,2025-11-07,5,Licencia común,Salud mental
+E01075,P0251,2025-11-04,2025-12-18,33,Licencia común,Musculoesquelético
+E01076,P0456,2025-11-04,2025-11-21,14,Licencia común,Musculoesquelético
+E01077,P0468,2025-11-04,2025-11-14,9,Licencia común,Otros
+E01078,P0576,2025-11-04,2025-11-11,6,Licencia común,Otros
+E01079,P0091,2025-11-05,2025-11-06,2,Licencia común,Otros
+E01080,P0678,2025-11-05,2025-11-06,2,Licencia común,Otros
+E01081,P0211,2025-11-06,2025-11-26,15,Licencia común,Respiratorio
+E01082,P0260,2025-11-06,2025-11-11,4,Licencia común,Respiratorio
+E01083,P0488,2025-11-06,2025-12-02,19,Licencia común,Otros
+E01084,P0022,2025-11-07,2025-11-10,2,Licencia común,Otros
+E01085,P0161,2025-11-07,2025-11-07,1,Licencia común,Musculoesquelético
+E01086,P0248,2025-11-07,2025-11-12,4,Licencia común,Respiratorio
+E01087,P0437,2025-11-07,2025-11-07,1,Permiso administrativo,No aplica
+E01088,P0082,2025-11-10,2025-11-11,2,Licencia común,Respiratorio
+E01089,P0098,2025-11-10,2025-11-11,2,Licencia común,Otros
+E01090,P0157,2025-11-10,2025-11-20,9,Licencia común,Respiratorio
+E01091,P0075,2025-11-11,2025-11-19,7,Licencia común,Respiratorio
+E01092,P0437,2025-11-11,2025-11-18,6,Licencia común,Musculoesquelético
+E01093,P0476,2025-11-11,2025-11-11,1,Permiso administrativo,No aplica
+E01094,P0001,2025-11-12,2025-11-13,2,Licencia común,Respiratorio
+E01095,P0180,2025-11-12,2025-11-14,3,Licencia común,Salud mental
+E01096,P0419,2025-11-12,2025-11-26,11,Licencia común,Musculoesquelético
+E01097,P0490,2025-11-12,2025-11-13,2,Licencia común,Otros
+E01098,P0516,2025-11-12,2025-11-13,2,Licencia común,Respiratorio
+E01099,P0527,2025-11-12,2026-01-29,57,Licencia común,Musculoesquelético
+E01100,P0627,2025-11-12,2025-11-17,4,Licencia común,Otros
+E01101,P0678,2025-11-12,2025-12-16,25,Licencia común,Otros
+E01102,P0700,2025-11-12,2025-11-14,3,Licencia común,Respiratorio
+E01103,P0702,2025-11-12,2025-11-19,6,Licencia común,Musculoesquelético
+E01104,P0311,2025-11-13,2025-12-17,25,Licencia común,Musculoesquelético
+E01105,P0377,2025-11-13,2025-12-26,32,Licencia común,Salud mental
+E01106,P0429,2025-11-13,2025-11-17,3,Sin goce,No aplica
+E01107,P0451,2025-11-13,2025-12-05,17,Licencia común,Salud mental
+E01108,P0546,2025-11-13,2025-11-20,6,Licencia común,Respiratorio
+E01109,P0357,2025-11-14,2025-12-04,15,Licencia común,Musculoesquelético
+E01110,P0370,2025-11-14,2025-11-14,1,Licencia común,Otros
+E01111,P0569,2025-11-14,2025-11-26,9,Licencia común,Respiratorio
+E01112,P0026,2025-11-17,2025-11-21,5,Licencia común,Otros
+E01113,P0036,2025-11-17,2025-11-19,3,Licencia común,Otros
+E01114,P0281,2025-11-17,2025-11-19,3,Licencia común,Otros
+E01115,P0314,2025-11-17,2026-01-13,42,Licencia común,Salud mental
+E01116,P0415,2025-11-17,2025-11-24,6,Licencia común,Respiratorio
+E01117,P0464,2025-11-17,2025-11-19,3,Licencia común,Otros
+E01118,P0520,2025-11-17,2026-01-07,38,Licencia común,Salud mental
+E01119,P0522,2025-11-17,2025-11-21,5,Licencia común,Respiratorio
+E01120,P0600,2025-11-17,2025-11-24,6,Licencia común,Respiratorio
+E01121,P0319,2025-11-18,2025-11-25,6,Licencia común,Otros
+E01122,P0384,2025-11-18,2025-11-24,5,Licencia común,Musculoesquelético
+E01123,P0502,2025-11-18,2025-11-19,2,Licencia común,Otros
+E01124,P0693,2025-11-18,2025-12-04,13,Licencia común,Musculoesquelético
+E01125,P0714,2025-11-18,2025-11-18,1,Permiso administrativo,No aplica
+E01126,P0496,2025-11-19,2026-03-16,84,Licencia común,Salud mental
+E01127,P0580,2025-11-19,2025-11-20,2,Licencia común,Otros
+E01128,P0602,2025-11-19,2025-11-25,5,Licencia común,Otros
+E01129,P0642,2025-11-19,2025-11-19,1,Permiso administrativo,No aplica
+E01130,P0028,2025-11-20,2025-11-20,1,Licencia común,Otros
+E01131,P0086,2025-11-20,2025-12-03,10,Licencia común,Otros
+E01132,P0186,2025-11-20,2026-01-05,33,Licencia común,Musculoesquelético
+E01133,P0604,2025-11-20,2025-11-20,1,Licencia común,Respiratorio
+E01134,P0656,2025-11-20,2026-02-18,65,Licencia común,Salud mental
+E01135,P0704,2025-11-20,2025-11-20,1,Licencia común,Respiratorio
+E01136,P0128,2025-11-21,2025-11-21,1,Licencia común,Musculoesquelético
+E01137,P0561,2025-11-21,2025-11-24,2,Licencia común,Respiratorio
+E01138,P0598,2025-11-21,2025-11-21,1,Permiso administrativo,No aplica
+E01139,P0639,2025-11-21,2025-12-05,11,Licencia común,Salud mental
+E01140,P0098,2025-11-24,2025-11-24,1,Licencia común,Respiratorio
+E01141,P0162,2025-11-24,2025-11-26,3,Licencia común,Respiratorio
+E01142,P0323,2025-11-24,2025-11-25,2,Licencia común,Otros
+E01143,P0358,2025-11-24,2025-11-26,3,Licencia común,Respiratorio
+E01144,P0468,2025-11-24,2025-11-24,1,Licencia común,Respiratorio
+E01145,P0324,2025-11-25,2025-11-26,2,Licencia común,Musculoesquelético
+E01146,P0330,2025-11-25,2025-11-27,3,Accidente laboral,No aplica
+E01147,P0426,2025-11-25,2025-11-25,1,Permiso administrativo,No aplica
+E01148,P0023,2025-11-26,2025-11-26,1,Permiso administrativo,No aplica
+E01149,P0116,2025-11-26,2025-12-01,4,Licencia común,Musculoesquelético
+E01150,P0413,2025-11-26,2025-12-19,18,Licencia común,Salud mental
+E01151,P0456,2025-11-26,2025-11-28,3,Licencia común,Respiratorio
+E01152,P0519,2025-11-26,2025-12-03,6,Licencia común,Otros
+E01153,P0011,2025-11-27,2025-12-01,3,Licencia común,Musculoesquelético
+E01154,P0155,2025-11-27,2025-12-25,21,Licencia común,Musculoesquelético
+E01155,P0319,2025-11-27,2025-12-08,8,Licencia común,Otros
+E01156,P0524,2025-11-27,2025-12-22,18,Accidente laboral,No aplica
+E01157,P0655,2025-11-27,2025-12-08,8,Licencia común,Respiratorio
+E01158,P0702,2025-11-27,2025-12-03,5,Licencia común,Musculoesquelético
+E01159,P0170,2025-11-28,2025-12-05,6,Licencia común,Otros
+E01160,P0174,2025-11-28,2025-11-28,1,Licencia común,Musculoesquelético
+E01161,P0630,2025-11-28,2025-11-28,1,Permiso administrativo,No aplica
+E01162,P0641,2025-11-28,2025-12-01,2,Licencia común,Musculoesquelético
+E01163,P0127,2025-12-01,2026-01-09,30,Licencia común,Musculoesquelético
+E01164,P0208,2025-12-01,2025-12-18,14,Licencia común,Respiratorio
+E01165,P0339,2025-12-01,2025-12-05,5,Accidente laboral,No aplica
+E01166,P0602,2025-12-01,2025-12-01,1,Licencia común,Respiratorio
+E01167,P0060,2025-12-02,2025-12-02,1,Licencia común,Respiratorio
+E01168,P0192,2025-12-02,2025-12-02,1,Permiso administrativo,No aplica
+E01169,P0214,2025-12-02,2025-12-02,1,Permiso administrativo,No aplica
+E01170,P0342,2025-12-02,2025-12-22,15,Licencia común,Musculoesquelético
+E01171,P0490,2025-12-02,2025-12-02,1,Permiso administrativo,No aplica
+E01172,P0646,2025-12-02,2025-12-19,14,Licencia común,Musculoesquelético
+E01173,P0218,2025-12-03,2025-12-03,1,Permiso administrativo,No aplica
+E01174,P0227,2025-12-03,2025-12-16,10,Licencia común,Musculoesquelético
+E01175,P0522,2025-12-03,2025-12-04,2,Licencia común,Respiratorio
+E01176,P0157,2025-12-04,2025-12-26,17,Licencia común,Salud mental
+E01177,P0317,2025-12-04,2025-12-04,1,Permiso administrativo,No aplica
+E01178,P0502,2025-12-04,2026-01-23,37,Licencia común,Salud mental
+E01179,P0615,2025-12-04,2025-12-05,2,Licencia común,Otros
+E01180,P0701,2025-12-04,2025-12-04,1,Sin goce,No aplica
+E01181,P0108,2025-12-05,2026-02-02,42,Accidente laboral,No aplica
+E01182,P0122,2025-12-05,2025-12-25,15,Licencia común,Otros
+E01183,P0302,2025-12-05,2025-12-15,7,Accidente laboral,No aplica
+E01184,P0490,2025-12-05,2025-12-23,13,Licencia común,Otros
+E01185,P0641,2025-12-05,2025-12-24,14,Licencia común,Otros
+E01186,P0700,2025-12-05,2025-12-09,3,Sin goce,No aplica
+E01187,P0174,2025-12-08,2025-12-12,5,Licencia común,Respiratorio
+E01188,P0291,2025-12-08,2025-12-08,1,Permiso administrativo,No aplica
+E01189,P0337,2025-12-08,2025-12-08,1,Permiso administrativo,No aplica
+E01190,P0423,2025-12-08,2025-12-08,1,Permiso administrativo,No aplica
+E01191,P0701,2025-12-08,2025-12-10,3,Licencia común,Otros
+E01192,P0077,2025-12-09,2025-12-23,11,Licencia común,Respiratorio
+E01193,P0081,2025-12-09,2025-12-12,4,Licencia común,Otros
+E01194,P0221,2025-12-09,2025-12-19,9,Licencia común,Respiratorio
+E01195,P0319,2025-12-09,2025-12-31,17,Licencia común,Otros
+E01196,P0425,2025-12-09,2025-12-09,1,Licencia común,Respiratorio
+E01197,P0506,2025-12-09,2025-12-22,10,Licencia común,Respiratorio
+E01198,P0596,2025-12-09,2025-12-09,1,Licencia común,Respiratorio
+E01199,P0023,2025-12-10,2025-12-18,7,Licencia común,Otros
+E01200,P0128,2025-12-10,2025-12-12,3,Licencia común,Respiratorio
+E01201,P0515,2025-12-10,2025-12-15,4,Licencia común,Salud mental
+E01202,P0657,2025-12-10,2025-12-11,2,Licencia común,Otros
+E01203,P0700,2025-12-10,2025-12-10,1,Permiso administrativo,No aplica
+E01204,P0326,2025-12-11,2025-12-11,1,Licencia común,Musculoesquelético
+E01205,P0348,2025-12-11,2025-12-12,2,Licencia común,Otros
+E01206,P0384,2025-12-11,2025-12-11,1,Permiso administrativo,No aplica
+E01207,P0583,2025-12-11,2025-12-22,8,Licencia común,Respiratorio
+E01208,P0704,2025-12-11,2025-12-11,1,Permiso administrativo,No aplica
+E01209,P0205,2025-12-12,2025-12-12,1,Permiso administrativo,No aplica
+E01210,P0518,2025-12-12,2025-12-12,1,Licencia común,Otros
+E01211,P0248,2025-12-15,2025-12-18,4,Licencia común,Otros
+E01212,P0454,2025-12-15,2025-12-16,2,Licencia común,Respiratorio
+E01213,P0561,2025-12-15,2025-12-26,10,Licencia común,Respiratorio
+E01214,P0716,2025-12-16,2025-12-26,9,Licencia común,Respiratorio
+E01215,P0060,2025-12-17,2026-01-13,20,Accidente laboral,No aplica
+E01216,P0451,2025-12-17,2025-12-24,6,Licencia común,Respiratorio
+E01217,P0386,2025-12-18,2026-06-03,120,Licencia parental,No aplica
+E01218,P0422,2025-12-18,2025-12-23,4,Licencia común,Musculoesquelético
+E01219,P0532,2025-12-18,2025-12-24,5,Licencia común,Salud mental
+E01220,P0628,2025-12-18,2025-12-19,2,Licencia común,Otros
+E01221,P0029,2025-12-19,2025-12-22,2,Licencia común,Otros
+E01222,P0352,2025-12-19,2025-12-19,1,Licencia común,Musculoesquelético
+E01223,P0384,2025-12-22,2026-01-08,14,Licencia común,Otros
+E01224,P0388,2025-12-22,2025-12-22,1,Licencia común,Respiratorio
+E01225,P0564,2025-12-22,2025-12-22,1,Permiso administrativo,No aplica
+E01226,P0628,2025-12-22,2025-12-22,1,Licencia común,Respiratorio
+E01227,P0685,2025-12-22,2025-12-31,8,Licencia común,Musculoesquelético
+E01228,P0120,2025-12-23,2026-01-19,20,Licencia común,Otros
+E01229,P0238,2025-12-23,2026-01-08,13,Licencia común,Otros
+E01230,P0418,2025-12-23,2025-12-24,2,Licencia común,Musculoesquelético
+E01231,P0460,2025-12-23,2026-02-12,38,Licencia común,Salud mental
+E01232,P0476,2025-12-23,2025-12-25,3,Licencia común,Musculoesquelético
+E01233,P0506,2025-12-23,2025-12-23,1,Licencia común,Respiratorio
+E01234,P0026,2025-12-24,2026-01-06,10,Licencia común,Respiratorio
+E01235,P0382,2025-12-24,2025-12-25,2,Licencia común,Otros
+E01236,P0042,2025-12-25,2026-01-22,21,Licencia común,Salud mental
+E01237,P0094,2025-12-25,2025-12-26,2,Licencia común,Otros
+E01238,P0326,2025-12-25,2025-12-25,1,Permiso administrativo,No aplica
+E01239,P0330,2025-12-25,2025-12-26,2,Licencia común,Respiratorio
+E01240,P0440,2025-12-25,2026-03-13,57,Licencia común,Salud mental
+E01241,P0650,2025-12-25,2025-12-29,3,Licencia común,Respiratorio
+E01242,P0680,2025-12-25,2025-12-25,1,Licencia común,Otros
+E01243,P0107,2025-12-26,2026-01-07,9,Licencia común,Respiratorio
+E01244,P0226,2025-12-26,2025-12-26,1,Permiso administrativo,No aplica
+E01245,P0422,2025-12-26,2026-01-15,15,Licencia común,Otros
+E01246,P0661,2025-12-26,2026-01-08,10,Licencia común,Salud mental
+E01247,P0124,2025-12-29,2026-01-23,20,Licencia común,Salud mental
+E01248,P0140,2025-12-29,2025-12-29,1,Licencia común,Otros
+E01249,P0175,2025-12-29,2025-12-31,3,Licencia común,Respiratorio
+E01250,P0324,2025-12-29,2025-12-29,1,Permiso administrativo,No aplica
+E01251,P0382,2025-12-29,2026-01-05,6,Licencia común,Respiratorio
+E01252,P0708,2025-12-29,2026-02-27,45,Licencia común,Salud mental
+E01253,P0021,2025-12-30,2026-02-03,26,Licencia común,Musculoesquelético
+E01254,P0174,2025-12-30,2026-03-13,54,Licencia común,Salud mental
+E01255,P0511,2025-12-30,2025-12-30,1,Licencia común,Respiratorio
+E01256,P0628,2025-12-30,2026-01-06,6,Licencia común,Otros
+E01257,P0036,2025-12-31,2025-12-31,1,Licencia común,Respiratorio
+E01258,P0098,2025-12-31,2026-02-05,27,Licencia común,Respiratorio
+E01259,P0326,2025-12-31,2026-01-01,2,Licencia común,Respiratorio
+E01260,P0319,2026-01-01,2026-01-01,1,Permiso administrativo,No aplica
+E01261,P0561,2026-01-01,2026-01-06,4,Licencia común,Respiratorio
+E01262,P0155,2026-01-02,2026-02-10,28,Licencia común,Otros
+E01263,P0550,2026-01-02,2026-01-05,2,Licencia común,Respiratorio
+E01264,P0570,2026-01-02,2026-01-21,14,Licencia común,Musculoesquelético
+E01265,P0011,2026-01-05,2026-01-05,1,Licencia común,Otros
+E01266,P0154,2026-01-05,2026-01-05,1,Permiso administrativo,No aplica
+E01267,P0468,2026-01-05,2026-01-16,10,Licencia común,Respiratorio
+E01268,P0524,2026-01-05,2026-01-05,1,Licencia común,Otros
+E01269,P0607,2026-01-05,2026-01-07,3,Licencia común,Musculoesquelético
+E01270,P0641,2026-01-05,2026-01-14,8,Licencia común,Musculoesquelético
+E01271,P0644,2026-01-05,2026-01-08,4,Licencia común,Otros
+E01272,P0662,2026-01-05,2026-01-26,16,Accidente laboral,No aplica
+E01273,P0299,2026-01-06,2026-01-07,2,Licencia común,Respiratorio
+E01274,P0415,2026-01-06,2026-05-15,94,Licencia común,Musculoesquelético
+E01275,P0657,2026-01-06,2026-03-13,49,Licencia común,Salud mental
+E01276,P0094,2026-01-07,2026-01-07,1,Permiso administrativo,No aplica
+E01277,P0345,2026-01-07,2026-01-19,9,Licencia común,Otros
+E01278,P0425,2026-01-07,2026-01-07,1,Permiso administrativo,No aplica
+E01279,P0426,2026-01-07,2026-01-14,6,Licencia común,Musculoesquelético
+E01280,P0490,2026-01-07,2026-01-13,5,Licencia común,Otros
+E01281,P0542,2026-01-07,2026-01-07,1,Permiso administrativo,No aplica
+E01282,P0630,2026-01-07,2026-01-08,2,Licencia común,Musculoesquelético
+E01283,P0710,2026-01-07,2026-01-16,8,Licencia común,Otros
+E01284,P0186,2026-01-08,2026-02-10,24,Licencia común,Salud mental
+E01285,P0271,2026-01-08,2026-01-16,7,Licencia común,Otros
+E01286,P0404,2026-01-08,2026-01-08,1,Permiso administrativo,No aplica
+E01287,P0495,2026-01-08,2026-01-27,14,Licencia común,Salud mental
+E01288,P0719,2026-01-08,2026-01-08,1,Permiso administrativo,No aplica
+E01289,P0028,2026-01-09,2026-01-22,10,Licencia común,Respiratorio
+E01290,P0061,2026-01-09,2026-01-20,8,Licencia común,Musculoesquelético
+E01291,P0189,2026-01-09,2026-01-09,1,Permiso administrativo,No aplica
+E01292,P0263,2026-01-09,2026-01-14,4,Licencia común,Respiratorio
+E01293,P0476,2026-01-09,2026-01-12,2,Licencia común,Otros
+E01294,P0704,2026-01-09,2026-01-09,1,Permiso administrativo,No aplica
+E01295,P0080,2026-01-12,2026-02-18,28,Licencia común,Musculoesquelético
+E01296,P0251,2026-01-12,2026-01-13,2,Licencia común,Respiratorio
+E01297,P0287,2026-01-12,2026-01-23,10,Licencia común,Otros
+E01298,P0399,2026-01-12,2026-01-16,5,Licencia común,Respiratorio
+E01299,P0630,2026-01-12,2026-01-14,3,Licencia común,Musculoesquelético
+E01300,P0634,2026-01-12,2026-01-20,7,Licencia común,Musculoesquelético
+E01301,P0086,2026-01-13,2026-01-13,1,Licencia común,Respiratorio
+E01302,P0475,2026-01-13,2026-01-13,1,Permiso administrativo,No aplica
+E01303,P0461,2026-01-14,2026-02-27,33,Licencia común,Musculoesquelético
+E01304,P0476,2026-01-14,2026-01-15,2,Licencia común,Otros
+E01305,P0542,2026-01-14,2026-01-23,8,Licencia común,Respiratorio
+E01306,P0238,2026-01-15,2026-02-06,17,Licencia común,Otros
+E01307,P0299,2026-01-15,2026-04-08,60,Licencia común,Salud mental
+E01308,P0427,2026-01-15,2026-01-20,4,Licencia común,Otros
+E01309,P0436,2026-01-15,2026-01-15,1,Licencia común,Otros
+E01310,P0591,2026-01-15,2026-01-16,2,Licencia común,Otros
+E01311,P0680,2026-01-15,2026-01-16,2,Licencia común,Respiratorio
+E01312,P0705,2026-01-15,2026-01-15,1,Sin goce,No aplica
+E01313,P0036,2026-01-16,2026-01-20,3,Licencia común,Respiratorio
+E01314,P0101,2026-01-16,2026-01-16,1,Licencia común,Respiratorio
+E01315,P0524,2026-01-16,2026-01-21,4,Licencia común,Musculoesquelético
+E01316,P0702,2026-01-16,2026-01-27,8,Licencia común,Otros
+E01317,P0059,2026-01-19,2026-01-29,9,Licencia común,Otros
+E01318,P0211,2026-01-19,2026-01-19,1,Permiso administrativo,No aplica
+E01319,P0445,2026-01-19,2026-01-20,2,Licencia común,Otros
+E01320,P0339,2026-01-20,2026-01-20,1,Licencia común,Salud mental
+E01321,P0602,2026-01-20,2026-02-04,12,Licencia común,Otros
+E01322,P0703,2026-01-20,2026-01-26,5,Licencia común,Respiratorio
+E01323,P0728,2026-01-20,2026-01-20,1,Permiso administrativo,No aplica
+E01324,P0011,2026-01-21,2026-02-23,24,Licencia común,Musculoesquelético
+E01325,P0060,2026-01-21,2026-02-05,12,Licencia común,Musculoesquelético
+E01326,P0086,2026-01-21,2026-01-22,2,Licencia común,Respiratorio
+E01327,P0704,2026-01-21,2026-01-30,8,Licencia común,Respiratorio
+E01328,P0122,2026-01-22,2026-01-27,4,Licencia común,Respiratorio
+E01329,P0319,2026-01-22,2026-01-22,1,Accidente laboral,No aplica
+E01330,P0490,2026-01-22,2026-01-22,1,Licencia común,Otros
+E01331,P0727,2026-01-22,2026-01-23,2,Licencia común,Respiratorio
+E01332,P0490,2026-01-23,2026-01-23,1,Permiso administrativo,No aplica
+E01333,P0072,2026-01-26,2026-02-12,14,Licencia común,Salud mental
+E01334,P0323,2026-01-26,2026-04-27,66,Licencia común,Salud mental
+E01335,P0363,2026-01-26,2026-02-18,18,Licencia común,Otros
+E01336,P0727,2026-01-26,2026-01-28,3,Licencia común,Otros
+E01337,P0289,2026-01-27,2026-01-29,3,Licencia común,Respiratorio
+E01338,P0414,2026-01-27,2026-01-29,3,Licencia común,Otros
+E01339,P0468,2026-01-27,2026-02-04,7,Licencia común,Otros
+E01340,P0473,2026-01-27,2026-01-28,2,Licencia común,Otros
+E01341,P0687,2026-01-27,2026-01-28,2,Licencia común,Respiratorio
+E01342,P0101,2026-01-28,2026-02-16,14,Licencia común,Salud mental
+E01343,P0327,2026-01-28,2026-02-09,9,Licencia común,Otros
+E01344,P0339,2026-01-28,2026-01-30,3,Licencia común,Musculoesquelético
+E01345,P0627,2026-01-28,2026-01-28,1,Permiso administrativo,No aplica
+E01346,P0171,2026-01-29,2026-01-29,1,Licencia común,Otros
+E01347,P0352,2026-01-29,2026-02-02,3,Licencia común,Respiratorio
+E01348,P0630,2026-01-29,2026-02-23,18,Licencia común,Otros
+E01349,P0049,2026-01-30,2026-02-02,2,Licencia común,Respiratorio
+E01350,P0303,2026-01-30,2026-02-10,8,Licencia común,Respiratorio
+E01351,P0390,2026-01-30,2026-03-06,26,Licencia común,Salud mental
+E01352,P0444,2026-01-30,2026-03-03,23,Licencia común,Otros
+E01353,P0464,2026-01-30,2026-02-02,2,Licencia común,Respiratorio
+E01354,P0700,2026-01-30,2026-01-30,1,Permiso administrativo,No aplica
+E01355,P0270,2026-02-02,2026-02-11,8,Licencia común,Otros
+E01356,P0357,2026-02-02,2026-02-09,6,Licencia común,Otros
+E01357,P0358,2026-02-02,2026-02-03,2,Licencia común,Respiratorio
+E01358,P0522,2026-02-02,2026-02-02,1,Licencia común,Otros
+E01359,P0601,2026-02-02,2026-02-17,12,Licencia común,Otros
+E01360,P0561,2026-02-03,2026-02-05,3,Licencia común,Respiratorio
+E01361,P0039,2026-02-04,2026-04-22,56,Licencia común,Salud mental
+E01362,P0130,2026-02-04,2026-02-05,2,Licencia común,Musculoesquelético
+E01363,P0698,2026-02-04,2026-02-06,3,Licencia común,Otros
+E01364,P0021,2026-02-05,2026-02-12,6,Licencia común,Respiratorio
+E01365,P0251,2026-02-05,2026-02-05,1,Permiso administrativo,No aplica
+E01366,P0272,2026-02-05,2026-02-06,2,Licencia común,Otros
+E01367,P0476,2026-02-05,2026-02-05,1,Licencia común,Respiratorio
+E01368,P0073,2026-02-06,2026-02-12,5,Licencia común,Musculoesquelético
+E01369,P0683,2026-02-06,2026-02-06,1,Licencia común,Otros
+E01370,P0154,2026-02-09,2026-02-09,1,Permiso administrativo,No aplica
+E01371,P0158,2026-02-09,2026-02-09,1,Permiso administrativo,No aplica
+E01372,P0128,2026-02-10,2026-02-13,4,Licencia común,Otros
+E01373,P0339,2026-02-10,2026-02-13,4,Licencia común,Otros
+E01374,P0404,2026-02-10,2026-02-20,9,Accidente laboral,No aplica
+E01375,P0412,2026-02-10,2026-03-02,15,Licencia común,Salud mental
+E01376,P0690,2026-02-11,2026-02-16,4,Licencia común,Musculoesquelético
+E01377,P0527,2026-02-12,2026-02-17,4,Accidente laboral,No aplica
+E01378,P0716,2026-02-12,2026-02-12,1,Licencia común,Salud mental
+E01379,P0125,2026-02-13,2026-07-30,120,Licencia parental,No aplica
+E01380,P0271,2026-02-13,2026-03-11,19,Licencia común,Respiratorio
+E01381,P0295,2026-02-13,2026-02-17,3,Licencia común,Respiratorio
+E01382,P0648,2026-02-13,2026-03-09,17,Licencia común,Musculoesquelético
+E01383,P0118,2026-02-16,2026-02-16,1,Permiso administrativo,No aplica
+E01384,P0317,2026-02-16,2026-04-29,53,Licencia común,Salud mental
+E01385,P0631,2026-02-16,2026-02-16,1,Licencia común,Respiratorio
+E01386,P0119,2026-02-17,2026-02-18,2,Licencia común,Otros
+E01387,P0627,2026-02-17,2026-02-17,1,Permiso administrativo,No aplica
+E01388,P0330,2026-02-18,2026-03-18,21,Licencia común,Musculoesquelético
+E01389,P0490,2026-02-18,2026-03-05,12,Licencia común,Musculoesquelético
+E01390,P0245,2026-02-19,2026-02-26,6,Licencia común,Respiratorio
+E01391,P0357,2026-02-19,2026-02-19,1,Permiso administrativo,No aplica
+E01392,P0719,2026-02-19,2026-02-19,1,Permiso administrativo,No aplica
+E01393,P0436,2026-02-20,2026-02-23,2,Licencia común,Salud mental
+E01394,P0680,2026-02-20,2026-02-25,4,Licencia común,Respiratorio
+E01395,P0066,2026-02-23,2026-02-24,2,Licencia común,Respiratorio
+E01396,P0404,2026-02-23,2026-02-23,1,Permiso administrativo,No aplica
+E01397,P0468,2026-02-23,2026-02-23,1,Licencia común,Salud mental
+E01398,P0580,2026-02-23,2026-03-05,9,Sin goce,No aplica
+E01399,P0602,2026-02-23,2026-02-27,5,Licencia común,Respiratorio
+E01400,P0257,2026-02-24,2026-03-02,5,Licencia común,Musculoesquelético
+E01401,P0275,2026-02-24,2026-02-25,2,Licencia común,Respiratorio
+E01402,P0705,2026-02-24,2026-02-24,1,Permiso administrativo,No aplica
+E01403,P0540,2026-02-25,2026-03-02,4,Accidente laboral,No aplica
+E01404,P0553,2026-02-25,2026-02-27,3,Licencia común,Respiratorio
+E01405,P0092,2026-02-26,2026-02-26,1,Permiso administrativo,No aplica
+E01406,P0701,2026-02-26,2026-02-27,2,Licencia común,Respiratorio
+E01407,P0118,2026-02-27,2026-03-02,2,Licencia común,Respiratorio
+E01408,P0311,2026-02-27,2026-03-06,6,Licencia común,Salud mental
+E01409,P0488,2026-02-27,2026-03-11,9,Licencia común,Musculoesquelético
+E01410,P0591,2026-02-27,2026-03-06,6,Licencia común,Respiratorio
+E01411,P0098,2026-03-02,2026-03-30,21,Licencia común,Otros
+E01412,P0384,2026-03-02,2026-03-06,5,Licencia común,Otros
+E01413,P0639,2026-03-02,2026-03-06,5,Sin goce,No aplica
+E01414,P0118,2026-03-03,2026-03-06,4,Licencia común,Respiratorio
+E01415,P0192,2026-03-03,2026-03-03,1,Permiso administrativo,No aplica
+E01416,P0339,2026-03-03,2026-03-05,3,Accidente laboral,No aplica
+E01417,P0257,2026-03-04,2026-03-04,1,Permiso administrativo,No aplica
+E01418,P0399,2026-03-04,2026-03-11,6,Licencia común,Musculoesquelético
+E01419,P0082,2026-03-05,2026-03-09,3,Licencia común,Respiratorio
+E01420,P0157,2026-03-05,2026-03-13,7,Licencia común,Otros
+E01421,P0223,2026-03-05,2026-03-05,1,Permiso administrativo,No aplica
+E01422,P0229,2026-03-05,2026-03-30,18,Licencia común,Musculoesquelético
+E01423,P0443,2026-03-05,2026-03-30,18,Licencia común,Salud mental
+E01424,P0704,2026-03-05,2026-03-09,3,Licencia común,Otros
+E01425,P0092,2026-03-06,2026-03-06,1,Permiso administrativo,No aplica
+E01426,P0127,2026-03-06,2026-03-10,3,Licencia común,Otros
+E01427,P0196,2026-03-06,2026-03-06,1,Permiso administrativo,No aplica
+E01428,P0278,2026-03-06,2026-03-06,1,Permiso administrativo,No aplica
+E01429,P0641,2026-03-06,2026-03-06,1,Licencia común,Respiratorio
+E01430,P0698,2026-03-06,2026-03-18,9,Licencia común,Otros
+E01431,P0495,2026-03-09,2026-03-27,15,Licencia común,Musculoesquelético
+E01432,P0693,2026-03-09,2026-03-09,1,Permiso administrativo,No aplica
+E01433,P0703,2026-03-09,2026-03-20,10,Licencia común,Respiratorio
+E01434,P0238,2026-03-10,2026-03-25,12,Licencia común,Respiratorio
+E01435,P0371,2026-03-10,2026-04-23,33,Licencia común,Salud mental
+E01436,P0515,2026-03-10,2026-03-10,1,Licencia común,Respiratorio
+E01437,P0598,2026-03-10,2026-03-10,1,Licencia común,Respiratorio
+E01438,P0617,2026-03-10,2026-03-11,2,Licencia común,Respiratorio
+E01439,P0641,2026-03-10,2026-04-13,25,Licencia común,Musculoesquelético
+E01440,P0028,2026-03-11,2026-03-11,1,Permiso administrativo,No aplica
+E01441,P0246,2026-03-11,2026-03-12,2,Licencia común,Respiratorio
+E01442,P0300,2026-03-11,2026-03-19,7,Licencia común,Respiratorio
+E01443,P0319,2026-03-11,2026-04-09,22,Licencia común,Salud mental
+E01444,P0539,2026-03-11,2026-03-11,1,Licencia común,Respiratorio
+E01445,P0602,2026-03-11,2026-03-11,1,Permiso administrativo,No aplica
+E01446,P0382,2026-03-12,2026-03-12,1,Permiso administrativo,No aplica
+E01447,P0524,2026-03-12,2026-03-16,3,Licencia común,Otros
+E01448,P0575,2026-03-12,2026-03-18,5,Licencia común,Respiratorio
+E01449,P0628,2026-03-12,2026-03-12,1,Permiso administrativo,No aplica
+E01450,P0077,2026-03-13,2026-03-13,1,Sin goce,No aplica
+E01451,P0361,2026-03-13,2026-03-16,2,Licencia común,Salud mental
+E01452,P0085,2026-03-16,2026-03-16,1,Licencia común,Respiratorio
+E01453,P0309,2026-03-16,2026-06-04,59,Licencia común,Salud mental
+E01454,P0463,2026-03-16,2026-03-17,2,Licencia común,Respiratorio
+E01455,P0591,2026-03-16,2026-03-17,2,Licencia común,Musculoesquelético
+E01456,P0634,2026-03-16,2026-03-18,3,Licencia común,Respiratorio
+E01457,P0671,2026-03-16,2026-03-18,3,Licencia común,Otros
+E01458,P0700,2026-03-16,2026-03-25,8,Licencia común,Respiratorio
+E01459,P0382,2026-03-17,2026-03-26,8,Licencia común,Respiratorio
+E01460,P0391,2026-03-17,2026-03-31,11,Licencia común,Otros
+E01461,P0464,2026-03-17,2026-03-24,6,Licencia común,Respiratorio
+E01462,P0657,2026-03-17,2026-04-13,20,Licencia común,Musculoesquelético
+E01463,P0728,2026-03-17,2026-03-17,1,Licencia común,Otros
+E01464,P0737,2026-03-17,2026-03-24,6,Licencia común,Otros
+E01465,P0082,2026-03-18,2026-03-18,1,Licencia común,Respiratorio
+E01466,P0108,2026-03-18,2026-03-18,1,Licencia común,Respiratorio
+E01467,P0246,2026-03-18,2026-03-18,1,Licencia común,Respiratorio
+E01468,P0502,2026-03-18,2026-03-30,9,Licencia común,Musculoesquelético
+E01469,P0581,2026-03-18,2026-04-02,12,Licencia común,Salud mental
+E01470,P0598,2026-03-18,2026-04-09,17,Licencia común,Musculoesquelético
+E01471,P0628,2026-03-18,2026-04-06,14,Licencia común,Salud mental
+E01472,P0718,2026-03-18,2026-03-20,3,Licencia común,Musculoesquelético
+E01473,P0023,2026-03-19,2026-04-06,13,Licencia común,Otros
+E01474,P0080,2026-03-19,2026-04-06,13,Licencia común,Salud mental
+E01475,P0384,2026-03-19,2026-03-19,1,Permiso administrativo,No aplica
+E01476,P0685,2026-03-19,2026-03-19,1,Permiso administrativo,No aplica
+E01477,P0051,2026-03-20,2026-05-01,31,Licencia común,Otros
+E01478,P0321,2026-03-20,2026-03-27,6,Licencia común,Otros
+E01479,P0461,2026-03-20,2026-04-03,11,Licencia común,Respiratorio
+E01480,P0651,2026-03-20,2026-06-09,58,Licencia común,Salud mental
+E01481,P0470,2026-03-23,2026-04-07,12,Licencia común,Respiratorio
+E01482,P0568,2026-03-23,2026-03-27,5,Licencia común,Respiratorio
+E01483,P0037,2026-03-24,2026-03-30,5,Licencia común,Musculoesquelético
+E01484,P0049,2026-03-24,2026-03-24,1,Permiso administrativo,No aplica
+E01485,P0101,2026-03-24,2026-04-17,19,Licencia común,Otros
+E01486,P0118,2026-03-24,2026-03-27,4,Licencia común,Respiratorio
+E01487,P0256,2026-03-24,2026-05-07,33,Licencia común,Musculoesquelético
+E01488,P0648,2026-03-24,2026-03-24,1,Permiso administrativo,No aplica
+E01489,P0727,2026-03-24,2026-04-20,20,Licencia común,Otros
+E01490,P0053,2026-03-25,2026-04-22,21,Licencia común,Respiratorio
+E01491,P0440,2026-03-25,2026-07-10,78,Licencia común,Salud mental
+E01492,P0490,2026-03-25,2026-05-01,28,Licencia común,Musculoesquelético
+E01493,P0627,2026-03-25,2026-03-26,2,Licencia común,Respiratorio
+E01494,P0324,2026-03-26,2026-03-26,1,Licencia común,Salud mental
+E01495,P0513,2026-03-26,2026-04-14,14,Licencia común,Salud mental
+E01496,P0701,2026-03-26,2026-04-03,7,Licencia común,Otros
+E01497,P0682,2026-03-27,2026-04-01,4,Licencia común,Musculoesquelético
+E01498,P0011,2026-03-30,2026-04-09,9,Licencia común,Respiratorio
+E01499,P0166,2026-03-30,2026-03-30,1,Licencia común,Respiratorio
+E01500,P0210,2026-03-30,2026-04-01,3,Licencia común,Otros
+E01501,P0238,2026-03-30,2026-06-10,53,Licencia común,Salud mental
+E01502,P0298,2026-03-30,2026-04-09,9,Licencia común,Musculoesquelético
+E01503,P0303,2026-03-30,2026-03-31,2,Accidente laboral,No aplica
+E01504,P0308,2026-03-30,2026-04-07,7,Licencia común,Otros
+E01505,P0530,2026-03-30,2026-04-03,5,Licencia común,Respiratorio
+E01506,P0646,2026-03-30,2026-03-31,2,Licencia común,Respiratorio
+E01507,P0189,2026-03-31,2026-03-31,1,Permiso administrativo,No aplica
+E01508,P0260,2026-03-31,2026-03-31,1,Permiso administrativo,No aplica
+E01509,P0413,2026-03-31,2026-04-01,2,Licencia común,Respiratorio
+E01510,P0702,2026-03-31,2026-06-10,52,Licencia común,Musculoesquelético
+E01511,P0174,2026-04-01,2026-04-06,4,Licencia común,Otros
+E01512,P0343,2026-04-01,2026-04-02,2,Licencia común,Musculoesquelético
+E01513,P0626,2026-04-01,2026-04-01,1,Permiso administrativo,No aplica
+E01514,P0730,2026-04-01,2026-04-10,8,Licencia común,Respiratorio
+E01515,P0036,2026-04-02,2026-04-02,1,Permiso administrativo,No aplica
+E01516,P0140,2026-04-02,2026-04-03,2,Licencia común,Respiratorio
+E01517,P0384,2026-04-02,2026-05-22,37,Licencia común,Musculoesquelético
+E01518,P0421,2026-04-02,2026-04-03,2,Licencia común,Respiratorio
+E01519,P0468,2026-04-02,2026-06-04,46,Licencia común,Salud mental
+E01520,P0476,2026-04-02,2026-04-10,7,Licencia común,Otros
+E01521,P0540,2026-04-02,2026-04-02,1,Permiso administrativo,No aplica
+E01522,P0665,2026-04-02,2026-09-16,120,Licencia parental,No aplica
+E01523,P0050,2026-04-03,2026-04-17,11,Licencia común,Musculoesquelético
+E01524,P0217,2026-04-03,2026-04-15,9,Licencia común,Otros
+E01525,P0520,2026-04-03,2026-04-03,1,Licencia común,Otros
+E01526,P0724,2026-04-03,2026-04-16,10,Licencia común,Otros
+E01527,P0246,2026-04-06,2026-04-10,5,Licencia común,Otros
+E01528,P0361,2026-04-06,2026-04-09,4,Licencia común,Musculoesquelético
+E01529,P0683,2026-04-06,2026-04-15,8,Licencia común,Musculoesquelético
+E01530,P0704,2026-04-06,2026-04-14,7,Licencia común,Musculoesquelético
+E01531,P0007,2026-04-07,2026-04-14,6,Licencia común,Respiratorio
+E01532,P0182,2026-04-07,2026-04-14,6,Licencia común,Salud mental
+E01533,P0680,2026-04-07,2026-04-13,5,Licencia común,Respiratorio
+E01534,P0718,2026-04-07,2026-04-07,1,Licencia común,Respiratorio
+E01535,P0626,2026-04-08,2026-04-08,1,Permiso administrativo,No aplica
+E01536,P0676,2026-04-08,2026-05-08,23,Licencia común,Salud mental
+E01537,P0036,2026-04-09,2026-05-06,20,Licencia común,Salud mental
+E01538,P0094,2026-04-09,2026-04-15,5,Licencia común,Respiratorio
+E01539,P0285,2026-04-09,2026-04-17,7,Licencia común,Musculoesquelético
+E01540,P0326,2026-04-09,2026-04-22,10,Licencia común,Otros
+E01541,P0358,2026-04-09,2026-04-20,8,Licencia común,Musculoesquelético
+E01542,P0741,2026-04-09,2026-05-14,26,Licencia común,Otros
+E01543,P0470,2026-04-10,2026-05-07,20,Licencia común,Respiratorio
+E01544,P0700,2026-04-10,2026-04-13,2,Licencia común,Otros
+E01545,P0024,2026-04-13,2026-04-22,8,Licencia común,Musculoesquelético
+E01546,P0173,2026-04-13,2026-04-22,8,Licencia común,Respiratorio
+E01547,P0214,2026-04-13,2026-04-23,9,Licencia común,Otros
+E01548,P0456,2026-04-13,2026-04-14,2,Licencia común,Respiratorio
+E01549,P0591,2026-04-13,2026-04-16,4,Licencia común,Otros
+E01550,P0607,2026-04-13,2026-04-15,3,Licencia común,Respiratorio
+E01551,P0174,2026-04-15,2026-05-21,27,Licencia común,Musculoesquelético
+E01552,P0291,2026-04-15,2026-04-16,2,Licencia común,Otros
+E01553,P0311,2026-04-15,2026-05-19,25,Licencia común,Musculoesquelético
+E01554,P0732,2026-04-16,2026-04-27,8,Licencia común,Respiratorio
+E01555,P0743,2026-04-16,2026-04-16,1,Licencia común,Otros
+E01556,P0086,2026-04-17,2026-04-20,2,Licencia común,Otros
+E01557,P0265,2026-04-17,2026-04-17,1,Permiso administrativo,No aplica
+E01558,P0339,2026-04-17,2026-04-23,5,Licencia común,Respiratorio
+E01559,P0610,2026-04-17,2026-05-20,24,Licencia común,Salud mental
+E01560,P0716,2026-04-17,2026-04-28,8,Licencia común,Otros
+E01561,P0029,2026-04-20,2026-05-19,22,Licencia común,Otros
+E01562,P0319,2026-04-20,2026-04-24,5,Licencia común,Respiratorio
+E01563,P0368,2026-04-20,2026-04-21,2,Sin goce,No aplica
+E01564,P0300,2026-04-21,2026-04-30,8,Accidente laboral,No aplica
+E01565,P0378,2026-04-21,2026-05-11,15,Licencia común,Respiratorio
+E01566,P0502,2026-04-21,2026-05-11,15,Licencia común,Otros
+E01567,P0591,2026-04-21,2026-04-27,5,Licencia común,Respiratorio
+E01568,P0620,2026-04-21,2026-04-28,6,Licencia común,Musculoesquelético
+E01569,P0693,2026-04-21,2026-05-15,19,Licencia común,Otros
+E01570,P0495,2026-04-22,2026-04-24,3,Licencia común,Respiratorio
+E01571,P0569,2026-04-22,2026-05-06,11,Licencia común,Otros
+E01572,P0602,2026-04-22,2026-05-12,15,Licencia común,Respiratorio
+E01573,P0192,2026-04-23,2026-04-24,2,Licencia común,Respiratorio
+E01574,P0625,2026-04-23,2026-06-02,29,Licencia común,Salud mental
+E01575,P0646,2026-04-23,2026-04-23,1,Permiso administrativo,No aplica
+E01576,P0024,2026-04-24,2026-04-28,3,Licencia común,Otros
+E01577,P0026,2026-04-24,2026-05-06,9,Licencia común,Otros
+E01578,P0211,2026-04-24,2026-04-24,1,Permiso administrativo,No aplica
+E01579,P0669,2026-04-24,2026-06-01,27,Licencia común,Otros
+E01580,P0742,2026-04-24,2026-05-04,7,Licencia común,Respiratorio
+E01581,P0118,2026-04-27,2026-04-29,3,Licencia común,Otros
+E01582,P0194,2026-04-27,2026-05-26,22,Licencia común,Salud mental
+E01583,P0330,2026-04-27,2026-05-08,10,Licencia común,Salud mental
+E01584,P0343,2026-04-27,2026-05-07,9,Licencia común,Otros
+E01585,P0515,2026-04-27,2026-04-28,2,Licencia común,Otros
+E01586,P0527,2026-04-27,2026-05-21,19,Accidente laboral,No aplica
+E01587,P0162,2026-04-28,2026-05-28,23,Licencia común,Musculoesquelético
+E01588,P0299,2026-04-28,2026-05-12,11,Licencia común,Musculoesquelético
+E01589,P0414,2026-04-28,2026-05-04,5,Licencia común,Respiratorio
+E01590,P0040,2026-04-29,2026-05-04,4,Licencia común,Salud mental
+E01591,P0262,2026-04-29,2026-05-15,13,Accidente laboral,No aplica
+E01592,P0619,2026-04-29,2026-04-30,2,Licencia común,Respiratorio
+E01593,P0680,2026-04-29,2026-05-07,7,Licencia común,Respiratorio
+E01594,P0060,2026-04-30,2026-04-30,1,Permiso administrativo,No aplica
+E01595,P0260,2026-04-30,2026-05-19,14,Licencia común,Otros
+E01596,P0319,2026-04-30,2026-05-06,5,Licencia común,Respiratorio
+E01597,P0479,2026-04-30,2026-05-04,3,Licencia común,Salud mental
+E01598,P0543,2026-04-30,2026-06-11,31,Accidente laboral,No aplica
+E01599,P0575,2026-04-30,2026-06-01,23,Licencia común,Salud mental
+E01600,P0639,2026-04-30,2026-05-21,16,Licencia común,Respiratorio
+E01601,P0662,2026-04-30,2026-05-05,4,Licencia común,Otros
+E01602,P0690,2026-04-30,2026-06-05,27,Licencia común,Otros
+E01603,P0050,2026-05-01,2026-05-01,1,Licencia común,Respiratorio
+E01604,P0357,2026-05-01,2026-05-01,1,Permiso administrativo,No aplica
+E01605,P0476,2026-05-01,2026-05-05,3,Licencia común,Respiratorio
+E01606,P0638,2026-05-01,2026-05-01,1,Permiso administrativo,No aplica
+E01607,P0648,2026-05-01,2026-05-05,3,Licencia común,Otros
+E01608,P0699,2026-05-01,2026-06-12,31,Licencia común,Otros
+E01609,P0736,2026-05-01,2026-05-01,1,Licencia común,Respiratorio
+E01610,P0092,2026-05-04,2026-05-07,4,Licencia común,Respiratorio
+E01611,P0227,2026-05-04,2026-05-04,1,Licencia común,Respiratorio
+E01612,P0352,2026-05-04,2026-05-06,3,Licencia común,Otros
+E01613,P0515,2026-05-04,2026-05-13,8,Licencia común,Otros
+E01614,P0439,2026-05-05,2026-05-27,17,Licencia común,Musculoesquelético
+E01615,P0520,2026-05-05,2026-05-06,2,Licencia común,Otros
+E01616,P0522,2026-05-05,2026-05-05,1,Permiso administrativo,No aplica
+E01617,P0024,2026-05-06,2026-05-06,1,Permiso administrativo,No aplica
+E01618,P0026,2026-05-07,2026-05-07,1,Permiso administrativo,No aplica
+E01619,P0175,2026-05-07,2026-05-18,8,Licencia común,Respiratorio
+E01620,P0229,2026-05-07,2026-05-27,15,Licencia común,Otros
+E01621,P0390,2026-05-07,2026-05-20,10,Licencia común,Respiratorio
+E01622,P0404,2026-05-07,2026-05-20,10,Licencia común,Otros
+E01623,P0081,2026-05-08,2026-05-27,14,Licencia común,Respiratorio
+E01624,P0101,2026-05-08,2026-05-14,5,Licencia común,Salud mental
+E01625,P0700,2026-05-08,2026-05-08,1,Permiso administrativo,No aplica
+E01626,P0454,2026-05-11,2026-05-11,1,Licencia común,Respiratorio
+E01627,P0728,2026-05-11,2026-05-11,1,Licencia común,Otros
+E01628,P0761,2026-05-11,2026-05-12,2,Licencia común,Otros
+E01629,P0007,2026-05-12,2026-05-15,4,Licencia común,Respiratorio
+E01630,P0428,2026-05-12,2026-05-12,1,Licencia común,Otros
+E01631,P0524,2026-05-12,2026-05-12,1,Permiso administrativo,No aplica
+E01632,P0643,2026-05-12,2026-06-22,30,Licencia común,Salud mental
+E01633,P0650,2026-05-12,2026-05-13,2,Licencia común,Otros
+E01634,P0023,2026-05-13,2026-06-05,18,Licencia común,Salud mental
+E01635,P0036,2026-05-13,2026-08-05,61,Licencia común,Musculoesquelético
+E01636,P0085,2026-05-13,2026-05-14,2,Licencia común,Respiratorio
+E01637,P0171,2026-05-13,2026-05-22,8,Licencia común,Otros
+E01638,P0214,2026-05-13,2026-05-19,5,Licencia común,Respiratorio
+E01639,P0246,2026-05-13,2026-05-20,6,Licencia común,Respiratorio
+E01640,P0299,2026-05-13,2026-05-15,3,Licencia común,Respiratorio
+E01641,P0444,2026-05-13,2026-05-14,2,Licencia común,Respiratorio
+E01642,P0526,2026-05-13,2026-06-05,18,Licencia común,Otros
+E01643,P0553,2026-05-13,2026-05-14,2,Licencia común,Respiratorio
+E01644,P0401,2026-05-14,2026-05-14,1,Licencia común,Respiratorio
+E01645,P0561,2026-05-14,2026-05-19,4,Licencia común,Otros
+E01646,P0641,2026-05-14,2026-05-29,12,Licencia común,Respiratorio
+E01647,P0053,2026-05-15,2026-08-24,72,Licencia común,Salud mental
+E01648,P0098,2026-05-15,2026-07-31,56,Licencia común,Salud mental
+E01649,P0108,2026-05-15,2026-05-15,1,Licencia común,Respiratorio
+E01650,P0298,2026-05-15,2026-05-15,1,Licencia común,Respiratorio
+E01651,P0317,2026-05-15,2026-05-15,1,Permiso administrativo,No aplica
+E01652,P0335,2026-05-15,2026-05-15,1,Permiso administrativo,No aplica
+E01653,P0705,2026-05-15,2026-05-15,1,Licencia común,Respiratorio
+E01654,P0741,2026-05-15,2026-06-05,16,Licencia común,Otros
+E01655,P0026,2026-05-18,2026-05-21,4,Licencia común,Otros
+E01656,P0094,2026-05-18,2026-05-18,1,Licencia común,Salud mental
+E01657,P0101,2026-05-18,2026-05-18,1,Licencia común,Respiratorio
+E01658,P0425,2026-05-18,2026-06-15,21,Licencia común,Salud mental
+E01659,P0476,2026-05-18,2026-05-18,1,Permiso administrativo,No aplica
+E01660,P0693,2026-05-18,2026-06-04,14,Licencia común,Respiratorio
+E01661,P0324,2026-05-19,2026-06-08,15,Licencia común,Musculoesquelético
+E01662,P0251,2026-05-20,2026-06-01,9,Licencia común,Musculoesquelético
+E01663,P0391,2026-05-20,2026-05-29,8,Licencia común,Respiratorio
+E01664,P0407,2026-05-20,2026-06-09,15,Licencia común,Otros
+E01665,P0673,2026-05-20,2026-05-28,7,Licencia común,Respiratorio
+E01666,P0086,2026-05-21,2026-05-25,3,Licencia común,Otros
+E01667,P0175,2026-05-21,2026-07-28,49,Licencia común,Musculoesquelético
+E01668,P0218,2026-05-21,2026-05-21,1,Licencia común,Otros
+E01669,P0257,2026-05-21,2026-05-29,7,Sin goce,No aplica
+E01670,P0319,2026-05-21,2026-06-08,13,Licencia común,Salud mental
+E01671,P0524,2026-05-21,2026-05-21,1,Permiso administrativo,No aplica
+E01672,P0591,2026-05-21,2026-05-26,4,Licencia común,Respiratorio
+E01673,P0656,2026-05-21,2026-05-22,2,Licencia común,Respiratorio
+E01674,P0680,2026-05-21,2026-05-28,6,Licencia común,Respiratorio
+E01675,P0698,2026-05-21,2026-05-21,1,Permiso administrativo,No aplica
+E01676,P0761,2026-05-21,2026-05-29,7,Licencia común,Respiratorio
+E01677,P0092,2026-05-22,2026-06-18,20,Licencia común,Salud mental
+E01678,P0396,2026-05-22,2026-05-27,4,Licencia común,Respiratorio
+E01679,P0488,2026-05-22,2026-05-26,3,Licencia común,Otros
+E01680,P0496,2026-05-22,2026-05-22,1,Licencia común,Respiratorio
+E01681,P0515,2026-05-22,2026-06-02,8,Licencia común,Respiratorio
+E01682,P0691,2026-05-22,2026-06-17,19,Licencia común,Otros
+E01683,P0705,2026-05-22,2026-05-28,5,Licencia común,Otros
+E01684,P0041,2026-05-25,2026-05-25,1,Sin goce,No aplica
+E01685,P0205,2026-05-25,2026-05-29,5,Licencia común,Otros
+E01686,P0352,2026-05-25,2026-05-26,2,Licencia común,Respiratorio
+E01687,P0356,2026-05-25,2026-05-28,4,Licencia común,Musculoesquelético
+E01688,P0127,2026-05-26,2026-05-26,1,Permiso administrativo,No aplica
+E01689,P0226,2026-05-26,2026-06-02,6,Licencia común,Otros
+E01690,P0323,2026-05-26,2026-05-26,1,Licencia común,Otros
+E01691,P0607,2026-05-26,2026-05-29,4,Licencia común,Otros
+E01692,P0646,2026-05-26,2026-08-31,70,Licencia común,Salud mental
+E01693,P0704,2026-05-26,2026-05-26,1,Permiso administrativo,No aplica
+E01694,P0399,2026-05-27,2026-06-02,5,Licencia común,Otros
+E01695,P0437,2026-05-27,2026-05-28,2,Licencia común,Otros
+E01696,P0718,2026-05-27,2026-05-27,1,Permiso administrativo,No aplica
+E01697,P0086,2026-05-28,2026-05-28,1,Permiso administrativo,No aplica
+E01698,P0100,2026-05-28,2026-06-17,15,Licencia común,Respiratorio
+E01699,P0122,2026-05-28,2026-05-29,2,Licencia común,Respiratorio
+E01700,P0321,2026-05-28,2026-05-28,1,Permiso administrativo,No aplica
+E01701,P0602,2026-05-28,2026-05-28,1,Licencia común,Respiratorio
+E01702,P0630,2026-05-28,2026-05-28,1,Permiso administrativo,No aplica
+E01703,P0648,2026-05-28,2026-07-10,32,Licencia común,Salud mental
+E01704,P0659,2026-05-28,2026-06-22,18,Licencia común,Otros
+E01705,P0028,2026-05-29,2026-05-29,1,Licencia común,Otros
+E01706,P0167,2026-05-29,2026-05-29,1,Permiso administrativo,No aplica
+E01707,P0291,2026-05-29,2026-06-03,4,Licencia común,Respiratorio
+E01708,P0300,2026-05-29,2026-05-29,1,Licencia común,Otros
+E01709,P0461,2026-05-29,2026-05-29,1,Licencia común,Respiratorio
+E01710,P0617,2026-05-29,2026-05-29,1,Licencia común,Respiratorio
+E01711,P0122,2026-06-01,2026-06-09,7,Licencia común,Salud mental
+E01712,P0211,2026-06-01,2026-06-10,8,Licencia común,Respiratorio
+E01713,P0300,2026-06-01,2026-07-06,26,Licencia común,Salud mental
+E01714,P0370,2026-06-01,2026-06-01,1,Licencia común,Musculoesquelético
+E01715,P0490,2026-06-01,2026-06-09,7,Licencia común,Respiratorio
+E01716,P0728,2026-06-01,2026-06-05,5,Licencia común,Salud mental
+E01717,P0330,2026-06-02,2026-06-02,1,Permiso administrativo,No aplica
+E01718,P0348,2026-06-02,2026-06-11,8,Licencia común,Otros
+E01719,P0410,2026-06-02,2026-06-04,3,Licencia común,Otros
+E01720,P0419,2026-06-02,2026-06-03,2,Licencia común,Musculoesquelético
+E01721,P0445,2026-06-02,2026-06-11,8,Licencia común,Otros
+E01722,P0705,2026-06-02,2026-06-04,3,Licencia común,Otros
+E01723,P0194,2026-06-03,2026-06-05,3,Licencia común,Respiratorio
+E01724,P0326,2026-06-03,2026-06-03,1,Licencia común,Respiratorio
+E01725,P0414,2026-06-03,2026-06-30,20,Licencia común,Otros
+E01726,P0420,2026-06-03,2026-06-03,1,Licencia común,Otros
+E01727,P0524,2026-06-03,2026-06-08,4,Licencia común,Respiratorio
+E01728,P0029,2026-06-04,2026-06-05,2,Licencia común,Otros
+E01729,P0159,2026-06-04,2026-06-04,1,Permiso administrativo,No aplica
+E01730,P0372,2026-06-04,2026-06-04,1,Permiso administrativo,No aplica
+E01731,P0527,2026-06-04,2026-06-04,1,Permiso administrativo,No aplica
+E01732,P0641,2026-06-04,2026-06-04,1,Permiso administrativo,No aplica
+E01733,P0678,2026-06-04,2026-06-17,10,Licencia común,Otros
+E01734,P0756,2026-06-04,2026-06-08,3,Licencia común,Respiratorio
+E01735,P0174,2026-06-05,2026-06-05,1,Permiso administrativo,No aplica
+E01736,P0422,2026-06-05,2026-06-05,1,Permiso administrativo,No aplica
+E01737,P0515,2026-06-08,2026-06-08,1,Permiso administrativo,No aplica
+E01738,P0024,2026-06-09,2026-06-12,4,Licencia común,Respiratorio
+E01739,P0026,2026-06-09,2026-06-09,1,Permiso administrativo,No aplica
+E01740,P0174,2026-06-09,2026-06-15,5,Licencia común,Respiratorio
+E01741,P0319,2026-06-09,2026-06-11,3,Licencia común,Respiratorio
+E01742,P0413,2026-06-09,2026-06-15,5,Licencia común,Otros
+E01743,P0630,2026-06-09,2026-06-10,2,Licencia común,Respiratorio
+E01744,P0704,2026-06-09,2026-06-09,1,Permiso administrativo,No aplica
+E01745,P0060,2026-06-10,2026-06-29,14,Licencia común,Respiratorio
+E01746,P0082,2026-06-10,2026-06-10,1,Licencia común,Otros
+E01747,P0118,2026-06-10,2026-06-10,1,Licencia común,Otros
+E01748,P0223,2026-06-10,2026-06-10,1,Licencia común,Respiratorio
+E01749,P0299,2026-06-10,2026-06-29,14,Licencia común,Otros
+E01750,P0418,2026-06-10,2026-06-10,1,Licencia común,Respiratorio
+E01751,P0455,2026-06-10,2026-06-11,2,Licencia común,Respiratorio
+E01752,P0527,2026-06-10,2026-06-10,1,Permiso administrativo,No aplica
+E01753,P0718,2026-06-10,2026-06-17,6,Licencia común,Respiratorio
+E01754,P0081,2026-06-11,2026-06-16,4,Licencia común,Respiratorio
+E01755,P0118,2026-06-11,2026-06-22,8,Licencia común,Respiratorio
+E01756,P0339,2026-06-11,2026-06-30,14,Licencia común,Musculoesquelético
+E01757,P0347,2026-06-11,2026-07-06,18,Licencia común,Respiratorio
+E01758,P0607,2026-06-11,2026-06-11,1,Permiso administrativo,No aplica
+E01759,P0620,2026-06-11,2026-08-03,38,Licencia común,Salud mental
+E01760,P0037,2026-06-12,2026-06-12,1,Permiso administrativo,No aplica
+E01761,P0166,2026-06-12,2026-06-12,1,Sin goce,No aplica
+E01762,P0218,2026-06-12,2026-06-29,12,Accidente laboral,No aplica
+E01763,P0314,2026-06-12,2026-06-12,1,Permiso administrativo,No aplica
+E01764,P0630,2026-06-12,2026-06-15,2,Sin goce,No aplica
+E01765,P0700,2026-06-12,2026-06-15,2,Licencia común,Salud mental
+E01766,P0702,2026-06-12,2026-06-30,13,Licencia común,Musculoesquelético
+E01767,P0148,2026-06-15,2026-06-18,4,Licencia común,Respiratorio
+E01768,P0454,2026-06-15,2026-06-16,2,Licencia común,Otros
+E01769,P0421,2026-06-16,2026-06-29,10,Licencia común,Respiratorio
+E01770,P0461,2026-06-16,2026-06-16,1,Permiso administrativo,No aplica
+E01771,P0476,2026-06-16,2026-06-16,1,Permiso administrativo,No aplica
+E01772,P0575,2026-06-16,2026-06-22,5,Licencia común,Otros
+E01773,P0641,2026-06-16,2026-06-16,1,Licencia común,Musculoesquelético
+E01774,P0650,2026-06-16,2026-06-16,1,Licencia común,Respiratorio
+E01775,P0294,2026-06-17,2026-06-18,2,Licencia común,Respiratorio
+E01776,P0319,2026-06-17,2026-06-23,5,Licencia común,Otros
+E01777,P0415,2026-06-17,2026-06-18,2,Licencia común,Respiratorio
+E01778,P0461,2026-06-17,2026-07-02,12,Licencia común,Respiratorio
+E01779,P0490,2026-06-17,2026-07-01,11,Licencia común,Musculoesquelético
+E01780,P0522,2026-06-17,2026-06-17,1,Licencia común,Respiratorio
+E01781,P0761,2026-06-17,2026-06-17,1,Licencia común,Respiratorio
+E01782,P0080,2026-06-18,2026-06-22,3,Licencia común,Otros
+E01783,P0152,2026-06-18,2026-07-02,11,Licencia común,Otros
+E01784,P0515,2026-06-18,2026-06-24,5,Licencia común,Musculoesquelético
+E01785,P0591,2026-06-18,2026-06-18,1,Permiso administrativo,No aplica
+E01786,P0595,2026-06-18,2026-06-24,5,Licencia común,Respiratorio
+E01787,P0238,2026-06-19,2026-06-29,7,Licencia común,Musculoesquelético
+E01788,P0460,2026-06-19,2026-08-07,36,Accidente laboral,No aplica
+E01789,P0628,2026-06-19,2026-07-03,11,Licencia común,Respiratorio
+E01790,P0075,2026-06-22,2026-06-25,4,Licencia común,Respiratorio
+E01791,P0174,2026-06-22,2026-06-30,7,Licencia común,Respiratorio
+E01792,P0378,2026-06-22,2026-06-24,3,Licencia común,Respiratorio
+E01793,P0393,2026-06-22,2026-07-01,8,Licencia común,Otros
+E01794,P0117,2026-06-23,2026-06-23,1,Permiso administrativo,No aplica
+E01795,P0118,2026-06-23,2026-06-29,5,Licencia común,Salud mental
+E01796,P0352,2026-06-23,2026-06-29,5,Licencia común,Otros
+E01797,P0634,2026-06-23,2026-07-02,8,Licencia común,Musculoesquelético
+E01798,P0050,2026-06-24,2026-06-26,3,Licencia común,Respiratorio
+E01799,P0149,2026-06-24,2026-06-24,1,Licencia común,Respiratorio
+E01800,P0166,2026-06-24,2026-06-24,1,Licencia común,Respiratorio
+E01801,P0209,2026-06-24,2026-07-10,13,Licencia común,Otros
+E01802,P0526,2026-06-24,2026-06-26,3,Licencia común,Respiratorio
+E01803,P0540,2026-06-24,2026-07-07,10,Licencia común,Salud mental
+E01804,P0675,2026-06-24,2026-06-24,1,Permiso administrativo,No aplica
+E01805,P0736,2026-06-24,2026-07-10,13,Licencia común,Otros
+E01806,P0753,2026-06-24,2026-07-07,10,Licencia común,Respiratorio
+E01807,P0028,2026-06-25,2026-07-16,16,Licencia común,Respiratorio
+E01808,P0085,2026-06-25,2026-06-25,1,Licencia común,Salud mental
+E01809,P0128,2026-06-25,2026-07-02,6,Licencia común,Otros
+E01810,P0616,2026-06-25,2026-12-09,120,Licencia parental,No aplica
+E01811,P0704,2026-06-25,2026-07-29,25,Licencia común,Otros
+E01812,P0026,2026-06-26,2026-06-26,1,Permiso administrativo,No aplica
+E01813,P0311,2026-06-26,2026-07-13,12,Licencia común,Otros
+E01814,P0324,2026-06-26,2026-06-26,1,Permiso administrativo,No aplica
+E01815,P0391,2026-06-26,2026-08-19,39,Accidente laboral,No aplica
+E01816,P0413,2026-06-26,2026-06-26,1,Permiso administrativo,No aplica
+E01817,P0496,2026-06-26,2026-07-24,21,Licencia común,Otros
+E01818,P0524,2026-06-26,2026-07-28,23,Licencia común,Musculoesquelético
+E01819,P0671,2026-06-26,2026-07-27,22,Licencia común,Salud mental
+E01820,P0707,2026-06-26,2026-06-30,3,Licencia común,Respiratorio
+E01821,P0738,2026-06-26,2026-06-29,2,Sin goce,No aplica
+E01822,P0759,2026-06-26,2026-07-07,8,Licencia común,Otros
+E01823,P0023,2026-06-29,2026-07-03,5,Licencia común,Otros
+E01824,P0026,2026-06-29,2026-07-08,8,Licencia común,Respiratorio
+E01825,P0390,2026-06-29,2026-07-15,13,Licencia común,Musculoesquelético
+E01826,P0425,2026-06-29,2026-07-07,7,Licencia común,Musculoesquelético
+E01827,P0476,2026-06-29,2026-07-08,8,Licencia común,Musculoesquelético
+E01828,P0532,2026-06-29,2026-08-04,27,Licencia común,Musculoesquelético
+E01829,P0170,2026-06-30,2026-07-23,18,Licencia común,Respiratorio
+E01830,P0246,2026-06-30,2026-07-09,8,Licencia común,Respiratorio
+E01831,P0365,2026-06-30,2026-07-07,6,Licencia común,Otros
+E01832,P0522,2026-06-30,2026-06-30,1,Licencia común,Respiratorio
+E01833,P0613,2026-06-30,2026-07-02,3,Licencia común,Otros
+E01834,P0617,2026-06-30,2026-08-04,26,Licencia común,Musculoesquelético
+E01835,P0042,2026-07-01,2026-07-24,18,Licencia común,Salud mental
+E01836,P0262,2026-07-01,2026-07-08,6,Licencia común,Musculoesquelético
+E01837,P0317,2026-07-01,2026-07-22,16,Licencia común,Otros
+E01838,P0319,2026-07-01,2026-07-01,1,Licencia común,Salud mental
+E01839,P0326,2026-07-01,2026-07-02,2,Licencia común,Respiratorio
+E01840,P0728,2026-07-01,2026-07-01,1,Licencia común,Respiratorio
+E01841,P0744,2026-07-01,2026-07-01,1,Sin goce,No aplica
+E01842,P0761,2026-07-01,2026-07-01,1,Permiso administrativo,No aplica
+E01843,P0194,2026-07-02,2026-07-02,1,Licencia común,Respiratorio
+E01844,P0239,2026-07-02,2026-07-02,1,Licencia común,Respiratorio
+E01845,P0299,2026-07-02,2026-07-02,1,Licencia común,Respiratorio
+E01846,P0490,2026-07-02,2026-07-20,13,Accidente laboral,No aplica
+E01847,P0602,2026-07-02,2026-07-02,1,Permiso administrativo,No aplica
+E01848,P0718,2026-07-02,2026-07-02,1,Licencia común,Otros
+E01849,P0162,2026-07-03,2026-07-07,3,Licencia común,Respiratorio
+E01850,P0655,2026-07-03,2026-07-28,18,Licencia común,Musculoesquelético
+E01851,P0700,2026-07-03,2026-07-06,2,Licencia común,Respiratorio
+E01852,P0023,2026-07-06,2026-07-17,10,Licencia común,Respiratorio
+E01853,P0024,2026-07-06,2026-07-21,12,Licencia común,Respiratorio
+E01854,P0043,2026-07-06,2026-07-06,1,Permiso administrativo,No aplica
+E01855,P0118,2026-07-06,2026-07-09,4,Licencia común,Musculoesquelético
+E01856,P0287,2026-07-06,2026-12-18,120,Licencia parental,No aplica
+E01857,P0376,2026-07-06,2026-07-14,7,Licencia común,Respiratorio
+E01858,P0650,2026-07-06,2026-07-06,1,Accidente laboral,No aplica
+E01859,P0713,2026-07-06,2026-07-15,8,Licencia común,Respiratorio
+E01860,P0728,2026-07-06,2026-07-06,1,Permiso administrativo,No aplica
+E01861,P0345,2026-07-07,2026-07-07,1,Permiso administrativo,No aplica
+E01862,P0553,2026-07-07,2026-07-08,2,Licencia común,Respiratorio
+E01863,P0631,2026-07-07,2026-07-16,8,Licencia común,Musculoesquelético
+E01864,P0119,2026-07-08,2026-07-23,12,Licencia común,Respiratorio
+E01865,P0182,2026-07-08,2026-07-17,8,Licencia común,Respiratorio
+E01866,P0325,2026-07-08,2026-07-09,2,Licencia común,Respiratorio
+E01867,P0382,2026-07-08,2026-07-08,1,Licencia común,Salud mental
+E01868,P0414,2026-07-08,2026-07-13,4,Licencia común,Musculoesquelético
+E01869,P0419,2026-07-08,2026-07-16,7,Licencia común,Respiratorio
+E01870,P0581,2026-07-08,2026-07-08,1,Permiso administrativo,No aplica
+E01871,P0700,2026-07-08,2026-08-07,23,Licencia común,Otros
+E01872,P0092,2026-07-09,2026-07-10,2,Licencia común,Salud mental
+E01873,P0591,2026-07-10,2026-07-10,1,Licencia común,Respiratorio
+E01874,P0656,2026-07-10,2026-07-16,5,Sin goce,No aplica
+E01875,P0208,2026-07-13,2026-09-17,49,Licencia común,Salud mental
+E01876,P0451,2026-07-13,2026-07-16,4,Licencia común,Otros
+E01877,P0468,2026-07-13,2026-07-23,9,Licencia común,Respiratorio
+E01878,P0511,2026-07-13,2026-07-30,14,Licencia común,Otros
+E01879,P0602,2026-07-13,2026-07-13,1,Permiso administrativo,No aplica
+E01880,P0678,2026-07-13,2026-07-14,2,Licencia común,Respiratorio
+E01881,P0708,2026-07-13,2026-07-13,1,Licencia común,Salud mental
+E01882,P0218,2026-07-14,2026-07-16,3,Licencia común,Respiratorio
+E01883,P0461,2026-07-14,2026-07-21,6,Licencia común,Respiratorio
+E01884,P0702,2026-07-14,2026-07-14,1,Permiso administrativo,No aplica
+E01885,P0721,2026-07-14,2026-07-15,2,Licencia común,Otros
+E01886,P0768,2026-07-14,2026-07-16,3,Licencia común,Respiratorio
+E01887,P0060,2026-07-15,2026-08-11,20,Licencia común,Respiratorio
+E01888,P0118,2026-07-15,2026-07-23,7,Licencia común,Respiratorio
+E01889,P0779,2026-07-15,2026-08-20,27,Licencia común,Salud mental
+E01890,P0173,2026-07-16,2026-07-16,1,Licencia común,Respiratorio
+E01891,P0226,2026-07-16,2026-07-20,3,Licencia común,Otros
+E01892,P0269,2026-07-16,2026-07-31,12,Licencia común,Respiratorio
+E01893,P0440,2026-07-16,2026-08-14,22,Licencia común,Musculoesquelético
+E01894,P0613,2026-07-16,2026-07-17,2,Licencia común,Respiratorio
+E01895,P0319,2026-07-17,2026-07-20,2,Licencia común,Respiratorio
+E01896,P0392,2026-07-17,2026-07-17,1,Permiso administrativo,No aplica
+E01897,P0422,2026-07-17,2026-07-21,3,Licencia común,Musculoesquelético
+E01898,P0495,2026-07-17,2026-08-10,17,Licencia común,Musculoesquelético
+E01899,P0575,2026-07-17,2026-07-17,1,Licencia común,Respiratorio
+E01900,P0647,2026-07-17,2026-07-29,9,Licencia común,Respiratorio
+E01901,P0309,2026-07-20,2026-07-20,1,Permiso administrativo,No aplica
+E01902,P0540,2026-07-20,2026-08-06,14,Accidente laboral,No aplica
+E01903,P0641,2026-07-20,2026-07-21,2,Licencia común,Respiratorio
+E01904,P0708,2026-07-20,2026-07-31,10,Licencia común,Salud mental
+E01905,P0728,2026-07-20,2026-08-11,17,Licencia común,Otros
+E01906,P0192,2026-07-21,2026-07-31,9,Licencia común,Musculoesquelético
+E01907,P0299,2026-07-21,2026-08-03,10,Licencia común,Respiratorio
+E01908,P0425,2026-07-21,2026-07-22,2,Sin goce,No aplica
+E01909,P0211,2026-07-22,2026-07-22,1,Permiso administrativo,No aplica
+E01910,P0278,2026-07-22,2026-08-20,22,Licencia común,Salud mental
+E01911,P0371,2026-07-22,2026-08-13,17,Licencia común,Salud mental
+E01912,P0422,2026-07-22,2026-07-23,2,Licencia común,Otros
+E01913,P0128,2026-07-23,2026-07-23,1,Permiso administrativo,No aplica
+E01914,P0186,2026-07-23,2026-08-06,11,Licencia común,Otros
+E01915,P0413,2026-07-23,2026-07-28,4,Licencia común,Respiratorio
+E01916,P0610,2026-07-23,2026-07-30,6,Licencia común,Otros
+E01917,P0659,2026-07-23,2026-08-03,8,Licencia común,Otros
+E01918,P0710,2026-07-23,2026-07-23,1,Licencia común,Respiratorio
+E01919,P0750,2026-07-23,2026-07-28,4,Licencia común,Otros
+E01920,P0173,2026-07-24,2026-07-27,2,Licencia común,Otros
+E01921,P0257,2026-07-24,2026-07-31,6,Licencia común,Respiratorio
+E01922,P0680,2026-07-24,2026-08-05,9,Licencia común,Otros
+E01923,P0048,2026-07-27,2026-08-04,7,Licencia común,Respiratorio
+E01924,P0324,2026-07-27,2026-07-27,1,Licencia común,Respiratorio
+E01925,P0602,2026-07-27,2026-08-18,17,Licencia común,Otros
+E01926,P0780,2026-07-27,2026-08-05,8,Licencia común,Musculoesquelético
+E01927,P0118,2026-07-28,2026-08-04,6,Licencia común,Respiratorio
+E01928,P0298,2026-07-28,2026-08-07,9,Licencia común,Respiratorio
+E01929,P0071,2026-07-29,2026-07-31,3,Licencia común,Otros
+E01930,P0075,2026-07-29,2026-08-11,10,Accidente laboral,No aplica
+E01931,P0311,2026-07-29,2026-07-29,1,Permiso administrativo,No aplica
+E01932,P0324,2026-07-29,2026-08-03,4,Licencia común,Respiratorio
+E01933,P0738,2026-07-29,2026-07-29,1,Permiso administrativo,No aplica
+E01934,P0046,2026-07-30,2026-07-30,1,Licencia común,Respiratorio
+E01935,P0272,2026-07-30,2026-08-12,10,Licencia común,Otros
+E01936,P0410,2026-07-30,2026-07-31,2,Licencia común,Otros
+E01937,P0522,2026-07-30,2026-08-06,6,Licencia común,Salud mental
+E01938,P0625,2026-07-30,2026-09-29,44,Licencia común,Musculoesquelético
+E01939,P0718,2026-07-30,2026-08-14,12,Licencia común,Respiratorio
+E01940,P0101,2026-07-31,2026-07-31,1,Permiso administrativo,No aplica
+E01941,P0348,2026-07-31,2026-07-31,1,Accidente laboral,No aplica
+E01942,P0349,2026-07-31,2026-08-05,4,Licencia común,Otros
+E01943,P0413,2026-07-31,2026-08-03,2,Licencia común,Respiratorio
+E01944,P0415,2026-07-31,2026-08-27,20,Licencia común,Respiratorio
+E01945,P0445,2026-07-31,2026-08-14,11,Licencia común,Otros
+E01946,P0490,2026-07-31,2026-08-04,3,Licencia común,Respiratorio
+E01947,P0500,2026-07-31,2026-08-07,6,Licencia común,Otros
+E01948,P0515,2026-07-31,2026-08-25,18,Licencia común,Salud mental
+E01949,P0581,2026-07-31,2026-08-12,9,Licencia común,Musculoesquelético
+E01950,P0451,2026-08-04,2026-08-04,1,Licencia común,Respiratorio
+E01951,P0461,2026-08-04,2026-08-05,2,Licencia común,Respiratorio
+E01952,P0591,2026-08-04,2026-08-04,1,Licencia común,Otros
+E01953,P0772,2026-08-04,2026-08-04,1,Permiso administrativo,No aplica
+E01954,P0085,2026-08-05,2026-08-05,1,Licencia común,Respiratorio
+E01955,P0319,2026-08-05,2026-08-27,17,Licencia común,Respiratorio
+E01956,P0413,2026-08-05,2026-08-13,7,Licencia común,Otros
+E01957,P0731,2026-08-05,2026-08-13,7,Sin goce,No aplica
+E01958,P0023,2026-08-06,2026-08-11,4,Licencia común,Musculoesquelético
+E01959,P0096,2026-08-06,2026-08-07,2,Licencia común,Musculoesquelético
+E01960,P0326,2026-08-06,2026-08-07,2,Licencia común,Respiratorio
+E01961,P0465,2026-08-06,2026-08-06,1,Licencia común,Respiratorio
+E01962,P0468,2026-08-06,2026-08-25,14,Licencia común,Salud mental
+E01963,P0575,2026-08-06,2026-08-06,1,Licencia común,Respiratorio
+E01964,P0026,2026-08-07,2026-08-12,4,Accidente laboral,No aplica
+E01965,P0251,2026-08-07,2026-08-07,1,Permiso administrativo,No aplica
+E01966,P0451,2026-08-07,2026-08-07,1,Permiso administrativo,No aplica
+E01967,P0532,2026-08-07,2026-08-10,2,Licencia común,Respiratorio
+E01968,P0780,2026-08-07,2026-08-10,2,Licencia común,Otros
+E01969,P0036,2026-08-10,2026-08-11,2,Licencia común,Respiratorio
+E01970,P0174,2026-08-10,2026-08-10,1,Licencia común,Respiratorio
+E01971,P0527,2026-08-10,2026-09-14,26,Licencia común,Otros
+E01972,P0119,2026-08-11,2026-08-26,12,Licencia común,Otros
+E01973,P0451,2026-08-11,2026-08-20,8,Licencia común,Respiratorio
+E01974,P0456,2026-08-11,2026-08-12,2,Licencia común,Otros
+E01975,P0490,2026-08-11,2026-10-13,46,Licencia común,Salud mental
+E01976,P0524,2026-08-11,2026-08-11,1,Permiso administrativo,No aplica
+E01977,P0650,2026-08-11,2026-08-14,4,Licencia común,Respiratorio
+E01978,P0743,2026-08-11,2026-09-03,18,Licencia común,Musculoesquelético
+E01979,P0174,2026-08-12,2026-08-25,10,Licencia común,Otros
+E01980,P0339,2026-08-12,2026-08-14,3,Licencia común,Respiratorio
+E01981,P0352,2026-08-12,2026-08-19,6,Licencia común,Respiratorio
+E01982,P0574,2026-08-12,2026-08-12,1,Sin goce,No aplica
+E01983,P0591,2026-08-12,2026-08-14,3,Licencia común,Respiratorio
+E01984,P0700,2026-08-12,2026-08-20,7,Licencia común,Otros
+E01985,P0314,2026-08-13,2026-08-19,5,Licencia común,Respiratorio
+E01986,P0488,2026-08-13,2026-08-13,1,Permiso administrativo,No aplica
+E01987,P0642,2026-08-13,2026-08-13,1,Licencia común,Respiratorio
+E01988,P0728,2026-08-13,2026-08-28,12,Licencia común,Musculoesquelético
+E01989,P0192,2026-08-14,2026-08-14,1,Permiso administrativo,No aplica
+E01990,P0413,2026-08-14,2026-09-07,17,Licencia común,Respiratorio
+E01991,P0461,2026-08-14,2026-08-18,3,Licencia común,Respiratorio
+E01992,P0704,2026-08-14,2026-08-14,1,Permiso administrativo,No aplica
+E01993,P0120,2026-08-17,2026-08-24,6,Licencia común,Respiratorio
+E01994,P0345,2026-08-17,2026-08-28,10,Licencia común,Otros
+E01995,P0382,2026-08-17,2026-08-19,3,Licencia común,Respiratorio
+E01996,P0617,2026-08-17,2026-08-17,1,Permiso administrativo,No aplica
+E01997,P0641,2026-08-17,2026-08-31,11,Licencia común,Salud mental
+E01998,P0780,2026-08-17,2026-08-18,2,Licencia común,Respiratorio
+E01999,P0027,2026-08-18,2026-09-15,21,Licencia común,Salud mental
+E02000,P0081,2026-08-18,2026-08-18,1,Licencia común,Respiratorio
+E02001,P0396,2026-08-18,2026-08-18,1,Permiso administrativo,No aplica
+E02002,P0504,2026-08-18,2026-08-18,1,Permiso administrativo,No aplica
+E02003,P0101,2026-08-19,2026-08-19,1,Permiso administrativo,No aplica
+E02004,P0127,2026-08-19,2026-09-04,13,Licencia común,Otros
+E02005,P0365,2026-08-19,2026-08-25,5,Licencia común,Respiratorio
+E02006,P0461,2026-08-19,2026-08-26,6,Licencia común,Respiratorio
+E02007,P0516,2026-08-19,2026-09-08,15,Licencia común,Respiratorio
+E02008,P0576,2026-08-19,2026-08-21,3,Licencia común,Musculoesquelético
+E02009,P0602,2026-08-19,2026-10-15,42,Licencia común,Salud mental
+E02010,P0086,2026-08-20,2026-08-25,4,Licencia común,Respiratorio
+E02011,P0411,2026-08-20,2026-08-20,1,Permiso administrativo,No aplica
+E02012,P0522,2026-08-20,2026-08-27,6,Licencia común,Respiratorio
+E02013,P0382,2026-08-21,2026-08-27,5,Licencia común,Salud mental
+E02014,P0411,2026-08-21,2026-08-31,7,Licencia común,Respiratorio
+E02015,P0422,2026-08-21,2026-08-27,5,Licencia común,Respiratorio
+E02016,P0484,2026-08-21,2026-09-11,16,Licencia común,Otros
+E02017,P0615,2026-08-21,2026-08-21,1,Permiso administrativo,No aplica
+E02018,P0634,2026-08-21,2026-08-21,1,Permiso administrativo,No aplica
+E02019,P0779,2026-08-21,2026-08-26,4,Sin goce,No aplica
+E02020,P0317,2026-08-24,2026-08-24,1,Sin goce,No aplica
+E02021,P0391,2026-08-24,2026-08-24,1,Licencia común,Respiratorio
+E02022,P0414,2026-08-24,2026-08-31,6,Licencia común,Otros
+E02023,P0622,2026-08-24,2026-09-02,8,Licencia común,Respiratorio
+E02024,P0708,2026-08-24,2026-08-24,1,Licencia común,Respiratorio
+E02025,P0026,2026-08-25,2026-08-28,4,Licencia común,Respiratorio
+E02026,P0524,2026-08-25,2026-11-06,54,Licencia común,Salud mental
+E02027,P0541,2026-08-25,2026-08-25,1,Licencia común,Respiratorio
+E02028,P0783,2026-08-25,2026-08-25,1,Permiso administrativo,No aplica
+E02029,P0086,2026-08-26,2026-09-10,12,Accidente laboral,No aplica
+E02030,P0257,2026-08-26,2026-08-31,4,Licencia común,Musculoesquelético
+E02031,P0265,2026-08-26,2026-09-15,15,Licencia común,Musculoesquelético
+E02032,P0285,2026-08-26,2026-08-28,3,Licencia común,Respiratorio
+E02033,P0399,2026-08-26,2026-09-02,6,Licencia común,Otros
+E02034,P0760,2026-08-26,2026-08-31,4,Licencia común,Respiratorio
+E02035,P0036,2026-08-27,2026-09-01,4,Licencia común,Respiratorio
+E02036,P0343,2026-08-27,2026-08-27,1,Licencia común,Respiratorio
+E02037,P0347,2026-08-27,2026-09-01,4,Licencia común,Otros
+E02038,P0486,2026-08-27,2026-09-15,14,Licencia común,Otros
+E02039,P0576,2026-08-27,2026-08-28,2,Licencia común,Respiratorio
+E02040,P0597,2026-08-27,2026-09-17,16,Licencia común,Otros
+E02041,P0023,2026-08-28,2026-08-28,1,Permiso administrativo,No aplica
+E02042,P0174,2026-08-28,2026-08-28,1,Licencia común,Musculoesquelético
+E02043,P0319,2026-08-28,2026-09-01,3,Licencia común,Respiratorio
+E02044,P0352,2026-08-28,2026-10-08,30,Accidente laboral,No aplica
+E02045,P0461,2026-08-28,2026-09-02,4,Licencia común,Respiratorio
+E02046,P0693,2026-08-28,2026-11-17,58,Licencia común,Salud mental
+E02047,P0104,2026-08-31,2026-09-07,6,Licencia común,Musculoesquelético
+E02048,P0118,2026-08-31,2026-09-10,9,Licencia común,Salud mental
+E02049,P0246,2026-08-31,2026-09-11,10,Licencia común,Respiratorio
+E02050,P0368,2026-08-31,2026-08-31,1,Licencia común,Musculoesquelético
+E02051,P0394,2026-08-31,2026-10-01,24,Licencia común,Respiratorio
+E02052,P0437,2026-08-31,2026-09-07,6,Licencia común,Respiratorio
+E02053,P0451,2026-08-31,2026-09-14,11,Licencia común,Respiratorio
+E02054,P0704,2026-08-31,2026-08-31,1,Licencia común,Respiratorio
+E02055,P0020,2026-09-01,2026-09-04,4,Licencia común,Musculoesquelético
+E02056,P0761,2026-09-01,2026-09-03,3,Licencia común,Respiratorio
+E02057,P0036,2026-09-02,2026-09-21,14,Licencia común,Salud mental
+E02058,P0155,2026-09-02,2026-09-15,10,Licencia común,Otros
+E02059,P0211,2026-09-02,2026-09-10,7,Licencia común,Respiratorio
+E02060,P0598,2026-09-02,2026-09-02,1,Licencia común,Respiratorio
+E02061,P0702,2026-09-02,2026-09-28,19,Accidente laboral,No aplica
+E02062,P0151,2026-09-03,2026-09-18,12,Licencia común,Respiratorio
+E02063,P0497,2026-09-03,2026-09-08,4,Licencia común,Otros
+E02064,P0656,2026-09-03,2026-09-11,7,Accidente laboral,No aplica
+E02065,P0099,2026-09-04,2026-10-16,31,Licencia común,Musculoesquelético
+E02066,P0157,2026-09-04,2026-09-07,2,Licencia común,Respiratorio
+E02067,P0311,2026-09-04,2026-09-04,1,Accidente laboral,No aplica
+E02068,P0422,2026-09-04,2026-09-24,15,Licencia común,Musculoesquelético
+E02069,P0780,2026-09-04,2026-09-08,3,Licencia común,Respiratorio
+E02070,P0174,2026-09-07,2026-09-18,10,Licencia común,Otros
+E02071,P0230,2026-09-07,2026-12-22,77,Licencia común,Salud mental
+E02072,P0515,2026-09-07,2026-09-21,11,Licencia común,Respiratorio
+E02073,P0680,2026-09-07,2026-09-10,4,Licencia común,Otros
+E02074,P0708,2026-09-07,2026-09-08,2,Licencia común,Respiratorio
+E02075,P0718,2026-09-07,2026-09-10,4,Licencia común,Otros
+E02076,P0229,2026-09-08,2026-09-08,1,Licencia común,Respiratorio
+E02077,P0289,2026-09-08,2026-10-19,30,Licencia común,Musculoesquelético
+E02078,P0359,2026-09-08,2026-09-30,17,Licencia común,Musculoesquelético
+E02079,P0399,2026-09-08,2026-09-08,1,Permiso administrativo,No aplica
+E02080,P0591,2026-09-08,2026-09-08,1,Licencia común,Musculoesquelético
+E02081,P0339,2026-09-09,2026-09-09,1,Permiso administrativo,No aplica
+E02082,P0532,2026-09-09,2026-09-09,1,Licencia común,Respiratorio
+E02083,P0728,2026-09-09,2026-09-09,1,Licencia común,Salud mental
+E02084,P0060,2026-09-10,2026-09-29,14,Licencia común,Otros
+E02085,P0077,2026-09-10,2026-09-14,3,Licencia común,Respiratorio
+E02086,P0092,2026-09-10,2026-09-10,1,Licencia común,Otros
+E02087,P0122,2026-09-10,2026-10-07,20,Licencia común,Otros
+E02088,P0285,2026-09-10,2026-09-23,10,Licencia común,Respiratorio
+E02089,P0559,2026-09-10,2026-09-14,3,Licencia común,Respiratorio
+E02090,P0604,2026-09-10,2026-09-28,13,Licencia común,Respiratorio
+E02091,P0085,2026-09-14,2026-09-15,2,Licencia común,Musculoesquelético
+E02092,P0097,2026-09-14,2026-09-18,5,Licencia común,Respiratorio
+E02093,P0154,2026-09-14,2026-09-24,9,Licencia común,Respiratorio
+E02094,P0193,2026-09-14,2026-10-02,15,Licencia común,Salud mental
+E02095,P0590,2026-09-14,2026-09-14,1,Permiso administrativo,No aplica
+E02096,P0680,2026-09-14,2026-09-14,1,Permiso administrativo,No aplica
+E02097,P0718,2026-09-14,2026-09-14,1,Permiso administrativo,No aplica
+E02098,P0783,2026-09-14,2026-09-15,2,Licencia común,Otros
+E02099,P0098,2026-09-15,2026-09-23,7,Licencia común,Otros
+E02100,P0251,2026-09-15,2026-09-15,1,Licencia común,Respiratorio
+E02101,P0342,2026-09-15,2026-09-15,1,Permiso administrativo,No aplica
+E02102,P0617,2026-09-15,2026-09-15,1,Licencia común,Salud mental
+E02103,P0086,2026-09-16,2026-09-22,5,Licencia común,Respiratorio
+E02104,P0326,2026-09-16,2026-10-01,12,Licencia común,Salud mental
+E02105,P0468,2026-09-16,2026-09-17,2,Licencia común,Respiratorio
+E02106,P0680,2026-09-16,2026-09-17,2,Licencia común,Respiratorio
+E02107,P0780,2026-09-16,2026-10-02,13,Licencia común,Otros
+E02108,P0783,2026-09-16,2026-09-23,6,Licencia común,Salud mental
+E02109,P0166,2026-09-17,2026-11-03,34,Licencia común,Otros
+E02110,P0419,2026-09-17,2026-09-30,10,Licencia común,Musculoesquelético
+E02111,P0493,2026-09-17,2026-09-17,1,Licencia común,Otros
+E02112,P0118,2026-09-18,2026-09-18,1,Permiso administrativo,No aplica
+E02113,P0278,2026-09-18,2026-09-22,3,Licencia común,Respiratorio
+E02114,P0339,2026-09-18,2026-09-23,4,Licencia común,Otros
+E02115,P0399,2026-09-18,2026-09-28,7,Licencia común,Otros
+E02116,P0454,2026-09-18,2026-10-05,12,Licencia común,Respiratorio
+E02117,P0728,2026-09-18,2026-09-18,1,Permiso administrativo,No aplica
+E02118,P0682,2026-09-21,2026-09-21,1,Licencia común,Musculoesquelético
+E02119,P0687,2026-09-21,2026-09-21,1,Licencia común,Respiratorio
+E02120,P0092,2026-09-22,2026-10-07,12,Licencia común,Otros
+E02121,P0174,2026-09-22,2026-09-23,2,Sin goce,No aplica
+E02122,P0303,2026-09-22,2026-09-23,2,Sin goce,No aplica
+E02123,P0319,2026-09-22,2026-09-22,1,Permiso administrativo,No aplica
+E02124,P0340,2026-09-22,2026-09-24,3,Licencia común,Musculoesquelético
+E02125,P0383,2026-09-22,2026-10-20,21,Licencia común,Salud mental
+E02126,P0583,2026-09-22,2026-10-09,14,Licencia común,Otros
+E02127,P0591,2026-09-22,2026-11-09,35,Licencia común,Salud mental
+E02128,P0748,2026-09-22,2026-09-24,3,Licencia común,Salud mental
+E02129,P0050,2026-09-23,2026-09-25,3,Licencia común,Respiratorio
+E02130,P0118,2026-09-23,2026-11-10,35,Licencia común,Salud mental
+E02131,P0218,2026-09-23,2026-10-01,7,Licencia común,Otros
+E02132,P0319,2026-09-23,2026-09-24,2,Licencia común,Respiratorio
+E02133,P0451,2026-09-23,2026-09-24,2,Licencia común,Respiratorio
+E02134,P0024,2026-09-24,2026-10-02,7,Licencia común,Respiratorio
+E02135,P0257,2026-09-24,2026-12-03,51,Licencia común,Salud mental
+E02136,P0300,2026-09-24,2026-10-01,6,Licencia común,Respiratorio
+E02137,P0314,2026-09-24,2026-10-21,20,Licencia común,Respiratorio
+E02138,P0646,2026-09-24,2026-09-25,2,Licencia común,Otros
+E02139,P0161,2026-09-25,2026-09-28,2,Licencia común,Otros
+E02140,P0317,2026-09-25,2026-10-01,5,Licencia común,Respiratorio
+E02141,P0162,2026-09-28,2026-10-07,8,Licencia común,Respiratorio
+E02142,P0229,2026-09-28,2026-10-27,22,Licencia común,Salud mental
+E02143,P0617,2026-09-28,2026-10-06,7,Licencia común,Otros
+E02144,P0777,2026-09-28,2026-11-06,30,Licencia común,Salud mental
+E02145,P0005,2026-09-29,2026-10-12,10,Licencia común,Respiratorio
+E02146,P0098,2026-09-29,2026-10-01,3,Licencia común,Respiratorio
+E02147,P0174,2026-09-29,2026-09-29,1,Licencia común,Otros
+E02148,P0223,2026-09-29,2026-09-30,2,Licencia común,Respiratorio
+E02149,P0319,2026-09-29,2026-12-01,46,Licencia común,Musculoesquelético
+E02150,P0639,2026-09-29,2026-09-29,1,Permiso administrativo,No aplica
+E02151,P0023,2026-09-30,2026-10-02,3,Licencia común,Otros
+E02152,P0048,2026-09-30,2026-10-14,11,Licencia común,Otros
+E02153,P0128,2026-09-30,2026-11-11,31,Licencia común,Salud mental
+E02154,P0348,2026-09-30,2026-10-01,2,Licencia común,Respiratorio
+E02155,P0464,2026-09-30,2026-09-30,1,Permiso administrativo,No aplica
+E02156,P0704,2026-09-30,2026-10-06,5,Licencia común,Respiratorio
+E02157,P0718,2026-09-30,2026-09-30,1,Permiso administrativo,No aplica
+E02158,P0795,2026-09-30,2026-10-13,10,Licencia común,Otros
+E02159,P0086,2026-10-01,2026-10-13,9,Licencia común,Musculoesquelético
+E02160,P0378,2026-10-01,2026-10-22,16,Licencia común,Musculoesquelético
+E02161,P0527,2026-10-01,2026-10-09,7,Licencia común,Respiratorio
+E02162,P0659,2026-10-01,2026-10-05,3,Licencia común,Otros
+E02163,P0698,2026-10-01,2026-10-28,20,Licencia común,Salud mental
+E02164,P0713,2026-10-01,2026-10-01,1,Permiso administrativo,No aplica
+E02165,P0779,2026-10-01,2026-10-05,3,Licencia común,Musculoesquelético
+E02166,P0299,2026-10-02,2026-10-07,4,Licencia común,Otros
+E02167,P0520,2026-10-02,2026-10-09,6,Licencia común,Otros
+E02168,P0186,2026-10-05,2026-10-05,1,Accidente laboral,No aplica
+E02169,P0262,2026-10-05,2026-10-09,5,Accidente laboral,No aplica
+E02170,P0515,2026-10-05,2026-10-15,9,Licencia común,Respiratorio
+E02171,P0311,2026-10-06,2026-10-08,3,Licencia común,Respiratorio
+E02172,P0656,2026-10-06,2026-10-06,1,Permiso administrativo,No aplica
+E02173,P0011,2026-10-07,2026-10-20,10,Licencia común,Musculoesquelético
+E02174,P0110,2026-10-07,2026-10-22,12,Licencia común,Respiratorio
+E02175,P0223,2026-10-07,2026-10-07,1,Permiso administrativo,No aplica
+E02176,P0339,2026-10-07,2026-10-08,2,Licencia común,Otros
+E02177,P0470,2026-10-07,2026-11-12,27,Licencia común,Salud mental
+E02178,P0641,2026-10-07,2026-10-08,2,Licencia común,Respiratorio
+E02179,P0673,2026-10-07,2026-10-30,18,Licencia común,Otros
+E02180,P0675,2026-10-07,2026-10-09,3,Licencia común,Respiratorio
+E02181,P0685,2026-10-07,2026-10-13,5,Licencia común,Respiratorio
+E02182,P0037,2026-10-08,2026-11-04,20,Licencia común,Musculoesquelético
+E02183,P0125,2026-10-08,2026-10-19,8,Licencia común,Otros
+E02184,P0302,2026-10-08,2026-10-21,10,Licencia común,Otros
+E02185,P0460,2026-10-08,2026-10-13,4,Licencia común,Musculoesquelético
+E02186,P0584,2026-10-08,2026-10-08,1,Permiso administrativo,No aplica
+E02187,P0650,2026-10-08,2026-10-16,7,Licencia común,Salud mental
+E02188,P0399,2026-10-09,2026-10-09,1,Sin goce,No aplica
+E02189,P0783,2026-10-09,2026-10-09,1,Licencia común,Musculoesquelético
+E02190,P0092,2026-10-12,2027-06-23,183,Licencia común,Salud mental
+E02191,P0094,2026-10-12,2026-10-12,1,Permiso administrativo,No aplica
+E02192,P0117,2026-10-12,2026-10-12,1,Permiso administrativo,No aplica
+E02193,P0345,2026-10-12,2026-11-18,28,Licencia común,Otros
+E02194,P0456,2026-10-12,2026-12-02,38,Licencia común,Salud mental
+E02195,P0476,2026-10-12,2026-12-08,42,Licencia común,Salud mental
+E02196,P0491,2026-10-12,2026-10-26,11,Licencia común,Respiratorio
+E02197,P0495,2026-10-12,2026-11-04,18,Licencia común,Respiratorio
+E02198,P0507,2026-10-12,2026-10-27,12,Licencia común,Salud mental
+E02199,P0527,2026-10-12,2026-10-21,8,Licencia común,Otros
+E02200,P0702,2026-10-12,2026-10-12,1,Licencia común,Respiratorio
+E02201,P0728,2026-10-12,2026-10-12,1,Licencia común,Otros
+E02202,P0028,2026-10-13,2026-10-21,7,Licencia común,Otros
+E02203,P0186,2026-10-13,2026-11-13,24,Accidente laboral,No aplica
+E02204,P0352,2026-10-13,2026-10-14,2,Sin goce,No aplica
+E02205,P0382,2026-10-13,2026-10-14,2,Licencia común,Musculoesquelético
+E02206,P0127,2026-10-14,2026-10-29,12,Licencia común,Respiratorio
+E02207,P0522,2026-10-14,2026-10-19,4,Licencia común,Respiratorio
+E02208,P0627,2026-10-14,2026-11-09,19,Licencia común,Otros
+E02209,P0630,2026-10-14,2026-11-02,14,Licencia común,Salud mental
+E02210,P0194,2026-10-15,2026-10-15,1,Licencia común,Respiratorio
+E02211,P0208,2026-10-15,2026-10-15,1,Permiso administrativo,No aplica
+E02212,P0404,2026-10-15,2026-10-19,3,Licencia común,Otros
+E02213,P0468,2026-10-15,2026-10-15,1,Licencia común,Otros
+E02214,P0520,2026-10-15,2026-10-19,3,Licencia común,Salud mental
+E02215,P0568,2026-10-15,2027-01-01,57,Licencia común,Salud mental
+E02216,P0732,2026-10-15,2026-10-22,6,Licencia común,Respiratorio
+E02217,P0800,2026-10-15,2026-10-15,1,Permiso administrativo,No aplica
+E02218,P0081,2026-10-16,2026-11-04,14,Licencia común,Respiratorio
+E02219,P0268,2026-10-16,2026-10-23,6,Licencia común,Musculoesquelético
+E02220,P0347,2026-10-16,2026-10-23,6,Licencia común,Otros
+E02221,P0542,2026-10-16,2026-10-16,1,Licencia común,Respiratorio
+E02222,P0461,2026-10-19,2026-10-19,1,Licencia común,Respiratorio
+E02223,P0641,2026-10-19,2026-11-24,27,Licencia común,Musculoesquelético
+E02224,P0697,2026-10-19,2026-11-13,20,Licencia común,Musculoesquelético
+E02225,P0780,2026-10-19,2026-10-19,1,Licencia común,Otros
+E02226,P0795,2026-10-19,2026-11-12,19,Licencia común,Respiratorio
+E02227,P0787,2026-10-20,2026-10-22,3,Licencia común,Musculoesquelético
+E02228,P0086,2026-10-21,2026-10-27,5,Licencia común,Musculoesquelético
+E02229,P0101,2026-10-21,2026-10-21,1,Permiso administrativo,No aplica
+E02230,P0461,2026-10-21,2026-10-30,8,Licencia común,Salud mental
+E02231,P0704,2026-10-21,2026-11-16,19,Licencia común,Salud mental
+E02232,P0048,2026-10-22,2026-10-22,1,Permiso administrativo,No aplica
+E02233,P0097,2026-10-22,2026-10-23,2,Licencia común,Musculoesquelético
+E02234,P0399,2026-10-22,2026-10-22,1,Licencia común,Salud mental
+E02235,P0490,2026-10-22,2026-10-26,3,Licencia común,Respiratorio
+E02236,P0595,2026-10-22,2026-11-10,14,Licencia común,Otros
+E02237,P0617,2026-10-22,2026-11-17,19,Licencia común,Salud mental
+E02238,P0620,2026-10-22,2026-10-22,1,Licencia común,Otros
+E02239,P0783,2026-10-22,2026-10-22,1,Licencia común,Respiratorio
+E02240,P0068,2026-10-23,2026-10-29,5,Licencia común,Salud mental
+E02241,P0468,2026-10-23,2026-10-23,1,Permiso administrativo,No aplica
+E02242,P0802,2026-10-23,2026-10-27,3,Licencia común,Otros
+E02243,P0174,2026-10-26,2026-10-26,1,Permiso administrativo,No aplica
+E02244,P0281,2026-10-26,2026-10-28,3,Licencia común,Salud mental
+E02245,P0541,2026-10-26,2026-10-26,1,Permiso administrativo,No aplica
+E02246,P0602,2026-10-26,2026-11-04,8,Licencia común,Otros
+E02247,P0780,2026-10-26,2026-10-26,1,Permiso administrativo,No aplica
+E02248,P0785,2026-10-26,2026-11-17,17,Licencia común,Musculoesquelético
+E02249,P0789,2026-10-26,2026-11-03,7,Licencia común,Otros
+E02250,P0386,2026-10-27,2026-10-28,2,Licencia común,Respiratorio
+E02251,P0428,2026-10-27,2026-11-11,12,Licencia común,Salud mental
+E02252,P0625,2026-10-27,2026-10-30,4,Licencia común,Otros
+E02253,P0685,2026-10-27,2026-11-10,11,Licencia común,Otros
+E02254,P0728,2026-10-27,2026-11-19,18,Licencia común,Otros
+E02255,P0155,2026-10-28,2026-10-28,1,Permiso administrativo,No aplica
+E02256,P0390,2026-10-28,2026-10-28,1,Permiso administrativo,No aplica
+E02257,P0542,2026-10-28,2026-10-29,2,Licencia común,Respiratorio
+E02258,P0718,2026-10-28,2026-10-29,2,Licencia común,Otros
+E02259,P0802,2026-10-28,2026-10-28,1,Licencia común,Respiratorio
+E02260,P0275,2026-10-29,2027-01-05,49,Licencia común,Salud mental
+E02261,P0300,2026-10-30,2026-11-17,13,Licencia común,Salud mental
+E02262,P0011,2026-11-02,2026-11-05,4,Licencia común,Respiratorio
+E02263,P0079,2026-11-02,2026-11-02,1,Permiso administrativo,No aplica
+E02264,P0396,2026-11-02,2026-12-10,29,Licencia común,Respiratorio
+E02265,P0607,2026-11-02,2026-11-27,20,Licencia común,Musculoesquelético
+E02266,P0702,2026-11-02,2026-11-23,16,Licencia común,Otros
+E02267,P0780,2026-11-02,2026-12-22,37,Licencia común,Salud mental
+E02268,P0490,2026-11-03,2026-11-05,3,Licencia común,Musculoesquelético
+E02269,P0716,2026-11-03,2026-11-12,8,Licencia común,Respiratorio
+E02270,P0542,2026-11-04,2026-11-06,3,Licencia común,Musculoesquelético
+E02271,P0630,2026-11-04,2026-11-04,1,Permiso administrativo,No aplica
+E02272,P0698,2026-11-04,2026-11-13,8,Licencia común,Otros
+E02273,P0700,2026-11-04,2026-11-17,10,Licencia común,Respiratorio
+E02274,P0218,2026-11-05,2026-11-16,8,Accidente laboral,No aplica
+E02275,P0468,2026-11-05,2026-11-24,14,Licencia común,Respiratorio
+E02276,P0678,2026-11-05,2027-01-29,62,Licencia común,Salud mental
+E02277,P0789,2026-11-05,2026-11-05,1,Licencia común,Respiratorio
+E02278,P0800,2026-11-05,2026-11-10,4,Licencia común,Otros
+E02279,P0298,2026-11-06,2026-11-09,2,Licencia común,Otros
+E02280,P0526,2026-11-06,2026-11-12,5,Licencia común,Otros
+E02281,P0761,2026-11-06,2026-11-06,1,Permiso administrativo,No aplica
+E02282,P0326,2026-11-09,2026-11-13,5,Licencia común,Otros
+E02283,P0451,2026-11-09,2026-11-17,7,Licencia común,Musculoesquelético
+E02284,P0496,2026-11-09,2026-11-16,6,Licencia común,Otros
+E02285,P0739,2026-11-09,2026-12-14,26,Licencia común,Musculoesquelético
+E02286,P0761,2026-11-09,2026-11-09,1,Licencia común,Otros
+E02287,P0789,2026-11-09,2026-11-11,3,Licencia común,Respiratorio
+E02288,P0036,2026-11-10,2026-11-10,1,Licencia común,Otros
+E02289,P0101,2026-11-11,2026-11-17,5,Licencia común,Musculoesquelético
+E02290,P0337,2026-11-11,2026-11-23,9,Licencia común,Musculoesquelético
+E02291,P0625,2026-11-11,2026-11-12,2,Licencia común,Otros
+E02292,P0128,2026-11-12,2026-11-19,6,Licencia común,Otros
+E02293,P0366,2026-11-12,2026-11-12,1,Permiso administrativo,No aplica
+E02294,P0393,2026-11-12,2026-11-26,11,Licencia común,Otros
+E02295,P0461,2026-11-12,2026-11-12,1,Licencia común,Respiratorio
+E02296,P0050,2026-11-13,2027-01-20,49,Licencia común,Salud mental
+E02297,P0190,2026-11-13,2026-11-17,3,Licencia común,Musculoesquelético
+E02298,P0352,2026-11-13,2026-12-02,14,Licencia común,Otros
+E02299,P0527,2026-11-13,2026-12-01,13,Licencia común,Otros
+E02300,P0721,2026-11-13,2026-11-13,1,Permiso administrativo,No aplica
+E02301,P0081,2026-11-16,2026-11-18,3,Licencia común,Otros
+E02302,P0316,2026-11-16,2026-12-07,16,Licencia común,Respiratorio
+E02303,P0335,2026-11-16,2027-02-01,56,Licencia común,Salud mental
+E02304,P0390,2026-11-16,2026-11-23,6,Licencia común,Musculoesquelético
+E02305,P0591,2026-11-16,2026-11-23,6,Licencia común,Respiratorio
+E02306,P0642,2026-11-16,2026-11-19,4,Licencia común,Respiratorio
+E02307,P0697,2026-11-16,2026-11-18,3,Licencia común,Respiratorio
+E02308,P0748,2026-11-16,2026-11-25,8,Licencia común,Otros
+E02309,P0796,2026-11-16,2026-12-08,17,Licencia común,Musculoesquelético
+E02310,P0311,2026-11-17,2026-11-18,2,Licencia común,Respiratorio
+E02311,P0604,2026-11-17,2026-12-01,11,Licencia común,Musculoesquelético
+E02312,P0657,2026-11-17,2026-11-19,3,Licencia común,Respiratorio
+E02313,P0761,2026-11-17,2026-11-19,3,Licencia común,Respiratorio
+E02314,P0326,2026-11-18,2026-12-28,29,Licencia común,Salud mental
+E02315,P0451,2026-11-18,2026-11-18,1,Permiso administrativo,No aplica
+E02316,P0473,2026-11-18,2026-11-24,5,Licencia común,Musculoesquelético
+E02317,P0546,2026-11-18,2026-11-24,5,Licencia común,Respiratorio
+E02318,P0789,2026-11-18,2026-11-18,1,Licencia común,Respiratorio
+E02319,P0209,2026-11-19,2026-11-23,3,Licencia común,Otros
+E02320,P0376,2026-11-19,2026-11-20,2,Licencia común,Otros
+E02321,P0025,2026-11-20,2026-11-24,3,Licencia común,Respiratorio
+E02322,P0377,2026-11-20,2026-12-04,11,Licencia común,Musculoesquelético
+E02323,P0582,2026-11-20,2026-12-01,8,Accidente laboral,No aplica
+E02324,P0700,2026-11-20,2026-12-14,17,Licencia común,Musculoesquelético
+E02325,P0024,2026-11-23,2026-11-23,1,Licencia común,Otros
+E02326,P0461,2026-11-23,2026-11-30,6,Licencia común,Salud mental
+E02327,P0170,2026-11-24,2026-11-24,1,Permiso administrativo,No aplica
+E02328,P0802,2026-11-24,2026-11-30,5,Licencia común,Musculoesquelético
+E02329,P0339,2026-11-25,2026-12-10,12,Accidente laboral,No aplica
+E02330,P0348,2026-11-25,2027-01-11,34,Licencia común,Musculoesquelético
+E02331,P0490,2026-11-25,2026-12-14,14,Licencia común,Respiratorio
+E02332,P0522,2026-11-25,2026-11-26,2,Licencia común,Respiratorio
+E02333,P0641,2026-11-25,2026-11-30,4,Licencia común,Salud mental
+E02334,P0704,2026-11-25,2026-12-14,14,Licencia común,Musculoesquelético
+E02335,P0719,2026-11-25,2026-12-11,13,Licencia común,Musculoesquelético
+E02336,P0746,2026-11-25,2026-12-14,14,Licencia común,Musculoesquelético
+E02337,P0799,2026-11-25,2026-11-27,3,Licencia común,Musculoesquelético
+E02338,P0416,2026-11-26,2026-11-26,1,Licencia común,Respiratorio
+E02339,P0451,2026-11-26,2026-11-30,3,Licencia común,Respiratorio
+E02340,P0542,2026-11-26,2026-12-01,4,Licencia común,Salud mental
+E02341,P0617,2026-11-26,2026-12-04,7,Sin goce,No aplica
+E02342,P0647,2026-11-26,2026-11-26,1,Permiso administrativo,No aplica
+E02343,P0783,2026-11-26,2026-12-02,5,Licencia común,Respiratorio
+E02344,P0561,2026-11-27,2026-12-08,8,Licencia común,Otros
+E02345,P0591,2026-11-27,2026-11-27,1,Permiso administrativo,No aplica
+E02346,P0759,2026-11-27,2026-11-27,1,Licencia común,Musculoesquelético
+E02347,P0023,2026-11-30,2026-12-02,3,Licencia común,Otros
+E02348,P0330,2026-11-30,2026-12-14,11,Licencia común,Respiratorio
+E02349,P0559,2026-11-30,2026-12-07,6,Licencia común,Otros
+E02350,P0630,2026-11-30,2026-11-30,1,Sin goce,No aplica
+E02351,P0702,2026-11-30,2026-12-07,6,Licencia común,Otros
+E02352,P0721,2026-11-30,2026-11-30,1,Permiso administrativo,No aplica
+E02353,P0068,2026-12-01,2026-12-15,11,Licencia común,Musculoesquelético
+E02354,P0418,2026-12-01,2026-12-01,1,Permiso administrativo,No aplica
+E02355,P0382,2026-12-02,2026-12-09,6,Licencia común,Respiratorio
+E02356,P0464,2026-12-02,2026-12-09,6,Licencia común,Respiratorio
+E02357,P0776,2026-12-02,2026-12-08,5,Licencia común,Musculoesquelético
+E02358,P0082,2026-12-03,2026-12-03,1,Permiso administrativo,No aplica
+E02359,P0369,2026-12-03,2026-12-29,19,Accidente laboral,No aplica
+E02360,P0422,2026-12-03,2026-12-24,16,Licencia común,Otros
+E02361,P0468,2026-12-03,2026-12-03,1,Permiso administrativo,No aplica
+E02362,P0783,2026-12-03,2026-12-04,2,Licencia común,Respiratorio
+E02363,P0802,2026-12-03,2026-12-08,4,Licencia común,Respiratorio
+E02364,P0122,2026-12-04,2026-12-04,1,Permiso administrativo,No aplica
+E02365,P0154,2026-12-04,2026-12-16,9,Licencia común,Musculoesquelético
+E02366,P0174,2026-12-04,2026-12-04,1,Permiso administrativo,No aplica
+E02367,P0728,2026-12-04,2026-12-16,9,Licencia común,Musculoesquelético
+E02368,P0770,2026-12-04,2026-12-04,1,Permiso administrativo,No aplica
+E02369,P0085,2026-12-07,2026-12-18,10,Licencia común,Respiratorio
+E02370,P0693,2026-12-07,2026-12-08,2,Licencia común,Respiratorio
+E02371,P0025,2026-12-08,2027-01-14,28,Licencia común,Musculoesquelético
+E02372,P0118,2026-12-08,2026-12-09,2,Licencia común,Otros
+E02373,P0399,2026-12-08,2026-12-15,6,Licencia común,Respiratorio
+E02374,P0547,2026-12-08,2026-12-24,13,Licencia común,Otros
+E02375,P0630,2026-12-08,2026-12-18,9,Licencia común,Musculoesquelético
+E02376,P0080,2026-12-09,2026-12-10,2,Licencia común,Respiratorio
+E02377,P0636,2026-12-09,2026-12-11,3,Licencia común,Respiratorio
+E02378,P0229,2026-12-10,2026-12-11,2,Licencia común,Respiratorio
+E02379,P0345,2026-12-10,2026-12-10,1,Permiso administrativo,No aplica
+E02380,P0468,2026-12-10,2026-12-16,5,Licencia común,Musculoesquelético
+E02381,P0698,2026-12-10,2026-12-14,3,Sin goce,No aplica
+E02382,P0713,2026-12-10,2026-12-14,3,Licencia común,Salud mental
+E02383,P0339,2026-12-11,2026-12-15,3,Licencia común,Respiratorio
+E02384,P0382,2026-12-11,2026-12-11,1,Licencia común,Respiratorio
+E02385,P0461,2026-12-11,2026-12-14,2,Licencia común,Respiratorio
+E02386,P0020,2026-12-14,2026-12-30,13,Licencia común,Salud mental
+E02387,P0077,2026-12-14,2026-12-14,1,Permiso administrativo,No aplica
+E02388,P0194,2026-12-14,2026-12-17,4,Licencia común,Respiratorio
+E02389,P0425,2026-12-14,2026-12-21,6,Licencia común,Otros
+E02390,P0680,2026-12-14,2026-12-14,1,Permiso administrativo,No aplica
+E02391,P0060,2026-12-15,2027-01-01,14,Licencia común,Otros
+E02392,P0269,2026-12-15,2026-12-30,12,Licencia común,Respiratorio
+E02393,P0289,2026-12-15,2026-12-18,4,Sin goce,No aplica
+E02394,P0340,2026-12-15,2027-01-19,26,Licencia común,Musculoesquelético
+E02395,P0366,2026-12-15,2027-02-25,53,Licencia común,Musculoesquelético
+E02396,P0591,2026-12-15,2026-12-17,3,Licencia común,Respiratorio
+E02397,P0086,2026-12-16,2026-12-22,5,Licencia común,Respiratorio
+E02398,P0461,2026-12-16,2026-12-18,3,Licencia común,Otros
+E02399,P0811,2026-12-16,2026-12-25,8,Licencia común,Otros
+E02400,P0807,2026-12-17,2027-01-08,17,Licencia común,Salud mental
+E02401,P0019,2026-12-18,2026-12-29,8,Licencia común,Respiratorio
+E02402,P0406,2026-12-18,2026-12-21,2,Licencia común,Respiratorio
+E02403,P0211,2026-12-21,2026-12-25,5,Licencia común,Otros
+E02404,P0368,2026-12-21,2026-12-30,8,Licencia común,Otros
+E02405,P0410,2026-12-21,2026-12-22,2,Licencia común,Respiratorio
+E02406,P0590,2026-12-21,2026-12-21,1,Licencia común,Respiratorio
+E02407,P0702,2026-12-21,2027-01-18,21,Licencia común,Otros
+E02408,P0016,2026-12-22,2027-01-15,19,Licencia común,Otros
+E02409,P0116,2026-12-22,2026-12-23,2,Licencia común,Salud mental
+E02410,P0345,2026-12-22,2027-01-13,17,Licencia común,Musculoesquelético
+E02411,P0425,2026-12-22,2026-12-24,3,Licencia común,Otros
+E02412,P0693,2026-12-22,2026-12-23,2,Licencia común,Otros
+E02413,P0021,2026-12-23,2026-12-23,1,Licencia común,Respiratorio
+E02414,P0047,2026-12-23,2027-06-08,120,Licencia parental,No aplica
+E02415,P0192,2026-12-23,2026-12-28,4,Licencia común,Otros
+E02416,P0581,2026-12-23,2026-12-23,1,Permiso administrativo,No aplica
+E02417,P0622,2026-12-23,2027-01-14,17,Licencia común,Salud mental
+E02418,P0803,2026-12-23,2027-01-07,12,Licencia común,Otros
+E02419,P0317,2026-12-24,2027-02-22,43,Licencia común,Salud mental
+E02420,P0600,2026-12-24,2026-12-24,1,Permiso administrativo,No aplica
+E02421,P0783,2026-12-24,2027-03-05,52,Licencia común,Salud mental
+E02422,P0794,2026-12-24,2026-12-30,5,Licencia común,Otros
+E02423,P0229,2026-12-25,2027-01-08,11,Licencia común,Respiratorio
+E02424,P0630,2026-12-25,2026-12-28,2,Licencia común,Respiratorio
+E02425,P0680,2026-12-25,2026-12-28,2,Licencia común,Musculoesquelético
+E02426,P0761,2026-12-25,2026-12-29,3,Licencia común,Respiratorio
+E02427,P0122,2026-12-28,2026-12-31,4,Accidente laboral,No aplica
+E02428,P0174,2026-12-28,2027-03-05,50,Licencia común,Salud mental
+E02429,P0337,2026-12-28,2026-12-28,1,Licencia común,Respiratorio
+E02430,P0410,2026-12-28,2027-01-21,19,Licencia común,Musculoesquelético
+E02431,P0741,2026-12-28,2027-01-15,15,Licencia común,Salud mental
+E02432,P0365,2026-12-29,2026-12-31,3,Licencia común,Respiratorio
+E02433,P0561,2026-12-29,2026-12-29,1,Permiso administrativo,No aplica
+E02434,P0021,2026-12-30,2027-01-06,6,Licencia común,Musculoesquelético
+E02435,P0026,2026-12-30,2027-03-30,65,Licencia común,Salud mental
+E02436,P0036,2026-12-30,2027-01-05,5,Licencia común,Respiratorio
+E02437,P0490,2026-12-30,2027-01-04,4,Licencia común,Respiratorio
+E02438,P0520,2026-12-30,2027-03-04,47,Licencia común,Salud mental
+E02439,P0591,2026-12-30,2027-01-13,11,Licencia común,Otros
+E02440,P0597,2026-12-30,2027-01-07,7,Sin goce,No aplica
+E02441,P0648,2026-12-30,2026-12-31,2,Licencia común,Otros
+E02442,P0023,2026-12-31,2026-12-31,1,Permiso administrativo,No aplica
+E02443,P0075,2026-12-31,2027-01-13,10,Licencia común,Otros
+E02444,P0278,2026-12-31,2026-12-31,1,Licencia común,Respiratorio
+E02445,P0412,2026-12-31,2027-01-12,9,Licencia común,Otros
+E02446,P0413,2026-12-31,2027-02-08,28,Licencia común,Musculoesquelético
+E02447,P0655,2026-12-31,2026-12-31,1,Licencia común,Respiratorio
+E02448,P0780,2026-12-31,2027-01-18,13,Licencia común,Otros

@@ -1,0 +1,55 @@
+/// Parámetro de campo: el visitante elige la dimensión con la que se compara la tasa de ausentismo.
+table 'Comparar por'
+	lineageTag: 5bea42a7-2de0-5314-8081-47cbc2fcc2cc
+
+	column 'Comparar por'
+		dataType: string
+		lineageTag: 67451732-a4df-5a51-97d7-87bec0d84aae
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Comparar por Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Comparar por Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comparar por Campos'
+		dataType: string
+		isHidden
+		lineageTag: a193c41d-3338-5142-a54f-431a37454399
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Comparar por Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comparar por Orden'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 99b1f815-2bf2-5493-baa1-601f7867c0dc
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Comparar por' = calculated
+		mode: import
+		source =
+				{
+				    ("Clínica", NAMEOF('clinicas'[clinica]), 0),
+				    ("Unidad", NAMEOF('unidades'[unidad]), 1),
+				    ("Estamento", NAMEOF('estamentos'[estamento]), 2),
+				    ("Sexo", NAMEOF('personas'[sexo]), 3),
+				    ("Tramo de edad", NAMEOF('personas'[tramo_edad]), 4),
+				    ("Antigüedad", NAMEOF('personas'[tramo_antiguedad]), 5)
+				}
+
+	annotation PBI_ResultType = Table
