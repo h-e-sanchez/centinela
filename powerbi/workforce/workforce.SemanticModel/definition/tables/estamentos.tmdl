@@ -1,0 +1,72 @@
+/// Dimensión: estamentos con su valor hora y los factores de costo de cada modalidad de cobertura.
+table estamentos
+	lineageTag: f2fa5c34-8675-55af-8613-5173892d7297
+
+	column estamento
+		dataType: string
+		lineageTag: c1d87c30-ee4a-5fba-993d-25deccb9c581
+		summarizeBy: none
+		sourceColumn: estamento
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 51bcc398-2bd0-5aff-826b-d90de2b87f6a
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_hora
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 184cb585-d395-5e70-a598-a348017ffcae
+		summarizeBy: none
+		sourceColumn: valor_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_sobretiempo
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: f69a819b-2624-548e-9d10-03829040774f
+		summarizeBy: none
+		sourceColumn: factor_sobretiempo
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_pool
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 4101dfde-c74b-5492-883d-77072ae3cc9d
+		summarizeBy: none
+		sourceColumn: factor_pool
+
+		annotation SummarizationSetBy = Automatic
+
+	column factor_externo
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 5896fff9-e3cc-5854-be8c-430004ab4dc2
+		summarizeBy: none
+		sourceColumn: factor_externo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition estamentos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("estamentos.csv", {{"estamento", type text}, {"orden", Int64.Type}, {"valor_hora", Int64.Type}, {"factor_sobretiempo", type number}, {"factor_pool", type number}, {"factor_externo", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

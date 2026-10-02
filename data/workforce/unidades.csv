@@ -1,0 +1,7 @@
+unidad,orden,requiere_cobertura
+Urgencia,1,0.95
+Hospitalización,2,0.95
+Pabellón,3,0.9
+UCI,4,1.0
+Ambulatorio,5,0.6
+Apoyo,6,0.2

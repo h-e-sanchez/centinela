@@ -1,0 +1,30 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","personas","episodios","ausencia_diaria","disponibilidad_mensual","cobertura","pronostico","clinicas","unidades","estamentos"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table personas
+ref table episodios
+ref table ausencia_diaria
+ref table disponibilidad_mensual
+ref table cobertura
+ref table pronostico
+ref table clinicas
+ref table unidades
+ref table estamentos
+ref table Calendario
+ref table 'Tramos Bradford'
+ref table 'Comparar por'
+
+ref cultureInfo es-CL

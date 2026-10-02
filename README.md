@@ -66,6 +66,9 @@ pip install -r requirements.txt -r requirements-dev.txt
 # Regenerar los descargables de la vitrina (requiere openpyxl, en requirements-dev.txt)
 python herramientas/empaquetar_descargas.py
 
+# Datos sintéticos del reporte Workforce (red de clínicas ficticia, 2025-2026 y pronóstico 2027)
+python data/generar_workforce.py
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -93,6 +96,12 @@ recalcula ese reporte en el navegador y muestra la medida DAX de cada visual, le
 desde el TMDL. El reporte interactivo se publica con "Publicar en la Web" (solo datos
 sintéticos) y queda incrustado en esa misma página. Detalle y pasos en
 [`docs/how-to-pbi.md`](docs/how-to-pbi.md).
+
+El reporte #2, **Workforce** ([`powerbi/workforce/`](powerbi/workforce/)), aplica el mismo
+enfoque a People Analytics: dotación y rotación, los tres índices de ausentismo de la Dipres,
+Factor Bradford, costo de cobertura con un piloto evaluado contra un grupo de control y
+pronóstico 2027 con credibilidad de Bühlmann-Straub. Guía en
+[`reportes/workforce/guia.md`](reportes/workforce/guia.md).
 
 ## Demo
 
