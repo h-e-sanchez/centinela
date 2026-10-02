@@ -7,6 +7,7 @@ y el semáforo, solo sobre presupuesto-vs-real.
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 from pathlib import Path
@@ -14,6 +15,9 @@ from pathlib import Path
 import pytest
 
 RAIZ = Path(__file__).resolve().parent.parent
+_spec = importlib.util.spec_from_file_location("industria_inicial", RAIZ / "herramientas" / "industria_inicial.py")
+industria_inicial = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(industria_inicial)
 PROYECTOS = sorted(p.parent for p in (RAIZ / "powerbi").glob("*/*.pbip"))
 IDS = [p.name for p in PROYECTOS]
 PBI = RAIZ / "powerbi" / "presupuesto-vs-real"
@@ -140,16 +144,32 @@ def _parametros_de_campo(proyecto: Path) -> set[str]:
     return tablas
 
 
+def _valores_guardados(visual: dict) -> list:
+    valores = []
+    for entrada in visual.get("objects", {}).get("general", []):
+        filtro = entrada.get("properties", {}).get("filter")
+        if filtro:
+            for cond in filtro["filter"]["Where"]:
+                valores += [v[0]["Literal"]["Value"] for v in cond["Condition"]["In"]["Values"]]
+    return valores
+
+
 @pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
 def test_segmentadores_sin_seleccion_guardada(proyecto):
     # Un reporte público debe abrir en "Todas": una selección guardada en Desktop lo publica filtrado.
-    # Excepción: un parámetro de campo necesita una opción elegida para que el visual muestre una sola dimensión.
+    # Excepciones: un parámetro de campo necesita una opción elegida para que el visual muestre una sola
+    # dimensión, y los segmentadores de industria abren en la industria común de la vitrina.
     parametros = _parametros_de_campo(proyecto)
     for ruta in _visuales(proyecto):
         visual = json.loads(ruta.read_text(encoding="utf-8"))["visual"]
         if visual["visualType"] != "slicer":
             continue
-        if {t for _, t, _ in _campos(visual["query"])} <= parametros:
+        campos = list(_campos(visual["query"]))
+        if {t for _, t, _ in campos} <= parametros:
             continue
-        for entrada in visual.get("objects", {}).get("general", []):
-            assert "filter" not in entrada.get("properties", {}), f"{ruta.parent.name}: segmentador con selección guardada"
+        valores = _valores_guardados(visual)
+        if {p for _, _, p in campos} <= industria_inicial.COLUMNAS_INDUSTRIA:
+            assert valores == [f"'{industria_inicial.INDUSTRIA_INICIAL}'"], \
+                f"{ruta.parent.name}: industria debe abrir en {industria_inicial.INDUSTRIA_INICIAL}"
+        else:
+            assert not valores, f"{ruta.parent.name}: segmentador con selección guardada"
