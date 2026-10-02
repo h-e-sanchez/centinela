@@ -1,0 +1,62 @@
+/// Tramos del Factor Bradford para el histograma (tabla desconectada).
+table 'Tramos Bradford'
+	lineageTag: 6c0f0166-7f31-5f0d-af90-4384d4aed8ad
+
+	column tramo
+		dataType: string
+		lineageTag: 1a1d8695-0d3b-5993-be0d-725ede0f8e95
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [tramo]
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column desde
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 37e2a958-e548-501c-b4b6-535cd5843e57
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [desde]
+
+		annotation SummarizationSetBy = Automatic
+
+	column hasta
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c04036a1-5ec3-5939-aa58-69d5425558ae
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [hasta]
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3a30bf0b-3bb9-5ae3-9a34-37015b27845f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tramos Bradford' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "tramo", STRING, "desde", INTEGER, "hasta", INTEGER, "orden", INTEGER,
+				    {
+				        {"Sin ausencias", 0, 0, 1},
+				        {"1 a 50", 1, 50, 2},
+				        {"51 a 200", 51, 200, 3},
+				        {"201 a 500", 201, 500, 4},
+				        {"Más de 500", 501, 999999, 5}
+				    }
+				)
+
+	annotation PBI_ResultType = Table

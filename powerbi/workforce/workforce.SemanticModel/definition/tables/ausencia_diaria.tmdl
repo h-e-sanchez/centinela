@@ -1,0 +1,118 @@
+/// Una fila por persona y día hábil ausente, con el tipo y diagnóstico de su episodio.
+table ausencia_diaria
+	lineageTag: 64d1ee09-f7a8-52c8-b057-870c3b3a6258
+
+	/// Días hábiles ausentes, sin licencias parentales (criterio de la Dipres).
+	measure 'Días perdidos' = CALCULATE(COUNTROWS(ausencia_diaria), KEEPFILTERS(ausencia_diaria[tipo] <> "Licencia parental"))
+		formatString: #,##0
+		displayFolder: 2. Ausentismo
+		lineageTag: 9fff6855-a059-5f08-aa03-1c0e7d81590d
+
+	/// Todos los días hábiles ausentes, incluidas las licencias parentales.
+	measure 'Días perdidos con parentales' = COUNTROWS(ausencia_diaria)
+		formatString: #,##0
+		displayFolder: 2. Ausentismo
+		lineageTag: a49e9ecf-94f5-5db0-9de3-67345503e276
+
+	/// Horas de jornada perdidas, sin licencias parentales.
+	measure 'Horas perdidas' = CALCULATE(SUM(ausencia_diaria[horas]), KEEPFILTERS(ausencia_diaria[tipo] <> "Licencia parental"))
+		formatString: #,##0
+		displayFolder: 2. Ausentismo
+		lineageTag: 6d5e2ac5-4899-5fd4-9614-2a64ec3f9623
+
+	/// Días perdidos sobre días disponibles (tasa global de ausentismo de la Dipres).
+	measure 'Tasa global %' = DIVIDE([Días perdidos], [Días disponibles])
+		formatString: 0.0%
+		displayFolder: 2. Ausentismo
+		lineageTag: 38e819e4-803a-5cb0-9d3c-7ebba07f3491
+
+	/// Tasa global del sector Salud público en 2023 (Dipres, 2024): referencia de contexto, no meta.
+	measure 'Referencia Dipres salud' = 0.108
+		formatString: 0.0%
+		displayFolder: 2. Ausentismo
+		lineageTag: 7042cc67-8684-51e9-bc7c-7103457d3461
+
+	/// Fondo del mapa de calor: más oscuro cuanto más alta la tasa.
+	measure 'Color tasa' =
+			VAR t = [Tasa global %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(t), "#FFFFFF",
+			        t >= 0.10, "#D98C7A",
+			        t >= 0.075, "#E8C27E",
+			        t >= 0.05, "#F3E6C8",
+			        "#FBFAF7"
+			    )
+		displayFolder: 2. Ausentismo
+		lineageTag: 65b73c21-22fb-5d42-841a-bc95be9ac02f
+
+	column fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 9096c956-30ff-5bea-8f66-09c36e42668e
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_persona
+		dataType: string
+		isHidden
+		lineageTag: e55ae04b-208e-5e78-8818-e2287cd339d9
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_episodio
+		dataType: string
+		isHidden
+		lineageTag: 9d60ed8f-19aa-5006-9e0f-64bfa362a45a
+		summarizeBy: none
+		sourceColumn: id_episodio
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 44b6d7a8-1243-5f07-8b89-1a584d27f025
+		summarizeBy: none
+		sourceColumn: horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 811e8bcf-95a3-5d08-aebe-639a2fc9127d
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_diagnostico
+		dataType: string
+		lineageTag: ded5fb0d-555d-5a76-b0b0-c4e65068d98e
+		summarizeBy: none
+		sourceColumn: grupo_diagnostico
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ausencia_diaria = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("ausencia_diaria.csv", {{"fecha", type date}, {"id_persona", type text}, {"id_episodio", type text}, {"horas", type number}}),
+				    // Tipo y diagnóstico del episodio, para filtrar los días sin relacionar esta tabla con episodios.
+				    Episodios = Table.SelectColumns(LeerCsv("episodios.csv", {{"id_episodio", type text}, {"tipo", type text}, {"grupo_diagnostico", type text}}), {"id_episodio", "tipo", "grupo_diagnostico"}),
+				    Unido = Table.NestedJoin(Origen, {"id_episodio"}, Episodios, {"id_episodio"}, "ep", JoinKind.LeftOuter),
+				    Expandido = Table.ExpandTableColumn(Unido, "ep", {"tipo", "grupo_diagnostico"}),
+				    Tipado = Table.TransformColumnTypes(Expandido, {{"tipo", type text}, {"grupo_diagnostico", type text}})
+				in
+				    Tipado
+
+	annotation PBI_ResultType = Table

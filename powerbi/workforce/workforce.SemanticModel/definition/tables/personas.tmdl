@@ -1,0 +1,298 @@
+/// Una fila por persona (IDs sintéticos, sin nombres): atributos, ingreso y egreso.
+table personas
+	lineageTag: 24bc5f3e-0609-5b50-b04d-8915e8ca49c8
+
+	/// Último día con datos reales (31-12-2026). Lo posterior es pronóstico.
+	measure 'Fecha de corte' = EOMONTH(CALCULATE(MAX(disponibilidad_mensual[fecha]), REMOVEFILTERS()), 0)
+		formatString: Short Date
+		displayFolder: 0. Auxiliares
+		lineageTag: 62262772-61fa-50b9-9ffe-552a5b577cc9
+
+	/// Fin del periodo filtrado, sin pasar de la fecha de corte.
+	measure 'Fecha de análisis' =
+			VAR fin = MAX(Calendario[Date])
+			VAR corte = [Fecha de corte]
+			RETURN IF(fin > corte, corte, fin)
+		formatString: Short Date
+		displayFolder: 0. Auxiliares
+		lineageTag: 294b32c5-1b3c-553f-80f6-b70b1fb531ee
+
+	/// Meses con datos reales dentro del periodo filtrado (para anualizar).
+	measure 'Meses en periodo' =
+			VAR corte = [Fecha de corte]
+			RETURN COUNTROWS(FILTER(VALUES(Calendario[FinMes]), Calendario[FinMes] <= corte))
+		formatString: 0
+		displayFolder: 0. Auxiliares
+		lineageTag: 240702ed-3794-565b-80db-feeabffb3517
+
+	/// Personas contratadas al cierre del periodo (patrón de fechas de ingreso y egreso).
+	measure 'Dotación' =
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    IF(
+			        MIN(Calendario[Date]) <= [Fecha de corte],
+			        COUNTROWS(
+			            FILTER(personas, personas[fecha_ingreso] <= fin && (ISBLANK(personas[fecha_egreso]) || personas[fecha_egreso] > fin))
+			        )
+			    )
+		formatString: #,##0
+		displayFolder: 1. Dotación
+		lineageTag: 0e58eae0-46f7-595f-a2f9-3035a969624a
+
+	/// Promedio de la dotación de cierre de cada mes del periodo.
+	measure 'Dotación promedio' =
+			VAR corte = [Fecha de corte]
+			RETURN
+			    AVERAGEX(
+			        FILTER(VALUES(Calendario[FinMes]), Calendario[FinMes] <= corte),
+			        VAR f = Calendario[FinMes]
+			        RETURN COUNTROWS(FILTER(personas, personas[fecha_ingreso] <= f && (ISBLANK(personas[fecha_egreso]) || personas[fecha_egreso] > f)))
+			    )
+		formatString: #,##0.0
+		displayFolder: 1. Dotación
+		lineageTag: 898542c8-e2a8-552e-a45f-a5040535ef5f
+
+	/// Dotación con signo negativo para hombres: dibuja la pirámide de edad en un gráfico de barras.
+	measure 'Dotación (pirámide)' =
+			VAR d = [Dotación]
+			RETURN IF(SELECTEDVALUE(personas[sexo]) = "Hombre", -d, d)
+		formatString: #,##0;#,##0
+		displayFolder: 1. Dotación
+		lineageTag: 09e938ce-213d-5120-b3a5-8f172489879c
+
+	/// Personas que ingresan en el periodo.
+	measure Contrataciones =
+			VAR ini = MIN(Calendario[Date])
+			VAR fin = MAX(Calendario[Date])
+			RETURN COUNTROWS(FILTER(personas, personas[fecha_ingreso] >= ini && personas[fecha_ingreso] <= fin))
+		formatString: #,##0
+		displayFolder: 1. Dotación
+		lineageTag: d3ab68d8-842e-581b-9783-3e3da1b1839c
+
+	/// Personas que egresan en el periodo, por cualquier motivo.
+	measure Egresos =
+			VAR ini = MIN(Calendario[Date])
+			VAR fin = MAX(Calendario[Date])
+			RETURN COUNTROWS(FILTER(personas, personas[fecha_egreso] >= ini && personas[fecha_egreso] <= fin))
+		formatString: #,##0
+		displayFolder: 1. Dotación
+		lineageTag: 9844140d-8708-5435-bfb0-54a4a6900e81
+
+	/// Egresos de los últimos 12 meses sobre la dotación promedio de esos meses.
+	measure 'Rotación 12m %' =
+			VAR fin = [Fecha de análisis]
+			VAR egresos = COUNTROWS(FILTER(personas, personas[fecha_egreso] > EDATE(fin, -12) && personas[fecha_egreso] <= fin))
+			VAR dotacion = CALCULATE([Dotación promedio], DATESINPERIOD(Calendario[Date], fin, -12, MONTH))
+			RETURN IF(MIN(Calendario[Date]) <= [Fecha de corte], DIVIDE(egresos, dotacion))
+		formatString: 0.0%
+		displayFolder: 1. Dotación
+		lineageTag: 411098df-5338-541a-9d88-da6907dbe134
+
+	/// Solo renuncias: la rotación que la gestión de personas puede influir.
+	measure 'Rotación voluntaria 12m %' =
+			VAR fin = [Fecha de análisis]
+			VAR egresos =
+			    COUNTROWS(
+			        FILTER(personas, personas[fecha_egreso] > EDATE(fin, -12) && personas[fecha_egreso] <= fin && personas[motivo_egreso] = "Voluntario")
+			    )
+			VAR dotacion = CALCULATE([Dotación promedio], DATESINPERIOD(Calendario[Date], fin, -12, MONTH))
+			RETURN IF(MIN(Calendario[Date]) <= [Fecha de corte], DIVIDE(egresos, dotacion))
+		formatString: 0.0%
+		displayFolder: 1. Dotación
+		lineageTag: 27245ca6-020b-5910-b07c-831fbeb03d40
+
+	/// Años promedio en la red de quienes están contratados al cierre.
+	measure 'Antigüedad promedio' =
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    AVERAGEX(
+			        FILTER(personas, personas[fecha_ingreso] <= fin && (ISBLANK(personas[fecha_egreso]) || personas[fecha_egreso] > fin)),
+			        DATEDIFF(personas[fecha_ingreso], fin, DAY) / 365.25
+			    )
+		formatString: 0.0
+		displayFolder: 1. Dotación
+		lineageTag: 51149b21-12a7-54bc-a477-cab287ec8671
+
+	column id_persona
+		dataType: string
+		lineageTag: 1da9cbdd-d954-5fce-92e9-5467d9f9267b
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column clinica
+		dataType: string
+		isHidden
+		lineageTag: 1dd70a14-d858-51f6-bebf-45c9b556b57a
+		summarizeBy: none
+		sourceColumn: clinica
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		isHidden
+		lineageTag: 9618cba2-0f36-5288-9c53-070cd24da6a6
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column estamento
+		dataType: string
+		isHidden
+		lineageTag: cfa8281c-2d16-56cf-881d-3febdd9995f3
+		summarizeBy: none
+		sourceColumn: estamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: 6359cfd4-b032-5f95-b242-c3c17ab1a747
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_nacimiento
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 0d3b80fd-a392-510d-aff1-771ea75ec955
+		summarizeBy: none
+		sourceColumn: fecha_nacimiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_ingreso
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 972f57e3-f9a1-58e6-bb9f-da32182e67c6
+		summarizeBy: none
+		sourceColumn: fecha_ingreso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_egreso
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3938b627-3fad-5d11-99c6-6d13dca6303d
+		summarizeBy: none
+		sourceColumn: fecha_egreso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column motivo_egreso
+		dataType: string
+		lineageTag: 92c11b6a-6793-5fd8-bf08-b872587a57e8
+		summarizeBy: none
+		sourceColumn: motivo_egreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column jornada_horas
+		dataType: int64
+		isHidden
+		lineageTag: 696793a4-8fc5-52a8-9d6a-fa1e1563597c
+		summarizeBy: none
+		sourceColumn: jornada_horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_referencia
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: e66a1889-a3cc-5816-91fc-12adbcf0e272
+		summarizeBy: none
+		sourceColumn: fecha_referencia
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column edad
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c2452e6f-7216-5997-933b-ff2c718ba3fa
+		summarizeBy: none
+		sourceColumn: edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden_tramo_edad
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 816cc0f4-25a9-5d4c-abf0-3d974f5dab62
+		summarizeBy: none
+		sourceColumn: orden_tramo_edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column tramo_edad
+		dataType: string
+		lineageTag: 06c798cd-b3c1-5e39-bbee-5606ddc82b85
+		summarizeBy: none
+		sourceColumn: tramo_edad
+		sortByColumn: orden_tramo_edad
+
+		annotation SummarizationSetBy = Automatic
+
+	column antiguedad_anios
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: e47b1508-3ade-5f8c-8db1-d216bf7114ba
+		summarizeBy: none
+		sourceColumn: antiguedad_anios
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden_tramo_antiguedad
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4558bd83-3695-542f-ad90-eec118e98e17
+		summarizeBy: none
+		sourceColumn: orden_tramo_antiguedad
+
+		annotation SummarizationSetBy = Automatic
+
+	column tramo_antiguedad
+		dataType: string
+		lineageTag: ff4f17ca-4eda-5094-8a86-5339abd64d00
+		summarizeBy: none
+		sourceColumn: tramo_antiguedad
+		sortByColumn: orden_tramo_antiguedad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition personas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("personas.csv", {{"id_persona", type text}, {"clinica", type text}, {"unidad", type text}, {"estamento", type text}, {"sexo", type text}, {"fecha_nacimiento", type date}, {"fecha_ingreso", type date}, {"fecha_egreso", type date}, {"motivo_egreso", type text}, {"jornada_horas", Int64.Type}}),
+				    // Edad y antigüedad al cierre de los datos (o al egreso): tramos estables para segmentar.
+				    Corte = #date(2026, 12, 31),
+				    Sexo = Table.TransformColumns(Origen, {{"sexo", each if _ = "F" then "Mujer" else "Hombre", type text}}),
+				    Referencia = Table.AddColumn(Sexo, "fecha_referencia", each if [fecha_egreso] = null then Corte else [fecha_egreso], type date),
+				    Edad = Table.AddColumn(Referencia, "edad", each Number.RoundDown(Duration.Days([fecha_referencia] - [fecha_nacimiento]) / 365.25), Int64.Type),
+				    OrdenEdad = Table.AddColumn(Edad, "orden_tramo_edad", each if [edad] < 30 then 1 else if [edad] < 40 then 2 else if [edad] < 50 then 3 else if [edad] < 60 then 4 else 5, Int64.Type),
+				    TramoEdad = Table.AddColumn(OrdenEdad, "tramo_edad", each {"Menos de 30", "30 a 39", "40 a 49", "50 a 59", "60 o más"}{[orden_tramo_edad] - 1}, type text),
+				    Antiguedad = Table.AddColumn(TramoEdad, "antiguedad_anios", each Duration.Days([fecha_referencia] - [fecha_ingreso]) / 365.25, type number),
+				    OrdenAntiguedad = Table.AddColumn(Antiguedad, "orden_tramo_antiguedad", each if [antiguedad_anios] < 1 then 1 else if [antiguedad_anios] < 3 then 2 else if [antiguedad_anios] < 5 then 3 else if [antiguedad_anios] < 10 then 4 else 5, Int64.Type),
+				    TramoAntiguedad = Table.AddColumn(OrdenAntiguedad, "tramo_antiguedad", each {"Menos de 1 año", "1 a 3 años", "3 a 5 años", "5 a 10 años", "10 años o más"}{[orden_tramo_antiguedad] - 1}, type text)
+				in
+				    TramoAntiguedad
+
+	annotation PBI_ResultType = Table

@@ -129,12 +129,27 @@ def test_visuales_solo_usan_campos_y_medidas_del_modelo(proyecto):
             assert prop in tablas.get(tabla, {}).get(clave, set()), f"{ruta.parent.name}: {clave} {tabla}.{prop}"
 
 
+def _parametros_de_campo(proyecto: Path) -> set[str]:
+    """Tablas que son parámetros de campo (columna con ParameterMetadata)."""
+    tablas = set()
+    for ruta in (_modelo(proyecto) / "definition" / "tables").glob("*.tmdl"):
+        texto = ruta.read_text(encoding="utf-8")
+        if "extendedProperty ParameterMetadata" in texto:
+            tabla = re.search(r"^table (?:'([^']+)'|(\S+))", texto, re.MULTILINE)
+            tablas.add(tabla.group(1) or tabla.group(2))
+    return tablas
+
+
 @pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
 def test_segmentadores_sin_seleccion_guardada(proyecto):
     # Un reporte público debe abrir en "Todas": una selección guardada en Desktop lo publica filtrado.
+    # Excepción: un parámetro de campo necesita una opción elegida para que el visual muestre una sola dimensión.
+    parametros = _parametros_de_campo(proyecto)
     for ruta in _visuales(proyecto):
         visual = json.loads(ruta.read_text(encoding="utf-8"))["visual"]
         if visual["visualType"] != "slicer":
+            continue
+        if {t for _, t, _ in _campos(visual["query"])} <= parametros:
             continue
         for entrada in visual.get("objects", {}).get("general", []):
             assert "filter" not in entrada.get("properties", {}), f"{ruta.parent.name}: segmentador con selección guardada"

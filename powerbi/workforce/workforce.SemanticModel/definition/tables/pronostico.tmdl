@@ -1,0 +1,219 @@
+/// Pronóstico 2027 por clínica, unidad, estamento y mes: credibilidad y simulación de episodios.
+table pronostico
+	lineageTag: a5a521d9-6729-5bc6-a9fa-5b5490f53638
+
+	/// Días perdidos esperados en 2027 con la tasa ajustada por credibilidad y la dotación actual.
+	measure 'Días esperados' = SUM(pronostico[dias_esperados])
+		formatString: #,##0
+		displayFolder: 5. Pronóstico
+		lineageTag: 1d4b320a-e9ed-5c05-bcae-64b21b68272d
+
+	/// Borde alto de la banda: las varianzas de la simulación se suman (celdas independientes); los percentiles no.
+	measure 'Días P90 (banda)' =
+			VAR e = [Días esperados]
+			RETURN IF(NOT ISBLANK(e), e + 1.2816 * SQRT(SUM(pronostico[varianza_dias])))
+		formatString: #,##0
+		displayFolder: 5. Pronóstico
+		lineageTag: 51aaa6d3-7af5-5db8-84c1-2d41f2c3bb3d
+
+	/// Borde bajo de la banda, con el mismo criterio.
+	measure 'Días P10 (banda)' =
+			VAR e = [Días esperados]
+			RETURN IF(NOT ISBLANK(e), MAX(0, e - 1.2816 * SQRT(SUM(pronostico[varianza_dias]))))
+		formatString: #,##0
+		displayFolder: 5. Pronóstico
+		lineageTag: 8df0e307-4785-542f-ba3b-b9a60d2eff1f
+
+	/// Tasa propia de cada celda en los dos años de historia.
+	measure 'Tasa observada 2025-2026 %' = DIVIDE(SUMX(pronostico, pronostico[tasa_observada] * pronostico[dotacion] * pronostico[dias_habiles]), SUMX(pronostico, pronostico[dotacion] * pronostico[dias_habiles]))
+		formatString: 0.0%
+		displayFolder: 5. Pronóstico
+		lineageTag: 41bc2bb6-7e84-5155-9008-f05ce42f4d79
+
+	/// Z × tasa propia + (1 − Z) × tasa del estamento en la red (Bühlmann-Straub).
+	measure 'Tasa con credibilidad %' = DIVIDE(SUMX(pronostico, pronostico[tasa_credibilidad] * pronostico[dotacion] * pronostico[dias_habiles]), SUMX(pronostico, pronostico[dotacion] * pronostico[dias_habiles]))
+		formatString: 0.0%
+		displayFolder: 5. Pronóstico
+		lineageTag: 4da6b514-e282-5532-ba79-8ae5cbd8cfc0
+
+	/// Peso de la historia propia: cerca de 1 con mucha exposición, cerca de 0 con poca.
+	measure 'Z credibilidad' = DIVIDE(SUMX(pronostico, pronostico[z_credibilidad] * pronostico[anios_persona]), SUM(pronostico[anios_persona]))
+		formatString: 0.00
+		displayFolder: 5. Pronóstico
+		lineageTag: 52f1ef0d-ad53-50c5-86c7-d087f3566fe5
+
+	/// Exposición de la celda en 2025-2026: la base de la credibilidad.
+	measure 'Años-persona' = AVERAGEX(VALUES(pronostico[mes]), CALCULATE(SUM(pronostico[anios_persona])))
+		formatString: #,##0.0
+		displayFolder: 5. Pronóstico
+		lineageTag: 6e0bc9c7-45fe-5c65-b563-e7f977d82863
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1cfea5b0-f9b8-59c4-95c8-f75bca619406
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 447a050d-cc6a-5d6f-801a-b236d298bebc
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column dotacion
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 836a20bf-46e6-5caa-a150-04134f5fce94
+		summarizeBy: none
+		sourceColumn: dotacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_habiles
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b6cf9426-1564-59e4-8967-b1819b2ddaf9
+		summarizeBy: none
+		sourceColumn: dias_habiles
+
+		annotation SummarizationSetBy = Automatic
+
+	column tasa_observada
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: 22f9b850-dbce-588a-9c2d-c854faed7ce7
+		summarizeBy: none
+		sourceColumn: tasa_observada
+
+		annotation SummarizationSetBy = Automatic
+
+	column anios_persona
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: 36e56dc6-99dc-5fea-96a5-ce1e6bbd6374
+		summarizeBy: none
+		sourceColumn: anios_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column z_credibilidad
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: a7d22242-53a6-5016-8283-b9362d8820b1
+		summarizeBy: none
+		sourceColumn: z_credibilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column tasa_credibilidad
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: e81b55c3-3e9a-52f6-80f7-6645a73e5725
+		summarizeBy: none
+		sourceColumn: tasa_credibilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_esperados
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: fa6756a4-bfec-58a9-b819-d9f2d103a66b
+		summarizeBy: none
+		sourceColumn: dias_esperados
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_p50
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a8640323-5445-51dc-a291-6a71b7174c3e
+		summarizeBy: none
+		sourceColumn: dias_p50
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_p90
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3186f08-7227-5868-91b1-314b644873f0
+		summarizeBy: none
+		sourceColumn: dias_p90
+
+		annotation SummarizationSetBy = Automatic
+
+	column varianza_dias
+		dataType: double
+		isHidden
+		formatString: 0.0000
+		lineageTag: 3b3ff8d8-5d82-55b0-8a07-835dc8b70a95
+		summarizeBy: none
+		sourceColumn: varianza_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column clinica
+		dataType: string
+		isHidden
+		lineageTag: 094c072f-cc8e-5bd0-9a2f-b2a03772b64a
+		summarizeBy: none
+		sourceColumn: clinica
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		isHidden
+		lineageTag: 75ecb767-695b-553a-89e5-7623c36d4ba5
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column estamento
+		dataType: string
+		isHidden
+		lineageTag: 4e0245a6-29e7-5c7f-a93a-551db096d3b4
+		summarizeBy: none
+		sourceColumn: estamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: e400a435-346b-5d00-9bf2-482055bf9807
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition pronostico = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("pronostico.csv", {{"anio", Int64.Type}, {"mes", Int64.Type}, {"clinica", type text}, {"unidad", type text}, {"estamento", type text}, {"dotacion", Int64.Type}, {"dias_habiles", Int64.Type}, {"tasa_observada", type number}, {"anios_persona", type number}, {"z_credibilidad", type number}, {"tasa_credibilidad", type number}, {"dias_esperados", type number}, {"dias_p50", Int64.Type}, {"dias_p90", Int64.Type}, {"varianza_dias", type number}}),
+				    ConFecha = Table.AddColumn(Origen, "fecha", each #date([anio], [mes], 1), type date)
+				in
+				    ConFecha
+
+	annotation PBI_ResultType = Table

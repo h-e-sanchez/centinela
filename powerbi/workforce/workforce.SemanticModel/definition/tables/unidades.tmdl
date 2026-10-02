@@ -1,0 +1,42 @@
+/// Dimensión: unidades de cada clínica y fracción de sus horas ausentes que hay que cubrir.
+table unidades
+	lineageTag: 1670d565-5b86-5a55-ac3e-c3ee10b8e388
+
+	column unidad
+		dataType: string
+		lineageTag: 3202a888-bef5-59e4-b042-ee6c34c71fdc
+		summarizeBy: none
+		sourceColumn: unidad
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b0676fcf-0da9-53f6-967a-371a9f301663
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column requiere_cobertura
+		dataType: double
+		isHidden
+		formatString: 0%
+		lineageTag: 728b9769-b040-53e1-86d9-b322f0ae3471
+		summarizeBy: none
+		sourceColumn: requiere_cobertura
+
+		annotation SummarizationSetBy = Automatic
+
+	partition unidades = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("unidades.csv", {{"unidad", type text}, {"orden", Int64.Type}, {"requiere_cobertura", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

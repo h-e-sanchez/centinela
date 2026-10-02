@@ -1,0 +1,187 @@
+/// Una fila por episodio de ausencia: tipo, diagnóstico agrupado y duración en días hábiles.
+table episodios
+	lineageTag: ad84df2e-31f0-5753-aad3-0d2e4c5a2da8
+
+	/// Episodios de ausencia iniciados en el periodo, sin licencias parentales.
+	measure Episodios = CALCULATE(COUNTROWS(episodios), KEEPFILTERS(episodios[tipo] <> "Licencia parental"))
+		formatString: #,##0
+		displayFolder: 2. Ausentismo
+		lineageTag: 1c92c348-a030-504b-95d8-45d667e4e652
+
+	/// Episodios por persona al año (índice de frecuencia de la Dipres, anualizado).
+	measure 'Índice de frecuencia' = DIVIDE([Episodios], [Dotación promedio]) * DIVIDE(12, [Meses en periodo])
+		formatString: 0.00
+		displayFolder: 2. Ausentismo
+		lineageTag: 94421f19-558e-5723-ad07-40f1d0bc8dee
+
+	/// Días hábiles promedio por episodio (tasa de gravedad de la Dipres).
+	measure 'Tasa de gravedad' = CALCULATE(AVERAGE(episodios[dias_habiles]), KEEPFILTERS(episodios[tipo] <> "Licencia parental"))
+		formatString: 0.0
+		displayFolder: 2. Ausentismo
+		lineageTag: fdfe2982-702f-5c6c-8c9c-f62992e6838b
+
+	/// Licencias comunes y accidentes iniciados en los 12 meses previos al cierre.
+	measure 'Episodios 12m' =
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    CALCULATE(
+			        COUNTROWS(episodios),
+			        REMOVEFILTERS(Calendario),
+			        episodios[fecha_inicio] > EDATE(fin, -12),
+			        episodios[fecha_inicio] <= fin,
+			        KEEPFILTERS(episodios[tipo] IN {"Licencia común", "Accidente laboral"})
+			    )
+		formatString: 0
+		displayFolder: 3. Patrones individuales
+		lineageTag: bfa8768d-8782-5c15-9496-03f9b795bbaa
+
+	/// Días hábiles de esos episodios.
+	measure 'Días 12m' =
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    CALCULATE(
+			        SUM(episodios[dias_habiles]),
+			        REMOVEFILTERS(Calendario),
+			        episodios[fecha_inicio] > EDATE(fin, -12),
+			        episodios[fecha_inicio] <= fin,
+			        KEEPFILTERS(episodios[tipo] IN {"Licencia común", "Accidente laboral"})
+			    )
+		formatString: 0
+		displayFolder: 3. Patrones individuales
+		lineageTag: e2373109-c784-5c5c-a1d8-1877a7980dde
+
+	/// Factor Bradford S² × D por persona: castiga las ausencias cortas y frecuentes.
+	measure 'Bradford 12m' =
+			SUMX(
+			    VALUES(personas[id_persona]),
+			    VAR s = [Episodios 12m]
+			    VAR d = [Días 12m]
+			    RETURN s * s * d
+			)
+		formatString: #,##0
+		displayFolder: 3. Patrones individuales
+		lineageTag: 919fbe70-195f-5b43-8e52-fa86c9b0bdbd
+
+	/// Personas contratadas al cierre en cada tramo del Factor Bradford.
+	measure 'Personas por tramo Bradford' =
+			VAR desde = SELECTEDVALUE('Tramos Bradford'[desde])
+			VAR hasta = SELECTEDVALUE('Tramos Bradford'[hasta])
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    COUNTROWS(
+			        FILTER(
+			            FILTER(personas, personas[fecha_ingreso] <= fin && (ISBLANK(personas[fecha_egreso]) || personas[fecha_egreso] > fin)),
+			            VAR b = [Bradford 12m] + 0
+			            RETURN b >= desde && b <= hasta
+			        )
+			    )
+		formatString: #,##0
+		displayFolder: 3. Patrones individuales
+		lineageTag: c8407d2d-23c8-5f22-b7a6-5e85ed289e04
+
+	/// Personas con Bradford sobre 200: el umbral habitual para una conversación de seguimiento.
+	measure 'Personas con Bradford alto' =
+			VAR fin = [Fecha de análisis]
+			RETURN
+			    COUNTROWS(
+			        FILTER(FILTER(personas, personas[fecha_ingreso] <= fin && (ISBLANK(personas[fecha_egreso]) || personas[fecha_egreso] > fin)), [Bradford 12m] > 200)
+			    )
+		formatString: #,##0
+		displayFolder: 3. Patrones individuales
+		lineageTag: 5a5e50ee-9703-5541-95da-d17a3ef40439
+
+	column id_episodio
+		dataType: string
+		lineageTag: a47e13aa-4f21-5ba7-9012-db28f039c1bb
+		summarizeBy: none
+		sourceColumn: id_episodio
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_persona
+		dataType: string
+		isHidden
+		lineageTag: 32e81ac7-6f95-51c9-b177-adac5eda24b7
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_inicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 7677dbd5-edd5-5715-a8ef-e2796b0579fa
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_termino
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 7a94cef5-6293-5e02-9131-e358fc5c7e58
+		summarizeBy: none
+		sourceColumn: fecha_termino
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column dias_habiles
+		dataType: int64
+		formatString: 0
+		lineageTag: 24dbc723-98ad-53bd-bfb7-e8af77341eee
+		summarizeBy: none
+		sourceColumn: dias_habiles
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: ad19b554-3e27-5fe4-99c1-f94e7fe2e2ee
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_diagnostico
+		dataType: string
+		lineageTag: 5f7e7717-5374-5381-9184-54d4c75e573e
+		summarizeBy: none
+		sourceColumn: grupo_diagnostico
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden_tramo_duracion
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7899bc89-806b-58b5-9461-ce0cc0531594
+		summarizeBy: none
+		sourceColumn: orden_tramo_duracion
+
+		annotation SummarizationSetBy = Automatic
+
+	column tramo_duracion
+		dataType: string
+		lineageTag: 251923e1-9edb-5b5e-a0c5-6fca5825ff39
+		summarizeBy: none
+		sourceColumn: tramo_duracion
+		sortByColumn: orden_tramo_duracion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition episodios = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("episodios.csv", {{"id_episodio", type text}, {"id_persona", type text}, {"fecha_inicio", type date}, {"fecha_termino", type date}, {"dias_habiles", Int64.Type}, {"tipo", type text}, {"grupo_diagnostico", type text}}),
+				    OrdenDuracion = Table.AddColumn(Origen, "orden_tramo_duracion", each if [dias_habiles] = 1 then 1 else if [dias_habiles] <= 3 then 2 else if [dias_habiles] <= 5 then 3 else if [dias_habiles] <= 10 then 4 else if [dias_habiles] <= 20 then 5 else 6, Int64.Type),
+				    TramoDuracion = Table.AddColumn(OrdenDuracion, "tramo_duracion", each {"1 día", "2 a 3", "4 a 5", "6 a 10", "11 a 20", "21 o más"}{[orden_tramo_duracion] - 1}, type text)
+				in
+				    TramoDuracion
+
+	annotation PBI_ResultType = Table
