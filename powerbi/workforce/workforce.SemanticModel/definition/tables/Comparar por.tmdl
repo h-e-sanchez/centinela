@@ -53,3 +53,4 @@ table 'Comparar por'
 				}
 
 	annotation PBI_ResultType = Table
+

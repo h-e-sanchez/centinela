@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "7108cf0f75c7fb2d1114",
   "position": {
     "x": 24,
@@ -92,6 +92,7 @@
               },
               "queryRef": "episodios.Episodios 12m",
               "nativeQueryRef": "Episodios 12m",
+              "active": false,
               "displayName": "Episodios"
             },
             {
@@ -107,6 +108,7 @@
               },
               "queryRef": "episodios.Días 12m",
               "nativeQueryRef": "Días 12m",
+              "active": false,
               "displayName": "Días"
             },
             {
@@ -122,6 +124,7 @@
               },
               "queryRef": "episodios.Bradford 12m",
               "nativeQueryRef": "Bradford 12m",
+              "active": false,
               "displayName": "Bradford"
             }
           ]

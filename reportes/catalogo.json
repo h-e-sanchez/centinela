@@ -83,12 +83,11 @@
       "resumen": "People Analytics de una red de clínicas sintética: dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con un piloto evaluado contra un grupo de control y pronóstico 2027 con credibilidad actuarial.",
       "tema": "People Analytics",
       "fecha": "2026-10-02",
-      "estado": "en-preparacion",
       "destacado": false,
       "modelo": "powerbi/workforce",
       "datos": "data/workforce",
       "prefijo": "workforce",
-      "embed_url": "",
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiMWRhYzAwZTMtMzNiMy00NzFlLWJkMTctMTNmNmE5OGVhNGUwIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9",
       "portada": "portada.png",
       "habilidades": [
         "People Analytics",
