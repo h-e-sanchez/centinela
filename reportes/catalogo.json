@@ -5,6 +5,7 @@
       "titulo": "Presupuesto vs. Real por industria",
       "resumen": "Control de gestión de tres empresas sintéticas, 2025 y 2026, por sucursal y cuenta: KPI ejecutivos, semáforo, Estado de Resultados, Forecast 3+9, comparación interanual con grupo de cálculo, puente del resultado con drill y estructura de gasto fijo y variable.",
       "tema": "Control de gestión · FP&A",
+      "color": "#1F4E79",
       "fecha": "2026-10-01",
       "destacado": true,
       "modelo": "powerbi/presupuesto-vs-real",
@@ -86,6 +87,7 @@
       "titulo": "Workforce: dotación, ausentismo y cobertura",
       "resumen": "People Analytics de las tres empresas sintéticas de la vitrina (Manufactura, Energía y Salud): dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con tres pilotos evaluados contra su grupo de control y pronóstico 2027 con credibilidad actuarial.",
       "tema": "People Analytics",
+      "color": "#3E7C59",
       "fecha": "2026-10-02",
       "destacado": false,
       "modelo": "powerbi/workforce",
@@ -164,6 +166,7 @@
     {
       "titulo": "Del libro diario a los Estados Financieros",
       "tema": "Contabilidad · Controller",
+      "color": "#B5562E",
       "resumen": "Holding sintético con tres sociedades: asientos en partida doble transformados con SQL versionado en Balance, Estado de Resultados y flujo de caja consolidados, con eliminaciones intercompañía y capital de trabajo (DSO, DPO y ciclo de caja)."
     }
   ]

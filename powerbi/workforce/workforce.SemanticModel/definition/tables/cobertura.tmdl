@@ -2,6 +2,12 @@
 table cobertura
 	lineageTag: bb90d3f5-9498-5a91-b229-d69df9fc83c4
 
+	/// Cambio del costo por hora cubierta en la sede piloto de la empresa filtrada.
+	measure 'Cambio costo/hora piloto %' = CALCULATE([Cambio costo/hora %], sedes[piloto] = 1)
+		formatString: 0.0%;-0.0%
+		displayFolder: 4. Cobertura
+		lineageTag: 4f90f010-8a8c-54f7-a115-cb5ba02ffe67
+
 	/// Horas ausentes que la unidad necesita cubrir.
 	measure 'Horas requeridas' = SUM(cobertura[horas_requeridas])
 		formatString: #,##0

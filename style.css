@@ -296,7 +296,11 @@ main.ancho { max-width: 980px; }
 }
 .opcion:hover { border-color: var(--accent); }
 .opcion:focus-visible { outline: var(--focus); outline-offset: 2px; }
-.opcion[aria-selected="true"] { border-left-color: var(--accent); background: var(--accent-weak); }
+.opcion { border-left-color: var(--acento, var(--border-strong)); }
+.opcion[aria-selected="true"] { border-left-width: 8px; background: var(--accent-weak); }
+.opcion .eyebrow { color: var(--acento, var(--accent)); }
+:root[data-theme="dark"] .opcion .eyebrow { color: var(--accent); }  /* los acentos oscuros no contrastan sobre fondo oscuro */
+.visor { border-top: 6px solid var(--acento, var(--accent)); padding-top: var(--sp-3); }
 .opcion .eyebrow { margin: 0; }
 .opcion strong { font-size: var(--fs-md); line-height: 1.3; }
 .opcion-cifra { font-family: var(--mono); font-size: var(--fs-sm); color: var(--muted); }
@@ -333,6 +337,7 @@ main.ancho { max-width: 980px; }
 a.tarjeta-rep:hover { border-color: var(--accent); }
 .tarjeta-rep img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--r); border: 1px solid var(--border); margin-bottom: var(--sp-3); }
 .tarjeta-rep h3 { margin: 0 0 6px; font-size: var(--fs-lg); }
+.tarjeta-rep { border-top: 4px solid var(--acento, var(--border)); }
 .tarjeta-resumen { margin: 0; color: var(--muted); font-size: var(--fs-sm); }
 .tarjeta-rep.proximo { border-style: dashed; box-shadow: none; background: transparent; }
 .tarjeta-rep.proximo .eyebrow { color: var(--faint); }
