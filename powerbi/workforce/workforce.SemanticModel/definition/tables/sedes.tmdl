@@ -1,0 +1,68 @@
+/// Dimensión: las sedes de las tres empresas ficticias (las sucursales del reporte de presupuesto).
+table sedes
+	lineageTag: 345e55a5-1564-5b38-9c95-4c85b67a8174
+
+	column sede
+		dataType: string
+		lineageTag: 26736c68-9179-541d-b8f3-53a7b2380946
+		summarizeBy: none
+		sourceColumn: sede
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		lineageTag: af8794e9-74a9-53f0-8bae-ef85a6fe0bc5
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: 6dc75352-7b7d-5381-b14a-b2e3cd3f9e6f
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 55bfccf3-5f8f-598d-a16c-6ab5117a78f7
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dotacion_inicial
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ed40c854-ff13-5e3b-abd4-09bbbe0cd299
+		summarizeBy: none
+		sourceColumn: dotacion_inicial
+
+		annotation SummarizationSetBy = Automatic
+
+	column piloto
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 33f1db31-c386-5a70-8234-8a61cae86c9b
+		summarizeBy: none
+		sourceColumn: piloto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sedes = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("sedes.csv", {{"sede", type text}, {"industria", type text}, {"empresa", type text}, {"orden", Int64.Type}, {"dotacion_inicial", Int64.Type}, {"piloto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

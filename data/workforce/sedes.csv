@@ -1,0 +1,10 @@
+sede,industria,empresa,orden,dotacion_inicial,piloto
+Santiago,Manufactura,Manufacturas Ejemplo S.A.,1,220,0
+Concepción,Manufactura,Manufacturas Ejemplo S.A.,2,150,1
+Antofagasta,Manufactura,Manufacturas Ejemplo S.A.,3,80,0
+Zona Norte,Energia,Energía Ejemplo S.A.,4,150,1
+Zona Centro,Energia,Energía Ejemplo S.A.,5,130,0
+Zona Sur,Energia,Energía Ejemplo S.A.,6,90,0
+Clínica Oriente,Salud,Red Asistencial Ejemplo S.A.,7,210,1
+Clínica Centro,Salud,Red Asistencial Ejemplo S.A.,8,240,0
+Clínica Poniente,Salud,Red Asistencial Ejemplo S.A.,9,160,0

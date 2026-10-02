@@ -1,4 +1,4 @@
-/// Horas ausentes por clínica, unidad, estamento y mes, y cómo se cubrieron.
+/// Horas ausentes por sede, unidad, estamento y mes, y cómo se cubrieron.
 table cobertura
 	lineageTag: bb90d3f5-9498-5a91-b229-d69df9fc83c4
 
@@ -56,7 +56,7 @@ table cobertura
 		displayFolder: 4. Cobertura
 		lineageTag: 0adc7bf0-76b2-519d-8fb9-701a087748ba
 
-	/// Enero a junio de 2025, antes de que Norte instale el pool.
+	/// Enero a junio de 2025, antes de que la sede piloto instale el pool.
 	measure 'Costo/hora antes del piloto' = CALCULATE([Costo por hora cubierta], DATESBETWEEN(Calendario[Date], DATE(2025, 1, 1), DATE(2025, 6, 30)))
 		formatString: \$ #,##0
 		displayFolder: 4. Cobertura
@@ -68,22 +68,22 @@ table cobertura
 		displayFolder: 4. Cobertura
 		lineageTag: 10852df7-8909-5f14-b249-25bee6ed7618
 
-	/// Norte frente a Centro y Sur, que no cambiaron de modelo: diferencia en diferencias.
+	/// La sede piloto frente a las otras dos sedes de su empresa, que no cambiaron de modelo.
 	measure 'Cambio costo/hora %' = DIVIDE([Costo/hora con piloto], [Costo/hora antes del piloto]) - 1
 		formatString: 0.0%;-0.0%
 		displayFolder: 4. Cobertura
 		lineageTag: c872ac1f-a5fc-52ce-bed3-97ea4c0d615b
 
-	/// Lo que Norte habría pagado de más con su costo por hora anterior al piloto.
-	measure 'Ahorro piloto Norte' =
+	/// Lo que las sedes piloto habrían pagado de más con su costo por hora anterior al pool.
+	measure 'Ahorro del piloto' =
 			CALCULATE(
 			    VAR horas = CALCULATE([Horas cubiertas], DATESBETWEEN(Calendario[Date], DATE(2025, 10, 1), DATE(2026, 12, 31)))
 			    RETURN ([Costo/hora antes del piloto] - [Costo/hora con piloto]) * horas,
-			    clinicas[clinica] = "Norte"
+			    sedes[piloto] = 1
 			)
 		formatString: \$ #,##0
 		displayFolder: 4. Cobertura
-		lineageTag: 66f205a9-9661-555e-89e0-85156193617a
+		lineageTag: e4591c59-2aa0-5818-bb37-e2ae91aa8b95
 
 	column anio
 		dataType: int64
@@ -195,12 +195,21 @@ table cobertura
 
 		annotation SummarizationSetBy = Automatic
 
-	column clinica
+	column industria
 		dataType: string
 		isHidden
-		lineageTag: ab91f910-3f88-53a3-9d94-48f468785184
+		lineageTag: 1288f5eb-095f-596e-835e-3af673da450f
 		summarizeBy: none
-		sourceColumn: clinica
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: d214db85-28da-5c9c-b6d5-59e60d6f40d0
+		summarizeBy: none
+		sourceColumn: sede
 
 		annotation SummarizationSetBy = Automatic
 
@@ -238,10 +247,9 @@ table cobertura
 		mode: import
 		source =
 				let
-				    Origen = LeerCsv("cobertura_mensual.csv", {{"anio", Int64.Type}, {"mes", Int64.Type}, {"clinica", type text}, {"unidad", type text}, {"estamento", type text}, {"horas_ausencia", type number}, {"horas_requeridas", type number}, {"horas_sobretiempo", type number}, {"horas_pool", type number}, {"horas_externo", type number}, {"horas_no_cubiertas", type number}, {"costo_sobretiempo", type number}, {"costo_pool", type number}, {"costo_externo", type number}}),
+				    Origen = LeerCsv("cobertura_mensual.csv", {{"anio", Int64.Type}, {"mes", Int64.Type}, {"industria", type text}, {"sede", type text}, {"unidad", type text}, {"estamento", type text}, {"horas_ausencia", type number}, {"horas_requeridas", type number}, {"horas_sobretiempo", type number}, {"horas_pool", type number}, {"horas_externo", type number}, {"horas_no_cubiertas", type number}, {"costo_sobretiempo", type number}, {"costo_pool", type number}, {"costo_externo", type number}}),
 				    ConFecha = Table.AddColumn(Origen, "fecha", each #date([anio], [mes], 1), type date)
 				in
 				    ConFecha
 
 	annotation PBI_ResultType = Table
-

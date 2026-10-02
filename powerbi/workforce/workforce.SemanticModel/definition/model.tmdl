@@ -10,7 +10,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","personas","episodios","ausencia_diaria","disponibilidad_mensual","cobertura","pronostico","clinicas","unidades","estamentos"]
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","personas","episodios","ausencia_diaria","disponibilidad_mensual","cobertura","pronostico","sedes","unidades","estamentos"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -20,7 +20,7 @@ ref table ausencia_diaria
 ref table disponibilidad_mensual
 ref table cobertura
 ref table pronostico
-ref table clinicas
+ref table sedes
 ref table unidades
 ref table estamentos
 ref table Calendario
@@ -28,4 +28,3 @@ ref table 'Tramos Bradford'
 ref table 'Comparar por'
 
 ref cultureInfo es-CL
-

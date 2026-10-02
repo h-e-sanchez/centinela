@@ -4,10 +4,10 @@
   "position": {
     "x": 24,
     "y": 468,
-    "z": 900,
+    "z": 1000,
     "height": 240,
     "width": 1232,
-    "tabOrder": 900
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -228,7 +228,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Credibilidad por unidad y estamento: poca exposición → la tasa se acerca a la de la red'"
+                  "Value": "'Credibilidad por unidad y estamento: poca exposición → la tasa se acerca a la de la empresa'"
                 }
               }
             },

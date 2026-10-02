@@ -4,10 +4,10 @@
   "position": {
     "x": 656,
     "y": 468,
-    "z": 1100,
+    "z": 1200,
     "height": 240,
     "width": 600,
-    "tabOrder": 1100
+    "tabOrder": 1200
   },
   "visual": {
     "visualType": "pivotTable",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "clinicas"
+                      "Entity": "sedes"
                     }
                   },
-                  "Property": "clinica"
+                  "Property": "sede"
                 }
               },
-              "queryRef": "clinicas.clinica",
-              "nativeQueryRef": "clinica",
+              "queryRef": "sedes.sede",
+              "nativeQueryRef": "sede",
               "active": true,
-              "displayName": "Clínica"
+              "displayName": "Sede"
             }
           ]
         },
@@ -200,7 +200,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Antes y después, por clínica'"
+                  "Value": "'Antes y después, por sede'"
                 }
               }
             },

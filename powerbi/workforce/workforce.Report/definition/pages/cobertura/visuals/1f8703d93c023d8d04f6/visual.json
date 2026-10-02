@@ -4,10 +4,10 @@
   "position": {
     "x": 24,
     "y": 92,
-    "z": 700,
+    "z": 800,
     "height": 112,
     "width": 1232,
-    "tabOrder": 700
+    "tabOrder": 800
   },
   "visual": {
     "visualType": "cardVisual",
@@ -66,11 +66,11 @@
                       "Entity": "cobertura"
                     }
                   },
-                  "Property": "Ahorro piloto Norte"
+                  "Property": "Ahorro del piloto"
                 }
               },
-              "queryRef": "cobertura.Ahorro piloto Norte",
-              "nativeQueryRef": "Ahorro piloto Norte"
+              "queryRef": "cobertura.Ahorro del piloto",
+              "nativeQueryRef": "Ahorro del piloto"
             }
           ]
         }

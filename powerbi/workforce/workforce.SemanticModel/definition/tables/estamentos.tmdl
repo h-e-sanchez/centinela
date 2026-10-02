@@ -1,4 +1,4 @@
-/// Dimensión: estamentos con su valor hora y los factores de costo de cada modalidad de cobertura.
+/// Dimensión: estamentos y los factores de costo de cada modalidad de cobertura (el valor hora depende de la empresa).
 table estamentos
 	lineageTag: f2fa5c34-8675-55af-8613-5173892d7297
 
@@ -18,16 +18,6 @@ table estamentos
 		lineageTag: 51bcc398-2bd0-5aff-826b-d90de2b87f6a
 		summarizeBy: none
 		sourceColumn: orden
-
-		annotation SummarizationSetBy = Automatic
-
-	column valor_hora
-		dataType: int64
-		isHidden
-		formatString: \$ #,##0
-		lineageTag: 184cb585-d395-5e70-a598-a348017ffcae
-		summarizeBy: none
-		sourceColumn: valor_hora
 
 		annotation SummarizationSetBy = Automatic
 
@@ -65,9 +55,8 @@ table estamentos
 		mode: import
 		source =
 				let
-				    Origen = LeerCsv("estamentos.csv", {{"estamento", type text}, {"orden", Int64.Type}, {"valor_hora", Int64.Type}, {"factor_sobretiempo", type number}, {"factor_pool", type number}, {"factor_externo", type number}})
+				    Origen = LeerCsv("estamentos.csv", {{"estamento", type text}, {"orden", Int64.Type}, {"factor_sobretiempo", type number}, {"factor_pool", type number}, {"factor_externo", type number}})
 				in
 				    Origen
 
 	annotation PBI_ResultType = Table
-

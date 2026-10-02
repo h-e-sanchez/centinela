@@ -1,6 +1,6 @@
-relationship 27c27b68-438b-565f-8286-9c4929111abd
-	fromColumn: personas.clinica
-	toColumn: clinicas.clinica
+relationship 727eb4ab-49f4-552e-bd67-57020329e885
+	fromColumn: personas.sede
+	toColumn: sedes.sede
 
 relationship 4a6d5c11-181d-527c-8c6a-1d5a182fc1f7
 	fromColumn: personas.unidad
@@ -34,9 +34,9 @@ relationship 5203553b-b563-5415-b8a3-fd52999a79f5
 	fromColumn: disponibilidad_mensual.fecha
 	toColumn: Calendario.Date
 
-relationship 017a11fe-a207-5548-80f2-76b31040ecd9
-	fromColumn: cobertura.clinica
-	toColumn: clinicas.clinica
+relationship 1e6c532e-fb65-59ad-842e-257c5d88ff90
+	fromColumn: cobertura.sede
+	toColumn: sedes.sede
 
 relationship 809a0320-ac6b-522f-8743-72e19cad7680
 	fromColumn: cobertura.unidad
@@ -50,9 +50,9 @@ relationship eeb4c66d-24d1-537a-b9c3-ce43c8435885
 	fromColumn: cobertura.fecha
 	toColumn: Calendario.Date
 
-relationship 0e7d6b7e-3317-542a-9e98-1033eeec7b2b
-	fromColumn: pronostico.clinica
-	toColumn: clinicas.clinica
+relationship 87cab2aa-a174-5716-9cbf-c4fa4671230e
+	fromColumn: pronostico.sede
+	toColumn: sedes.sede
 
 relationship a4fd8897-e1d3-510f-95f4-8ad5129d9845
 	fromColumn: pronostico.unidad
@@ -65,4 +65,3 @@ relationship 7bfa2661-89c1-54a3-831e-6f9921db5faa
 relationship 77ca8c0b-fb2a-58ac-a225-325599970d52
 	fromColumn: pronostico.fecha
 	toColumn: Calendario.Date
-

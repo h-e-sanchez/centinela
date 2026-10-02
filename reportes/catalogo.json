@@ -84,7 +84,7 @@
     {
       "slug": "workforce",
       "titulo": "Workforce: dotación, ausentismo y cobertura",
-      "resumen": "People Analytics de una red de clínicas sintética: dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con un piloto evaluado contra un grupo de control y pronóstico 2027 con credibilidad actuarial.",
+      "resumen": "People Analytics de las tres empresas sintéticas de la vitrina (Manufactura, Energía y Salud): dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con tres pilotos evaluados contra su grupo de control y pronóstico 2027 con credibilidad actuarial.",
       "tema": "People Analytics",
       "fecha": "2026-10-02",
       "destacado": false,
@@ -104,21 +104,21 @@
       "historias": [
         {
           "industria": "Ausentismo",
-          "resultado": "6,5%",
+          "resultado": "3,2% a 6,1%",
           "tono": "neutro",
-          "texto": "Tasa global sin licencias parentales: técnicos y auxiliares sobre el promedio, pico en mayo y mínimo en febrero."
+          "texto": "Energía, Manufactura y Salud: más ausencia donde hay turnos y trabajo físico; pico en invierno en las tres."
         },
         {
-          "industria": "Piloto Norte",
-          "resultado": "−27%",
+          "industria": "Pilotos",
+          "resultado": "−17% a −20%",
           "tono": "ok",
-          "texto": "El pool interno baja el costo por hora cubierta mientras Centro y Sur, sin cambios, se mantienen."
+          "texto": "El pool interno baja el costo por hora cubierta en Concepción, Zona Norte y Clínica Oriente; las sedes de control no cambian."
         },
         {
           "industria": "Bradford",
-          "resultado": "106",
+          "resultado": "207",
           "tono": "critica",
-          "texto": "Personas sobre 200 en el Factor Bradford: ausencias cortas y frecuentes que piden seguimiento."
+          "texto": "Personas sobre 200 en el Factor Bradford en las tres empresas: ausencias cortas y frecuentes que piden seguimiento."
         }
       ],
       "descargas": [

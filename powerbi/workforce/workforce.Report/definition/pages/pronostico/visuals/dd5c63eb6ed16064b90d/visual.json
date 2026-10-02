@@ -6,7 +6,7 @@
     "y": 46,
     "z": 200,
     "height": 40,
-    "width": 600,
+    "width": 560,
     "tabOrder": 200
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Tasa por celda = Z × tasa propia + (1 − Z) × tasa del estamento en la red (Bühlmann-Straub). Banda P10-P90 de 1.000 simulaciones de episodios. No se abre por sexo ni edad.",
+                    "value": "Tasa por celda = Z × tasa propia + (1 − Z) × tasa del estamento en la empresa (Bühlmann-Straub). Banda P10-P90 de 1.000 simulaciones de episodios. No se abre por sexo ni edad.",
                     "textStyle": {
                       "fontSize": "8pt",
                       "color": "#6a6357"

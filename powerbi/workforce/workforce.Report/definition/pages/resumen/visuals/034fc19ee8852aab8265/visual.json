@@ -6,7 +6,7 @@
     "y": 46,
     "z": 200,
     "height": 40,
-    "width": 600,
+    "width": 560,
     "tabOrder": 200
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Datos 100% sintéticos (3 clínicas, ~600 personas, 2025-2026). Tasa global sin licencias parentales, como la Dipres. Días hábiles = lunes a viernes.",
+                    "value": "Manufactura, Energía y Salud, las mismas del reporte de presupuesto (~1.400 personas, 2025-2026). Tasa global sin licencias parentales, como la Dipres. Días hábiles = lunes a viernes.",
                     "textStyle": {
                       "fontSize": "8pt",
                       "color": "#6a6357"

@@ -6,7 +6,7 @@
     "y": 8,
     "z": 100,
     "height": 40,
-    "width": 600,
+    "width": 560,
     "tabOrder": 100
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Workforce · Red Asistencial Ejemplo",
+                    "value": "Workforce · tres empresas sintéticas",
                     "textStyle": {
                       "fontSize": "16pt",
                       "color": "#23211C",
