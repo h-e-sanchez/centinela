@@ -35,9 +35,10 @@ function tarjeta(rep) {
   const ficha = `ficha.html?r=${encodeURIComponent(rep.slug)}`;
   const img = rep.portada ? el("img", { src: `reportes/${rep.slug}/${rep.portada}`, alt: `Vista del reporte ${rep.titulo}`, loading: "lazy" }) : null;
   if (img) img.addEventListener("error", () => img.remove());  // sin captura todavía: tarjeta solo con texto
+  const tema = rep.estado === "en-preparacion" ? `En preparación · ${rep.tema}` : rep.tema;
   return el("a", { clase: "tarjeta-rep", href: ficha }, [
     img,
-    el("p", { clase: "eyebrow", texto: rep.tema }),
+    el("p", { clase: "eyebrow", texto: tema }),
     el("h3", { texto: rep.titulo }),
     el("p", { clase: "tarjeta-resumen", texto: rep.resumen }),
     chips(rep.habilidades.slice(0, 3)),
@@ -55,7 +56,7 @@ function proximo(p) {
 fetch("reportes/catalogo.json")
   .then((r) => r.json())
   .then(({ reportes, proximos = [] }) => {
-    const top = reportes.find((r) => r.destacado) || reportes[0];
+    const top = reportes.find((r) => r.destacado && r.embed_url) || reportes.find((r) => r.embed_url) || reportes[0];
     destacado(top);
     $("#tarjetas").replaceChildren(...reportes.map(tarjeta), ...proximos.map(proximo));
   })

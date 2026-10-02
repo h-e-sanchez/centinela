@@ -76,7 +76,7 @@ porqué.
 
 ## Camino C — Modelo Power BI — hecho
 
-**2026-10-01 — hecho como código:** proyecto PBIP en [`powerbi/`](powerbi/) (modelo TMDL
+**2026-10-01 — hecho como código:** proyecto PBIP en [`powerbi/presupuesto-vs-real/`](powerbi/presupuesto-vs-real/) (modelo TMDL
 completo, reporte PBIR con una página vacía) y [`reporte.html`](reporte.html), que recalcula
 el reporte en el navegador con el DAX leído del TMDL. **Pendiente, manual:** abrir el PBIP
 en Desktop, armar los visuales, guardar (commit de los `visual.json`) y publicar con un
@@ -166,6 +166,15 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-02 — Vitrina con varios reportes
+
+El proyecto PBIP del reporte #1 pasa a `powerbi/presupuesto-vs-real/` para que cada reporte
+tenga su carpeta. El catálogo suma `modelo`, `datos` y `prefijo` por reporte; el diccionario
+de columnas vive en `reportes/<slug>/diccionario.json`. `empaquetar_descargas.py --reporte`
+arma los descargables de cualquier reporte y escribe el Excel según los encabezados (antes
+era posicional). Los tests de vitrina y de Power BI se parametrizan por reporte, y un reporte
+con `"estado": "en-preparacion"` se muestra con guía y descargas mientras no se publica.
 
 ### 2026-10-01 — Vitrina de reportes
 

@@ -1,0 +1,12 @@
+{
+  "leeme": "centinela · Presupuesto vs. Real por industria\nDatos 100% sintéticos, generados con data/generar_escenarios.py (semilla 42).\nhttps://h-e-sanchez.github.io/centinela/\n\npresupuesto.csv y real.csv tienen las mismas columnas (separador coma, UTF-8):\n\n{columnas}\n\nResultado Operacional = Ingresos - Costos - Gastos Operacionales.\n",
+  "columnas": {
+    "industria": "Empresa sintética: Manufactura, Energia o Salud",
+    "anio": "Año del registro",
+    "mes": "Mes (1 a 12)",
+    "centro_costo": "Centro de costo",
+    "componente": "Cuenta o línea dentro del centro de costo",
+    "grupo_cuenta": "Ingresos, Costos o Gastos Operacionales (para el Estado de Resultados)",
+    "monto": "Monto en pesos chilenos, sin decimales"
+  }
+}

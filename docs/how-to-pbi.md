@@ -1,7 +1,7 @@
 # Cómo construir el modelo en Power BI
 
 > **Desde 2026-10-01 el modelo ya está construido como código** en
-> [`powerbi/`](../powerbi/), en formato **PBIP** (Power BI Project): el modelo semántico en
+> [`powerbi/presupuesto-vs-real/`](../powerbi/presupuesto-vs-real/), en formato **PBIP** (Power BI Project): el modelo semántico en
 > TMDL y el reporte en PBIR, todo como texto versionado. Este documento sigue siendo la
 > especificación de referencia; la sección [Proyecto PBIP](#proyecto-pbip-en-el-repo) explica
 > qué falta hacer a mano y cómo publicarlo.
@@ -9,7 +9,7 @@
 ## Proyecto PBIP en el repo
 
 ```
-powerbi/
+powerbi/presupuesto-vs-real/
 ├── centinela.pbip                     ← abrir este archivo en Power BI Desktop
 ├── centinela.SemanticModel/
 │   ├── definition.pbism
@@ -42,7 +42,7 @@ Qué ya está resuelto en el código:
 
 Qué falta, a mano (Power BI Desktop de octubre de 2024 o posterior, por el formato PBIR del reporte):
 
-1. Abrir `powerbi/centinela.pbip`. Si Desktop pide credenciales para `raw.githubusercontent.com`,
+1. Abrir `powerbi/presupuesto-vs-real/centinela.pbip`. Si Desktop pide credenciales para `raw.githubusercontent.com`,
    elegir **Anónimo**. Luego **Actualizar** para cargar los datos.
 2. Armar los visuales de la tabla [Visuales sugeridos](#visuales-sugeridos) en la página
    "Resumen". Para la matriz, usar formato condicional sobre `Desviación %` con las reglas
@@ -198,9 +198,9 @@ los muestre, y Microsoft puede indexarlo. Es aceptable acá porque **todos los d
 ## Pendiente (candidato, manual)
 
 Los pasos 2 a 5 de la versión anterior (cargar CSV, Power Query, Calendario, DAX) ya están
-en el código de `powerbi/`. Queda:
+en el código de `powerbi/presupuesto-vs-real/`. Queda:
 
-1. Abrir `powerbi/centinela.pbip` en Power BI Desktop y **Actualizar** (credencial anónima).
+1. Abrir `powerbi/presupuesto-vs-real/centinela.pbip` en Power BI Desktop y **Actualizar** (credencial anónima).
 2. Armar el layout con los visuales sugeridos en la página "Resumen" y **guardar**; hacer
    commit de los `visual.json` que escribe Desktop.
 3. Crear el tenant propio y publicar en la Web (sección anterior); pegar la URL en
