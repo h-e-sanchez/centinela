@@ -15,13 +15,16 @@ taller (SQL, perfilado y gráficos sobre cualquier tabla, en el navegador). El m
 ## Vitrina
 
 - `reportes/catalogo.json` describe cada reporte (resumen, habilidades, URL de Publicar en la
-  Web, descargas). `index.html` y `ficha.html?r=<slug>` se arman desde ahí: agregar un reporte
-  es crear `reportes/<slug>/` con su `guia.md` y sus descargas, sin escribir HTML.
-- `herramientas/empaquetar_descargas.py` genera los zip (reproducibles) y el Excel desde
-  `data/escenarios/` y `powerbi/`. El `.pbix` se exporta a mano desde Power BI Desktop.
-- `tests/test_vitrina.py` verifica que el catálogo esté completo, que las descargas estén al
-  día con sus fuentes, que la guía solo cite medidas del modelo y que la web no publique
-  datos de contacto.
+  Web, descargas, carpeta de datos y proyecto PBIP). `index.html` y `ficha.html?r=<slug>` se
+  arman desde ahí: agregar un reporte es crear `reportes/<slug>/` (con `guia.md` y
+  `diccionario.json`) y `powerbi/<slug>/`, sin escribir HTML. Un reporte con
+  `"estado": "en-preparacion"` se muestra con su guía y descargas mientras no se publica.
+- `herramientas/empaquetar_descargas.py [--reporte <slug>]` genera los zip (reproducibles) y
+  el Excel de cada reporte desde sus CSV y su proyecto PBIP. El `.pbix` se exporta a mano
+  desde Power BI Desktop.
+- `tests/test_vitrina.py` verifica, reporte por reporte, que el catálogo esté completo, que
+  las descargas estén al día con sus fuentes, que la guía solo cite medidas de su modelo y
+  que la web no publique datos de contacto.
 
 ## Diseño
 
@@ -82,7 +85,7 @@ python -m pytest tests/ -q
 ## Modelo
 
 La misma lógica, como **proyecto de Power BI versionado en texto** en
-[`powerbi/`](powerbi/) (formato PBIP): modelo semántico en TMDL, con Power Query que lee
+[`powerbi/presupuesto-vs-real/`](powerbi/presupuesto-vs-real/) (formato PBIP): modelo semántico en TMDL, con Power Query que lee
 los CSV de este repo desde GitHub, tabla de fechas, la columna `Estado Semáforo` y 15
 medidas DAX (montos, desviación, semáforo, Estado de Resultados y time intelligence), más
 el reporte en PBIR. [`reporte.html`](https://h-e-sanchez.github.io/centinela/reporte.html)

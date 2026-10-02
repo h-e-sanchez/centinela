@@ -7,6 +7,9 @@
       "tema": "Control de gestión · FP&A",
       "fecha": "2026-10-01",
       "destacado": true,
+      "modelo": "powerbi/presupuesto-vs-real",
+      "datos": "data/escenarios",
+      "prefijo": "centinela",
       "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9",
       "portada": "portada.png",
       "habilidades": [
@@ -66,7 +69,7 @@
         },
         {
           "etiqueta": "Proyecto Power BI en GitHub",
-          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi"
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/presupuesto-vs-real"
         },
         {
           "etiqueta": "Generador de escenarios y tests",

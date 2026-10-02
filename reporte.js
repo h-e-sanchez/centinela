@@ -11,7 +11,7 @@
 // URL de "Publicar en la Web" (app.powerbi.com/view?r=...). Vacía = se muestra el aviso.
 const PBI_EMBED_URL = "https://app.powerbi.com/view?r=eyJrIjoiZjBhYmEyY2UtODgwOS00YjcyLTlhYjgtMmZlMjFiMjJmZWEzIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9";
 
-const TMDL = "powerbi/centinela.SemanticModel/definition/tables/desviacion.tmdl";
+const TMDL = "powerbi/presupuesto-vs-real/centinela.SemanticModel/definition/tables/desviacion.tmdl";
 const MESES = ["", "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 const UMBRAL = 0.05;
 const UMBRAL_CRITICO = 0.15;

@@ -41,9 +41,16 @@ async function iniciar() {
   $("#f-resumen").textContent = rep.resumen;
   $("#f-habilidades").replaceChildren(...rep.habilidades.map((h) => el("li", { texto: h })));
 
-  const iframe = el("iframe", { title: `${rep.titulo} en Power BI`, src: rep.embed_url, loading: "lazy", allowfullscreen: "" });
-  $("#f-embed").replaceChildren(iframe);
-  $("#f-pantalla").href = rep.embed_url;
+  if (rep.embed_url) {
+    const iframe = el("iframe", { title: `${rep.titulo} en Power BI`, src: rep.embed_url, loading: "lazy", allowfullscreen: "" });
+    $("#f-embed").replaceChildren(iframe);
+    $("#f-pantalla").href = rep.embed_url;
+  } else {
+    // En preparación: el modelo y los datos ya están en el repo; falta publicarlo desde Desktop.
+    $("#f-embed").replaceChildren(el("p", { clase: "placeholder", texto:
+      "En preparación: el modelo y los datos ya están publicados en GitHub; el reporte interactivo se incrusta aquí al publicarlo desde Power BI." }));
+    $("#f-pantalla").remove();
+  }
 
   $("#f-historias").replaceChildren(...(rep.historias || []).map((h) =>
     el("article", { clase: `historia ${h.tono}` }, [
