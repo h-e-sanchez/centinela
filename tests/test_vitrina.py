@@ -107,7 +107,7 @@ def test_portada_presenta_el_producto_y_firma_al_autor():
     # El H1 es el producto; el autor va en la firma y en el pie (relato de portafolio).
     html = (RAIZ / "index.html").read_text(encoding="utf-8")
     assert re.search(r"<h1>\s*centinela\s*</h1>", html)
-    assert re.search(r'class="firma">por Hernán Sánchez', html)
+    assert re.search(r'class="firma">por Hernán Elías Sánchez', html)
     assert "Control de gestión, construido como software" in html
 
 
