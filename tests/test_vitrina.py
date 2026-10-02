@@ -101,3 +101,19 @@ def test_leeme_del_zip_describe_todas_las_columnas():
         cabecera = next(csv.reader(io.StringIO(zf.read("real.csv").decode("utf-8"))))
     for columna in cabecera:
         assert columna in leeme
+
+
+def test_portada_presenta_el_producto_y_firma_al_autor():
+    # El H1 es el producto; el autor va en la firma y en el pie (relato de portafolio).
+    html = (RAIZ / "index.html").read_text(encoding="utf-8")
+    assert re.search(r"<h1>\s*centinela\s*</h1>", html)
+    assert re.search(r'class="firma">por Hernán Sánchez', html)
+    assert "Control de gestión, construido como software" in html
+
+
+def test_enlaces_cruzados_del_portafolio():
+    for rel in ("index.html", "README.md"):
+        assert "h-e-sanchez.github.io/consulta" in (RAIZ / rel).read_text(encoding="utf-8") or \
+            "github.com/h-e-sanchez/consulta" in (RAIZ / rel).read_text(encoding="utf-8"), rel
+    for rel in ("index.html", "ficha.html", "reporte.html", "datos.html"):
+        assert 'class="firma-pie"' in (RAIZ / rel).read_text(encoding="utf-8"), f"{rel} sin firma en el pie"
