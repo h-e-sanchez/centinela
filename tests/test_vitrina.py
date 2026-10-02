@@ -112,6 +112,9 @@ def test_portada_presenta_el_producto_y_firma_al_autor():
 
 
 def test_enlaces_cruzados_del_portafolio():
+    portada = (RAIZ / "index.html").read_text(encoding="utf-8")
+    for sitio in ("consulta", "cartilla"):
+        assert f"h-e-sanchez.github.io/{sitio}" in portada, f"portada sin enlace a {sitio}"
     for rel in ("index.html", "README.md"):
         assert "h-e-sanchez.github.io/consulta" in (RAIZ / rel).read_text(encoding="utf-8") or \
             "github.com/h-e-sanchez/consulta" in (RAIZ / rel).read_text(encoding="utf-8"), rel

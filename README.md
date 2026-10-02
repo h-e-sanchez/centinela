@@ -9,7 +9,8 @@
 
 Parte del portafolio **Control de gestión, construido como software**: `centinela` es la
 vitrina (lo que ve quien decide) y [`consulta`](https://github.com/h-e-sanchez/consulta) es el
-taller (SQL, perfilado y gráficos sobre cualquier tabla, en el navegador).
+taller (SQL, perfilado y gráficos sobre cualquier tabla, en el navegador). El manual es
+[`cartilla`](https://h-e-sanchez.github.io/cartilla/): Python y pandas para quien viene de Excel.
 
 ## Vitrina
 
