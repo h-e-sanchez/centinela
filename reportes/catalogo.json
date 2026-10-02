@@ -162,9 +162,9 @@
   ],
   "proximos": [
     {
-      "titulo": "Capital de trabajo: cobranza y DSO",
-      "tema": "Finanzas operativas",
-      "resumen": "Antigüedad de cartera, días promedio de cobro y priorización de deudores."
+      "titulo": "Del libro diario a los Estados Financieros",
+      "tema": "Contabilidad · Controller",
+      "resumen": "Holding sintético con tres sociedades: asientos en partida doble transformados con SQL versionado en Balance, Estado de Resultados y flujo de caja consolidados, con eliminaciones intercompañía y capital de trabajo (DSO, DPO y ciclo de caja)."
     }
   ]
 }

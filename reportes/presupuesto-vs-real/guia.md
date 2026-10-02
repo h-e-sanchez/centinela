@@ -75,7 +75,7 @@ RETURN SWITCH(TRUE(), ISBLANK(d), "#978F7E", ABS(d) > 0.15, "#B23C26", ABS(d) > 
 - **Semáforo por línea:** verde hasta 5% de desviación, ámbar sobre 5% y rojo sobre 15%.
 - **Resultado Operacional por industria:** verde sobre +2%, gris si es neutro y rojo bajo −2%.
 - **Año:** las hojas de 2026 tienen un filtro de página editable en el panel de filtros. La hoja de forecast muestra los dos años y se filtra con su segmentador.
-- **Segmentadores:** sin selección muestran el consolidado de las tres empresas.
+- **Industria:** todas las hojas abren en **Energía**, la misma industria con que abren los demás reportes de la vitrina; al quitar la selección se ve el consolidado de las tres empresas.
 
 ## Cómo abrirlo
 
