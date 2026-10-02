@@ -2,6 +2,22 @@
 table personas
 	lineageTag: 24bc5f3e-0609-5b50-b04d-8915e8ca49c8
 
+	/// Primera frase: tasa global y el mes de mayor ausentismo.
+	measure 'Portada frase 1' =
+			VAR meses = FILTER(VALUES(Calendario[Mes Año]), NOT ISBLANK([Tasa global %]))
+			VAR pico = MAXX(TOPN(1, meses, [Tasa global %], DESC), Calendario[Mes Año])
+			RETURN FORMAT([Tasa global %], "0.0%") & " de ausentismo · pico " & pico
+		displayFolder: 0. Portada
+		lineageTag: f2b987aa-9b5e-5e2d-9d86-12f8f40f3eab
+
+	/// Segunda frase: el efecto del pool interno en la sede piloto.
+	measure 'Portada frase 2' =
+			VAR sede = CALCULATE(SELECTEDVALUE(sedes[sede]), sedes[piloto] = 1)
+			VAR cambio = FORMAT([Cambio costo/hora piloto %], "+0%;-0%")
+			RETURN IF(ISBLANK(sede), "Pilotos: " & cambio & " costo/hora", "Piloto " & sede & ": " & cambio & " costo/hora")
+		displayFolder: 0. Portada
+		lineageTag: 95493e6b-d5e8-51ec-a96c-62bf61d11ce3
+
 	/// Último día con datos reales (31-12-2026). Lo posterior es pronóstico.
 	measure 'Fecha de corte' = EOMONTH(CALCULATE(MAX(disponibilidad_mensual[fecha]), REMOVEFILTERS()), 0)
 		formatString: Short Date

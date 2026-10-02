@@ -3,9 +3,9 @@
   "name": "90aa3ff8488ba680279c",
   "position": {
     "x": 24,
-    "y": 170,
+    "y": 146,
     "z": 200,
-    "height": 170,
+    "height": 184,
     "width": 984,
     "tabOrder": 200
   },
@@ -23,11 +23,11 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "KPI Presupuesto"
+                  "Property": "Portada presupuesto"
                 }
               },
-              "queryRef": "desviacion.KPI Presupuesto",
-              "nativeQueryRef": "KPI Presupuesto",
+              "queryRef": "desviacion.Portada presupuesto",
+              "nativeQueryRef": "Portada presupuesto",
               "displayName": "Presupuesto"
             },
             {
@@ -38,11 +38,11 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "KPI Real"
+                  "Property": "Portada real"
                 }
               },
-              "queryRef": "desviacion.KPI Real",
-              "nativeQueryRef": "KPI Real",
+              "queryRef": "desviacion.Portada real",
+              "nativeQueryRef": "Portada real",
               "displayName": "Real"
             },
             {
@@ -53,27 +53,12 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Desviación %"
+                  "Property": "Portada resultado"
                 }
               },
-              "queryRef": "desviacion.Desviación %",
-              "nativeQueryRef": "Desviación %",
-              "displayName": "Desviación"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
-                    }
-                  },
-                  "Property": "Desviación RO %"
-                }
-              },
-              "queryRef": "desviacion.Desviación RO %",
-              "nativeQueryRef": "Desviación RO %",
-              "displayName": "Resultado vs. presupuesto"
+              "queryRef": "desviacion.Portada resultado",
+              "nativeQueryRef": "Portada resultado",
+              "displayName": "Resultado vs. ppto."
             }
           ]
         }
@@ -86,7 +71,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "40D"
+                  "Value": "34D"
                 }
               }
             },

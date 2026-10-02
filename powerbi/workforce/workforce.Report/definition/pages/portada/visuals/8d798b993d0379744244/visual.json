@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "90aa3ff8488ba680279c",
+  "name": "8d798b993d0379744244",
   "position": {
-    "x": 24,
-    "y": 146,
-    "z": 200,
-    "height": 184,
-    "width": 984,
-    "tabOrder": 200
+    "x": 680,
+    "y": 350,
+    "z": 500,
+    "height": 160,
+    "width": 576,
+    "tabOrder": 500
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,41 +23,11 @@
                       "Entity": "personas"
                     }
                   },
-                  "Property": "Dotación"
+                  "Property": "Portada frase 1"
                 }
               },
-              "queryRef": "personas.Dotación",
-              "nativeQueryRef": "Dotación"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "ausencia_diaria"
-                    }
-                  },
-                  "Property": "Tasa global %"
-                }
-              },
-              "queryRef": "ausencia_diaria.Tasa global %",
-              "nativeQueryRef": "Tasa global %",
-              "displayName": "Ausentismo"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "cobertura"
-                    }
-                  },
-                  "Property": "Cambio costo/hora piloto %"
-                }
-              },
-              "queryRef": "cobertura.Cambio costo/hora piloto %",
-              "nativeQueryRef": "Cambio costo/hora piloto %",
-              "displayName": "Piloto: costo/hora"
+              "queryRef": "personas.Portada frase 1",
+              "nativeQueryRef": "Portada frase 1"
             }
           ]
         }
@@ -70,7 +40,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "34D"
+                  "Value": "24D"
                 }
               }
             },
@@ -93,7 +63,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -146,7 +116,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
