@@ -40,3 +40,4 @@ table clinicas
 				    Origen
 
 	annotation PBI_ResultType = Table
+

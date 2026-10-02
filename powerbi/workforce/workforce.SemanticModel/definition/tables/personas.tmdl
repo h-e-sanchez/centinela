@@ -26,7 +26,7 @@ table personas
 		lineageTag: 240702ed-3794-565b-80db-feeabffb3517
 
 	/// Personas contratadas al cierre del periodo (patrón de fechas de ingreso y egreso).
-	measure 'Dotación' =
+	measure Dotación =
 			VAR fin = [Fecha de análisis]
 			RETURN
 			    IF(
@@ -296,3 +296,4 @@ table personas
 				    TramoAntiguedad
 
 	annotation PBI_ResultType = Table
+

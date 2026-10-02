@@ -124,7 +124,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reporte #1: Presupuesto vs. Real por industria (catálogo, guía, descargas CSV, Excel y PBIP)
 - [ ] `.pbix` exportado desde Desktop y captura `portada.png` (manual)
 - [x] Reporte #2: Workforce (dotación, ausentismo y cobertura): datos, modelo PBIP con 6 páginas, guía y descargas
-- [ ] Reporte #2: abrir en Desktop, revisar visuales, publicar en la web, `.pbix` y `portada.png` (manual)
+- [x] Reporte #2: abierto en Desktop sin errores y publicado en la web (tenant `cimad.net`)
+- [ ] Reporte #2: `.pbix` exportado y captura `portada.png` (manual)
 - [ ] Reporte #3: Capital de trabajo, cobranza y DSO
 
 ## Backlog P1 — robustez
@@ -177,6 +178,13 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-02 — Workforce publicado
+
+Desktop abrió el modelo y las 6 páginas sin errores; al guardar normalizó el PBIP (metadatos
+lingüísticos es-CL, nombres sin comillas, schema de un visual). Publicado con "Publicar en la
+Web" desde el tenant propio y registrado en el catálogo: la ficha ya muestra el reporte
+interactivo.
 
 ### 2026-10-02 — Reporte #2: Workforce
 
