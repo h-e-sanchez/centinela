@@ -1,8 +1,8 @@
 /// Parámetro de campo: el visitante elige qué versión del monto ver.
-table 'Medida'
+table Medida
 	lineageTag: 6edf1c76-237b-5671-bed7-1e756107ff03
 
-	column 'Medida'
+	column Medida
 		dataType: string
 		lineageTag: 201b3950-150e-5638-a285-bb3bbe4c5ff9
 		summarizeBy: none
@@ -40,7 +40,7 @@ table 'Medida'
 
 		annotation SummarizationSetBy = Automatic
 
-	partition 'Medida' = calculated
+	partition Medida = calculated
 		mode: import
 		source =
 				{
@@ -51,3 +51,4 @@ table 'Medida'
 				}
 
 	annotation PBI_ResultType = Table
+

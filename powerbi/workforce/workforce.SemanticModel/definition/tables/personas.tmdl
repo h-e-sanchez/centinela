@@ -73,7 +73,7 @@ table personas
 	measure Egresos =
 			VAR ini = MIN(Calendario[Date])
 			VAR fin = MAX(Calendario[Date])
-			RETURN COUNTROWS(FILTER(personas, personas[fecha_egreso] >= ini && personas[fecha_egreso] <= fin))
+			RETURN COUNTROWS(FILTER(personas, NOT ISBLANK(personas[fecha_egreso]) && personas[fecha_egreso] >= ini && personas[fecha_egreso] <= fin))
 		formatString: #,##0
 		displayFolder: 1. Dotación
 		lineageTag: 9844140d-8708-5435-bfb0-54a4a6900e81

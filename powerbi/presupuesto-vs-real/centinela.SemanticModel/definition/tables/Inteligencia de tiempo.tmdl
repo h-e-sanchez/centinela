@@ -7,27 +7,17 @@ table 'Inteligencia de tiempo'
 
 		calculationItem Periodo = SELECTEDMEASURE()
 
-			ordinal: 0
-
 		calculationItem YTD = CALCULATE(SELECTEDMEASURE(), DATESYTD(Calendario[Date]))
 
-			ordinal: 1
-
 		calculationItem 'Año anterior' = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(Calendario[Date]))
-
-			ordinal: 2
 
 		calculationItem 'Var. interanual %' =
 				VAR aa = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(Calendario[Date]))
 				RETURN DIVIDE(SELECTEDMEASURE() - aa, aa)
 
-			ordinal: 3
-
 			formatStringDefinition = "0.0%;-0.0%"
 
 		calculationItem 'Móvil 12m' = CALCULATE(SELECTEDMEASURE(), DATESINPERIOD(Calendario[Date], MAX(Calendario[Date]), -12, MONTH))
-
-			ordinal: 4
 
 	column Cálculo
 		dataType: string
@@ -47,7 +37,4 @@ table 'Inteligencia de tiempo'
 		sourceColumn: Ordinal
 
 		annotation SummarizationSetBy = Automatic
-
-	partition 'Inteligencia de tiempo' = calculationGroup
-		mode: import
 

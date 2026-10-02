@@ -38,7 +38,7 @@ Calibramos los datos con referencias públicas en orden de magnitud. No copiamos
 | Mujeres frente a hombres | 1,9 veces | 11,1% frente a 5,9% (Dipres) |
 | Estacionalidad | pico en mayo, mínimo en febrero | el mismo patrón en la Dipres |
 | Principal diagnóstico | salud mental, ~30% de los días | ~28% en el NHS de Inglaterra; cerca de la mitad de las licencias en Chile entre salud mental y musculoesquelético (SUSESO 2025) |
-| Episodios por persona al año | 2,0 | 1,04 licencias por cotizante en el sistema general (SUSESO 2025) |
+| Episodios por persona al año | 1,9 | 1,04 licencias por cotizante en el sistema general (SUSESO 2025) |
 | Rotación anual | 14% a 16%, más alta el primer año | — |
 
 **La historia de la cobertura:** desde julio de 2025 la Clínica Norte cubre las ausencias con un **pool interno** en vez de sobretiempo. Centro y Sur no cambian y sirven de **grupo de control**. Una hora de pool cuesta 1,1 veces el valor hora; una de sobretiempo, 1,5 veces; y una externa, 1,8 veces. La literatura sobre *float pools* en hospitales reporta ahorros de 30% a 50% frente a agencias externas.
