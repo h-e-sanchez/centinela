@@ -65,3 +65,4 @@ relationship 7bfa2661-89c1-54a3-831e-6f9921db5faa
 relationship 77ca8c0b-fb2a-58ac-a225-325599970d52
 	fromColumn: pronostico.fecha
 	toColumn: Calendario.Date
+

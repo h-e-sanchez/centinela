@@ -28,7 +28,7 @@
               },
               "queryRef": "desviacion.Portada presupuesto",
               "nativeQueryRef": "Portada presupuesto",
-              "displayName": "Presupuesto"
+              "displayName": "Resultado presupuestado"
             },
             {
               "field": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "desviacion.Portada real",
               "nativeQueryRef": "Portada real",
-              "displayName": "Real"
+              "displayName": "Resultado real"
             },
             {
               "field": {
@@ -58,7 +58,7 @@
               },
               "queryRef": "desviacion.Portada resultado",
               "nativeQueryRef": "Portada resultado",
-              "displayName": "Resultado vs. ppto."
+              "displayName": "Desviación"
             }
           ]
         }

@@ -61,67 +61,13 @@
           }
         }
       ],
-      "general": [
-        {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "c",
-                    "Entity": "Medida",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "c"
-                                }
-                              },
-                              "Property": "Medida"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Real'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        }
-      ],
       "selection": [
         {
           "properties": {
             "singleSelect": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "strictSingleSelect": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

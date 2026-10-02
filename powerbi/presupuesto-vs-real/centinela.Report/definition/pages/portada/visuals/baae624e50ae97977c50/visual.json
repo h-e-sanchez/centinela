@@ -43,11 +43,11 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Monto Presupuesto"
+                  "Property": "Resultado Operacional Presupuesto"
                 }
               },
-              "queryRef": "desviacion.Monto Presupuesto",
-              "nativeQueryRef": "Monto Presupuesto",
+              "queryRef": "desviacion.Resultado Operacional Presupuesto",
+              "nativeQueryRef": "Resultado Operacional Presupuesto",
               "displayName": "Presupuesto"
             },
             {
@@ -58,11 +58,11 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Monto Real"
+                  "Property": "Resultado Operacional"
                 }
               },
-              "queryRef": "desviacion.Monto Real",
-              "nativeQueryRef": "Monto Real",
+              "queryRef": "desviacion.Resultado Operacional",
+              "nativeQueryRef": "Resultado Operacional",
               "displayName": "Real"
             }
           ]
@@ -160,7 +160,7 @@
             }
           },
           "selector": {
-            "metadata": "desviacion.Monto Presupuesto"
+            "metadata": "desviacion.Resultado Operacional Presupuesto"
           }
         },
         {
@@ -178,7 +178,7 @@
             }
           },
           "selector": {
-            "metadata": "desviacion.Monto Real"
+            "metadata": "desviacion.Resultado Operacional"
           }
         }
       ],
@@ -201,7 +201,7 @@
             }
           },
           "selector": {
-            "metadata": "desviacion.Monto Presupuesto"
+            "metadata": "desviacion.Resultado Operacional Presupuesto"
           }
         },
         {
@@ -215,7 +215,7 @@
             }
           },
           "selector": {
-            "metadata": "desviacion.Monto Real"
+            "metadata": "desviacion.Resultado Operacional"
           }
         }
       ]
@@ -260,7 +260,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Presupuesto y real por mes'"
+                  "Value": "'Resultado operacional por mes'"
                 }
               }
             },

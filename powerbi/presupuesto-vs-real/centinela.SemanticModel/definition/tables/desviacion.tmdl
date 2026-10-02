@@ -2,53 +2,6 @@
 table desviacion
 	lineageTag: e2f6bfe0-3cea-50d2-b4e0-f81032472671
 
-	/// Presupuesto abreviado para la tarjeta.
-	measure 'Portada presupuesto' =
-			VAR v = [Monto Presupuesto]
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(v), BLANK(),
-			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
-			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
-			        FORMAT(v, "$ #,0")
-			    )
-		displayFolder: 0. Portada
-		lineageTag: 2ffa1454-21b7-5c9f-8ef6-29d2d570ccd7
-
-	/// Real abreviado para la tarjeta.
-	measure 'Portada real' =
-			VAR v = [Monto Real]
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(v), BLANK(),
-			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
-			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
-			        FORMAT(v, "$ #,0")
-			    )
-		displayFolder: 0. Portada
-		lineageTag: d94a921f-2b0c-5497-94dc-4a4c915aea0a
-
-	/// Resultado Operacional contra presupuesto, con signo.
-	measure 'Portada resultado' = FORMAT([Desviación RO %], "+0.0%;-0.0%")
-		displayFolder: 0. Portada
-		lineageTag: 1decc561-5bce-54c4-9207-60e6f7ab2a06
-
-	/// Primera frase de la portada: cómo terminó el resultado.
-	measure 'Portada frase 1' = "Resultado " & [Portada resultado] & " vs. presupuesto"
-		displayFolder: 0. Portada
-		lineageTag: 7db4f9a0-96bd-5bf5-a5b3-f52f55bda739
-
-	/// Segunda frase: el centro de costo que más pesa en la desviación.
-	measure 'Portada frase 2' =
-			VAR top = TOPN(1, VALUES(desviacion[centro_costo]), ABS([Desviación $]), DESC)
-			VAR centro = MAXX(top, desviacion[centro_costo])
-			VAR d = CALCULATE([Desviación %], desviacion[centro_costo] = centro)
-			RETURN "Mayor desvío: " & centro & " " & FORMAT(d, "+0.0%;-0.0%")
-		displayFolder: 0. Portada
-		lineageTag: 3e7a1062-9749-585b-b29f-f341a2533d33
-
 	/// Suma del presupuesto en el contexto de filtro.
 	measure 'Monto Presupuesto' = SUM(desviacion[monto_presupuesto])
 		formatString: \$ #,##0
@@ -316,6 +269,70 @@ table desviacion
 	measure 'KPI Impacto en Resultado' = FORMAT([Impacto en Resultado $] / 1000000, "$ #,0.0;-$ #,0.0") & " MM"
 		displayFolder: 0. Tarjetas ejecutivas
 		lineageTag: 3f7189de-f80d-50c1-943f-94477659080a
+
+	/// Resultado Operacional presupuestado, abreviado para la tarjeta (ingresos y gastos no se suman entre sí).
+	measure 'Portada presupuesto' =
+			VAR v = [Resultado Operacional Presupuesto]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 2ffa1454-21b7-5c9f-8ef6-29d2d570ccd7
+
+	/// Resultado Operacional real, abreviado para la tarjeta.
+	measure 'Portada real' =
+			VAR v = [Resultado Operacional]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: d94a921f-2b0c-5497-94dc-4a4c915aea0a
+
+	/// Resultado Operacional contra presupuesto, con signo.
+	measure 'Portada resultado' = FORMAT([Desviación RO %], "+0.0%;-0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 1decc561-5bce-54c4-9207-60e6f7ab2a06
+
+	/// Primera frase de la portada: cómo terminó el resultado.
+	measure 'Portada frase 1' = "Resultado " & [Portada resultado] & " vs. presupuesto"
+		displayFolder: 0. Portada
+		lineageTag: 7db4f9a0-96bd-5bf5-a5b3-f52f55bda739
+
+	/// Segunda frase: el centro de costo que más pesa en la desviación.
+	measure 'Portada frase 2' = ```
+			
+			  VAR mayorDesvio = TOPN(1, VALUES(desviacion[centro_costo]), ABS([Desviación $]), DESC)
+			  VAR centro = MAXX(mayorDesvio, desviacion[centro_costo])
+			  VAR d = CALCULATE([Desviación %], desviacion[centro_costo] = centro)
+			  RETURN "Mayor desvío: " & centro & " " & FORMAT(d, "+0.0%;-0.0%")
+			```
+		displayFolder: 0. Portada
+		lineageTag: 3e7a1062-9749-585b-b29f-f341a2533d33
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Monto de la versión elegida en la segmentación «Medida»; con varias elegidas, cada una es una serie del gráfico.
+	measure 'Monto por medida' =
+			SWITCH(
+			    SELECTEDVALUE(Medida[Medida Orden]),
+			    0, [Monto Presupuesto],
+			    1, [Monto Forecast],
+			    2, [Monto Real],
+			    3, [Real AA]
+			)
+		formatString: \$ #,##0
+		displayFolder: 1. Montos
+		lineageTag: d500b74d-ea36-50d0-893f-dfdee9bda4ad
 
 	column anio
 		dataType: int64

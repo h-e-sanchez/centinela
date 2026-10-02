@@ -259,3 +259,4 @@ table cobertura
 				    ConFecha
 
 	annotation PBI_ResultType = Table
+

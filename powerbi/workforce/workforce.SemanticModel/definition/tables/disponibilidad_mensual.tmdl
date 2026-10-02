@@ -58,3 +58,4 @@ table disponibilidad_mensual
 				    Origen
 
 	annotation PBI_ResultType = Table
+
