@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "90aa3ff8488ba680279c",
+  "name": "b2db8158ef7b2fd72b96",
   "position": {
-    "x": 24,
-    "y": 150,
-    "z": 200,
-    "height": 160,
-    "width": 984,
-    "tabOrder": 200
+    "x": 680,
+    "y": 520,
+    "z": 600,
+    "height": 170,
+    "width": 576,
+    "tabOrder": 600
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,42 +23,11 @@
                       "Entity": "desviacion"
                     }
                   },
-                  "Property": "Portada presupuesto"
+                  "Property": "Portada frase 2"
                 }
               },
-              "queryRef": "desviacion.Portada presupuesto",
-              "nativeQueryRef": "Portada presupuesto",
-              "displayName": "Presupuesto"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
-                    }
-                  },
-                  "Property": "Portada real"
-                }
-              },
-              "queryRef": "desviacion.Portada real",
-              "nativeQueryRef": "Portada real",
-              "displayName": "Real"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "desviacion"
-                    }
-                  },
-                  "Property": "Portada resultado"
-                }
-              },
-              "queryRef": "desviacion.Portada resultado",
-              "nativeQueryRef": "Portada resultado",
-              "displayName": "Resultado vs. ppto."
+              "queryRef": "desviacion.Portada frase 2",
+              "nativeQueryRef": "Portada frase 2"
             }
           ]
         }
@@ -71,7 +40,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "40D"
+                  "Value": "26D"
                 }
               }
             },
@@ -94,7 +63,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -147,7 +116,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

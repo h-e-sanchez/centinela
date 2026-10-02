@@ -3,10 +3,10 @@
   "name": "baae624e50ae97977c50",
   "position": {
     "x": 24,
-    "y": 360,
+    "y": 330,
     "z": 400,
-    "height": 340,
-    "width": 600,
+    "height": 370,
+    "width": 640,
     "tabOrder": 400
   },
   "visual": {
@@ -48,7 +48,7 @@
               },
               "queryRef": "ausencia_diaria.Tasa global %",
               "nativeQueryRef": "Tasa global %",
-              "displayName": "Tasa de ausentismo"
+              "displayName": "Ausentismo"
             }
           ]
         }
@@ -68,7 +68,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
                 }
               }
             }
@@ -88,7 +88,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "13D"
                 }
               }
             }
@@ -122,7 +122,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "15D"
                 }
               }
             }
@@ -213,7 +213,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "18D"
                 }
               }
             },

@@ -3,9 +3,9 @@
   "name": "90aa3ff8488ba680279c",
   "position": {
     "x": 24,
-    "y": 170,
+    "y": 150,
     "z": 200,
-    "height": 170,
+    "height": 160,
     "width": 984,
     "tabOrder": 200
   },
@@ -42,22 +42,7 @@
               },
               "queryRef": "ausencia_diaria.Tasa global %",
               "nativeQueryRef": "Tasa global %",
-              "displayName": "Tasa de ausentismo"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "personas"
-                    }
-                  },
-                  "Property": "Rotación 12m %"
-                }
-              },
-              "queryRef": "personas.Rotación 12m %",
-              "nativeQueryRef": "Rotación 12m %",
-              "displayName": "Rotación 12 meses"
+              "displayName": "Ausentismo"
             },
             {
               "field": {
@@ -72,7 +57,7 @@
               },
               "queryRef": "cobertura.Cambio costo/hora piloto %",
               "nativeQueryRef": "Cambio costo/hora piloto %",
-              "displayName": "Piloto: costo por hora"
+              "displayName": "Piloto: costo/hora"
             }
           ]
         }
@@ -129,7 +114,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "18D"
                 }
               }
             }
