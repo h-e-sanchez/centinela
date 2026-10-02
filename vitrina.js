@@ -28,6 +28,7 @@ function opcion(rep, i, alElegir) {
     el("strong", { texto: rep.titulo }),
     cifra ? el("span", { clase: `opcion-cifra ${cifra.tono}`, texto: `${cifra.resultado} · ${cifra.industria}` }) : null,
   ]);
+  if (rep.color) boton.style.setProperty("--acento", rep.color);
   boton.addEventListener("click", () => alElegir(i));
   return boton;
 }
@@ -66,6 +67,7 @@ function panel(lista, inicial) {
   const elegir = (i) => {
     selector.querySelectorAll(".opcion").forEach((b, j) => b.setAttribute("aria-selected", String(i === j)));
     contenido.setAttribute("aria-labelledby", `opcion-${i}`);
+    contenido.style.setProperty("--acento", lista[i].color || "var(--accent)");
     contenido.replaceChildren(...visor(lista[i]));
   };
   lista.forEach((rep, i) => selector.append(opcion(rep, i, elegir)));
@@ -82,21 +84,25 @@ function tarjeta(rep) {
   const img = rep.portada ? el("img", { src: `reportes/${rep.slug}/${rep.portada}`, alt: `Vista del reporte ${rep.titulo}`, loading: "lazy" }) : null;
   if (img) img.addEventListener("error", () => img.remove());  // sin captura todavía: tarjeta solo con texto
   const tema = rep.estado === "en-preparacion" ? `En preparación · ${rep.tema}` : rep.tema;
-  return el("a", { clase: "tarjeta-rep", href: fichaDe(rep) }, [
+  const t = el("a", { clase: "tarjeta-rep", href: fichaDe(rep) }, [
     img,
     el("p", { clase: "eyebrow", texto: tema }),
     el("h3", { texto: rep.titulo }),
     el("p", { clase: "tarjeta-resumen", texto: rep.resumen }),
     chips(rep.habilidades.slice(0, 3)),
   ]);
+  if (rep.color) t.style.setProperty("--acento", rep.color);
+  return t;
 }
 
 function proximo(p) {
-  return el("div", { clase: "tarjeta-rep proximo" }, [
+  const t = el("div", { clase: "tarjeta-rep proximo" }, [
     el("p", { clase: "eyebrow", texto: `En preparación · ${p.tema}` }),
     el("h3", { texto: p.titulo }),
     el("p", { clase: "tarjeta-resumen", texto: p.resumen }),
   ]);
+  if (p.color) t.style.setProperty("--acento", p.color);
+  return t;
 }
 
 fetch("reportes/catalogo.json")
