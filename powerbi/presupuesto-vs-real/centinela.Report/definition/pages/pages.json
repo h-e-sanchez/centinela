@@ -3,7 +3,11 @@
   "pageOrder": [
     "resumen",
     "estado-resultados",
-    "escenarios"
+    "escenarios",
+    "forecast",
+    "interanual",
+    "puente",
+    "sucursales"
   ],
   "activePageName": "resumen"
 }

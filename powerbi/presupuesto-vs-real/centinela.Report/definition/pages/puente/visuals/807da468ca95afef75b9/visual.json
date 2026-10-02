@@ -1,0 +1,205 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "807da468ca95afef75b9",
+  "position": {
+    "x": 24,
+    "y": 404,
+    "z": 800,
+    "height": 302,
+    "width": 616,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "decompositionTreeVisual",
+    "query": {
+      "queryState": {
+        "Analyze": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Impacto en Resultado $"
+                }
+              },
+              "queryRef": "desviacion.Impacto en Resultado $",
+              "nativeQueryRef": "Impacto en Resultado $",
+              "displayName": "Impacto en el resultado"
+            }
+          ]
+        },
+        "ExplainBy": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "industria"
+                }
+              },
+              "queryRef": "desviacion.industria",
+              "nativeQueryRef": "industria",
+              "displayName": "Industria"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "sucursal"
+                }
+              },
+              "queryRef": "desviacion.sucursal",
+              "nativeQueryRef": "sucursal",
+              "displayName": "Sucursal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "grupo_cuenta"
+                }
+              },
+              "queryRef": "desviacion.grupo_cuenta",
+              "nativeQueryRef": "grupo_cuenta",
+              "displayName": "Grupo de cuenta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "centro_costo"
+                }
+              },
+              "queryRef": "desviacion.centro_costo",
+              "nativeQueryRef": "centro_costo",
+              "displayName": "Centro de costo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "cuenta"
+                }
+              },
+              "queryRef": "desviacion.cuenta",
+              "nativeQueryRef": "cuenta",
+              "displayName": "Cuenta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "tipo_gasto"
+                }
+              },
+              "queryRef": "desviacion.tipo_gasto",
+              "nativeQueryRef": "tipo_gasto",
+              "displayName": "Tipo de gasto"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Árbol de descomposición del impacto'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

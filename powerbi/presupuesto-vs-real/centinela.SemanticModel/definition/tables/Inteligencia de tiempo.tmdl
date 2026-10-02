@@ -1,0 +1,53 @@
+/// Grupo de cálculo: aplica la misma lógica de tiempo a cualquier medida, sin duplicar medidas.
+table 'Inteligencia de tiempo'
+	lineageTag: 70b3300e-f0bc-5f69-a2a0-ccc99df309d3
+
+	calculationGroup
+		precedence: 10
+
+		calculationItem Periodo = SELECTEDMEASURE()
+
+			ordinal: 0
+
+		calculationItem YTD = CALCULATE(SELECTEDMEASURE(), DATESYTD(Calendario[Date]))
+
+			ordinal: 1
+
+		calculationItem 'Año anterior' = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(Calendario[Date]))
+
+			ordinal: 2
+
+		calculationItem 'Var. interanual %' =
+				VAR aa = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR(Calendario[Date]))
+				RETURN DIVIDE(SELECTEDMEASURE() - aa, aa)
+
+			ordinal: 3
+
+			formatStringDefinition = "0.0%;-0.0%"
+
+		calculationItem 'Móvil 12m' = CALCULATE(SELECTEDMEASURE(), DATESINPERIOD(Calendario[Date], MAX(Calendario[Date]), -12, MONTH))
+
+			ordinal: 4
+
+	column Cálculo
+		dataType: string
+		lineageTag: cd1d1209-9444-5d14-a9a2-439fa97e10f3
+		summarizeBy: none
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3086d654-808e-53a4-b457-6d64c7745f8a
+		summarizeBy: sum
+		sourceColumn: Ordinal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Inteligencia de tiempo' = calculationGroup
+		mode: import
+

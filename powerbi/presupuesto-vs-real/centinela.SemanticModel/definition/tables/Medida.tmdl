@@ -1,0 +1,53 @@
+/// Parámetro de campo: el visitante elige qué versión del monto ver.
+table 'Medida'
+	lineageTag: 6edf1c76-237b-5671-bed7-1e756107ff03
+
+	column 'Medida'
+		dataType: string
+		lineageTag: 201b3950-150e-5638-a285-bb3bbe4c5ff9
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Medida Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Medida Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medida Campos'
+		dataType: string
+		isHidden
+		lineageTag: 49077e59-5c1f-5712-9f13-79cf8463e1b5
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Medida Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Medida Orden'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0ebf805f-c0c0-58e1-b910-5c76e7fe6949
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Medida' = calculated
+		mode: import
+		source =
+				{
+				    ("Presupuesto", NAMEOF('desviacion'[Monto Presupuesto]), 0),
+				    ("Forecast", NAMEOF('desviacion'[Monto Forecast]), 1),
+				    ("Real", NAMEOF('desviacion'[Monto Real]), 2),
+				    ("Real año anterior", NAMEOF('desviacion'[Real AA]), 3)
+				}
+
+	annotation PBI_ResultType = Table

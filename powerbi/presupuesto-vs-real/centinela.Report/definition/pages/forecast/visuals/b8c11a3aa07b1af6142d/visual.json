@@ -1,0 +1,226 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "b8c11a3aa07b1af6142d",
+  "position": {
+    "x": 24,
+    "y": 92,
+    "z": 700,
+    "height": 100,
+    "width": 1232,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "KPI Presupuesto"
+                }
+              },
+              "queryRef": "desviacion.KPI Presupuesto",
+              "nativeQueryRef": "KPI Presupuesto",
+              "displayName": "Presupuesto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "KPI Forecast"
+                }
+              },
+              "queryRef": "desviacion.KPI Forecast",
+              "nativeQueryRef": "KPI Forecast",
+              "displayName": "Forecast"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "KPI Real"
+                }
+              },
+              "queryRef": "desviacion.KPI Real",
+              "nativeQueryRef": "KPI Real",
+              "displayName": "Real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Forecast vs Presupuesto %"
+                }
+              },
+              "queryRef": "desviacion.Forecast vs Presupuesto %",
+              "nativeQueryRef": "Forecast vs Presupuesto %",
+              "displayName": "Forecast vs. presupuesto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "desviacion"
+                    }
+                  },
+                  "Property": "Desviación vs Forecast %"
+                }
+              },
+              "queryRef": "desviacion.Desviación vs Forecast %",
+              "nativeQueryRef": "Desviación vs Forecast %",
+              "displayName": "Real vs. forecast"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'aboveValue'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

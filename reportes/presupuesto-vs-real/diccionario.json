@@ -1,11 +1,15 @@
 {
-  "leeme": "centinela · Presupuesto vs. Real por industria\nDatos 100% sintéticos, generados con data/generar_escenarios.py (semilla 42).\nhttps://h-e-sanchez.github.io/centinela/\n\npresupuesto.csv y real.csv tienen las mismas columnas (separador coma, UTF-8):\n\n{columnas}\n\nResultado Operacional = Ingresos - Costos - Gastos Operacionales.\n",
+  "leeme": "centinela · Presupuesto vs. Real por industria\nDatos 100% sintéticos, generados con data/generar_escenarios.py (semilla 42).\nhttps://h-e-sanchez.github.io/centinela/\n\nmontos.csv es el detalle que lee Power BI: 2025 y 2026, por sucursal y cuenta, en tres versiones\n(Presupuesto, Forecast 3+9 y Real). presupuesto.csv y real.csv son el 2026 agregado por componente\n(sin version, sucursal, cuenta ni tipo_gasto) y suman exactamente lo mismo que montos.csv.\nSeparador coma, UTF-8. Columnas:\n\n{columnas}\n\nResultado Operacional = Ingresos - Costos - Gastos Operacionales.\n",
   "columnas": {
+    "version": "Presupuesto, Forecast (3+9: enero a marzo real, abril a diciembre re-proyectado) o Real. Solo en montos.csv",
     "industria": "Empresa sintética: Manufactura, Energia o Salud",
-    "anio": "Año del registro",
+    "anio": "Año del registro (2025 o 2026)",
     "mes": "Mes (1 a 12)",
+    "sucursal": "Sucursal de la empresa (tres por industria). Solo en montos.csv",
     "centro_costo": "Centro de costo",
-    "componente": "Cuenta o línea dentro del centro de costo",
+    "componente": "Línea dentro del centro de costo",
+    "cuenta": "Cuenta dentro del componente. Solo en montos.csv",
+    "tipo_gasto": "Ingreso, Fijo o Variable. Solo en montos.csv",
     "grupo_cuenta": "Ingresos, Costos o Gastos Operacionales (para el Estado de Resultados)",
     "monto": "Monto en pesos chilenos, sin decimales"
   }
