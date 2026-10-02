@@ -285,6 +285,39 @@ main.ancho { max-width: 980px; }
 #destacado { margin-bottom: 40px; }
 #destacado h2 { font-size: var(--fs-xl); }
 .acciones-destacado { margin: var(--sp-4) 0 0; }
+
+/* Panel "la vitrina en una pantalla": selector de reportes + visor con el embed. */
+.panel-vitrina { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: var(--sp-6); align-items: start; }
+.selector { display: flex; flex-direction: column; gap: var(--sp-2); }
+.opcion {
+  display: flex; flex-direction: column; gap: 4px; text-align: left; font: inherit; color: var(--text); cursor: pointer;
+  background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--border-strong);
+  border-radius: var(--r); padding: var(--sp-3) var(--sp-4); transition: border-color var(--t);
+}
+.opcion:hover { border-color: var(--accent); }
+.opcion:focus-visible { outline: var(--focus); outline-offset: 2px; }
+.opcion[aria-selected="true"] { border-left-color: var(--accent); background: var(--accent-weak); }
+.opcion .eyebrow { margin: 0; }
+.opcion strong { font-size: var(--fs-md); line-height: 1.3; }
+.opcion-cifra { font-family: var(--mono); font-size: var(--fs-sm); color: var(--muted); }
+.opcion-cifra.ok { color: var(--ok); }
+.opcion-cifra.critica { color: var(--critica); }
+.visor h2 { margin-top: 0; font-size: var(--fs-xl); }
+.cifras { list-style: none; display: flex; flex-wrap: wrap; gap: var(--sp-2); padding: 0; margin: 0 0 var(--sp-4); }
+.cifras li {
+  display: flex; align-items: baseline; gap: 6px; border: 1px solid var(--border); border-left-width: 4px;
+  border-radius: var(--r); padding: 4px 10px; background: var(--surface); font-size: var(--fs-sm);
+}
+.cifras li strong { font-family: var(--mono); }
+.cifras li span { color: var(--muted); }
+.cifras li.ok { border-left-color: var(--ok); }
+.cifras li.neutro { border-left-color: var(--faint); }
+.cifras li.critica { border-left-color: var(--critica); }
+@media (max-width: 760px) {
+  .panel-vitrina { grid-template-columns: 1fr; }
+  .selector { flex-direction: row; overflow-x: auto; }
+  .opcion { min-width: 200px; }
+}
 .btn-primario {
   display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
   border-radius: var(--r); padding: 8px 16px; font-size: var(--fs-sm); font-weight: 600;
