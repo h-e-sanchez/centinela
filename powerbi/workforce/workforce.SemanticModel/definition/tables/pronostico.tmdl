@@ -30,7 +30,7 @@ table pronostico
 		displayFolder: 5. Pronóstico
 		lineageTag: 41bc2bb6-7e84-5155-9008-f05ce42f4d79
 
-	/// Z × tasa propia + (1 − Z) × tasa del estamento en la red (Bühlmann-Straub).
+	/// Z × tasa propia + (1 − Z) × tasa del estamento en la empresa (Bühlmann-Straub).
 	measure 'Tasa con credibilidad %' = DIVIDE(SUMX(pronostico, pronostico[tasa_credibilidad] * pronostico[dotacion] * pronostico[dias_habiles]), SUMX(pronostico, pronostico[dotacion] * pronostico[dias_habiles]))
 		formatString: 0.0%
 		displayFolder: 5. Pronóstico
@@ -43,7 +43,7 @@ table pronostico
 		lineageTag: 52f1ef0d-ad53-50c5-86c7-d087f3566fe5
 
 	/// Exposición de la celda en 2025-2026: la base de la credibilidad.
-	measure Años-persona = AVERAGEX(VALUES(pronostico[mes]), CALCULATE(SUM(pronostico[anios_persona])))
+	measure 'Años-persona' = AVERAGEX(VALUES(pronostico[mes]), CALCULATE(SUM(pronostico[anios_persona])))
 		formatString: #,##0.0
 		displayFolder: 5. Pronóstico
 		lineageTag: 6e0bc9c7-45fe-5c65-b563-e7f977d82863
@@ -168,12 +168,21 @@ table pronostico
 
 		annotation SummarizationSetBy = Automatic
 
-	column clinica
+	column industria
 		dataType: string
 		isHidden
-		lineageTag: 094c072f-cc8e-5bd0-9a2f-b2a03772b64a
+		lineageTag: 232d296c-7d80-57d5-aa8b-86cb746125d7
 		summarizeBy: none
-		sourceColumn: clinica
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: fbb54faa-754a-5881-a4ac-e6baf6883014
+		summarizeBy: none
+		sourceColumn: sede
 
 		annotation SummarizationSetBy = Automatic
 
@@ -211,10 +220,9 @@ table pronostico
 		mode: import
 		source =
 				let
-				    Origen = LeerCsv("pronostico.csv", {{"anio", Int64.Type}, {"mes", Int64.Type}, {"clinica", type text}, {"unidad", type text}, {"estamento", type text}, {"dotacion", Int64.Type}, {"dias_habiles", Int64.Type}, {"tasa_observada", type number}, {"anios_persona", type number}, {"z_credibilidad", type number}, {"tasa_credibilidad", type number}, {"dias_esperados", type number}, {"dias_p50", Int64.Type}, {"dias_p90", Int64.Type}, {"varianza_dias", type number}}),
+				    Origen = LeerCsv("pronostico.csv", {{"anio", Int64.Type}, {"mes", Int64.Type}, {"industria", type text}, {"sede", type text}, {"unidad", type text}, {"estamento", type text}, {"dotacion", Int64.Type}, {"dias_habiles", Int64.Type}, {"tasa_observada", type number}, {"anios_persona", type number}, {"z_credibilidad", type number}, {"tasa_credibilidad", type number}, {"dias_esperados", type number}, {"dias_p50", Int64.Type}, {"dias_p90", Int64.Type}, {"varianza_dias", type number}}),
 				    ConFecha = Table.AddColumn(Origen, "fecha", each #date([anio], [mes], 1), type date)
 				in
 				    ConFecha
 
 	annotation PBI_ResultType = Table
-

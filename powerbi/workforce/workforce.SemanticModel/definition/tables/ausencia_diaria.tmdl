@@ -26,8 +26,8 @@ table ausencia_diaria
 		displayFolder: 2. Ausentismo
 		lineageTag: 38e819e4-803a-5cb0-9d3c-7ebba07f3491
 
-	/// Tasa global del sector Salud público en 2023 (Dipres, 2024): referencia de contexto, no meta.
-	measure 'Referencia Dipres salud' = IF(NOT ISBLANK([Tasa global %]), 0.108)
+	/// Tasa global del sector Salud público en 2023 (Dipres, 2024): referencia de contexto, solo con Salud filtrada.
+	measure 'Referencia Dipres salud' = IF(NOT ISBLANK([Tasa global %]) && SELECTEDVALUE(sedes[industria]) = "Salud", 0.108)
 		formatString: 0.0%
 		displayFolder: 2. Ausentismo
 		lineageTag: 7042cc67-8684-51e9-bc7c-7103457d3461
@@ -116,4 +116,3 @@ table ausencia_diaria
 				    Tipado
 
 	annotation PBI_ResultType = Table
-

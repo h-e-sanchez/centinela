@@ -60,4 +60,3 @@ table 'Tramos Bradford'
 				)
 
 	annotation PBI_ResultType = Table
-

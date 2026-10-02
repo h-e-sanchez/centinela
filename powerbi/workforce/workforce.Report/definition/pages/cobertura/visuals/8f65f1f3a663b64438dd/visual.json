@@ -6,7 +6,7 @@
     "y": 46,
     "z": 200,
     "height": 40,
-    "width": 600,
+    "width": 560,
     "tabOrder": 200
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Desde julio de 2025 Norte cubre con un pool interno; Centro y Sur siguen igual y son el grupo de control. Costo por hora: sobretiempo ×1,5, pool ×1,1 y externo ×1,8 del valor hora.",
+                    "value": "Desde julio de 2025 una sede de cada empresa cubre con un pool interno (Concepción, Zona Norte y Clínica Oriente); las otras dos sedes siguen igual y son el grupo de control. Costo por hora: sobretiempo ×1,5, pool ×1,1 y externo ×1,8 del valor hora.",
                     "textStyle": {
                       "fontSize": "8pt",
                       "color": "#6a6357"

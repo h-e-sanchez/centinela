@@ -179,13 +179,9 @@ table episodios
 		source =
 				let
 				    Origen = LeerCsv("episodios.csv", {{"id_episodio", type text}, {"id_persona", type text}, {"fecha_inicio", type date}, {"fecha_termino", type date}, {"dias_habiles", Int64.Type}, {"tipo", type text}, {"grupo_diagnostico", type text}}),
-				    // Los episodios que parten antes de 2025 (calentamiento de la simulación) quedan fuera del periodo del
-				    // reporte: sus días de 2025 siguen en ausencia_diaria, pero no crean un mes "(En blanco)" en Calendario.
-				    EnPeriodo = Table.SelectRows(Origen, each [fecha_inicio] >= #date(2025, 1, 1)),
-				    OrdenDuracion = Table.AddColumn(EnPeriodo, "orden_tramo_duracion", each if [dias_habiles] = 1 then 1 else if [dias_habiles] <= 3 then 2 else if [dias_habiles] <= 5 then 3 else if [dias_habiles] <= 10 then 4 else if [dias_habiles] <= 20 then 5 else 6, Int64.Type),
+				    OrdenDuracion = Table.AddColumn(Origen, "orden_tramo_duracion", each if [dias_habiles] = 1 then 1 else if [dias_habiles] <= 3 then 2 else if [dias_habiles] <= 5 then 3 else if [dias_habiles] <= 10 then 4 else if [dias_habiles] <= 20 then 5 else 6, Int64.Type),
 				    TramoDuracion = Table.AddColumn(OrdenDuracion, "tramo_duracion", each {"1 día", "2 a 3", "4 a 5", "6 a 10", "11 a 20", "21 o más"}{[orden_tramo_duracion] - 1}, type text)
 				in
 				    TramoDuracion
 
 	annotation PBI_ResultType = Table
-

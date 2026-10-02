@@ -44,13 +44,13 @@ table 'Comparar por'
 		mode: import
 		source =
 				{
-				    ("Clínica", NAMEOF('clinicas'[clinica]), 0),
-				    ("Unidad", NAMEOF('unidades'[unidad]), 1),
-				    ("Estamento", NAMEOF('estamentos'[estamento]), 2),
-				    ("Sexo", NAMEOF('personas'[sexo]), 3),
-				    ("Tramo de edad", NAMEOF('personas'[tramo_edad]), 4),
-				    ("Antigüedad", NAMEOF('personas'[tramo_antiguedad]), 5)
+				    ("Industria", NAMEOF('sedes'[industria]), 0),
+				    ("Sede", NAMEOF('sedes'[sede]), 1),
+				    ("Unidad", NAMEOF('unidades'[unidad]), 2),
+				    ("Estamento", NAMEOF('estamentos'[estamento]), 3),
+				    ("Sexo", NAMEOF('personas'[sexo]), 4),
+				    ("Tramo de edad", NAMEOF('personas'[tramo_edad]), 5),
+				    ("Antigüedad", NAMEOF('personas'[tramo_antiguedad]), 6)
 				}
 
 	annotation PBI_ResultType = Table
-

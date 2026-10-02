@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "045416acc26474c22103",
   "position": {
-    "x": 796,
+    "x": 864,
     "y": 10,
-    "z": 400,
+    "z": 500,
     "height": 64,
-    "width": 148,
-    "tabOrder": 400
+    "width": 128,
+    "tabOrder": 500
   },
   "visual": {
     "visualType": "slicer",
@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "clinicas"
+                      "Entity": "sedes"
                     }
                   },
-                  "Property": "clinica"
+                  "Property": "sede"
                 }
               },
-              "queryRef": "clinicas.clinica",
-              "nativeQueryRef": "clinica",
+              "queryRef": "sedes.sede",
+              "nativeQueryRef": "sede",
               "active": true,
-              "displayName": "Clínica"
+              "displayName": "Sede"
             }
           ]
         }
@@ -108,7 +108,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Clínica'"
+                  "Value": "'Sede'"
                 }
               }
             },

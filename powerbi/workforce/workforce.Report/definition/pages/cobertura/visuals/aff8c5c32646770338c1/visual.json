@@ -4,10 +4,10 @@
   "position": {
     "x": 656,
     "y": 216,
-    "z": 900,
+    "z": 1000,
     "height": 240,
     "width": 600,
-    "tabOrder": 900
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -58,16 +58,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "clinicas"
+                      "Entity": "sedes"
                     }
                   },
-                  "Property": "clinica"
+                  "Property": "sede"
                 }
               },
-              "queryRef": "clinicas.clinica",
-              "nativeQueryRef": "clinica",
+              "queryRef": "sedes.sede",
+              "nativeQueryRef": "sede",
               "active": true,
-              "displayName": "Clínica"
+              "displayName": "Sede"
             }
           ]
         }
@@ -184,7 +184,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Costo por hora cubierta, por clínica'"
+                  "Value": "'Costo por hora cubierta, por sede'"
                 }
               }
             },

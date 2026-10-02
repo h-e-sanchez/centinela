@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "7108cf0f75c7fb2d1114",
   "position": {
     "x": 24,
     "y": 478,
-    "z": 1000,
+    "z": 1100,
     "height": 230,
     "width": 1232,
-    "tabOrder": 1000
+    "tabOrder": 1100
   },
   "visual": {
     "visualType": "tableEx",
@@ -36,16 +36,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "clinicas"
+                      "Entity": "sedes"
                     }
                   },
-                  "Property": "clinica"
+                  "Property": "sede"
                 }
               },
-              "queryRef": "clinicas.clinica",
-              "nativeQueryRef": "clinica",
+              "queryRef": "sedes.sede",
+              "nativeQueryRef": "sede",
               "active": true,
-              "displayName": "Clínica"
+              "displayName": "Sede"
             },
             {
               "field": {
@@ -92,7 +92,6 @@
               },
               "queryRef": "episodios.Episodios 12m",
               "nativeQueryRef": "Episodios 12m",
-              "active": false,
               "displayName": "Episodios"
             },
             {
@@ -108,7 +107,6 @@
               },
               "queryRef": "episodios.Días 12m",
               "nativeQueryRef": "Días 12m",
-              "active": false,
               "displayName": "Días"
             },
             {
@@ -124,7 +122,6 @@
               },
               "queryRef": "episodios.Bradford 12m",
               "nativeQueryRef": "Bradford 12m",
-              "active": false,
               "displayName": "Bradford"
             }
           ]

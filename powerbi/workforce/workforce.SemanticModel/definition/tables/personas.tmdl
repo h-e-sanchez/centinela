@@ -26,7 +26,7 @@ table personas
 		lineageTag: 240702ed-3794-565b-80db-feeabffb3517
 
 	/// Personas contratadas al cierre del periodo (patrón de fechas de ingreso y egreso).
-	measure Dotación =
+	measure 'Dotación' =
 			VAR fin = [Fecha de análisis]
 			RETURN
 			    IF(
@@ -101,7 +101,7 @@ table personas
 		displayFolder: 1. Dotación
 		lineageTag: 27245ca6-020b-5910-b07c-831fbeb03d40
 
-	/// Años promedio en la red de quienes están contratados al cierre.
+	/// Años promedio en la empresa de quienes están contratados al cierre.
 	measure 'Antigüedad promedio' =
 			VAR fin = [Fecha de análisis]
 			RETURN
@@ -121,12 +121,21 @@ table personas
 
 		annotation SummarizationSetBy = Automatic
 
-	column clinica
+	column industria
 		dataType: string
 		isHidden
-		lineageTag: 1dd70a14-d858-51f6-bebf-45c9b556b57a
+		lineageTag: b205e73b-b065-591b-b37c-7c27fd64db32
 		summarizeBy: none
-		sourceColumn: clinica
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: 3ead92ff-c4ba-5525-8dc7-5b1e8deec04d
+		summarizeBy: none
+		sourceColumn: sede
 
 		annotation SummarizationSetBy = Automatic
 
@@ -281,7 +290,7 @@ table personas
 		mode: import
 		source =
 				let
-				    Origen = LeerCsv("personas.csv", {{"id_persona", type text}, {"clinica", type text}, {"unidad", type text}, {"estamento", type text}, {"sexo", type text}, {"fecha_nacimiento", type date}, {"fecha_ingreso", type date}, {"fecha_egreso", type date}, {"motivo_egreso", type text}, {"jornada_horas", Int64.Type}}),
+				    Origen = LeerCsv("personas.csv", {{"id_persona", type text}, {"industria", type text}, {"sede", type text}, {"unidad", type text}, {"estamento", type text}, {"sexo", type text}, {"fecha_nacimiento", type date}, {"fecha_ingreso", type date}, {"fecha_egreso", type date}, {"motivo_egreso", type text}, {"jornada_horas", Int64.Type}}),
 				    // Edad y antigüedad al cierre de los datos (o al egreso): tramos estables para segmentar.
 				    Corte = #date(2026, 12, 31),
 				    Sexo = Table.TransformColumns(Origen, {{"sexo", each if _ = "F" then "Mujer" else "Hombre", type text}}),
@@ -296,4 +305,3 @@ table personas
 				    TramoAntiguedad
 
 	annotation PBI_ResultType = Table
-

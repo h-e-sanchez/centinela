@@ -1,7 +1,19 @@
-unidad,orden,requiere_cobertura
-Urgencia,1,0.95
-Hospitalización,2,0.95
-Pabellón,3,0.9
-UCI,4,1.0
-Ambulatorio,5,0.6
-Apoyo,6,0.2
+unidad,industria,orden,requiere_cobertura
+Producción,Manufactura,1,0.95
+Mantenimiento industrial,Manufactura,2,0.8
+Calidad,Manufactura,3,0.6
+Bodega y logística,Manufactura,4,0.85
+Ventas,Manufactura,5,0.3
+Administración y finanzas,Manufactura,6,0.2
+Operación de centrales,Energia,7,1.0
+Mantenimiento,Energia,8,0.8
+Transmisión,Energia,9,0.7
+Centro de despacho,Energia,10,1.0
+Comercial,Energia,11,0.3
+Gestión corporativa,Energia,12,0.2
+Urgencia,Salud,13,0.95
+Hospitalización,Salud,14,0.95
+Pabellón,Salud,15,0.9
+UCI,Salud,16,1.0
+Ambulatorio,Salud,17,0.6
+Apoyo,Salud,18,0.2

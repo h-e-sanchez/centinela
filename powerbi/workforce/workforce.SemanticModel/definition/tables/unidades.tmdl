@@ -1,4 +1,4 @@
-/// Dimensión: unidades de cada clínica y fracción de sus horas ausentes que hay que cubrir.
+/// Dimensión: unidades de cada empresa y fracción de sus horas ausentes que hay que cubrir.
 table unidades
 	lineageTag: 1670d565-5b86-5a55-ac3e-c3ee10b8e388
 
@@ -8,6 +8,15 @@ table unidades
 		summarizeBy: none
 		sourceColumn: unidad
 		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: ff8da447-1a11-5b8c-9618-3c6f8f24a33f
+		summarizeBy: none
+		sourceColumn: industria
 
 		annotation SummarizationSetBy = Automatic
 
@@ -35,9 +44,8 @@ table unidades
 		mode: import
 		source =
 				let
-				    Origen = LeerCsv("unidades.csv", {{"unidad", type text}, {"orden", Int64.Type}, {"requiere_cobertura", type number}})
+				    Origen = LeerCsv("unidades.csv", {{"unidad", type text}, {"industria", type text}, {"orden", Int64.Type}, {"requiere_cobertura", type number}})
 				in
 				    Origen
 
 	annotation PBI_ResultType = Table
-

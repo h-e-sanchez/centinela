@@ -29,22 +29,30 @@ def t():
     return {n: _leer(n) for n in gen.ARCHIVOS}
 
 
+INDUSTRIAS = list(gen.INDUSTRIAS)
+
+
 @pytest.fixture(scope="module")
 def tasas(t):
-    """Tasa global (sin licencias parentales) por estamento, sexo, mes y en total."""
+    """Tasa global (sin licencias parentales) por industria y, dentro de ella, por estamento, sexo y mes."""
     personas = {p["id_persona"]: p for p in t["personas"]}
     parental = {e["id_episodio"] for e in t["episodios"] if e["tipo"] == "Licencia parental"}
     perdidos, disponibles = Counter(), Counter()
+
+    def claves(p, fecha):
+        return [(p["industria"], c) for c in ("total", p["estamento"], p["sexo"], int(fecha[5:7]))]
+
     for f in t["ausencia_diaria"]:
         if f["id_episodio"] not in parental:
-            p = personas[f["id_persona"]]
-            for clave in ("total", p["estamento"], p["sexo"], int(f["fecha"][5:7])):
+            for clave in claves(personas[f["id_persona"]], f["fecha"]):
                 perdidos[clave] += 1
     for f in t["disponibilidad_mensual"]:
-        p = personas[f["id_persona"]]
-        for clave in ("total", p["estamento"], p["sexo"], int(f["fecha"][5:7])):
+        for clave in claves(personas[f["id_persona"]], f["fecha"]):
             disponibles[clave] += int(f["dias_habiles"])
-    return {k: perdidos[k] / disponibles[k] for k in disponibles}
+    salida = defaultdict(dict)
+    for (industria, clave), dias in disponibles.items():
+        salida[industria][clave] = perdidos[(industria, clave)] / dias
+    return salida
 
 
 def test_csv_al_dia_y_reproducibles(tmp_path):
@@ -55,22 +63,35 @@ def test_csv_al_dia_y_reproducibles(tmp_path):
         assert nuevo == guardado, f"{nombre}.csv desactualizado: corre python data/generar_workforce.py"
 
 
-def test_tasa_global_de_clinica_privada(tasas):
-    assert 0.06 <= tasas["total"] <= 0.085
+def test_tasa_global_por_industria(tasas):
+    # Salud a escala de clínica privada (bajo el 10,8% del sector público); Energía, la más baja.
+    assert 0.055 <= tasas["Salud"]["total"] <= 0.085
+    assert 0.04 <= tasas["Manufactura"]["total"] <= 0.07
+    assert 0.025 <= tasas["Energia"]["total"] <= 0.045
+    assert tasas["Energia"]["total"] < tasas["Manufactura"]["total"] < tasas["Salud"]["total"]
 
 
-def test_orden_de_estamentos_como_la_dipres(tasas):
-    assert tasas["Directivos"] < tasas["Profesionales"] < tasas["Auxiliares"] < tasas["Técnicos"]
-    assert tasas["Administrativos"] < tasas["Técnicos"]
+def test_orden_de_estamentos_en_salud_como_la_dipres(tasas):
+    s = tasas["Salud"]
+    assert s["Directivos"] < s["Profesionales"] < s["Auxiliares"] < s["Técnicos"]
+    assert s["Administrativos"] < s["Técnicos"]
 
 
-def test_mujeres_se_ausentan_casi_el_doble(tasas):
-    assert 1.5 <= tasas["F"] / tasas["M"] <= 2.3
+@pytest.mark.parametrize("industria", INDUSTRIAS)
+def test_directivos_se_ausentan_menos_que_la_operacion(tasas, industria):
+    operacion = "Técnicos" if industria == "Salud" else "Operarios"
+    assert tasas[industria]["Directivos"] < tasas[industria][operacion]
 
 
-def test_pico_de_invierno_y_minimo_en_febrero(tasas):
-    assert max(range(1, 13), key=lambda m: tasas[m]) in (5, 6, 7)
-    assert tasas[2] < tasas[6]
+def test_mujeres_se_ausentan_casi_el_doble_en_salud(tasas):
+    assert 1.5 <= tasas["Salud"]["F"] / tasas["Salud"]["M"] <= 2.4
+
+
+@pytest.mark.parametrize("industria", INDUSTRIAS)
+def test_pico_de_invierno_y_minimo_en_febrero(tasas, industria):
+    t = tasas[industria]
+    assert max(range(1, 13), key=lambda m: t[m]) in (5, 6, 7, 8)
+    assert t[2] < t[6]
 
 
 def test_salud_mental_es_el_principal_motivo(t):
@@ -83,12 +104,14 @@ def test_salud_mental_es_el_principal_motivo(t):
     assert 0.25 <= dias["Salud mental"] / total <= 0.40
 
 
-def test_rotacion_anual_y_mas_alta_el_primer_anio(t):
+@pytest.mark.parametrize("industria", INDUSTRIAS)
+def test_rotacion_anual_y_mas_alta_el_primer_anio(t, industria):
+    personas = [p for p in t["personas"] if p["industria"] == industria]
     for anio in ("2025", "2026"):
-        egresos = sum(1 for p in t["personas"] if p["fecha_egreso"].startswith(anio))
-        activos = sum(1 for p in t["personas"] if p["fecha_ingreso"] <= f"{anio}-12-31"
+        egresos = sum(1 for p in personas if p["fecha_egreso"].startswith(anio))
+        activos = sum(1 for p in personas if p["fecha_ingreso"] <= f"{anio}-12-31"
                       and (not p["fecha_egreso"] or p["fecha_egreso"] > f"{anio}-12-31"))
-        assert 0.10 <= egresos / activos <= 0.20, anio
+        assert 0.06 <= egresos / activos <= 0.25, anio
     motivos = Counter(p["motivo_egreso"] for p in t["personas"] if p["fecha_egreso"])
     assert motivos["Voluntario"] > motivos["Involuntario"] > motivos["Jubilación"] > 0
 
@@ -101,24 +124,27 @@ def test_ausencias_dentro_del_contrato(t):
     assert {f["id_episodio"] for f in t["ausencia_diaria"]} == {e["id_episodio"] for e in t["episodios"]}
 
 
-def _costo_por_hora(t, clinica: str, desde: str, hasta: str) -> tuple[float, float]:
+def _costo_por_hora(t, sede: str, desde: str, hasta: str) -> tuple[float, float]:
     fs = [f for f in t["cobertura_mensual"]
-          if f["clinica"] == clinica and desde <= f"{f['anio']}-{int(f['mes']):02d}" <= hasta]
+          if f["sede"] == sede and desde <= f"{f['anio']}-{int(f['mes']):02d}" <= hasta]
     costo = sum(float(f[c]) for f in fs for c in ("costo_sobretiempo", "costo_pool", "costo_externo"))
     horas = sum(float(f[c]) for f in fs for c in ("horas_sobretiempo", "horas_pool", "horas_externo"))
     sobretiempo = sum(float(f["horas_sobretiempo"]) for f in fs) / sum(float(f["horas_requeridas"]) for f in fs)
     return costo / horas, sobretiempo
 
 
-def test_piloto_de_norte_baja_sobretiempo_y_costo_frente_al_control(t):
-    antes, st_antes = _costo_por_hora(t, "Norte", "2025-01", "2025-06")
-    despues, st_despues = _costo_por_hora(t, "Norte", "2025-10", "2026-12")
+@pytest.mark.parametrize("industria", INDUSTRIAS)
+def test_piloto_baja_sobretiempo_y_costo_frente_al_control(t, industria):
+    piloto = gen.INDUSTRIAS[industria].piloto
+    antes, st_antes = _costo_por_hora(t, piloto, "2025-01", "2025-06")
+    despues, st_despues = _costo_por_hora(t, piloto, "2025-10", "2026-12")
     assert st_antes > 0.55 and st_despues < 0.30
-    assert despues / antes < 0.90
-    for control in ("Centro", "Sur"):
-        c_antes, _ = _costo_por_hora(t, control, "2025-01", "2025-06")
-        c_despues, _ = _costo_por_hora(t, control, "2025-10", "2026-12")
-        assert abs(c_despues / c_antes - 1) < 0.08, control
+    assert despues / antes < 0.88
+    for control in gen.INDUSTRIAS[industria].sedes:
+        if control != piloto:
+            c_antes, _ = _costo_por_hora(t, control, "2025-01", "2025-06")
+            c_despues, _ = _costo_por_hora(t, control, "2025-10", "2026-12")
+            assert abs(c_despues / c_antes - 1) < 0.08, control
 
 
 def test_cobertura_cuadra_con_las_horas_requeridas(t):
@@ -128,10 +154,10 @@ def test_cobertura_cuadra_con_las_horas_requeridas(t):
 
 
 def test_credibilidad_crece_con_la_exposicion(t):
-    celdas = {(f["clinica"], f["unidad"], f["estamento"]): f for f in t["pronostico"] if f["mes"] == "1"}
+    celdas = {(f["sede"], f["unidad"], f["estamento"]): f for f in t["pronostico"] if f["mes"] == "1"}
     por_estamento = defaultdict(list)
     for (_, _, est), f in celdas.items():
-        por_estamento[est].append((float(f["anios_persona"]), float(f["z_credibilidad"])))
+        por_estamento[(f["industria"], est)].append((float(f["anios_persona"]), float(f["z_credibilidad"])))
     for est, pares in por_estamento.items():
         pares.sort()
         zs = [z for _, z in pares]
@@ -146,6 +172,15 @@ def test_pronostico_ordenado_y_coherente(t):
         assert 0 <= float(f["tasa_credibilidad"]) < 0.3
         if float(f["z_credibilidad"]) == 1:
             assert f["tasa_credibilidad"] == f["tasa_observada"]
+
+
+def test_sedes_alineadas_con_el_reporte_de_presupuesto():
+    # Las mismas empresas en los dos reportes: las sedes son las sucursales de presupuesto-vs-real.
+    spec = importlib.util.spec_from_file_location("generar_escenarios", DATA / "generar_escenarios.py")
+    esc = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(esc)
+    for industria, ind in gen.INDUSTRIAS.items():
+        assert set(ind.sedes) == set(esc.SUCURSALES[industria]), industria
 
 
 def test_ids_sinteticos_sin_nombres(t):

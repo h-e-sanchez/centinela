@@ -4,10 +4,10 @@
   "position": {
     "x": 24,
     "y": 216,
-    "z": 800,
+    "z": 900,
     "height": 240,
     "width": 616,
-    "tabOrder": 800
+    "tabOrder": 900
   },
   "visual": {
     "visualType": "lineChart",
@@ -63,7 +63,7 @@
               },
               "queryRef": "ausencia_diaria.Referencia Dipres salud",
               "nativeQueryRef": "Referencia Dipres salud",
-              "displayName": "Salud pública (Dipres 2023)"
+              "displayName": "Salud pública (Dipres 2023, solo Salud)"
             }
           ]
         }

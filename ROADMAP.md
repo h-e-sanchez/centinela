@@ -36,15 +36,17 @@ explica una herramienta de seguimiento Presupuesto vs. Real: no se copia ninguna
 puntual, solo se elige el arquetipo de negocio que el mercado real demuestra que es común
 para este rol.
 
-### Reporte #2 — «Red Asistencial Ejemplo S.A.»
+### Reporte #2 — las mismas tres empresas, vistas desde las personas
 
-Una red ficticia de tres clínicas (Norte, Centro y Sur), seis unidades, cinco estamentos y
-unas 600 personas, simulada día hábil a día hábil en 2025-2026
-([`data/generar_workforce.py`](data/generar_workforce.py)). La calibración sigue en orden de
-magnitud a la Dipres (*Radiografía del ausentismo laboral en el sector público*, 2024), al
-NHS y a la SUSESO, a escala de clínica privada. Desde julio de 2025 Norte cubre ausencias con
-un pool interno y Centro y Sur sirven de grupo de control. Ningún parámetro sale de un
-empleador real: el método (simulación y credibilidad) es genérico.
+Las tres empresas ficticias del reporte #1 (Manufactura, Energía y Salud), con sus sucursales
+como sedes, seis unidades por empresa y unas 1.400 personas, simuladas día hábil a día hábil
+en 2025-2026 ([`data/generar_workforce.py`](data/generar_workforce.py)). En Salud, la
+calibración sigue en orden de magnitud a la Dipres (*Radiografía del ausentismo laboral en el
+sector público*, 2024), al NHS y a la SUSESO, a escala de clínica privada; Energía y
+Manufactura, con plantillas más masculinas, quedan más abajo. Desde julio de 2025 una sede de
+cada empresa (Concepción, Zona Norte y Clínica Oriente) cubre ausencias con un pool interno, y
+las otras dos sirven de grupo de control. Ningún parámetro sale de un empleador real: el
+método (simulación y credibilidad) es genérico.
 
 ---
 
