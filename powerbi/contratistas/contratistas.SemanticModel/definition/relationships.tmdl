@@ -1,0 +1,43 @@
+relationship 40f0971e-34c2-5b93-a641-f329538b0a5e
+	fromColumn: activos.sede
+	toColumn: sedes.sede
+
+relationship 42c4e29f-b50d-5bd1-924f-51f318bbd828
+	fromColumn: activos.id_contratista
+	toColumn: contratistas.id_contratista
+
+relationship fe0e55ea-1685-59e9-b6f2-b4b6b7e34976
+	fromColumn: tarifas.id_contratista
+	toColumn: contratistas.id_contratista
+
+relationship 1c018937-67d8-58ff-80e7-577809d6e5c9
+	fromColumn: ordenes_trabajo.id_activo
+	toColumn: activos.id_activo
+
+relationship c39275a4-fbb4-5e6a-87b1-f95f430dfb0d
+	fromColumn: ordenes_trabajo.fecha_programada
+	toColumn: Calendario.Date
+
+relationship 19d4641f-adcd-526c-a260-5e5b69c1f5bb
+	fromColumn: estados_pago.sede
+	toColumn: sedes.sede
+
+relationship 80e21d53-1862-5ed1-bc8e-1b6652524bf5
+	fromColumn: estados_pago.id_contratista
+	toColumn: contratistas.id_contratista
+
+relationship 9de20105-991b-56a3-b290-78060d8803cd
+	fromColumn: estados_pago.periodo
+	toColumn: Calendario.Date
+
+relationship a627c3b7-29db-5b58-a8da-d33088da996f
+	fromColumn: observaciones.sede
+	toColumn: sedes.sede
+
+relationship 6a91cba0-37c7-5b01-a148-ac53a903c743
+	fromColumn: observaciones.id_contratista
+	toColumn: contratistas.id_contratista
+
+relationship b0a428b5-b97d-59ae-a63a-c24114a822a4
+	fromColumn: observaciones.periodo
+	toColumn: Calendario.Date

@@ -69,6 +69,10 @@ python herramientas/empaquetar_descargas.py
 # Datos sintéticos del reporte Workforce (red de clínicas ficticia, 2025-2026 y pronóstico 2027)
 python data/generar_workforce.py
 
+# Datos sintéticos del reporte de contratistas (OT y estados de pago) + reglas SQL de auditoría
+python data/generar_contratistas.py
+python sql/auditar.py   # solo recalcula observaciones.csv desde los CSV
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -102,6 +106,13 @@ enfoque a People Analytics: dotación y rotación, los tres índices de ausentis
 Factor Bradford, costo de cobertura con un piloto evaluado contra un grupo de control y
 pronóstico 2027 con credibilidad de Bühlmann-Straub. Guía en
 [`reportes/workforce/guia.md`](reportes/workforce/guia.md).
+
+El reporte #3, **Contratistas y mantenimiento** ([`powerbi/contratistas/`](powerbi/contratistas/)),
+cruza los estados de pago de los contratistas con las órdenes de trabajo y las tarifas. Las
+reglas de auditoría viven en SQL versionado ([`sql/reglas_auditoria.sql`](sql/reglas_auditoria.sql),
+CTE y `ROW_NUMBER` sobre `sqlite3`), con tests que exigen encontrar exactamente las anomalías
+inyectadas. Suma cumplimiento del plan preventivo, backlog, MTBF y MTTR. Guía en
+[`reportes/contratistas/guia.md`](reportes/contratistas/guia.md).
 
 ## Demo
 

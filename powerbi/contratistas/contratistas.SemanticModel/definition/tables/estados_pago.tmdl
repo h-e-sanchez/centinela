@@ -1,0 +1,179 @@
+/// Líneas de los estados de pago mensuales. anomalia_inyectada es la etiqueta de la simulación, no la usa ninguna medida.
+table estados_pago
+	lineageTag: 23dcce4a-c4a1-5a7a-85ca-fffa28c172d6
+
+	/// Todo lo que los contratistas cobran en sus estados de pago.
+	measure Facturado = SUM(estados_pago[monto])
+		formatString: \$ #,##0
+		displayFolder: 1. Estados de pago
+		lineageTag: b931aa33-5c58-58a8-83bf-2947386bee66
+
+	/// Líneas cobradas.
+	measure 'Líneas de EP' = COUNTROWS(estados_pago)
+		formatString: #,##0
+		displayFolder: 1. Estados de pago
+		lineageTag: b5cf0685-399c-5dde-995d-a9b6400b4464
+
+	/// Facturado sobre órdenes de trabajo del periodo: costo unitario del servicio.
+	measure 'Facturado por OT' = DIVIDE([Facturado], [OT])
+		formatString: \$ #,##0
+		displayFolder: 1. Estados de pago
+		lineageTag: 29421d26-0908-5674-9adf-ff55ac745265
+
+	/// Facturado abreviado para la tarjeta.
+	measure 'Portada facturado' =
+			VAR v = [Facturado]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: d437b205-91bd-53ab-bb29-486b2df34948
+
+	/// Observado abreviado para la tarjeta.
+	measure 'Portada observado' =
+			VAR v = [Observado]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 5851f249-5fcc-50d7-8ac2-c79982f609d5
+
+	/// Monto evitado abreviado para la tarjeta.
+	measure 'Portada evitado' =
+			VAR v = [Monto evitado]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 6ad50ae4-ccb7-5f93-82d9-43c4ba0d6c7b
+
+	/// Primera frase: cuánto se observaba antes y después de instalar el control.
+	measure 'Portada frase 1' = "Observado: " & FORMAT([% Observado antes del control], "0.0%") & " sin control · " & FORMAT([% Observado con control], "0.0%") & " con control"
+		displayFolder: 0. Portada
+		lineageTag: bff21a6d-20a8-5023-8447-94a7fd1127ac
+
+	/// Segunda frase: el contratista con más monto observado.
+	measure 'Portada frase 2' =
+			VAR top = TOPN(1, VALUES(contratistas[contratista]), [Observado], DESC)
+			VAR nombre = MAXX(top, contratistas[contratista])
+			VAR monto = CALCULATE([Observado], contratistas[contratista] = nombre)
+			RETURN "Mayor observado: " & nombre & " " & FORMAT(monto / 1000000, "$ #,0") & " M"
+		displayFolder: 0. Portada
+		lineageTag: 3ef93f47-f299-530b-a521-ddcb49dc17d8
+
+	column id_linea
+		dataType: string
+		lineageTag: ca987b14-d1ba-5621-8cd0-2150d6d4fdef
+		summarizeBy: none
+		sourceColumn: id_linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 382e3085-c4a9-55b9-b784-173755a8f155
+		summarizeBy: none
+		sourceColumn: periodo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: 5358f70f-658c-5faf-b9a1-9de9eac3e6bc
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: d491e285-1d5e-5565-9f57-72716e98b8e3
+		summarizeBy: none
+		sourceColumn: sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_ot
+		dataType: string
+		lineageTag: 9fa41da0-5d4b-5bb3-9cc2-4655c202fd51
+		summarizeBy: none
+		sourceColumn: id_ot
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		lineageTag: 6d7a4a80-605e-5f0e-973c-818bda1b1b12
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad_cobrada
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 97e92071-e68e-552f-a317-547d3b1d4c0f
+		summarizeBy: none
+		sourceColumn: cantidad_cobrada
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_cobrado
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: a9e6f695-209f-5f2f-823a-a6ff9f500579
+		summarizeBy: none
+		sourceColumn: precio_cobrado
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 6063fabe-3191-5f39-b313-40725d1ace03
+		summarizeBy: none
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+	column anomalia_inyectada
+		dataType: string
+		isHidden
+		lineageTag: 9b81efaf-0c1c-54e7-b0f8-1ac652cc0c94
+		summarizeBy: none
+		sourceColumn: anomalia_inyectada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition estados_pago = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("estados_pago.csv", {{"id_linea", type text}, {"periodo", type date}, {"id_contratista", type text}, {"sede", type text}, {"id_ot", type text}, {"servicio", type text}, {"cantidad_cobrada", type number}, {"precio_cobrado", Int64.Type}, {"monto", Int64.Type}, {"anomalia_inyectada", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

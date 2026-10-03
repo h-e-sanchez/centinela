@@ -160,14 +160,89 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_workforce.py"
         }
       ]
+    },
+    {
+      "slug": "contratistas",
+      "titulo": "Contratistas y mantenimiento: del estado de pago a la orden de trabajo",
+      "resumen": "Las tres empresas de la vitrina auditan los estados de pago de sus contratistas contra las órdenes de trabajo cerradas y las tarifas del contrato, con reglas en SQL versionado: cobros sin OT, cantidades sobre lo ejecutado y precios fuera de contrato. Incluye monto observado y evitado, cumplimiento del plan preventivo, backlog, MTTR y MTBF, y un ranking de contratistas.",
+      "tema": "Control de gestión · Mantenimiento",
+      "color": "#B5562E",
+      "fecha": "2026-10-03",
+      "estado": "en-preparacion",
+      "destacado": false,
+      "modelo": "powerbi/contratistas",
+      "datos": "data/contratistas",
+      "prefijo": "contratistas",
+      "habilidades": [
+        "Auditoría de estados de pago",
+        "SQL versionado con tests",
+        "Indicadores de mantenimiento (SAP PM)",
+        "MTBF, MTTR y backlog",
+        "Modelo con dos estrellas y dimensiones compartidas",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Control",
+          "resultado": "9,5% → 3,5%",
+          "tono": "ok",
+          "texto": "Observado sobre lo facturado antes y después de cruzar cada estado de pago con sus OT, en las tres empresas."
+        },
+        {
+          "industria": "Evitado",
+          "resultado": "$403 M",
+          "tono": "ok",
+          "texto": "Rechazado antes de pagar desde julio de 2025; en el semestre anterior se pagaron $357 M de más."
+        },
+        {
+          "industria": "Riesgosos",
+          "resultado": "70% vs. 92%",
+          "tono": "critica",
+          "texto": "Los contratistas que más cobran sin respaldo también cumplen peor el plan preventivo."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/contratistas-datos-csv.zip",
+          "detalle": "siete tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/contratistas-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/contratistas.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/contratistas-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/contratistas"
+        },
+        {
+          "etiqueta": "Reglas de auditoría en SQL",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/sql/reglas_auditoria.sql"
+        },
+        {
+          "etiqueta": "Generador de datos",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_contratistas.py"
+        },
+        {
+          "etiqueta": "Tests de reglas y calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_contratistas.py"
+        }
+      ]
     }
   ],
-  "proximos": [
-    {
-      "titulo": "Del libro diario a los Estados Financieros",
-      "tema": "Contabilidad · Controller",
-      "color": "#B5562E",
-      "resumen": "Holding sintético con tres sociedades: asientos en partida doble transformados con SQL versionado en Balance, Estado de Resultados y flujo de caja consolidados, con eliminaciones intercompañía y capital de trabajo (DSO, DPO y ciclo de caja)."
-    }
-  ]
+  "proximos": []
 }

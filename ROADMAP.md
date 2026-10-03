@@ -128,7 +128,10 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reporte #2: Workforce (dotación, ausentismo y cobertura): datos, modelo PBIP con 6 páginas, guía y descargas
 - [x] Reporte #2: abierto en Desktop sin errores y publicado en la web (tenant `cimad.net`)
 - [ ] Reporte #2: `.pbix` exportado y captura `portada.png` (manual)
-- [ ] Reporte #3: Capital de trabajo, cobranza y DSO
+- [x] Reporte #3: Contratistas y mantenimiento: datos, reglas SQL con tests, modelo PBIP con 6 páginas, guía y descargas
+- [ ] Reporte #3: abierto en Desktop sin errores y publicado en la web (tenant `cimad.net`)
+- [ ] Reporte #3: `.pbix` exportado y captura `portada.png` (manual)
+- [ ] Reporte #4: Del libro diario a los EEFF / capital de trabajo (en espera)
 
 ## Backlog P1 — robustez
 

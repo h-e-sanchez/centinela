@@ -1,0 +1,223 @@
+id_activo,sede,tipo_activo,criticidad,mtbf_objetivo_dias,id_contratista
+A-0001,Santiago,Línea de envasado,A,45,C11
+A-0002,Santiago,Línea de envasado,A,45,C11
+A-0003,Santiago,Línea de envasado,A,45,C11
+A-0004,Santiago,Línea de envasado,A,45,C11
+A-0005,Concepción,Línea de envasado,A,45,C11
+A-0006,Concepción,Línea de envasado,A,45,C11
+A-0007,Concepción,Línea de envasado,A,45,C11
+A-0008,Concepción,Línea de envasado,A,45,C11
+A-0009,Antofagasta,Línea de envasado,A,45,C11
+A-0010,Antofagasta,Línea de envasado,A,45,C11
+A-0011,Antofagasta,Línea de envasado,A,45,C11
+A-0012,Antofagasta,Línea de envasado,A,45,C11
+A-0013,Santiago,Compresor,B,90,C12
+A-0014,Santiago,Compresor,B,90,C12
+A-0015,Santiago,Compresor,B,90,C12
+A-0016,Santiago,Compresor,B,90,C12
+A-0017,Santiago,Compresor,B,90,C12
+A-0018,Santiago,Compresor,B,90,C12
+A-0019,Concepción,Compresor,B,90,C12
+A-0020,Concepción,Compresor,B,90,C12
+A-0021,Concepción,Compresor,B,90,C12
+A-0022,Concepción,Compresor,B,90,C12
+A-0023,Concepción,Compresor,B,90,C12
+A-0024,Concepción,Compresor,B,90,C12
+A-0025,Antofagasta,Compresor,B,90,C12
+A-0026,Antofagasta,Compresor,B,90,C12
+A-0027,Antofagasta,Compresor,B,90,C12
+A-0028,Antofagasta,Compresor,B,90,C12
+A-0029,Antofagasta,Compresor,B,90,C12
+A-0030,Antofagasta,Compresor,B,90,C12
+A-0031,Santiago,Caldera,A,120,C13
+A-0032,Santiago,Caldera,A,120,C13
+A-0033,Concepción,Caldera,A,120,C13
+A-0034,Concepción,Caldera,A,120,C13
+A-0035,Antofagasta,Caldera,A,120,C13
+A-0036,Antofagasta,Caldera,A,120,C13
+A-0037,Santiago,Montacargas,C,60,C14
+A-0038,Santiago,Montacargas,C,60,C14
+A-0039,Santiago,Montacargas,C,60,C14
+A-0040,Santiago,Montacargas,C,60,C14
+A-0041,Santiago,Montacargas,C,60,C14
+A-0042,Santiago,Montacargas,C,60,C14
+A-0043,Santiago,Montacargas,C,60,C14
+A-0044,Santiago,Montacargas,C,60,C14
+A-0045,Santiago,Montacargas,C,60,C14
+A-0046,Santiago,Montacargas,C,60,C14
+A-0047,Concepción,Montacargas,C,60,C14
+A-0048,Concepción,Montacargas,C,60,C14
+A-0049,Concepción,Montacargas,C,60,C14
+A-0050,Concepción,Montacargas,C,60,C14
+A-0051,Concepción,Montacargas,C,60,C14
+A-0052,Concepción,Montacargas,C,60,C14
+A-0053,Concepción,Montacargas,C,60,C14
+A-0054,Concepción,Montacargas,C,60,C14
+A-0055,Concepción,Montacargas,C,60,C14
+A-0056,Concepción,Montacargas,C,60,C14
+A-0057,Antofagasta,Montacargas,C,60,C14
+A-0058,Antofagasta,Montacargas,C,60,C14
+A-0059,Antofagasta,Montacargas,C,60,C14
+A-0060,Antofagasta,Montacargas,C,60,C14
+A-0061,Antofagasta,Montacargas,C,60,C14
+A-0062,Antofagasta,Montacargas,C,60,C14
+A-0063,Antofagasta,Montacargas,C,60,C14
+A-0064,Antofagasta,Montacargas,C,60,C14
+A-0065,Antofagasta,Montacargas,C,60,C14
+A-0066,Antofagasta,Montacargas,C,60,C14
+A-0067,Zona Norte,Estanque granel,A,180,C21
+A-0068,Zona Norte,Estanque granel,A,180,C21
+A-0069,Zona Norte,Estanque granel,A,180,C21
+A-0070,Zona Norte,Estanque granel,A,180,C21
+A-0071,Zona Norte,Estanque granel,A,180,C21
+A-0072,Zona Norte,Estanque granel,A,180,C21
+A-0073,Zona Norte,Estanque granel,A,180,C21
+A-0074,Zona Norte,Estanque granel,A,180,C21
+A-0075,Zona Centro,Estanque granel,A,180,C21
+A-0076,Zona Centro,Estanque granel,A,180,C21
+A-0077,Zona Centro,Estanque granel,A,180,C21
+A-0078,Zona Centro,Estanque granel,A,180,C21
+A-0079,Zona Centro,Estanque granel,A,180,C21
+A-0080,Zona Centro,Estanque granel,A,180,C21
+A-0081,Zona Centro,Estanque granel,A,180,C21
+A-0082,Zona Centro,Estanque granel,A,180,C21
+A-0083,Zona Sur,Estanque granel,A,180,C21
+A-0084,Zona Sur,Estanque granel,A,180,C21
+A-0085,Zona Sur,Estanque granel,A,180,C21
+A-0086,Zona Sur,Estanque granel,A,180,C21
+A-0087,Zona Sur,Estanque granel,A,180,C21
+A-0088,Zona Sur,Estanque granel,A,180,C21
+A-0089,Zona Sur,Estanque granel,A,180,C21
+A-0090,Zona Sur,Estanque granel,A,180,C21
+A-0091,Zona Norte,Red de distribución,B,60,C22
+A-0092,Zona Norte,Red de distribución,B,60,C22
+A-0093,Zona Norte,Red de distribución,B,60,C22
+A-0094,Zona Norte,Red de distribución,B,60,C22
+A-0095,Zona Norte,Red de distribución,B,60,C22
+A-0096,Zona Norte,Red de distribución,B,60,C22
+A-0097,Zona Centro,Red de distribución,B,60,C22
+A-0098,Zona Centro,Red de distribución,B,60,C22
+A-0099,Zona Centro,Red de distribución,B,60,C22
+A-0100,Zona Centro,Red de distribución,B,60,C22
+A-0101,Zona Centro,Red de distribución,B,60,C22
+A-0102,Zona Centro,Red de distribución,B,60,C22
+A-0103,Zona Sur,Red de distribución,B,60,C22
+A-0104,Zona Sur,Red de distribución,B,60,C22
+A-0105,Zona Sur,Red de distribución,B,60,C22
+A-0106,Zona Sur,Red de distribución,B,60,C22
+A-0107,Zona Sur,Red de distribución,B,60,C22
+A-0108,Zona Sur,Red de distribución,B,60,C22
+A-0109,Zona Norte,Subestación,A,240,C23
+A-0110,Zona Norte,Subestación,A,240,C23
+A-0111,Zona Centro,Subestación,A,240,C23
+A-0112,Zona Centro,Subestación,A,240,C23
+A-0113,Zona Sur,Subestación,A,240,C23
+A-0114,Zona Sur,Subestación,A,240,C23
+A-0115,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0116,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0117,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0118,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0119,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0120,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0121,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0122,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0123,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0124,Zona Norte,Válvulas y reguladores,C,90,C24
+A-0125,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0126,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0127,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0128,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0129,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0130,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0131,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0132,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0133,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0134,Zona Centro,Válvulas y reguladores,C,90,C24
+A-0135,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0136,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0137,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0138,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0139,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0140,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0141,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0142,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0143,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0144,Zona Sur,Válvulas y reguladores,C,90,C24
+A-0145,Clínica Oriente,Climatización,B,90,C31
+A-0146,Clínica Oriente,Climatización,B,90,C31
+A-0147,Clínica Oriente,Climatización,B,90,C31
+A-0148,Clínica Oriente,Climatización,B,90,C31
+A-0149,Clínica Oriente,Climatización,B,90,C31
+A-0150,Clínica Oriente,Climatización,B,90,C31
+A-0151,Clínica Oriente,Climatización,B,90,C31
+A-0152,Clínica Oriente,Climatización,B,90,C31
+A-0153,Clínica Centro,Climatización,B,90,C31
+A-0154,Clínica Centro,Climatización,B,90,C31
+A-0155,Clínica Centro,Climatización,B,90,C31
+A-0156,Clínica Centro,Climatización,B,90,C31
+A-0157,Clínica Centro,Climatización,B,90,C31
+A-0158,Clínica Centro,Climatización,B,90,C31
+A-0159,Clínica Centro,Climatización,B,90,C31
+A-0160,Clínica Centro,Climatización,B,90,C31
+A-0161,Clínica Poniente,Climatización,B,90,C31
+A-0162,Clínica Poniente,Climatización,B,90,C31
+A-0163,Clínica Poniente,Climatización,B,90,C31
+A-0164,Clínica Poniente,Climatización,B,90,C31
+A-0165,Clínica Poniente,Climatización,B,90,C31
+A-0166,Clínica Poniente,Climatización,B,90,C31
+A-0167,Clínica Poniente,Climatización,B,90,C31
+A-0168,Clínica Poniente,Climatización,B,90,C31
+A-0169,Clínica Oriente,Equipo clínico,A,120,C32
+A-0170,Clínica Oriente,Equipo clínico,A,120,C32
+A-0171,Clínica Oriente,Equipo clínico,A,120,C32
+A-0172,Clínica Oriente,Equipo clínico,A,120,C32
+A-0173,Clínica Oriente,Equipo clínico,A,120,C32
+A-0174,Clínica Oriente,Equipo clínico,A,120,C32
+A-0175,Clínica Oriente,Equipo clínico,A,120,C32
+A-0176,Clínica Oriente,Equipo clínico,A,120,C32
+A-0177,Clínica Oriente,Equipo clínico,A,120,C32
+A-0178,Clínica Oriente,Equipo clínico,A,120,C32
+A-0179,Clínica Oriente,Equipo clínico,A,120,C32
+A-0180,Clínica Oriente,Equipo clínico,A,120,C32
+A-0181,Clínica Centro,Equipo clínico,A,120,C32
+A-0182,Clínica Centro,Equipo clínico,A,120,C32
+A-0183,Clínica Centro,Equipo clínico,A,120,C32
+A-0184,Clínica Centro,Equipo clínico,A,120,C32
+A-0185,Clínica Centro,Equipo clínico,A,120,C32
+A-0186,Clínica Centro,Equipo clínico,A,120,C32
+A-0187,Clínica Centro,Equipo clínico,A,120,C32
+A-0188,Clínica Centro,Equipo clínico,A,120,C32
+A-0189,Clínica Centro,Equipo clínico,A,120,C32
+A-0190,Clínica Centro,Equipo clínico,A,120,C32
+A-0191,Clínica Centro,Equipo clínico,A,120,C32
+A-0192,Clínica Centro,Equipo clínico,A,120,C32
+A-0193,Clínica Poniente,Equipo clínico,A,120,C32
+A-0194,Clínica Poniente,Equipo clínico,A,120,C32
+A-0195,Clínica Poniente,Equipo clínico,A,120,C32
+A-0196,Clínica Poniente,Equipo clínico,A,120,C32
+A-0197,Clínica Poniente,Equipo clínico,A,120,C32
+A-0198,Clínica Poniente,Equipo clínico,A,120,C32
+A-0199,Clínica Poniente,Equipo clínico,A,120,C32
+A-0200,Clínica Poniente,Equipo clínico,A,120,C32
+A-0201,Clínica Poniente,Equipo clínico,A,120,C32
+A-0202,Clínica Poniente,Equipo clínico,A,120,C32
+A-0203,Clínica Poniente,Equipo clínico,A,120,C32
+A-0204,Clínica Poniente,Equipo clínico,A,120,C32
+A-0205,Clínica Oriente,Grupo electrógeno,A,200,C33
+A-0206,Clínica Oriente,Grupo electrógeno,A,200,C33
+A-0207,Clínica Centro,Grupo electrógeno,A,200,C33
+A-0208,Clínica Centro,Grupo electrógeno,A,200,C33
+A-0209,Clínica Poniente,Grupo electrógeno,A,200,C33
+A-0210,Clínica Poniente,Grupo electrógeno,A,200,C33
+A-0211,Clínica Oriente,Ascensor,B,75,C34
+A-0212,Clínica Oriente,Ascensor,B,75,C34
+A-0213,Clínica Oriente,Ascensor,B,75,C34
+A-0214,Clínica Oriente,Ascensor,B,75,C34
+A-0215,Clínica Centro,Ascensor,B,75,C34
+A-0216,Clínica Centro,Ascensor,B,75,C34
+A-0217,Clínica Centro,Ascensor,B,75,C34
+A-0218,Clínica Centro,Ascensor,B,75,C34
+A-0219,Clínica Poniente,Ascensor,B,75,C34
+A-0220,Clínica Poniente,Ascensor,B,75,C34
+A-0221,Clínica Poniente,Ascensor,B,75,C34
+A-0222,Clínica Poniente,Ascensor,B,75,C34

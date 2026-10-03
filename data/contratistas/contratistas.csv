@@ -1,0 +1,13 @@
+id_contratista,contratista,industria,especialidad,perfil
+C11,Automatización Ejemplo SpA,Manufactura,Línea de envasado,Limpio
+C12,Aire Comprimido Ejemplo Ltda.,Manufactura,Compresor,Limpio
+C13,Térmica Ejemplo Ltda.,Manufactura,Caldera,Limpio
+C14,Grúas y Equipos Ejemplo Ltda.,Manufactura,Montacargas,Riesgoso
+C21,Montajes Ejemplo Norte Ltda.,Energia,Estanque granel,Riesgoso
+C22,Redes Ejemplo SpA,Energia,Red de distribución,Limpio
+C23,Eléctrica Ejemplo S.A.,Energia,Subestación,Limpio
+C24,Servicios Ejemplo Sur Ltda.,Energia,Válvulas y reguladores,Riesgoso
+C31,Clima Ejemplo Ltda.,Salud,Climatización,Riesgoso
+C32,Biomédica Ejemplo SpA,Salud,Equipo clínico,Limpio
+C33,Respaldo Energético Ejemplo Ltda.,Salud,Grupo electrógeno,Limpio
+C34,Ascensores Ejemplo S.A.,Salud,Ascensor,Limpio

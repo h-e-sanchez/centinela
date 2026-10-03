@@ -1,0 +1,239 @@
+/// Órdenes de trabajo de mantenimiento, como una extracción de SAP PM: preventivas del plan y correctivas por falla.
+table ordenes_trabajo
+	lineageTag: c5fbbea3-abf7-5ee9-ad17-f0d436a362b6
+
+	/// Órdenes de trabajo programadas (preventivas) o avisadas (correctivas) en el periodo.
+	measure OT = COUNTROWS(ordenes_trabajo)
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 94e25d89-6df0-5468-b9c8-e4caec06dede
+
+	/// Mantenciones del plan con fecha programada en el periodo.
+	measure 'Preventivas programadas' = CALCULATE(COUNTROWS(ordenes_trabajo), ordenes_trabajo[clase] = "Preventiva")
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 868b91dc-ec30-5a22-ad44-b5009253432b
+
+	/// Preventivas iniciadas a más tardar 7 días después de lo programado.
+	measure 'Preventivas a tiempo' = CALCULATE(COUNTROWS(ordenes_trabajo), ordenes_trabajo[clase] = "Preventiva", ordenes_trabajo[dias_atraso] <= 7)
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 9605ff2c-8cca-52b5-a3fa-4a972ad422ea
+
+	/// Preventivas a tiempo sobre programadas.
+	measure 'Cumplimiento preventivo %' = DIVIDE([Preventivas a tiempo], [Preventivas programadas])
+		formatString: 0.0%
+		displayFolder: 3. Mantenimiento
+		lineageTag: 2fa2e7a5-0855-55a0-a91a-6d3f73d7b397
+
+	/// Preventivas vencidas y sin iniciar al cierre del periodo (también las de meses anteriores).
+	measure 'Backlog (OT)' =
+			VAR fin = MAX(Calendario[Date])
+			RETURN
+			    COUNTROWS(
+			        FILTER(
+			            CALCULATETABLE(ordenes_trabajo, REMOVEFILTERS(Calendario)),
+			            ordenes_trabajo[clase] = "Preventiva"
+			                && ordenes_trabajo[fecha_programada] <= fin
+			                && (ISBLANK(ordenes_trabajo[fecha_inicio]) || ordenes_trabajo[fecha_inicio] > fin)
+			        )
+			    ) + 0
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: aac2133e-2fe8-54c9-9531-c67c359d515f
+
+	/// Backlog expresado en semanas del plan: cuántas semanas de trabajo preventivo están atrasadas.
+	measure 'Backlog (semanas)' =
+			VAR semanal = DIVIDE(CALCULATE([Preventivas programadas], REMOVEFILTERS(Calendario)), 104)
+			RETURN DIVIDE([Backlog (OT)], semanal)
+		formatString: 0.0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 18ded1a6-e6b2-5ba6-8142-a1841980c83b
+
+	/// OT correctivas: cada una es una falla avisada.
+	measure Fallas = CALCULATE(COUNTROWS(ordenes_trabajo), ordenes_trabajo[clase] = "Correctiva")
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 895f9569-ed37-55bd-b895-dffd1650ee71
+
+	/// Parte del trabajo que es reacción a fallas y no plan.
+	measure '% Correctivo' = DIVIDE([Fallas], [OT])
+		formatString: 0.0%
+		displayFolder: 3. Mantenimiento
+		lineageTag: f0883663-1569-57bf-ae9e-fd8f313383ff
+
+	/// Tiempo medio de reparación de las correctivas cerradas, en horas.
+	measure 'MTTR (h)' = CALCULATE(AVERAGE(ordenes_trabajo[horas_ejecutadas]), ordenes_trabajo[clase] = "Correctiva", ordenes_trabajo[estado] = "Cerrada")
+		formatString: 0.0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 3a93b0b8-27cb-5e36-a126-e2b4eed63a55
+
+	/// Horas detenido por falla: tiempo de respuesta del contratista más reparación.
+	measure 'Detención media (h)' = CALCULATE(AVERAGE(ordenes_trabajo[horas_detencion]), ordenes_trabajo[clase] = "Correctiva", ordenes_trabajo[estado] = "Cerrada")
+		formatString: 0.0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 4978adfc-bf63-59fc-8704-58b4dd11562e
+
+	/// Días calendario del periodo filtrado.
+	measure 'Días del periodo' = COUNTROWS(Calendario)
+		formatString: #,##0
+		displayFolder: 0. Auxiliares
+		lineageTag: a87bf4dd-f170-5670-a100-710582108be4
+
+	/// Días-activo de operación por cada falla.
+	measure 'MTBF (días)' = DIVIDE([Activos] * [Días del periodo], [Fallas])
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: 8f073b5e-18ec-52ee-9b8d-a0867a9f2abd
+
+	/// Horas disponibles sobre horas totales de los activos, descontando la detención por fallas.
+	measure 'Disponibilidad %' =
+			VAR horas = [Activos] * [Días del periodo] * 24
+			VAR detenido = CALCULATE(SUM(ordenes_trabajo[horas_detencion]), ordenes_trabajo[clase] = "Correctiva")
+			RETURN IF(horas > 0, 1 - DIVIDE(detenido, horas))
+		formatString: 0.00%
+		displayFolder: 3. Mantenimiento
+		lineageTag: b92a54ff-2828-5706-b3a1-a8d8cf3b8840
+
+	column id_ot
+		dataType: string
+		lineageTag: 2b102c07-833e-5ed3-8df1-fbc3f30e36b3
+		summarizeBy: none
+		sourceColumn: id_ot
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_activo
+		dataType: string
+		isHidden
+		lineageTag: 341b7b7d-3d9f-5e4d-9b03-81c99fcafb6f
+		summarizeBy: none
+		sourceColumn: id_activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: dd49dd5f-d093-5264-aae2-579e34aabf65
+		summarizeBy: none
+		sourceColumn: sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: 46943c93-c57a-5d5f-ad05-7c7bcb07886f
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column clase
+		dataType: string
+		lineageTag: d8f7c8b7-1d5e-5d44-ae61-e1ed051d5404
+		summarizeBy: none
+		sourceColumn: clase
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		lineageTag: 1275505b-42b1-55af-9dd1-eb41465ea1e5
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_programada
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ba7655de-b692-56e5-b9ed-c6258ea8284d
+		summarizeBy: none
+		sourceColumn: fecha_programada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_inicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 91308c11-6668-5f60-9020-4e6e9deb6b7c
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_cierre
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0399804a-b512-5ce2-8477-5f8c9255757a
+		summarizeBy: none
+		sourceColumn: fecha_cierre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estado
+		dataType: string
+		lineageTag: f251e081-63e2-555f-9904-99a91f38f5d7
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_ejecutadas
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: bd5be998-3e1a-5ad8-bc01-abd04cf6c219
+		summarizeBy: none
+		sourceColumn: horas_ejecutadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad_ejecutada
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 7993d46b-2438-512e-b3d2-bcfd05274a87
+		summarizeBy: none
+		sourceColumn: cantidad_ejecutada
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_detencion
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: df84ee7c-5024-5a62-adfc-09aaef711b47
+		summarizeBy: none
+		sourceColumn: horas_detencion
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_atraso
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cdc4f643-f3d0-5522-a617-f4f90f2f63b2
+		summarizeBy: none
+		sourceColumn: dias_atraso
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ordenes_trabajo = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("ordenes_trabajo.csv", {{"id_ot", type text}, {"id_activo", type text}, {"sede", type text}, {"id_contratista", type text}, {"clase", type text}, {"servicio", type text}, {"fecha_programada", type date}, {"fecha_inicio", type date}, {"fecha_cierre", type date}, {"estado", type text}, {"horas_ejecutadas", type number}, {"cantidad_ejecutada", type number}, {"horas_detencion", type number}}),
+				    Atraso = Table.AddColumn(Origen, "dias_atraso", each if [fecha_inicio] = null then null else Duration.Days([fecha_inicio] - [fecha_programada]), Int64.Type)
+				in
+				    Atraso
+
+	annotation PBI_ResultType = Table

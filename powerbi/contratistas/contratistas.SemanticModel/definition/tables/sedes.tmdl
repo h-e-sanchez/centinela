@@ -1,0 +1,48 @@
+/// Dimensión: las nueve sedes de las tres empresas ficticias (las mismas de los otros reportes).
+table sedes
+	lineageTag: c996f08f-b61a-5d76-8e7a-14fe3c7e7109
+
+	column sede
+		dataType: string
+		lineageTag: b4a3af5e-57ab-5652-ae98-be05d7c42a7a
+		summarizeBy: none
+		sourceColumn: sede
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		lineageTag: 038c45c2-9452-5dcc-8549-319a96140c37
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: 7b53c095-97b7-5418-884d-dd16fde119f4
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 085b4f4a-d64e-5d06-ab3e-189157c07096
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sedes = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("sedes.csv", {{"sede", type text}, {"industria", type text}, {"empresa", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
