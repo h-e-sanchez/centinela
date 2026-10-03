@@ -131,6 +131,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reporte #3: Contratistas y mantenimiento: datos, reglas SQL con tests, modelo PBIP con 6 páginas, guía y descargas
 - [x] Reporte #3: abierto en Desktop sin errores y publicado en la web (tenant `cimad.net`)
 - [ ] Reporte #3: `.pbix` exportado y captura `portada.png` (manual)
+- [x] Glosario por reporte: conceptos escritos a mano + todas las medidas DAX leídas del TMDL, en la ficha web y como página «Glosario» en cada PBIP
+- [ ] Glosario: abrir los 3 PBIP en Desktop, revisar la página y volver a publicar (manual)
 - [ ] Reporte #4: Del libro diario a los EEFF / capital de trabajo (en espera)
 
 ## Backlog P1 — robustez

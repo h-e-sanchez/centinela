@@ -380,6 +380,9 @@ a.tarjeta-rep:hover { border-color: var(--accent); }
 .guia blockquote { margin: 0; padding-left: var(--sp-3); border-left: 3px solid var(--accent); color: var(--muted); }
 .guia pre { background: var(--surface-2); padding: var(--sp-3); border-radius: var(--r); overflow-x: auto; }
 .guia table { margin: var(--sp-3) 0; }
+.guia h3 { font-size: 1.1rem; margin-top: var(--sp-6); }
+.guia h4 { font-size: var(--fs-md); margin: var(--sp-4) 0 var(--sp-2); }
+.glosario-pliegue > summary { cursor: pointer; font-weight: 600; margin: var(--sp-3) 0; color: var(--accent); }
 .enlaces { padding-left: 1.2em; }
 .enlaces li { margin-bottom: 4px; }
 

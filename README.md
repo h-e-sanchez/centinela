@@ -66,6 +66,9 @@ pip install -r requirements.txt -r requirements-dev.txt
 # Regenerar los descargables de la vitrina (requiere openpyxl, en requirements-dev.txt)
 python herramientas/empaquetar_descargas.py
 
+# Glosario de cada reporte (conceptos + todas las medidas DAX, leídas del TMDL) para la web y Power BI
+python herramientas/generar_glosario.py
+
 # Datos sintéticos del reporte Workforce (red de clínicas ficticia, 2025-2026 y pronóstico 2027)
 python data/generar_workforce.py
 
