@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>centinela · reportes Power BI de control de gestión</title>
-<meta name="description" content="Reportes Power BI de control de gestión y FP&amp;A con datos sintéticos descargables, el modelo y el DAX a la vista. Por Hernán Elías Sánchez.">
-<meta property="og:title" content="centinela · reportes Power BI de control de gestión">
-<meta property="og:description" content="Reportes Power BI de control de gestión con datos sintéticos descargables, DAX documentado y el proyecto versionado en Git.">
+<title>centinela · control de gestión que avisa antes</title>
+<meta name="description" content="Control de gestión que avisa antes: presupuesto, personas y contratistas en Power BI, con datos sintéticos descargables, el modelo y el DAX a la vista. Por Hernán Elías Sánchez.">
+<meta property="og:title" content="centinela · control de gestión que avisa antes">
+<meta property="og:description" content="Presupuesto, personas y contratistas en Power BI: datos sintéticos descargables, DAX documentado y el proyecto versionado en Git.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%A1%EF%B8%8F%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <script src="tema.js"></script>
@@ -14,13 +14,15 @@
 <body>
   <main class="ancho">
     <header class="site-header portada">
+      <p class="etiqueta-sitio">Vitrina Power BI · control de gestión</p>
       <h1>centinela</h1>
       <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Cambiar el tema">noche</button>
+      <p class="titular">Control de gestión que avisa antes: presupuesto, personas y contratistas en Power BI</p>
       <p class="firma">por Hernán Elías Sánchez · Ingeniero Civil Industrial ·
         <a href="https://www.linkedin.com/in/hern%C3%A1n-el%C3%ADas-s%C3%A1nchez-aguilera/" rel="noopener">LinkedIn</a> ·
         <a href="https://github.com/h-e-sanchez" rel="noopener">GitHub</a></p>
-      <p class="tagline">Reportes Power BI de control de gestión y FP&amp;A que llegan a quien decide:
-        trazables de punta a punta, con los datos y el modelo a la vista.</p>
+      <p class="tagline">Tres reportes que llegan a quien decide, trazables de punta a punta: datos
+        sintéticos descargables, el modelo y el DAX a la vista, y un glosario de cada concepto.</p>
     </header>
 
     <section id="destacado" aria-label="Los reportes en una pantalla">
@@ -57,27 +59,29 @@
       </div>
     </section>
 
-    <section id="portafolio">
+    <section id="portafolio" class="portafolio" aria-label="Portafolio">
       <h2>Portafolio</h2>
-      <p class="hint"><strong>Control de gestión, construido como software</strong> · portafolio de
-        Hernán Elías Sánchez</p>
+      <p class="hint"><strong>Control de gestión, construido como software</strong> · tres sitios de
+        Hernán Elías Sánchez: cada uno muestra una parte del mismo oficio.</p>
       <div class="portafolio-compartido">
-        <div class="callout actual">
-          <span class="estas-aqui">estás aquí</span>
-          <strong>centinela</strong>: la vitrina. Reportes Power BI de control de gestión con datos
-          sintéticos, el modelo y el DAX a la vista.
-        </div>
-        <div class="callout">
-          <strong>consulta</strong>: el taller. SQL, perfilado y gráficos sobre CSV, Parquet o Excel,
-          sin que el archivo salga de tu equipo.
-          <a href="https://h-e-sanchez.github.io/consulta/">Abrir consulta</a> ·
-          <a href="https://github.com/h-e-sanchez/consulta">repo</a>
-        </div>
-        <div class="callout">
-          <strong>cartilla</strong>: el manual. Python y pandas para quien viene de Excel, con ejemplos
-          que se ejecutan en el navegador.
-          <a href="https://h-e-sanchez.github.io/cartilla/">Abrir cartilla</a>
-        </div>
+        <article class="sitio actual" aria-current="page">
+          <p class="sitio-rol">La vitrina <span class="estas-aqui">Estás aquí</span></p>
+          <h3>centinela</h3>
+          <p>Reportes Power BI de control de gestión, personas y contratistas, con datos sintéticos, el modelo y el DAX a la vista.</p>
+          <p class="sitio-acciones"><a class="sitio-boton" href="#">Volver al inicio ↑</a> <a href="https://github.com/h-e-sanchez/centinela">repo</a></p>
+        </article>
+        <article class="sitio">
+          <p class="sitio-rol">El taller</p>
+          <h3>consulta</h3>
+          <p>SQL, perfilado y gráficos sobre CSV, Parquet o Excel, sin que el archivo salga de tu equipo.</p>
+          <p class="sitio-acciones"><a class="sitio-boton" href="https://h-e-sanchez.github.io/consulta/">Abrir consulta →</a> <a href="https://github.com/h-e-sanchez/consulta">repo</a></p>
+        </article>
+        <article class="sitio">
+          <p class="sitio-rol">El manual</p>
+          <h3>cartilla</h3>
+          <p>Python y pandas para quien viene de Excel, con ejemplos que se ejecutan en el navegador.</p>
+          <p class="sitio-acciones"><a class="sitio-boton" href="https://h-e-sanchez.github.io/cartilla/">Abrir cartilla →</a> <a href="https://github.com/h-e-sanchez/cartilla">repo</a></p>
+        </article>
       </div>
     </section>
 
