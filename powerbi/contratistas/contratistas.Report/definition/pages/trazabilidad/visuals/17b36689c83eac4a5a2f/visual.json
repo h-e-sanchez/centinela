@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "17b36689c83eac4a5a2f",
   "position": {
     "x": 24,
@@ -139,7 +139,8 @@
                 }
               },
               "queryRef": "observaciones.Observado",
-              "nativeQueryRef": "Observado"
+              "nativeQueryRef": "Observado",
+              "active": false
             }
           ]
         }

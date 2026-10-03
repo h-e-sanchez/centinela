@@ -237,3 +237,4 @@ table ordenes_trabajo
 				    Atraso
 
 	annotation PBI_ResultType = Table
+

@@ -178,3 +178,4 @@ table estados_pago
 				    Origen
 
 	annotation PBI_ResultType = Table
+
