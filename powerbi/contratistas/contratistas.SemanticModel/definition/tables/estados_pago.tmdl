@@ -69,8 +69,8 @@ table estados_pago
 
 	/// Segunda frase: el contratista con más monto observado.
 	measure 'Portada frase 2' =
-			VAR top = TOPN(1, VALUES(contratistas[contratista]), [Observado], DESC)
-			VAR nombre = MAXX(top, contratistas[contratista])
+			VAR mayorObservado = TOPN(1, VALUES(contratistas[contratista]), [Observado], DESC)
+			VAR nombre = MAXX(mayorObservado, contratistas[contratista])
 			VAR monto = CALCULATE([Observado], contratistas[contratista] = nombre)
 			RETURN "Mayor observado: " & nombre & " " & FORMAT(monto / 1000000, "$ #,0") & " M"
 		displayFolder: 0. Portada
