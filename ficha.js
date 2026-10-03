@@ -74,6 +74,15 @@ async function iniciar() {
   $("#f-guia").innerHTML = window.marked ? window.marked.parse(md) : "";
   if (!window.marked) $("#f-guia").append(el("pre", { texto: md }));  // sin CDN: la guía en texto plano
 
+  const glosario = await fetch(base + "glosario.md").then((r) => (r.ok ? r.text() : null));
+  if (glosario) {
+    $("#f-glosario-md").href = base + "glosario.md";
+    $("#f-glosario").innerHTML = window.marked ? window.marked.parse(glosario) : "";
+    if (!window.marked) $("#f-glosario").append(el("pre", { texto: glosario }));
+  } else {
+    $("#glosario").remove();
+  }
+
   $("#f-tecnico").replaceChildren(...rep.tecnico.map((t) =>
     el("li", {}, [el("a", { href: t.url, texto: t.etiqueta })])));
 }
