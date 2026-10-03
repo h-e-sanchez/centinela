@@ -10,7 +10,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","estados_pago","observaciones","ordenes_trabajo","sedes","contratistas","activos","tarifas"]
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","estados_pago","observaciones","ordenes_trabajo","sedes","contratistas","activos","tarifas","glosario"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -22,6 +22,7 @@ ref table contratistas
 ref table activos
 ref table tarifas
 ref table Calendario
+ref table glosario
 
 ref cultureInfo es-CL
 
