@@ -425,3 +425,6 @@ a.tarjeta-rep:hover { border-color: var(--accent); }
   background: var(--accent); border-radius: 999px; padding: 2px 9px;
 }
 #acerca p { max-width: 68ch; }
+
+/* ---- etiqueta sobre el nombre: dice qué es el sitio antes de la marca ---- */
+.etiqueta-sitio { flex: 1 0 100%; margin: 0 0 -6px; font-size: 0.74rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
