@@ -63,7 +63,7 @@ table estados_pago
 		lineageTag: 6ad50ae4-ccb7-5f93-82d9-43c4ba0d6c7b
 
 	/// Primera frase: cuánto se observaba antes y después de instalar el control.
-	measure 'Portada frase 1' = "Observado: " & FORMAT([% Observado antes del control], "0.0%") & " sin control · " & FORMAT([% Observado con control], "0.0%") & " con control"
+	measure 'Portada frase 1' = "Observado: " & FORMAT([% Observado antes del control], "0.0%") & " → " & FORMAT([% Observado con control], "0.0%") & " con control"
 		displayFolder: 0. Portada
 		lineageTag: bff21a6d-20a8-5023-8447-94a7fd1127ac
 
@@ -72,7 +72,8 @@ table estados_pago
 			VAR mayorObservado = TOPN(1, VALUES(contratistas[contratista]), [Observado], DESC)
 			VAR nombre = MAXX(mayorObservado, contratistas[contratista])
 			VAR monto = CALCULATE([Observado], contratistas[contratista] = nombre)
-			RETURN "Mayor observado: " & nombre & " " & FORMAT(monto / 1000000, "$ #,0") & " M"
+			VAR corto = SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(nombre, " Ltda.", ""), " S.A.", ""), " SpA", "")
+			RETURN corto & ": " & FORMAT(monto / 1000000, "$ #,0") & " M observado"
 		displayFolder: 0. Portada
 		lineageTag: 3ef93f47-f299-530b-a521-ddcb49dc17d8
 
