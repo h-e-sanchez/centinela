@@ -1,0 +1,25 @@
+id_contratista,servicio,unidad,precio_unitario
+C11,Mantención preventiva,visita,3999000
+C11,Reparación correctiva,hora,600000
+C12,Mantención preventiva,visita,2285000
+C12,Reparación correctiva,hora,343000
+C13,Mantención preventiva,visita,4570000
+C13,Reparación correctiva,hora,686000
+C14,Mantención preventiva,visita,1428000
+C14,Reparación correctiva,hora,214000
+C21,Mantención preventiva,visita,2569000
+C21,Reparación correctiva,hora,385000
+C22,Mantención preventiva,visita,3083000
+C22,Reparación correctiva,hora,463000
+C23,Mantención preventiva,visita,6424000
+C23,Reparación correctiva,hora,964000
+C24,Mantención preventiva,visita,1028000
+C24,Reparación correctiva,hora,154000
+C31,Mantención preventiva,visita,1666000
+C31,Reparación correctiva,hora,250000
+C32,Mantención preventiva,visita,2499000
+C32,Reparación correctiva,hora,375000
+C33,Mantención preventiva,visita,3124000
+C33,Reparación correctiva,hora,469000
+C34,Mantención preventiva,visita,1875000
+C34,Reparación correctiva,hora,281000

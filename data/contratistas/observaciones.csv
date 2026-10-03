@@ -1,0 +1,430 @@
+id_linea,periodo,id_contratista,sede,id_ot,regla,monto_observado,resolucion
+EP-000018,2025-01-01,C12,Santiago,OT-000551,sobre_precio,152500,Pagada sin control
+EP-000019,2025-01-01,C12,Santiago,OT-000558,sobre_precio,491000,Pagada sin control
+EP-000041,2025-01-01,C14,Santiago,OT-001104,sobre_precio,120000,Pagada sin control
+EP-000052,2025-01-01,C14,Concepción,OT-001333,sobre_precio,253500,Pagada sin control
+EP-000054,2025-01-01,C14,Concepción,OT-001367,sobre_cantidad,1428000,Pagada sin control
+EP-000057,2025-01-01,C14,Antofagasta,OT-001479,sobre_cantidad,321000,Pagada sin control
+EP-000068,2025-01-01,C21,Zona Centro,OT-001861,sobre_precio,606000,Pagada sin control
+EP-000072,2025-01-01,C21,Zona Centro,OT-002004,sobre_precio,642000,Pagada sin control
+EP-000080,2025-01-01,C22,Zona Norte,OT-002338,sobre_cantidad,3083000,Pagada sin control
+EP-000097,2025-01-01,C22,Zona Sur,OT-002747,sobre_cantidad,1389000,Pagada sin control
+EP-000104,2025-01-01,C23,Zona Sur,OT-002897,sobre_precio,801000,Pagada sin control
+EP-000111,2025-01-01,C24,Zona Centro,OT-003104,sobre_cantidad,1028000,Pagada sin control
+EP-000122,2025-01-01,C31,Clínica Oriente,OT-003489,sobre_cantidad,1250000,Pagada sin control
+EP-000126,2025-01-01,C31,Clínica Poniente,OT-003765,sobre_precio,398000,Pagada sin control
+EP-000128,2025-01-01,C31,Clínica Poniente,OT-003784,sobre_precio,425000,Pagada sin control
+EP-000193,2025-01-01,C14,Antofagasta,OT-001533,duplicada,1926000,Pagada sin control
+EP-000194,2025-01-01,C14,Antofagasta,OT-001591,ot_abierta,1428000,Pagada sin control
+EP-000195,2025-01-01,C14,Santiago,,sin_ot,2996000,Pagada sin control
+EP-000196,2025-01-01,C14,Santiago,OT-001196,duplicada,535000,Pagada sin control
+EP-000197,2025-01-01,C13,Santiago,OT-900001,sin_ot,4570000,Pagada sin control
+EP-000198,2025-01-01,C21,Zona Norte,,sin_ot,1347500,Pagada sin control
+EP-000199,2025-01-01,C21,Zona Norte,OT-001804,duplicada,2569000,Pagada sin control
+EP-000200,2025-01-01,C24,Zona Sur,OT-900002,sin_ot,1028000,Pagada sin control
+EP-000201,2025-01-01,C21,Zona Sur,OT-002290,duplicada,2569000,Pagada sin control
+EP-000202,2025-01-01,C24,Zona Centro,,sin_ot,385000,Pagada sin control
+EP-000203,2025-01-01,C24,Zona Centro,OT-003171,duplicada,231000,Pagada sin control
+EP-000204,2025-01-01,C22,Zona Norte,OT-002425,duplicada,3241000,Pagada sin control
+EP-000205,2025-01-01,C31,Clínica Oriente,OT-003504,duplicada,1666000,Pagada sin control
+EP-000206,2025-01-01,C31,Clínica Poniente,OT-900003,sin_ot,1500000,Pagada sin control
+EP-000207,2025-01-01,C31,Clínica Oriente,,sin_ot,1125000,Pagada sin control
+EP-000208,2025-01-01,C33,Clínica Poniente,OT-005090,duplicada,3124000,Pagada sin control
+EP-000209,2025-01-01,C31,Clínica Poniente,OT-003826,duplicada,1666000,Pagada sin control
+EP-000210,2025-01-01,C31,Clínica Poniente,,sin_ot,5500000,Pagada sin control
+EP-000211,2025-01-01,C31,Clínica Poniente,,sin_ot,1666000,Pagada sin control
+EP-000212,2025-01-01,C31,Clínica Oriente,OT-003504,duplicada,1666000,Pagada sin control
+EP-000248,2025-02-01,C14,Santiago,OT-001046,sobre_cantidad,1428000,Pagada sin control
+EP-000250,2025-02-01,C14,Santiago,OT-001141,sobre_precio,90000,Pagada sin control
+EP-000251,2025-02-01,C14,Santiago,OT-001181,sobre_precio,43500,Pagada sin control
+EP-000252,2025-02-01,C14,Santiago,OT-001204,sobre_precio,153000,Pagada sin control
+EP-000253,2025-02-01,C14,Concepción,OT-001278,sobre_cantidad,535000,Pagada sin control
+EP-000255,2025-02-01,C14,Concepción,OT-001393,sobre_precio,308000,Pagada sin control
+EP-000256,2025-02-01,C14,Concepción,OT-001408,sobre_cantidad,1428000,Pagada sin control
+EP-000257,2025-02-01,C14,Antofagasta,OT-001495,sobre_cantidad,1428000,Pagada sin control
+EP-000259,2025-02-01,C14,Antofagasta,OT-001543,sobre_cantidad,1428000,Pagada sin control
+EP-000261,2025-02-01,C14,Antofagasta,OT-001576,sobre_precio,369000,Pagada sin control
+EP-000266,2025-02-01,C21,Zona Norte,OT-001667,sobre_precio,686000,Pagada sin control
+EP-000268,2025-02-01,C21,Zona Norte,OT-001696,sobre_cantidad,2569000,Pagada sin control
+EP-000272,2025-02-01,C21,Zona Norte,OT-001834,sobre_precio,659000,Pagada sin control
+EP-000286,2025-02-01,C21,Zona Sur,OT-002204,sobre_cantidad,2569000,Pagada sin control
+EP-000301,2025-02-01,C22,Zona Centro,OT-002505,sobre_cantidad,926000,Pagada sin control
+EP-000323,2025-02-01,C24,Zona Norte,OT-003052,sobre_precio,228000,Pagada sin control
+EP-000324,2025-02-01,C24,Zona Norte,OT-003061,sobre_precio,57500,Pagada sin control
+EP-000339,2025-02-01,C31,Clínica Oriente,OT-003432,sobre_cantidad,1666000,Pagada sin control
+EP-000352,2025-02-01,C31,Clínica Poniente,OT-003803,sobre_cantidad,1666000,Pagada sin control
+EP-000388,2025-02-01,C32,Clínica Poniente,OT-004801,sobre_precio,653000,Pagada sin control
+EP-000403,2025-02-01,C34,Clínica Oriente,OT-005196,sobre_precio,101500,Pagada sin control
+EP-000405,2025-02-01,C34,Clínica Centro,OT-005301,sobre_precio,266000,Pagada sin control
+EP-000407,2025-02-01,C14,Santiago,,sin_ot,535000,Pagada sin control
+EP-000408,2025-02-01,C14,Antofagasta,,sin_ot,1428000,Pagada sin control
+EP-000409,2025-02-01,C14,Concepción,OT-001300,duplicada,1498000,Pagada sin control
+EP-000410,2025-02-01,C14,Antofagasta,,sin_ot,321000,Pagada sin control
+EP-000411,2025-02-01,C14,Antofagasta,,sin_ot,1428000,Pagada sin control
+EP-000412,2025-02-01,C14,Antofagasta,,sin_ot,1284000,Pagada sin control
+EP-000413,2025-02-01,C14,Santiago,,sin_ot,1428000,Pagada sin control
+EP-000414,2025-02-01,C14,Santiago,OT-900004,sin_ot,1428000,Pagada sin control
+EP-000415,2025-02-01,C13,Concepción,,sin_ot,6860000,Pagada sin control
+EP-000416,2025-02-01,C21,Zona Centro,OT-001972,duplicada,5967500,Pagada sin control
+EP-000417,2025-02-01,C24,Zona Norte,OT-900005,sin_ot,1540000,Pagada sin control
+EP-000418,2025-02-01,C23,Zona Centro,OT-002837,duplicada,6424000,Pagada sin control
+EP-000419,2025-02-01,C31,Clínica Poniente,OT-003826,duplicada,1666000,Pagada sin control
+EP-000420,2025-02-01,C31,Clínica Oriente,OT-003535,duplicada,1750000,Pagada sin control
+EP-000421,2025-02-01,C31,Clínica Poniente,,sin_ot,1666000,Pagada sin control
+EP-000422,2025-02-01,C33,Clínica Centro,,sin_ot,6800500,Pagada sin control
+EP-000445,2025-03-01,C11,Antofagasta,OT-000396,sobre_cantidad,3600000,Pagada sin control
+EP-000483,2025-03-01,C14,Concepción,OT-001316,sobre_precio,82000,Pagada sin control
+EP-000503,2025-03-01,C21,Zona Centro,OT-001949,sobre_cantidad,2569000,Pagada sin control
+EP-000507,2025-03-01,C21,Zona Centro,OT-002061,sobre_cantidad,2569000,Pagada sin control
+EP-000521,2025-03-01,C22,Zona Norte,OT-002364,sobre_precio,607000,Pagada sin control
+EP-000522,2025-03-01,C22,Zona Norte,OT-002388,sobre_cantidad,3083000,Pagada sin control
+EP-000547,2025-03-01,C24,Zona Sur,OT-003266,sobre_precio,221000,Pagada sin control
+EP-000611,2025-03-01,C33,Clínica Oriente,OT-005012,sobre_precio,514000,Pagada sin control
+EP-000631,2025-03-01,C14,Antofagasta,,sin_ot,1391000,Pagada sin control
+EP-000632,2025-03-01,C14,Santiago,,sin_ot,963000,Pagada sin control
+EP-000633,2025-03-01,C13,Concepción,,sin_ot,6517000,Pagada sin control
+EP-000634,2025-03-01,C14,Concepción,,sin_ot,1428000,Pagada sin control
+EP-000635,2025-03-01,C14,Santiago,OT-900006,sin_ot,5136000,Pagada sin control
+EP-000636,2025-03-01,C24,Zona Norte,OT-002951,duplicada,1028000,Pagada sin control
+EP-000637,2025-03-01,C24,Zona Sur,OT-900007,sin_ot,770000,Pagada sin control
+EP-000638,2025-03-01,C24,Zona Centro,,sin_ot,1028000,Pagada sin control
+EP-000639,2025-03-01,C21,Zona Norte,OT-001661,duplicada,6737500,Pagada sin control
+EP-000640,2025-03-01,C21,Zona Sur,OT-002292,ot_abierta,2569000,Pagada sin control
+EP-000641,2025-03-01,C24,Zona Sur,OT-003274,duplicada,462000,Pagada sin control
+EP-000642,2025-03-01,C21,Zona Sur,,sin_ot,2310000,Pagada sin control
+EP-000643,2025-03-01,C21,Zona Centro,OT-001887,ot_abierta,2569000,Pagada sin control
+EP-000644,2025-03-01,C33,Clínica Centro,,sin_ot,8207500,Pagada sin control
+EP-000645,2025-03-01,C31,Clínica Centro,OT-003660,duplicada,1666000,Pagada sin control
+EP-000646,2025-03-01,C31,Clínica Poniente,,sin_ot,2250000,Pagada sin control
+EP-000647,2025-03-01,C31,Clínica Oriente,OT-900008,sin_ot,1666000,Pagada sin control
+EP-000648,2025-03-01,C32,Clínica Poniente,,sin_ot,2812500,Pagada sin control
+EP-000656,2025-04-01,C11,Concepción,OT-000224,sobre_cantidad,2400000,Pagada sin control
+EP-000686,2025-04-01,C14,Santiago,OT-001086,sobre_precio,126000,Pagada sin control
+EP-000688,2025-04-01,C14,Santiago,OT-001162,sobre_cantidad,321000,Pagada sin control
+EP-000689,2025-04-01,C14,Santiago,OT-001188,sobre_precio,199000,Pagada sin control
+EP-000693,2025-04-01,C14,Concepción,OT-001279,sobre_cantidad,1284000,Pagada sin control
+EP-000694,2025-04-01,C14,Concepción,OT-001308,sobre_precio,258000,Pagada sin control
+EP-000699,2025-04-01,C14,Concepción,OT-001395,sobre_precio,80500,Pagada sin control
+EP-000700,2025-04-01,C14,Antofagasta,OT-001427,sobre_precio,388000,Pagada sin control
+EP-000705,2025-04-01,C14,Antofagasta,OT-001592,sobre_cantidad,1428000,Pagada sin control
+EP-000711,2025-04-01,C21,Zona Norte,OT-001774,sobre_cantidad,2502500,Pagada sin control
+EP-000755,2025-04-01,C23,Zona Norte,OT-002785,sobre_cantidad,6424000,Pagada sin control
+EP-000777,2025-04-01,C24,Zona Sur,OT-003393,sobre_precio,132000,Pagada sin control
+EP-000778,2025-04-01,C31,Clínica Oriente,OT-003433,sobre_cantidad,1666000,Pagada sin control
+EP-000781,2025-04-01,C31,Clínica Oriente,OT-003478,sobre_cantidad,1666000,Pagada sin control
+EP-000786,2025-04-01,C31,Clínica Oriente,OT-003587,sobre_cantidad,1666000,Pagada sin control
+EP-000788,2025-04-01,C31,Clínica Centro,OT-003607,sobre_cantidad,1666000,Pagada sin control
+EP-000789,2025-04-01,C31,Clínica Centro,OT-003618,sobre_precio,434000,Pagada sin control
+EP-000826,2025-04-01,C32,Clínica Centro,OT-004506,sobre_cantidad,2499000,Pagada sin control
+EP-000833,2025-04-01,C32,Clínica Poniente,OT-004651,sobre_cantidad,2499000,Pagada sin control
+EP-000852,2025-04-01,C34,Clínica Oriente,OT-005214,sobre_cantidad,1124000,Pagada sin control
+EP-000860,2025-04-01,C14,Concepción,OT-001347,duplicada,1428000,Pagada sin control
+EP-000861,2025-04-01,C11,Antofagasta,OT-000410,ot_abierta,3999000,Pagada sin control
+EP-000862,2025-04-01,C14,Concepción,,sin_ot,1428000,Pagada sin control
+EP-000863,2025-04-01,C24,Zona Sur,OT-003373,duplicada,1028000,Pagada sin control
+EP-000864,2025-04-01,C22,Zona Centro,,sin_ot,4398500,Pagada sin control
+EP-000865,2025-04-01,C22,Zona Norte,OT-002375,duplicada,4398500,Pagada sin control
+EP-000866,2025-04-01,C24,Zona Centro,OT-003185,duplicada,1028000,Pagada sin control
+EP-000867,2025-04-01,C24,Zona Norte,OT-002946,duplicada,2772000,Pagada sin control
+EP-000868,2025-04-01,C31,Clínica Centro,,sin_ot,1500000,Pagada sin control
+EP-000869,2025-04-01,C31,Clínica Poniente,,sin_ot,1666000,Pagada sin control
+EP-000870,2025-04-01,C31,Clínica Centro,,sin_ot,2375000,Pagada sin control
+EP-000871,2025-04-01,C31,Clínica Oriente,,sin_ot,1666000,Pagada sin control
+EP-000896,2025-05-01,C12,Santiago,OT-000560,sobre_precio,261000,Pagada sin control
+EP-000919,2025-05-01,C13,Antofagasta,OT-001016,sobre_precio,842000,Pagada sin control
+EP-000921,2025-05-01,C14,Santiago,OT-001054,sobre_cantidad,321000,Pagada sin control
+EP-000922,2025-05-01,C14,Santiago,OT-001079,sobre_precio,222000,Pagada sin control
+EP-000923,2025-05-01,C14,Santiago,OT-001097,sobre_precio,215000,Pagada sin control
+EP-000926,2025-05-01,C14,Santiago,OT-001143,sobre_cantidad,214000,Pagada sin control
+EP-000927,2025-05-01,C14,Santiago,OT-001205,sobre_precio,217000,Pagada sin control
+EP-000930,2025-05-01,C14,Concepción,OT-001254,sobre_cantidad,963000,Pagada sin control
+EP-000932,2025-05-01,C14,Concepción,OT-001292,sobre_precio,346000,Pagada sin control
+EP-000933,2025-05-01,C14,Concepción,OT-001319,sobre_precio,225000,Pagada sin control
+EP-000935,2025-05-01,C14,Concepción,OT-001356,sobre_cantidad,963000,Pagada sin control
+EP-000936,2025-05-01,C14,Concepción,OT-001409,sobre_cantidad,1428000,Pagada sin control
+EP-000939,2025-05-01,C14,Antofagasta,OT-001459,sobre_precio,215000,Pagada sin control
+EP-000941,2025-05-01,C14,Antofagasta,OT-001534,sobre_cantidad,963000,Pagada sin control
+EP-000945,2025-05-01,C14,Antofagasta,OT-001601,sobre_cantidad,749000,Pagada sin control
+EP-000979,2025-05-01,C22,Zona Norte,OT-002389,sobre_cantidad,3083000,Pagada sin control
+EP-001081,2025-05-01,C32,Clínica Poniente,OT-004957,sobre_precio,693000,Pagada sin control
+EP-001096,2025-05-01,C34,Clínica Poniente,OT-005343,sobre_cantidad,983500,Pagada sin control
+EP-001098,2025-05-01,C14,Santiago,OT-900009,sin_ot,1428000,Pagada sin control
+EP-001099,2025-05-01,C14,Santiago,OT-001161,duplicada,1070000,Pagada sin control
+EP-001100,2025-05-01,C14,Concepción,,sin_ot,1498000,Pagada sin control
+EP-001101,2025-05-01,C14,Antofagasta,OT-900010,sin_ot,1391000,Pagada sin control
+EP-001102,2025-05-01,C14,Santiago,OT-900011,sin_ot,1428000,Pagada sin control
+EP-001103,2025-05-01,C14,Antofagasta,,sin_ot,535000,Pagada sin control
+EP-001104,2025-05-01,C14,Santiago,OT-900012,sin_ot,1428000,Pagada sin control
+EP-001105,2025-05-01,C14,Concepción,,sin_ot,1428000,Pagada sin control
+EP-001106,2025-05-01,C12,Concepción,OT-000645,duplicada,2285000,Pagada sin control
+EP-001107,2025-05-01,C12,Antofagasta,,sin_ot,5488000,Pagada sin control
+EP-001108,2025-05-01,C24,Zona Centro,OT-003164,duplicada,1028000,Pagada sin control
+EP-001109,2025-05-01,C24,Zona Norte,OT-002938,ot_abierta,1028000,Pagada sin control
+EP-001110,2025-05-01,C21,Zona Norte,OT-001833,ot_abierta,2569000,Pagada sin control
+EP-001111,2025-05-01,C23,Zona Centro,OT-900013,sin_ot,6424000,Pagada sin control
+EP-001112,2025-05-01,C24,Zona Norte,OT-900014,sin_ot,1848000,Pagada sin control
+EP-001113,2025-05-01,C23,Zona Sur,,sin_ot,10122000,Pagada sin control
+EP-001114,2025-05-01,C33,Clínica Oriente,OT-004984,duplicada,3124000,Pagada sin control
+EP-001115,2025-05-01,C32,Clínica Poniente,,sin_ot,2499000,Pagada sin control
+EP-001116,2025-05-01,C34,Clínica Oriente,OT-900015,sin_ot,1264500,Pagada sin control
+EP-001117,2025-05-01,C34,Clínica Poniente,,sin_ot,1875000,Pagada sin control
+EP-001118,2025-05-01,C31,Clínica Oriente,OT-003477,duplicada,1666000,Pagada sin control
+EP-001119,2025-05-01,C31,Clínica Poniente,OT-003827,ot_abierta,1666000,Pagada sin control
+EP-001134,2025-06-01,C11,Antofagasta,OT-000448,sobre_cantidad,3999000,Pagada sin control
+EP-001164,2025-06-01,C14,Santiago,OT-001189,sobre_precio,232000,Pagada sin control
+EP-001165,2025-06-01,C14,Concepción,OT-001255,sobre_precio,285000,Pagada sin control
+EP-001171,2025-06-01,C14,Antofagasta,OT-001460,sobre_cantidad,963000,Pagada sin control
+EP-001172,2025-06-01,C14,Antofagasta,OT-001480,sobre_precio,184000,Pagada sin control
+EP-001175,2025-06-01,C14,Antofagasta,OT-001603,sobre_cantidad,642000,Pagada sin control
+EP-001199,2025-06-01,C21,Zona Sur,OT-002143,sobre_precio,2580000,Pagada sin control
+EP-001215,2025-06-01,C22,Zona Centro,OT-002544,sobre_precio,402000,Pagada sin control
+EP-001253,2025-06-01,C24,Zona Sur,OT-003296,sobre_precio,726000,Pagada sin control
+EP-001260,2025-06-01,C31,Clínica Oriente,OT-003471,sobre_cantidad,750000,Pagada sin control
+EP-001261,2025-06-01,C31,Clínica Oriente,OT-003479,sobre_cantidad,1666000,Pagada sin control
+EP-001262,2025-06-01,C31,Clínica Oriente,OT-003569,sobre_cantidad,1666000,Pagada sin control
+EP-001266,2025-06-01,C31,Clínica Centro,OT-003687,sobre_cantidad,1666000,Pagada sin control
+EP-001297,2025-06-01,C32,Clínica Centro,OT-004392,sobre_precio,727000,Pagada sin control
+EP-001332,2025-06-01,C14,Antofagasta,,sin_ot,1428000,Pagada sin control
+EP-001333,2025-06-01,C12,Santiago,OT-900016,sin_ot,1715000,Pagada sin control
+EP-001334,2025-06-01,C14,Santiago,OT-900017,sin_ot,1428000,Pagada sin control
+EP-001335,2025-06-01,C14,Antofagasta,,sin_ot,1428000,Pagada sin control
+EP-001336,2025-06-01,C13,Antofagasta,OT-001015,duplicada,4570000,Pagada sin control
+EP-001337,2025-06-01,C14,Concepción,OT-001416,duplicada,1498000,Pagada sin control
+EP-001338,2025-06-01,C14,Concepción,OT-001386,duplicada,1428000,Pagada sin control
+EP-001339,2025-06-01,C22,Zona Norte,,sin_ot,3083000,Pagada sin control
+EP-001340,2025-06-01,C21,Zona Norte,OT-001639,ot_abierta,2569000,Pagada sin control
+EP-001341,2025-06-01,C22,Zona Sur,,sin_ot,3083000,Pagada sin control
+EP-001342,2025-06-01,C21,Zona Sur,OT-002266,duplicada,2569000,Pagada sin control
+EP-001343,2025-06-01,C22,Zona Norte,OT-002320,duplicada,3083000,Pagada sin control
+EP-001344,2025-06-01,C31,Clínica Centro,OT-003636,duplicada,1625000,Pagada sin control
+EP-001345,2025-06-01,C31,Clínica Centro,OT-900018,sin_ot,1125000,Pagada sin control
+EP-001346,2025-06-01,C31,Clínica Poniente,,sin_ot,1750000,Pagada sin control
+EP-001347,2025-06-01,C31,Clínica Oriente,OT-003506,duplicada,1666000,Pagada sin control
+EP-001348,2025-06-01,C31,Clínica Poniente,OT-003786,duplicada,1666000,Pagada sin control
+EP-001349,2025-06-01,C31,Clínica Poniente,OT-900019,sin_ot,1666000,Pagada sin control
+EP-001350,2025-06-01,C31,Clínica Poniente,OT-003846,ot_abierta,1666000,Pagada sin control
+EP-001351,2025-06-01,C31,Clínica Oriente,OT-003525,ot_abierta,1666000,Pagada sin control
+EP-001368,2025-07-01,C11,Antofagasta,OT-000416,sobre_cantidad,3999000,Rechazada
+EP-001399,2025-07-01,C14,Concepción,OT-001237,sobre_cantidad,1819000,Rechazada
+EP-001503,2025-07-01,C31,Clínica Centro,OT-003626,sobre_precio,457000,Rechazada
+EP-001508,2025-07-01,C31,Clínica Centro,OT-003721,sobre_cantidad,3250000,Rechazada
+EP-001576,2025-07-01,C34,Clínica Poniente,OT-005366,sobre_cantidad,1405000,Rechazada
+EP-001578,2025-07-01,C22,Zona Sur,,sin_ot,3083000,Rechazada
+EP-001579,2025-07-01,C24,Zona Norte,OT-002947,duplicada,693000,Rechazada
+EP-001580,2025-07-01,C21,Zona Centro,OT-900020,sin_ot,2569000,Rechazada
+EP-001581,2025-07-01,C22,Zona Sur,OT-002624,duplicada,1389000,Rechazada
+EP-001582,2025-07-01,C31,Clínica Poniente,OT-003828,ot_abierta,1666000,Rechazada
+EP-001650,2025-08-01,C21,Zona Norte,OT-001673,sobre_precio,471000,Rechazada
+EP-001806,2025-08-01,C14,Concepción,OT-001327,ot_abierta,1428000,Rechazada
+EP-001807,2025-08-01,C14,Concepción,OT-001369,duplicada,1428000,Rechazada
+EP-001808,2025-08-01,C11,Concepción,,sin_ot,6000000,Rechazada
+EP-001809,2025-08-01,C24,Zona Centro,OT-003151,ot_abierta,1028000,Rechazada
+EP-001810,2025-08-01,C24,Zona Norte,OT-002976,duplicada,693000,Rechazada
+EP-001811,2025-08-01,C21,Zona Sur,OT-002268,ot_abierta,2569000,Rechazada
+EP-001812,2025-08-01,C22,Zona Sur,,sin_ot,3083000,Rechazada
+EP-001813,2025-08-01,C31,Clínica Centro,,sin_ot,1625000,Rechazada
+EP-001814,2025-08-01,C33,Clínica Oriente,OT-900021,sin_ot,3124000,Rechazada
+EP-001815,2025-08-01,C31,Clínica Centro,,sin_ot,3500000,Rechazada
+EP-001876,2025-09-01,C14,Antofagasta,OT-001429,sobre_cantidad,1428000,Rechazada
+EP-001944,2025-09-01,C24,Zona Sur,OT-003323,sobre_cantidad,1028000,Rechazada
+EP-002007,2025-09-01,C34,Clínica Oriente,OT-005188,sobre_precio,515000,Rechazada
+EP-002014,2025-09-01,C14,Santiago,OT-001174,ot_abierta,1428000,Rechazada
+EP-002015,2025-09-01,C14,Santiago,,sin_ot,4387000,Rechazada
+EP-002016,2025-09-01,C21,Zona Sur,OT-900022,sin_ot,2310000,Rechazada
+EP-002017,2025-09-01,C21,Zona Sur,OT-900023,sin_ot,2502500,Rechazada
+EP-002018,2025-09-01,C31,Clínica Oriente,OT-003589,duplicada,1666000,Rechazada
+EP-002019,2025-09-01,C31,Clínica Poniente,,sin_ot,1666000,Rechazada
+EP-002020,2025-09-01,C31,Clínica Poniente,OT-003847,ot_abierta,1666000,Rechazada
+EP-002021,2025-09-01,C31,Clínica Oriente,OT-003435,ot_abierta,1666000,Rechazada
+EP-002042,2025-10-01,C11,Antofagasta,OT-000362,sobre_cantidad,1800000,Rechazada
+EP-002078,2025-10-01,C14,Santiago,OT-001055,sobre_cantidad,1712000,Rechazada
+EP-002085,2025-10-01,C14,Santiago,OT-001183,sobre_cantidad,214000,Rechazada
+EP-002088,2025-10-01,C14,Concepción,OT-001273,sobre_precio,265000,Rechazada
+EP-002092,2025-10-01,C14,Concepción,OT-001376,sobre_precio,252000,Rechazada
+EP-002096,2025-10-01,C14,Antofagasta,OT-001510,sobre_precio,90000,Rechazada
+EP-002098,2025-10-01,C14,Antofagasta,OT-001528,sobre_cantidad,1428000,Rechazada
+EP-002167,2025-10-01,C24,Zona Centro,OT-003245,sobre_cantidad,1028000,Rechazada
+EP-002178,2025-10-01,C31,Clínica Oriente,OT-003480,sobre_cantidad,1666000,Rechazada
+EP-002183,2025-10-01,C31,Clínica Oriente,OT-003571,sobre_cantidad,1666000,Rechazada
+EP-002187,2025-10-01,C31,Clínica Centro,OT-003645,sobre_cantidad,1666000,Rechazada
+EP-002247,2025-10-01,C32,Clínica Poniente,OT-004980,sobre_precio,2268000,Rechazada
+EP-002262,2025-10-01,C14,Santiago,,sin_ot,1428000,Rechazada
+EP-002263,2025-10-01,C14,Concepción,OT-001293,ot_abierta,1428000,Rechazada
+EP-002264,2025-10-01,C14,Antofagasta,OT-001508,duplicada,963000,Rechazada
+EP-002265,2025-10-01,C23,Zona Centro,,sin_ot,6424000,Rechazada
+EP-002266,2025-10-01,C31,Clínica Centro,OT-003674,duplicada,875000,Rechazada
+EP-002317,2025-11-01,C14,Concepción,OT-001341,sobre_precio,180000,Rechazada
+EP-002321,2025-11-01,C14,Concepción,OT-001401,sobre_precio,324500,Rechazada
+EP-002326,2025-11-01,C14,Antofagasta,OT-001537,sobre_cantidad,321000,Rechazada
+EP-002336,2025-11-01,C21,Zona Norte,OT-001760,sobre_cantidad,2569000,Rechazada
+EP-002338,2025-11-01,C21,Zona Norte,OT-001829,sobre_precio,1200000,Rechazada
+EP-002400,2025-11-01,C24,Zona Sur,OT-003369,sobre_precio,175000,Rechazada
+EP-002414,2025-11-01,C31,Clínica Centro,OT-003749,sobre_precio,312000,Rechazada
+EP-002474,2025-11-01,C14,Concepción,OT-001411,ot_abierta,1428000,Rechazada
+EP-002475,2025-11-01,C14,Antofagasta,OT-001471,ot_abierta,1428000,Rechazada
+EP-002476,2025-11-01,C14,Santiago,OT-001114,duplicada,1428000,Rechazada
+EP-002477,2025-11-01,C24,Zona Centro,OT-003187,duplicada,1028000,Rechazada
+EP-002478,2025-11-01,C31,Clínica Centro,OT-003733,ot_abierta,1666000,Rechazada
+EP-002479,2025-11-01,C32,Clínica Oriente,OT-004041,duplicada,2499000,Rechazada
+EP-002480,2025-11-01,C31,Clínica Poniente,OT-003830,duplicada,1666000,Rechazada
+EP-002554,2025-12-01,C14,Antofagasta,OT-001554,sobre_cantidad,321000,Rechazada
+EP-002559,2025-12-01,C21,Zona Norte,OT-001721,sobre_precio,234000,Rechazada
+EP-002710,2025-12-01,C14,Antofagasta,OT-900024,sin_ot,2782000,Rechazada
+EP-002711,2025-12-01,C14,Antofagasta,OT-001546,ot_abierta,1428000,Rechazada
+EP-002712,2025-12-01,C14,Santiago,OT-001207,ot_abierta,1428000,Rechazada
+EP-002713,2025-12-01,C14,Concepción,,sin_ot,1391000,Rechazada
+EP-002714,2025-12-01,C21,Zona Centro,,sin_ot,3850000,Rechazada
+EP-002715,2025-12-01,C24,Zona Centro,,sin_ot,1028000,Rechazada
+EP-002716,2025-12-01,C24,Zona Sur,OT-003403,duplicada,1028000,Rechazada
+EP-002717,2025-12-01,C21,Zona Sur,OT-002126,duplicada,2569000,Rechazada
+EP-002718,2025-12-01,C31,Clínica Centro,OT-003676,duplicada,4500000,Rechazada
+EP-002719,2025-12-01,C31,Clínica Poniente,OT-003848,duplicada,1666000,Rechazada
+EP-002720,2025-12-01,C31,Clínica Centro,OT-003610,duplicada,1666000,Rechazada
+EP-002775,2026-01-01,C14,Concepción,OT-001303,sobre_cantidad,321000,Rechazada
+EP-002793,2026-01-01,C21,Zona Norte,OT-001844,sobre_cantidad,2569000,Rechazada
+EP-002805,2026-01-01,C21,Zona Sur,OT-002158,sobre_precio,399000,Rechazada
+EP-002808,2026-01-01,C21,Zona Sur,OT-002274,sobre_cantidad,2569000,Rechazada
+EP-002832,2026-01-01,C23,Zona Norte,OT-002767,sobre_precio,1422000,Rechazada
+EP-002859,2026-01-01,C31,Clínica Oriente,OT-003472,sobre_cantidad,1250000,Rechazada
+EP-002869,2026-01-01,C31,Clínica Centro,OT-003734,sobre_cantidad,1666000,Rechazada
+EP-002879,2026-01-01,C31,Clínica Poniente,OT-003874,sobre_precio,216000,Rechazada
+EP-002880,2026-01-01,C31,Clínica Poniente,OT-003882,sobre_cantidad,1666000,Rechazada
+EP-002948,2026-01-01,C14,Antofagasta,,sin_ot,749000,Rechazada
+EP-002949,2026-01-01,C14,Santiago,OT-001197,duplicada,642000,Rechazada
+EP-002950,2026-01-01,C11,Santiago,OT-000121,duplicada,3999000,Rechazada
+EP-002951,2026-01-01,C21,Zona Centro,,sin_ot,2569000,Rechazada
+EP-002952,2026-01-01,C31,Clínica Poniente,OT-003907,duplicada,1250000,Rechazada
+EP-002953,2026-01-01,C31,Clínica Poniente,OT-003848,duplicada,1666000,Rechazada
+EP-003010,2026-02-01,C14,Antofagasta,OT-001451,sobre_cantidad,1428000,Rechazada
+EP-003033,2026-02-01,C21,Zona Centro,OT-002017,sobre_cantidad,2569000,Rechazada
+EP-003069,2026-02-01,C23,Zona Centro,OT-002821,sobre_precio,1754000,Rechazada
+EP-003097,2026-02-01,C31,Clínica Centro,OT-003630,sobre_precio,398000,Rechazada
+EP-003100,2026-02-01,C31,Clínica Centro,OT-003725,sobre_cantidad,1500000,Rechazada
+EP-003105,2026-02-01,C31,Clínica Poniente,OT-003899,sobre_cantidad,1666000,Rechazada
+EP-003166,2026-02-01,C14,Antofagasta,OT-001544,ot_abierta,1428000,Rechazada
+EP-003167,2026-02-01,C14,Santiago,OT-001184,duplicada,321000,Rechazada
+EP-003168,2026-02-01,C14,Concepción,,sin_ot,1428000,Rechazada
+EP-003169,2026-02-01,C14,Santiago,OT-001081,duplicada,1428000,Rechazada
+EP-003170,2026-02-01,C24,Zona Sur,OT-003306,ot_abierta,1028000,Rechazada
+EP-003171,2026-02-01,C24,Zona Centro,,sin_ot,1386000,Rechazada
+EP-003172,2026-02-01,C31,Clínica Oriente,,sin_ot,1625000,Rechazada
+EP-003173,2026-02-01,C31,Clínica Oriente,,sin_ot,4875000,Rechazada
+EP-003228,2026-03-01,C14,Concepción,OT-001412,sobre_precio,282000,Rechazada
+EP-003238,2026-03-01,C14,Antofagasta,OT-001627,sobre_cantidad,214000,Rechazada
+EP-003249,2026-03-01,C21,Zona Centro,OT-001977,sobre_cantidad,2887500,Rechazada
+EP-003292,2026-03-01,C24,Zona Centro,OT-003115,sobre_cantidad,1386000,Rechazada
+EP-003294,2026-03-01,C24,Zona Centro,OT-003189,sobre_cantidad,1028000,Rechazada
+EP-003310,2026-03-01,C31,Clínica Poniente,OT-003772,sobre_precio,200000,Rechazada
+EP-003314,2026-03-01,C31,Clínica Poniente,OT-003821,sobre_cantidad,2125000,Rechazada
+EP-003315,2026-03-01,C31,Clínica Poniente,OT-003833,sobre_cantidad,1666000,Rechazada
+EP-003384,2026-03-01,C14,Santiago,OT-001214,duplicada,1391000,Rechazada
+EP-003385,2026-03-01,C13,Antofagasta,,sin_ot,4116000,Rechazada
+EP-003386,2026-03-01,C14,Antofagasta,,sin_ot,1428000,Rechazada
+EP-003387,2026-03-01,C21,Zona Centro,OT-900025,sin_ot,2117500,Rechazada
+EP-003388,2026-03-01,C31,Clínica Centro,OT-900026,sin_ot,1000000,Rechazada
+EP-003389,2026-03-01,C31,Clínica Centro,OT-003665,duplicada,1666000,Rechazada
+EP-003390,2026-03-01,C31,Clínica Oriente,OT-900027,sin_ot,1375000,Rechazada
+EP-003439,2026-04-01,C14,Concepción,OT-001250,sobre_cantidad,1428000,Rechazada
+EP-003512,2026-04-01,C23,Zona Centro,OT-002852,sobre_cantidad,6424000,Rechazada
+EP-003536,2026-04-01,C31,Clínica Oriente,OT-003574,sobre_cantidad,1666000,Rechazada
+EP-003546,2026-04-01,C31,Clínica Centro,OT-003692,sobre_precio,391000,Rechazada
+EP-003553,2026-04-01,C31,Clínica Poniente,OT-003867,sobre_cantidad,1666000,Rechazada
+EP-003614,2026-04-01,C34,Clínica Oriente,OT-005159,sobre_cantidad,702500,Rechazada
+EP-003625,2026-04-01,C14,Concepción,OT-900028,sin_ot,1428000,Rechazada
+EP-003626,2026-04-01,C14,Antofagasta,OT-001608,duplicada,1498000,Rechazada
+EP-003627,2026-04-01,C14,Antofagasta,OT-001517,duplicada,1177000,Rechazada
+EP-003628,2026-04-01,C14,Concepción,,sin_ot,1498000,Rechazada
+EP-003629,2026-04-01,C24,Zona Norte,,sin_ot,1028000,Rechazada
+EP-003630,2026-04-01,C24,Zona Norte,,sin_ot,1028000,Rechazada
+EP-003631,2026-04-01,C22,Zona Centro,OT-002536,duplicada,3009500,Rechazada
+EP-003632,2026-04-01,C24,Zona Centro,OT-900029,sin_ot,1028000,Rechazada
+EP-003633,2026-04-01,C34,Clínica Centro,,sin_ot,983500,Rechazada
+EP-003634,2026-04-01,C31,Clínica Oriente,OT-003529,duplicada,1666000,Rechazada
+EP-003635,2026-04-01,C31,Clínica Oriente,OT-003484,ot_abierta,1666000,Rechazada
+EP-003787,2026-05-01,C31,Clínica Oriente,OT-003563,sobre_precio,476000,Rechazada
+EP-003855,2026-05-01,C14,Antofagasta,,sin_ot,642000,Rechazada
+EP-003856,2026-05-01,C13,Antofagasta,OT-000998,duplicada,4570000,Rechazada
+EP-003857,2026-05-01,C22,Zona Sur,OT-002751,duplicada,3704000,Rechazada
+EP-003858,2026-05-01,C24,Zona Centro,OT-003109,ot_abierta,1028000,Rechazada
+EP-003859,2026-05-01,C21,Zona Sur,OT-002161,duplicada,2569000,Rechazada
+EP-003860,2026-05-01,C31,Clínica Oriente,OT-003541,duplicada,2375000,Rechazada
+EP-003861,2026-05-01,C32,Clínica Poniente,,sin_ot,2499000,Rechazada
+EP-003939,2026-06-01,C14,Antofagasta,OT-001573,sobre_cantidad,535000,Rechazada
+EP-003942,2026-06-01,C14,Antofagasta,OT-001630,sobre_cantidad,642000,Rechazada
+EP-003957,2026-06-01,C21,Zona Centro,OT-001996,sobre_precio,687000,Rechazada
+EP-004000,2026-06-01,C24,Zona Norte,OT-003049,sobre_precio,144000,Rechazada
+EP-004096,2026-06-01,C11,Concepción,,sin_ot,2700000,Rechazada
+EP-004097,2026-06-01,C14,Antofagasta,,sin_ot,1428000,Rechazada
+EP-004098,2026-06-01,C14,Antofagasta,OT-001452,duplicada,1428000,Rechazada
+EP-004099,2026-06-01,C14,Antofagasta,OT-900030,sin_ot,1819000,Rechazada
+EP-004100,2026-06-01,C23,Zona Norte,OT-002797,duplicada,6424000,Rechazada
+EP-004101,2026-06-01,C31,Clínica Poniente,OT-900031,sin_ot,1666000,Rechazada
+EP-004102,2026-06-01,C31,Clínica Centro,,sin_ot,875000,Rechazada
+EP-004103,2026-06-01,C31,Clínica Centro,OT-900032,sin_ot,3125000,Rechazada
+EP-004147,2026-07-01,C14,Concepción,OT-001233,sobre_cantidad,1428000,Rechazada
+EP-004148,2026-07-01,C14,Concepción,OT-001242,sobre_cantidad,535000,Rechazada
+EP-004154,2026-07-01,C14,Concepción,OT-001403,sobre_cantidad,963000,Rechazada
+EP-004194,2026-07-01,C22,Zona Norte,OT-002421,sobre_precio,899000,Rechazada
+EP-004232,2026-07-01,C31,Clínica Oriente,OT-003466,sobre_precio,296000,Rechazada
+EP-004239,2026-07-01,C31,Clínica Centro,OT-003659,sobre_precio,380000,Rechazada
+EP-004306,2026-07-01,C14,Antofagasta,OT-001618,ot_abierta,1428000,Rechazada
+EP-004307,2026-07-01,C24,Zona Centro,OT-900033,sin_ot,1232000,Rechazada
+EP-004308,2026-07-01,C22,Zona Sur,,sin_ot,3083000,Rechazada
+EP-004309,2026-07-01,C21,Zona Centro,OT-001934,duplicada,2569000,Rechazada
+EP-004310,2026-07-01,C31,Clínica Poniente,,sin_ot,1666000,Rechazada
+EP-004311,2026-07-01,C33,Clínica Centro,OT-005053,duplicada,3124000,Rechazada
+EP-004386,2026-08-01,C21,Zona Norte,OT-001685,sobre_cantidad,2569000,Rechazada
+EP-004469,2026-08-01,C31,Clínica Centro,OT-003615,sobre_cantidad,1666000,Rechazada
+EP-004547,2026-08-01,C14,Concepción,OT-001265,duplicada,642000,Rechazada
+EP-004548,2026-08-01,C14,Antofagasta,,sin_ot,1428000,Rechazada
+EP-004549,2026-08-01,C13,Antofagasta,OT-001009,duplicada,7203000,Rechazada
+EP-004550,2026-08-01,C21,Zona Sur,,sin_ot,2887500,Rechazada
+EP-004551,2026-08-01,C24,Zona Norte,,sin_ot,2849000,Rechazada
+EP-004552,2026-08-01,C31,Clínica Poniente,OT-900034,sin_ot,4500000,Rechazada
+EP-004553,2026-08-01,C31,Clínica Centro,OT-900035,sin_ot,1666000,Rechazada
+EP-004598,2026-09-01,C14,Santiago,OT-001084,sobre_precio,144000,Rechazada
+EP-004600,2026-09-01,C14,Santiago,OT-001118,sobre_precio,284000,Rechazada
+EP-004603,2026-09-01,C14,Santiago,OT-001130,sobre_precio,50000,Rechazada
+EP-004605,2026-09-01,C14,Santiago,OT-001159,sobre_precio,240000,Rechazada
+EP-004618,2026-09-01,C14,Antofagasta,OT-001549,sobre_precio,309000,Rechazada
+EP-004657,2026-09-01,C22,Zona Norte,OT-002397,sobre_precio,328000,Rechazada
+EP-004676,2026-09-01,C23,Zona Norte,OT-002802,sobre_cantidad,6424000,Rechazada
+EP-004682,2026-09-01,C24,Zona Norte,OT-002973,sobre_cantidad,1028000,Rechazada
+EP-004708,2026-09-01,C31,Clínica Centro,OT-003754,sobre_cantidad,1666000,Rechazada
+EP-004774,2026-09-01,C34,Clínica Oriente,OT-005212,sobre_cantidad,1875000,Rechazada
+EP-004784,2026-09-01,C14,Antofagasta,OT-001631,duplicada,1498000,Rechazada
+EP-004785,2026-09-01,C14,Concepción,,sin_ot,2782000,Rechazada
+EP-004786,2026-09-01,C14,Santiago,,sin_ot,2033000,Rechazada
+EP-004787,2026-09-01,C32,Clínica Poniente,OT-004754,duplicada,2499000,Rechazada
+EP-004933,2026-10-01,C31,Clínica Oriente,OT-003577,sobre_cantidad,1666000,Rechazada
+EP-005008,2026-10-01,C14,Concepción,,sin_ot,1605000,Rechazada
+EP-005009,2026-10-01,C14,Antofagasta,OT-001569,duplicada,1428000,Rechazada
+EP-005010,2026-10-01,C12,Antofagasta,,sin_ot,1543500,Rechazada
+EP-005011,2026-10-01,C13,Santiago,OT-000888,duplicada,4570000,Rechazada
+EP-005012,2026-10-01,C24,Zona Centro,,sin_ot,1028000,Rechazada
+EP-005013,2026-10-01,C24,Zona Sur,OT-900036,sin_ot,1028000,Rechazada
+EP-005014,2026-10-01,C22,Zona Centro,OT-002472,duplicada,3083000,Rechazada
+EP-005015,2026-10-01,C21,Zona Norte,OT-001853,duplicada,2569000,Rechazada
+EP-005016,2026-10-01,C31,Clínica Oriente,OT-003595,duplicada,1666000,Rechazada
+EP-005017,2026-10-01,C33,Clínica Centro,OT-005056,duplicada,3124000,Rechazada
+EP-005018,2026-10-01,C31,Clínica Poniente,OT-003775,duplicada,1666000,Rechazada
+EP-005061,2026-11-01,C14,Concepción,OT-001234,sobre_cantidad,1428000,Rechazada
+EP-005157,2026-11-01,C31,Clínica Centro,OT-003706,sobre_precio,200000,Rechazada
+EP-005158,2026-11-01,C31,Clínica Centro,OT-003717,sobre_cantidad,1666000,Rechazada
+EP-005163,2026-11-01,C31,Clínica Poniente,OT-003837,sobre_precio,217000,Rechazada
+EP-005226,2026-11-01,C14,Concepción,,sin_ot,1428000,Rechazada
+EP-005227,2026-11-01,C14,Concepción,OT-900037,sin_ot,4280000,Rechazada
+EP-005228,2026-11-01,C21,Zona Centro,,sin_ot,7315000,Rechazada
+EP-005229,2026-11-01,C31,Clínica Centro,OT-003753,ot_abierta,1666000,Rechazada
+EP-005230,2026-11-01,C31,Clínica Centro,,sin_ot,1666000,Rechazada
+EP-005287,2026-12-01,C14,Santiago,OT-001195,sobre_cantidad,1428000,Rechazada
+EP-005345,2026-12-01,C23,Zona Centro,OT-002831,sobre_cantidad,6424000,Rechazada
+EP-005363,2026-12-01,C24,Zona Centro,OT-003233,sobre_precio,284000,Rechazada
+EP-005464,2026-12-01,C14,Antofagasta,OT-001562,duplicada,642000,Rechazada
+EP-005465,2026-12-01,C14,Santiago,OT-001053,duplicada,1428000,Rechazada
+EP-005466,2026-12-01,C14,Concepción,OT-001288,duplicada,2568000,Rechazada
+EP-005467,2026-12-01,C12,Concepción,OT-000648,ot_abierta,2285000,Rechazada
+EP-005468,2026-12-01,C14,Concepción,OT-001297,ot_abierta,1428000,Rechazada
+EP-005469,2026-12-01,C31,Clínica Oriente,,sin_ot,1125000,Rechazada
+EP-005470,2026-12-01,C33,Clínica Poniente,OT-005139,duplicada,3124000,Rechazada
+EP-005471,2026-12-01,C31,Clínica Oriente,OT-003501,duplicada,5875000,Rechazada
