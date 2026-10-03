@@ -1,0 +1,274 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "17b36689c83eac4a5a2f",
+  "position": {
+    "x": 24,
+    "y": 92,
+    "z": 800,
+    "height": 616,
+    "width": 1232,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "periodo"
+                }
+              },
+              "queryRef": "observaciones.periodo",
+              "nativeQueryRef": "periodo",
+              "active": true,
+              "displayName": "Periodo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "contratistas"
+                    }
+                  },
+                  "Property": "contratista"
+                }
+              },
+              "queryRef": "contratistas.contratista",
+              "nativeQueryRef": "contratista",
+              "active": true,
+              "displayName": "Contratista"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sedes"
+                    }
+                  },
+                  "Property": "sede"
+                }
+              },
+              "queryRef": "sedes.sede",
+              "nativeQueryRef": "sede",
+              "active": true,
+              "displayName": "Sede"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "id_linea"
+                }
+              },
+              "queryRef": "observaciones.id_linea",
+              "nativeQueryRef": "id_linea",
+              "active": true,
+              "displayName": "Línea EP"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "id_ot"
+                }
+              },
+              "queryRef": "observaciones.id_ot",
+              "nativeQueryRef": "id_ot",
+              "active": true,
+              "displayName": "OT"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "regla_nombre"
+                }
+              },
+              "queryRef": "observaciones.regla_nombre",
+              "nativeQueryRef": "regla_nombre",
+              "active": true,
+              "displayName": "Regla"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "resolucion"
+                }
+              },
+              "queryRef": "observaciones.resolucion",
+              "nativeQueryRef": "resolucion",
+              "active": true,
+              "displayName": "Resolución"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "Observado"
+                }
+              },
+              "queryRef": "observaciones.Observado",
+              "nativeQueryRef": "Observado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "observaciones"
+                  }
+                },
+                "Property": "Observado"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Observaciones'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+/// Tarifas del contrato: precio unitario por contratista y servicio.
+table tarifas
+	lineageTag: 7c8ebca0-b089-5213-96ed-89342473f25e
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: 8a131f6c-f48b-54a2-85af-d462607fe6d8
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		lineageTag: ba14efa8-da87-5397-8557-999c4d482c39
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		lineageTag: 2fef4c01-4fb4-56b7-a468-5cf6297868bd
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_unitario
+		dataType: int64
+		formatString: \$ #,##0
+		lineageTag: 9b500d7c-30cc-5ca6-872f-c585600a6b6a
+		summarizeBy: none
+		sourceColumn: precio_unitario
+
+		annotation SummarizationSetBy = Automatic
+
+	partition tarifas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("tarifas.csv", {{"id_contratista", type text}, {"servicio", type text}, {"unidad", type text}, {"precio_unitario", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

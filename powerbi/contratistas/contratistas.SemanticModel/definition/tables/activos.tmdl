@@ -1,0 +1,78 @@
+/// Dimensión: activos mantenidos por sede, con su criticidad y el MTBF objetivo del tipo.
+table activos
+	lineageTag: 30cd5513-04ba-55e1-8b87-67e1c572d384
+
+	/// Activos mantenidos en el filtro.
+	measure Activos = COUNTROWS(activos)
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: ea7e9492-cd26-5dde-9a74-9852d75c8412
+
+	/// MTBF de diseño del tipo de activo, para comparar con el observado.
+	measure 'MTBF objetivo (días)' = AVERAGE(activos[mtbf_objetivo_dias])
+		formatString: #,##0
+		displayFolder: 3. Mantenimiento
+		lineageTag: b80c7937-ee55-5d12-b2fa-5df9dc4909ee
+
+	column id_activo
+		dataType: string
+		isHidden
+		lineageTag: cf2635d5-18d3-5031-8a06-aeb3e4f97f28
+		summarizeBy: none
+		sourceColumn: id_activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: a3616531-54ea-5d4a-b45d-e17101ad7c85
+		summarizeBy: none
+		sourceColumn: sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_activo
+		dataType: string
+		lineageTag: 23e3aeac-76df-59f9-bc6e-9e29aa9be4e7
+		summarizeBy: none
+		sourceColumn: tipo_activo
+
+		annotation SummarizationSetBy = Automatic
+
+	column criticidad
+		dataType: string
+		lineageTag: ede0cbf6-db7d-5f04-8cb5-60094025ab98
+		summarizeBy: none
+		sourceColumn: criticidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column mtbf_objetivo_dias
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 05ccd7eb-c53f-566f-82fc-0a25cfdac11c
+		summarizeBy: none
+		sourceColumn: mtbf_objetivo_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: 7b58607c-b872-5f70-86ca-bd2c3b1ebf34
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	partition activos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("activos.csv", {{"id_activo", type text}, {"sede", type text}, {"tipo_activo", type text}, {"criticidad", type text}, {"mtbf_objetivo_dias", Int64.Type}, {"id_contratista", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

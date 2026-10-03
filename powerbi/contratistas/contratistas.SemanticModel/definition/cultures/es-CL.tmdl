@@ -1,0 +1,1046 @@
+cultureInfo es-CL
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "ausencia_diaria.tasa_global_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "Tasa global %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Ausentismo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Tasa global": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ausencia_diaria.grupo_diagnostico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "grupo_diagnostico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Diagnóstico": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ausencia_diaria.referencia_dipres_salud": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "Referencia Dipres salud"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Salud pública (Dipres 2023, solo Salud)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ausencia_diaria.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "tipo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tipo de ausencia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ausencia_diaria.días_perdidos_con_parentales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "Días perdidos con parentales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Días perdidos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "ausencia_diaria.días_perdidos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ausencia_diaria",
+			          "ConceptualProperty": "Días perdidos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.cambio_costo_hora_piloto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Cambio costo/hora piloto %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Piloto: costo/hora": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.horas_sobretiempo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Horas sobretiempo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sobretiempo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.horas_pool": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Horas pool"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Pool interno": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.horas_externo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Horas externo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Externo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.horas_no_cubiertas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Horas no cubiertas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sin cubrir": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.cubierto_con_sobretiempo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "% cubierto con sobretiempo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cubierto con sobretiempo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "% sobretiempo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.cambio_costo_hora_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Cambio costo/hora %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Cambio del costo por hora": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Cambio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.costo_hora_antes_del_piloto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Costo/hora antes del piloto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Antes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "cobertura.costo_hora_con_piloto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "cobertura",
+			          "ConceptualProperty": "Costo/hora con piloto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Con piloto": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.nombre_mes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Nombre Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.anio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Anio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "calendario.mes_año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Calendario",
+			          "ConceptualProperty": "Mes Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "sedes.industria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sedes",
+			          "ConceptualProperty": "industria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Industria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "sedes.sede": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sedes",
+			          "ConceptualProperty": "sede"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sede": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "unidades.unidad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "unidades",
+			          "ConceptualProperty": "unidad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Unidad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "estamentos.estamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "estamentos",
+			          "ConceptualProperty": "estamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Estamento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.rotación_12m_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "Rotación 12m %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Rotación 12 meses": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Total": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.motivo_egreso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "motivo_egreso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Motivo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.tramo_antiguedad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "tramo_antiguedad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Antigüedad al egreso": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.rotación_voluntaria_12m_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "Rotación voluntaria 12m %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Voluntaria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Rotación voluntaria": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.tramo_edad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "tramo_edad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tramo de edad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.dotación_pirámide": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "Dotación (pirámide)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Dotación": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.sexo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "sexo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sexo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.antigüedad_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "Antigüedad promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Antigüedad promedio (años)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "personas.id_persona": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "personas",
+			          "ConceptualProperty": "id_persona"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Persona": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.índice_de_frecuencia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Índice de frecuencia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Episodios por persona al año": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Frecuencia (episodios/persona/año)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.tasa_de_gravedad": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Tasa de gravedad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Gravedad (días por episodio)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Días por episodio": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.tramo_duracion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "tramo_duracion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Duración (días hábiles)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.episodios_12m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Episodios 12m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Episodios": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.días_12m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Días 12m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Días": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.bradford_12m": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Bradford 12m"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Bradford": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.personas_con_bradford_alto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Personas con Bradford alto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Personas con Bradford > 200": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "episodios.personas_por_tramo_bradford": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "episodios",
+			          "ConceptualProperty": "Personas por tramo Bradford"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Personas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tramos_bradford.tramo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tramos Bradford",
+			          "ConceptualProperty": "tramo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tramo Bradford": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "pronostico.días_esperados": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "pronostico",
+			          "ConceptualProperty": "Días esperados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Esperado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Días esperados 2027": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "pronostico.días_p10_banda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "pronostico",
+			          "ConceptualProperty": "Días P10 (banda)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "P10": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "pronostico.días_p90_banda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "pronostico",
+			          "ConceptualProperty": "Días P90 (banda)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "P90": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Días P90": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "pronostico.tasa_con_credibilidad_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "pronostico",
+			          "ConceptualProperty": "Tasa con credibilidad %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tasa con credibilidad": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "pronostico.tasa_observada_20252026_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "pronostico",
+			          "ConceptualProperty": "Tasa observada 2025-2026 %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Tasa observada": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

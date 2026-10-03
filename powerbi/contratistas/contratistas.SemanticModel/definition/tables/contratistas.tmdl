@@ -1,0 +1,55 @@
+/// Dimensión: cuatro contratistas por empresa, uno por especialidad. El perfil es la etiqueta de la simulación.
+table contratistas
+	lineageTag: 84a55009-25c1-5e74-a0e8-f0cd19f811af
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: c24ef57a-73d5-59eb-9955-e4b3aada22b9
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column contratista
+		dataType: string
+		lineageTag: d54c8b79-f1c2-5c71-9309-68e96bc1f219
+		summarizeBy: none
+		sourceColumn: contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 60140000-8651-5cc9-b75d-8fa4e002d33d
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidad
+		dataType: string
+		lineageTag: 976b64ed-5210-5af0-b273-199c0b4e5228
+		summarizeBy: none
+		sourceColumn: especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column perfil
+		dataType: string
+		lineageTag: 7d227a53-5d13-5f0c-8ba4-1f9a9f495b4f
+		summarizeBy: none
+		sourceColumn: perfil
+
+		annotation SummarizationSetBy = Automatic
+
+	partition contratistas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("contratistas.csv", {{"id_contratista", type text}, {"contratista", type text}, {"industria", type text}, {"especialidad", type text}, {"perfil", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

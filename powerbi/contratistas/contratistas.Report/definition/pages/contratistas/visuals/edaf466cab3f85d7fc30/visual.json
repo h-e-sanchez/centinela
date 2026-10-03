@@ -1,0 +1,275 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "edaf466cab3f85d7fc30",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 900,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "contratistas"
+                    }
+                  },
+                  "Property": "contratista"
+                }
+              },
+              "queryRef": "contratistas.contratista",
+              "nativeQueryRef": "contratista",
+              "active": true,
+              "displayName": "Contratista"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "estados_pago"
+                    }
+                  },
+                  "Property": "Facturado"
+                }
+              },
+              "queryRef": "estados_pago.Facturado",
+              "nativeQueryRef": "Facturado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "Observado"
+                }
+              },
+              "queryRef": "observaciones.Observado",
+              "nativeQueryRef": "Observado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "% Observado"
+                }
+              },
+              "queryRef": "observaciones.% Observado",
+              "nativeQueryRef": "% Observado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "observaciones"
+                    }
+                  },
+                  "Property": "Líneas observadas"
+                }
+              },
+              "queryRef": "observaciones.Líneas observadas",
+              "nativeQueryRef": "Líneas observadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ordenes_trabajo"
+                    }
+                  },
+                  "Property": "Cumplimiento preventivo %"
+                }
+              },
+              "queryRef": "ordenes_trabajo.Cumplimiento preventivo %",
+              "nativeQueryRef": "Cumplimiento preventivo %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ordenes_trabajo"
+                    }
+                  },
+                  "Property": "MTTR (h)"
+                }
+              },
+              "queryRef": "ordenes_trabajo.MTTR (h)",
+              "nativeQueryRef": "MTTR (h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ordenes_trabajo"
+                    }
+                  },
+                  "Property": "Detención media (h)"
+                }
+              },
+              "queryRef": "ordenes_trabajo.Detención media (h)",
+              "nativeQueryRef": "Detención media (h)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ranking: monto observado y desempeño en terreno'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

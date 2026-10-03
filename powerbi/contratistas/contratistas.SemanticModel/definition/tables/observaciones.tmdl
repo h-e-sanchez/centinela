@@ -1,0 +1,148 @@
+/// Salida de sql/reglas_auditoria.sql: una fila por línea de EP y regla incumplida, con el monto que deja observado.
+table observaciones
+	lineageTag: 1cdb24aa-35c4-5c0c-955c-5b054cc4ec9a
+
+	/// Monto que las reglas dejan observado: la línea completa o solo el exceso, según la regla.
+	measure Observado = SUM(observaciones[monto_observado])
+		formatString: \$ #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: be001b5c-363e-5ce3-b5c7-d5167fb588f3
+
+	/// Observado sobre facturado.
+	measure '% Observado' = DIVIDE([Observado], [Facturado])
+		formatString: 0.0%
+		displayFolder: 2. Auditoría
+		lineageTag: a0101379-0d47-528d-8a05-93ec67ae17b3
+
+	/// Líneas de EP con al menos una regla incumplida.
+	measure 'Líneas observadas' = DISTINCTCOUNT(observaciones[id_linea])
+		formatString: #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: a4cbf897-ed95-57ca-8a08-4ce891857cbe
+
+	/// Observado antes de julio de 2025: se pagó porque nadie cruzaba el EP con las OT.
+	measure 'Pagado de más' = CALCULATE([Observado], observaciones[resolucion] = "Pagada sin control")
+		formatString: \$ #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: 13085e0b-6ba5-55ed-9d76-8527f8d260e4
+
+	/// Observado desde julio de 2025: el control lo rechaza antes de pagar.
+	measure 'Monto evitado' = CALCULATE([Observado], observaciones[resolucion] = "Rechazada")
+		formatString: \$ #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: cd848a68-5cf6-5786-8255-754671f5da7b
+
+	/// Lo que pasa todas las reglas.
+	measure 'Facturado sin observaciones' = [Facturado] - [Observado]
+		formatString: \$ #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: 5a5167ab-8b03-51f1-9bae-c90d9e96a31b
+
+	/// Monto observado de un mes típico del periodo.
+	measure 'Observado promedio mensual' = AVERAGEX(VALUES(Calendario[Periodo Num]), [Observado])
+		formatString: \$ #,##0
+		displayFolder: 2. Auditoría
+		lineageTag: 707964e4-449b-5f24-a692-be5e8e6708ed
+
+	/// Enero a junio de 2025, sin control.
+	measure '% Observado antes del control' = CALCULATE([% Observado], Calendario[Date] < DATE(2025, 7, 1))
+		formatString: 0.0%
+		displayFolder: 2. Auditoría
+		lineageTag: 9ab3cfe8-6262-5169-8612-584aba383a9f
+
+	/// Desde julio de 2025: el control disuade y las anomalías bajan.
+	measure '% Observado con control' = CALCULATE([% Observado], Calendario[Date] >= DATE(2025, 7, 1))
+		formatString: 0.0%
+		displayFolder: 2. Auditoría
+		lineageTag: f5af19fc-4ccf-57e4-a4fc-cd346fb5b692
+
+	column id_linea
+		dataType: string
+		lineageTag: fd7f7dd1-548e-52c4-a169-c82ffbba77e3
+		summarizeBy: none
+		sourceColumn: id_linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b4b76de5-0581-5fff-a8d2-18a8211c4206
+		summarizeBy: none
+		sourceColumn: periodo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column id_contratista
+		dataType: string
+		isHidden
+		lineageTag: e14d75ea-16ec-5d95-8ab1-e86cbc16db5d
+		summarizeBy: none
+		sourceColumn: id_contratista
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		isHidden
+		lineageTag: 786b293f-69fd-5156-886b-bac3506864c2
+		summarizeBy: none
+		sourceColumn: sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_ot
+		dataType: string
+		lineageTag: ed9f475b-fb87-5b29-a871-fa622cc954e2
+		summarizeBy: none
+		sourceColumn: id_ot
+
+		annotation SummarizationSetBy = Automatic
+
+	column regla
+		dataType: string
+		isHidden
+		lineageTag: fc54b357-3c86-591f-bc06-32e377524a6c
+		summarizeBy: none
+		sourceColumn: regla
+
+		annotation SummarizationSetBy = Automatic
+
+	column regla_nombre
+		dataType: string
+		lineageTag: fd67335a-fd54-5308-805c-2ac2e2f45fc0
+		summarizeBy: none
+		sourceColumn: regla_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto_observado
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 3b74f858-a92b-5c6b-94f8-a875a205e130
+		summarizeBy: none
+		sourceColumn: monto_observado
+
+		annotation SummarizationSetBy = Automatic
+
+	column resolucion
+		dataType: string
+		lineageTag: 0967f3b8-69df-5d3d-ad10-908d2449dbf0
+		summarizeBy: none
+		sourceColumn: resolucion
+
+		annotation SummarizationSetBy = Automatic
+
+	partition observaciones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("observaciones.csv", {{"id_linea", type text}, {"periodo", type date}, {"id_contratista", type text}, {"sede", type text}, {"id_ot", type text}, {"regla", type text}, {"monto_observado", Int64.Type}, {"resolucion", type text}}),
+				    Nombre = Table.AddColumn(Origen, "regla_nombre", each Record.FieldOrDefault([sin_ot = "Cobro sin OT", ot_abierta = "OT abierta", sobre_cantidad = "Cantidad sobre lo ejecutado", sobre_precio = "Precio sobre tarifa", duplicada = "Doble cobro"], [regla], [regla]), type text)
+				in
+				    Nombre
+
+	annotation PBI_ResultType = Table
