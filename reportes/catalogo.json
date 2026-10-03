@@ -168,11 +168,11 @@
       "tema": "Control de gestión · Mantenimiento",
       "color": "#B5562E",
       "fecha": "2026-10-03",
-      "estado": "en-preparacion",
       "destacado": false,
       "modelo": "powerbi/contratistas",
       "datos": "data/contratistas",
       "prefijo": "contratistas",
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiYmZjMmIxNDgtMmNjNi00MzFlLWFjZTMtNjFlNzAzMDJlMDY4IiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada",
       "habilidades": [
         "Auditoría de estados de pago",
         "SQL versionado con tests",
