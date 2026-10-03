@@ -164,10 +164,10 @@
   ],
   "proximos": [
     {
-      "titulo": "Del libro diario a los Estados Financieros",
-      "tema": "Contabilidad · Controller",
+      "titulo": "Contratistas y mantenimiento: del estado de pago a la orden de trabajo",
+      "tema": "Control de gestión · Mantenimiento",
       "color": "#B5562E",
-      "resumen": "Holding sintético con tres sociedades: asientos en partida doble transformados con SQL versionado en Balance, Estado de Resultados y flujo de caja consolidados, con eliminaciones intercompañía y capital de trabajo (DSO, DPO y ciclo de caja)."
+      "resumen": "Las tres empresas de la vitrina auditan los estados de pago de sus contratistas contra las órdenes de trabajo cerradas y las tarifas del contrato, con reglas en SQL versionado: cobros sin OT, cantidades sobre lo ejecutado y precios fuera de contrato. Incluye monto observado y recuperado, cumplimiento del plan preventivo, backlog, MTTR y MTBF, y un ranking de contratistas."
     }
   ]
 }
