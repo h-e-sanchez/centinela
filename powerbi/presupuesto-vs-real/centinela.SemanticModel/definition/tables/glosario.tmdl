@@ -3,7 +3,7 @@
 table glosario
 	lineageTag: 39b2d49c-28ae-5eb3-b583-7c7f4ad75279
 
-	column 'N°'
+	column N°
 		dataType: int64
 		formatString: 0
 		lineageTag: 6460f2cc-fc99-5703-8c2a-10c00154c472
@@ -20,7 +20,7 @@ table glosario
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Sección'
+	column Sección
 		dataType: string
 		lineageTag: ebaf819f-23e7-5852-9899-5586576a4dbc
 		summarizeBy: none
@@ -28,7 +28,7 @@ table glosario
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Término'
+	column Término
 		dataType: string
 		lineageTag: 86eadfd3-8223-5581-abcb-0ab88e32c079
 		summarizeBy: none
@@ -36,7 +36,7 @@ table glosario
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Explicación'
+	column Explicación
 		dataType: string
 		lineageTag: a08dc713-9ee9-534f-b502-7b15b88efb3d
 		summarizeBy: none
