@@ -95,6 +95,8 @@ main {
 }
 
 .tagline { color: var(--muted); font-size: var(--fs-md); margin: var(--sp-2) 0 0; }
+.titular { flex: 1 0 100%; margin: 0; padding-top: var(--sp-3); border-top: 1px solid var(--border); font-size: 1.45rem; font-weight: 600; line-height: 1.3; text-wrap: balance; color: var(--text); }
+@media (max-width: 600px) { .titular { font-size: 1.2rem; } }
 
 .theme-toggle {
   position: absolute;
@@ -396,11 +398,30 @@ a.tarjeta-rep:hover { border-color: var(--accent); }
 /* ------------------------------------------------------------------ relato de portafolio */
 .firma { margin: var(--sp-2) 0 0; font-size: var(--fs-sm); color: var(--muted); }
 .firma-pie { color: var(--muted); font-size: var(--fs-sm); }
-.portafolio-compartido { display: grid; gap: var(--sp-3); }
-.portafolio-compartido .callout { margin: 0; }
-.callout.actual { border-left-color: var(--faint); background: var(--surface-2); }
+
+/* ---- portafolio compartido: mismo bloque en centinela, consulta y cartilla ---- */
+.portafolio-compartido { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--sp-3); }
+.sitio {
+  display: flex; flex-direction: column; gap: var(--sp-2); padding: var(--sp-4);
+  border: 1px solid var(--border); border-radius: var(--r); background: var(--surface); color: var(--text);
+}
+.sitio h3 { margin: 0; font-size: 1.15rem; }
+.sitio p { margin: 0; font-size: var(--fs-sm); }
+.sitio .sitio-rol {
+  display: flex; justify-content: space-between; align-items: center; gap: var(--sp-2);
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+}
+.sitio .sitio-acciones { margin-top: auto; padding-top: var(--sp-2); display: flex; align-items: center; gap: var(--sp-3); }
+.sitio-acciones a { color: var(--accent); }
+.sitio-acciones .sitio-boton {
+  display: inline-block; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--accent);
+  background: var(--accent); color: var(--surface); font-weight: 600; text-decoration: none;
+}
+.sitio-acciones .sitio-boton:hover { filter: brightness(1.12); }
+.sitio.actual { border: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--surface)); }
+.sitio.actual .sitio-boton { background: transparent; color: var(--accent); }
 .estas-aqui {
-  float: right; font-family: var(--mono); font-size: 0.7rem; color: var(--muted);
-  border: 1px solid var(--border-strong); border-radius: 999px; padding: 0 8px; margin-left: var(--sp-2);
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; color: var(--surface);
+  background: var(--accent); border-radius: 999px; padding: 2px 9px;
 }
 #acerca p { max-width: 68ch; }
