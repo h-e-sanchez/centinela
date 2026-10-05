@@ -1,0 +1,71 @@
+/// Distribución de la semana de término en las simulaciones de Monte Carlo.
+table pronostico_distribucion
+	lineageTag: 57c82337-1227-5307-8c16-c1a0a0a7c687
+
+	/// Parte de las simulaciones que termina esa semana.
+	measure Probabilidad = SUM(pronostico_distribucion[probabilidad])
+		formatString: 0.0%
+		displayFolder: 6. Pronóstico
+		lineageTag: 3ae30a61-e747-57e3-9bd7-9f3fc3445a9b
+
+	/// Probabilidad de haber terminado a más tardar esa semana.
+	measure 'Probabilidad acumulada' =
+			VAR semana = MAX(pronostico_distribucion[semana_termino])
+			RETURN
+			    CALCULATE(
+			        SUM(pronostico_distribucion[probabilidad]),
+			        pronostico_distribucion[semana_termino] <= semana,
+			        REMOVEFILTERS(pronostico_distribucion[semana_termino])
+			    )
+		formatString: 0%
+		displayFolder: 6. Pronóstico
+		lineageTag: 6c7bccc2-2adf-599e-adc8-f98bb1339ae3
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: f4eb0bbf-e534-5974-8b7c-5f81944f99d6
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: d2dc27b2-d2af-5528-9549-6b51886f82de
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column semana_termino
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 431ca3d6-952b-5bd3-86b3-9aacf84fcd79
+		summarizeBy: none
+		sourceColumn: semana_termino
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column probabilidad
+		dataType: double
+		isHidden
+		formatString: 0.0%
+		lineageTag: 5dc516ed-b637-5003-946f-6f2e92d8799b
+		summarizeBy: none
+		sourceColumn: probabilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pronostico_distribucion = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("pronostico_distribucion.csv", {{"proyecto", type text}, {"industria", type text}, {"semana_termino", type date}, {"probabilidad", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,107 @@
+/// Historial de estados de cada issue, como la exportación del changelog de Jira.
+table transiciones
+	lineageTag: 3d52b5b7-e65f-5f2f-aab1-c54a15e91c68
+
+	/// Cambios de estado registrados.
+	measure Transiciones = COUNTROWS(transiciones)
+		formatString: #,##0
+		displayFolder: 3. Flujo
+		lineageTag: 58a60ec7-f3cd-5509-9c09-24a6b3719379
+
+	/// Veces que una issue pasó a «bloqueado» por una dependencia.
+	measure 'Entradas a bloqueado' = CALCULATE(COUNTROWS(transiciones), transiciones[estado_hasta] = "bloqueado")
+		formatString: #,##0
+		displayFolder: 5. Colaboración
+		lineageTag: cc55e952-d8cd-58ce-b308-bd8187ee55dd
+
+	column issue
+		dataType: string
+		lineageTag: 895ed726-5d32-59eb-b35c-9431e926d96b
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 33a5b105-2d08-5355-9a58-655ffe14433c
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: 6f475fa8-3438-5bff-89a7-68a3e2a81ff0
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: dda8bbb9-bbb1-56e3-ac0c-c6724f564601
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_desde
+		dataType: string
+		isHidden
+		lineageTag: 9efb7de7-b173-5d40-9ccb-c32903416d78
+		summarizeBy: none
+		sourceColumn: estado_desde
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_hasta
+		dataType: string
+		isHidden
+		lineageTag: 5a357cf3-e4cf-5db6-9fa4-8b225afe01a1
+		summarizeBy: none
+		sourceColumn: estado_hasta
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_hasta_nombre
+		dataType: string
+		lineageTag: 29c52d85-26a9-582a-b127-76374cafcaae
+		summarizeBy: none
+		sourceColumn: estado_hasta_nombre
+		sortByColumn: estado_hasta_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_hasta_orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ac578cf4-26ca-54ba-95c3-f05dacfab3fd
+		summarizeBy: none
+		sourceColumn: estado_hasta_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_hora
+		dataType: string
+		lineageTag: 79278027-2483-5af5-a0e7-14a4bc5a2b1e
+		summarizeBy: none
+		sourceColumn: fecha_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	partition transiciones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("transiciones.csv", {{"issue", type text}, {"industria", type text}, {"proyecto", type text}, {"equipo", type text}, {"estado_desde", type text}, {"estado_hasta", type text}, {"fecha_hora", type text}}),
+				    Nombre = Table.AddColumn(Origen, "estado_hasta_nombre", each Record.FieldOrDefault([por_hacer = "Por hacer", en_curso = "En curso", en_revision = "En revisión", bloqueado = "Bloqueado", hecho = "Hecho"], [estado_hasta], [estado_hasta]), type text),
+				    Orden = Table.AddColumn(Nombre, "estado_hasta_orden", each Record.FieldOrDefault([por_hacer = 1, en_curso = 2, en_revision = 3, bloqueado = 4, hecho = 5], [estado_hasta], 9), Int64.Type)
+				in
+				    Orden
+
+	annotation PBI_ResultType = Table

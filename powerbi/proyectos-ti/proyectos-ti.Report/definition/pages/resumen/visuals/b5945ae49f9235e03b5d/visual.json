@@ -1,0 +1,319 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "b5945ae49f9235e03b5d",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 700,
+    "height": 260,
+    "width": 1232,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "proyectos"
+                    }
+                  },
+                  "Property": "nombre"
+                }
+              },
+              "queryRef": "proyectos.nombre",
+              "nativeQueryRef": "nombre",
+              "active": true,
+              "displayName": "Proyecto"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico_termino"
+                    }
+                  },
+                  "Property": "Estado"
+                }
+              },
+              "queryRef": "pronostico_termino.Estado",
+              "nativeQueryRef": "Estado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "issues"
+                    }
+                  },
+                  "Property": "Avance %"
+                }
+              },
+              "queryRef": "issues.Avance %",
+              "nativeQueryRef": "Avance %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "worklogs"
+                    }
+                  },
+                  "Property": "Consumo de presupuesto %"
+                }
+              },
+              "queryRef": "worklogs.Consumo de presupuesto %",
+              "nativeQueryRef": "Consumo de presupuesto %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "proyectos"
+                    }
+                  },
+                  "Property": "Alcance agregado %"
+                }
+              },
+              "queryRef": "proyectos.Alcance agregado %",
+              "nativeQueryRef": "Alcance agregado %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "proyectos"
+                    }
+                  },
+                  "Property": "Fin comprometido"
+                }
+              },
+              "queryRef": "proyectos.Fin comprometido",
+              "nativeQueryRef": "Fin comprometido"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico_termino"
+                    }
+                  },
+                  "Property": "Fecha P50"
+                }
+              },
+              "queryRef": "pronostico_termino.Fecha P50",
+              "nativeQueryRef": "Fecha P50"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico_termino"
+                    }
+                  },
+                  "Property": "Fecha P85"
+                }
+              },
+              "queryRef": "pronostico_termino.Fecha P85",
+              "nativeQueryRef": "Fecha P85"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pronostico_termino"
+                    }
+                  },
+                  "Property": "Atraso P85 (días)"
+                }
+              },
+              "queryRef": "pronostico_termino.Atraso P85 (días)",
+              "nativeQueryRef": "Atraso P85 (días)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pronostico_termino"
+                        }
+                      },
+                      "Property": "Color atraso"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "pronostico_termino.Atraso P85 (días)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cartera: avance, consumo y pronóstico'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

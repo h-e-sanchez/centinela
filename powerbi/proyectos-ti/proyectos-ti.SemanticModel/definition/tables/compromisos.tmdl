@@ -1,0 +1,96 @@
+/// Lo que cada equipo comprometió al inicio de cada sprint y si lo terminó dentro del sprint.
+table compromisos
+	lineageTag: 2d12fa2a-567c-5e78-a1b8-2a77df9c2201
+
+	/// Puntos comprometidos al inicio del sprint.
+	measure Comprometido = SUM(compromisos[puntos])
+		formatString: #,##0
+		displayFolder: 2. Entrega
+		lineageTag: c9e1e492-ceb4-52ef-8a29-6096b6f8e7fe
+
+	/// Puntos comprometidos que llegaron a «hecho» dentro del mismo sprint.
+	measure Completado = CALCULATE(SUM(compromisos[puntos]), compromisos[completada] = 1)
+		formatString: #,##0
+		displayFolder: 2. Entrega
+		lineageTag: 2dd473ad-53f7-5aeb-b5b4-5c9729ec4cd4
+
+	/// Completado sobre comprometido: qué tan confiable es lo que el equipo promete.
+	measure 'Previsibilidad %' = DIVIDE([Completado], [Comprometido])
+		formatString: 0%
+		displayFolder: 2. Entrega
+		lineageTag: 63ad332a-9b03-5017-a5ae-4935706a9106
+
+	column sprint
+		dataType: string
+		isHidden
+		lineageTag: 658f65f6-01b4-5332-b7b6-5fdf99e2507d
+		summarizeBy: none
+		sourceColumn: sprint
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 81992720-c214-5155-8b8a-1ebf2bb3bbd2
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: ad1533e1-1c5d-5ca3-928e-0cfdca7e4185
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: cf340ae0-ebae-5373-aded-cff5fb525c82
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue
+		dataType: string
+		isHidden
+		lineageTag: df4d59f3-3d52-5e85-93b9-3b213371682f
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7e694a3f-3b29-5e12-8350-ad01bd19ed29
+		summarizeBy: none
+		sourceColumn: puntos
+
+		annotation SummarizationSetBy = Automatic
+
+	column completada
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: de362d96-7123-50aa-91aa-8d22c6c78a26
+		summarizeBy: none
+		sourceColumn: completada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition compromisos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("compromisos.csv", {{"sprint", type text}, {"industria", type text}, {"equipo", type text}, {"proyecto", type text}, {"issue", type text}, {"puntos", Int64.Type}, {"completada", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,21 @@
+/// Carpeta pública con los CSV sintéticos del reporte. Cambiarla por una ruta local solo requiere
+/// reemplazar Web.Contents por File.Contents en LeerCsv.
+expression UrlDatos = "https://raw.githubusercontent.com/h-e-sanchez/centinela/main/data/proyectos-ti/" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a992e9b2-8abf-59a7-bf49-910b9924df19
+
+	annotation PBI_ResultType = Text
+
+/// Lee un CSV del repo: UTF-8, celdas vacías como null (fechas de issues sin terminar) y tipos con cultura en-US.
+expression LeerCsv =
+		(archivo as text, tipos as list) as table =>
+		let
+		    Crudo = Table.PromoteHeaders(
+		        Csv.Document(Web.Contents(UrlDatos & archivo), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+		        [PromoteAllScalars = true]),
+		    SinVacios = Table.ReplaceValue(Crudo, "", null, Replacer.ReplaceValue, Table.ColumnNames(Crudo))
+		in
+		    Table.TransformColumnTypes(SinVacios, tipos, "en-US")
+	lineageTag: 2253ac3b-55b6-5a2c-9205-748ac9444921
+
+	annotation PBI_ResultType = Function
+

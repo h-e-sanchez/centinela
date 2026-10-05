@@ -1,0 +1,35 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","issues","worklogs","compromisos","dependencias","transiciones","flujo_semanal","capacidad_semanal","pronostico_termino","pronostico_distribucion","proyectos","empresas","equipos","personas_ti","asignaciones","sprints","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table issues
+ref table worklogs
+ref table compromisos
+ref table dependencias
+ref table transiciones
+ref table flujo_semanal
+ref table capacidad_semanal
+ref table pronostico_termino
+ref table pronostico_distribucion
+ref table proyectos
+ref table empresas
+ref table equipos
+ref table personas_ti
+ref table asignaciones
+ref table sprints
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

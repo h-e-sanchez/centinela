@@ -1,0 +1,40 @@
+/// Dimensión: los cinco equipos del área de TI de cada empresa.
+table equipos
+	lineageTag: f36b924a-5150-5f6f-95ae-be7f4376dacf
+
+	column equipo
+		dataType: string
+		lineageTag: 03880b24-19c7-5fd3-8cad-b85b66afe6e3
+		summarizeBy: none
+		sourceColumn: equipo
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d00199c1-9f83-599d-b9ca-e489c44fc0d9
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column foco
+		dataType: string
+		lineageTag: 794f64a5-05c3-598b-97b2-00ce0f6335e4
+		summarizeBy: none
+		sourceColumn: foco
+
+		annotation SummarizationSetBy = Automatic
+
+	partition equipos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("equipos.csv", {{"equipo", type text}, {"orden", Int64.Type}, {"foco", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -242,15 +242,92 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_contratistas.py"
         }
       ]
+    },
+    {
+      "slug": "proyectos-ti",
+      "titulo": "Proyectos tecnológicos: entrega, capacidad y colaboración entre equipos",
+      "resumen": "Control de gestión de la cartera de TI de las tres empresas sintéticas de la vitrina, desde el historial de un Jira ágil: avance y consumo de presupuesto, velocidad y previsibilidad por sprint, tiempo de ciclo por percentil, carga de los equipos, quién bloquea a quién y fecha de término pronosticada con Monte Carlo.",
+      "tema": "Control de gestión · Proyectos TI",
+      "color": "#5B4B8A",
+      "fecha": "2026-10-05",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/proyectos-ti",
+      "datos": "data/proyectos-ti",
+      "prefijo": "proyectos-ti",
+      "habilidades": [
+        "Métricas de flujo ágil (velocidad, tiempo de ciclo, WIP)",
+        "Relación muchos a muchos",
+        "Percentiles en DAX",
+        "Relación inactiva con USERELATIONSHIP",
+        "Pronóstico de Monte Carlo",
+        "Análisis de dependencias entre equipos",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Salud",
+          "resultado": "+75 días",
+          "tono": "critica",
+          "texto": "La ficha clínica crece 28% en alcance a mitad de proyecto: la velocidad se mantiene, pero su P85 queda 75 días después de lo comprometido."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "39%",
+          "tono": "critica",
+          "texto": "Integraciones, con un equipo corto y despliegues en ventanas semanales, genera el 39% de las horas bloqueadas de la empresa."
+        },
+        {
+          "industria": "Manufactura",
+          "resultado": "90%",
+          "tono": "ok",
+          "texto": "El ERP cumple el 90% de lo que compromete cada sprint, con historias chicas, y su P50 cae antes de la fecha comprometida."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/proyectos-ti-datos-csv.zip",
+          "detalle": "quince tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/proyectos-ti-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/proyectos-ti.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/proyectos-ti-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/proyectos-ti"
+        },
+        {
+          "etiqueta": "Generador de datos y Monte Carlo",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_proyectos_ti.py"
+        },
+        {
+          "etiqueta": "Tests de coherencia y calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_proyectos_ti.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/04-proyectos-ti.md"
+        }
+      ]
     }
   ],
   "proximos": [
-    {
-      "titulo": "Proyectos tecnológicos: entrega, capacidad y colaboración",
-      "tema": "Control de gestión · Proyectos TI",
-      "color": "#5B4B8A",
-      "resumen": "Cartera de TI de las tres empresas con flujo ágil estilo Jira: velocidad, tiempo de ciclo, carga por equipo, dependencias entre equipos y fecha de término con Monte Carlo."
-    },
     {
       "titulo": "Capital de trabajo y ciclo de caja",
       "tema": "Finanzas operativas",

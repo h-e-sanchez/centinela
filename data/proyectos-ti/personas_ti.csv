@@ -1,0 +1,66 @@
+persona_ti,industria,equipo_principal,rol,tarifa_hora
+TI-M001,Manufactura,Datos,Ingeniería de datos,38000
+TI-M002,Manufactura,Datos,Ingeniería de datos,38000
+TI-M003,Manufactura,Datos,Ingeniería de datos,38000
+TI-M004,Manufactura,Datos,Ingeniería de datos,38000
+TI-M005,Manufactura,Datos,Ingeniería de datos,38000
+TI-M006,Manufactura,Integraciones,Desarrollo de integraciones,36000
+TI-M007,Manufactura,Integraciones,Desarrollo de integraciones,36000
+TI-M008,Manufactura,Integraciones,Desarrollo de integraciones,36000
+TI-M009,Manufactura,Integraciones,Desarrollo de integraciones,36000
+TI-M010,Manufactura,Plataforma,Plataforma y nube,40000
+TI-M011,Manufactura,Plataforma,Plataforma y nube,40000
+TI-M012,Manufactura,Plataforma,Plataforma y nube,40000
+TI-M013,Manufactura,Plataforma,Plataforma y nube,40000
+TI-M014,Manufactura,Producto,Desarrollo de producto,34000
+TI-M015,Manufactura,Producto,Desarrollo de producto,34000
+TI-M016,Manufactura,Producto,Desarrollo de producto,34000
+TI-M017,Manufactura,Producto,Desarrollo de producto,34000
+TI-M018,Manufactura,Producto,Desarrollo de producto,34000
+TI-M019,Manufactura,Producto,Desarrollo de producto,34000
+TI-M020,Manufactura,QA,Calidad (QA),28000
+TI-M021,Manufactura,QA,Calidad (QA),28000
+TI-M022,Manufactura,QA,Calidad (QA),28000
+TI-E001,Energia,Datos,Ingeniería de datos,38000
+TI-E002,Energia,Datos,Ingeniería de datos,38000
+TI-E003,Energia,Datos,Ingeniería de datos,38000
+TI-E004,Energia,Datos,Ingeniería de datos,38000
+TI-E005,Energia,Datos,Ingeniería de datos,38000
+TI-E006,Energia,Integraciones,Desarrollo de integraciones,36000
+TI-E007,Energia,Integraciones,Desarrollo de integraciones,36000
+TI-E008,Energia,Integraciones,Desarrollo de integraciones,36000
+TI-E009,Energia,Plataforma,Plataforma y nube,40000
+TI-E010,Energia,Plataforma,Plataforma y nube,40000
+TI-E011,Energia,Plataforma,Plataforma y nube,40000
+TI-E012,Energia,Plataforma,Plataforma y nube,40000
+TI-E013,Energia,Producto,Desarrollo de producto,34000
+TI-E014,Energia,Producto,Desarrollo de producto,34000
+TI-E015,Energia,Producto,Desarrollo de producto,34000
+TI-E016,Energia,Producto,Desarrollo de producto,34000
+TI-E017,Energia,Producto,Desarrollo de producto,34000
+TI-E018,Energia,Producto,Desarrollo de producto,34000
+TI-E019,Energia,QA,Calidad (QA),28000
+TI-E020,Energia,QA,Calidad (QA),28000
+TI-E021,Energia,QA,Calidad (QA),28000
+TI-S001,Salud,Datos,Ingeniería de datos,38000
+TI-S002,Salud,Datos,Ingeniería de datos,38000
+TI-S003,Salud,Datos,Ingeniería de datos,38000
+TI-S004,Salud,Datos,Ingeniería de datos,38000
+TI-S005,Salud,Datos,Ingeniería de datos,38000
+TI-S006,Salud,Integraciones,Desarrollo de integraciones,36000
+TI-S007,Salud,Integraciones,Desarrollo de integraciones,36000
+TI-S008,Salud,Integraciones,Desarrollo de integraciones,36000
+TI-S009,Salud,Integraciones,Desarrollo de integraciones,36000
+TI-S010,Salud,Plataforma,Plataforma y nube,40000
+TI-S011,Salud,Plataforma,Plataforma y nube,40000
+TI-S012,Salud,Plataforma,Plataforma y nube,40000
+TI-S013,Salud,Plataforma,Plataforma y nube,40000
+TI-S014,Salud,Producto,Desarrollo de producto,34000
+TI-S015,Salud,Producto,Desarrollo de producto,34000
+TI-S016,Salud,Producto,Desarrollo de producto,34000
+TI-S017,Salud,Producto,Desarrollo de producto,34000
+TI-S018,Salud,Producto,Desarrollo de producto,34000
+TI-S019,Salud,Producto,Desarrollo de producto,34000
+TI-S020,Salud,QA,Calidad (QA),28000
+TI-S021,Salud,QA,Calidad (QA),28000
+TI-S022,Salud,QA,Calidad (QA),28000

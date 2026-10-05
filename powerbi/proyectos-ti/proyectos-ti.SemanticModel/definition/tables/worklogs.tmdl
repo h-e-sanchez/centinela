@@ -1,0 +1,103 @@
+/// Horas registradas por persona, día e issue (worklogs de Jira).
+table worklogs
+	lineageTag: e48cd405-bd94-530b-aff6-7ff0a184fcc5
+
+	/// Horas trabajadas en issues de proyectos (el soporte no se registra).
+	measure 'Horas registradas' = SUM(worklogs[horas])
+		formatString: #,##0
+		displayFolder: 4. Capacidad
+		lineageTag: 2f504947-dd12-5b87-8e83-544dad0b06e7
+
+	/// Horas registradas por la tarifa de cada persona.
+	measure Costo = SUMX(worklogs, worklogs[horas] * RELATED(personas_ti[tarifa_hora]))
+		formatString: \$ #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 87e54641-dbb0-5b4a-ae5c-4602743d6a40
+
+	/// Costo acumulado al corte sobre el presupuesto aprobado del proyecto.
+	measure 'Consumo de presupuesto %' = DIVIDE(CALCULATE([Costo], REMOVEFILTERS(Calendario)), [Presupuesto])
+		formatString: 0%
+		displayFolder: 1. Cartera
+		lineageTag: 0ce422f0-197b-5f80-9d9c-784d63262615
+
+	/// Costo del periodo sobre los puntos terminados en el periodo.
+	measure 'Costo por punto' = DIVIDE([Costo], [Puntos terminados])
+		formatString: \$ #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 479f126f-d4f3-5991-8fbd-63185eadd917
+
+	column fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 9f37a660-3607-5d2b-92f0-56df06499ecc
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column persona_ti
+		dataType: string
+		isHidden
+		lineageTag: bbf91b88-c9dd-5e18-86c3-a2276cb891d9
+		summarizeBy: none
+		sourceColumn: persona_ti
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: b2371beb-3a2a-5401-ac52-a54cb797a511
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: da45f792-a9e3-5401-96a8-8f15cbaa2889
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: 3d3b801e-edc4-5f13-81e4-a2243e284fce
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue
+		dataType: string
+		isHidden
+		lineageTag: e9ad8fa0-15c2-5960-8874-a53820563a53
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 49f82744-8132-52a5-96b9-3353d5c76801
+		summarizeBy: none
+		sourceColumn: horas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition worklogs = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("worklogs.csv", {{"fecha", type date}, {"persona_ti", type text}, {"industria", type text}, {"equipo", type text}, {"proyecto", type text}, {"issue", type text}, {"horas", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

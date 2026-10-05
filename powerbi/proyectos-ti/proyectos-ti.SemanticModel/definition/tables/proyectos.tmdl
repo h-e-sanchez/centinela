@@ -1,0 +1,125 @@
+/// Dimensión: la cartera de TI, cuatro proyectos por empresa, con su fecha comprometida y presupuesto.
+table proyectos
+	lineageTag: d2d0afe2-f675-5ac7-887e-edc827d48a27
+
+	/// Proyectos de la cartera en el filtro.
+	measure Proyectos = COUNTROWS(proyectos)
+		formatString: #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 35c9498a-10b0-5e28-8c74-3b3703e362b0
+
+	/// Presupuesto aprobado de los proyectos: horas planificadas por la tarifa de cada equipo.
+	measure Presupuesto = SUM(proyectos[presupuesto_monto])
+		formatString: \$ #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 417f8647-b132-5e3a-bfb0-aae7cda818bc
+
+	/// Fecha de término comprometida del proyecto.
+	measure 'Fin comprometido' = MAX(proyectos[fin_comprometido])
+		formatString: d mmm yyyy
+		displayFolder: 1. Cartera
+		lineageTag: 9b39e6cc-8db8-5a15-93bb-c8be6504f380
+
+	/// Puntos agregados después de aprobar el proyecto, sobre los planificados al inicio.
+	measure 'Alcance agregado %' = DIVIDE(SUM(proyectos[puntos_agregados]), SUM(proyectos[puntos_planificados]))
+		formatString: 0%
+		displayFolder: 1. Cartera
+		lineageTag: 09a4aa51-4982-51c2-9ef8-a8b8d449dc32
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: b8234eb7-5135-5460-8573-e09595ba7886
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: b2217e4c-b48e-5f30-8045-f1a90a6fdc5d
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: efc7eb5a-4890-5372-a96e-20db2d2718c3
+		summarizeBy: none
+		sourceColumn: nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e1c79973-684c-51be-96a0-4031ae894545
+		summarizeBy: none
+		sourceColumn: inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fin_comprometido
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 60b91783-3810-50af-b894-aee0c1c8288c
+		summarizeBy: none
+		sourceColumn: fin_comprometido
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column puntos_planificados
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: f736cb11-cbc5-5aac-8d4b-aea6bac19044
+		summarizeBy: none
+		sourceColumn: puntos_planificados
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntos_agregados
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 89d5e509-b89e-555b-b1ed-6cf90d5cd816
+		summarizeBy: none
+		sourceColumn: puntos_agregados
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_horas
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: fe15c4d1-354f-5109-9585-6d8d0ef100ef
+		summarizeBy: none
+		sourceColumn: presupuesto_horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column presupuesto_monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: ca4ea99f-89d9-59e1-8bca-1c8df941f947
+		summarizeBy: none
+		sourceColumn: presupuesto_monto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition proyectos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("proyectos.csv", {{"proyecto", type text}, {"industria", type text}, {"nombre", type text}, {"inicio", type date}, {"fin_comprometido", type date}, {"puntos_planificados", Int64.Type}, {"puntos_agregados", Int64.Type}, {"presupuesto_horas", Int64.Type}, {"presupuesto_monto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

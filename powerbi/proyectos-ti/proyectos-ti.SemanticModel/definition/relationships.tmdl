@@ -1,0 +1,88 @@
+relationship ec34ff40-d257-5fb4-8187-5b69f554cf65
+	fromColumn: proyectos.industria
+	toColumn: empresas.industria
+
+relationship 05bf6650-63a1-5a31-a0cf-da06c8e7b599
+	fromColumn: issues.proyecto
+	toColumn: proyectos.proyecto
+
+relationship f98fbbbb-b737-5609-b27f-483106ad78cd
+	fromColumn: issues.equipo
+	toColumn: equipos.equipo
+
+relationship 080cd162-99d4-58d5-96e4-8d3d3ddf16a2
+	isActive: false
+	fromColumn: issues.fecha_fin
+	toColumn: Calendario.Date
+
+relationship 6f731b2a-4d7d-51b9-8337-fbb0e461231f
+	fromColumn: worklogs.issue
+	toColumn: issues.issue
+
+relationship 029831c8-3e97-58d9-9a38-0da6535966ad
+	fromColumn: worklogs.persona_ti
+	toColumn: personas_ti.persona_ti
+
+relationship caf6b73a-2bf6-566d-835b-ec80fc9845fc
+	fromColumn: worklogs.fecha
+	toColumn: Calendario.Date
+
+relationship bf0fdc77-e277-5dcb-a705-b4a9d5159280
+	fromColumn: transiciones.issue
+	toColumn: issues.issue
+
+relationship 2c39699f-aa84-5b25-a6d6-4bccf0767cc5
+	fromColumn: dependencias.issue_bloqueado
+	toColumn: issues.issue
+
+relationship ba79817d-8725-5587-98b3-10e53b0e949e
+	fromColumn: compromisos.issue
+	toColumn: issues.issue
+
+relationship 0a16e122-212f-55dd-b370-75863fe3cb08
+	fromColumn: compromisos.sprint
+	toColumn: sprints.sprint
+
+relationship 9a01132a-e3ed-5060-9f1b-8e3369358b6a
+	fromColumn: sprints.inicio
+	toColumn: Calendario.Date
+
+relationship 502b6157-78d1-5eec-b956-03b4c4f24abd
+	fromColumn: asignaciones.persona_ti
+	toColumn: personas_ti.persona_ti
+
+relationship aa6ac0e8-2ad1-54c0-9105-0cd8f899bd6b
+	fromColumn: asignaciones.equipo
+	toColumn: equipos.equipo
+
+relationship 4cb79b0e-6231-5924-bc0d-e4350fd87a8e
+	fromColumn: capacidad_semanal.industria
+	toColumn: empresas.industria
+
+relationship c8f67667-1a8d-51f8-9f90-2e5f60bdc37a
+	fromColumn: capacidad_semanal.equipo
+	toColumn: equipos.equipo
+
+relationship f33dbf4c-38d0-5c0d-b4ad-fadb44887046
+	fromColumn: capacidad_semanal.semana
+	toColumn: Calendario.Date
+
+relationship c2670d35-afb6-5416-a11c-71afc37b9c71
+	fromColumn: flujo_semanal.proyecto
+	toColumn: proyectos.proyecto
+
+relationship 198844b7-6e79-531a-b55c-69c72bb9cf37
+	fromColumn: flujo_semanal.equipo
+	toColumn: equipos.equipo
+
+relationship 88b25c4b-f2da-5d42-9eb3-14d752fb66fb
+	fromColumn: flujo_semanal.semana
+	toColumn: Calendario.Date
+
+relationship abfbb71d-f344-50b5-92a6-2a0d83664d96
+	fromColumn: pronostico_termino.proyecto
+	toColumn: proyectos.proyecto
+
+relationship 25c435a0-620f-5187-b4f7-fcafec36fd42
+	fromColumn: pronostico_distribucion.proyecto
+	toColumn: proyectos.proyecto

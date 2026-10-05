@@ -1,0 +1,73 @@
+/// Puente persona ↔ equipo: quien reparte la semana entre dos equipos aparece dos veces, con su dedicación.
+table asignaciones
+	lineageTag: 28e75132-2f35-5e94-b516-4b85725a2915
+
+	/// Personas a tiempo completo equivalentes: suma de la dedicación de cada asignación.
+	measure 'Personas-equivalentes' = SUM(asignaciones[dedicacion])
+		formatString: #,##0.0
+		displayFolder: 4. Capacidad
+		lineageTag: d4dbf8b3-c728-5bfc-a5c5-dc63e2f56114
+
+	/// Asignaciones de personas que reparten la semana entre dos equipos.
+	measure 'Con dedicación partida' = CALCULATE(COUNTROWS(asignaciones), asignaciones[dedicacion] < 1)
+		formatString: #,##0
+		displayFolder: 4. Capacidad
+		lineageTag: e50f9e18-cf7f-56fd-a820-0948bb29b1c3
+
+	column persona_ti
+		dataType: string
+		isHidden
+		lineageTag: f60ee52d-1cd4-5168-8022-fd1808030e77
+		summarizeBy: none
+		sourceColumn: persona_ti
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 3fc05dba-8f5b-52af-aa84-47acbc000c8e
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: 069d214e-12c2-56ac-a855-e2a9c580ff63
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column dedicacion
+		dataType: double
+		formatString: 0%
+		lineageTag: 70e6da68-3053-5feb-954c-7abd941ce049
+		summarizeBy: none
+		sourceColumn: dedicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column desde
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 6e59f6dd-cfaf-564f-9f98-8ad3a1a7925d
+		summarizeBy: none
+		sourceColumn: desde
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition asignaciones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("asignaciones.csv", {{"persona_ti", type text}, {"industria", type text}, {"equipo", type text}, {"dedicacion", type number}, {"desde", type date}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

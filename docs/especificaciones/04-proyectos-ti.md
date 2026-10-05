@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** especificado el 2026-10-05 · **Slug:** `proyectos-ti` · **Tema:** Control de gestión · Proyectos TI
+**Estado:** construido el 2026-10-05 (pendiente Desktop y publicación) · **Slug:** `proyectos-ti` · **Tema:** Control de gestión · Proyectos TI
 
 ## Qué resuelve
 
@@ -45,6 +45,15 @@ Generador previsto: `data/generar_proyectos_ti.py` (`SEMILLA = 42`, solo bibliot
 | `dependencias.csv` | par de issues | `issue_bloqueante, issue_bloqueado, creada, resuelta` (muchas cruzan equipos) |
 | `worklogs.csv` | persona × issue × día | `persona_ti, issue, fecha, horas` |
 
+Al construirlo sumamos cinco tablas que el modelo necesitaba:
+- `empresas` (la dimensión de industria);
+- `compromisos` (lo comprometido por sprint);
+- `capacidad_semanal`;
+- `flujo_semanal` (la foto para el diagrama de flujo acumulado);
+- `pronostico_distribucion`.
+
+El detalle está en la [guía del reporte](../../reportes/proyectos-ti/guia.md).
+
 ## Páginas
 
 | # | Página | Qué muestra |
@@ -62,7 +71,7 @@ Generador previsto: `data/generar_proyectos_ti.py` (`SEMILLA = 42`, solo bibliot
 
 - `Velocidad` (puntos completados por sprint) y `Previsibilidad` (completado ÷ comprometido).
 - `Tiempo de ciclo P50` y `P85` (de `en_curso` a `hecho`), con `PERCENTILEX.INC`.
-- `WIP` y `Antigüedad del WIP` a una fecha, con un parámetro de fecha de corte.
+- `WIP` y `Antigüedad del WIP` al último día del periodo filtrado (o al corte).
 - `Horas bloqueadas` y `% del tiempo de ciclo en bloqueo`.
 - `Carga del equipo` = horas registradas ÷ capacidad, sobre la relación muchos a muchos de `asignaciones`.
 - `Consumo de presupuesto` = horas × tarifa ÷ presupuesto, y `Costo por punto`.
@@ -74,9 +83,9 @@ Generador previsto: `data/generar_proyectos_ti.py` (`SEMILLA = 42`, solo bibliot
 
 | Industria | Resultado | Historia |
 |---|---|---|
-| Salud | Ficha clínica +6 sprints | Crece el alcance a mitad de proyecto: suben los puntos comprometidos y la fecha P85 se aleja, aunque la velocidad se mantiene |
-| Energía | 41% del bloqueo | Integraciones bloquea a los demás equipos: concentra la mayor parte de las horas en `bloqueado` y es el cuello de botella de la cartera |
-| Manufactura | Previsibilidad 92% | Migración de ERP con flujo estable: tiempo de ciclo acotado y P50 dentro de la fecha comprometida |
+| Salud | Ficha clínica +75 días | Crece el alcance a mitad de proyecto: suben los puntos comprometidos y la fecha P85 se aleja, aunque la velocidad se mantiene |
+| Energía | 39% del bloqueo | Integraciones bloquea a los demás equipos: concentra la mayor parte de las horas en `bloqueado` y es el cuello de botella de la cartera |
+| Manufactura | Previsibilidad 90% | Migración de ERP con flujo estable: tiempo de ciclo acotado y P50 dentro de la fecha comprometida |
 
 Los porcentajes son metas de calibración del generador; los tests verifican que los datos
 las cumplan.

@@ -154,7 +154,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Glosario por reporte: conceptos escritos a mano + todas las medidas DAX leídas del TMDL, en la ficha web y como página «Glosario» en cada PBIP
 - [ ] Glosario: abrir los 3 PBIP en Desktop, revisar la página y volver a publicar (manual)
 - [x] Reportes #4 a #7: especificación en [`docs/especificaciones/`](docs/especificaciones/) y tarjetas «En preparación» en la vitrina (`proximos` del catálogo)
-- [ ] Reporte #4 · Proyectos tecnológicos: generador y tests, PBIP de 8 páginas, guía, glosario y descargas
+- [x] Reporte #4 · Proyectos tecnológicos: generador y tests, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #4: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [ ] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
 - [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
@@ -214,6 +214,21 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-05 — Reporte #4: Proyectos tecnológicos
+
+Generador `data/generar_proyectos_ti.py`: simulación día hábil a día hábil de la cartera de TI de
+las tres empresas (cinco equipos compartidos, dependencias entre equipos, bloqueos y traspasos) y
+pronóstico de Monte Carlo con 10.000 simulaciones. `tests/test_proyectos_ti.py` verifica la
+coherencia del historial y las tres historias:
+- la ficha clínica de Salud termina 75 días tarde al P85;
+- Integraciones concentra el 39% del bloqueo en Energía;
+- el ERP de Manufactura tiene una previsibilidad de 90%.
+
+Proyecto PBIP `powerbi/proyectos-ti/`: 17 tablas en copo de nieve, con la relación del calendario
+con la fecha de fin inactiva y activada con `USERELATIONSHIP`, y 8 páginas (portada, resumen,
+sprints, flujo, capacidad, colaboración, pronóstico y glosario). Catálogo en «en preparación»
+hasta abrirlo en Desktop y publicarlo.
 
 ### 2026-10-05 — Reportes #4 a #7 especificados
 
