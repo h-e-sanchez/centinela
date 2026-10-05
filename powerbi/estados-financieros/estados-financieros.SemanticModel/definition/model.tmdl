@@ -1,0 +1,26 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","lineas_asiento","asientos","plan_cuentas","eerr_reporte1","empresas","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table lineas_asiento
+ref table asientos
+ref table plan_cuentas
+ref table eerr_reporte1
+ref table empresas
+ref table 'Escalones del flujo'
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

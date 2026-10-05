@@ -1,0 +1,24 @@
+{
+  "leeme": "centinela · Del libro diario a los EEFF\nDatos 100% sintéticos de tres empresas ficticias (Manufactura, Energía y Salud), generados con data/generar_estados_financieros.py (semilla 42).\nIngresos, costos y gastos operacionales son los Real de data/escenarios/montos.csv (reporte Presupuesto vs. Real).\nhttps://h-e-sanchez.github.io/centinela/ficha.html?r=estados-financieros\n\nArchivos (separador coma, UTF-8): empresas, plan_cuentas, asientos, lineas_asiento y eerr_reporte1. Columnas:\n\n{columnas}\n\nMontos en CLP, sin IVA. Cada asiento suma lo mismo al debe y al haber.",
+  "columnas": {
+    "industria": "Manufactura, Energia o Salud",
+    "empresa": "Razón social ficticia (la misma de los otros reportes de la vitrina)",
+    "orden": "Orden (en el plan de cuentas, el número de la cuenta)",
+    "cuenta_codigo": "Código de la cuenta: empresa y número (ENE-1101)",
+    "cuenta": "Nombre de la cuenta",
+    "tipo": "En plan_cuentas: Activo, Pasivo, Patrimonio, Ingreso, Costo o Gasto; en asientos: tipo de asiento (Venta, Cobranza, Cierre, ...)",
+    "clasificacion": "Activo o pasivo corriente o no corriente, patrimonio o estado de resultados",
+    "linea": "En plan_cuentas: línea del balance o del EERR; en lineas_asiento: número de línea dentro del asiento",
+    "naturaleza": "1 deudora, -1 acreedora",
+    "componente": "Componente del reporte #1 (solo cuentas de resultados)",
+    "inventariable": "1 si el costo pasa por inventario",
+    "asiento": "Número de asiento: empresa y correlativo",
+    "fecha": "Fecha del asiento o mes del #1",
+    "glosa": "Descripción del asiento",
+    "sucursal": "Sucursal (solo en las líneas de resultados)",
+    "debe": "Monto al debe",
+    "haber": "Monto al haber",
+    "version": "Real o Presupuesto (reporte #1)",
+    "monto": "Monto del reporte #1"
+  }
+}

@@ -1,0 +1,102 @@
+/// Plan de cuentas: balance y resultados bajo el EBITDA comunes, y una cuenta de resultados por cuenta del #1.
+table plan_cuentas
+	lineageTag: 64ce4a3f-08d2-5591-b0f5-d64248596930
+
+	column cuenta_codigo
+		dataType: string
+		lineageTag: 802c7039-0c67-5b8f-a4da-1ce9df0b1b1d
+		summarizeBy: none
+		sourceColumn: cuenta_codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: d6b9e22f-0cbc-5535-96be-cfdfb74a5d58
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		lineageTag: c33cf674-c456-5aee-b5c5-d0b303300f51
+		summarizeBy: none
+		sourceColumn: cuenta
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: 6f18e51b-b597-5d7e-b911-6bb717a9f403
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column clasificacion
+		dataType: string
+		lineageTag: 4c664733-046a-53db-acbd-244af624332f
+		summarizeBy: none
+		sourceColumn: clasificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: string
+		lineageTag: 36f5e9e4-5e90-542c-a6c7-528487e2038e
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column naturaleza
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: aa198acc-ef53-5b43-92c9-9876ddf083bb
+		summarizeBy: none
+		sourceColumn: naturaleza
+
+		annotation SummarizationSetBy = Automatic
+
+	column componente
+		dataType: string
+		isHidden
+		lineageTag: 110d66ea-66ff-5e6f-919f-e56a6df8b5cf
+		summarizeBy: none
+		sourceColumn: componente
+
+		annotation SummarizationSetBy = Automatic
+
+	column inventariable
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d6a39799-117b-564d-8846-0707dd3ff46c
+		summarizeBy: none
+		sourceColumn: inventariable
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fa08e63d-39ba-573e-81fe-046b3d6ace7e
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition plan_cuentas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("plan_cuentas.csv", {{"cuenta_codigo", type text}, {"industria", type text}, {"cuenta", type text}, {"tipo", type text}, {"clasificacion", type text}, {"linea", type text}, {"naturaleza", Int64.Type}, {"componente", type text}, {"inventariable", Int64.Type}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

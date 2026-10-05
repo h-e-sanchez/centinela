@@ -1,0 +1,30 @@
+/// Escalones del flujo de efectivo por método indirecto.
+table 'Escalones del flujo'
+	lineageTag: 4f9cc982-59d3-5dad-9b51-c0f54c900718
+
+	column Orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 169d5b78-b870-5759-b5e5-3a3e5ada9f7a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Escalón'
+		dataType: string
+		lineageTag: 934a3bad-3428-5be3-959c-77926311da87
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Escalón]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Escalones del flujo' = calculated
+		mode: import
+		source = DATATABLE("Orden", INTEGER, "Escalón", STRING, {{1, "Resultado del ejercicio"}, {2, "Depreciación"}, {3, "Deudores por ventas"}, {4, "Inventarios"}, {5, "Proveedores"}, {6, "Remuneraciones e impuestos"}, {7, "Inversión en activo fijo"}, {8, "Deuda financiera"}})
+
+	annotation PBI_ResultType = Table

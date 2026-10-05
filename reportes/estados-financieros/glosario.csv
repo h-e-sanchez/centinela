@@ -1,0 +1,83 @@
+n,tipo,seccion,termino,explicacion,formula
+1,Concepto,La partida doble,Asiento,"El registro de un hecho económico en el libro diario. Tiene fecha, glosa y dos o más líneas.",
+2,Concepto,La partida doble,Debe y haber,"Las dos columnas de cada línea. En cada asiento, lo que va al debe suma lo mismo que lo que va al haber: es la partida doble. • Al debe aumentan los activos y los gastos, y disminuyen los pasivos, el patrimonio y los ingresos. • Al haber pasa lo contrario.",
+3,Concepto,La partida doble,Plan de cuentas,"La lista de cuentas de la empresa, ordenada por tipo: activo, pasivo, patrimonio, ingreso, costo y gasto.",
+4,Concepto,La partida doble,Naturaleza,"Si la cuenta suele tener saldo deudor (activos y gastos) o acreedor (pasivos, patrimonio e ingresos).",
+5,Concepto,Del libro a los estados,Libro diario,Todos los asientos en orden de fecha.,
+6,Concepto,Del libro a los estados,Balance de comprobación,"Por cuenta, lo cargado, lo abonado y el saldo. Si el libro está bien, el total del debe es igual al total del haber.",
+7,Concepto,Del libro a los estados,Estado de resultados (EERR),Ingresos menos costos y gastos del periodo: muestra si la empresa ganó o perdió.,
+8,Concepto,Del libro a los estados,EBITDA,"Resultado antes de depreciación, intereses e impuestos. Aquí es el resultado operacional del reporte Presupuesto vs. Real.",
+9,Concepto,Del libro a los estados,Balance general,Lo que la empresa tiene (activo) y cómo lo financia (pasivo y patrimonio) en una fecha. Siempre: activo = pasivo + patrimonio.,
+10,Concepto,Del libro a los estados,Flujo de efectivo (método indirecto),"Parte del resultado, le suma lo que no movió caja (la depreciación) y resta lo que absorbieron el capital de trabajo, la inversión y la deuda. El total es la variación de la caja.",
+11,Concepto,Cuentas del ciclo,Deudores por ventas,Ventas facturadas que aún no se cobran.,
+12,Concepto,Cuentas del ciclo,Inventarios,Materiales comprados que todavía no se consumen.,
+13,Concepto,Cuentas del ciclo,Proveedores,Compras y servicios recibidos que todavía no se pagan.,
+14,Concepto,Cuentas del ciclo,Activo fijo y depreciación,"Lo invertido en planta y equipos, que se reconoce como gasto en el tiempo a medida que se desgasta.",
+15,Concepto,Cuentas del ciclo,Línea de crédito de corto plazo,Un préstamo que se gira cuando falta caja y se abona cuando sobra.,
+16,Concepto,Cuentas del ciclo,Impuesto a la renta,Se devenga cada mes sobre el resultado (27%) y se paga al año siguiente.,
+17,Concepto,Cierre e indicadores,Cierre del ejercicio,"Al 31 de diciembre, las cuentas de ingresos y gastos se dejan en cero contra «Resultado del ejercicio». En enero, ese resultado se traspasa a «Resultados acumulados».",
+18,Concepto,Cierre e indicadores,Asiento de apertura,El primer asiento: carga los saldos iniciales del balance.,
+19,Concepto,Cierre e indicadores,Liquidez corriente,"Liquidez corriente = activo corriente / pasivo corriente. Prueba ácida: lo mismo, sin inventarios.",
+20,Concepto,Cierre e indicadores,Endeudamiento,Endeudamiento = pasivo / patrimonio.,
+21,Concepto,Cierre e indicadores,ROE,ROE = resultado / patrimonio: la rentabilidad para los dueños.,
+22,Concepto,Cierre e indicadores,"Días de cobro, de inventario y de pago","En cuántos días de actividad se cobra, se consume el inventario y se paga a proveedores. Ciclo de caja = cobro + inventario − pago.",
+23,Medida,0. Auxiliares,Días del periodo,Días calendario del periodo filtrado.,"DATEDIFF(MIN(Calendario[Date]), MIN(MAX(Calendario[Date]), DATE(2026, 12, 31)), DAY) + 1"
+24,Medida,0. Portada,Portada ingresos,Ingresos abreviados.,"VAR v = [Ingresos] RETURN SWITCH( TRUE(), ISBLANK(v), BLANK(), ABS(v) >= 1000000000, FORMAT(v / 1000000000, ""$ #,0.0"") & "" mil M"", ABS(v) >= 1000000, FORMAT(v / 1000000, ""$ #,0.0"") & "" M"", FORMAT(v, ""$ #,0"") )"
+25,Medida,0. Portada,Portada margen EBITDA,Margen EBITDA para la tarjeta.,"FORMAT([Margen EBITDA %], ""0.0%"")"
+26,Medida,0. Portada,Portada liquidez,Liquidez corriente para la tarjeta.,"FORMAT([Liquidez corriente], ""0.00"")"
+27,Medida,0. Portada,Portada frase 1,Primera frase: los días del ciclo de caja.,"""Cobra en "" & FORMAT([Días de cobro], ""0"") & "" días, guarda "" & FORMAT([Días de inventario], ""0"") & "" días de inventario y paga en "" & FORMAT([Días de pago], ""0"")"
+28,Medida,0. Portada,Portada frase 2,Segunda frase: estructura del balance.,"""Activo fijo "" & FORMAT(DIVIDE([Activo fijo neto], [Activo]), ""0%"") & "" del activo; endeudamiento "" & FORMAT([Endeudamiento], ""0.00"")"
+29,Medida,1. Libro diario,Asientos,Asientos registrados en el periodo.,COUNTROWS(asientos)
+30,Medida,1. Libro diario,Debe,Suma de cargos (debe).,SUM(lineas_asiento[debe])
+31,Medida,1. Libro diario,Haber,Suma de abonos (haber).,SUM(lineas_asiento[haber])
+32,Medida,1. Libro diario,Monto,Debe menos haber: positivo = saldo deudor.,[Debe] - [Haber]
+33,Medida,2. Estado de resultados,Monto EERR,"Ingresos en positivo y costos o gastos en negativo, sin los asientos de cierre.","CALCULATE([Haber] - [Debe], NOT asientos[tipo] IN {""Apertura"", ""Cierre"", ""Traspaso""}, plan_cuentas[tipo] IN {""Ingreso"", ""Costo"", ""Gasto""})"
+34,Medida,2. Estado de resultados,Ingresos,Ventas del periodo (las mismas del Real del #1).,"CALCULATE([Monto EERR], plan_cuentas[linea] = ""Ingresos"")"
+35,Medida,2. Estado de resultados,Costos,"Costos directos, en negativo.","CALCULATE([Monto EERR], plan_cuentas[linea] = ""Costos"")"
+36,Medida,2. Estado de resultados,Gastos operacionales,"Gastos de administración y venta, en negativo.","CALCULATE([Monto EERR], plan_cuentas[linea] = ""Gastos operacionales"")"
+37,Medida,2. Estado de resultados,EBITDA,"Resultado antes de depreciación, intereses e impuestos: es el resultado operacional del #1.",[Ingresos] + [Costos] + [Gastos operacionales]
+38,Medida,2. Estado de resultados,Depreciación,"Desgaste del activo fijo del periodo, en negativo.","CALCULATE([Monto EERR], plan_cuentas[linea] = ""Depreciación"")"
+39,Medida,2. Estado de resultados,Gastos financieros,"Intereses de la deuda, en negativo.","CALCULATE([Monto EERR], plan_cuentas[linea] = ""Gastos financieros"")"
+40,Medida,2. Estado de resultados,Resultado antes de impuestos,EBITDA menos depreciación e intereses.,[EBITDA] + [Depreciación] + [Gastos financieros]
+41,Medida,2. Estado de resultados,Impuesto a la renta,"Impuesto devengado (27%), en negativo.","CALCULATE([Monto EERR], plan_cuentas[linea] = ""Impuesto a la renta"")"
+42,Medida,2. Estado de resultados,Resultado del ejercicio,Utilidad o pérdida del periodo.,[Resultado antes de impuestos] + [Impuesto a la renta]
+43,Medida,2. Estado de resultados,Margen EBITDA %,EBITDA sobre ingresos.,"DIVIDE([EBITDA], [Ingresos])"
+44,Medida,2. Estado de resultados,Margen neto %,Resultado del ejercicio sobre ingresos.,"DIVIDE([Resultado del ejercicio], [Ingresos])"
+45,Medida,2. Estado de resultados,Presupuesto EERR,Mismas líneas del Presupuesto del #1 (hasta el EBITDA).,"CALCULATE( SUMX(eerr_reporte1, eerr_reporte1[monto] * IF(RELATED(plan_cuentas[tipo]) = ""Ingreso"", 1, -1)), eerr_reporte1[version] = ""Presupuesto"" )"
+46,Medida,2. Estado de resultados,Variación vs. presupuesto,"Real contable menos presupuesto, por línea.",[Monto EERR] - [Presupuesto EERR]
+47,Medida,3. Balance,Saldo deudor,"Saldo acumulado hasta el último día del periodo (debe menos haber, desde la apertura).","CALCULATE([Monto], FILTER(ALL(Calendario[Date]), Calendario[Date] <= MAX(Calendario[Date])))"
+48,Medida,3. Balance,Saldo,"Saldo con su signo natural: los activos y gastos en positivo, los pasivos, el patrimonio y los ingresos también.","SUMX(VALUES(plan_cuentas[naturaleza]), [Saldo deudor] * plan_cuentas[naturaleza])"
+49,Medida,3. Balance,Activo,Total de activos al cierre.,"CALCULATE([Saldo deudor], plan_cuentas[tipo] = ""Activo"")"
+50,Medida,3. Balance,Pasivo,Total de pasivos al cierre.,"-CALCULATE([Saldo deudor], plan_cuentas[tipo] = ""Pasivo"")"
+51,Medida,3. Balance,Patrimonio,"Capital, resultados acumulados y resultado del ejercicio (cerrado o en curso).","-CALCULATE([Saldo deudor], plan_cuentas[tipo] IN {""Patrimonio"", ""Ingreso"", ""Costo"", ""Gasto""})"
+52,Medida,3. Balance,Resultado en curso,Resultado del año aún no cerrado: aparece en el patrimonio hasta el asiento de cierre.,"-CALCULATE([Saldo deudor], plan_cuentas[tipo] IN {""Ingreso"", ""Costo"", ""Gasto""})"
+53,Medida,3. Balance,Activo corriente,"Caja, deudores e inventarios.","CALCULATE([Saldo deudor], plan_cuentas[clasificacion] = ""Activo corriente"")"
+54,Medida,3. Balance,Pasivo corriente,"Proveedores, remuneraciones, crédito de corto plazo e impuestos por pagar.","-CALCULATE([Saldo deudor], plan_cuentas[clasificacion] = ""Pasivo corriente"")"
+55,Medida,3. Balance,Caja,Caja y bancos al cierre.,"CALCULATE([Saldo deudor], plan_cuentas[linea] = ""Efectivo"")"
+56,Medida,3. Balance,Deudores por ventas,Ventas por cobrar al cierre.,"CALCULATE([Saldo deudor], plan_cuentas[linea] = ""Deudores por ventas"")"
+57,Medida,3. Balance,Inventarios,Materiales en bodega al cierre.,"CALCULATE([Saldo deudor], plan_cuentas[linea] = ""Inventarios"")"
+58,Medida,3. Balance,Proveedores,Compras y servicios por pagar al cierre.,"-CALCULATE([Saldo deudor], plan_cuentas[linea] = ""Proveedores"")"
+59,Medida,3. Balance,Activo fijo neto,"Propiedades, planta y equipo menos la depreciación acumulada.","CALCULATE([Saldo deudor], plan_cuentas[linea] = ""Activo fijo neto"")"
+60,Medida,3. Balance,Deuda financiera,Préstamos de corto y largo plazo.,"-CALCULATE([Saldo deudor], plan_cuentas[linea] IN {""Deuda financiera de corto plazo"", ""Deuda financiera de largo plazo""})"
+61,Medida,4. Flujo de efectivo,Movimiento,"Debe menos haber del periodo, sin apertura ni cierres.","CALCULATE([Monto], NOT asientos[tipo] IN {""Apertura"", ""Cierre"", ""Traspaso""})"
+62,Medida,4. Flujo de efectivo,Variación de caja,Cuánto cambió la caja en el periodo.,"CALCULATE([Movimiento], plan_cuentas[linea] = ""Efectivo"")"
+63,Medida,4. Flujo de efectivo,Monto del flujo,Cada escalón del flujo indirecto; el total es la variación de caja.,"SWITCH( SELECTEDVALUE('Escalones del flujo'[Escalón]), ""Resultado del ejercicio"", [Resultado del ejercicio], ""Depreciación"", -CALCULATE([Movimiento], plan_cuentas[orden] = 1202), ""Deudores por ventas"", -CALCULATE([Movimiento], plan_cuentas[linea] = ""Deudores por ventas""), ""Inventarios"", -CALCULATE([Movimiento], plan_cuentas[linea] = ""Inventarios""), ""Proveedores"", -CALCULATE([Movimiento], plan_cuentas[linea] = ""Proveedores""), ""Remuneraciones e impuestos"", -CALCULATE([Movimiento], plan_cuentas[linea] IN {""Remuneraciones por pagar"", ""Impuestos por pagar""}), ""Inversión en activo fijo"", -CALCULATE([Movimiento], plan_cuentas[orden] = 1201), ""Deuda financiera"", -CALCULATE([Movimiento], plan_cuentas[linea] IN {""Deuda financiera de corto plazo"", ""Deuda financiera de largo plazo""}) )"
+64,Medida,4. Flujo de efectivo,Flujo operacional,Resultado más depreciación y menos el aumento del capital de trabajo.,"[Resultado del ejercicio] - CALCULATE([Movimiento], plan_cuentas[orden] = 1202) - CALCULATE([Movimiento], plan_cuentas[linea] IN {""Deudores por ventas"", ""Inventarios"", ""Proveedores"", ""Remuneraciones por pagar"", ""Impuestos por pagar""})"
+65,Medida,4. Flujo de efectivo,Flujo de inversión,"Compras de activo fijo, en negativo.","-CALCULATE([Movimiento], plan_cuentas[orden] = 1201)"
+66,Medida,4. Flujo de efectivo,Flujo de financiamiento,Préstamos recibidos menos amortizaciones.,"-CALCULATE([Movimiento], plan_cuentas[linea] IN {""Deuda financiera de corto plazo"", ""Deuda financiera de largo plazo""})"
+67,Medida,5. Indicadores,Liquidez corriente,Activo corriente sobre pasivo corriente: cuántas veces se cubren las deudas de corto plazo.,"DIVIDE([Activo corriente], [Pasivo corriente])"
+68,Medida,5. Indicadores,Prueba ácida,Liquidez sin contar inventarios.,"DIVIDE([Activo corriente] - [Inventarios], [Pasivo corriente])"
+69,Medida,5. Indicadores,Endeudamiento,Pasivo sobre patrimonio: cuánto de lo que tiene la empresa está financiado por terceros.,"DIVIDE([Pasivo], [Patrimonio])"
+70,Medida,5. Indicadores,Capital de trabajo neto,Activo corriente menos pasivo corriente.,[Activo corriente] - [Pasivo corriente]
+71,Medida,5. Indicadores,ROE anualizado,"Resultado del periodo llevado a un año, sobre el patrimonio al cierre.","DIVIDE([Resultado del ejercicio] * 365 / [Días del periodo], [Patrimonio])"
+72,Medida,5. Indicadores,Días de cobro,Días de venta que están por cobrar (DSO).,"DIVIDE([Deudores por ventas], [Ingresos]) * [Días del periodo]"
+73,Medida,5. Indicadores,Consumo de materiales,Costo de los materiales consumidos en el periodo.,"CALCULATE([Debe], NOT asientos[tipo] IN {""Apertura"", ""Cierre"", ""Traspaso""}, plan_cuentas[inventariable] = 1)"
+74,Medida,5. Indicadores,Días de inventario,Días de consumo que hay en bodega (DIO).,"DIVIDE([Inventarios], [Consumo de materiales]) * [Días del periodo]"
+75,Medida,5. Indicadores,Compras y servicios,Lo que se compró a proveedores en el periodo.,"CALCULATE([Haber], NOT asientos[tipo] IN {""Apertura"", ""Cierre"", ""Traspaso""}, plan_cuentas[linea] = ""Proveedores"")"
+76,Medida,5. Indicadores,Días de pago,Días de compras que están por pagar (DPO).,"DIVIDE([Proveedores], [Compras y servicios]) * [Días del periodo]"
+77,Medida,5. Indicadores,Ciclo de caja,Días entre pagar al proveedor y cobrarle al cliente.,[Días de cobro] + [Días de inventario] - [Días de pago]
+78,Medida,6. Cierre,Diferencia debe - haber,En todo el libro debe ser 0: partida doble.,[Debe] - [Haber]
+79,Medida,6. Cierre,Diferencia de balance,Activo menos pasivo y patrimonio: siempre 0.,[Activo] - [Pasivo] - [Patrimonio]
+80,Medida,6. Cierre,Diferencia del flujo,Flujo de efectivo menos variación de caja: siempre 0.,[Flujo operacional] + [Flujo de inversión] + [Flujo de financiamiento] - [Variación de caja]
+81,Medida,6. Cierre,EBITDA Real del reporte 1,Resultado operacional Real del reporte Presupuesto vs. Real.,"CALCULATE( SUMX(eerr_reporte1, eerr_reporte1[monto] * IF(RELATED(plan_cuentas[tipo]) = ""Ingreso"", 1, -1)), eerr_reporte1[version] = ""Real"" )"
+82,Medida,6. Cierre,Diferencia con el reporte 1,EBITDA de la contabilidad menos el resultado operacional del #1: siempre 0.,[EBITDA] - [EBITDA Real del reporte 1]

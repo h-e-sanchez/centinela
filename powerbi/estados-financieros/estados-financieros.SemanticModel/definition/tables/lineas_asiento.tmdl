@@ -1,0 +1,462 @@
+/// Líneas del libro diario: cada una va al debe o al haber de una cuenta (y de una sucursal en las de resultados).
+table lineas_asiento
+	lineageTag: d4cdb5c6-7f19-5c67-98ae-617d385929b0
+
+	/// Suma de cargos (debe).
+	measure Debe = SUM(lineas_asiento[debe])
+		formatString: \$ #,##0
+		displayFolder: 1. Libro diario
+		lineageTag: 52025d0e-049b-599e-a4e6-4d53f8f8600c
+
+	/// Suma de abonos (haber).
+	measure Haber = SUM(lineas_asiento[haber])
+		formatString: \$ #,##0
+		displayFolder: 1. Libro diario
+		lineageTag: 1cf0e8d1-4d7e-51a5-a917-c86a8bc0fa68
+
+	/// Debe menos haber: positivo = saldo deudor.
+	measure Monto = [Debe] - [Haber]
+		formatString: \$ #,##0
+		displayFolder: 1. Libro diario
+		lineageTag: 58e991dc-5ce0-5700-a093-b87782b5120d
+
+	/// En todo el libro debe ser 0: partida doble.
+	measure 'Diferencia debe - haber' = [Debe] - [Haber]
+		formatString: \$ #,##0
+		displayFolder: 6. Cierre
+		lineageTag: e9f60be5-39c8-5a15-9da8-6294d757bac8
+
+	/// Saldo acumulado hasta el último día del periodo (debe menos haber, desde la apertura).
+	measure 'Saldo deudor' = CALCULATE([Monto], FILTER(ALL(Calendario[Date]), Calendario[Date] <= MAX(Calendario[Date])))
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: ff1e4ae8-2453-5151-9ce5-4d49b98939d1
+
+	/// Saldo con su signo natural: los activos y gastos en positivo, los pasivos, el patrimonio y los ingresos también.
+	measure Saldo = SUMX(VALUES(plan_cuentas[naturaleza]), [Saldo deudor] * plan_cuentas[naturaleza])
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 8baaa1dd-ddde-5af8-88cf-a5539feb22f4
+
+	/// Debe menos haber del periodo, sin apertura ni cierres.
+	measure Movimiento = CALCULATE([Monto], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"})
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: d3864402-992e-5b63-bac6-e3a06633dd08
+
+	/// Ingresos en positivo y costos o gastos en negativo, sin los asientos de cierre.
+	measure 'Monto EERR' = CALCULATE([Haber] - [Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: a77b0707-b698-505b-9cc4-d891a3332297
+
+	/// Ventas del periodo (las mismas del Real del #1).
+	measure Ingresos = CALCULATE([Monto EERR], plan_cuentas[linea] = "Ingresos")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 9dd02126-634a-5335-a47f-e887d2fca6db
+
+	/// Costos directos, en negativo.
+	measure Costos = CALCULATE([Monto EERR], plan_cuentas[linea] = "Costos")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 7aae0059-8811-53ab-9350-8cba299e910d
+
+	/// Gastos de administración y venta, en negativo.
+	measure 'Gastos operacionales' = CALCULATE([Monto EERR], plan_cuentas[linea] = "Gastos operacionales")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 3bdd681d-7756-589b-861f-7017c3d276d0
+
+	/// Resultado antes de depreciación, intereses e impuestos: es el resultado operacional del #1.
+	measure EBITDA = [Ingresos] + [Costos] + [Gastos operacionales]
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: e738097e-fea6-5708-acee-7885bc9f266d
+
+	/// Desgaste del activo fijo del periodo, en negativo.
+	measure 'Depreciación' = CALCULATE([Monto EERR], plan_cuentas[linea] = "Depreciación")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 8b63d7d6-4e87-5650-b818-71e85c6c9d95
+
+	/// Intereses de la deuda, en negativo.
+	measure 'Gastos financieros' = CALCULATE([Monto EERR], plan_cuentas[linea] = "Gastos financieros")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 43f910e5-aa76-5b7a-80ad-22b739acebd9
+
+	/// EBITDA menos depreciación e intereses.
+	measure 'Resultado antes de impuestos' = [EBITDA] + [Depreciación] + [Gastos financieros]
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 25d7b767-16ad-5cb6-b7db-4f0268fe395c
+
+	/// Impuesto devengado (27%), en negativo.
+	measure 'Impuesto a la renta' = CALCULATE([Monto EERR], plan_cuentas[linea] = "Impuesto a la renta")
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 24aa3fe9-7d99-50a9-80a1-98cd234fcb7e
+
+	/// Utilidad o pérdida del periodo.
+	measure 'Resultado del ejercicio' = [Resultado antes de impuestos] + [Impuesto a la renta]
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 2db0a174-7c86-5711-8165-b565bfb8ea2b
+
+	/// EBITDA sobre ingresos.
+	measure 'Margen EBITDA %' = DIVIDE([EBITDA], [Ingresos])
+		formatString: 0.0%
+		displayFolder: 2. Estado de resultados
+		lineageTag: 066e3fc8-194e-5530-a60d-d6cea6404bf1
+
+	/// Resultado del ejercicio sobre ingresos.
+	measure 'Margen neto %' = DIVIDE([Resultado del ejercicio], [Ingresos])
+		formatString: 0.0%
+		displayFolder: 2. Estado de resultados
+		lineageTag: cb2169a6-6769-509f-8bfa-be5825f8603a
+
+	/// Total de activos al cierre.
+	measure Activo = CALCULATE([Saldo deudor], plan_cuentas[tipo] = "Activo")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: eae92fd2-ed13-5e68-ae52-e6150447d427
+
+	/// Total de pasivos al cierre.
+	measure Pasivo = -CALCULATE([Saldo deudor], plan_cuentas[tipo] = "Pasivo")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 3ee830da-c923-5d02-8086-70886de988f4
+
+	/// Capital, resultados acumulados y resultado del ejercicio (cerrado o en curso).
+	measure Patrimonio = -CALCULATE([Saldo deudor], plan_cuentas[tipo] IN {"Patrimonio", "Ingreso", "Costo", "Gasto"})
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: a6220030-55e2-55a1-9808-0c80c2c9f495
+
+	/// Resultado del año aún no cerrado: aparece en el patrimonio hasta el asiento de cierre.
+	measure 'Resultado en curso' = -CALCULATE([Saldo deudor], plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: ff5ac91b-9618-52a2-8d9b-bd38203db4c7
+
+	/// Activo menos pasivo y patrimonio: siempre 0.
+	measure 'Diferencia de balance' = [Activo] - [Pasivo] - [Patrimonio]
+		formatString: \$ #,##0
+		displayFolder: 6. Cierre
+		lineageTag: e71c3dac-2a78-5431-b983-84bf59d5e54d
+
+	/// Caja, deudores e inventarios.
+	measure 'Activo corriente' = CALCULATE([Saldo deudor], plan_cuentas[clasificacion] = "Activo corriente")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: d4286080-9958-5309-b372-12d68eea2721
+
+	/// Proveedores, remuneraciones, crédito de corto plazo e impuestos por pagar.
+	measure 'Pasivo corriente' = -CALCULATE([Saldo deudor], plan_cuentas[clasificacion] = "Pasivo corriente")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 715bd18d-6bee-5201-9a91-0b1688b2ca9b
+
+	/// Caja y bancos al cierre.
+	measure Caja = CALCULATE([Saldo deudor], plan_cuentas[linea] = "Efectivo")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 0608a505-1481-5178-be5e-6beb00db23f8
+
+	/// Ventas por cobrar al cierre.
+	measure 'Deudores por ventas' = CALCULATE([Saldo deudor], plan_cuentas[linea] = "Deudores por ventas")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: aee72a62-42eb-535c-aaa9-f5920504aa93
+
+	/// Materiales en bodega al cierre.
+	measure Inventarios = CALCULATE([Saldo deudor], plan_cuentas[linea] = "Inventarios")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 1634f027-1997-5815-b219-6c20f778fbb9
+
+	/// Compras y servicios por pagar al cierre.
+	measure Proveedores = -CALCULATE([Saldo deudor], plan_cuentas[linea] = "Proveedores")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: df9152f4-d5dd-5e84-813c-5f9db549d258
+
+	/// Propiedades, planta y equipo menos la depreciación acumulada.
+	measure 'Activo fijo neto' = CALCULATE([Saldo deudor], plan_cuentas[linea] = "Activo fijo neto")
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: dc90ec37-c723-5b19-87f0-db1594198196
+
+	/// Préstamos de corto y largo plazo.
+	measure 'Deuda financiera' = -CALCULATE([Saldo deudor], plan_cuentas[linea] IN {"Deuda financiera de corto plazo", "Deuda financiera de largo plazo"})
+		formatString: \$ #,##0
+		displayFolder: 3. Balance
+		lineageTag: 816d900f-446d-55af-a7fa-c330da947f7a
+
+	/// Activo corriente sobre pasivo corriente: cuántas veces se cubren las deudas de corto plazo.
+	measure 'Liquidez corriente' = DIVIDE([Activo corriente], [Pasivo corriente])
+		formatString: 0.00
+		displayFolder: 5. Indicadores
+		lineageTag: b053c14a-6968-5174-acf8-7d8d573dec83
+
+	/// Liquidez sin contar inventarios.
+	measure 'Prueba ácida' = DIVIDE([Activo corriente] - [Inventarios], [Pasivo corriente])
+		formatString: 0.00
+		displayFolder: 5. Indicadores
+		lineageTag: 4e7eb227-2c76-54b3-b0f0-fb4c913a4704
+
+	/// Pasivo sobre patrimonio: cuánto de lo que tiene la empresa está financiado por terceros.
+	measure Endeudamiento = DIVIDE([Pasivo], [Patrimonio])
+		formatString: 0.00
+		displayFolder: 5. Indicadores
+		lineageTag: 32d1a0ee-3a18-56a2-a881-6e2ccd3a32e7
+
+	/// Activo corriente menos pasivo corriente.
+	measure 'Capital de trabajo neto' = [Activo corriente] - [Pasivo corriente]
+		formatString: \$ #,##0
+		displayFolder: 5. Indicadores
+		lineageTag: 2979f17b-e7dc-5816-8233-7a2dd883544b
+
+	/// Días calendario del periodo filtrado.
+	measure 'Días del periodo' = DATEDIFF(MIN(Calendario[Date]), MIN(MAX(Calendario[Date]), DATE(2026, 12, 31)), DAY) + 1
+		formatString: 0
+		displayFolder: 0. Auxiliares
+		lineageTag: ec076cd6-7539-5ea8-bd80-7437a59c043a
+
+	/// Resultado del periodo llevado a un año, sobre el patrimonio al cierre.
+	measure 'ROE anualizado' = DIVIDE([Resultado del ejercicio] * 365 / [Días del periodo], [Patrimonio])
+		formatString: 0.0%
+		displayFolder: 5. Indicadores
+		lineageTag: 4b212a0f-d6f3-5b68-84c7-8d99c00e0014
+
+	/// Días de venta que están por cobrar (DSO).
+	measure 'Días de cobro' = DIVIDE([Deudores por ventas], [Ingresos]) * [Días del periodo]
+		formatString: 0
+		displayFolder: 5. Indicadores
+		lineageTag: de3b6dee-4fb0-5ebe-9bd9-0229616bba31
+
+	/// Costo de los materiales consumidos en el periodo.
+	measure 'Consumo de materiales' = CALCULATE([Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[inventariable] = 1)
+		formatString: \$ #,##0
+		displayFolder: 5. Indicadores
+		lineageTag: 681b0628-0a6e-5f02-8d0e-6f4bb8baa476
+
+	/// Días de consumo que hay en bodega (DIO).
+	measure 'Días de inventario' = DIVIDE([Inventarios], [Consumo de materiales]) * [Días del periodo]
+		formatString: 0
+		displayFolder: 5. Indicadores
+		lineageTag: 99a4acee-5614-573c-837a-45bc889c7004
+
+	/// Lo que se compró a proveedores en el periodo.
+	measure 'Compras y servicios' = CALCULATE([Haber], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[linea] = "Proveedores")
+		formatString: \$ #,##0
+		displayFolder: 5. Indicadores
+		lineageTag: 7a52cd3b-80f0-507d-958d-a2e22c04ae85
+
+	/// Días de compras que están por pagar (DPO).
+	measure 'Días de pago' = DIVIDE([Proveedores], [Compras y servicios]) * [Días del periodo]
+		formatString: 0
+		displayFolder: 5. Indicadores
+		lineageTag: 46a031f1-7a65-51fb-afeb-3b1355f9e3c2
+
+	/// Días entre pagar al proveedor y cobrarle al cliente.
+	measure 'Ciclo de caja' = [Días de cobro] + [Días de inventario] - [Días de pago]
+		formatString: 0
+		displayFolder: 5. Indicadores
+		lineageTag: 944db0ed-9366-57ec-8260-208618f282ba
+
+	/// Cuánto cambió la caja en el periodo.
+	measure 'Variación de caja' = CALCULATE([Movimiento], plan_cuentas[linea] = "Efectivo")
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: 9bcb8a3c-f45f-5b48-af1b-6a4320f57b4d
+
+	/// Cada escalón del flujo indirecto; el total es la variación de caja.
+	measure 'Monto del flujo' =
+			SWITCH(
+			    SELECTEDVALUE('Escalones del flujo'[Escalón]),
+			    "Resultado del ejercicio", [Resultado del ejercicio],
+			    "Depreciación", -CALCULATE([Movimiento], plan_cuentas[orden] = 1202),
+			    "Deudores por ventas", -CALCULATE([Movimiento], plan_cuentas[linea] = "Deudores por ventas"),
+			    "Inventarios", -CALCULATE([Movimiento], plan_cuentas[linea] = "Inventarios"),
+			    "Proveedores", -CALCULATE([Movimiento], plan_cuentas[linea] = "Proveedores"),
+			    "Remuneraciones e impuestos", -CALCULATE([Movimiento], plan_cuentas[linea] IN {"Remuneraciones por pagar", "Impuestos por pagar"}),
+			    "Inversión en activo fijo", -CALCULATE([Movimiento], plan_cuentas[orden] = 1201),
+			    "Deuda financiera", -CALCULATE([Movimiento], plan_cuentas[linea] IN {"Deuda financiera de corto plazo", "Deuda financiera de largo plazo"})
+			)
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: ea961b93-bd3f-5974-a6b6-18bca5f7cef7
+
+	/// Resultado más depreciación y menos el aumento del capital de trabajo.
+	measure 'Flujo operacional' =
+			[Resultado del ejercicio]
+			    - CALCULATE([Movimiento], plan_cuentas[orden] = 1202)
+			    - CALCULATE([Movimiento], plan_cuentas[linea] IN {"Deudores por ventas", "Inventarios", "Proveedores", "Remuneraciones por pagar", "Impuestos por pagar"})
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: 11544bd4-cfcc-50b2-90aa-9a4ab97c066e
+
+	/// Compras de activo fijo, en negativo.
+	measure 'Flujo de inversión' = -CALCULATE([Movimiento], plan_cuentas[orden] = 1201)
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: 6f75c53d-e79a-5855-b327-ffe6c57378ad
+
+	/// Préstamos recibidos menos amortizaciones.
+	measure 'Flujo de financiamiento' = -CALCULATE([Movimiento], plan_cuentas[linea] IN {"Deuda financiera de corto plazo", "Deuda financiera de largo plazo"})
+		formatString: \$ #,##0
+		displayFolder: 4. Flujo de efectivo
+		lineageTag: 154f68e2-f6d1-51ef-a365-4244b1740139
+
+	/// Flujo de efectivo menos variación de caja: siempre 0.
+	measure 'Diferencia del flujo' = [Flujo operacional] + [Flujo de inversión] + [Flujo de financiamiento] - [Variación de caja]
+		formatString: \$ #,##0
+		displayFolder: 6. Cierre
+		lineageTag: b5dc685d-1ce6-5486-b7a8-6eca98dc30de
+
+	/// Resultado operacional Real del reporte Presupuesto vs. Real.
+	measure 'EBITDA Real del reporte 1' =
+			CALCULATE(
+			    SUMX(eerr_reporte1, eerr_reporte1[monto] * IF(RELATED(plan_cuentas[tipo]) = "Ingreso", 1, -1)),
+			    eerr_reporte1[version] = "Real"
+			)
+		formatString: \$ #,##0
+		displayFolder: 6. Cierre
+		lineageTag: 52840413-c499-5092-9d0c-42b4d54c4b86
+
+	/// EBITDA de la contabilidad menos el resultado operacional del #1: siempre 0.
+	measure 'Diferencia con el reporte 1' = [EBITDA] - [EBITDA Real del reporte 1]
+		formatString: \$ #,##0
+		displayFolder: 6. Cierre
+		lineageTag: 184b5669-b0ab-547f-be31-8a3309742b99
+
+	/// Mismas líneas del Presupuesto del #1 (hasta el EBITDA).
+	measure 'Presupuesto EERR' =
+			CALCULATE(
+			    SUMX(eerr_reporte1, eerr_reporte1[monto] * IF(RELATED(plan_cuentas[tipo]) = "Ingreso", 1, -1)),
+			    eerr_reporte1[version] = "Presupuesto"
+			)
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 416a6390-4089-5d24-81c3-7a2d71a4f09e
+
+	/// Real contable menos presupuesto, por línea.
+	measure 'Variación vs. presupuesto' = [Monto EERR] - [Presupuesto EERR]
+		formatString: \$ #,##0
+		displayFolder: 2. Estado de resultados
+		lineageTag: 0a582dcc-f477-58b1-8a03-0b8e7d8e0063
+
+	/// Ingresos abreviados.
+	measure 'Portada ingresos' =
+			VAR v = [Ingresos]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0.0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: e53817d5-f697-54ee-87d8-9108153e1549
+
+	/// Margen EBITDA para la tarjeta.
+	measure 'Portada margen EBITDA' = FORMAT([Margen EBITDA %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: b33a20ea-6127-503b-ab16-519aee02b4d9
+
+	/// Liquidez corriente para la tarjeta.
+	measure 'Portada liquidez' = FORMAT([Liquidez corriente], "0.00")
+		displayFolder: 0. Portada
+		lineageTag: 4eeee270-ced0-5f58-82d3-fb9d5d4b2b1a
+
+	/// Primera frase: los días del ciclo de caja.
+	measure 'Portada frase 1' =
+			"Cobra en " & FORMAT([Días de cobro], "0") & " días, guarda " & FORMAT([Días de inventario], "0")
+			    & " días de inventario y paga en " & FORMAT([Días de pago], "0")
+		displayFolder: 0. Portada
+		lineageTag: 17869e42-52b8-5366-809b-709ff92486b2
+
+	/// Segunda frase: estructura del balance.
+	measure 'Portada frase 2' =
+			"Activo fijo " & FORMAT(DIVIDE([Activo fijo neto], [Activo]), "0%") & " del activo; endeudamiento "
+			    & FORMAT([Endeudamiento], "0.00")
+		displayFolder: 0. Portada
+		lineageTag: b4310ae3-f464-5777-91b6-925d1f77079a
+
+	column asiento
+		dataType: string
+		isHidden
+		lineageTag: 6f82a904-518b-5766-a4c3-1ee25b7d66fc
+		summarizeBy: none
+		sourceColumn: asiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 408efb3f-eaea-527a-8189-5f92a2c4650f
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 1746eaf7-b0ec-59cf-a83b-1cf3093a5480
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta_codigo
+		dataType: string
+		isHidden
+		lineageTag: 1e6c71ca-7033-576b-acc6-967d68ac8fe8
+		summarizeBy: none
+		sourceColumn: cuenta_codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		lineageTag: c15dc750-44f5-543c-a141-6b212b688e22
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column debe
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 6f129179-32e0-57fe-a964-b4a7836215ae
+		summarizeBy: none
+		sourceColumn: debe
+
+		annotation SummarizationSetBy = Automatic
+
+	column haber
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 5fcde6f7-3f41-5fac-9aa4-00b0107fdb27
+		summarizeBy: none
+		sourceColumn: haber
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lineas_asiento = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("lineas_asiento.csv", {{"asiento", type text}, {"linea", Int64.Type}, {"industria", type text}, {"cuenta_codigo", type text}, {"sucursal", type text}, {"debe", Int64.Type}, {"haber", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

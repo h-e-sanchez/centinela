@@ -1,0 +1,959 @@
+asiento,fecha,industria,tipo,glosa
+MAN-00001,2025-01-01,Manufactura,Apertura,Balance de apertura al 1 de enero de 2025
+MAN-00002,2025-01-31,Manufactura,Venta,Facturación de 01-2025
+MAN-00003,2025-01-31,Manufactura,Cobranza,Cobranza de 01-2025
+MAN-00004,2025-01-31,Manufactura,Compra,Compra de materiales de 01-2025
+MAN-00005,2025-01-31,Manufactura,Consumo,Consumo de materiales de 01-2025
+MAN-00006,2025-01-31,Manufactura,Gasto,Servicios y gastos de 01-2025
+MAN-00007,2025-01-31,Manufactura,Remuneraciones,Remuneraciones de 01-2025
+MAN-00008,2025-01-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00009,2025-01-31,Manufactura,Pago a proveedores,Pago a proveedores de 01-2025
+MAN-00010,2025-01-31,Manufactura,Inversión,Inversión en activo fijo de 01-2025
+MAN-00011,2025-01-31,Manufactura,Depreciación,Depreciación de 01-2025
+MAN-00012,2025-01-31,Manufactura,Intereses,Intereses de 01-2025
+MAN-00013,2025-01-31,Manufactura,Amortización de deuda,Cuota de capital de 01-2025
+MAN-00014,2025-01-31,Manufactura,Impuesto,Impuesto a la renta devengado de 01-2025
+MAN-00015,2025-02-28,Manufactura,Venta,Facturación de 02-2025
+MAN-00016,2025-02-28,Manufactura,Cobranza,Cobranza de 02-2025
+MAN-00017,2025-02-28,Manufactura,Compra,Compra de materiales de 02-2025
+MAN-00018,2025-02-28,Manufactura,Consumo,Consumo de materiales de 02-2025
+MAN-00019,2025-02-28,Manufactura,Gasto,Servicios y gastos de 02-2025
+MAN-00020,2025-02-28,Manufactura,Remuneraciones,Remuneraciones de 02-2025
+MAN-00021,2025-02-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00022,2025-02-28,Manufactura,Pago a proveedores,Pago a proveedores de 02-2025
+MAN-00023,2025-02-28,Manufactura,Inversión,Inversión en activo fijo de 02-2025
+MAN-00024,2025-02-28,Manufactura,Depreciación,Depreciación de 02-2025
+MAN-00025,2025-02-28,Manufactura,Intereses,Intereses de 02-2025
+MAN-00026,2025-02-28,Manufactura,Amortización de deuda,Cuota de capital de 02-2025
+MAN-00027,2025-02-28,Manufactura,Impuesto,Impuesto a la renta devengado de 02-2025
+MAN-00028,2025-03-31,Manufactura,Venta,Facturación de 03-2025
+MAN-00029,2025-03-31,Manufactura,Cobranza,Cobranza de 03-2025
+MAN-00030,2025-03-31,Manufactura,Compra,Compra de materiales de 03-2025
+MAN-00031,2025-03-31,Manufactura,Consumo,Consumo de materiales de 03-2025
+MAN-00032,2025-03-31,Manufactura,Gasto,Servicios y gastos de 03-2025
+MAN-00033,2025-03-31,Manufactura,Remuneraciones,Remuneraciones de 03-2025
+MAN-00034,2025-03-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00035,2025-03-31,Manufactura,Pago a proveedores,Pago a proveedores de 03-2025
+MAN-00036,2025-03-31,Manufactura,Inversión,Inversión en activo fijo de 03-2025
+MAN-00037,2025-03-31,Manufactura,Depreciación,Depreciación de 03-2025
+MAN-00038,2025-03-31,Manufactura,Intereses,Intereses de 03-2025
+MAN-00039,2025-03-31,Manufactura,Amortización de deuda,Cuota de capital de 03-2025
+MAN-00040,2025-03-31,Manufactura,Impuesto,Impuesto a la renta devengado de 03-2025
+MAN-00041,2025-04-30,Manufactura,Venta,Facturación de 04-2025
+MAN-00042,2025-04-30,Manufactura,Cobranza,Cobranza de 04-2025
+MAN-00043,2025-04-30,Manufactura,Compra,Compra de materiales de 04-2025
+MAN-00044,2025-04-30,Manufactura,Consumo,Consumo de materiales de 04-2025
+MAN-00045,2025-04-30,Manufactura,Gasto,Servicios y gastos de 04-2025
+MAN-00046,2025-04-30,Manufactura,Remuneraciones,Remuneraciones de 04-2025
+MAN-00047,2025-04-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00048,2025-04-30,Manufactura,Pago a proveedores,Pago a proveedores de 04-2025
+MAN-00049,2025-04-30,Manufactura,Inversión,Inversión en activo fijo de 04-2025
+MAN-00050,2025-04-30,Manufactura,Depreciación,Depreciación de 04-2025
+MAN-00051,2025-04-30,Manufactura,Intereses,Intereses de 04-2025
+MAN-00052,2025-04-30,Manufactura,Amortización de deuda,Cuota de capital de 04-2025
+MAN-00053,2025-04-30,Manufactura,Impuesto,Impuesto a la renta devengado de 04-2025
+MAN-00054,2025-05-31,Manufactura,Venta,Facturación de 05-2025
+MAN-00055,2025-05-31,Manufactura,Cobranza,Cobranza de 05-2025
+MAN-00056,2025-05-31,Manufactura,Compra,Compra de materiales de 05-2025
+MAN-00057,2025-05-31,Manufactura,Consumo,Consumo de materiales de 05-2025
+MAN-00058,2025-05-31,Manufactura,Gasto,Servicios y gastos de 05-2025
+MAN-00059,2025-05-31,Manufactura,Remuneraciones,Remuneraciones de 05-2025
+MAN-00060,2025-05-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00061,2025-05-31,Manufactura,Pago a proveedores,Pago a proveedores de 05-2025
+MAN-00062,2025-05-31,Manufactura,Inversión,Inversión en activo fijo de 05-2025
+MAN-00063,2025-05-31,Manufactura,Depreciación,Depreciación de 05-2025
+MAN-00064,2025-05-31,Manufactura,Intereses,Intereses de 05-2025
+MAN-00065,2025-05-31,Manufactura,Amortización de deuda,Cuota de capital de 05-2025
+MAN-00066,2025-05-31,Manufactura,Impuesto,Impuesto a la renta devengado de 05-2025
+MAN-00067,2025-06-30,Manufactura,Venta,Facturación de 06-2025
+MAN-00068,2025-06-30,Manufactura,Cobranza,Cobranza de 06-2025
+MAN-00069,2025-06-30,Manufactura,Compra,Compra de materiales de 06-2025
+MAN-00070,2025-06-30,Manufactura,Consumo,Consumo de materiales de 06-2025
+MAN-00071,2025-06-30,Manufactura,Gasto,Servicios y gastos de 06-2025
+MAN-00072,2025-06-30,Manufactura,Remuneraciones,Remuneraciones de 06-2025
+MAN-00073,2025-06-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00074,2025-06-30,Manufactura,Pago a proveedores,Pago a proveedores de 06-2025
+MAN-00075,2025-06-30,Manufactura,Inversión,Inversión en activo fijo de 06-2025
+MAN-00076,2025-06-30,Manufactura,Depreciación,Depreciación de 06-2025
+MAN-00077,2025-06-30,Manufactura,Intereses,Intereses de 06-2025
+MAN-00078,2025-06-30,Manufactura,Amortización de deuda,Cuota de capital de 06-2025
+MAN-00079,2025-06-30,Manufactura,Impuesto,Impuesto a la renta devengado de 06-2025
+MAN-00080,2025-07-31,Manufactura,Venta,Facturación de 07-2025
+MAN-00081,2025-07-31,Manufactura,Cobranza,Cobranza de 07-2025
+MAN-00082,2025-07-31,Manufactura,Compra,Compra de materiales de 07-2025
+MAN-00083,2025-07-31,Manufactura,Consumo,Consumo de materiales de 07-2025
+MAN-00084,2025-07-31,Manufactura,Gasto,Servicios y gastos de 07-2025
+MAN-00085,2025-07-31,Manufactura,Remuneraciones,Remuneraciones de 07-2025
+MAN-00086,2025-07-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00087,2025-07-31,Manufactura,Pago a proveedores,Pago a proveedores de 07-2025
+MAN-00088,2025-07-31,Manufactura,Inversión,Inversión en activo fijo de 07-2025
+MAN-00089,2025-07-31,Manufactura,Depreciación,Depreciación de 07-2025
+MAN-00090,2025-07-31,Manufactura,Intereses,Intereses de 07-2025
+MAN-00091,2025-07-31,Manufactura,Amortización de deuda,Cuota de capital de 07-2025
+MAN-00092,2025-07-31,Manufactura,Impuesto,Impuesto a la renta devengado de 07-2025
+MAN-00093,2025-08-31,Manufactura,Venta,Facturación de 08-2025
+MAN-00094,2025-08-31,Manufactura,Cobranza,Cobranza de 08-2025
+MAN-00095,2025-08-31,Manufactura,Compra,Compra de materiales de 08-2025
+MAN-00096,2025-08-31,Manufactura,Consumo,Consumo de materiales de 08-2025
+MAN-00097,2025-08-31,Manufactura,Gasto,Servicios y gastos de 08-2025
+MAN-00098,2025-08-31,Manufactura,Remuneraciones,Remuneraciones de 08-2025
+MAN-00099,2025-08-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00100,2025-08-31,Manufactura,Pago a proveedores,Pago a proveedores de 08-2025
+MAN-00101,2025-08-31,Manufactura,Inversión,Inversión en activo fijo de 08-2025
+MAN-00102,2025-08-31,Manufactura,Depreciación,Depreciación de 08-2025
+MAN-00103,2025-08-31,Manufactura,Intereses,Intereses de 08-2025
+MAN-00104,2025-08-31,Manufactura,Amortización de deuda,Cuota de capital de 08-2025
+MAN-00105,2025-08-31,Manufactura,Impuesto,Impuesto a la renta devengado de 08-2025
+MAN-00106,2025-09-30,Manufactura,Venta,Facturación de 09-2025
+MAN-00107,2025-09-30,Manufactura,Cobranza,Cobranza de 09-2025
+MAN-00108,2025-09-30,Manufactura,Compra,Compra de materiales de 09-2025
+MAN-00109,2025-09-30,Manufactura,Consumo,Consumo de materiales de 09-2025
+MAN-00110,2025-09-30,Manufactura,Gasto,Servicios y gastos de 09-2025
+MAN-00111,2025-09-30,Manufactura,Remuneraciones,Remuneraciones de 09-2025
+MAN-00112,2025-09-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00113,2025-09-30,Manufactura,Pago a proveedores,Pago a proveedores de 09-2025
+MAN-00114,2025-09-30,Manufactura,Inversión,Inversión en activo fijo de 09-2025
+MAN-00115,2025-09-30,Manufactura,Depreciación,Depreciación de 09-2025
+MAN-00116,2025-09-30,Manufactura,Intereses,Intereses de 09-2025
+MAN-00117,2025-09-30,Manufactura,Amortización de deuda,Cuota de capital de 09-2025
+MAN-00118,2025-09-30,Manufactura,Impuesto,Impuesto a la renta devengado de 09-2025
+MAN-00119,2025-10-31,Manufactura,Venta,Facturación de 10-2025
+MAN-00120,2025-10-31,Manufactura,Cobranza,Cobranza de 10-2025
+MAN-00121,2025-10-31,Manufactura,Compra,Compra de materiales de 10-2025
+MAN-00122,2025-10-31,Manufactura,Consumo,Consumo de materiales de 10-2025
+MAN-00123,2025-10-31,Manufactura,Gasto,Servicios y gastos de 10-2025
+MAN-00124,2025-10-31,Manufactura,Remuneraciones,Remuneraciones de 10-2025
+MAN-00125,2025-10-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00126,2025-10-31,Manufactura,Pago a proveedores,Pago a proveedores de 10-2025
+MAN-00127,2025-10-31,Manufactura,Inversión,Inversión en activo fijo de 10-2025
+MAN-00128,2025-10-31,Manufactura,Depreciación,Depreciación de 10-2025
+MAN-00129,2025-10-31,Manufactura,Intereses,Intereses de 10-2025
+MAN-00130,2025-10-31,Manufactura,Amortización de deuda,Cuota de capital de 10-2025
+MAN-00131,2025-10-31,Manufactura,Impuesto,Impuesto a la renta devengado de 10-2025
+MAN-00132,2025-11-30,Manufactura,Venta,Facturación de 11-2025
+MAN-00133,2025-11-30,Manufactura,Cobranza,Cobranza de 11-2025
+MAN-00134,2025-11-30,Manufactura,Compra,Compra de materiales de 11-2025
+MAN-00135,2025-11-30,Manufactura,Consumo,Consumo de materiales de 11-2025
+MAN-00136,2025-11-30,Manufactura,Gasto,Servicios y gastos de 11-2025
+MAN-00137,2025-11-30,Manufactura,Remuneraciones,Remuneraciones de 11-2025
+MAN-00138,2025-11-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00139,2025-11-30,Manufactura,Pago a proveedores,Pago a proveedores de 11-2025
+MAN-00140,2025-11-30,Manufactura,Inversión,Inversión en activo fijo de 11-2025
+MAN-00141,2025-11-30,Manufactura,Depreciación,Depreciación de 11-2025
+MAN-00142,2025-11-30,Manufactura,Intereses,Intereses de 11-2025
+MAN-00143,2025-11-30,Manufactura,Amortización de deuda,Cuota de capital de 11-2025
+MAN-00144,2025-11-30,Manufactura,Impuesto,Impuesto a la renta devengado de 11-2025
+MAN-00145,2025-12-31,Manufactura,Venta,Facturación de 12-2025
+MAN-00146,2025-12-31,Manufactura,Cobranza,Cobranza de 12-2025
+MAN-00147,2025-12-31,Manufactura,Compra,Compra de materiales de 12-2025
+MAN-00148,2025-12-31,Manufactura,Consumo,Consumo de materiales de 12-2025
+MAN-00149,2025-12-31,Manufactura,Gasto,Servicios y gastos de 12-2025
+MAN-00150,2025-12-31,Manufactura,Remuneraciones,Remuneraciones de 12-2025
+MAN-00151,2025-12-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00152,2025-12-31,Manufactura,Pago a proveedores,Pago a proveedores de 12-2025
+MAN-00153,2025-12-31,Manufactura,Inversión,Inversión en activo fijo de 12-2025
+MAN-00154,2025-12-31,Manufactura,Depreciación,Depreciación de 12-2025
+MAN-00155,2025-12-31,Manufactura,Intereses,Intereses de 12-2025
+MAN-00156,2025-12-31,Manufactura,Amortización de deuda,Cuota de capital de 12-2025
+MAN-00157,2025-12-31,Manufactura,Impuesto,Impuesto a la renta devengado de 12-2025
+MAN-00158,2025-12-31,Manufactura,Cierre,Cierre de resultados 2025
+MAN-00159,2026-01-02,Manufactura,Traspaso,Traspaso del resultado 2025
+MAN-00160,2026-01-31,Manufactura,Venta,Facturación de 01-2026
+MAN-00161,2026-01-31,Manufactura,Cobranza,Cobranza de 01-2026
+MAN-00162,2026-01-31,Manufactura,Compra,Compra de materiales de 01-2026
+MAN-00163,2026-01-31,Manufactura,Consumo,Consumo de materiales de 01-2026
+MAN-00164,2026-01-31,Manufactura,Gasto,Servicios y gastos de 01-2026
+MAN-00165,2026-01-31,Manufactura,Remuneraciones,Remuneraciones de 01-2026
+MAN-00166,2026-01-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00167,2026-01-31,Manufactura,Pago a proveedores,Pago a proveedores de 01-2026
+MAN-00168,2026-01-31,Manufactura,Inversión,Inversión en activo fijo de 01-2026
+MAN-00169,2026-01-31,Manufactura,Depreciación,Depreciación de 01-2026
+MAN-00170,2026-01-31,Manufactura,Intereses,Intereses de 01-2026
+MAN-00171,2026-01-31,Manufactura,Amortización de deuda,Cuota de capital de 01-2026
+MAN-00172,2026-01-31,Manufactura,Impuesto,Impuesto a la renta devengado de 01-2026
+MAN-00173,2026-02-28,Manufactura,Venta,Facturación de 02-2026
+MAN-00174,2026-02-28,Manufactura,Cobranza,Cobranza de 02-2026
+MAN-00175,2026-02-28,Manufactura,Compra,Compra de materiales de 02-2026
+MAN-00176,2026-02-28,Manufactura,Consumo,Consumo de materiales de 02-2026
+MAN-00177,2026-02-28,Manufactura,Gasto,Servicios y gastos de 02-2026
+MAN-00178,2026-02-28,Manufactura,Remuneraciones,Remuneraciones de 02-2026
+MAN-00179,2026-02-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00180,2026-02-28,Manufactura,Pago a proveedores,Pago a proveedores de 02-2026
+MAN-00181,2026-02-28,Manufactura,Inversión,Inversión en activo fijo de 02-2026
+MAN-00182,2026-02-28,Manufactura,Depreciación,Depreciación de 02-2026
+MAN-00183,2026-02-28,Manufactura,Intereses,Intereses de 02-2026
+MAN-00184,2026-02-28,Manufactura,Amortización de deuda,Cuota de capital de 02-2026
+MAN-00185,2026-02-28,Manufactura,Impuesto,Impuesto a la renta devengado de 02-2026
+MAN-00186,2026-03-31,Manufactura,Venta,Facturación de 03-2026
+MAN-00187,2026-03-31,Manufactura,Cobranza,Cobranza de 03-2026
+MAN-00188,2026-03-31,Manufactura,Compra,Compra de materiales de 03-2026
+MAN-00189,2026-03-31,Manufactura,Consumo,Consumo de materiales de 03-2026
+MAN-00190,2026-03-31,Manufactura,Gasto,Servicios y gastos de 03-2026
+MAN-00191,2026-03-31,Manufactura,Remuneraciones,Remuneraciones de 03-2026
+MAN-00192,2026-03-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00193,2026-03-31,Manufactura,Pago a proveedores,Pago a proveedores de 03-2026
+MAN-00194,2026-03-31,Manufactura,Inversión,Inversión en activo fijo de 03-2026
+MAN-00195,2026-03-31,Manufactura,Depreciación,Depreciación de 03-2026
+MAN-00196,2026-03-31,Manufactura,Intereses,Intereses de 03-2026
+MAN-00197,2026-03-31,Manufactura,Amortización de deuda,Cuota de capital de 03-2026
+MAN-00198,2026-03-31,Manufactura,Impuesto,Impuesto a la renta devengado de 03-2026
+MAN-00199,2026-04-30,Manufactura,Venta,Facturación de 04-2026
+MAN-00200,2026-04-30,Manufactura,Cobranza,Cobranza de 04-2026
+MAN-00201,2026-04-30,Manufactura,Compra,Compra de materiales de 04-2026
+MAN-00202,2026-04-30,Manufactura,Consumo,Consumo de materiales de 04-2026
+MAN-00203,2026-04-30,Manufactura,Gasto,Servicios y gastos de 04-2026
+MAN-00204,2026-04-30,Manufactura,Remuneraciones,Remuneraciones de 04-2026
+MAN-00205,2026-04-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00206,2026-04-30,Manufactura,Pago a proveedores,Pago a proveedores de 04-2026
+MAN-00207,2026-04-30,Manufactura,Inversión,Inversión en activo fijo de 04-2026
+MAN-00208,2026-04-30,Manufactura,Depreciación,Depreciación de 04-2026
+MAN-00209,2026-04-30,Manufactura,Intereses,Intereses de 04-2026
+MAN-00210,2026-04-30,Manufactura,Amortización de deuda,Cuota de capital de 04-2026
+MAN-00211,2026-04-30,Manufactura,Impuesto,Impuesto a la renta devengado de 04-2026
+MAN-00212,2026-04-30,Manufactura,Pago de impuesto,Pago del impuesto a la renta 2025
+MAN-00213,2026-05-31,Manufactura,Venta,Facturación de 05-2026
+MAN-00214,2026-05-31,Manufactura,Cobranza,Cobranza de 05-2026
+MAN-00215,2026-05-31,Manufactura,Compra,Compra de materiales de 05-2026
+MAN-00216,2026-05-31,Manufactura,Consumo,Consumo de materiales de 05-2026
+MAN-00217,2026-05-31,Manufactura,Gasto,Servicios y gastos de 05-2026
+MAN-00218,2026-05-31,Manufactura,Remuneraciones,Remuneraciones de 05-2026
+MAN-00219,2026-05-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00220,2026-05-31,Manufactura,Pago a proveedores,Pago a proveedores de 05-2026
+MAN-00221,2026-05-31,Manufactura,Inversión,Inversión en activo fijo de 05-2026
+MAN-00222,2026-05-31,Manufactura,Depreciación,Depreciación de 05-2026
+MAN-00223,2026-05-31,Manufactura,Intereses,Intereses de 05-2026
+MAN-00224,2026-05-31,Manufactura,Amortización de deuda,Cuota de capital de 05-2026
+MAN-00225,2026-05-31,Manufactura,Impuesto,Impuesto a la renta devengado de 05-2026
+MAN-00226,2026-06-30,Manufactura,Venta,Facturación de 06-2026
+MAN-00227,2026-06-30,Manufactura,Cobranza,Cobranza de 06-2026
+MAN-00228,2026-06-30,Manufactura,Compra,Compra de materiales de 06-2026
+MAN-00229,2026-06-30,Manufactura,Consumo,Consumo de materiales de 06-2026
+MAN-00230,2026-06-30,Manufactura,Gasto,Servicios y gastos de 06-2026
+MAN-00231,2026-06-30,Manufactura,Remuneraciones,Remuneraciones de 06-2026
+MAN-00232,2026-06-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00233,2026-06-30,Manufactura,Pago a proveedores,Pago a proveedores de 06-2026
+MAN-00234,2026-06-30,Manufactura,Inversión,Inversión en activo fijo de 06-2026
+MAN-00235,2026-06-30,Manufactura,Depreciación,Depreciación de 06-2026
+MAN-00236,2026-06-30,Manufactura,Intereses,Intereses de 06-2026
+MAN-00237,2026-06-30,Manufactura,Amortización de deuda,Cuota de capital de 06-2026
+MAN-00238,2026-06-30,Manufactura,Impuesto,Impuesto a la renta devengado de 06-2026
+MAN-00239,2026-07-31,Manufactura,Venta,Facturación de 07-2026
+MAN-00240,2026-07-31,Manufactura,Cobranza,Cobranza de 07-2026
+MAN-00241,2026-07-31,Manufactura,Compra,Compra de materiales de 07-2026
+MAN-00242,2026-07-31,Manufactura,Consumo,Consumo de materiales de 07-2026
+MAN-00243,2026-07-31,Manufactura,Gasto,Servicios y gastos de 07-2026
+MAN-00244,2026-07-31,Manufactura,Remuneraciones,Remuneraciones de 07-2026
+MAN-00245,2026-07-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00246,2026-07-31,Manufactura,Pago a proveedores,Pago a proveedores de 07-2026
+MAN-00247,2026-07-31,Manufactura,Inversión,Inversión en activo fijo de 07-2026
+MAN-00248,2026-07-31,Manufactura,Depreciación,Depreciación de 07-2026
+MAN-00249,2026-07-31,Manufactura,Intereses,Intereses de 07-2026
+MAN-00250,2026-07-31,Manufactura,Amortización de deuda,Cuota de capital de 07-2026
+MAN-00251,2026-07-31,Manufactura,Impuesto,Impuesto a la renta devengado de 07-2026
+MAN-00252,2026-08-31,Manufactura,Venta,Facturación de 08-2026
+MAN-00253,2026-08-31,Manufactura,Cobranza,Cobranza de 08-2026
+MAN-00254,2026-08-31,Manufactura,Compra,Compra de materiales de 08-2026
+MAN-00255,2026-08-31,Manufactura,Consumo,Consumo de materiales de 08-2026
+MAN-00256,2026-08-31,Manufactura,Gasto,Servicios y gastos de 08-2026
+MAN-00257,2026-08-31,Manufactura,Remuneraciones,Remuneraciones de 08-2026
+MAN-00258,2026-08-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00259,2026-08-31,Manufactura,Pago a proveedores,Pago a proveedores de 08-2026
+MAN-00260,2026-08-31,Manufactura,Inversión,Inversión en activo fijo de 08-2026
+MAN-00261,2026-08-31,Manufactura,Depreciación,Depreciación de 08-2026
+MAN-00262,2026-08-31,Manufactura,Intereses,Intereses de 08-2026
+MAN-00263,2026-08-31,Manufactura,Amortización de deuda,Cuota de capital de 08-2026
+MAN-00264,2026-08-31,Manufactura,Impuesto,Impuesto a la renta devengado de 08-2026
+MAN-00265,2026-09-30,Manufactura,Venta,Facturación de 09-2026
+MAN-00266,2026-09-30,Manufactura,Cobranza,Cobranza de 09-2026
+MAN-00267,2026-09-30,Manufactura,Compra,Compra de materiales de 09-2026
+MAN-00268,2026-09-30,Manufactura,Consumo,Consumo de materiales de 09-2026
+MAN-00269,2026-09-30,Manufactura,Gasto,Servicios y gastos de 09-2026
+MAN-00270,2026-09-30,Manufactura,Remuneraciones,Remuneraciones de 09-2026
+MAN-00271,2026-09-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00272,2026-09-30,Manufactura,Pago a proveedores,Pago a proveedores de 09-2026
+MAN-00273,2026-09-30,Manufactura,Inversión,Inversión en activo fijo de 09-2026
+MAN-00274,2026-09-30,Manufactura,Depreciación,Depreciación de 09-2026
+MAN-00275,2026-09-30,Manufactura,Intereses,Intereses de 09-2026
+MAN-00276,2026-09-30,Manufactura,Amortización de deuda,Cuota de capital de 09-2026
+MAN-00277,2026-09-30,Manufactura,Impuesto,Impuesto a la renta devengado de 09-2026
+MAN-00278,2026-10-31,Manufactura,Venta,Facturación de 10-2026
+MAN-00279,2026-10-31,Manufactura,Cobranza,Cobranza de 10-2026
+MAN-00280,2026-10-31,Manufactura,Compra,Compra de materiales de 10-2026
+MAN-00281,2026-10-31,Manufactura,Consumo,Consumo de materiales de 10-2026
+MAN-00282,2026-10-31,Manufactura,Gasto,Servicios y gastos de 10-2026
+MAN-00283,2026-10-31,Manufactura,Remuneraciones,Remuneraciones de 10-2026
+MAN-00284,2026-10-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00285,2026-10-31,Manufactura,Pago a proveedores,Pago a proveedores de 10-2026
+MAN-00286,2026-10-31,Manufactura,Inversión,Inversión en activo fijo de 10-2026
+MAN-00287,2026-10-31,Manufactura,Depreciación,Depreciación de 10-2026
+MAN-00288,2026-10-31,Manufactura,Intereses,Intereses de 10-2026
+MAN-00289,2026-10-31,Manufactura,Amortización de deuda,Cuota de capital de 10-2026
+MAN-00290,2026-10-31,Manufactura,Impuesto,Impuesto a la renta devengado de 10-2026
+MAN-00291,2026-11-30,Manufactura,Venta,Facturación de 11-2026
+MAN-00292,2026-11-30,Manufactura,Cobranza,Cobranza de 11-2026
+MAN-00293,2026-11-30,Manufactura,Compra,Compra de materiales de 11-2026
+MAN-00294,2026-11-30,Manufactura,Consumo,Consumo de materiales de 11-2026
+MAN-00295,2026-11-30,Manufactura,Gasto,Servicios y gastos de 11-2026
+MAN-00296,2026-11-30,Manufactura,Remuneraciones,Remuneraciones de 11-2026
+MAN-00297,2026-11-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00298,2026-11-30,Manufactura,Pago a proveedores,Pago a proveedores de 11-2026
+MAN-00299,2026-11-30,Manufactura,Inversión,Inversión en activo fijo de 11-2026
+MAN-00300,2026-11-30,Manufactura,Depreciación,Depreciación de 11-2026
+MAN-00301,2026-11-30,Manufactura,Intereses,Intereses de 11-2026
+MAN-00302,2026-11-30,Manufactura,Amortización de deuda,Cuota de capital de 11-2026
+MAN-00303,2026-11-30,Manufactura,Impuesto,Impuesto a la renta devengado de 11-2026
+MAN-00304,2026-12-31,Manufactura,Venta,Facturación de 12-2026
+MAN-00305,2026-12-31,Manufactura,Cobranza,Cobranza de 12-2026
+MAN-00306,2026-12-31,Manufactura,Compra,Compra de materiales de 12-2026
+MAN-00307,2026-12-31,Manufactura,Consumo,Consumo de materiales de 12-2026
+MAN-00308,2026-12-31,Manufactura,Gasto,Servicios y gastos de 12-2026
+MAN-00309,2026-12-31,Manufactura,Remuneraciones,Remuneraciones de 12-2026
+MAN-00310,2026-12-05,Manufactura,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+MAN-00311,2026-12-31,Manufactura,Pago a proveedores,Pago a proveedores de 12-2026
+MAN-00312,2026-12-31,Manufactura,Inversión,Inversión en activo fijo de 12-2026
+MAN-00313,2026-12-31,Manufactura,Depreciación,Depreciación de 12-2026
+MAN-00314,2026-12-31,Manufactura,Intereses,Intereses de 12-2026
+MAN-00315,2026-12-31,Manufactura,Amortización de deuda,Cuota de capital de 12-2026
+MAN-00316,2026-12-31,Manufactura,Impuesto,Impuesto a la renta devengado de 12-2026
+MAN-00317,2026-12-31,Manufactura,Cierre,Cierre de resultados 2026
+ENE-00318,2025-01-01,Energia,Apertura,Balance de apertura al 1 de enero de 2025
+ENE-00319,2025-01-31,Energia,Venta,Facturación de 01-2025
+ENE-00320,2025-01-31,Energia,Cobranza,Cobranza de 01-2025
+ENE-00321,2025-01-31,Energia,Compra,Compra de materiales de 01-2025
+ENE-00322,2025-01-31,Energia,Consumo,Consumo de materiales de 01-2025
+ENE-00323,2025-01-31,Energia,Gasto,Servicios y gastos de 01-2025
+ENE-00324,2025-01-31,Energia,Remuneraciones,Remuneraciones de 01-2025
+ENE-00325,2025-01-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00326,2025-01-31,Energia,Pago a proveedores,Pago a proveedores de 01-2025
+ENE-00327,2025-01-31,Energia,Inversión,Inversión en activo fijo de 01-2025
+ENE-00328,2025-01-31,Energia,Depreciación,Depreciación de 01-2025
+ENE-00329,2025-01-31,Energia,Intereses,Intereses de 01-2025
+ENE-00330,2025-01-31,Energia,Amortización de deuda,Cuota de capital de 01-2025
+ENE-00331,2025-01-31,Energia,Impuesto,Impuesto a la renta devengado de 01-2025
+ENE-00332,2025-02-28,Energia,Venta,Facturación de 02-2025
+ENE-00333,2025-02-28,Energia,Cobranza,Cobranza de 02-2025
+ENE-00334,2025-02-28,Energia,Compra,Compra de materiales de 02-2025
+ENE-00335,2025-02-28,Energia,Consumo,Consumo de materiales de 02-2025
+ENE-00336,2025-02-28,Energia,Gasto,Servicios y gastos de 02-2025
+ENE-00337,2025-02-28,Energia,Remuneraciones,Remuneraciones de 02-2025
+ENE-00338,2025-02-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00339,2025-02-28,Energia,Pago a proveedores,Pago a proveedores de 02-2025
+ENE-00340,2025-02-28,Energia,Inversión,Inversión en activo fijo de 02-2025
+ENE-00341,2025-02-28,Energia,Depreciación,Depreciación de 02-2025
+ENE-00342,2025-02-28,Energia,Intereses,Intereses de 02-2025
+ENE-00343,2025-02-28,Energia,Amortización de deuda,Cuota de capital de 02-2025
+ENE-00344,2025-02-28,Energia,Impuesto,Impuesto a la renta devengado de 02-2025
+ENE-00345,2025-03-31,Energia,Venta,Facturación de 03-2025
+ENE-00346,2025-03-31,Energia,Cobranza,Cobranza de 03-2025
+ENE-00347,2025-03-31,Energia,Compra,Compra de materiales de 03-2025
+ENE-00348,2025-03-31,Energia,Consumo,Consumo de materiales de 03-2025
+ENE-00349,2025-03-31,Energia,Gasto,Servicios y gastos de 03-2025
+ENE-00350,2025-03-31,Energia,Remuneraciones,Remuneraciones de 03-2025
+ENE-00351,2025-03-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00352,2025-03-31,Energia,Pago a proveedores,Pago a proveedores de 03-2025
+ENE-00353,2025-03-31,Energia,Inversión,Inversión en activo fijo de 03-2025
+ENE-00354,2025-03-31,Energia,Depreciación,Depreciación de 03-2025
+ENE-00355,2025-03-31,Energia,Intereses,Intereses de 03-2025
+ENE-00356,2025-03-31,Energia,Amortización de deuda,Cuota de capital de 03-2025
+ENE-00357,2025-03-31,Energia,Impuesto,Impuesto a la renta devengado de 03-2025
+ENE-00358,2025-04-30,Energia,Venta,Facturación de 04-2025
+ENE-00359,2025-04-30,Energia,Cobranza,Cobranza de 04-2025
+ENE-00360,2025-04-30,Energia,Compra,Compra de materiales de 04-2025
+ENE-00361,2025-04-30,Energia,Consumo,Consumo de materiales de 04-2025
+ENE-00362,2025-04-30,Energia,Gasto,Servicios y gastos de 04-2025
+ENE-00363,2025-04-30,Energia,Remuneraciones,Remuneraciones de 04-2025
+ENE-00364,2025-04-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00365,2025-04-30,Energia,Pago a proveedores,Pago a proveedores de 04-2025
+ENE-00366,2025-04-30,Energia,Inversión,Inversión en activo fijo de 04-2025
+ENE-00367,2025-04-30,Energia,Depreciación,Depreciación de 04-2025
+ENE-00368,2025-04-30,Energia,Intereses,Intereses de 04-2025
+ENE-00369,2025-04-30,Energia,Amortización de deuda,Cuota de capital de 04-2025
+ENE-00370,2025-04-30,Energia,Impuesto,Impuesto a la renta devengado de 04-2025
+ENE-00371,2025-05-31,Energia,Venta,Facturación de 05-2025
+ENE-00372,2025-05-31,Energia,Cobranza,Cobranza de 05-2025
+ENE-00373,2025-05-31,Energia,Compra,Compra de materiales de 05-2025
+ENE-00374,2025-05-31,Energia,Consumo,Consumo de materiales de 05-2025
+ENE-00375,2025-05-31,Energia,Gasto,Servicios y gastos de 05-2025
+ENE-00376,2025-05-31,Energia,Remuneraciones,Remuneraciones de 05-2025
+ENE-00377,2025-05-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00378,2025-05-31,Energia,Pago a proveedores,Pago a proveedores de 05-2025
+ENE-00379,2025-05-31,Energia,Inversión,Inversión en activo fijo de 05-2025
+ENE-00380,2025-05-31,Energia,Depreciación,Depreciación de 05-2025
+ENE-00381,2025-05-31,Energia,Intereses,Intereses de 05-2025
+ENE-00382,2025-05-31,Energia,Amortización de deuda,Cuota de capital de 05-2025
+ENE-00383,2025-05-31,Energia,Impuesto,Impuesto a la renta devengado de 05-2025
+ENE-00384,2025-06-30,Energia,Venta,Facturación de 06-2025
+ENE-00385,2025-06-30,Energia,Cobranza,Cobranza de 06-2025
+ENE-00386,2025-06-30,Energia,Compra,Compra de materiales de 06-2025
+ENE-00387,2025-06-30,Energia,Consumo,Consumo de materiales de 06-2025
+ENE-00388,2025-06-30,Energia,Gasto,Servicios y gastos de 06-2025
+ENE-00389,2025-06-30,Energia,Remuneraciones,Remuneraciones de 06-2025
+ENE-00390,2025-06-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00391,2025-06-30,Energia,Pago a proveedores,Pago a proveedores de 06-2025
+ENE-00392,2025-06-30,Energia,Inversión,Inversión en activo fijo de 06-2025
+ENE-00393,2025-06-30,Energia,Depreciación,Depreciación de 06-2025
+ENE-00394,2025-06-30,Energia,Intereses,Intereses de 06-2025
+ENE-00395,2025-06-30,Energia,Amortización de deuda,Cuota de capital de 06-2025
+ENE-00396,2025-06-30,Energia,Impuesto,Impuesto a la renta devengado de 06-2025
+ENE-00397,2025-07-31,Energia,Venta,Facturación de 07-2025
+ENE-00398,2025-07-31,Energia,Cobranza,Cobranza de 07-2025
+ENE-00399,2025-07-31,Energia,Compra,Compra de materiales de 07-2025
+ENE-00400,2025-07-31,Energia,Consumo,Consumo de materiales de 07-2025
+ENE-00401,2025-07-31,Energia,Gasto,Servicios y gastos de 07-2025
+ENE-00402,2025-07-31,Energia,Remuneraciones,Remuneraciones de 07-2025
+ENE-00403,2025-07-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00404,2025-07-31,Energia,Pago a proveedores,Pago a proveedores de 07-2025
+ENE-00405,2025-07-31,Energia,Inversión,Inversión en activo fijo de 07-2025
+ENE-00406,2025-07-31,Energia,Depreciación,Depreciación de 07-2025
+ENE-00407,2025-07-31,Energia,Intereses,Intereses de 07-2025
+ENE-00408,2025-07-31,Energia,Amortización de deuda,Cuota de capital de 07-2025
+ENE-00409,2025-07-31,Energia,Impuesto,Impuesto a la renta devengado de 07-2025
+ENE-00410,2025-08-31,Energia,Venta,Facturación de 08-2025
+ENE-00411,2025-08-31,Energia,Cobranza,Cobranza de 08-2025
+ENE-00412,2025-08-31,Energia,Compra,Compra de materiales de 08-2025
+ENE-00413,2025-08-31,Energia,Consumo,Consumo de materiales de 08-2025
+ENE-00414,2025-08-31,Energia,Gasto,Servicios y gastos de 08-2025
+ENE-00415,2025-08-31,Energia,Remuneraciones,Remuneraciones de 08-2025
+ENE-00416,2025-08-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00417,2025-08-31,Energia,Pago a proveedores,Pago a proveedores de 08-2025
+ENE-00418,2025-08-31,Energia,Inversión,Inversión en activo fijo de 08-2025
+ENE-00419,2025-08-31,Energia,Depreciación,Depreciación de 08-2025
+ENE-00420,2025-08-31,Energia,Intereses,Intereses de 08-2025
+ENE-00421,2025-08-31,Energia,Amortización de deuda,Cuota de capital de 08-2025
+ENE-00422,2025-08-31,Energia,Impuesto,Impuesto a la renta devengado de 08-2025
+ENE-00423,2025-09-30,Energia,Venta,Facturación de 09-2025
+ENE-00424,2025-09-30,Energia,Cobranza,Cobranza de 09-2025
+ENE-00425,2025-09-30,Energia,Compra,Compra de materiales de 09-2025
+ENE-00426,2025-09-30,Energia,Consumo,Consumo de materiales de 09-2025
+ENE-00427,2025-09-30,Energia,Gasto,Servicios y gastos de 09-2025
+ENE-00428,2025-09-30,Energia,Remuneraciones,Remuneraciones de 09-2025
+ENE-00429,2025-09-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00430,2025-09-30,Energia,Pago a proveedores,Pago a proveedores de 09-2025
+ENE-00431,2025-09-30,Energia,Inversión,Inversión en activo fijo de 09-2025
+ENE-00432,2025-09-30,Energia,Depreciación,Depreciación de 09-2025
+ENE-00433,2025-09-30,Energia,Intereses,Intereses de 09-2025
+ENE-00434,2025-09-30,Energia,Amortización de deuda,Cuota de capital de 09-2025
+ENE-00435,2025-09-30,Energia,Impuesto,Impuesto a la renta devengado de 09-2025
+ENE-00436,2025-10-31,Energia,Venta,Facturación de 10-2025
+ENE-00437,2025-10-31,Energia,Cobranza,Cobranza de 10-2025
+ENE-00438,2025-10-31,Energia,Compra,Compra de materiales de 10-2025
+ENE-00439,2025-10-31,Energia,Consumo,Consumo de materiales de 10-2025
+ENE-00440,2025-10-31,Energia,Gasto,Servicios y gastos de 10-2025
+ENE-00441,2025-10-31,Energia,Remuneraciones,Remuneraciones de 10-2025
+ENE-00442,2025-10-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00443,2025-10-31,Energia,Pago a proveedores,Pago a proveedores de 10-2025
+ENE-00444,2025-10-31,Energia,Inversión,Inversión en activo fijo de 10-2025
+ENE-00445,2025-10-31,Energia,Depreciación,Depreciación de 10-2025
+ENE-00446,2025-10-31,Energia,Intereses,Intereses de 10-2025
+ENE-00447,2025-10-31,Energia,Amortización de deuda,Cuota de capital de 10-2025
+ENE-00448,2025-10-31,Energia,Impuesto,Impuesto a la renta devengado de 10-2025
+ENE-00449,2025-11-30,Energia,Venta,Facturación de 11-2025
+ENE-00450,2025-11-30,Energia,Cobranza,Cobranza de 11-2025
+ENE-00451,2025-11-30,Energia,Compra,Compra de materiales de 11-2025
+ENE-00452,2025-11-30,Energia,Consumo,Consumo de materiales de 11-2025
+ENE-00453,2025-11-30,Energia,Gasto,Servicios y gastos de 11-2025
+ENE-00454,2025-11-30,Energia,Remuneraciones,Remuneraciones de 11-2025
+ENE-00455,2025-11-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00456,2025-11-30,Energia,Pago a proveedores,Pago a proveedores de 11-2025
+ENE-00457,2025-11-30,Energia,Inversión,Inversión en activo fijo de 11-2025
+ENE-00458,2025-11-30,Energia,Depreciación,Depreciación de 11-2025
+ENE-00459,2025-11-30,Energia,Intereses,Intereses de 11-2025
+ENE-00460,2025-11-30,Energia,Amortización de deuda,Cuota de capital de 11-2025
+ENE-00461,2025-11-30,Energia,Impuesto,Impuesto a la renta devengado de 11-2025
+ENE-00462,2025-12-31,Energia,Venta,Facturación de 12-2025
+ENE-00463,2025-12-31,Energia,Cobranza,Cobranza de 12-2025
+ENE-00464,2025-12-31,Energia,Compra,Compra de materiales de 12-2025
+ENE-00465,2025-12-31,Energia,Consumo,Consumo de materiales de 12-2025
+ENE-00466,2025-12-31,Energia,Gasto,Servicios y gastos de 12-2025
+ENE-00467,2025-12-31,Energia,Remuneraciones,Remuneraciones de 12-2025
+ENE-00468,2025-12-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00469,2025-12-31,Energia,Pago a proveedores,Pago a proveedores de 12-2025
+ENE-00470,2025-12-31,Energia,Inversión,Inversión en activo fijo de 12-2025
+ENE-00471,2025-12-31,Energia,Depreciación,Depreciación de 12-2025
+ENE-00472,2025-12-31,Energia,Intereses,Intereses de 12-2025
+ENE-00473,2025-12-31,Energia,Amortización de deuda,Cuota de capital de 12-2025
+ENE-00474,2025-12-31,Energia,Impuesto,Impuesto a la renta devengado de 12-2025
+ENE-00475,2025-12-31,Energia,Cierre,Cierre de resultados 2025
+ENE-00476,2026-01-02,Energia,Traspaso,Traspaso del resultado 2025
+ENE-00477,2026-01-31,Energia,Venta,Facturación de 01-2026
+ENE-00478,2026-01-31,Energia,Cobranza,Cobranza de 01-2026
+ENE-00479,2026-01-31,Energia,Compra,Compra de materiales de 01-2026
+ENE-00480,2026-01-31,Energia,Consumo,Consumo de materiales de 01-2026
+ENE-00481,2026-01-31,Energia,Gasto,Servicios y gastos de 01-2026
+ENE-00482,2026-01-31,Energia,Remuneraciones,Remuneraciones de 01-2026
+ENE-00483,2026-01-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00484,2026-01-31,Energia,Pago a proveedores,Pago a proveedores de 01-2026
+ENE-00485,2026-01-31,Energia,Inversión,Inversión en activo fijo de 01-2026
+ENE-00486,2026-01-31,Energia,Depreciación,Depreciación de 01-2026
+ENE-00487,2026-01-31,Energia,Intereses,Intereses de 01-2026
+ENE-00488,2026-01-31,Energia,Amortización de deuda,Cuota de capital de 01-2026
+ENE-00489,2026-01-31,Energia,Impuesto,Impuesto a la renta devengado de 01-2026
+ENE-00490,2026-02-28,Energia,Venta,Facturación de 02-2026
+ENE-00491,2026-02-28,Energia,Cobranza,Cobranza de 02-2026
+ENE-00492,2026-02-28,Energia,Compra,Compra de materiales de 02-2026
+ENE-00493,2026-02-28,Energia,Consumo,Consumo de materiales de 02-2026
+ENE-00494,2026-02-28,Energia,Gasto,Servicios y gastos de 02-2026
+ENE-00495,2026-02-28,Energia,Remuneraciones,Remuneraciones de 02-2026
+ENE-00496,2026-02-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00497,2026-02-28,Energia,Pago a proveedores,Pago a proveedores de 02-2026
+ENE-00498,2026-02-28,Energia,Inversión,Inversión en activo fijo de 02-2026
+ENE-00499,2026-02-28,Energia,Depreciación,Depreciación de 02-2026
+ENE-00500,2026-02-28,Energia,Intereses,Intereses de 02-2026
+ENE-00501,2026-02-28,Energia,Amortización de deuda,Cuota de capital de 02-2026
+ENE-00502,2026-02-28,Energia,Impuesto,Impuesto a la renta devengado de 02-2026
+ENE-00503,2026-03-31,Energia,Venta,Facturación de 03-2026
+ENE-00504,2026-03-31,Energia,Cobranza,Cobranza de 03-2026
+ENE-00505,2026-03-31,Energia,Compra,Compra de materiales de 03-2026
+ENE-00506,2026-03-31,Energia,Consumo,Consumo de materiales de 03-2026
+ENE-00507,2026-03-31,Energia,Gasto,Servicios y gastos de 03-2026
+ENE-00508,2026-03-31,Energia,Remuneraciones,Remuneraciones de 03-2026
+ENE-00509,2026-03-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00510,2026-03-31,Energia,Pago a proveedores,Pago a proveedores de 03-2026
+ENE-00511,2026-03-31,Energia,Inversión,Inversión en activo fijo de 03-2026
+ENE-00512,2026-03-31,Energia,Depreciación,Depreciación de 03-2026
+ENE-00513,2026-03-31,Energia,Intereses,Intereses de 03-2026
+ENE-00514,2026-03-31,Energia,Amortización de deuda,Cuota de capital de 03-2026
+ENE-00515,2026-03-31,Energia,Impuesto,Impuesto a la renta devengado de 03-2026
+ENE-00516,2026-04-30,Energia,Venta,Facturación de 04-2026
+ENE-00517,2026-04-30,Energia,Cobranza,Cobranza de 04-2026
+ENE-00518,2026-04-30,Energia,Compra,Compra de materiales de 04-2026
+ENE-00519,2026-04-30,Energia,Consumo,Consumo de materiales de 04-2026
+ENE-00520,2026-04-30,Energia,Gasto,Servicios y gastos de 04-2026
+ENE-00521,2026-04-30,Energia,Remuneraciones,Remuneraciones de 04-2026
+ENE-00522,2026-04-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00523,2026-04-30,Energia,Pago a proveedores,Pago a proveedores de 04-2026
+ENE-00524,2026-04-30,Energia,Inversión,Inversión en activo fijo de 04-2026
+ENE-00525,2026-04-30,Energia,Depreciación,Depreciación de 04-2026
+ENE-00526,2026-04-30,Energia,Intereses,Intereses de 04-2026
+ENE-00527,2026-04-30,Energia,Amortización de deuda,Cuota de capital de 04-2026
+ENE-00528,2026-04-30,Energia,Impuesto,Impuesto a la renta devengado de 04-2026
+ENE-00529,2026-04-30,Energia,Pago de impuesto,Pago del impuesto a la renta 2025
+ENE-00530,2026-05-31,Energia,Venta,Facturación de 05-2026
+ENE-00531,2026-05-31,Energia,Cobranza,Cobranza de 05-2026
+ENE-00532,2026-05-31,Energia,Compra,Compra de materiales de 05-2026
+ENE-00533,2026-05-31,Energia,Consumo,Consumo de materiales de 05-2026
+ENE-00534,2026-05-31,Energia,Gasto,Servicios y gastos de 05-2026
+ENE-00535,2026-05-31,Energia,Remuneraciones,Remuneraciones de 05-2026
+ENE-00536,2026-05-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00537,2026-05-31,Energia,Pago a proveedores,Pago a proveedores de 05-2026
+ENE-00538,2026-05-31,Energia,Inversión,Inversión en activo fijo de 05-2026
+ENE-00539,2026-05-31,Energia,Depreciación,Depreciación de 05-2026
+ENE-00540,2026-05-31,Energia,Intereses,Intereses de 05-2026
+ENE-00541,2026-05-31,Energia,Amortización de deuda,Cuota de capital de 05-2026
+ENE-00542,2026-05-31,Energia,Impuesto,Impuesto a la renta devengado de 05-2026
+ENE-00543,2026-06-30,Energia,Venta,Facturación de 06-2026
+ENE-00544,2026-06-30,Energia,Cobranza,Cobranza de 06-2026
+ENE-00545,2026-06-30,Energia,Compra,Compra de materiales de 06-2026
+ENE-00546,2026-06-30,Energia,Consumo,Consumo de materiales de 06-2026
+ENE-00547,2026-06-30,Energia,Gasto,Servicios y gastos de 06-2026
+ENE-00548,2026-06-30,Energia,Remuneraciones,Remuneraciones de 06-2026
+ENE-00549,2026-06-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00550,2026-06-30,Energia,Pago a proveedores,Pago a proveedores de 06-2026
+ENE-00551,2026-06-30,Energia,Inversión,Inversión en activo fijo de 06-2026
+ENE-00552,2026-06-30,Energia,Depreciación,Depreciación de 06-2026
+ENE-00553,2026-06-30,Energia,Intereses,Intereses de 06-2026
+ENE-00554,2026-06-30,Energia,Amortización de deuda,Cuota de capital de 06-2026
+ENE-00555,2026-06-30,Energia,Impuesto,Impuesto a la renta devengado de 06-2026
+ENE-00556,2026-07-31,Energia,Venta,Facturación de 07-2026
+ENE-00557,2026-07-31,Energia,Cobranza,Cobranza de 07-2026
+ENE-00558,2026-07-31,Energia,Compra,Compra de materiales de 07-2026
+ENE-00559,2026-07-31,Energia,Consumo,Consumo de materiales de 07-2026
+ENE-00560,2026-07-31,Energia,Gasto,Servicios y gastos de 07-2026
+ENE-00561,2026-07-31,Energia,Remuneraciones,Remuneraciones de 07-2026
+ENE-00562,2026-07-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00563,2026-07-31,Energia,Pago a proveedores,Pago a proveedores de 07-2026
+ENE-00564,2026-07-31,Energia,Inversión,Inversión en activo fijo de 07-2026
+ENE-00565,2026-07-31,Energia,Depreciación,Depreciación de 07-2026
+ENE-00566,2026-07-31,Energia,Intereses,Intereses de 07-2026
+ENE-00567,2026-07-31,Energia,Amortización de deuda,Cuota de capital de 07-2026
+ENE-00568,2026-07-31,Energia,Impuesto,Impuesto a la renta devengado de 07-2026
+ENE-00569,2026-08-31,Energia,Venta,Facturación de 08-2026
+ENE-00570,2026-08-31,Energia,Cobranza,Cobranza de 08-2026
+ENE-00571,2026-08-31,Energia,Compra,Compra de materiales de 08-2026
+ENE-00572,2026-08-31,Energia,Consumo,Consumo de materiales de 08-2026
+ENE-00573,2026-08-31,Energia,Gasto,Servicios y gastos de 08-2026
+ENE-00574,2026-08-31,Energia,Remuneraciones,Remuneraciones de 08-2026
+ENE-00575,2026-08-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00576,2026-08-31,Energia,Pago a proveedores,Pago a proveedores de 08-2026
+ENE-00577,2026-08-31,Energia,Inversión,Inversión en activo fijo de 08-2026
+ENE-00578,2026-08-31,Energia,Depreciación,Depreciación de 08-2026
+ENE-00579,2026-08-31,Energia,Intereses,Intereses de 08-2026
+ENE-00580,2026-08-31,Energia,Amortización de deuda,Cuota de capital de 08-2026
+ENE-00581,2026-08-31,Energia,Impuesto,Impuesto a la renta devengado de 08-2026
+ENE-00582,2026-09-30,Energia,Venta,Facturación de 09-2026
+ENE-00583,2026-09-30,Energia,Cobranza,Cobranza de 09-2026
+ENE-00584,2026-09-30,Energia,Compra,Compra de materiales de 09-2026
+ENE-00585,2026-09-30,Energia,Consumo,Consumo de materiales de 09-2026
+ENE-00586,2026-09-30,Energia,Gasto,Servicios y gastos de 09-2026
+ENE-00587,2026-09-30,Energia,Remuneraciones,Remuneraciones de 09-2026
+ENE-00588,2026-09-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00589,2026-09-30,Energia,Pago a proveedores,Pago a proveedores de 09-2026
+ENE-00590,2026-09-30,Energia,Inversión,Inversión en activo fijo de 09-2026
+ENE-00591,2026-09-30,Energia,Depreciación,Depreciación de 09-2026
+ENE-00592,2026-09-30,Energia,Intereses,Intereses de 09-2026
+ENE-00593,2026-09-30,Energia,Amortización de deuda,Cuota de capital de 09-2026
+ENE-00594,2026-09-30,Energia,Impuesto,Impuesto a la renta devengado de 09-2026
+ENE-00595,2026-10-31,Energia,Venta,Facturación de 10-2026
+ENE-00596,2026-10-31,Energia,Cobranza,Cobranza de 10-2026
+ENE-00597,2026-10-31,Energia,Compra,Compra de materiales de 10-2026
+ENE-00598,2026-10-31,Energia,Consumo,Consumo de materiales de 10-2026
+ENE-00599,2026-10-31,Energia,Gasto,Servicios y gastos de 10-2026
+ENE-00600,2026-10-31,Energia,Remuneraciones,Remuneraciones de 10-2026
+ENE-00601,2026-10-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00602,2026-10-31,Energia,Pago a proveedores,Pago a proveedores de 10-2026
+ENE-00603,2026-10-31,Energia,Inversión,Inversión en activo fijo de 10-2026
+ENE-00604,2026-10-31,Energia,Depreciación,Depreciación de 10-2026
+ENE-00605,2026-10-31,Energia,Intereses,Intereses de 10-2026
+ENE-00606,2026-10-31,Energia,Amortización de deuda,Cuota de capital de 10-2026
+ENE-00607,2026-10-31,Energia,Impuesto,Impuesto a la renta devengado de 10-2026
+ENE-00608,2026-11-30,Energia,Venta,Facturación de 11-2026
+ENE-00609,2026-11-30,Energia,Cobranza,Cobranza de 11-2026
+ENE-00610,2026-11-30,Energia,Compra,Compra de materiales de 11-2026
+ENE-00611,2026-11-30,Energia,Consumo,Consumo de materiales de 11-2026
+ENE-00612,2026-11-30,Energia,Gasto,Servicios y gastos de 11-2026
+ENE-00613,2026-11-30,Energia,Remuneraciones,Remuneraciones de 11-2026
+ENE-00614,2026-11-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00615,2026-11-30,Energia,Pago a proveedores,Pago a proveedores de 11-2026
+ENE-00616,2026-11-30,Energia,Inversión,Inversión en activo fijo de 11-2026
+ENE-00617,2026-11-30,Energia,Depreciación,Depreciación de 11-2026
+ENE-00618,2026-11-30,Energia,Intereses,Intereses de 11-2026
+ENE-00619,2026-11-30,Energia,Amortización de deuda,Cuota de capital de 11-2026
+ENE-00620,2026-11-30,Energia,Impuesto,Impuesto a la renta devengado de 11-2026
+ENE-00621,2026-12-31,Energia,Venta,Facturación de 12-2026
+ENE-00622,2026-12-31,Energia,Cobranza,Cobranza de 12-2026
+ENE-00623,2026-12-31,Energia,Compra,Compra de materiales de 12-2026
+ENE-00624,2026-12-31,Energia,Consumo,Consumo de materiales de 12-2026
+ENE-00625,2026-12-31,Energia,Gasto,Servicios y gastos de 12-2026
+ENE-00626,2026-12-31,Energia,Remuneraciones,Remuneraciones de 12-2026
+ENE-00627,2026-12-05,Energia,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+ENE-00628,2026-12-31,Energia,Pago a proveedores,Pago a proveedores de 12-2026
+ENE-00629,2026-12-31,Energia,Inversión,Inversión en activo fijo de 12-2026
+ENE-00630,2026-12-31,Energia,Depreciación,Depreciación de 12-2026
+ENE-00631,2026-12-31,Energia,Intereses,Intereses de 12-2026
+ENE-00632,2026-12-31,Energia,Amortización de deuda,Cuota de capital de 12-2026
+ENE-00633,2026-12-31,Energia,Impuesto,Impuesto a la renta devengado de 12-2026
+ENE-00634,2026-12-31,Energia,Cierre,Cierre de resultados 2026
+SAL-00635,2025-01-01,Salud,Apertura,Balance de apertura al 1 de enero de 2025
+SAL-00636,2025-01-31,Salud,Venta,Facturación de 01-2025
+SAL-00637,2025-01-31,Salud,Cobranza,Cobranza de 01-2025
+SAL-00638,2025-01-31,Salud,Compra,Compra de materiales de 01-2025
+SAL-00639,2025-01-31,Salud,Consumo,Consumo de materiales de 01-2025
+SAL-00640,2025-01-31,Salud,Gasto,Servicios y gastos de 01-2025
+SAL-00641,2025-01-31,Salud,Remuneraciones,Remuneraciones de 01-2025
+SAL-00642,2025-01-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00643,2025-01-31,Salud,Pago a proveedores,Pago a proveedores de 01-2025
+SAL-00644,2025-01-31,Salud,Inversión,Inversión en activo fijo de 01-2025
+SAL-00645,2025-01-31,Salud,Depreciación,Depreciación de 01-2025
+SAL-00646,2025-01-31,Salud,Intereses,Intereses de 01-2025
+SAL-00647,2025-01-31,Salud,Amortización de deuda,Cuota de capital de 01-2025
+SAL-00648,2025-01-31,Salud,Impuesto,Impuesto a la renta devengado de 01-2025
+SAL-00649,2025-02-28,Salud,Venta,Facturación de 02-2025
+SAL-00650,2025-02-28,Salud,Cobranza,Cobranza de 02-2025
+SAL-00651,2025-02-28,Salud,Compra,Compra de materiales de 02-2025
+SAL-00652,2025-02-28,Salud,Consumo,Consumo de materiales de 02-2025
+SAL-00653,2025-02-28,Salud,Gasto,Servicios y gastos de 02-2025
+SAL-00654,2025-02-28,Salud,Remuneraciones,Remuneraciones de 02-2025
+SAL-00655,2025-02-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00656,2025-02-28,Salud,Pago a proveedores,Pago a proveedores de 02-2025
+SAL-00657,2025-02-28,Salud,Inversión,Inversión en activo fijo de 02-2025
+SAL-00658,2025-02-28,Salud,Depreciación,Depreciación de 02-2025
+SAL-00659,2025-02-28,Salud,Intereses,Intereses de 02-2025
+SAL-00660,2025-02-28,Salud,Amortización de deuda,Cuota de capital de 02-2025
+SAL-00661,2025-02-28,Salud,Impuesto,Impuesto a la renta devengado de 02-2025
+SAL-00662,2025-03-31,Salud,Venta,Facturación de 03-2025
+SAL-00663,2025-03-31,Salud,Cobranza,Cobranza de 03-2025
+SAL-00664,2025-03-31,Salud,Compra,Compra de materiales de 03-2025
+SAL-00665,2025-03-31,Salud,Consumo,Consumo de materiales de 03-2025
+SAL-00666,2025-03-31,Salud,Gasto,Servicios y gastos de 03-2025
+SAL-00667,2025-03-31,Salud,Remuneraciones,Remuneraciones de 03-2025
+SAL-00668,2025-03-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00669,2025-03-31,Salud,Pago a proveedores,Pago a proveedores de 03-2025
+SAL-00670,2025-03-31,Salud,Inversión,Inversión en activo fijo de 03-2025
+SAL-00671,2025-03-31,Salud,Depreciación,Depreciación de 03-2025
+SAL-00672,2025-03-31,Salud,Intereses,Intereses de 03-2025
+SAL-00673,2025-03-31,Salud,Amortización de deuda,Cuota de capital de 03-2025
+SAL-00674,2025-03-31,Salud,Impuesto,Impuesto a la renta devengado de 03-2025
+SAL-00675,2025-04-30,Salud,Venta,Facturación de 04-2025
+SAL-00676,2025-04-30,Salud,Cobranza,Cobranza de 04-2025
+SAL-00677,2025-04-30,Salud,Compra,Compra de materiales de 04-2025
+SAL-00678,2025-04-30,Salud,Consumo,Consumo de materiales de 04-2025
+SAL-00679,2025-04-30,Salud,Gasto,Servicios y gastos de 04-2025
+SAL-00680,2025-04-30,Salud,Remuneraciones,Remuneraciones de 04-2025
+SAL-00681,2025-04-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00682,2025-04-30,Salud,Pago a proveedores,Pago a proveedores de 04-2025
+SAL-00683,2025-04-30,Salud,Inversión,Inversión en activo fijo de 04-2025
+SAL-00684,2025-04-30,Salud,Depreciación,Depreciación de 04-2025
+SAL-00685,2025-04-30,Salud,Intereses,Intereses de 04-2025
+SAL-00686,2025-04-30,Salud,Amortización de deuda,Cuota de capital de 04-2025
+SAL-00687,2025-04-30,Salud,Impuesto,Impuesto a la renta devengado de 04-2025
+SAL-00688,2025-05-31,Salud,Venta,Facturación de 05-2025
+SAL-00689,2025-05-31,Salud,Cobranza,Cobranza de 05-2025
+SAL-00690,2025-05-31,Salud,Compra,Compra de materiales de 05-2025
+SAL-00691,2025-05-31,Salud,Consumo,Consumo de materiales de 05-2025
+SAL-00692,2025-05-31,Salud,Gasto,Servicios y gastos de 05-2025
+SAL-00693,2025-05-31,Salud,Remuneraciones,Remuneraciones de 05-2025
+SAL-00694,2025-05-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00695,2025-05-31,Salud,Pago a proveedores,Pago a proveedores de 05-2025
+SAL-00696,2025-05-31,Salud,Inversión,Inversión en activo fijo de 05-2025
+SAL-00697,2025-05-31,Salud,Depreciación,Depreciación de 05-2025
+SAL-00698,2025-05-31,Salud,Intereses,Intereses de 05-2025
+SAL-00699,2025-05-31,Salud,Amortización de deuda,Cuota de capital de 05-2025
+SAL-00700,2025-05-31,Salud,Impuesto,Impuesto a la renta devengado de 05-2025
+SAL-00701,2025-06-30,Salud,Venta,Facturación de 06-2025
+SAL-00702,2025-06-30,Salud,Cobranza,Cobranza de 06-2025
+SAL-00703,2025-06-30,Salud,Compra,Compra de materiales de 06-2025
+SAL-00704,2025-06-30,Salud,Consumo,Consumo de materiales de 06-2025
+SAL-00705,2025-06-30,Salud,Gasto,Servicios y gastos de 06-2025
+SAL-00706,2025-06-30,Salud,Remuneraciones,Remuneraciones de 06-2025
+SAL-00707,2025-06-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00708,2025-06-30,Salud,Pago a proveedores,Pago a proveedores de 06-2025
+SAL-00709,2025-06-30,Salud,Inversión,Inversión en activo fijo de 06-2025
+SAL-00710,2025-06-30,Salud,Depreciación,Depreciación de 06-2025
+SAL-00711,2025-06-30,Salud,Intereses,Intereses de 06-2025
+SAL-00712,2025-06-30,Salud,Amortización de deuda,Cuota de capital de 06-2025
+SAL-00713,2025-06-30,Salud,Impuesto,Impuesto a la renta devengado de 06-2025
+SAL-00714,2025-07-31,Salud,Venta,Facturación de 07-2025
+SAL-00715,2025-07-31,Salud,Cobranza,Cobranza de 07-2025
+SAL-00716,2025-07-31,Salud,Compra,Compra de materiales de 07-2025
+SAL-00717,2025-07-31,Salud,Consumo,Consumo de materiales de 07-2025
+SAL-00718,2025-07-31,Salud,Gasto,Servicios y gastos de 07-2025
+SAL-00719,2025-07-31,Salud,Remuneraciones,Remuneraciones de 07-2025
+SAL-00720,2025-07-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00721,2025-07-31,Salud,Pago a proveedores,Pago a proveedores de 07-2025
+SAL-00722,2025-07-31,Salud,Inversión,Inversión en activo fijo de 07-2025
+SAL-00723,2025-07-31,Salud,Depreciación,Depreciación de 07-2025
+SAL-00724,2025-07-31,Salud,Intereses,Intereses de 07-2025
+SAL-00725,2025-07-31,Salud,Amortización de deuda,Cuota de capital de 07-2025
+SAL-00726,2025-07-31,Salud,Impuesto,Impuesto a la renta devengado de 07-2025
+SAL-00727,2025-08-31,Salud,Venta,Facturación de 08-2025
+SAL-00728,2025-08-31,Salud,Cobranza,Cobranza de 08-2025
+SAL-00729,2025-08-31,Salud,Compra,Compra de materiales de 08-2025
+SAL-00730,2025-08-31,Salud,Consumo,Consumo de materiales de 08-2025
+SAL-00731,2025-08-31,Salud,Gasto,Servicios y gastos de 08-2025
+SAL-00732,2025-08-31,Salud,Remuneraciones,Remuneraciones de 08-2025
+SAL-00733,2025-08-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00734,2025-08-31,Salud,Pago a proveedores,Pago a proveedores de 08-2025
+SAL-00735,2025-08-31,Salud,Inversión,Inversión en activo fijo de 08-2025
+SAL-00736,2025-08-31,Salud,Depreciación,Depreciación de 08-2025
+SAL-00737,2025-08-31,Salud,Intereses,Intereses de 08-2025
+SAL-00738,2025-08-31,Salud,Amortización de deuda,Cuota de capital de 08-2025
+SAL-00739,2025-08-31,Salud,Impuesto,Impuesto a la renta devengado de 08-2025
+SAL-00740,2025-09-30,Salud,Venta,Facturación de 09-2025
+SAL-00741,2025-09-30,Salud,Cobranza,Cobranza de 09-2025
+SAL-00742,2025-09-30,Salud,Compra,Compra de materiales de 09-2025
+SAL-00743,2025-09-30,Salud,Consumo,Consumo de materiales de 09-2025
+SAL-00744,2025-09-30,Salud,Gasto,Servicios y gastos de 09-2025
+SAL-00745,2025-09-30,Salud,Remuneraciones,Remuneraciones de 09-2025
+SAL-00746,2025-09-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00747,2025-09-30,Salud,Pago a proveedores,Pago a proveedores de 09-2025
+SAL-00748,2025-09-30,Salud,Inversión,Inversión en activo fijo de 09-2025
+SAL-00749,2025-09-30,Salud,Depreciación,Depreciación de 09-2025
+SAL-00750,2025-09-30,Salud,Intereses,Intereses de 09-2025
+SAL-00751,2025-09-30,Salud,Amortización de deuda,Cuota de capital de 09-2025
+SAL-00752,2025-09-30,Salud,Impuesto,Impuesto a la renta devengado de 09-2025
+SAL-00753,2025-10-31,Salud,Venta,Facturación de 10-2025
+SAL-00754,2025-10-31,Salud,Cobranza,Cobranza de 10-2025
+SAL-00755,2025-10-31,Salud,Compra,Compra de materiales de 10-2025
+SAL-00756,2025-10-31,Salud,Consumo,Consumo de materiales de 10-2025
+SAL-00757,2025-10-31,Salud,Gasto,Servicios y gastos de 10-2025
+SAL-00758,2025-10-31,Salud,Remuneraciones,Remuneraciones de 10-2025
+SAL-00759,2025-10-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00760,2025-10-31,Salud,Pago a proveedores,Pago a proveedores de 10-2025
+SAL-00761,2025-10-31,Salud,Inversión,Inversión en activo fijo de 10-2025
+SAL-00762,2025-10-31,Salud,Depreciación,Depreciación de 10-2025
+SAL-00763,2025-10-31,Salud,Intereses,Intereses de 10-2025
+SAL-00764,2025-10-31,Salud,Amortización de deuda,Cuota de capital de 10-2025
+SAL-00765,2025-10-31,Salud,Impuesto,Impuesto a la renta devengado de 10-2025
+SAL-00766,2025-11-30,Salud,Venta,Facturación de 11-2025
+SAL-00767,2025-11-30,Salud,Cobranza,Cobranza de 11-2025
+SAL-00768,2025-11-30,Salud,Compra,Compra de materiales de 11-2025
+SAL-00769,2025-11-30,Salud,Consumo,Consumo de materiales de 11-2025
+SAL-00770,2025-11-30,Salud,Gasto,Servicios y gastos de 11-2025
+SAL-00771,2025-11-30,Salud,Remuneraciones,Remuneraciones de 11-2025
+SAL-00772,2025-11-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00773,2025-11-30,Salud,Pago a proveedores,Pago a proveedores de 11-2025
+SAL-00774,2025-11-30,Salud,Inversión,Inversión en activo fijo de 11-2025
+SAL-00775,2025-11-30,Salud,Depreciación,Depreciación de 11-2025
+SAL-00776,2025-11-30,Salud,Intereses,Intereses de 11-2025
+SAL-00777,2025-11-30,Salud,Amortización de deuda,Cuota de capital de 11-2025
+SAL-00778,2025-11-30,Salud,Impuesto,Impuesto a la renta devengado de 11-2025
+SAL-00779,2025-11-30,Salud,Crédito de corto plazo,Abono a la línea de crédito de 11-2025
+SAL-00780,2025-12-31,Salud,Venta,Facturación de 12-2025
+SAL-00781,2025-12-31,Salud,Cobranza,Cobranza de 12-2025
+SAL-00782,2025-12-31,Salud,Compra,Compra de materiales de 12-2025
+SAL-00783,2025-12-31,Salud,Consumo,Consumo de materiales de 12-2025
+SAL-00784,2025-12-31,Salud,Gasto,Servicios y gastos de 12-2025
+SAL-00785,2025-12-31,Salud,Remuneraciones,Remuneraciones de 12-2025
+SAL-00786,2025-12-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00787,2025-12-31,Salud,Pago a proveedores,Pago a proveedores de 12-2025
+SAL-00788,2025-12-31,Salud,Inversión,Inversión en activo fijo de 12-2025
+SAL-00789,2025-12-31,Salud,Depreciación,Depreciación de 12-2025
+SAL-00790,2025-12-31,Salud,Intereses,Intereses de 12-2025
+SAL-00791,2025-12-31,Salud,Amortización de deuda,Cuota de capital de 12-2025
+SAL-00792,2025-12-31,Salud,Impuesto,Impuesto a la renta devengado de 12-2025
+SAL-00793,2025-12-31,Salud,Crédito de corto plazo,Abono a la línea de crédito de 12-2025
+SAL-00794,2025-12-31,Salud,Cierre,Cierre de resultados 2025
+SAL-00795,2026-01-02,Salud,Traspaso,Traspaso del resultado 2025
+SAL-00796,2026-01-31,Salud,Venta,Facturación de 01-2026
+SAL-00797,2026-01-31,Salud,Cobranza,Cobranza de 01-2026
+SAL-00798,2026-01-31,Salud,Compra,Compra de materiales de 01-2026
+SAL-00799,2026-01-31,Salud,Consumo,Consumo de materiales de 01-2026
+SAL-00800,2026-01-31,Salud,Gasto,Servicios y gastos de 01-2026
+SAL-00801,2026-01-31,Salud,Remuneraciones,Remuneraciones de 01-2026
+SAL-00802,2026-01-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00803,2026-01-31,Salud,Pago a proveedores,Pago a proveedores de 01-2026
+SAL-00804,2026-01-31,Salud,Inversión,Inversión en activo fijo de 01-2026
+SAL-00805,2026-01-31,Salud,Depreciación,Depreciación de 01-2026
+SAL-00806,2026-01-31,Salud,Intereses,Intereses de 01-2026
+SAL-00807,2026-01-31,Salud,Amortización de deuda,Cuota de capital de 01-2026
+SAL-00808,2026-01-31,Salud,Impuesto,Impuesto a la renta devengado de 01-2026
+SAL-00809,2026-01-31,Salud,Crédito de corto plazo,Abono a la línea de crédito de 01-2026
+SAL-00810,2026-02-28,Salud,Venta,Facturación de 02-2026
+SAL-00811,2026-02-28,Salud,Cobranza,Cobranza de 02-2026
+SAL-00812,2026-02-28,Salud,Compra,Compra de materiales de 02-2026
+SAL-00813,2026-02-28,Salud,Consumo,Consumo de materiales de 02-2026
+SAL-00814,2026-02-28,Salud,Gasto,Servicios y gastos de 02-2026
+SAL-00815,2026-02-28,Salud,Remuneraciones,Remuneraciones de 02-2026
+SAL-00816,2026-02-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00817,2026-02-28,Salud,Pago a proveedores,Pago a proveedores de 02-2026
+SAL-00818,2026-02-28,Salud,Inversión,Inversión en activo fijo de 02-2026
+SAL-00819,2026-02-28,Salud,Depreciación,Depreciación de 02-2026
+SAL-00820,2026-02-28,Salud,Intereses,Intereses de 02-2026
+SAL-00821,2026-02-28,Salud,Amortización de deuda,Cuota de capital de 02-2026
+SAL-00822,2026-02-28,Salud,Impuesto,Impuesto a la renta devengado de 02-2026
+SAL-00823,2026-02-28,Salud,Crédito de corto plazo,Abono a la línea de crédito de 02-2026
+SAL-00824,2026-03-31,Salud,Venta,Facturación de 03-2026
+SAL-00825,2026-03-31,Salud,Cobranza,Cobranza de 03-2026
+SAL-00826,2026-03-31,Salud,Compra,Compra de materiales de 03-2026
+SAL-00827,2026-03-31,Salud,Consumo,Consumo de materiales de 03-2026
+SAL-00828,2026-03-31,Salud,Gasto,Servicios y gastos de 03-2026
+SAL-00829,2026-03-31,Salud,Remuneraciones,Remuneraciones de 03-2026
+SAL-00830,2026-03-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00831,2026-03-31,Salud,Pago a proveedores,Pago a proveedores de 03-2026
+SAL-00832,2026-03-31,Salud,Inversión,Inversión en activo fijo de 03-2026
+SAL-00833,2026-03-31,Salud,Depreciación,Depreciación de 03-2026
+SAL-00834,2026-03-31,Salud,Intereses,Intereses de 03-2026
+SAL-00835,2026-03-31,Salud,Amortización de deuda,Cuota de capital de 03-2026
+SAL-00836,2026-03-31,Salud,Impuesto,Impuesto a la renta devengado de 03-2026
+SAL-00837,2026-04-30,Salud,Venta,Facturación de 04-2026
+SAL-00838,2026-04-30,Salud,Cobranza,Cobranza de 04-2026
+SAL-00839,2026-04-30,Salud,Compra,Compra de materiales de 04-2026
+SAL-00840,2026-04-30,Salud,Consumo,Consumo de materiales de 04-2026
+SAL-00841,2026-04-30,Salud,Gasto,Servicios y gastos de 04-2026
+SAL-00842,2026-04-30,Salud,Remuneraciones,Remuneraciones de 04-2026
+SAL-00843,2026-04-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00844,2026-04-30,Salud,Pago a proveedores,Pago a proveedores de 04-2026
+SAL-00845,2026-04-30,Salud,Inversión,Inversión en activo fijo de 04-2026
+SAL-00846,2026-04-30,Salud,Depreciación,Depreciación de 04-2026
+SAL-00847,2026-04-30,Salud,Intereses,Intereses de 04-2026
+SAL-00848,2026-04-30,Salud,Amortización de deuda,Cuota de capital de 04-2026
+SAL-00849,2026-04-30,Salud,Impuesto,Impuesto a la renta devengado de 04-2026
+SAL-00850,2026-04-30,Salud,Pago de impuesto,Pago del impuesto a la renta 2025
+SAL-00851,2026-05-31,Salud,Venta,Facturación de 05-2026
+SAL-00852,2026-05-31,Salud,Cobranza,Cobranza de 05-2026
+SAL-00853,2026-05-31,Salud,Compra,Compra de materiales de 05-2026
+SAL-00854,2026-05-31,Salud,Consumo,Consumo de materiales de 05-2026
+SAL-00855,2026-05-31,Salud,Gasto,Servicios y gastos de 05-2026
+SAL-00856,2026-05-31,Salud,Remuneraciones,Remuneraciones de 05-2026
+SAL-00857,2026-05-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00858,2026-05-31,Salud,Pago a proveedores,Pago a proveedores de 05-2026
+SAL-00859,2026-05-31,Salud,Inversión,Inversión en activo fijo de 05-2026
+SAL-00860,2026-05-31,Salud,Depreciación,Depreciación de 05-2026
+SAL-00861,2026-05-31,Salud,Intereses,Intereses de 05-2026
+SAL-00862,2026-05-31,Salud,Amortización de deuda,Cuota de capital de 05-2026
+SAL-00863,2026-05-31,Salud,Impuesto,Impuesto a la renta devengado de 05-2026
+SAL-00864,2026-06-30,Salud,Venta,Facturación de 06-2026
+SAL-00865,2026-06-30,Salud,Cobranza,Cobranza de 06-2026
+SAL-00866,2026-06-30,Salud,Compra,Compra de materiales de 06-2026
+SAL-00867,2026-06-30,Salud,Consumo,Consumo de materiales de 06-2026
+SAL-00868,2026-06-30,Salud,Gasto,Servicios y gastos de 06-2026
+SAL-00869,2026-06-30,Salud,Remuneraciones,Remuneraciones de 06-2026
+SAL-00870,2026-06-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00871,2026-06-30,Salud,Pago a proveedores,Pago a proveedores de 06-2026
+SAL-00872,2026-06-30,Salud,Inversión,Inversión en activo fijo de 06-2026
+SAL-00873,2026-06-30,Salud,Depreciación,Depreciación de 06-2026
+SAL-00874,2026-06-30,Salud,Intereses,Intereses de 06-2026
+SAL-00875,2026-06-30,Salud,Amortización de deuda,Cuota de capital de 06-2026
+SAL-00876,2026-06-30,Salud,Impuesto,Impuesto a la renta devengado de 06-2026
+SAL-00877,2026-07-31,Salud,Venta,Facturación de 07-2026
+SAL-00878,2026-07-31,Salud,Cobranza,Cobranza de 07-2026
+SAL-00879,2026-07-31,Salud,Compra,Compra de materiales de 07-2026
+SAL-00880,2026-07-31,Salud,Consumo,Consumo de materiales de 07-2026
+SAL-00881,2026-07-31,Salud,Gasto,Servicios y gastos de 07-2026
+SAL-00882,2026-07-31,Salud,Remuneraciones,Remuneraciones de 07-2026
+SAL-00883,2026-07-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00884,2026-07-31,Salud,Pago a proveedores,Pago a proveedores de 07-2026
+SAL-00885,2026-07-31,Salud,Inversión,Inversión en activo fijo de 07-2026
+SAL-00886,2026-07-31,Salud,Depreciación,Depreciación de 07-2026
+SAL-00887,2026-07-31,Salud,Intereses,Intereses de 07-2026
+SAL-00888,2026-07-31,Salud,Amortización de deuda,Cuota de capital de 07-2026
+SAL-00889,2026-07-31,Salud,Impuesto,Impuesto a la renta devengado de 07-2026
+SAL-00890,2026-07-31,Salud,Crédito de corto plazo,Giro de la línea de crédito de 07-2026
+SAL-00891,2026-08-31,Salud,Venta,Facturación de 08-2026
+SAL-00892,2026-08-31,Salud,Cobranza,Cobranza de 08-2026
+SAL-00893,2026-08-31,Salud,Compra,Compra de materiales de 08-2026
+SAL-00894,2026-08-31,Salud,Consumo,Consumo de materiales de 08-2026
+SAL-00895,2026-08-31,Salud,Gasto,Servicios y gastos de 08-2026
+SAL-00896,2026-08-31,Salud,Remuneraciones,Remuneraciones de 08-2026
+SAL-00897,2026-08-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00898,2026-08-31,Salud,Pago a proveedores,Pago a proveedores de 08-2026
+SAL-00899,2026-08-31,Salud,Inversión,Inversión en activo fijo de 08-2026
+SAL-00900,2026-08-31,Salud,Depreciación,Depreciación de 08-2026
+SAL-00901,2026-08-31,Salud,Intereses,Intereses de 08-2026
+SAL-00902,2026-08-31,Salud,Amortización de deuda,Cuota de capital de 08-2026
+SAL-00903,2026-08-31,Salud,Impuesto,Impuesto a la renta devengado de 08-2026
+SAL-00904,2026-08-31,Salud,Crédito de corto plazo,Giro de la línea de crédito de 08-2026
+SAL-00905,2026-09-30,Salud,Venta,Facturación de 09-2026
+SAL-00906,2026-09-30,Salud,Cobranza,Cobranza de 09-2026
+SAL-00907,2026-09-30,Salud,Compra,Compra de materiales de 09-2026
+SAL-00908,2026-09-30,Salud,Consumo,Consumo de materiales de 09-2026
+SAL-00909,2026-09-30,Salud,Gasto,Servicios y gastos de 09-2026
+SAL-00910,2026-09-30,Salud,Remuneraciones,Remuneraciones de 09-2026
+SAL-00911,2026-09-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00912,2026-09-30,Salud,Pago a proveedores,Pago a proveedores de 09-2026
+SAL-00913,2026-09-30,Salud,Inversión,Inversión en activo fijo de 09-2026
+SAL-00914,2026-09-30,Salud,Depreciación,Depreciación de 09-2026
+SAL-00915,2026-09-30,Salud,Intereses,Intereses de 09-2026
+SAL-00916,2026-09-30,Salud,Amortización de deuda,Cuota de capital de 09-2026
+SAL-00917,2026-09-30,Salud,Impuesto,Impuesto a la renta devengado de 09-2026
+SAL-00918,2026-09-30,Salud,Crédito de corto plazo,Giro de la línea de crédito de 09-2026
+SAL-00919,2026-10-31,Salud,Venta,Facturación de 10-2026
+SAL-00920,2026-10-31,Salud,Cobranza,Cobranza de 10-2026
+SAL-00921,2026-10-31,Salud,Compra,Compra de materiales de 10-2026
+SAL-00922,2026-10-31,Salud,Consumo,Consumo de materiales de 10-2026
+SAL-00923,2026-10-31,Salud,Gasto,Servicios y gastos de 10-2026
+SAL-00924,2026-10-31,Salud,Remuneraciones,Remuneraciones de 10-2026
+SAL-00925,2026-10-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00926,2026-10-31,Salud,Pago a proveedores,Pago a proveedores de 10-2026
+SAL-00927,2026-10-31,Salud,Inversión,Inversión en activo fijo de 10-2026
+SAL-00928,2026-10-31,Salud,Depreciación,Depreciación de 10-2026
+SAL-00929,2026-10-31,Salud,Intereses,Intereses de 10-2026
+SAL-00930,2026-10-31,Salud,Amortización de deuda,Cuota de capital de 10-2026
+SAL-00931,2026-10-31,Salud,Impuesto,Impuesto a la renta devengado de 10-2026
+SAL-00932,2026-11-30,Salud,Venta,Facturación de 11-2026
+SAL-00933,2026-11-30,Salud,Cobranza,Cobranza de 11-2026
+SAL-00934,2026-11-30,Salud,Compra,Compra de materiales de 11-2026
+SAL-00935,2026-11-30,Salud,Consumo,Consumo de materiales de 11-2026
+SAL-00936,2026-11-30,Salud,Gasto,Servicios y gastos de 11-2026
+SAL-00937,2026-11-30,Salud,Remuneraciones,Remuneraciones de 11-2026
+SAL-00938,2026-11-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00939,2026-11-30,Salud,Pago a proveedores,Pago a proveedores de 11-2026
+SAL-00940,2026-11-30,Salud,Inversión,Inversión en activo fijo de 11-2026
+SAL-00941,2026-11-30,Salud,Depreciación,Depreciación de 11-2026
+SAL-00942,2026-11-30,Salud,Intereses,Intereses de 11-2026
+SAL-00943,2026-11-30,Salud,Amortización de deuda,Cuota de capital de 11-2026
+SAL-00944,2026-11-30,Salud,Impuesto,Impuesto a la renta devengado de 11-2026
+SAL-00945,2026-12-31,Salud,Venta,Facturación de 12-2026
+SAL-00946,2026-12-31,Salud,Cobranza,Cobranza de 12-2026
+SAL-00947,2026-12-31,Salud,Compra,Compra de materiales de 12-2026
+SAL-00948,2026-12-31,Salud,Consumo,Consumo de materiales de 12-2026
+SAL-00949,2026-12-31,Salud,Gasto,Servicios y gastos de 12-2026
+SAL-00950,2026-12-31,Salud,Remuneraciones,Remuneraciones de 12-2026
+SAL-00951,2026-12-05,Salud,Pago de remuneraciones,Pago de remuneraciones del mes anterior
+SAL-00952,2026-12-31,Salud,Pago a proveedores,Pago a proveedores de 12-2026
+SAL-00953,2026-12-31,Salud,Inversión,Inversión en activo fijo de 12-2026
+SAL-00954,2026-12-31,Salud,Depreciación,Depreciación de 12-2026
+SAL-00955,2026-12-31,Salud,Intereses,Intereses de 12-2026
+SAL-00956,2026-12-31,Salud,Amortización de deuda,Cuota de capital de 12-2026
+SAL-00957,2026-12-31,Salud,Impuesto,Impuesto a la renta devengado de 12-2026
+SAL-00958,2026-12-31,Salud,Cierre,Cierre de resultados 2026

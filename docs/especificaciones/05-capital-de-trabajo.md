@@ -93,5 +93,5 @@ trabajar en el PBIP:
 - dejar `activePageName` en `portada`;
 - no usar `top` como nombre de `VAR`.
 
-**Fuera de alcance:** el paso del libro diario a los estados financieros queda como reporte
-#8, en espera.
+**Relación con el #8:** el libro diario y los estados financieros están en el reporte #8
+(`08-estados-financieros.md`). El #5 profundiza en la cobranza, los pagos y el flujo a 13 semanas.

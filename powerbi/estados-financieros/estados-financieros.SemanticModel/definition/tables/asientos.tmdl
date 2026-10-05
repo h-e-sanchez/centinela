@@ -1,0 +1,63 @@
+/// Encabezado de cada asiento: fecha, tipo y glosa.
+table asientos
+	lineageTag: 235f1ae0-2374-5977-8bce-e24c663cf1bf
+
+	/// Asientos registrados en el periodo.
+	measure Asientos = COUNTROWS(asientos)
+		formatString: #,##0
+		displayFolder: 1. Libro diario
+		lineageTag: 4defb96a-236b-50d6-85af-90cae32d8b62
+
+	column asiento
+		dataType: string
+		lineageTag: 17d7d7ec-d546-5041-8d56-6b07d8f4ed6e
+		summarizeBy: none
+		sourceColumn: asiento
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 6e1c91e8-d8e5-5393-b31e-213d085bf7af
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 0b1b5e0d-9e08-5167-a448-d64cd98ceb7a
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: bfecafd5-ae93-5457-a8e7-fcf6d31950c8
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column glosa
+		dataType: string
+		lineageTag: 861c5f69-912c-5320-845f-4b034785f5f8
+		summarizeBy: none
+		sourceColumn: glosa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition asientos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("asientos.csv", {{"asiento", type text}, {"fecha", type date}, {"industria", type text}, {"tipo", type text}, {"glosa", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
