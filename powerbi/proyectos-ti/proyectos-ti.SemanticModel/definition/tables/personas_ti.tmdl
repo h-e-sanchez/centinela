@@ -1,0 +1,62 @@
+/// Dimensión: personas del área de TI (ID sintético, sin nombre), con su equipo principal y tarifa.
+table personas_ti
+	lineageTag: cadab145-6d9f-50b5-9201-6687654c4975
+
+	/// Personas de TI en el filtro.
+	measure Personas = COUNTROWS(personas_ti)
+		formatString: #,##0
+		displayFolder: 4. Capacidad
+		lineageTag: 3701aeeb-9cb5-582a-a528-a4f89228218b
+
+	column persona_ti
+		dataType: string
+		lineageTag: 92a94532-f7f4-5e65-894c-b9989679f50a
+		summarizeBy: none
+		sourceColumn: persona_ti
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 1d318e8f-e998-543f-82ad-3bc816290981
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_principal
+		dataType: string
+		lineageTag: 83a197d8-7923-536f-87f9-cdd14009d78c
+		summarizeBy: none
+		sourceColumn: equipo_principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column rol
+		dataType: string
+		lineageTag: 3afe48be-f27e-5730-a9cd-f045a565acb0
+		summarizeBy: none
+		sourceColumn: rol
+
+		annotation SummarizationSetBy = Automatic
+
+	column tarifa_hora
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: b2fec123-b530-5171-a9f4-8cd301ef037f
+		summarizeBy: none
+		sourceColumn: tarifa_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	partition personas_ti = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("personas_ti.csv", {{"persona_ti", type text}, {"industria", type text}, {"equipo_principal", type text}, {"rol", type text}, {"tarifa_hora", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

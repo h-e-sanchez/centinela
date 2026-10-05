@@ -1,0 +1,72 @@
+n,tipo,seccion,termino,explicacion,formula
+1,Concepto,Cómo se trabaja en un Jira ágil,Issue,La unidad de trabajo en Jira. Hay cuatro tipos: • épica: agrupa el trabajo de un tema grande; no lleva puntos; • historia: una funcionalidad que se puede entregar; • tarea: trabajo técnico sin valor visible para el usuario; • bug: un defecto que hay que corregir.,
+2,Concepto,Cómo se trabaja en un Jira ágil,Puntos de historia,"La estimación relativa del esfuerzo de una issue, en una escala tipo Fibonacci (1, 2, 3, 5, 8). No son horas: sirven para comparar y para medir cuánto entrega un equipo.",
+3,Concepto,Cómo se trabaja en un Jira ágil,Sprint,"Un ciclo fijo de dos semanas. Al inicio, el equipo compromete lo que espera terminar; al final, se mide qué terminó.",
+4,Concepto,Cómo se trabaja en un Jira ágil,Estados,"Una issue avanza por por hacer, en curso, en revisión y hecho. Si a mitad del trabajo falta algo de otro equipo, pasa a bloqueado hasta que puede seguir.",
+5,Concepto,Medir la entrega,Comprometido y completado,Comprometido son los puntos que el equipo planificó al inicio del sprint (lo que arrastraba en curso más lo que empezó la primera semana). Completado es la parte de eso que llegó a «hecho» dentro del mismo sprint.,
+6,Concepto,Medir la entrega,Previsibilidad,Previsibilidad = completado / comprometido. Mide si se puede confiar en lo que el equipo promete. Un equipo puede terminar mucho y aun así ser poco previsible.,
+7,Concepto,Medir la entrega,Velocidad,"Puntos terminados por sprint. Sirve para planificar el sprint siguiente; no sirve para comparar equipos, porque cada equipo estima con su propia vara.",
+8,Concepto,Medir la entrega,Throughput,"Issues terminadas por semana o por mes. Es la base del pronóstico, porque contar issues es más estable que sumar estimaciones.",
+9,Concepto,Medir el flujo,Tiempo de ciclo,Días corridos entre que una issue entra a «en curso» y llega a «hecho». Incluye la revisión y los bloqueos.,
+10,Concepto,Medir el flujo,Percentil 85 (P85),El valor que no supera el 85% de los casos. En tiempos de ciclo es el plazo que conviene prometer: el promedio queda corto porque unas pocas issues bloqueadas tardan mucho.,
+11,Concepto,Medir el flujo,WIP (trabajo en curso),"Issues empezadas y no terminadas a una fecha, incluidas las bloqueadas. Mucho WIP con poco throughput es señal de trabajo atascado.",
+12,Concepto,Medir el flujo,Diagrama de flujo acumulado,"Para cada semana, cuántas issues hay en cada estado. Si la banda de «en curso» o de «bloqueado» se ensancha, el trabajo entra más rápido de lo que sale.",
+13,Concepto,Capacidad y colaboración,Capacidad,Horas de jornada disponibles: la dedicación de cada persona a cada equipo por 40 horas a la semana. Quien reparte la semana entre dos equipos aporta media capacidad a cada uno.,
+14,Concepto,Capacidad y colaboración,Carga,"Carga = horas registradas en proyectos / capacidad. Bajo 100% hay días de soporte u holgura; sobre 100%, sobretiempo.",
+15,Concepto,Capacidad y colaboración,Dependencia,Una issue que necesita algo de otro equipo para terminar. Las horas que espera bloqueada se atribuyen al equipo del que esperaba (el equipo que bloquea).,
+16,Concepto,Capacidad y colaboración,Traspaso,"El tiempo entre que el equipo que bloquea termina y la issue bloqueada vuelve a avanzar. Un traspaso lento (por ejemplo, desplegar solo en ventanas semanales) alarga los bloqueos aunque el otro equipo trabaje rápido.",
+17,Concepto,Pronóstico y presupuesto,Monte Carlo,"Para cada proyecto abierto se simulan 10.000 futuros: cada semana se toma al azar el throughput de una de las últimas 12 semanas, hasta agotar las issues pendientes. La distribución de las semanas de término da las fechas P50, P85 y P95.",
+18,Concepto,Pronóstico y presupuesto,Atraso P85,"Días entre la fecha P85 y la comprometida. Negativo es holgura. El semáforo es verde si no hay atraso, ámbar hasta 30 días y rojo sobre 30.",
+19,Concepto,Pronóstico y presupuesto,Presupuesto y consumo,"El presupuesto son las horas planificadas por la tarifa de cada equipo. Consumo = costo acumulado (horas registradas × tarifa) / presupuesto. Si el consumo supera al avance, el proyecto gasta más rápido de lo que entrega.",
+20,Concepto,Pronóstico y presupuesto,Alcance agregado,"Puntos que entran al proyecto después de aprobarlo. Es la causa más común de atraso que no se ve en la velocidad: el equipo rinde igual, pero la meta se aleja.",
+21,Medida,0. Auxiliares,Color atraso,"Fondo del semáforo: rojo sobre 30 días de atraso, ámbar hasta 30, verde a tiempo.","VAR d = [Atraso P85 (días)] RETURN SWITCH( TRUE(), ISBLANK(d), BLANK(), d > 30, ""#F2D4CC"", d > 0, ""#F3E3C3"", ""#D9E8DA"" )"
+22,Medida,0. Portada,Portada en curso,Proyectos en curso al corte sobre el total de la cartera.,"FORMAT(CALCULATE(COUNTROWS(pronostico_termino), pronostico_termino[estado] = ""En curso""), ""0"") & "" de "" & FORMAT([Proyectos], ""0"")"
+23,Medida,0. Portada,Portada avance,"Avance de la cartera, para la tarjeta.","FORMAT([Avance %], ""0%"")"
+24,Medida,0. Portada,Portada bloqueo,"Parte del tiempo que el trabajo pasa bloqueado, para la tarjeta.","FORMAT([% del tiempo en bloqueo], ""0.0%"")"
+25,Medida,0. Portada,Portada frase 1,Primera frase: el proyecto cuyo pronóstico P85 queda más lejos de la fecha comprometida.,"VAR mayor = TOPN(1, FILTER(VALUES(proyectos[nombre]), [Atraso P85 (días)] <> BLANK()), [Atraso P85 (días)], DESC) VAR nombre = MAXX(mayor, proyectos[nombre]) VAR dias = CALCULATE([Atraso P85 (días)], proyectos[nombre] = nombre) RETURN IF( dias > 0, nombre & "": P85 "" & FORMAT(dias, ""0"") & "" días después de lo comprometido"", ""Toda la cartera termina, al P85, dentro de lo comprometido"" )"
+26,Medida,0. Portada,Portada frase 2,Segunda frase: el equipo del que más se espera.,"VAR mayor = TOPN(1, VALUES(dependencias[equipo_bloqueante]), [Horas bloqueadas por dependencia], DESC) VAR equipo = MAXX(mayor, dependencias[equipo_bloqueante]) VAR parte = DIVIDE(CALCULATE([Horas bloqueadas por dependencia], dependencias[equipo_bloqueante] = equipo), [Horas bloqueadas por dependencia]) RETURN equipo & "" genera el "" & FORMAT(parte, ""0%"") & "" de las horas bloqueadas"""
+27,Medida,1. Cartera,Puntos totales,Alcance actual en puntos de historia (incluye lo agregado después del inicio).,"CALCULATE(SUM(issues[puntos]), issues[tipo] <> ""epica"")"
+28,Medida,1. Cartera,Puntos hechos,Puntos de las issues terminadas al corte.,"CALCULATE(SUM(issues[puntos]), issues[estado_al_corte] = ""hecho"")"
+29,Medida,1. Cartera,Avance %,"Puntos hechos sobre el alcance actual, al corte.","DIVIDE([Puntos hechos], [Puntos totales])"
+30,Medida,1. Cartera,Proyectos,Proyectos de la cartera en el filtro.,COUNTROWS(proyectos)
+31,Medida,1. Cartera,Presupuesto,Presupuesto aprobado de los proyectos: horas planificadas por la tarifa de cada equipo.,SUM(proyectos[presupuesto_monto])
+32,Medida,1. Cartera,Fin comprometido,Fecha de término comprometida del proyecto.,MAX(proyectos[fin_comprometido])
+33,Medida,1. Cartera,Alcance agregado %,"Puntos agregados después de aprobar el proyecto, sobre los planificados al inicio.","DIVIDE(SUM(proyectos[puntos_agregados]), SUM(proyectos[puntos_planificados]))"
+34,Medida,1. Cartera,Costo,Horas registradas por la tarifa de cada persona.,"SUMX(worklogs, worklogs[horas] * RELATED(personas_ti[tarifa_hora]))"
+35,Medida,1. Cartera,Consumo de presupuesto %,Costo acumulado al corte sobre el presupuesto aprobado del proyecto.,"DIVIDE(CALCULATE([Costo], REMOVEFILTERS(Calendario)), [Presupuesto])"
+36,Medida,1. Cartera,Costo por punto,Costo del periodo sobre los puntos terminados en el periodo.,"DIVIDE([Costo], [Puntos terminados])"
+37,Medida,2. Entrega,Comprometido,Puntos comprometidos al inicio del sprint.,SUM(compromisos[puntos])
+38,Medida,2. Entrega,Completado,Puntos comprometidos que llegaron a «hecho» dentro del mismo sprint.,"CALCULATE(SUM(compromisos[puntos]), compromisos[completada] = 1)"
+39,Medida,2. Entrega,Previsibilidad %,Completado sobre comprometido: qué tan confiable es lo que el equipo promete.,"DIVIDE([Completado], [Comprometido])"
+40,Medida,2. Entrega,Issues terminadas,Throughput: issues (sin épicas) que llegan a «hecho» en el periodo.,"CALCULATE(COUNTROWS(issues), issues[tipo] <> ""epica"", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))"
+41,Medida,2. Entrega,Puntos terminados,Puntos de las issues que llegan a «hecho» en el periodo.,"CALCULATE(SUM(issues[puntos]), issues[tipo] <> ""epica"", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))"
+42,Medida,2. Entrega,Velocidad,Puntos terminados por sprint (cada issue cuenta en el sprint en que llega a «hecho»).,"CALCULATE([Puntos terminados], TREATAS(VALUES(sprints[sprint]), issues[sprint]), REMOVEFILTERS(Calendario))"
+43,Medida,3. Flujo,Issues en el estado,Issues en cada estado al cierre de la semana.,SUM(flujo_semanal[issues])
+44,Medida,3. Flujo,Tiempo de ciclo P50 (días),"Mediana de días corridos entre «en curso» y «hecho», de las issues terminadas en el periodo.","CALCULATE(PERCENTILEX.INC(FILTER(issues, NOT ISBLANK(issues[dias_ciclo])), issues[dias_ciclo], 0.5), issues[tipo] <> ""epica"", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))"
+45,Medida,3. Flujo,Tiempo de ciclo P85 (días),El 85% de las issues terminadas en el periodo tardó a lo más estos días: sirve para prometer plazos.,"CALCULATE(PERCENTILEX.INC(FILTER(issues, NOT ISBLANK(issues[dias_ciclo])), issues[dias_ciclo], 0.85), issues[tipo] <> ""epica"", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))"
+46,Medida,3. Flujo,WIP,"Trabajo en curso al cierre del periodo (o al corte): issues empezadas y no terminadas, incluidas las bloqueadas.","VAR fin = MIN(MAX(Calendario[Date]), DATE(2026, 9, 30)) RETURN COUNTROWS( FILTER( issues, issues[tipo] <> ""epica"" && NOT ISBLANK(issues[fecha_inicio]) && issues[fecha_inicio] <= fin && (ISBLANK(issues[fecha_fin]) || issues[fecha_fin] > fin) ))"
+47,Medida,3. Flujo,Antigüedad del WIP (días),Días promedio que lleva abierto el trabajo en curso al cierre del periodo.,"VAR fin = MIN(MAX(Calendario[Date]), DATE(2026, 9, 30)) RETURN AVERAGEX( FILTER( issues, issues[tipo] <> ""epica"" && NOT ISBLANK(issues[fecha_inicio]) && issues[fecha_inicio] <= fin && (ISBLANK(issues[fecha_fin]) || issues[fecha_fin] > fin) ), fin - issues[fecha_inicio] )"
+48,Medida,3. Flujo,Transiciones,Cambios de estado registrados.,COUNTROWS(transiciones)
+49,Medida,4. Capacidad,Personas-equivalentes,Personas a tiempo completo equivalentes: suma de la dedicación de cada asignación.,SUM(asignaciones[dedicacion])
+50,Medida,4. Capacidad,Con dedicación partida,Asignaciones de personas que reparten la semana entre dos equipos.,"CALCULATE(COUNTROWS(asignaciones), asignaciones[dedicacion] < 1)"
+51,Medida,4. Capacidad,Capacidad (h),Horas de jornada disponibles en el periodo.,SUM(capacidad_semanal[horas_capacidad])
+52,Medida,4. Capacidad,Carga %,"Horas registradas en proyectos sobre capacidad: bajo 100% hay soporte u holgura; sobre 100%, sobretiempo.","DIVIDE([Horas registradas], [Capacidad (h)])"
+53,Medida,4. Capacidad,Personas,Personas de TI en el filtro.,COUNTROWS(personas_ti)
+54,Medida,4. Capacidad,Horas registradas,Horas trabajadas en issues de proyectos (el soporte no se registra).,SUM(worklogs[horas])
+55,Medida,5. Colaboración,Dependencias,Issues que necesitan algo de otro equipo para terminar.,COUNTROWS(dependencias)
+56,Medida,5. Colaboración,Horas bloqueadas por dependencia,"Horas de espera atribuidas al equipo bloqueante (si hay dos bloqueantes, se reparten).",SUM(dependencias[horas_bloqueado])
+57,Medida,5. Colaboración,Espera media (días),Días hábiles de espera promedio por dependencia.,"DIVIDE([Horas bloqueadas por dependencia], [Dependencias] * 8)"
+58,Medida,5. Colaboración,Dependencias abiertas al corte,Dependencias cuya issue bloqueante no estaba terminada al corte.,"CALCULATE([Dependencias], ISBLANK(dependencias[resuelta]))"
+59,Medida,5. Colaboración,Horas bloqueadas,Horas hábiles que las issues pasaron en «bloqueado» esperando a otro equipo.,SUM(issues[horas_bloqueado])
+60,Medida,5. Colaboración,% del tiempo en bloqueo,Horas bloqueadas sobre horas bloqueadas más horas trabajadas en las mismas issues.,"DIVIDE([Horas bloqueadas], [Horas bloqueadas] + [Horas registradas])"
+61,Medida,5. Colaboración,Entradas a bloqueado,Veces que una issue pasó a «bloqueado» por una dependencia.,"CALCULATE(COUNTROWS(transiciones), transiciones[estado_hasta] = ""bloqueado"")"
+62,Medida,6. Pronóstico,Probabilidad,Parte de las simulaciones que termina esa semana.,SUM(pronostico_distribucion[probabilidad])
+63,Medida,6. Pronóstico,Probabilidad acumulada,Probabilidad de haber terminado a más tardar esa semana.,"VAR semana = MAX(pronostico_distribucion[semana_termino]) RETURN CALCULATE( SUM(pronostico_distribucion[probabilidad]), pronostico_distribucion[semana_termino] <= semana, REMOVEFILTERS(pronostico_distribucion[semana_termino]) )"
+64,Medida,6. Pronóstico,Estado,Terminado o en curso al corte.,SELECTEDVALUE(pronostico_termino[estado])
+65,Medida,6. Pronóstico,Fecha P50,"Fecha de término con 50% de probabilidad (si terminó, la fecha real).",MAX(pronostico_termino[fecha_p50])
+66,Medida,6. Pronóstico,Fecha P85,Fecha de término con 85% de probabilidad: la que conviene comprometer.,MAX(pronostico_termino[fecha_p85])
+67,Medida,6. Pronóstico,Fecha P95,Fecha de término con 95% de probabilidad.,MAX(pronostico_termino[fecha_p95])
+68,Medida,6. Pronóstico,Atraso P85 (días),Días entre la fecha P85 y la comprometida (negativo = holgura).,MAX(pronostico_termino[atraso_p85_dias])
+69,Medida,6. Pronóstico,Issues pendientes,"Issues sin terminar al corte, que el Monte Carlo reparte en semanas futuras.",SUM(pronostico_termino[issues_pendientes])
+70,Medida,6. Pronóstico,Throughput semanal,Issues terminadas por semana en las últimas 12 semanas antes del corte.,AVERAGE(pronostico_termino[throughput_semanal])
+71,Medida,6. Pronóstico,Proyectos atrasados al P85,Proyectos abiertos cuyo P85 cae después de la fecha comprometida.,"CALCULATE(COUNTROWS(pronostico_termino), pronostico_termino[estado] = ""En curso"", pronostico_termino[atraso_p85_dias] > 0)"

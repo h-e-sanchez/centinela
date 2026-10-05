@@ -1,0 +1,107 @@
+/// Foto semanal de cuántas issues hay en cada estado (para el diagrama de flujo acumulado).
+table flujo_semanal
+	lineageTag: 3aa0c003-a23f-58a8-893e-cf5696558f15
+
+	/// Issues en cada estado al cierre de la semana.
+	measure 'Issues en el estado' = SUM(flujo_semanal[issues])
+		formatString: #,##0
+		displayFolder: 3. Flujo
+		lineageTag: cfa97226-9072-53a1-8464-2429b8048878
+
+	column semana
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 265fa554-f244-5f55-992b-eeeb35a0d6dd
+		summarizeBy: none
+		sourceColumn: semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: c3ee18ab-4c4b-58d9-ab86-adb2b5565a21
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: 392d924b-4ec8-51be-b3e5-f6a8d5b5aeeb
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: ff65f910-0694-5d44-903f-239214e196e5
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		isHidden
+		lineageTag: e3b74017-beef-5da5-8651-1146028bc0e4
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_nombre
+		dataType: string
+		lineageTag: b4fa26ce-69db-50ca-b5a0-cdb0ffd327d7
+		summarizeBy: none
+		sourceColumn: estado_nombre
+		sortByColumn: estado_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e702afea-fcc0-53c2-add5-d264093823d8
+		summarizeBy: none
+		sourceColumn: estado_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column issues
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: a60989ff-0338-5d3d-844e-085ef24b57d9
+		summarizeBy: none
+		sourceColumn: issues
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntos
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: e4af1dc8-3fab-5763-bdc1-d5bb0e85d7ec
+		summarizeBy: none
+		sourceColumn: puntos
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flujo_semanal = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("flujo_semanal.csv", {{"semana", type date}, {"industria", type text}, {"proyecto", type text}, {"equipo", type text}, {"estado", type text}, {"issues", Int64.Type}, {"puntos", Int64.Type}}),
+				    Nombre = Table.AddColumn(Origen, "estado_nombre", each Record.FieldOrDefault([por_hacer = "Por hacer", en_curso = "En curso", en_revision = "En revisión", bloqueado = "Bloqueado", hecho = "Hecho"], [estado], [estado]), type text),
+				    Orden = Table.AddColumn(Nombre, "estado_orden", each Record.FieldOrDefault([por_hacer = 1, en_curso = 2, en_revision = 3, bloqueado = 4, hecho = 5], [estado], 9), Int64.Type)
+				in
+				    Orden
+
+	annotation PBI_ResultType = Table

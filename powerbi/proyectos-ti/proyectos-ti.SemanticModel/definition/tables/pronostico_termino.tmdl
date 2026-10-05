@@ -1,0 +1,178 @@
+/// Monte Carlo (10.000 simulaciones del throughput semanal de las últimas 12 semanas) por proyecto abierto al corte.
+table pronostico_termino
+	lineageTag: bd18ce13-de58-58f8-993a-60325920d67c
+
+	/// Terminado o en curso al corte.
+	measure Estado = SELECTEDVALUE(pronostico_termino[estado])
+		displayFolder: 6. Pronóstico
+		lineageTag: 65350aa6-4e5c-5ead-bd80-c266312a743f
+
+	/// Fecha de término con 50% de probabilidad (si terminó, la fecha real).
+	measure 'Fecha P50' = MAX(pronostico_termino[fecha_p50])
+		formatString: d mmm yyyy
+		displayFolder: 6. Pronóstico
+		lineageTag: 6a19a678-a2b4-514b-8c96-c92a1ddddef3
+
+	/// Fecha de término con 85% de probabilidad: la que conviene comprometer.
+	measure 'Fecha P85' = MAX(pronostico_termino[fecha_p85])
+		formatString: d mmm yyyy
+		displayFolder: 6. Pronóstico
+		lineageTag: 21f4d95a-16a3-5b28-91d8-3496bbedfa49
+
+	/// Fecha de término con 95% de probabilidad.
+	measure 'Fecha P95' = MAX(pronostico_termino[fecha_p95])
+		formatString: d mmm yyyy
+		displayFolder: 6. Pronóstico
+		lineageTag: d8881a4b-7006-52be-853c-02a360c8fd74
+
+	/// Días entre la fecha P85 y la comprometida (negativo = holgura).
+	measure 'Atraso P85 (días)' = MAX(pronostico_termino[atraso_p85_dias])
+		formatString: 0
+		displayFolder: 6. Pronóstico
+		lineageTag: 7d0e8bc5-9feb-5303-bfae-2d1aaccf988e
+
+	/// Issues sin terminar al corte, que el Monte Carlo reparte en semanas futuras.
+	measure 'Issues pendientes' = SUM(pronostico_termino[issues_pendientes])
+		formatString: #,##0
+		displayFolder: 6. Pronóstico
+		lineageTag: f1cb64b7-e421-5870-bbb1-39cb3991be8f
+
+	/// Issues terminadas por semana en las últimas 12 semanas antes del corte.
+	measure 'Throughput semanal' = AVERAGE(pronostico_termino[throughput_semanal])
+		formatString: 0.0
+		displayFolder: 6. Pronóstico
+		lineageTag: bf3e80a2-b6c6-594d-a53d-dd6fdcf20a35
+
+	/// Proyectos abiertos cuyo P85 cae después de la fecha comprometida.
+	measure 'Proyectos atrasados al P85' = CALCULATE(COUNTROWS(pronostico_termino), pronostico_termino[estado] = "En curso", pronostico_termino[atraso_p85_dias] > 0)
+		formatString: #,##0
+		displayFolder: 6. Pronóstico
+		lineageTag: aa172dc6-01a8-56c6-ad53-9457cdf3b1bd
+
+	/// Fondo del semáforo: rojo sobre 30 días de atraso, ámbar hasta 30, verde a tiempo.
+	measure 'Color atraso' =
+			VAR d = [Atraso P85 (días)]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(d), BLANK(),
+			        d > 30, "#F2D4CC",
+			        d > 0, "#F3E3C3",
+			        "#D9E8DA"
+			    )
+		displayFolder: 0. Auxiliares
+		lineageTag: 32a24456-d4f1-5a9e-ad6b-d9fe78665c4a
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: 2934ce12-5a39-5048-92a6-8921f1b17d3c
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 58f272ac-185c-53b6-a78e-40f7ddf92c59
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: eabcde8a-3180-51d4-a94f-ce9b4bee8f66
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column issues_pendientes
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: bb94496d-8f95-5eea-8891-fa4b8b624ec3
+		summarizeBy: none
+		sourceColumn: issues_pendientes
+
+		annotation SummarizationSetBy = Automatic
+
+	column throughput_semanal
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 765a3698-1a9d-503f-8ff4-538b06c9cee0
+		summarizeBy: none
+		sourceColumn: throughput_semanal
+
+		annotation SummarizationSetBy = Automatic
+
+	column fin_comprometido
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: e7717cab-c8f2-5868-b93d-503f6ac4ca39
+		summarizeBy: none
+		sourceColumn: fin_comprometido
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_p50
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: dc74fa5a-e587-57dd-b925-f3a9143d7f48
+		summarizeBy: none
+		sourceColumn: fecha_p50
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_p85
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: b0d71a2a-9ca8-5c3f-b432-4761387321ee
+		summarizeBy: none
+		sourceColumn: fecha_p85
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_p95
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 993585f2-1a18-51f5-9d4b-77fd58b55359
+		summarizeBy: none
+		sourceColumn: fecha_p95
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column atraso_p85_dias
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a519c336-905e-51df-8366-8361a4502bb4
+		summarizeBy: none
+		sourceColumn: atraso_p85_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pronostico_termino = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("pronostico_termino.csv", {{"proyecto", type text}, {"industria", type text}, {"estado", type text}, {"issues_pendientes", Int64.Type}, {"throughput_semanal", type number}, {"fin_comprometido", type date}, {"fecha_p50", type date}, {"fecha_p85", type date}, {"fecha_p95", type date}, {"atraso_p85_dias", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

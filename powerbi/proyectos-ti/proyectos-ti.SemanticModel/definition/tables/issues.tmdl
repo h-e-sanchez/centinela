@@ -1,0 +1,299 @@
+/// Issues de Jira: épicas, historias, tareas y bugs, con fechas de inicio y fin y su estado al corte (30-sep-2026).
+table issues
+	lineageTag: 630affc6-0afa-545c-b00d-1863169a94b0
+
+	/// Alcance actual en puntos de historia (incluye lo agregado después del inicio).
+	measure 'Puntos totales' = CALCULATE(SUM(issues[puntos]), issues[tipo] <> "epica")
+		formatString: #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 714d15e5-f153-5d88-af1c-790b44a41734
+
+	/// Puntos de las issues terminadas al corte.
+	measure 'Puntos hechos' = CALCULATE(SUM(issues[puntos]), issues[estado_al_corte] = "hecho")
+		formatString: #,##0
+		displayFolder: 1. Cartera
+		lineageTag: 6dda290c-9721-522f-96f2-b1d95d87e164
+
+	/// Puntos hechos sobre el alcance actual, al corte.
+	measure 'Avance %' = DIVIDE([Puntos hechos], [Puntos totales])
+		formatString: 0%
+		displayFolder: 1. Cartera
+		lineageTag: 3b0f73b0-0488-5de8-9861-f8fe199ef1ed
+
+	/// Throughput: issues (sin épicas) que llegan a «hecho» en el periodo.
+	measure 'Issues terminadas' = CALCULATE(COUNTROWS(issues), issues[tipo] <> "epica", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))
+		formatString: #,##0
+		displayFolder: 2. Entrega
+		lineageTag: c97210bb-07fa-53dc-b914-062f346020fc
+
+	/// Puntos de las issues que llegan a «hecho» en el periodo.
+	measure 'Puntos terminados' = CALCULATE(SUM(issues[puntos]), issues[tipo] <> "epica", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))
+		formatString: #,##0
+		displayFolder: 2. Entrega
+		lineageTag: 61be88e9-ab0f-5d1d-852a-8945529b1134
+
+	/// Puntos terminados por sprint (cada issue cuenta en el sprint en que llega a «hecho»).
+	measure Velocidad = CALCULATE([Puntos terminados], TREATAS(VALUES(sprints[sprint]), issues[sprint]), REMOVEFILTERS(Calendario))
+		formatString: #,##0
+		displayFolder: 2. Entrega
+		lineageTag: cd1d4ef1-b1af-527f-b37a-45dc103f4cf6
+
+	/// Mediana de días corridos entre «en curso» y «hecho», de las issues terminadas en el periodo.
+	measure 'Tiempo de ciclo P50 (días)' = CALCULATE(PERCENTILEX.INC(FILTER(issues, NOT ISBLANK(issues[dias_ciclo])), issues[dias_ciclo], 0.5), issues[tipo] <> "epica", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))
+		formatString: 0
+		displayFolder: 3. Flujo
+		lineageTag: 582b8f85-d9ed-5b4e-a91b-d393e1ff736d
+
+	/// El 85% de las issues terminadas en el periodo tardó a lo más estos días: sirve para prometer plazos.
+	measure 'Tiempo de ciclo P85 (días)' = CALCULATE(PERCENTILEX.INC(FILTER(issues, NOT ISBLANK(issues[dias_ciclo])), issues[dias_ciclo], 0.85), issues[tipo] <> "epica", NOT ISBLANK(issues[fecha_fin]), USERELATIONSHIP(Calendario[Date], issues[fecha_fin]))
+		formatString: 0
+		displayFolder: 3. Flujo
+		lineageTag: 1260e9da-50a9-5a1c-a1dc-ea1a973ba20e
+
+	/// Trabajo en curso al cierre del periodo (o al corte): issues empezadas y no terminadas, incluidas las bloqueadas.
+	measure WIP =
+			VAR fin = MIN(MAX(Calendario[Date]), DATE(2026, 9, 30))
+			RETURN COUNTROWS(
+			    FILTER(
+			        issues,
+			        issues[tipo] <> "epica"
+			            && NOT ISBLANK(issues[fecha_inicio])
+			            && issues[fecha_inicio] <= fin
+			            && (ISBLANK(issues[fecha_fin]) || issues[fecha_fin] > fin)
+			    ))
+		formatString: #,##0
+		displayFolder: 3. Flujo
+		lineageTag: 10835f9c-8060-57c3-b982-725a837beded
+
+	/// Días promedio que lleva abierto el trabajo en curso al cierre del periodo.
+	measure 'Antigüedad del WIP (días)' =
+			VAR fin = MIN(MAX(Calendario[Date]), DATE(2026, 9, 30))
+			RETURN
+			    AVERAGEX(
+			        FILTER(
+			            issues,
+			            issues[tipo] <> "epica"
+			                && NOT ISBLANK(issues[fecha_inicio])
+			                && issues[fecha_inicio] <= fin
+			                && (ISBLANK(issues[fecha_fin]) || issues[fecha_fin] > fin)
+			        ),
+			        fin - issues[fecha_inicio]
+			    )
+		formatString: 0
+		displayFolder: 3. Flujo
+		lineageTag: 8929bbaa-3755-518b-b296-b0f9f46c6834
+
+	/// Horas hábiles que las issues pasaron en «bloqueado» esperando a otro equipo.
+	measure 'Horas bloqueadas' = SUM(issues[horas_bloqueado])
+		formatString: #,##0
+		displayFolder: 5. Colaboración
+		lineageTag: ee2a7093-ad0e-515a-8a8f-8e8aff5625b5
+
+	/// Horas bloqueadas sobre horas bloqueadas más horas trabajadas en las mismas issues.
+	measure '% del tiempo en bloqueo' = DIVIDE([Horas bloqueadas], [Horas bloqueadas] + [Horas registradas])
+		formatString: 0.0%
+		displayFolder: 5. Colaboración
+		lineageTag: 9d3c99ce-611e-5790-bfb5-893f27ae8896
+
+	/// Proyectos en curso al corte sobre el total de la cartera.
+	measure 'Portada en curso' = FORMAT(CALCULATE(COUNTROWS(pronostico_termino), pronostico_termino[estado] = "En curso"), "0") & " de " & FORMAT([Proyectos], "0")
+		displayFolder: 0. Portada
+		lineageTag: 4a3517e8-96e4-568a-8b8f-444c050781c2
+
+	/// Avance de la cartera, para la tarjeta.
+	measure 'Portada avance' = FORMAT([Avance %], "0%")
+		displayFolder: 0. Portada
+		lineageTag: 8d032729-7015-53f8-b819-da3766b358f5
+
+	/// Parte del tiempo que el trabajo pasa bloqueado, para la tarjeta.
+	measure 'Portada bloqueo' = FORMAT([% del tiempo en bloqueo], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 467394ff-3eae-555f-afb5-d3cc9cad45d0
+
+	/// Primera frase: el proyecto cuyo pronóstico P85 queda más lejos de la fecha comprometida.
+	measure 'Portada frase 1' =
+			VAR mayor = TOPN(1, FILTER(VALUES(proyectos[nombre]), [Atraso P85 (días)] <> BLANK()), [Atraso P85 (días)], DESC)
+			VAR nombre = MAXX(mayor, proyectos[nombre])
+			VAR dias = CALCULATE([Atraso P85 (días)], proyectos[nombre] = nombre)
+			RETURN
+			    IF(
+			        dias > 0,
+			        nombre & ": P85 " & FORMAT(dias, "0") & " días después de lo comprometido",
+			        "Toda la cartera termina, al P85, dentro de lo comprometido"
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 0217df1a-1d57-5833-9fb7-a424880ea9bb
+
+	/// Segunda frase: el equipo del que más se espera.
+	measure 'Portada frase 2' =
+			VAR mayor = TOPN(1, VALUES(dependencias[equipo_bloqueante]), [Horas bloqueadas por dependencia], DESC)
+			VAR equipo = MAXX(mayor, dependencias[equipo_bloqueante])
+			VAR parte = DIVIDE(CALCULATE([Horas bloqueadas por dependencia], dependencias[equipo_bloqueante] = equipo), [Horas bloqueadas por dependencia])
+			RETURN equipo & " genera el " & FORMAT(parte, "0%") & " de las horas bloqueadas"
+		displayFolder: 0. Portada
+		lineageTag: 70c7d223-25d8-54c5-ac4a-f17d2da29ae2
+
+	column issue
+		dataType: string
+		lineageTag: 98b60125-dfab-5680-a3be-431e51efddc0
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 44f65c67-0863-536e-b371-2b109ab5c074
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: a7f0449f-4ec7-5297-8ee0-dd364f109c08
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: 15abde5a-15fd-5d5c-bb6c-eb466549ac7b
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: a166c77a-9c89-56df-95c8-93d375c120d4
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column epica_padre
+		dataType: string
+		isHidden
+		lineageTag: 50835c63-6e1e-50fd-9ab5-fcd75f5db654
+		summarizeBy: none
+		sourceColumn: epica_padre
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f3ac7fff-10aa-5d3c-8743-75b087a2f655
+		summarizeBy: none
+		sourceColumn: puntos
+
+		annotation SummarizationSetBy = Automatic
+
+	column creado
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: ad7f10a2-75f1-50a3-bbe2-a5749086bb85
+		summarizeBy: none
+		sourceColumn: creado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_inicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f9590bce-3e96-50e9-a8ef-fad82f293744
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_fin
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 2d40c377-4bcc-556b-9b9f-c1998414eeac
+		summarizeBy: none
+		sourceColumn: fecha_fin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estado_al_corte
+		dataType: string
+		isHidden
+		lineageTag: e1c495f2-ed1c-5778-91f9-5263e14df34d
+		summarizeBy: none
+		sourceColumn: estado_al_corte
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_al_corte_nombre
+		dataType: string
+		lineageTag: 1a125167-5f8d-5169-bf42-bc0b0e35c393
+		summarizeBy: none
+		sourceColumn: estado_al_corte_nombre
+		sortByColumn: estado_al_corte_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_al_corte_orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 40dfb38c-afd2-5660-9342-4fa57cca5d6e
+		summarizeBy: none
+		sourceColumn: estado_al_corte_orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_ciclo
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d5de6341-dfb1-5da1-b5de-090f064a1be0
+		summarizeBy: none
+		sourceColumn: dias_ciclo
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_bloqueado
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: 62f83bcc-9d45-57f6-aadd-2f4983458d71
+		summarizeBy: none
+		sourceColumn: horas_bloqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column sprint
+		dataType: string
+		isHidden
+		lineageTag: f19823e3-5302-5736-b9b7-945398c7f665
+		summarizeBy: none
+		sourceColumn: sprint
+
+		annotation SummarizationSetBy = Automatic
+
+	partition issues = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("issues.csv", {{"issue", type text}, {"industria", type text}, {"proyecto", type text}, {"equipo", type text}, {"tipo", type text}, {"epica_padre", type text}, {"puntos", Int64.Type}, {"creado", type date}, {"fecha_inicio", type date}, {"fecha_fin", type date}, {"estado_al_corte", type text}, {"dias_ciclo", Int64.Type}, {"horas_bloqueado", Int64.Type}, {"sprint", type text}}),
+				    Nombre = Table.AddColumn(Origen, "estado_al_corte_nombre", each Record.FieldOrDefault([por_hacer = "Por hacer", en_curso = "En curso", en_revision = "En revisión", bloqueado = "Bloqueado", hecho = "Hecho"], [estado_al_corte], [estado_al_corte]), type text),
+				    Orden = Table.AddColumn(Nombre, "estado_al_corte_orden", each Record.FieldOrDefault([por_hacer = 1, en_curso = 2, en_revision = 3, bloqueado = 4, hecho = 5], [estado_al_corte], 9), Int64.Type)
+				in
+				    Orden
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,64 @@
+/// Horas disponibles por equipo y semana: dedicación de cada asignación por 40 horas.
+table capacidad_semanal
+	lineageTag: 85ba8db5-e1a9-5a55-84c9-c69d6db33c2a
+
+	/// Horas de jornada disponibles en el periodo.
+	measure 'Capacidad (h)' = SUM(capacidad_semanal[horas_capacidad])
+		formatString: #,##0
+		displayFolder: 4. Capacidad
+		lineageTag: f8953851-f05e-5c71-a479-b8b90b2cb682
+
+	/// Horas registradas en proyectos sobre capacidad: bajo 100% hay soporte u holgura; sobre 100%, sobretiempo.
+	measure 'Carga %' = DIVIDE([Horas registradas], [Capacidad (h)])
+		formatString: 0%
+		displayFolder: 4. Capacidad
+		lineageTag: ab349bbf-696e-57ae-9815-a9a9277bcb5d
+
+	column semana
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e03b0ac8-04ad-5c22-a0df-e7d1154ec30c
+		summarizeBy: none
+		sourceColumn: semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 1e5caed6-fc64-5bcc-af9e-5f88e5441738
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		isHidden
+		lineageTag: bf8ef90c-ee4d-5f0e-8992-466a42814252
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_capacidad
+		dataType: double
+		isHidden
+		formatString: #,##0
+		lineageTag: 937d2a5e-e35a-5984-bf4d-e508c598fb03
+		summarizeBy: none
+		sourceColumn: horas_capacidad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition capacidad_semanal = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("capacidad_semanal.csv", {{"semana", type date}, {"industria", type text}, {"equipo", type text}, {"horas_capacidad", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

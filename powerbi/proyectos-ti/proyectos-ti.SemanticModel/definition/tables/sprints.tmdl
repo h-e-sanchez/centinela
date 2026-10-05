@@ -1,0 +1,54 @@
+/// Dimensión: sprints de dos semanas, comunes a las tres empresas.
+table sprints
+	lineageTag: 8cc3338a-3764-54b7-bda0-7ca3be342c4a
+
+	column sprint
+		dataType: string
+		lineageTag: 5a9952a1-bedb-5199-8eb7-2cf29d84730c
+		summarizeBy: none
+		sourceColumn: sprint
+		sortByColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b3ec2218-a08a-505a-9527-6fda915cfc8d
+		summarizeBy: none
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: accea4de-86aa-501e-9751-098ad6c8e67c
+		summarizeBy: none
+		sourceColumn: inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fin
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: d58b1338-0f1e-5781-b9f7-037a10bf0284
+		summarizeBy: none
+		sourceColumn: fin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition sprints = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("sprints.csv", {{"sprint", type text}, {"numero", Int64.Type}, {"inicio", type date}, {"fin", type date}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,120 @@
+/// Pares de issues: la bloqueante es de otro equipo; horas_bloqueado es lo que esperó la bloqueada.
+table dependencias
+	lineageTag: 1574e2f6-0241-5edd-9a0e-e124111ec731
+
+	/// Issues que necesitan algo de otro equipo para terminar.
+	measure Dependencias = COUNTROWS(dependencias)
+		formatString: #,##0
+		displayFolder: 5. Colaboración
+		lineageTag: bd6096fa-894d-5dc0-af7f-136c3b892afc
+
+	/// Horas de espera atribuidas al equipo bloqueante (si hay dos bloqueantes, se reparten).
+	measure 'Horas bloqueadas por dependencia' = SUM(dependencias[horas_bloqueado])
+		formatString: #,##0
+		displayFolder: 5. Colaboración
+		lineageTag: 19a5e893-3106-5af4-a800-8d385b2b455e
+
+	/// Días hábiles de espera promedio por dependencia.
+	measure 'Espera media (días)' = DIVIDE([Horas bloqueadas por dependencia], [Dependencias] * 8)
+		formatString: 0.0
+		displayFolder: 5. Colaboración
+		lineageTag: 7e61212a-537f-5bef-8cf4-d31e4c97bd75
+
+	/// Dependencias cuya issue bloqueante no estaba terminada al corte.
+	measure 'Dependencias abiertas al corte' = CALCULATE([Dependencias], ISBLANK(dependencias[resuelta]))
+		formatString: #,##0
+		displayFolder: 5. Colaboración
+		lineageTag: e79d85e7-7ec3-5797-a8bf-de2bab011694
+
+	column issue_bloqueante
+		dataType: string
+		lineageTag: 52af5346-c358-5eaa-bfd7-05b547ceb22d
+		summarizeBy: none
+		sourceColumn: issue_bloqueante
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue_bloqueado
+		dataType: string
+		lineageTag: b4cecd36-436d-5f11-9518-c512aa900fc2
+		summarizeBy: none
+		sourceColumn: issue_bloqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: f818b0de-c42f-5de1-84a2-a8641b3b2cdc
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column proyecto
+		dataType: string
+		isHidden
+		lineageTag: 422db0ec-6011-5ae1-80bf-72fb7469b736
+		summarizeBy: none
+		sourceColumn: proyecto
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_bloqueante
+		dataType: string
+		lineageTag: d6fa79fc-8004-5dee-8796-84e12f3f8a68
+		summarizeBy: none
+		sourceColumn: equipo_bloqueante
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_bloqueado
+		dataType: string
+		lineageTag: 79566962-226c-59fc-a86a-0a0549fd960f
+		summarizeBy: none
+		sourceColumn: equipo_bloqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	column creada
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: f36ef0ba-b608-5a27-88d9-4023a3f14237
+		summarizeBy: none
+		sourceColumn: creada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column resuelta
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: bfbc3005-077d-5a2c-a5e9-d5a3af5cf6f2
+		summarizeBy: none
+		sourceColumn: resuelta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column horas_bloqueado
+		dataType: int64
+		isHidden
+		formatString: #,##0
+		lineageTag: bfae4114-2be6-5494-b69a-3a8c5e472f98
+		summarizeBy: none
+		sourceColumn: horas_bloqueado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dependencias = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("dependencias.csv", {{"issue_bloqueante", type text}, {"issue_bloqueado", type text}, {"industria", type text}, {"proyecto", type text}, {"equipo_bloqueante", type text}, {"equipo_bloqueado", type text}, {"creada", type date}, {"resuelta", type date}, {"horas_bloqueado", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

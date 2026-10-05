@@ -1,0 +1,13 @@
+proyecto,industria,nombre,inicio,fin_comprometido,puntos_planificados,puntos_agregados,presupuesto_horas,presupuesto_monto
+MAN-ERP,Manufactura,Migración de ERP,2025-03-03,2026-12-18,2720,0,32645,1143000000
+MAN-LOT,Manufactura,Trazabilidad de lotes en planta,2025-01-06,2025-11-28,1197,0,14364,507000000
+MAN-POR,Manufactura,Portal de distribuidores,2025-09-01,2026-06-26,739,0,8864,308000000
+MAN-PRE,Manufactura,Mantenimiento predictivo,2026-02-02,2027-01-29,1046,0,12556,450000000
+ENE-TEL,Energia,Telemetría de centrales,2025-02-03,2026-03-27,1723,0,20677,733000000
+ENE-DES,Energia,Despacho en tiempo real,2025-06-02,2026-11-27,1667,0,20008,701000000
+ENE-FAC,Energia,Facturación de clientes libres,2025-10-06,2026-10-30,932,0,11179,386000000
+ENE-CIB,Energia,Ciberseguridad OT,2026-01-05,2026-12-18,749,0,8987,324000000
+SAL-FIC,Salud,Ficha clínica electrónica,2025-04-07,2026-10-30,2398,671,28774,1028000000
+SAL-AGE,Salud,Agenda en línea,2025-01-06,2025-09-26,1130,0,13559,488000000
+SAL-LAB,Salud,Integración con laboratorio,2025-08-04,2026-05-29,747,0,8963,327000000
+SAL-CAM,Salud,Tablero de camas,2026-03-02,2026-12-18,939,0,11267,410000000
