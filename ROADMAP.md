@@ -48,6 +48,26 @@ cada empresa (Concepción, Zona Norte y Clínica Oriente) cubre ausencias con un
 las otras dos sirven de grupo de control. Ningún parámetro sale de un empleador real: el
 método (simulación y credibilidad) es genérico.
 
+### Reportes #4 a #7 — las mismas tres empresas, cuatro miradas más
+
+Especificados el 2026-10-05, antes de construir. Cada especificación fija datos, páginas,
+medidas, historias sembradas y tests, y todos abren con **portada y resumen** y cierran con
+**glosario**, como el #2.
+
+- **#4 Proyectos tecnológicos** ([especificación](docs/especificaciones/04-proyectos-ti.md)):
+  la cartera de TI de cada empresa, ejecutada por cinco equipos compartidos con un flujo ágil
+  estilo Jira. Mide velocidad, flujo, carga por equipo y dependencias entre equipos, y
+  pronostica la fecha de término con Monte Carlo.
+- **#5 Capital de trabajo y ciclo de caja** ([especificación](docs/especificaciones/05-capital-de-trabajo.md)):
+  cobranza, pagos e inventario con DSO, DPO, DIO y ciclo de conversión de caja, más un flujo
+  de caja a 13 semanas. Sus facturas cuadran con los montos del #1.
+- **#6 Equidad salarial y bandas** ([especificación](docs/especificaciones/06-compensaciones.md)):
+  las mismas personas del #2, con bandas por grado, compa-ratio y brecha de género, mirado
+  **por persona y por servicio**, con seguridad por fila por servicio.
+- **#7 Pricing y márgenes por canal** ([especificación](docs/especificaciones/07-pricing-margenes.md)):
+  cascada de precios, margen de contribución por canal, efecto precio-volumen-mezcla y curva
+  ballena de clientes. Sus ingresos cuadran con el #1.
+
 ---
 
 ## Camino A — Motor (Python) — hecho
@@ -133,7 +153,16 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #3: `.pbix` exportado y captura `portada.png` (manual)
 - [x] Glosario por reporte: conceptos escritos a mano + todas las medidas DAX leídas del TMDL, en la ficha web y como página «Glosario» en cada PBIP
 - [ ] Glosario: abrir los 3 PBIP en Desktop, revisar la página y volver a publicar (manual)
-- [ ] Reporte #4: Del libro diario a los EEFF / capital de trabajo (en espera)
+- [x] Reportes #4 a #7: especificación en [`docs/especificaciones/`](docs/especificaciones/) y tarjetas «En preparación» en la vitrina (`proximos` del catálogo)
+- [ ] Reporte #4 · Proyectos tecnológicos: generador y tests, PBIP de 8 páginas, guía, glosario y descargas
+- [ ] Reporte #4: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [ ] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
+- [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [ ] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 8 páginas con RLS por servicio, guía, glosario y descargas
+- [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
+- [ ] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
+- [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [ ] Reporte #8: Del libro diario a los EEFF (en espera; capital de trabajo pasó al #5)
 
 ## Backlog P1 — robustez
 
@@ -185,6 +214,16 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-05 — Reportes #4 a #7 especificados
+
+Cuatro especificaciones en `docs/especificaciones/`, con un mismo contrato: datos tidy con
+semilla fija, páginas (portada, resumen y glosario incluidos), medidas DAX clave, tres
+historias sembradas y tests. Son Proyectos tecnológicos (ágil, estilo Jira),
+Capital de trabajo y ciclo de caja, Equidad salarial y bandas (por persona y por servicio)
+y Pricing y márgenes por canal. Los cuatro aparecen en la vitrina como «En preparación».
+El #5 absorbe el capital de trabajo que estaba en espera en el #4; «Del libro diario a los
+EEFF» pasa a ser el #8.
 
 ### 2026-10-02 — Workforce publicado
 

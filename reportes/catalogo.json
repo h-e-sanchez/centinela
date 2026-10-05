@@ -244,5 +244,30 @@
       ]
     }
   ],
-  "proximos": []
+  "proximos": [
+    {
+      "titulo": "Proyectos tecnológicos: entrega, capacidad y colaboración",
+      "tema": "Control de gestión · Proyectos TI",
+      "color": "#5B4B8A",
+      "resumen": "Cartera de TI de las tres empresas con flujo ágil estilo Jira: velocidad, tiempo de ciclo, carga por equipo, dependencias entre equipos y fecha de término con Monte Carlo."
+    },
+    {
+      "titulo": "Capital de trabajo y ciclo de caja",
+      "tema": "Finanzas operativas",
+      "color": "#2E7D8C",
+      "resumen": "Cobranza, pagos e inventario con DSO, DPO, DIO y ciclo de conversión de caja, más un flujo de caja a 13 semanas que cuadra con el reporte de Presupuesto vs. Real."
+    },
+    {
+      "titulo": "Equidad salarial y bandas: por persona y por servicio",
+      "tema": "People Analytics · Compensaciones",
+      "color": "#8A5A44",
+      "resumen": "Bandas por grado, compa-ratio, fuera de banda y brecha de género dentro del mismo grado, por persona y por servicio, con el costo de corregir y seguridad por fila."
+    },
+    {
+      "titulo": "Pricing y márgenes por canal",
+      "tema": "Control de gestión · Comercial",
+      "color": "#7A6A1F",
+      "resumen": "Cascada de precios de lista a bolsillo, margen de contribución por canal, efecto precio-volumen-mezcla y rentabilidad por cliente."
+    }
+  ]
 }
