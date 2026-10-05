@@ -1,0 +1,4 @@
+role 'Jefatura Pabellón'
+	modelPermission: read
+
+	tablePermission servicios = servicios[servicio] = "Pabellón"

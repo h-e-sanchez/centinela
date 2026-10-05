@@ -1,0 +1,57 @@
+/// Dimensión: cargo = servicio × grado en cada empresa.
+table cargos
+	lineageTag: 36e87567-2d01-5655-a405-854759258313
+
+	column cargo
+		dataType: string
+		lineageTag: ca2e2ac6-e059-5627-a260-af670c3e10df
+		summarizeBy: none
+		sourceColumn: cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: a9a969d1-6021-5100-b6a6-06354c1df85e
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		isHidden
+		lineageTag: f21ceef1-707a-581a-a263-70ee9c6f59c2
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column grado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 946d9764-f372-5762-a321-09ccc2a0e4be
+		summarizeBy: none
+		sourceColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	column estamento
+		dataType: string
+		lineageTag: 21440ae8-44fd-56ee-b6e8-6f485e679827
+		summarizeBy: none
+		sourceColumn: estamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cargos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("cargos.csv", {{"cargo", type text}, {"industria", type text}, {"servicio", type text}, {"grado", Int64.Type}, {"estamento", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,500 @@
+/// Remuneración mensual por persona: sueldo base, su equivalente a 44 horas y el variable, con la banda que le corresponde.
+table remuneraciones
+	lineageTag: 04eeb9fc-004a-50c4-b9fd-f9d5322d3990
+
+	/// Personas con remuneración en el último mes del periodo.
+	measure 'Dotación' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        DISTINCTCOUNT(remuneraciones[id_persona]),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: #,##0
+		displayFolder: 1. Estructura
+		lineageTag: a4d397b4-8d44-5d1b-ab84-4d29fdd4138c
+
+	/// Sueldo base más variable del último mes del periodo.
+	measure 'Masa salarial del mes' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        SUM(remuneraciones[sueldo_base]) + SUM(remuneraciones[variable]),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Estructura
+		lineageTag: e2133e01-40d8-538c-b751-3f4a2bffac75
+
+	/// Sueldo base más variable de todos los meses del periodo.
+	measure 'Masa salarial del periodo' = SUM(remuneraciones[sueldo_base]) + SUM(remuneraciones[variable])
+		formatString: \$ #,##0
+		displayFolder: 1. Estructura
+		lineageTag: b3d00d6d-4e90-5423-927a-fa1b5c6102e5
+
+	/// Sueldo base promedio equivalente a 44 horas, en el último mes.
+	measure 'Sueldo base promedio' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGE(remuneraciones[sueldo_base_44h]),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Estructura
+		lineageTag: 463d21f8-f32b-51e4-bbf5-c603e3e92ff1
+
+	/// Mediana del sueldo base equivalente a 44 horas, en el último mes.
+	measure 'Sueldo base mediano' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        MEDIAN(remuneraciones[sueldo_base_44h]),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Estructura
+		lineageTag: ce7b72f2-9e46-55c0-be73-58358a56b965
+
+	/// Sueldo base (44 h) sobre el punto medio de la banda: 1,00 es el punto medio.
+	measure 'Compa-ratio' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        DIVIDE(SUM(remuneraciones[sueldo_base_44h]), SUMX(remuneraciones, RELATED(bandas[punto_medio]))),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: 0.00
+		displayFolder: 2. Bandas
+		lineageTag: 5548e45c-c95a-55e7-9d3b-731af086fc55
+
+	/// 0% es el mínimo de la banda y 100% el máximo; promedio de las personas.
+	measure 'Posición en banda %' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(
+			            remuneraciones,
+			            DIVIDE(remuneraciones[sueldo_base_44h] - RELATED(bandas[minimo]), RELATED(bandas[maximo]) - RELATED(bandas[minimo]))
+			        ),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: 0%
+		displayFolder: 2. Bandas
+		lineageTag: c509957c-61c9-595c-84da-9c39ece06b81
+
+	/// Personas con sueldo base (44 h) bajo el mínimo de su banda.
+	measure 'Bajo el mínimo' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        COUNTROWS(FILTER(remuneraciones, remuneraciones[sueldo_base_44h] < RELATED(bandas[minimo]))),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: #,##0
+		displayFolder: 2. Bandas
+		lineageTag: add4da07-7f61-5d7a-b2e6-b5a21ddb64a2
+
+	/// Personas con sueldo base (44 h) sobre el máximo de su banda.
+	measure 'Sobre el máximo' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        COUNTROWS(FILTER(remuneraciones, remuneraciones[sueldo_base_44h] > RELATED(bandas[maximo]))),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: #,##0
+		displayFolder: 2. Bandas
+		lineageTag: c6ec0eb2-e7cf-5f50-b4f1-545bf65cc0f0
+
+	/// Parte de la dotación bajo el mínimo de su banda.
+	measure '% bajo el mínimo' = DIVIDE([Bajo el mínimo], [Dotación])
+		formatString: 0.0%
+		displayFolder: 2. Bandas
+		lineageTag: 14bc6aea-10dd-52fc-90f0-106c05c4508d
+
+	/// Parte de la dotación bajo el mínimo o sobre el máximo de su banda.
+	measure '% fuera de banda' = DIVIDE([Bajo el mínimo] + [Sobre el máximo], [Dotación])
+		formatString: 0.0%
+		displayFolder: 2. Bandas
+		lineageTag: 90bd0bf5-f593-562e-803c-7bf814c89998
+
+	/// Mínimo de la banda (promedio si el filtro mezcla grados).
+	measure 'Mínimo de banda' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[minimo])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 2. Bandas
+		lineageTag: 32750c99-1767-5f9c-a5be-ad7c47af589b
+
+	/// Punto medio de la banda (promedio si el filtro mezcla grados).
+	measure 'Punto medio de banda' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[punto_medio])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 2. Bandas
+		lineageTag: 442de8d8-2090-592f-8b04-116eb08286d5
+
+	/// Máximo de la banda (promedio si el filtro mezcla grados).
+	measure 'Máximo de banda' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[maximo])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 2. Bandas
+		lineageTag: 2baeef58-4dca-54ba-88b5-2762f8398ee5
+
+	/// En la tabla por persona: si su sueldo está fuera de la banda.
+	measure 'Alerta de banda' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        
+			            SWITCH(
+			                TRUE(),
+			                MAX(remuneraciones[sueldo_base_44h]) < MAXX(remuneraciones, RELATED(bandas[minimo])), "Bajo el mínimo",
+			                MAX(remuneraciones[sueldo_base_44h]) > MAXX(remuneraciones, RELATED(bandas[maximo])), "Sobre el máximo",
+			                BLANK()
+			            ),
+			        remuneraciones[fecha] = ultimo
+			    )
+		displayFolder: 2. Bandas
+		lineageTag: 1f7fe0ca-7521-5d54-999d-8754df1d6398
+
+	/// Fondo del mapa de calor: rojo bajo 0,90, ámbar sobre 1,10, verde en la banda.
+	measure 'Color compa-ratio' =
+			VAR c = [Compa-ratio]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(c), BLANK(),
+			        c < 0.9, "#F2D4CC",
+			        c > 1.1, "#F3E3C3",
+			        "#D9E8DA"
+			    )
+		displayFolder: 0. Auxiliares
+		lineageTag: d5f609d6-fe6d-5ce3-903d-75c8de3442ed
+
+	/// Coeficiente de variación del sueldo promedio entre servicios: cuánto paga distinto cada servicio por el mismo grado.
+	measure 'Dispersión entre servicios' =
+			VAR promedios =
+			    ADDCOLUMNS(VALUES(servicios[servicio]), "p", [Sueldo base promedio])
+			RETURN
+			    DIVIDE(STDEVX.P(FILTER(promedios, NOT ISBLANK([p])), [p]), AVERAGEX(FILTER(promedios, NOT ISBLANK([p])), [p]))
+		formatString: 0.0%
+		displayFolder: 3. Equidad
+		lineageTag: 0a7948b0-c478-53d3-9a34-0fc6b7d4edd9
+
+	/// Mediana del sueldo base (44 h) de los hombres, en el último mes.
+	measure 'Mediana hombres' = CALCULATE([Sueldo base mediano], personas[sexo] = "M")
+		formatString: \$ #,##0
+		displayFolder: 3. Equidad
+		lineageTag: 26f23157-090d-5510-92d1-1d83fe0bb57c
+
+	/// Mediana del sueldo base (44 h) de las mujeres, en el último mes.
+	measure 'Mediana mujeres' = CALCULATE([Sueldo base mediano], personas[sexo] = "F")
+		formatString: \$ #,##0
+		displayFolder: 3. Equidad
+		lineageTag: 680e846f-6ff2-508e-bb9e-ec2ac5cfca98
+
+	/// Diferencia de medianas sin controlar por grado. Positiva: las mujeres ganan menos.
+	measure 'Brecha de género cruda' = DIVIDE([Mediana hombres] - [Mediana mujeres], [Mediana hombres])
+		formatString: 0.0%
+		displayFolder: 3. Equidad
+		lineageTag: 44021d24-307f-5e61-8e07-3ae9172839e6
+
+	/// Brecha de medianas dentro de cada banda (empresa × grado), ponderada por su dotación. Compara cargos equivalentes.
+	measure 'Brecha de género en el grado' =
+			VAR porGrado =
+			    ADDCOLUMNS(
+			        CALCULATETABLE(VALUES(remuneraciones[banda]), remuneraciones[fecha] = MAX(remuneraciones[fecha])),
+			        "h", [Mediana hombres],
+			        "m", [Mediana mujeres],
+			        "n", [Dotación]
+			    )
+			VAR comparables = FILTER(porGrado, NOT ISBLANK([h]) && NOT ISBLANK([m]))
+			RETURN DIVIDE(SUMX(comparables, DIVIDE([h] - [m], [h]) * [n]), SUMX(comparables, [n]))
+		formatString: 0.0%
+		displayFolder: 3. Equidad
+		lineageTag: 3305b509-c111-51e7-973f-9c300440d511
+
+	/// P50 de la encuesta de mercado del grado (promedio si el filtro mezcla grados).
+	measure 'Mercado P50' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[mercado_p50])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 4. Mercado
+		lineageTag: 54b6750c-aea4-51e8-9f14-7d430a2c772f
+
+	/// P25 de la encuesta de mercado del grado.
+	measure 'Mercado P25' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[mercado_p25])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 4. Mercado
+		lineageTag: f4178960-0a8a-5c4d-aa1e-e5d83b9a16af
+
+	/// P75 de la encuesta de mercado del grado.
+	measure 'Mercado P75' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        AVERAGEX(remuneraciones, RELATED(bandas[mercado_p75])),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 4. Mercado
+		lineageTag: 1b0b779f-c5b0-56a1-b5ab-3cc076fa5603
+
+	/// Sueldo base (44 h) sobre el P50 de mercado: bajo 1,00 la empresa paga menos que el mercado.
+	measure 'Posición vs. mercado' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        DIVIDE(SUM(remuneraciones[sueldo_base_44h]), SUMX(remuneraciones, RELATED(bandas[mercado_p50]))),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: 0.00
+		displayFolder: 4. Mercado
+		lineageTag: 2af9e759-3d53-578d-9232-69b4b71d9840
+
+	/// Lo que cuesta al mes subir a cada persona bajo el mínimo hasta el mínimo de su banda.
+	measure 'Costo de llevar al mínimo (mes)' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            remuneraciones,
+			            MAX(0, RELATED(bandas[minimo]) - remuneraciones[sueldo_base_44h]) * remuneraciones[jornada_horas] / 44
+			        ),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: 8ab8c8b9-e648-5ca3-9775-0c68dab4b54e
+
+	/// Lo que cuesta al mes llevar a todos al menos al primer cuarto de su banda.
+	measure 'Costo de llevar al P25 (mes)' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            remuneraciones,
+			            VAR p25 = RELATED(bandas[minimo]) + 0.25 * (RELATED(bandas[maximo]) - RELATED(bandas[minimo]))
+			            RETURN MAX(0, p25 - remuneraciones[sueldo_base_44h]) * remuneraciones[jornada_horas] / 44
+			        ),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: 9079fc93-6d68-511a-ae92-8f64427550fd
+
+	/// Costo de llevar al mínimo, por 12 meses.
+	measure 'Costo anual de llevar al mínimo' = [Costo de llevar al mínimo (mes)] * 12
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: fa687752-34a9-5878-9e54-99009feca5f5
+
+	/// Costo de llevar al P25 de la banda, por 12 meses.
+	measure 'Costo anual de llevar al P25' = [Costo de llevar al P25 (mes)] * 12
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: 0c40d2a2-b945-5f1d-b3e5-9f4e9a1c74b2
+
+	/// Suma de sueldos base del último mes, sobre la que se aplica un reajuste.
+	measure 'Sueldo base del mes' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        SUM(remuneraciones[sueldo_base]),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: 473f3b38-b2f6-553c-b04a-ae0eaf13db9a
+
+	/// Costo anual de un reajuste general sobre el sueldo base, según el parámetro elegido.
+	measure 'Impacto anual del reajuste' = [Sueldo base del mes] * 12 * [Reajuste negociado %]
+		formatString: \$ #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: 63a672bf-1198-5a08-96a7-ce27b9734c43
+
+	/// Compa-ratio para la tarjeta.
+	measure 'Portada compa-ratio' = FORMAT([Compa-ratio], "0.00")
+		displayFolder: 0. Portada
+		lineageTag: 83ecfd0d-29b6-5016-9b4b-aa9ecc78770f
+
+	/// Parte de la dotación fuera de banda, para la tarjeta.
+	measure 'Portada fuera de banda' = FORMAT([% fuera de banda], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: d900c5cd-5caf-571f-a463-e3c7f5b82a2a
+
+	/// Costo anual de llevar al mínimo, abreviado.
+	measure 'Portada costo' =
+			VAR v = [Costo anual de llevar al mínimo]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0.0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 5fdfcc61-b0e7-5548-a09e-827ad864ae98
+
+	/// Primera frase: el servicio que más paga sobre la banda y el que menos.
+	measure 'Portada frase 1' =
+			VAR mayor = TOPN(1, FILTER(VALUES(servicios[servicio]), NOT ISBLANK([Compa-ratio])), [Compa-ratio], DESC)
+			VAR menor = TOPN(1, FILTER(VALUES(servicios[servicio]), NOT ISBLANK([Compa-ratio])), [Compa-ratio], ASC)
+			VAR nMayor = MAXX(mayor, servicios[servicio])
+			VAR nMenor = MAXX(menor, servicios[servicio])
+			RETURN
+			    nMayor & " paga " & FORMAT(CALCULATE([Compa-ratio], servicios[servicio] = nMayor), "0.00")
+			        & " del punto medio; " & nMenor & ", " & FORMAT(CALCULATE([Compa-ratio], servicios[servicio] = nMenor), "0.00")
+		displayFolder: 0. Portada
+		lineageTag: 2a95df49-d13f-5e32-ab0e-6166ea2be5ec
+
+	/// Segunda frase: la brecha de género sin controlar y dentro del mismo grado.
+	measure 'Portada frase 2' =
+			"Brecha de género: " & FORMAT([Brecha de género cruda], "0.0%") & " cruda, "
+			    & FORMAT([Brecha de género en el grado], "0.0%") & " en el mismo grado"
+		displayFolder: 0. Portada
+		lineageTag: d6060c5f-4fc4-5a68-b6be-402ae0afcc9c
+
+	column id_persona
+		dataType: string
+		isHidden
+		lineageTag: b3b13c30-3847-58c5-9954-bf01f78510b7
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 13c53c00-649f-5904-932d-b1ac37ab2ba0
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9047cc15-7468-5a43-b47d-8e3b50ba0c5c
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 89572b14-17fa-58dd-9896-a526272259c5
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		isHidden
+		lineageTag: 2b06f55a-f837-5822-8b3e-1e7ab6ef6324
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column grado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5870fc49-31bc-5efc-882a-a9e871eef211
+		summarizeBy: none
+		sourceColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	column banda
+		dataType: string
+		isHidden
+		lineageTag: 24aa0dd8-4fa1-5dee-8256-68ae1ecd4c89
+		summarizeBy: none
+		sourceColumn: banda
+
+		annotation SummarizationSetBy = Automatic
+
+	column jornada_horas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6dbb10c1-45cb-5398-875d-4fcb660504d7
+		summarizeBy: none
+		sourceColumn: jornada_horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column sueldo_base
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 4e01c10a-c49f-5a71-9fc0-74cf7016bec1
+		summarizeBy: none
+		sourceColumn: sueldo_base
+
+		annotation SummarizationSetBy = Automatic
+
+	column sueldo_base_44h
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 669c5632-29e7-5da1-8fd2-89ff8640f47e
+		summarizeBy: none
+		sourceColumn: sueldo_base_44h
+
+		annotation SummarizationSetBy = Automatic
+
+	column variable
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: e87031f6-9767-56d4-8bbc-50720e902ea2
+		summarizeBy: none
+		sourceColumn: variable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition remuneraciones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("remuneraciones.csv", {{"id_persona", type text}, {"fecha", type date}, {"anio", Int64.Type}, {"industria", type text}, {"servicio", type text}, {"grado", Int64.Type}, {"banda", type text}, {"jornada_horas", Int64.Type}, {"sueldo_base", Int64.Type}, {"sueldo_base_44h", Int64.Type}, {"variable", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

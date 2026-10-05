@@ -1,0 +1,135 @@
+/// Las mismas personas del reporte Workforce (ID sintético, sin nombre), con su cargo y grado.
+table personas
+	lineageTag: 10d491fb-cab1-5788-8efa-faa97f451451
+
+	column id_persona
+		dataType: string
+		lineageTag: 19a15b45-304c-5dd9-bc5d-3f812e6c9cb5
+		summarizeBy: none
+		sourceColumn: id_persona
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: e1670f65-ddaa-5ba9-88b3-3da60e402ee8
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sede
+		dataType: string
+		lineageTag: f7c6a6f0-a03f-5f1f-a170-8c2c5d7ea3aa
+		summarizeBy: none
+		sourceColumn: sede
+
+		annotation SummarizationSetBy = Automatic
+
+	column servicio
+		dataType: string
+		isHidden
+		lineageTag: c6ab57c3-615e-5714-a14c-4788ca0128db
+		summarizeBy: none
+		sourceColumn: servicio
+
+		annotation SummarizationSetBy = Automatic
+
+	column estamento
+		dataType: string
+		lineageTag: 958c24f4-556f-59ee-9d20-178c4faa3f36
+		summarizeBy: none
+		sourceColumn: estamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		isHidden
+		lineageTag: f047a21e-b0d4-5f4d-9a40-6d5f00b3627e
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo_nombre
+		dataType: string
+		lineageTag: e7818ea0-4fc3-558e-9d22-29de7e6753ba
+		summarizeBy: none
+		sourceColumn: sexo_nombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_nacimiento
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: dc7a5ae4-cc86-5927-acbb-4af48c6090c2
+		summarizeBy: none
+		sourceColumn: fecha_nacimiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_ingreso
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 51295958-1630-5b76-9f2e-d9ab718846fb
+		summarizeBy: none
+		sourceColumn: fecha_ingreso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column fecha_egreso
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 07d1e9ff-850b-50e4-84e4-141a15da62cc
+		summarizeBy: none
+		sourceColumn: fecha_egreso
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column jornada_horas
+		dataType: int64
+		formatString: 0
+		lineageTag: 91748809-3635-51bf-9358-0f7ece2e5cda
+		summarizeBy: none
+		sourceColumn: jornada_horas
+
+		annotation SummarizationSetBy = Automatic
+
+	column cargo
+		dataType: string
+		isHidden
+		lineageTag: 9de6df24-1f24-5af9-9974-5c27ea00169d
+		summarizeBy: none
+		sourceColumn: cargo
+
+		annotation SummarizationSetBy = Automatic
+
+	column grado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f61a1f07-7de1-5de1-a063-df2880662a1f
+		summarizeBy: none
+		sourceColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	partition personas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("personas.csv", {{"id_persona", type text}, {"industria", type text}, {"sede", type text}, {"servicio", type text}, {"estamento", type text}, {"sexo", type text}, {"fecha_nacimiento", type date}, {"fecha_ingreso", type date}, {"fecha_egreso", type date}, {"jornada_horas", Int64.Type}, {"cargo", type text}, {"grado", Int64.Type}}),
+				    Sexo = Table.AddColumn(Origen, "sexo_nombre", each if [sexo] = "F" then "Mujer" else "Hombre", type text)
+				in
+				    Sexo
+
+	annotation PBI_ResultType = Table

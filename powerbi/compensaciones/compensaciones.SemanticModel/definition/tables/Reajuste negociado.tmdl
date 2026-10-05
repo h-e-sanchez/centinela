@@ -1,0 +1,30 @@
+/// Parámetro what-if: reajuste general negociado (por ejemplo, en una negociación colectiva), de 0% a 10%.
+table 'Reajuste negociado'
+	lineageTag: b5ce6aea-a877-5aba-8f67-c8f5162ce94d
+
+	/// Reajuste elegido en el segmentador; si no hay uno elegido, 4,5% (el IPC de 2026 en el modelo).
+	measure 'Reajuste negociado %' = SELECTEDVALUE('Reajuste negociado'[Reajuste negociado], 0.045)
+		formatString: 0.0%
+		displayFolder: 5. Costo de corregir
+		lineageTag: 86c46af1-632c-54d5-a654-8a8cbc380910
+
+	column 'Reajuste negociado'
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 56e4c89f-7844-5580-b446-adb0f6a9779f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Reajuste negociado' = calculated
+		mode: import
+		source = GENERATESERIES(0, 0.1, 0.005)
+
+	annotation PBI_ResultType = Table

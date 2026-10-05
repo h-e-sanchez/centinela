@@ -79,6 +79,9 @@ python sql/auditar.py   # solo recalcula observaciones.csv desde los CSV
 # Datos sintéticos del reporte de proyectos de TI (historial estilo Jira + pronóstico Monte Carlo)
 python data/generar_proyectos_ti.py
 
+# Datos sintéticos del reporte de compensaciones (lee las personas de Workforce)
+python data/generar_compensaciones.py
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -125,6 +128,12 @@ el control de gestión a la cartera de TI desde el historial de un Jira ágil: v
 previsibilidad por sprint, tiempo de ciclo por percentil, carga de los equipos, horas bloqueadas
 por dependencias entre equipos y fecha de término pronosticada con Monte Carlo. Guía en
 [`reportes/proyectos-ti/guia.md`](reportes/proyectos-ti/guia.md).
+
+El reporte #6, **Equidad salarial y bandas** ([`powerbi/compensaciones/`](powerbi/compensaciones/)),
+toma las mismas personas del reporte Workforce y mide bandas, compa-ratio, equidad interna por
+persona y por servicio, brecha de género en cargos equivalentes y competitividad de mercado. Calcula
+el costo de corregir, con un parámetro de reajuste negociado y seguridad por fila por servicio. Guía
+en [`reportes/compensaciones/guia.md`](reportes/compensaciones/guia.md).
 
 ## Demo
 

@@ -1,0 +1,1810 @@
+id_persona,industria,sede,servicio,estamento,sexo,fecha_nacimiento,fecha_ingreso,fecha_egreso,jornada_horas,cargo,grado
+P0001,Manufactura,Santiago,Ventas,Profesionales,M,1984-02-24,2017-12-20,,44,MAN-Ventas-G2,2
+P0002,Manufactura,Santiago,Bodega y logística,Operarios,M,1984-08-09,2018-06-20,2025-12-16,44,MAN-Bodega y logística-G7,7
+P0003,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1998-12-15,2024-06-23,2026-03-04,44,MAN-Mantenimiento industrial-G5,5
+P0004,Manufactura,Santiago,Producción,Técnicos,M,1985-06-19,2010-06-14,2026-07-28,44,MAN-Producción-G4,4
+P0005,Manufactura,Santiago,Producción,Profesionales,F,1981-11-04,2003-01-07,2025-08-11,44,MAN-Producción-G2,2
+P0006,Manufactura,Santiago,Administración y finanzas,Profesionales,M,1982-03-14,2023-06-08,,22,MAN-Administración y finanzas-G3,3
+P0007,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1983-02-13,2012-07-13,,44,MAN-Administración y finanzas-G6,6
+P0008,Manufactura,Santiago,Ventas,Administrativos,M,1976-04-08,2022-04-25,,22,MAN-Ventas-G6,6
+P0009,Manufactura,Santiago,Ventas,Directivos,M,2001-09-11,2022-07-15,,44,MAN-Ventas-G1,1
+P0010,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1959-02-20,2004-10-21,,44,MAN-Administración y finanzas-G2,2
+P0011,Manufactura,Santiago,Bodega y logística,Operarios,M,1991-01-17,2021-07-31,,44,MAN-Bodega y logística-G7,7
+P0012,Manufactura,Santiago,Bodega y logística,Operarios,M,1977-12-10,2022-03-28,,44,MAN-Bodega y logística-G7,7
+P0013,Manufactura,Santiago,Bodega y logística,Operarios,M,2002-03-20,2023-03-22,2026-08-03,44,MAN-Bodega y logística-G7,7
+P0014,Manufactura,Santiago,Ventas,Administrativos,F,1981-11-07,2022-03-02,,44,MAN-Ventas-G6,6
+P0015,Manufactura,Santiago,Bodega y logística,Operarios,M,1994-04-22,2022-07-01,2025-02-21,44,MAN-Bodega y logística-G7,7
+P0017,Manufactura,Santiago,Bodega y logística,Operarios,F,1998-02-25,2021-06-09,,44,MAN-Bodega y logística-G7,7
+P0018,Manufactura,Santiago,Producción,Técnicos,M,1999-11-17,2020-11-03,2025-08-20,44,MAN-Producción-G5,5
+P0020,Manufactura,Santiago,Bodega y logística,Operarios,M,1996-02-23,2018-08-03,,44,MAN-Bodega y logística-G7,7
+P0021,Manufactura,Santiago,Calidad,Profesionales,M,1992-07-11,2022-12-03,2026-09-22,44,MAN-Calidad-G3,3
+P0022,Manufactura,Santiago,Mantenimiento industrial,Profesionales,M,1992-10-13,2019-03-28,,44,MAN-Mantenimiento industrial-G3,3
+P0023,Manufactura,Santiago,Producción,Técnicos,M,1984-04-16,2013-09-01,,44,MAN-Producción-G4,4
+P0024,Manufactura,Santiago,Producción,Operarios,F,2000-08-05,2021-05-23,2025-05-14,44,MAN-Producción-G7,7
+P0025,Manufactura,Santiago,Ventas,Profesionales,F,1999-07-09,2022-09-10,,44,MAN-Ventas-G3,3
+P0026,Manufactura,Santiago,Producción,Operarios,M,1986-06-08,2019-11-07,,44,MAN-Producción-G7,7
+P0027,Manufactura,Santiago,Bodega y logística,Administrativos,F,1990-11-04,2023-03-02,,44,MAN-Bodega y logística-G6,6
+P0028,Manufactura,Santiago,Bodega y logística,Operarios,M,1984-02-25,2018-11-23,,44,MAN-Bodega y logística-G7,7
+P0029,Manufactura,Santiago,Producción,Operarios,M,1996-02-19,2017-09-18,2026-03-26,44,MAN-Producción-G7,7
+P0030,Manufactura,Santiago,Bodega y logística,Administrativos,F,1979-10-26,2018-12-31,,22,MAN-Bodega y logística-G6,6
+P0031,Manufactura,Santiago,Producción,Operarios,M,1999-08-23,2020-06-16,,44,MAN-Producción-G7,7
+P0032,Manufactura,Santiago,Bodega y logística,Operarios,M,1964-08-14,2009-05-20,2026-01-02,44,MAN-Bodega y logística-G7,7
+P0033,Manufactura,Santiago,Producción,Profesionales,M,1991-11-13,2022-07-15,,44,MAN-Producción-G3,3
+P0034,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,2001-10-23,2022-09-15,2025-05-22,44,MAN-Mantenimiento industrial-G5,5
+P0035,Manufactura,Santiago,Mantenimiento industrial,Operarios,M,1994-01-03,2022-11-07,2025-09-05,44,MAN-Mantenimiento industrial-G7,7
+P0036,Manufactura,Santiago,Bodega y logística,Operarios,M,1998-12-18,2019-08-31,,44,MAN-Bodega y logística-G7,7
+P0037,Manufactura,Santiago,Producción,Operarios,F,2002-03-07,2023-03-20,,44,MAN-Producción-G7,7
+P0038,Manufactura,Santiago,Producción,Operarios,F,1996-03-10,2023-03-16,,22,MAN-Producción-G7,7
+P0039,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1979-01-19,2017-05-01,2026-04-17,44,MAN-Administración y finanzas-G6,6
+P0040,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1989-02-13,2012-08-20,2026-02-17,44,MAN-Administración y finanzas-G2,2
+P0041,Manufactura,Santiago,Administración y finanzas,Profesionales,M,2001-10-08,2022-10-15,,44,MAN-Administración y finanzas-G3,3
+P0042,Manufactura,Santiago,Mantenimiento industrial,Operarios,M,1987-02-25,2024-02-15,,44,MAN-Mantenimiento industrial-G7,7
+P0044,Manufactura,Santiago,Bodega y logística,Operarios,M,1974-09-08,2008-03-25,,44,MAN-Bodega y logística-G7,7
+P0045,Manufactura,Santiago,Producción,Operarios,M,1998-02-15,2022-04-17,2025-02-04,44,MAN-Producción-G7,7
+P0046,Manufactura,Santiago,Producción,Operarios,M,1994-05-01,2021-02-08,,44,MAN-Producción-G7,7
+P0047,Manufactura,Santiago,Producción,Operarios,M,1995-03-19,2016-01-13,2026-10-21,44,MAN-Producción-G7,7
+P0048,Manufactura,Santiago,Producción,Operarios,M,2002-08-10,2023-06-13,,44,MAN-Producción-G7,7
+P0049,Manufactura,Santiago,Producción,Operarios,M,1984-09-15,2015-08-15,,44,MAN-Producción-G7,7
+P0050,Manufactura,Santiago,Bodega y logística,Operarios,F,1985-09-05,2015-12-10,2025-08-06,44,MAN-Bodega y logística-G7,7
+P0051,Manufactura,Santiago,Producción,Operarios,F,1969-08-04,2019-09-06,,44,MAN-Producción-G7,7
+P0052,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1990-03-13,2020-08-31,,44,MAN-Mantenimiento industrial-G5,5
+P0053,Manufactura,Santiago,Bodega y logística,Administrativos,M,1992-12-10,2022-01-03,,44,MAN-Bodega y logística-G6,6
+P0055,Manufactura,Santiago,Producción,Técnicos,M,1996-11-05,2017-03-04,,44,MAN-Producción-G4,4
+P0056,Manufactura,Santiago,Calidad,Técnicos,M,1973-09-15,2012-01-26,,22,MAN-Calidad-G4,4
+P0057,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1991-02-28,2015-05-18,2026-11-09,44,MAN-Administración y finanzas-G2,2
+P0058,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1995-04-21,2019-10-30,,44,MAN-Administración y finanzas-G6,6
+P0059,Manufactura,Santiago,Producción,Profesionales,M,1980-05-01,2015-12-07,,22,MAN-Producción-G2,2
+P0060,Manufactura,Santiago,Producción,Operarios,M,1985-03-06,2019-12-16,2025-10-23,44,MAN-Producción-G7,7
+P0061,Manufactura,Santiago,Bodega y logística,Operarios,F,1995-11-01,2019-04-02,,44,MAN-Bodega y logística-G7,7
+P0062,Manufactura,Santiago,Calidad,Profesionales,M,1984-05-21,2007-01-30,,44,MAN-Calidad-G2,2
+P0063,Manufactura,Santiago,Producción,Operarios,M,1975-07-09,2022-05-24,,22,MAN-Producción-G7,7
+P0064,Manufactura,Santiago,Administración y finanzas,Directivos,M,1976-05-25,2016-04-19,2026-10-27,44,MAN-Administración y finanzas-G1,1
+P0065,Manufactura,Santiago,Producción,Operarios,M,1990-03-21,2018-09-06,,44,MAN-Producción-G7,7
+P0066,Manufactura,Santiago,Ventas,Profesionales,F,2000-05-11,2021-10-10,,44,MAN-Ventas-G3,3
+P0067,Manufactura,Santiago,Calidad,Directivos,M,1978-08-26,2019-12-17,,44,MAN-Calidad-G1,1
+P0068,Manufactura,Santiago,Producción,Técnicos,M,1998-11-13,2022-12-19,,44,MAN-Producción-G5,5
+P0069,Manufactura,Santiago,Ventas,Profesionales,M,1995-10-13,2019-11-20,,44,MAN-Ventas-G3,3
+P0070,Manufactura,Santiago,Producción,Operarios,M,1990-10-08,2011-07-27,2025-09-19,44,MAN-Producción-G7,7
+P0071,Manufactura,Santiago,Producción,Directivos,F,1994-06-22,2023-10-04,,44,MAN-Producción-G1,1
+P0072,Manufactura,Santiago,Calidad,Técnicos,M,1988-11-04,2016-09-20,2026-11-20,44,MAN-Calidad-G4,4
+P0073,Manufactura,Santiago,Producción,Operarios,M,1983-11-12,2022-11-19,,22,MAN-Producción-G7,7
+P0074,Manufactura,Santiago,Producción,Operarios,M,1989-01-26,2018-05-19,2026-07-03,44,MAN-Producción-G7,7
+P0075,Manufactura,Santiago,Bodega y logística,Administrativos,F,1962-09-09,2019-01-24,,44,MAN-Bodega y logística-G6,6
+P0076,Manufactura,Santiago,Producción,Operarios,M,1987-01-06,2015-03-09,,44,MAN-Producción-G7,7
+P0077,Manufactura,Santiago,Producción,Operarios,M,1998-04-20,2020-12-06,,22,MAN-Producción-G7,7
+P0078,Manufactura,Santiago,Calidad,Técnicos,F,1979-08-28,2004-07-24,2025-05-21,44,MAN-Calidad-G4,4
+P0079,Manufactura,Santiago,Producción,Operarios,M,2001-06-13,2024-02-03,2026-02-27,44,MAN-Producción-G7,7
+P0080,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-11-25,2017-03-30,2025-08-14,44,MAN-Bodega y logística-G7,7
+P0081,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1983-06-22,2013-12-18,2026-10-29,44,MAN-Administración y finanzas-G6,6
+P0082,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,2000-12-24,2023-12-18,,44,MAN-Mantenimiento industrial-G5,5
+P0083,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1971-07-28,2017-11-06,,44,MAN-Administración y finanzas-G6,6
+P0084,Manufactura,Santiago,Producción,Operarios,F,1999-08-08,2020-04-02,,44,MAN-Producción-G7,7
+P0085,Manufactura,Santiago,Producción,Operarios,M,2001-10-20,2022-12-17,,44,MAN-Producción-G7,7
+P0086,Manufactura,Santiago,Bodega y logística,Administrativos,F,1996-03-19,2021-11-27,2025-02-12,44,MAN-Bodega y logística-G6,6
+P0087,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1994-05-24,2019-12-19,,44,MAN-Administración y finanzas-G3,3
+P0088,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1984-02-09,2016-01-29,,44,MAN-Administración y finanzas-G2,2
+P0089,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1979-10-16,2020-03-11,,44,MAN-Mantenimiento industrial-G5,5
+P0090,Manufactura,Santiago,Administración y finanzas,Profesionales,M,1984-03-25,2023-02-16,,44,MAN-Administración y finanzas-G3,3
+P0091,Manufactura,Santiago,Bodega y logística,Operarios,M,2000-06-03,2021-08-18,2025-01-29,44,MAN-Bodega y logística-G7,7
+P0092,Manufactura,Santiago,Producción,Operarios,M,1991-05-04,2021-05-23,,44,MAN-Producción-G7,7
+P0094,Manufactura,Santiago,Bodega y logística,Operarios,F,1983-11-04,2015-06-11,,44,MAN-Bodega y logística-G7,7
+P0095,Manufactura,Santiago,Producción,Profesionales,F,1982-03-20,2018-04-13,2026-06-19,44,MAN-Producción-G2,2
+P0096,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1985-10-15,2020-10-04,,44,MAN-Administración y finanzas-G6,6
+P0097,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1982-11-10,2003-04-11,,44,MAN-Administración y finanzas-G2,2
+P0098,Manufactura,Santiago,Producción,Operarios,M,1990-05-03,2024-04-08,2025-03-21,44,MAN-Producción-G7,7
+P0099,Manufactura,Santiago,Calidad,Profesionales,M,1989-10-21,2019-04-17,,44,MAN-Calidad-G3,3
+P0100,Manufactura,Santiago,Ventas,Administrativos,F,1972-11-06,2000-04-12,2025-06-03,22,MAN-Ventas-G6,6
+P0101,Manufactura,Santiago,Bodega y logística,Operarios,M,1997-11-20,2022-02-05,,44,MAN-Bodega y logística-G7,7
+P0102,Manufactura,Santiago,Producción,Operarios,M,1968-07-05,2003-12-01,,44,MAN-Producción-G7,7
+P0103,Manufactura,Santiago,Producción,Técnicos,M,1976-11-17,2014-06-09,,44,MAN-Producción-G4,4
+P0104,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1994-03-05,2015-10-14,,22,MAN-Administración y finanzas-G2,2
+P0106,Manufactura,Santiago,Bodega y logística,Administrativos,F,1979-07-12,2023-05-31,,44,MAN-Bodega y logística-G6,6
+P0107,Manufactura,Santiago,Producción,Técnicos,M,1995-08-27,2020-12-04,2025-06-02,44,MAN-Producción-G5,5
+P0108,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1977-05-02,2023-03-01,,44,MAN-Mantenimiento industrial-G5,5
+P0109,Manufactura,Santiago,Producción,Técnicos,M,1982-09-05,2013-01-28,,44,MAN-Producción-G4,4
+P0110,Manufactura,Santiago,Ventas,Administrativos,F,1985-07-17,2008-07-06,,44,MAN-Ventas-G6,6
+P0112,Manufactura,Santiago,Producción,Profesionales,M,1983-05-08,2018-11-14,,44,MAN-Producción-G2,2
+P0113,Manufactura,Santiago,Ventas,Administrativos,M,1994-09-19,2023-10-17,,44,MAN-Ventas-G6,6
+P0114,Manufactura,Santiago,Bodega y logística,Operarios,M,1991-02-17,2021-04-07,,44,MAN-Bodega y logística-G7,7
+P0116,Manufactura,Santiago,Producción,Operarios,F,1985-10-24,2018-01-29,,44,MAN-Producción-G7,7
+P0117,Manufactura,Santiago,Producción,Operarios,M,1972-03-26,2013-11-10,2025-08-05,44,MAN-Producción-G7,7
+P0118,Manufactura,Santiago,Ventas,Administrativos,F,1993-07-27,2022-03-23,,44,MAN-Ventas-G6,6
+P0119,Manufactura,Santiago,Producción,Operarios,M,1987-06-14,2015-05-25,,44,MAN-Producción-G7,7
+P0120,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1979-02-14,2014-10-24,2026-08-21,44,MAN-Administración y finanzas-G6,6
+P0121,Manufactura,Santiago,Producción,Operarios,M,1995-12-15,2018-01-05,2026-03-26,44,MAN-Producción-G7,7
+P0122,Manufactura,Santiago,Producción,Directivos,M,1990-01-03,2022-07-29,2026-12-29,44,MAN-Producción-G1,1
+P0123,Manufactura,Santiago,Mantenimiento industrial,Operarios,F,1985-08-02,2023-06-15,,44,MAN-Mantenimiento industrial-G7,7
+P0125,Manufactura,Santiago,Bodega y logística,Operarios,M,2001-09-04,2023-10-11,,44,MAN-Bodega y logística-G7,7
+P0126,Manufactura,Santiago,Administración y finanzas,Profesionales,M,1978-02-05,2009-08-11,,44,MAN-Administración y finanzas-G2,2
+P0127,Manufactura,Santiago,Bodega y logística,Administrativos,F,1981-05-28,2022-03-10,,44,MAN-Bodega y logística-G6,6
+P0128,Manufactura,Santiago,Producción,Directivos,F,1973-08-01,2015-01-30,2026-06-26,44,MAN-Producción-G1,1
+P0129,Manufactura,Santiago,Mantenimiento industrial,Directivos,M,1977-12-24,2023-08-31,,44,MAN-Mantenimiento industrial-G1,1
+P0130,Manufactura,Santiago,Mantenimiento industrial,Operarios,M,1989-02-15,2023-09-11,2025-07-08,44,MAN-Mantenimiento industrial-G7,7
+P0131,Manufactura,Santiago,Ventas,Administrativos,M,1981-01-27,2019-03-09,2026-01-30,44,MAN-Ventas-G6,6
+P0132,Manufactura,Santiago,Producción,Técnicos,M,1983-05-28,2021-12-13,2026-01-09,22,MAN-Producción-G5,5
+P0133,Manufactura,Santiago,Bodega y logística,Operarios,M,1992-10-24,2018-05-10,,44,MAN-Bodega y logística-G7,7
+P0134,Manufactura,Santiago,Producción,Profesionales,F,1987-04-25,2015-08-29,,44,MAN-Producción-G2,2
+P0135,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1987-07-10,2018-05-04,,44,MAN-Administración y finanzas-G6,6
+P0136,Manufactura,Santiago,Mantenimiento industrial,Técnicos,F,1975-12-11,2022-01-02,,44,MAN-Mantenimiento industrial-G5,5
+P0137,Manufactura,Santiago,Calidad,Profesionales,F,1989-05-13,2020-09-24,,44,MAN-Calidad-G3,3
+P0138,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1988-09-15,2023-03-27,,44,MAN-Administración y finanzas-G6,6
+P0139,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1975-08-20,2004-02-07,2025-01-02,44,MAN-Administración y finanzas-G6,6
+P0140,Manufactura,Santiago,Calidad,Profesionales,F,1986-09-15,2019-09-01,,44,MAN-Calidad-G3,3
+P0142,Manufactura,Santiago,Producción,Operarios,M,1995-10-17,2020-08-25,,44,MAN-Producción-G7,7
+P0143,Manufactura,Santiago,Producción,Operarios,M,1992-08-23,2013-05-30,,44,MAN-Producción-G7,7
+P0144,Manufactura,Santiago,Producción,Operarios,M,1991-12-28,2021-04-08,,44,MAN-Producción-G7,7
+P0145,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1987-03-17,2015-07-10,,44,MAN-Administración y finanzas-G6,6
+P0147,Manufactura,Santiago,Bodega y logística,Administrativos,M,1977-04-18,2012-02-18,,44,MAN-Bodega y logística-G6,6
+P0148,Manufactura,Santiago,Administración y finanzas,Profesionales,M,1989-12-22,2021-11-16,2026-02-20,44,MAN-Administración y finanzas-G3,3
+P0149,Manufactura,Santiago,Calidad,Profesionales,F,1973-12-16,2002-11-11,2026-06-17,44,MAN-Calidad-G2,2
+P0150,Manufactura,Santiago,Producción,Operarios,M,1985-06-25,2021-08-20,2025-07-11,44,MAN-Producción-G7,7
+P0151,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-09-09,2020-12-29,2026-06-02,44,MAN-Bodega y logística-G7,7
+P0152,Manufactura,Santiago,Bodega y logística,Operarios,M,1991-09-08,2022-10-31,,44,MAN-Bodega y logística-G7,7
+P0153,Manufactura,Santiago,Bodega y logística,Operarios,F,1994-07-21,2015-09-01,,44,MAN-Bodega y logística-G7,7
+P0154,Manufactura,Santiago,Producción,Profesionales,M,1998-02-21,2022-03-05,,44,MAN-Producción-G3,3
+P0155,Manufactura,Santiago,Mantenimiento industrial,Profesionales,M,1973-10-20,2004-11-13,,44,MAN-Mantenimiento industrial-G2,2
+P0156,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1990-09-15,2020-05-31,,44,MAN-Administración y finanzas-G6,6
+P0157,Manufactura,Santiago,Bodega y logística,Operarios,F,1989-11-25,2016-11-23,,44,MAN-Bodega y logística-G7,7
+P0158,Manufactura,Santiago,Producción,Operarios,M,1986-08-11,2023-11-24,,44,MAN-Producción-G7,7
+P0159,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1998-06-23,2022-02-06,,44,MAN-Mantenimiento industrial-G5,5
+P0160,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1988-11-10,2015-09-09,,44,MAN-Administración y finanzas-G6,6
+P0161,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1986-04-25,2017-03-29,,44,MAN-Administración y finanzas-G6,6
+P0162,Manufactura,Santiago,Bodega y logística,Operarios,F,1998-09-17,2019-07-09,,44,MAN-Bodega y logística-G7,7
+P0163,Manufactura,Santiago,Ventas,Administrativos,M,1996-08-26,2017-08-29,,22,MAN-Ventas-G6,6
+P0165,Manufactura,Santiago,Producción,Operarios,M,1969-08-02,2017-04-09,,44,MAN-Producción-G7,7
+P0166,Manufactura,Santiago,Bodega y logística,Operarios,M,1966-07-15,2004-08-08,,44,MAN-Bodega y logística-G7,7
+P0167,Manufactura,Santiago,Bodega y logística,Operarios,M,1992-09-13,2019-11-07,,44,MAN-Bodega y logística-G7,7
+P0168,Manufactura,Santiago,Producción,Operarios,M,1987-09-14,2022-05-16,2026-02-16,44,MAN-Producción-G7,7
+P0169,Manufactura,Santiago,Producción,Operarios,M,1964-07-20,2007-11-19,2025-08-20,44,MAN-Producción-G7,7
+P0170,Manufactura,Santiago,Producción,Operarios,M,1983-12-28,2024-04-17,,22,MAN-Producción-G7,7
+P0172,Manufactura,Santiago,Producción,Operarios,F,1997-05-09,2018-01-10,,22,MAN-Producción-G7,7
+P0173,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1979-06-23,2002-12-30,,44,MAN-Mantenimiento industrial-G4,4
+P0174,Manufactura,Santiago,Bodega y logística,Operarios,M,1992-12-05,2013-02-23,2026-09-08,44,MAN-Bodega y logística-G7,7
+P0176,Manufactura,Santiago,Bodega y logística,Operarios,M,1981-10-24,2024-01-17,,44,MAN-Bodega y logística-G7,7
+P0177,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1974-12-25,2010-02-15,,44,MAN-Administración y finanzas-G2,2
+P0178,Manufactura,Santiago,Producción,Profesionales,M,1975-07-15,2019-09-07,2025-06-25,44,MAN-Producción-G3,3
+P0180,Manufactura,Santiago,Bodega y logística,Operarios,M,1985-12-14,2019-09-01,,44,MAN-Bodega y logística-G7,7
+P0181,Manufactura,Santiago,Calidad,Profesionales,M,1996-08-24,2019-09-14,,44,MAN-Calidad-G3,3
+P0182,Manufactura,Santiago,Ventas,Profesionales,M,1972-09-21,2016-11-09,,44,MAN-Ventas-G2,2
+P0183,Manufactura,Santiago,Producción,Operarios,M,1988-04-17,2023-08-12,2026-08-12,44,MAN-Producción-G7,7
+P0184,Manufactura,Santiago,Administración y finanzas,Directivos,F,1978-09-18,2018-01-16,,44,MAN-Administración y finanzas-G1,1
+P0185,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-03-04,2022-06-22,2025-08-20,44,MAN-Bodega y logística-G7,7
+P0186,Manufactura,Santiago,Bodega y logística,Operarios,M,2000-02-12,2021-11-15,,44,MAN-Bodega y logística-G7,7
+P0187,Manufactura,Santiago,Bodega y logística,Operarios,F,1969-01-03,2013-12-10,2026-03-16,44,MAN-Bodega y logística-G7,7
+P0188,Manufactura,Santiago,Bodega y logística,Operarios,M,1993-11-26,2023-12-24,2025-04-08,44,MAN-Bodega y logística-G7,7
+P0191,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1980-02-11,2020-05-01,2025-11-14,44,MAN-Administración y finanzas-G6,6
+P0192,Manufactura,Santiago,Bodega y logística,Administrativos,F,1986-09-13,2020-11-27,,44,MAN-Bodega y logística-G6,6
+P0193,Manufactura,Santiago,Ventas,Administrativos,F,1996-12-13,2023-12-26,,44,MAN-Ventas-G6,6
+P0194,Manufactura,Santiago,Producción,Operarios,F,2001-03-14,2022-08-12,,44,MAN-Producción-G7,7
+P0195,Manufactura,Santiago,Producción,Operarios,M,1997-05-14,2023-11-30,,44,MAN-Producción-G7,7
+P0196,Manufactura,Santiago,Administración y finanzas,Directivos,F,1974-07-06,2019-05-30,,44,MAN-Administración y finanzas-G1,1
+P0197,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1994-05-08,2021-01-28,2026-05-25,44,MAN-Mantenimiento industrial-G5,5
+P0198,Manufactura,Santiago,Producción,Operarios,M,1982-06-15,2013-06-13,,44,MAN-Producción-G7,7
+P0199,Manufactura,Santiago,Administración y finanzas,Profesionales,M,1989-07-11,2022-03-07,,44,MAN-Administración y finanzas-G3,3
+P0200,Manufactura,Santiago,Producción,Técnicos,F,1983-10-07,2021-07-03,,44,MAN-Producción-G5,5
+P0201,Manufactura,Santiago,Bodega y logística,Administrativos,F,1993-04-09,2014-12-23,,44,MAN-Bodega y logística-G6,6
+P0202,Manufactura,Santiago,Mantenimiento industrial,Profesionales,M,1986-06-23,2017-06-11,,44,MAN-Mantenimiento industrial-G2,2
+P0203,Manufactura,Santiago,Bodega y logística,Operarios,F,1974-07-25,2018-04-03,,44,MAN-Bodega y logística-G7,7
+P0204,Manufactura,Santiago,Producción,Operarios,M,1987-12-19,2016-04-05,,44,MAN-Producción-G7,7
+P0206,Manufactura,Santiago,Producción,Técnicos,M,1989-02-15,2020-01-31,,44,MAN-Producción-G5,5
+P0207,Manufactura,Santiago,Producción,Técnicos,M,1981-12-08,2024-05-11,,44,MAN-Producción-G5,5
+P0208,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1973-03-21,2014-11-30,2026-09-25,44,MAN-Mantenimiento industrial-G4,4
+P0209,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1997-10-04,2023-01-18,,44,MAN-Mantenimiento industrial-G5,5
+P0210,Manufactura,Santiago,Producción,Operarios,M,1996-11-11,2017-11-02,,44,MAN-Producción-G7,7
+P0211,Manufactura,Santiago,Bodega y logística,Operarios,F,1994-12-05,2023-08-21,2026-05-08,44,MAN-Bodega y logística-G7,7
+P0212,Manufactura,Santiago,Producción,Operarios,M,1982-11-06,2018-06-12,,44,MAN-Producción-G7,7
+P0213,Manufactura,Santiago,Producción,Operarios,M,1989-07-18,2024-03-02,,44,MAN-Producción-G7,7
+P0214,Manufactura,Santiago,Producción,Técnicos,M,1991-09-10,2022-06-05,,44,MAN-Producción-G5,5
+P0215,Manufactura,Santiago,Bodega y logística,Administrativos,M,1977-09-07,2021-10-04,2026-04-22,44,MAN-Bodega y logística-G6,6
+P0216,Manufactura,Santiago,Bodega y logística,Operarios,M,1960-06-28,1994-07-08,2026-01-26,44,MAN-Bodega y logística-G7,7
+P0217,Manufactura,Santiago,Ventas,Administrativos,M,1994-03-26,2021-11-28,,44,MAN-Ventas-G6,6
+P0218,Manufactura,Santiago,Producción,Operarios,M,1993-12-10,2019-11-10,2025-06-17,44,MAN-Producción-G7,7
+P0219,Manufactura,Santiago,Producción,Profesionales,M,1966-03-23,2015-04-06,,44,MAN-Producción-G2,2
+P0220,Manufactura,Santiago,Ventas,Administrativos,F,1987-10-21,2017-09-26,,44,MAN-Ventas-G6,6
+P0221,Manufactura,Concepción,Bodega y logística,Administrativos,F,1996-06-15,2023-11-29,,44,MAN-Bodega y logística-G6,6
+P0222,Manufactura,Concepción,Bodega y logística,Operarios,M,1965-11-23,2016-08-16,2026-08-11,44,MAN-Bodega y logística-G7,7
+P0223,Manufactura,Concepción,Producción,Operarios,M,1989-10-05,2023-01-26,,44,MAN-Producción-G7,7
+P0224,Manufactura,Concepción,Bodega y logística,Operarios,M,2000-08-01,2023-11-14,,44,MAN-Bodega y logística-G7,7
+P0225,Manufactura,Concepción,Producción,Profesionales,M,1984-03-28,2023-02-21,,44,MAN-Producción-G3,3
+P0226,Manufactura,Concepción,Producción,Operarios,F,1970-07-21,2010-06-17,,44,MAN-Producción-G7,7
+P0227,Manufactura,Concepción,Bodega y logística,Operarios,M,1989-11-15,2024-06-28,,22,MAN-Bodega y logística-G7,7
+P0228,Manufactura,Concepción,Producción,Operarios,M,1986-02-04,2021-08-08,,44,MAN-Producción-G7,7
+P0229,Manufactura,Concepción,Bodega y logística,Administrativos,M,1986-01-20,2023-08-23,,44,MAN-Bodega y logística-G6,6
+P0230,Manufactura,Concepción,Mantenimiento industrial,Operarios,F,1973-02-05,2012-09-16,,44,MAN-Mantenimiento industrial-G7,7
+P0231,Manufactura,Concepción,Administración y finanzas,Profesionales,F,1983-10-24,2023-08-06,,44,MAN-Administración y finanzas-G3,3
+P0232,Manufactura,Concepción,Ventas,Administrativos,F,1986-09-07,2022-05-06,,44,MAN-Ventas-G6,6
+P0233,Manufactura,Concepción,Administración y finanzas,Directivos,F,1995-09-01,2020-05-27,2026-10-07,44,MAN-Administración y finanzas-G1,1
+P0234,Manufactura,Concepción,Calidad,Profesionales,M,1986-02-01,2017-08-11,2026-05-22,44,MAN-Calidad-G2,2
+P0235,Manufactura,Concepción,Administración y finanzas,Directivos,F,1987-07-23,2021-06-15,,44,MAN-Administración y finanzas-G1,1
+P0236,Manufactura,Concepción,Calidad,Profesionales,F,2002-04-26,2023-12-22,,44,MAN-Calidad-G3,3
+P0237,Manufactura,Concepción,Bodega y logística,Operarios,M,1997-04-02,2018-04-27,2025-11-05,44,MAN-Bodega y logística-G7,7
+P0238,Manufactura,Concepción,Bodega y logística,Operarios,M,1978-03-04,2017-12-02,,22,MAN-Bodega y logística-G7,7
+P0239,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1990-12-25,2020-02-18,,44,MAN-Mantenimiento industrial-G5,5
+P0240,Manufactura,Concepción,Administración y finanzas,Profesionales,M,1982-05-23,2021-02-18,,44,MAN-Administración y finanzas-G3,3
+P0243,Manufactura,Concepción,Bodega y logística,Operarios,M,1999-10-12,2022-10-15,,44,MAN-Bodega y logística-G7,7
+P0244,Manufactura,Concepción,Producción,Operarios,M,1978-08-28,2024-03-20,,44,MAN-Producción-G7,7
+P0245,Manufactura,Concepción,Calidad,Profesionales,M,1997-08-12,2023-02-26,,44,MAN-Calidad-G3,3
+P0246,Manufactura,Concepción,Producción,Operarios,M,1980-12-01,2022-11-28,,44,MAN-Producción-G7,7
+P0247,Manufactura,Concepción,Ventas,Administrativos,F,1992-01-05,2023-11-03,,44,MAN-Ventas-G6,6
+P0249,Manufactura,Concepción,Producción,Operarios,M,1980-07-23,2023-08-29,,44,MAN-Producción-G7,7
+P0250,Manufactura,Concepción,Producción,Profesionales,M,2002-02-05,2023-08-15,,44,MAN-Producción-G3,3
+P0251,Manufactura,Concepción,Producción,Operarios,M,1994-02-06,2015-09-05,,44,MAN-Producción-G7,7
+P0252,Manufactura,Concepción,Bodega y logística,Operarios,F,1977-12-08,2012-11-08,2025-05-29,44,MAN-Bodega y logística-G7,7
+P0253,Manufactura,Concepción,Producción,Técnicos,M,1985-09-08,2023-05-09,,44,MAN-Producción-G5,5
+P0254,Manufactura,Concepción,Producción,Operarios,F,1994-04-27,2015-05-24,,44,MAN-Producción-G7,7
+P0255,Manufactura,Concepción,Administración y finanzas,Profesionales,F,1973-02-28,1994-07-08,,44,MAN-Administración y finanzas-G2,2
+P0256,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1998-07-16,2019-05-20,2025-01-10,22,MAN-Mantenimiento industrial-G5,5
+P0257,Manufactura,Concepción,Producción,Operarios,M,1979-04-21,2022-07-13,,44,MAN-Producción-G7,7
+P0258,Manufactura,Concepción,Producción,Operarios,F,1990-09-08,2023-08-12,2025-04-14,44,MAN-Producción-G7,7
+P0259,Manufactura,Concepción,Administración y finanzas,Administrativos,F,2000-09-11,2021-10-30,2026-09-10,44,MAN-Administración y finanzas-G6,6
+P0260,Manufactura,Concepción,Producción,Técnicos,F,1983-08-17,2015-06-17,,44,MAN-Producción-G4,4
+P0261,Manufactura,Concepción,Producción,Operarios,M,1988-04-19,2022-11-04,,44,MAN-Producción-G7,7
+P0262,Manufactura,Concepción,Ventas,Administrativos,F,2002-12-23,2023-05-03,2026-08-24,44,MAN-Ventas-G6,6
+P0263,Manufactura,Concepción,Producción,Profesionales,M,1971-03-16,2013-08-19,,22,MAN-Producción-G2,2
+P0264,Manufactura,Concepción,Producción,Operarios,M,1994-03-11,2022-01-30,,44,MAN-Producción-G7,7
+P0267,Manufactura,Concepción,Bodega y logística,Operarios,M,1989-03-13,2011-04-15,2026-11-12,44,MAN-Bodega y logística-G7,7
+P0268,Manufactura,Concepción,Bodega y logística,Administrativos,F,1965-10-02,2006-09-09,2026-03-05,44,MAN-Bodega y logística-G6,6
+P0269,Manufactura,Concepción,Producción,Operarios,M,2000-12-22,2021-12-11,,44,MAN-Producción-G7,7
+P0270,Manufactura,Concepción,Producción,Operarios,M,2003-02-24,2024-01-29,2025-10-24,22,MAN-Producción-G7,7
+P0272,Manufactura,Concepción,Producción,Profesionales,F,2003-07-06,2024-01-14,,44,MAN-Producción-G3,3
+P0274,Manufactura,Concepción,Bodega y logística,Operarios,M,1969-05-10,2016-08-24,,44,MAN-Bodega y logística-G7,7
+P0275,Manufactura,Concepción,Ventas,Profesionales,M,1994-10-16,2021-10-24,,44,MAN-Ventas-G3,3
+P0276,Manufactura,Concepción,Producción,Operarios,M,1970-07-16,2013-05-14,,44,MAN-Producción-G7,7
+P0277,Manufactura,Concepción,Calidad,Profesionales,F,1987-08-09,2011-07-04,,44,MAN-Calidad-G2,2
+P0278,Manufactura,Concepción,Bodega y logística,Operarios,M,1990-09-14,2023-12-17,,44,MAN-Bodega y logística-G7,7
+P0279,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1974-02-13,2012-05-28,,44,MAN-Mantenimiento industrial-G4,4
+P0280,Manufactura,Concepción,Bodega y logística,Operarios,M,1999-03-06,2023-09-24,,44,MAN-Bodega y logística-G7,7
+P0281,Manufactura,Concepción,Mantenimiento industrial,Directivos,M,1995-05-11,2021-01-26,2026-06-11,44,MAN-Mantenimiento industrial-G1,1
+P0282,Manufactura,Concepción,Producción,Operarios,M,2001-01-26,2022-07-24,2025-08-07,44,MAN-Producción-G7,7
+P0284,Manufactura,Concepción,Producción,Operarios,F,1978-05-13,2018-11-13,,44,MAN-Producción-G7,7
+P0286,Manufactura,Concepción,Producción,Profesionales,M,1991-05-24,2020-12-26,2025-07-08,44,MAN-Producción-G3,3
+P0287,Manufactura,Concepción,Producción,Técnicos,M,1974-09-26,2016-05-25,,44,MAN-Producción-G4,4
+P0288,Manufactura,Concepción,Producción,Técnicos,F,1990-04-27,2011-10-26,2025-10-01,44,MAN-Producción-G4,4
+P0289,Manufactura,Concepción,Producción,Operarios,M,2001-02-22,2023-03-02,2026-03-11,22,MAN-Producción-G7,7
+P0290,Manufactura,Concepción,Producción,Técnicos,M,1986-03-27,2019-03-14,,44,MAN-Producción-G5,5
+P0291,Manufactura,Concepción,Producción,Operarios,M,1982-05-21,2004-05-30,,44,MAN-Producción-G7,7
+P0292,Manufactura,Concepción,Bodega y logística,Operarios,M,1988-10-26,2009-12-16,,22,MAN-Bodega y logística-G7,7
+P0293,Manufactura,Concepción,Producción,Operarios,M,1999-07-19,2022-10-04,,44,MAN-Producción-G7,7
+P0294,Manufactura,Concepción,Bodega y logística,Operarios,F,2001-02-11,2022-05-16,,44,MAN-Bodega y logística-G7,7
+P0295,Manufactura,Concepción,Administración y finanzas,Profesionales,M,1979-10-13,2023-07-11,,44,MAN-Administración y finanzas-G3,3
+P0296,Manufactura,Concepción,Producción,Operarios,M,1996-04-11,2017-02-11,2025-06-19,44,MAN-Producción-G7,7
+P0297,Manufactura,Concepción,Ventas,Administrativos,F,1977-09-06,2017-10-25,2026-04-10,44,MAN-Ventas-G6,6
+P0298,Manufactura,Concepción,Producción,Operarios,M,1991-06-12,2012-03-13,2026-06-22,44,MAN-Producción-G7,7
+P0299,Manufactura,Concepción,Mantenimiento industrial,Operarios,M,1974-03-07,2021-08-13,,44,MAN-Mantenimiento industrial-G7,7
+P0300,Manufactura,Concepción,Ventas,Profesionales,F,1987-03-11,2023-12-29,,44,MAN-Ventas-G3,3
+P0301,Manufactura,Concepción,Bodega y logística,Operarios,M,1984-10-14,2015-10-30,,44,MAN-Bodega y logística-G7,7
+P0302,Manufactura,Concepción,Producción,Operarios,M,1997-09-07,2024-05-30,,22,MAN-Producción-G7,7
+P0303,Manufactura,Concepción,Producción,Técnicos,F,1999-02-27,2022-04-03,2025-07-15,22,MAN-Producción-G5,5
+P0304,Manufactura,Concepción,Calidad,Técnicos,M,1991-03-11,2021-02-01,,44,MAN-Calidad-G5,5
+P0305,Manufactura,Concepción,Producción,Directivos,F,1990-12-21,2023-01-28,,44,MAN-Producción-G1,1
+P0306,Manufactura,Concepción,Bodega y logística,Administrativos,F,1988-01-22,2018-08-24,2025-04-25,44,MAN-Bodega y logística-G6,6
+P0307,Manufactura,Concepción,Producción,Operarios,M,1994-11-21,2023-09-16,,22,MAN-Producción-G7,7
+P0308,Manufactura,Concepción,Calidad,Técnicos,M,1992-02-17,2017-04-06,,44,MAN-Calidad-G4,4
+P0309,Manufactura,Concepción,Producción,Operarios,M,1998-12-14,2023-03-01,,44,MAN-Producción-G7,7
+P0310,Manufactura,Concepción,Producción,Profesionales,F,1992-11-03,2022-02-02,,44,MAN-Producción-G3,3
+P0311,Manufactura,Concepción,Producción,Operarios,M,1984-04-15,2020-03-14,2025-02-05,44,MAN-Producción-G7,7
+P0312,Manufactura,Concepción,Producción,Operarios,M,1989-11-11,2024-04-03,,44,MAN-Producción-G7,7
+P0313,Manufactura,Concepción,Administración y finanzas,Profesionales,M,2002-10-09,2023-08-09,,44,MAN-Administración y finanzas-G3,3
+P0314,Manufactura,Concepción,Producción,Operarios,M,1957-07-23,2004-11-03,,44,MAN-Producción-G7,7
+P0315,Manufactura,Concepción,Ventas,Profesionales,F,1982-07-19,2017-05-10,,44,MAN-Ventas-G2,2
+P0316,Manufactura,Concepción,Bodega y logística,Administrativos,M,1989-12-05,2018-10-31,,44,MAN-Bodega y logística-G6,6
+P0317,Manufactura,Concepción,Bodega y logística,Operarios,M,1982-04-22,2012-05-04,,44,MAN-Bodega y logística-G7,7
+P0318,Manufactura,Concepción,Bodega y logística,Operarios,M,1996-03-27,2017-12-18,2025-05-30,44,MAN-Bodega y logística-G7,7
+P0319,Manufactura,Concepción,Producción,Profesionales,M,1995-08-11,2020-04-10,2026-11-06,44,MAN-Producción-G3,3
+P0320,Manufactura,Concepción,Producción,Operarios,F,1990-08-15,2021-05-27,,44,MAN-Producción-G7,7
+P0321,Manufactura,Concepción,Mantenimiento industrial,Operarios,M,1993-02-26,2023-11-06,,44,MAN-Mantenimiento industrial-G7,7
+P0323,Manufactura,Concepción,Calidad,Técnicos,M,1990-11-08,2020-08-27,,22,MAN-Calidad-G5,5
+P0324,Manufactura,Concepción,Ventas,Administrativos,F,1995-03-16,2021-09-09,,44,MAN-Ventas-G6,6
+P0325,Manufactura,Concepción,Producción,Profesionales,M,1988-02-25,2021-07-04,,44,MAN-Producción-G3,3
+P0326,Manufactura,Concepción,Calidad,Técnicos,M,1999-09-05,2020-11-27,2026-10-01,44,MAN-Calidad-G5,5
+P0327,Manufactura,Concepción,Calidad,Técnicos,M,1985-12-19,2019-03-23,2025-09-17,44,MAN-Calidad-G5,5
+P0328,Manufactura,Concepción,Bodega y logística,Operarios,M,2001-07-20,2022-03-03,2026-04-29,44,MAN-Bodega y logística-G7,7
+P0329,Manufactura,Concepción,Administración y finanzas,Directivos,F,1994-12-17,2020-11-18,,44,MAN-Administración y finanzas-G1,1
+P0331,Manufactura,Concepción,Bodega y logística,Directivos,M,1994-06-23,2018-03-15,,44,MAN-Bodega y logística-G1,1
+P0332,Manufactura,Concepción,Mantenimiento industrial,Operarios,M,1987-12-27,2017-11-25,,44,MAN-Mantenimiento industrial-G7,7
+P0333,Manufactura,Concepción,Producción,Operarios,F,1984-03-10,2021-08-16,,44,MAN-Producción-G7,7
+P0334,Manufactura,Concepción,Ventas,Profesionales,F,1986-08-04,2019-10-29,,44,MAN-Ventas-G3,3
+P0335,Manufactura,Concepción,Producción,Operarios,M,1984-07-13,2014-12-10,,44,MAN-Producción-G7,7
+P0337,Manufactura,Concepción,Bodega y logística,Operarios,F,1995-02-06,2016-10-04,,44,MAN-Bodega y logística-G7,7
+P0339,Manufactura,Concepción,Producción,Operarios,M,2003-08-26,2024-03-08,2026-11-16,44,MAN-Producción-G7,7
+P0340,Manufactura,Concepción,Producción,Operarios,M,1998-09-13,2020-04-12,,44,MAN-Producción-G7,7
+P0341,Manufactura,Concepción,Producción,Operarios,M,2002-11-01,2023-01-08,,44,MAN-Producción-G7,7
+P0342,Manufactura,Concepción,Bodega y logística,Administrativos,F,1997-06-13,2022-10-27,2025-10-14,44,MAN-Bodega y logística-G6,6
+P0343,Manufactura,Concepción,Calidad,Profesionales,M,1988-08-16,2009-12-20,2026-12-07,22,MAN-Calidad-G2,2
+P0344,Manufactura,Concepción,Mantenimiento industrial,Profesionales,M,1981-09-18,2023-05-26,,22,MAN-Mantenimiento industrial-G3,3
+P0345,Manufactura,Concepción,Bodega y logística,Administrativos,F,2000-12-25,2021-03-10,,44,MAN-Bodega y logística-G6,6
+P0347,Manufactura,Concepción,Ventas,Administrativos,F,1997-07-22,2021-05-11,,44,MAN-Ventas-G6,6
+P0349,Manufactura,Concepción,Producción,Técnicos,M,1996-09-08,2021-01-17,,44,MAN-Producción-G5,5
+P0350,Manufactura,Concepción,Administración y finanzas,Administrativos,F,1994-01-18,2016-08-30,,44,MAN-Administración y finanzas-G6,6
+P0351,Manufactura,Concepción,Calidad,Profesionales,F,1985-12-12,2019-09-29,,44,MAN-Calidad-G3,3
+P0352,Manufactura,Concepción,Producción,Operarios,M,1973-02-06,2018-09-29,,44,MAN-Producción-G7,7
+P0353,Manufactura,Concepción,Bodega y logística,Directivos,M,1969-05-04,2019-09-22,,44,MAN-Bodega y logística-G1,1
+P0354,Manufactura,Concepción,Administración y finanzas,Administrativos,F,1981-05-20,2017-10-29,,22,MAN-Administración y finanzas-G6,6
+P0355,Manufactura,Concepción,Producción,Operarios,F,1996-07-06,2017-05-29,,22,MAN-Producción-G7,7
+P0356,Manufactura,Concepción,Bodega y logística,Operarios,F,1989-12-11,2013-07-04,,44,MAN-Bodega y logística-G7,7
+P0357,Manufactura,Concepción,Producción,Operarios,M,1983-03-18,2023-05-04,,44,MAN-Producción-G7,7
+P0358,Manufactura,Concepción,Ventas,Administrativos,F,1994-01-18,2015-09-16,,44,MAN-Ventas-G6,6
+P0359,Manufactura,Concepción,Bodega y logística,Operarios,M,2000-03-15,2021-07-05,,44,MAN-Bodega y logística-G7,7
+P0360,Manufactura,Concepción,Producción,Operarios,M,1983-11-06,2004-07-25,2025-01-15,44,MAN-Producción-G7,7
+P0361,Manufactura,Concepción,Calidad,Técnicos,F,1984-01-08,2012-02-29,2025-03-21,44,MAN-Calidad-G4,4
+P0362,Manufactura,Concepción,Producción,Operarios,M,1999-07-16,2020-02-15,,44,MAN-Producción-G7,7
+P0363,Manufactura,Concepción,Bodega y logística,Operarios,M,1975-10-18,2003-10-11,2025-02-19,44,MAN-Bodega y logística-G7,7
+P0364,Manufactura,Concepción,Calidad,Técnicos,M,1979-04-17,2024-01-05,,44,MAN-Calidad-G5,5
+P0365,Manufactura,Concepción,Ventas,Administrativos,M,2000-09-21,2024-06-16,2025-02-18,44,MAN-Ventas-G6,6
+P0366,Manufactura,Concepción,Bodega y logística,Administrativos,F,1985-06-24,2018-01-04,,44,MAN-Bodega y logística-G6,6
+P0367,Manufactura,Concepción,Producción,Operarios,M,1989-03-09,2023-08-19,,44,MAN-Producción-G7,7
+P0368,Manufactura,Concepción,Administración y finanzas,Administrativos,M,1984-05-03,2011-11-10,,44,MAN-Administración y finanzas-G6,6
+P0370,Manufactura,Concepción,Administración y finanzas,Administrativos,F,2001-03-04,2024-01-26,,22,MAN-Administración y finanzas-G6,6
+P0371,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1980-11-05,2011-11-24,2025-01-16,44,MAN-Administración y finanzas-G6,6
+P0372,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1994-01-23,2021-02-10,,44,MAN-Administración y finanzas-G6,6
+P0373,Manufactura,Antofagasta,Ventas,Profesionales,M,1987-02-14,2019-03-02,,44,MAN-Ventas-G3,3
+P0374,Manufactura,Antofagasta,Ventas,Profesionales,M,1990-04-01,2011-12-11,,44,MAN-Ventas-G2,2
+P0375,Manufactura,Antofagasta,Producción,Operarios,M,1991-03-14,2018-02-15,,44,MAN-Producción-G7,7
+P0376,Manufactura,Antofagasta,Producción,Operarios,M,1978-09-16,2016-01-25,,44,MAN-Producción-G7,7
+P0378,Manufactura,Antofagasta,Producción,Operarios,M,1971-10-23,2015-04-02,,44,MAN-Producción-G7,7
+P0379,Manufactura,Antofagasta,Bodega y logística,Administrativos,F,1987-05-08,2014-02-08,2026-08-04,44,MAN-Bodega y logística-G6,6
+P0380,Manufactura,Antofagasta,Bodega y logística,Operarios,F,1976-03-21,2004-08-23,,44,MAN-Bodega y logística-G7,7
+P0381,Manufactura,Antofagasta,Administración y finanzas,Administrativos,M,2002-10-06,2023-03-14,,44,MAN-Administración y finanzas-G6,6
+P0382,Manufactura,Antofagasta,Administración y finanzas,Profesionales,F,1992-11-13,2022-07-24,,44,MAN-Administración y finanzas-G3,3
+P0383,Manufactura,Antofagasta,Bodega y logística,Administrativos,M,1998-06-27,2019-09-19,,44,MAN-Bodega y logística-G6,6
+P0385,Manufactura,Antofagasta,Ventas,Administrativos,M,1977-04-25,2019-05-15,2026-02-25,44,MAN-Ventas-G6,6
+P0386,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1992-07-21,2020-07-21,2025-10-10,44,MAN-Administración y finanzas-G6,6
+P0387,Manufactura,Antofagasta,Ventas,Administrativos,F,1993-05-03,2021-11-20,,44,MAN-Ventas-G6,6
+P0388,Manufactura,Antofagasta,Calidad,Profesionales,F,1998-10-09,2022-03-29,,44,MAN-Calidad-G3,3
+P0389,Manufactura,Antofagasta,Producción,Operarios,F,1983-06-05,2022-08-25,,44,MAN-Producción-G7,7
+P0390,Manufactura,Antofagasta,Administración y finanzas,Administrativos,M,2003-01-28,2024-06-16,2025-06-24,44,MAN-Administración y finanzas-G6,6
+P0391,Manufactura,Antofagasta,Administración y finanzas,Directivos,F,1987-07-16,2022-07-11,,44,MAN-Administración y finanzas-G1,1
+P0392,Manufactura,Antofagasta,Producción,Técnicos,M,1986-02-23,2015-07-13,2025-07-21,44,MAN-Producción-G4,4
+P0393,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1989-05-08,2023-11-11,2026-09-18,44,MAN-Bodega y logística-G7,7
+P0395,Manufactura,Antofagasta,Administración y finanzas,Administrativos,M,1980-07-07,2014-05-29,,44,MAN-Administración y finanzas-G6,6
+P0396,Manufactura,Antofagasta,Ventas,Profesionales,M,1999-11-17,2020-05-06,,44,MAN-Ventas-G3,3
+P0397,Manufactura,Antofagasta,Producción,Técnicos,F,1990-05-16,2024-03-15,,44,MAN-Producción-G5,5
+P0398,Manufactura,Antofagasta,Producción,Operarios,M,1983-06-01,2019-08-11,2025-04-10,44,MAN-Producción-G7,7
+P0399,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1980-06-22,2018-03-16,,44,MAN-Bodega y logística-G7,7
+P0400,Manufactura,Antofagasta,Producción,Operarios,M,1990-03-21,2020-10-05,,44,MAN-Producción-G7,7
+P0401,Manufactura,Antofagasta,Calidad,Técnicos,F,1992-05-23,2024-01-20,2025-10-06,44,MAN-Calidad-G5,5
+P0402,Manufactura,Antofagasta,Mantenimiento industrial,Operarios,M,1983-08-14,2021-10-16,,44,MAN-Mantenimiento industrial-G7,7
+P0403,Manufactura,Antofagasta,Producción,Operarios,M,1983-02-03,2016-05-01,,44,MAN-Producción-G7,7
+P0405,Manufactura,Antofagasta,Producción,Técnicos,F,1995-01-22,2020-12-26,,44,MAN-Producción-G5,5
+P0406,Manufactura,Antofagasta,Mantenimiento industrial,Operarios,M,1978-03-23,2008-02-14,,44,MAN-Mantenimiento industrial-G7,7
+P0407,Manufactura,Antofagasta,Bodega y logística,Administrativos,F,2000-08-18,2021-01-27,,44,MAN-Bodega y logística-G6,6
+P0408,Manufactura,Antofagasta,Mantenimiento industrial,Técnicos,M,1998-03-12,2024-06-07,,44,MAN-Mantenimiento industrial-G5,5
+P0409,Manufactura,Antofagasta,Ventas,Administrativos,M,1999-12-24,2023-03-31,,44,MAN-Ventas-G6,6
+P0410,Manufactura,Antofagasta,Producción,Operarios,M,1987-10-26,2020-02-21,2025-06-27,44,MAN-Producción-G7,7
+P0411,Manufactura,Antofagasta,Calidad,Profesionales,F,1990-08-20,2023-04-01,,44,MAN-Calidad-G3,3
+P0412,Manufactura,Antofagasta,Administración y finanzas,Profesionales,F,1968-03-23,2002-12-27,,44,MAN-Administración y finanzas-G2,2
+P0413,Manufactura,Antofagasta,Producción,Operarios,M,1999-12-26,2021-03-25,2026-03-06,22,MAN-Producción-G7,7
+P0414,Manufactura,Antofagasta,Producción,Operarios,M,1990-03-07,2021-07-05,,44,MAN-Producción-G7,7
+P0415,Manufactura,Antofagasta,Producción,Profesionales,F,1979-01-07,2016-12-23,,44,MAN-Producción-G2,2
+P0416,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1993-01-24,2022-02-27,,44,MAN-Bodega y logística-G7,7
+P0417,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1980-11-14,2011-05-25,,44,MAN-Bodega y logística-G7,7
+P0419,Manufactura,Antofagasta,Producción,Operarios,M,1972-01-02,2017-07-21,,44,MAN-Producción-G7,7
+P0420,Manufactura,Antofagasta,Producción,Operarios,M,1994-11-25,2022-03-19,,44,MAN-Producción-G7,7
+P0421,Manufactura,Antofagasta,Producción,Operarios,M,1972-09-10,2016-10-08,,44,MAN-Producción-G7,7
+P0422,Manufactura,Antofagasta,Calidad,Profesionales,M,1986-10-28,2020-09-16,,44,MAN-Calidad-G3,3
+P0423,Manufactura,Antofagasta,Producción,Operarios,F,1996-03-01,2021-10-03,,44,MAN-Producción-G7,7
+P0424,Manufactura,Antofagasta,Producción,Operarios,M,1980-04-17,2004-01-06,,44,MAN-Producción-G7,7
+P0426,Manufactura,Antofagasta,Producción,Operarios,M,1985-09-20,2013-08-24,,44,MAN-Producción-G7,7
+P0428,Manufactura,Antofagasta,Administración y finanzas,Administrativos,M,1989-10-09,2021-09-26,2025-06-17,44,MAN-Administración y finanzas-G6,6
+P0429,Manufactura,Antofagasta,Mantenimiento industrial,Técnicos,M,1987-10-21,2022-12-03,,44,MAN-Mantenimiento industrial-G5,5
+P0430,Manufactura,Antofagasta,Calidad,Técnicos,M,1975-10-15,2018-01-27,,44,MAN-Calidad-G4,4
+P0431,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1987-04-19,2021-04-23,,44,MAN-Administración y finanzas-G6,6
+P0432,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1997-01-24,2020-11-20,2025-09-11,22,MAN-Bodega y logística-G7,7
+P0433,Manufactura,Antofagasta,Producción,Técnicos,M,1992-12-27,2024-06-16,,44,MAN-Producción-G5,5
+P0434,Manufactura,Antofagasta,Producción,Operarios,M,1985-10-08,2023-08-09,,44,MAN-Producción-G7,7
+P0435,Manufactura,Antofagasta,Producción,Profesionales,M,1984-12-23,2016-07-20,,44,MAN-Producción-G2,2
+P0436,Manufactura,Antofagasta,Producción,Técnicos,F,1994-01-25,2019-05-08,,44,MAN-Producción-G5,5
+P0437,Manufactura,Antofagasta,Administración y finanzas,Profesionales,M,1972-11-25,2015-09-04,2025-10-21,44,MAN-Administración y finanzas-G2,2
+P0438,Manufactura,Antofagasta,Producción,Operarios,M,2001-03-02,2022-02-15,,44,MAN-Producción-G7,7
+P0439,Manufactura,Antofagasta,Ventas,Profesionales,M,1992-05-03,2022-01-15,,44,MAN-Ventas-G3,3
+P0440,Manufactura,Antofagasta,Calidad,Técnicos,M,1973-04-03,1994-07-08,,44,MAN-Calidad-G4,4
+P0441,Manufactura,Antofagasta,Mantenimiento industrial,Técnicos,M,2001-03-12,2023-03-26,2025-07-16,44,MAN-Mantenimiento industrial-G5,5
+P0442,Manufactura,Antofagasta,Producción,Operarios,F,1993-06-05,2014-04-11,,44,MAN-Producción-G7,7
+P0443,Manufactura,Antofagasta,Producción,Profesionales,M,1977-12-26,2008-10-29,,44,MAN-Producción-G2,2
+P0444,Manufactura,Antofagasta,Producción,Operarios,M,1994-05-18,2023-02-17,2026-02-12,44,MAN-Producción-G7,7
+P0445,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1983-05-07,2019-04-03,,44,MAN-Bodega y logística-G7,7
+P0446,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1989-11-12,2021-07-19,2025-11-24,44,MAN-Bodega y logística-G7,7
+P0447,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1984-10-18,2021-08-16,,44,MAN-Bodega y logística-G7,7
+P0448,Manufactura,Antofagasta,Producción,Operarios,F,1981-11-12,2016-04-26,,44,MAN-Producción-G7,7
+P0449,Manufactura,Antofagasta,Producción,Operarios,M,1969-05-08,2021-07-24,,44,MAN-Producción-G7,7
+P0450,Manufactura,Antofagasta,Producción,Operarios,M,1976-11-22,2005-02-08,2026-04-24,44,MAN-Producción-G7,7
+P0451,Energia,Zona Norte,Gestión corporativa,Directivos,M,1983-09-22,2022-02-07,,44,ENE-Gestión corporativa-G1,1
+P0452,Energia,Zona Norte,Mantenimiento,Operarios,M,1985-03-21,2020-01-19,,44,ENE-Mantenimiento-G7,7
+P0453,Energia,Zona Norte,Transmisión,Operarios,M,1982-06-14,2023-09-29,,44,ENE-Transmisión-G7,7
+P0454,Energia,Zona Norte,Centro de despacho,Profesionales,F,2002-01-25,2023-04-02,,44,ENE-Centro de despacho-G3,3
+P0455,Energia,Zona Norte,Operación de centrales,Operarios,M,2002-03-28,2023-08-20,,44,ENE-Operación de centrales-G7,7
+P0456,Energia,Zona Norte,Operación de centrales,Técnicos,M,1970-07-08,2003-09-15,,44,ENE-Operación de centrales-G4,4
+P0457,Energia,Zona Norte,Operación de centrales,Operarios,M,1976-08-08,1999-01-23,,44,ENE-Operación de centrales-G7,7
+P0458,Energia,Zona Norte,Comercial,Administrativos,M,1990-10-20,2021-06-29,,44,ENE-Comercial-G6,6
+P0459,Energia,Zona Norte,Mantenimiento,Operarios,M,1990-01-18,2011-11-23,,44,ENE-Mantenimiento-G7,7
+P0460,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1998-05-20,2022-06-24,,44,ENE-Gestión corporativa-G6,6
+P0461,Energia,Zona Norte,Operación de centrales,Técnicos,M,1987-01-06,2011-01-09,,44,ENE-Operación de centrales-G4,4
+P0462,Energia,Zona Norte,Mantenimiento,Operarios,M,1982-12-04,2017-01-16,,44,ENE-Mantenimiento-G7,7
+P0463,Energia,Zona Norte,Centro de despacho,Directivos,F,1983-03-11,2018-10-27,,44,ENE-Centro de despacho-G1,1
+P0464,Energia,Zona Norte,Operación de centrales,Operarios,M,1991-08-10,2021-03-27,,44,ENE-Operación de centrales-G7,7
+P0465,Energia,Zona Norte,Operación de centrales,Operarios,M,1985-01-20,2022-09-30,,44,ENE-Operación de centrales-G7,7
+P0467,Energia,Zona Norte,Operación de centrales,Técnicos,F,2002-06-03,2023-07-22,,22,ENE-Operación de centrales-G5,5
+P0468,Energia,Zona Norte,Centro de despacho,Técnicos,M,1992-09-06,2017-06-12,,44,ENE-Centro de despacho-G4,4
+P0469,Energia,Zona Norte,Operación de centrales,Operarios,M,1985-09-03,2022-02-28,,44,ENE-Operación de centrales-G7,7
+P0470,Energia,Zona Norte,Operación de centrales,Técnicos,M,1999-10-02,2020-01-15,,44,ENE-Operación de centrales-G5,5
+P0471,Energia,Zona Norte,Centro de despacho,Técnicos,M,1974-09-19,1998-10-13,,44,ENE-Centro de despacho-G4,4
+P0473,Energia,Zona Norte,Operación de centrales,Técnicos,M,1980-07-14,2014-12-11,,22,ENE-Operación de centrales-G4,4
+P0474,Energia,Zona Norte,Centro de despacho,Profesionales,M,1982-09-11,2024-01-29,,44,ENE-Centro de despacho-G3,3
+P0475,Energia,Zona Norte,Mantenimiento,Técnicos,M,1969-11-16,2005-03-07,,44,ENE-Mantenimiento-G4,4
+P0476,Energia,Zona Norte,Mantenimiento,Operarios,M,1964-06-15,2011-02-24,,44,ENE-Mantenimiento-G7,7
+P0477,Energia,Zona Norte,Centro de despacho,Profesionales,F,1995-06-03,2019-11-23,2026-08-18,44,ENE-Centro de despacho-G3,3
+P0478,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1992-07-06,2013-06-02,2026-07-29,44,ENE-Gestión corporativa-G6,6
+P0479,Energia,Zona Norte,Centro de despacho,Profesionales,M,2000-08-27,2024-04-21,,44,ENE-Centro de despacho-G3,3
+P0480,Energia,Zona Norte,Operación de centrales,Operarios,M,1984-08-17,2015-06-24,,22,ENE-Operación de centrales-G7,7
+P0481,Energia,Zona Norte,Operación de centrales,Operarios,M,1985-02-27,2016-08-04,,44,ENE-Operación de centrales-G7,7
+P0482,Energia,Zona Norte,Mantenimiento,Operarios,M,1997-01-22,2023-10-05,,44,ENE-Mantenimiento-G7,7
+P0483,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1969-11-07,2015-10-14,,44,ENE-Gestión corporativa-G2,2
+P0485,Energia,Zona Norte,Mantenimiento,Profesionales,F,1986-10-11,2017-03-11,2025-11-20,44,ENE-Mantenimiento-G2,2
+P0486,Energia,Zona Norte,Gestión corporativa,Profesionales,F,1987-07-06,2021-08-06,,44,ENE-Gestión corporativa-G3,3
+P0487,Energia,Zona Norte,Centro de despacho,Profesionales,M,1986-09-03,2021-11-11,,44,ENE-Centro de despacho-G3,3
+P0488,Energia,Zona Norte,Gestión corporativa,Administrativos,M,1975-12-25,2020-11-07,,44,ENE-Gestión corporativa-G6,6
+P0489,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1983-06-15,2009-11-12,,44,ENE-Gestión corporativa-G6,6
+P0490,Energia,Zona Norte,Mantenimiento,Operarios,M,2001-10-05,2022-07-05,2025-03-10,44,ENE-Mantenimiento-G7,7
+P0491,Energia,Zona Norte,Operación de centrales,Técnicos,M,1989-03-16,2020-10-16,2025-03-28,44,ENE-Operación de centrales-G5,5
+P0492,Energia,Zona Norte,Centro de despacho,Profesionales,M,1971-08-04,2008-06-24,,44,ENE-Centro de despacho-G2,2
+P0493,Energia,Zona Norte,Comercial,Profesionales,F,1962-07-11,2005-10-14,2026-06-03,44,ENE-Comercial-G2,2
+P0494,Energia,Zona Norte,Comercial,Administrativos,M,1969-01-25,2010-06-29,,44,ENE-Comercial-G6,6
+P0495,Energia,Zona Norte,Mantenimiento,Técnicos,M,1997-11-10,2023-03-12,,44,ENE-Mantenimiento-G5,5
+P0496,Energia,Zona Norte,Gestión corporativa,Directivos,M,1971-09-13,2019-04-04,,44,ENE-Gestión corporativa-G1,1
+P0497,Energia,Zona Norte,Operación de centrales,Operarios,F,1982-02-28,2003-11-17,,44,ENE-Operación de centrales-G7,7
+P0498,Energia,Zona Norte,Transmisión,Técnicos,M,1996-07-18,2017-01-14,,44,ENE-Transmisión-G4,4
+P0499,Energia,Zona Norte,Transmisión,Operarios,M,1995-03-05,2021-10-26,,22,ENE-Transmisión-G7,7
+P0500,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1954-03-21,2002-05-21,,44,ENE-Gestión corporativa-G6,6
+P0502,Energia,Zona Norte,Mantenimiento,Operarios,M,1979-09-19,2017-01-11,2026-08-31,44,ENE-Mantenimiento-G7,7
+P0503,Energia,Zona Norte,Centro de despacho,Profesionales,M,1980-05-15,2020-07-23,2026-01-26,44,ENE-Centro de despacho-G3,3
+P0504,Energia,Zona Norte,Centro de despacho,Técnicos,M,1975-10-10,2017-08-03,2026-04-02,44,ENE-Centro de despacho-G4,4
+P0505,Energia,Zona Norte,Operación de centrales,Técnicos,M,1984-05-10,2010-04-26,,44,ENE-Operación de centrales-G4,4
+P0506,Energia,Zona Norte,Transmisión,Técnicos,M,1980-12-20,2018-02-03,,22,ENE-Transmisión-G4,4
+P0507,Energia,Zona Norte,Operación de centrales,Operarios,M,1993-12-04,2022-10-03,,44,ENE-Operación de centrales-G7,7
+P0508,Energia,Zona Norte,Transmisión,Técnicos,M,1986-04-16,2023-05-05,,44,ENE-Transmisión-G5,5
+P0510,Energia,Zona Norte,Transmisión,Operarios,M,2003-02-02,2024-02-29,,44,ENE-Transmisión-G7,7
+P0511,Energia,Zona Norte,Comercial,Administrativos,F,1991-03-17,2019-12-09,,44,ENE-Comercial-G6,6
+P0512,Energia,Zona Norte,Mantenimiento,Operarios,M,1983-01-04,2004-12-04,,44,ENE-Mantenimiento-G7,7
+P0513,Energia,Zona Norte,Operación de centrales,Profesionales,M,1985-12-22,2018-02-16,,44,ENE-Operación de centrales-G2,2
+P0514,Energia,Zona Norte,Centro de despacho,Profesionales,M,1998-02-01,2019-09-28,2025-05-27,44,ENE-Centro de despacho-G3,3
+P0515,Energia,Zona Norte,Transmisión,Profesionales,M,1986-02-23,2019-02-03,,44,ENE-Transmisión-G3,3
+P0517,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1988-06-09,2009-02-23,,44,ENE-Gestión corporativa-G6,6
+P0518,Energia,Zona Norte,Mantenimiento,Técnicos,M,1985-05-06,2024-02-16,,44,ENE-Mantenimiento-G5,5
+P0519,Energia,Zona Norte,Mantenimiento,Profesionales,F,1994-12-09,2015-09-20,,44,ENE-Mantenimiento-G2,2
+P0520,Energia,Zona Norte,Operación de centrales,Técnicos,M,1989-11-01,2010-11-24,,44,ENE-Operación de centrales-G4,4
+P0521,Energia,Zona Norte,Centro de despacho,Técnicos,M,1979-07-13,2019-05-16,,44,ENE-Centro de despacho-G5,5
+P0522,Energia,Zona Norte,Transmisión,Profesionales,M,1979-08-04,2006-01-06,,44,ENE-Transmisión-G2,2
+P0523,Energia,Zona Norte,Centro de despacho,Profesionales,M,1978-06-03,2018-07-02,,44,ENE-Centro de despacho-G2,2
+P0524,Energia,Zona Norte,Operación de centrales,Técnicos,M,1966-05-23,2003-12-14,,44,ENE-Operación de centrales-G4,4
+P0525,Energia,Zona Norte,Mantenimiento,Operarios,M,1989-10-08,2021-01-16,,44,ENE-Mantenimiento-G7,7
+P0526,Energia,Zona Norte,Mantenimiento,Técnicos,M,1982-01-02,2013-09-20,,44,ENE-Mantenimiento-G4,4
+P0527,Energia,Zona Norte,Transmisión,Técnicos,M,1986-04-03,2007-08-15,,22,ENE-Transmisión-G4,4
+P0528,Energia,Zona Norte,Mantenimiento,Operarios,M,1997-03-01,2024-03-20,,44,ENE-Mantenimiento-G7,7
+P0529,Energia,Zona Norte,Comercial,Administrativos,F,1991-08-20,2023-05-18,2026-08-28,44,ENE-Comercial-G6,6
+P0530,Energia,Zona Norte,Mantenimiento,Operarios,M,1973-06-04,2000-05-06,,44,ENE-Mantenimiento-G7,7
+P0531,Energia,Zona Norte,Comercial,Administrativos,F,1987-03-25,2015-11-01,,44,ENE-Comercial-G6,6
+P0532,Energia,Zona Norte,Comercial,Administrativos,F,1981-08-03,2015-06-26,,22,ENE-Comercial-G6,6
+P0533,Energia,Zona Norte,Transmisión,Operarios,M,1989-04-05,2021-04-09,,44,ENE-Transmisión-G7,7
+P0534,Energia,Zona Norte,Gestión corporativa,Administrativos,F,2003-08-20,2024-04-08,,44,ENE-Gestión corporativa-G6,6
+P0535,Energia,Zona Norte,Operación de centrales,Profesionales,F,1998-09-17,2019-12-20,,44,ENE-Operación de centrales-G3,3
+P0536,Energia,Zona Norte,Comercial,Administrativos,F,1961-03-06,2003-10-02,,44,ENE-Comercial-G6,6
+P0537,Energia,Zona Norte,Mantenimiento,Técnicos,M,1991-12-02,2022-01-21,2025-01-23,44,ENE-Mantenimiento-G5,5
+P0538,Energia,Zona Norte,Mantenimiento,Profesionales,M,1982-10-19,2010-12-24,,44,ENE-Mantenimiento-G2,2
+P0539,Energia,Zona Norte,Mantenimiento,Operarios,M,1993-07-08,2022-02-17,,22,ENE-Mantenimiento-G7,7
+P0540,Energia,Zona Norte,Mantenimiento,Técnicos,M,1997-06-05,2018-11-11,2026-05-12,44,ENE-Mantenimiento-G4,4
+P0541,Energia,Zona Norte,Operación de centrales,Técnicos,M,1994-08-15,2024-04-20,,44,ENE-Operación de centrales-G5,5
+P0542,Energia,Zona Norte,Mantenimiento,Técnicos,M,1980-03-19,2015-01-04,,44,ENE-Mantenimiento-G4,4
+P0543,Energia,Zona Norte,Comercial,Administrativos,F,1960-12-14,1994-07-08,2025-01-30,44,ENE-Comercial-G6,6
+P0544,Energia,Zona Norte,Transmisión,Operarios,M,1995-10-01,2019-02-15,,44,ENE-Transmisión-G7,7
+P0545,Energia,Zona Norte,Comercial,Administrativos,F,1979-12-24,2023-11-18,,44,ENE-Comercial-G6,6
+P0546,Energia,Zona Norte,Operación de centrales,Directivos,M,1979-03-23,2024-05-26,,44,ENE-Operación de centrales-G1,1
+P0547,Energia,Zona Norte,Transmisión,Directivos,F,1984-06-21,2020-10-05,,44,ENE-Transmisión-G1,1
+P0548,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1999-05-23,2024-04-19,,44,ENE-Gestión corporativa-G3,3
+P0549,Energia,Zona Norte,Gestión corporativa,Administrativos,M,2002-02-13,2024-02-28,,44,ENE-Gestión corporativa-G6,6
+P0550,Energia,Zona Norte,Operación de centrales,Técnicos,M,2003-04-05,2024-01-31,,44,ENE-Operación de centrales-G5,5
+P0551,Energia,Zona Norte,Mantenimiento,Operarios,M,1985-04-11,2019-04-18,2026-08-17,44,ENE-Mantenimiento-G7,7
+P0552,Energia,Zona Norte,Operación de centrales,Profesionales,M,1976-09-27,2021-12-16,2026-08-03,44,ENE-Operación de centrales-G3,3
+P0553,Energia,Zona Norte,Transmisión,Operarios,M,1973-08-03,2007-01-25,,44,ENE-Transmisión-G7,7
+P0554,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1993-08-05,2022-07-24,,44,ENE-Gestión corporativa-G3,3
+P0555,Energia,Zona Norte,Mantenimiento,Técnicos,M,1971-04-27,2018-04-17,,44,ENE-Mantenimiento-G4,4
+P0556,Energia,Zona Norte,Mantenimiento,Operarios,M,1984-12-17,2022-02-16,,44,ENE-Mantenimiento-G7,7
+P0557,Energia,Zona Norte,Operación de centrales,Operarios,M,2002-01-05,2023-05-15,2026-07-09,44,ENE-Operación de centrales-G7,7
+P0558,Energia,Zona Norte,Gestión corporativa,Administrativos,M,1989-12-23,2022-06-26,,44,ENE-Gestión corporativa-G6,6
+P0559,Energia,Zona Norte,Operación de centrales,Directivos,M,1986-12-02,2019-05-17,,44,ENE-Operación de centrales-G1,1
+P0560,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1988-08-25,2023-09-21,,44,ENE-Gestión corporativa-G6,6
+P0561,Energia,Zona Norte,Operación de centrales,Operarios,M,1974-05-25,2002-03-27,,44,ENE-Operación de centrales-G7,7
+P0562,Energia,Zona Norte,Transmisión,Operarios,M,1999-12-16,2020-12-30,,44,ENE-Transmisión-G7,7
+P0563,Energia,Zona Norte,Mantenimiento,Técnicos,M,1980-11-07,2013-06-23,,44,ENE-Mantenimiento-G4,4
+P0564,Energia,Zona Norte,Transmisión,Técnicos,F,1985-09-13,2017-10-27,,44,ENE-Transmisión-G4,4
+P0565,Energia,Zona Norte,Gestión corporativa,Directivos,F,1978-06-01,2021-10-23,,44,ENE-Gestión corporativa-G1,1
+P0566,Energia,Zona Norte,Gestión corporativa,Administrativos,M,1999-08-24,2023-12-13,,44,ENE-Gestión corporativa-G6,6
+P0569,Energia,Zona Norte,Operación de centrales,Profesionales,M,1984-07-10,2020-10-11,,44,ENE-Operación de centrales-G3,3
+P0570,Energia,Zona Norte,Comercial,Profesionales,M,1992-01-26,2019-08-02,,22,ENE-Comercial-G3,3
+P0571,Energia,Zona Norte,Transmisión,Operarios,M,1993-02-25,2021-04-05,,44,ENE-Transmisión-G7,7
+P0572,Energia,Zona Norte,Comercial,Administrativos,M,1995-11-22,2019-07-02,,44,ENE-Comercial-G6,6
+P0573,Energia,Zona Norte,Mantenimiento,Técnicos,M,1975-12-05,2013-04-23,,44,ENE-Mantenimiento-G4,4
+P0574,Energia,Zona Norte,Transmisión,Operarios,M,1991-11-03,2024-03-13,,44,ENE-Transmisión-G7,7
+P0575,Energia,Zona Norte,Operación de centrales,Operarios,M,1982-05-09,2019-10-17,,44,ENE-Operación de centrales-G7,7
+P0576,Energia,Zona Norte,Transmisión,Operarios,M,2003-06-25,2024-06-02,,44,ENE-Transmisión-G7,7
+P0577,Energia,Zona Norte,Operación de centrales,Profesionales,M,1974-09-23,2010-11-12,,44,ENE-Operación de centrales-G2,2
+P0578,Energia,Zona Norte,Mantenimiento,Profesionales,M,1993-08-12,2014-04-03,,44,ENE-Mantenimiento-G2,2
+P0579,Energia,Zona Norte,Comercial,Profesionales,F,1984-12-05,2017-01-28,2026-02-18,44,ENE-Comercial-G2,2
+P0580,Energia,Zona Norte,Gestión corporativa,Administrativos,F,1990-01-25,2015-11-12,,44,ENE-Gestión corporativa-G6,6
+P0581,Energia,Zona Norte,Operación de centrales,Operarios,M,1986-05-22,2019-02-08,2026-03-27,22,ENE-Operación de centrales-G7,7
+P0582,Energia,Zona Norte,Transmisión,Técnicos,M,1994-01-03,2023-02-28,,44,ENE-Transmisión-G5,5
+P0583,Energia,Zona Norte,Transmisión,Técnicos,M,1990-02-04,2012-11-29,,44,ENE-Transmisión-G4,4
+P0584,Energia,Zona Norte,Operación de centrales,Operarios,M,1985-12-16,2009-01-10,,44,ENE-Operación de centrales-G7,7
+P0585,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1989-02-25,2021-11-14,2026-02-17,44,ENE-Gestión corporativa-G3,3
+P0586,Energia,Zona Norte,Operación de centrales,Operarios,M,1980-01-03,2017-03-08,,44,ENE-Operación de centrales-G7,7
+P0587,Energia,Zona Norte,Transmisión,Técnicos,M,1979-07-07,2002-02-02,2026-05-05,44,ENE-Transmisión-G4,4
+P0588,Energia,Zona Norte,Gestión corporativa,Administrativos,M,1996-11-04,2024-06-02,,44,ENE-Gestión corporativa-G6,6
+P0589,Energia,Zona Norte,Centro de despacho,Directivos,M,1974-04-11,2016-05-21,,44,ENE-Centro de despacho-G1,1
+P0590,Energia,Zona Norte,Mantenimiento,Técnicos,M,1977-10-09,2015-10-27,,44,ENE-Mantenimiento-G4,4
+P0591,Energia,Zona Norte,Mantenimiento,Operarios,M,1981-08-04,2006-07-09,,44,ENE-Mantenimiento-G7,7
+P0592,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1986-08-22,2016-06-21,,22,ENE-Gestión corporativa-G2,2
+P0593,Energia,Zona Norte,Mantenimiento,Técnicos,M,1993-08-26,2018-08-24,,44,ENE-Mantenimiento-G4,4
+P0595,Energia,Zona Norte,Mantenimiento,Técnicos,M,1989-12-06,2024-04-18,,44,ENE-Mantenimiento-G5,5
+P0596,Energia,Zona Norte,Mantenimiento,Profesionales,M,1992-11-18,2017-10-04,,44,ENE-Mantenimiento-G2,2
+P0597,Energia,Zona Norte,Mantenimiento,Directivos,M,1973-01-19,2018-09-29,,44,ENE-Mantenimiento-G1,1
+P0598,Energia,Zona Norte,Mantenimiento,Operarios,M,1995-06-13,2024-05-02,,44,ENE-Mantenimiento-G7,7
+P0599,Energia,Zona Norte,Mantenimiento,Operarios,M,2001-02-28,2022-10-16,,44,ENE-Mantenimiento-G7,7
+P0600,Energia,Zona Norte,Mantenimiento,Técnicos,M,1991-07-09,2012-07-24,2025-01-21,22,ENE-Mantenimiento-G4,4
+P0601,Energia,Zona Centro,Mantenimiento,Técnicos,F,2001-04-11,2022-03-01,,44,ENE-Mantenimiento-G5,5
+P0602,Energia,Zona Centro,Operación de centrales,Técnicos,M,1971-11-28,2003-08-03,,44,ENE-Operación de centrales-G4,4
+P0603,Energia,Zona Centro,Operación de centrales,Técnicos,M,1987-02-23,2022-05-20,,44,ENE-Operación de centrales-G5,5
+P0604,Energia,Zona Centro,Operación de centrales,Operarios,M,1999-02-21,2020-08-18,,44,ENE-Operación de centrales-G7,7
+P0605,Energia,Zona Centro,Centro de despacho,Profesionales,F,2000-09-06,2021-04-16,,44,ENE-Centro de despacho-G3,3
+P0606,Energia,Zona Centro,Centro de despacho,Técnicos,M,1978-11-18,2007-10-25,,44,ENE-Centro de despacho-G4,4
+P0607,Energia,Zona Centro,Gestión corporativa,Administrativos,F,2000-12-22,2024-02-16,,44,ENE-Gestión corporativa-G6,6
+P0608,Energia,Zona Centro,Gestión corporativa,Directivos,M,1979-05-27,2018-06-22,,44,ENE-Gestión corporativa-G1,1
+P0609,Energia,Zona Centro,Centro de despacho,Profesionales,F,1976-05-15,2022-11-12,2026-04-08,44,ENE-Centro de despacho-G3,3
+P0610,Energia,Zona Centro,Gestión corporativa,Profesionales,F,1989-05-22,2022-08-03,,44,ENE-Gestión corporativa-G3,3
+P0611,Energia,Zona Centro,Centro de despacho,Técnicos,M,1996-02-14,2024-02-27,,44,ENE-Centro de despacho-G5,5
+P0612,Energia,Zona Centro,Transmisión,Técnicos,M,1986-10-25,2023-09-23,2026-07-17,44,ENE-Transmisión-G5,5
+P0613,Energia,Zona Centro,Comercial,Profesionales,M,1989-07-07,2019-03-27,,44,ENE-Comercial-G3,3
+P0614,Energia,Zona Centro,Transmisión,Técnicos,M,1997-06-18,2021-09-06,,44,ENE-Transmisión-G5,5
+P0615,Energia,Zona Centro,Gestión corporativa,Administrativos,M,1970-11-08,2013-06-15,2026-06-17,44,ENE-Gestión corporativa-G6,6
+P0616,Energia,Zona Centro,Centro de despacho,Técnicos,M,1992-04-28,2017-07-26,,44,ENE-Centro de despacho-G4,4
+P0617,Energia,Zona Centro,Gestión corporativa,Directivos,M,1984-03-15,2022-05-09,,44,ENE-Gestión corporativa-G1,1
+P0619,Energia,Zona Centro,Operación de centrales,Técnicos,M,1995-06-15,2024-02-01,,44,ENE-Operación de centrales-G5,5
+P0620,Energia,Zona Centro,Transmisión,Profesionales,M,2002-10-03,2023-02-28,,44,ENE-Transmisión-G3,3
+P0621,Energia,Zona Centro,Comercial,Administrativos,F,2002-08-16,2023-08-30,,44,ENE-Comercial-G6,6
+P0622,Energia,Zona Centro,Transmisión,Técnicos,F,1980-06-06,2022-07-07,,44,ENE-Transmisión-G5,5
+P0623,Energia,Zona Centro,Operación de centrales,Técnicos,M,1979-05-23,2018-10-27,,44,ENE-Operación de centrales-G4,4
+P0624,Energia,Zona Centro,Transmisión,Profesionales,F,1969-10-04,2005-06-26,2025-01-20,22,ENE-Transmisión-G2,2
+P0625,Energia,Zona Centro,Mantenimiento,Técnicos,M,1990-12-16,2023-02-19,,44,ENE-Mantenimiento-G5,5
+P0626,Energia,Zona Centro,Operación de centrales,Operarios,M,1992-03-14,2016-09-20,,44,ENE-Operación de centrales-G7,7
+P0627,Energia,Zona Centro,Operación de centrales,Técnicos,M,1994-08-05,2022-10-14,,44,ENE-Operación de centrales-G5,5
+P0628,Energia,Zona Centro,Operación de centrales,Técnicos,M,1994-02-04,2021-03-13,,44,ENE-Operación de centrales-G5,5
+P0629,Energia,Zona Centro,Mantenimiento,Técnicos,M,1983-01-01,2018-11-28,,44,ENE-Mantenimiento-G4,4
+P0630,Energia,Zona Centro,Mantenimiento,Técnicos,M,1982-10-06,2003-11-07,,44,ENE-Mantenimiento-G4,4
+P0631,Energia,Zona Centro,Mantenimiento,Técnicos,F,1988-05-24,2023-08-01,,44,ENE-Mantenimiento-G5,5
+P0632,Energia,Zona Centro,Mantenimiento,Técnicos,M,1984-03-18,2016-06-29,,44,ENE-Mantenimiento-G4,4
+P0633,Energia,Zona Centro,Operación de centrales,Profesionales,M,2001-08-02,2022-09-09,,44,ENE-Operación de centrales-G3,3
+P0634,Energia,Zona Centro,Mantenimiento,Profesionales,F,1974-06-03,2016-11-14,,44,ENE-Mantenimiento-G2,2
+P0635,Energia,Zona Centro,Operación de centrales,Operarios,M,1985-05-22,2022-10-21,,44,ENE-Operación de centrales-G7,7
+P0636,Energia,Zona Centro,Gestión corporativa,Profesionales,F,1987-08-27,2022-02-25,,44,ENE-Gestión corporativa-G3,3
+P0637,Energia,Zona Centro,Mantenimiento,Profesionales,M,1958-10-05,2018-08-29,2025-06-10,44,ENE-Mantenimiento-G2,2
+P0638,Energia,Zona Centro,Mantenimiento,Profesionales,M,2003-07-03,2024-01-22,,44,ENE-Mantenimiento-G3,3
+P0639,Energia,Zona Centro,Comercial,Profesionales,F,1984-02-10,2015-06-08,,44,ENE-Comercial-G2,2
+P0640,Energia,Zona Centro,Operación de centrales,Operarios,M,1992-08-15,2013-10-19,,44,ENE-Operación de centrales-G7,7
+P0641,Energia,Zona Centro,Mantenimiento,Operarios,M,1992-01-17,2014-07-05,,44,ENE-Mantenimiento-G7,7
+P0642,Energia,Zona Centro,Centro de despacho,Profesionales,M,1986-09-03,2020-05-25,,44,ENE-Centro de despacho-G3,3
+P0643,Energia,Zona Centro,Operación de centrales,Operarios,M,1983-02-02,2013-06-14,,44,ENE-Operación de centrales-G7,7
+P0644,Energia,Zona Centro,Mantenimiento,Operarios,M,1981-10-03,2014-06-14,,44,ENE-Mantenimiento-G7,7
+P0645,Energia,Zona Centro,Mantenimiento,Operarios,F,1992-06-19,2013-05-26,,44,ENE-Mantenimiento-G7,7
+P0646,Energia,Zona Centro,Gestión corporativa,Administrativos,F,1985-10-09,2023-01-28,,44,ENE-Gestión corporativa-G6,6
+P0647,Energia,Zona Centro,Operación de centrales,Profesionales,M,1999-12-20,2023-05-15,,44,ENE-Operación de centrales-G3,3
+P0648,Energia,Zona Centro,Comercial,Profesionales,F,2002-01-23,2023-08-18,,44,ENE-Comercial-G3,3
+P0649,Energia,Zona Centro,Transmisión,Técnicos,M,1989-05-25,2021-01-24,,44,ENE-Transmisión-G5,5
+P0650,Energia,Zona Centro,Operación de centrales,Profesionales,M,1992-08-01,2017-03-24,,44,ENE-Operación de centrales-G2,2
+P0651,Energia,Zona Centro,Transmisión,Operarios,F,2003-07-28,2024-03-08,,44,ENE-Transmisión-G7,7
+P0652,Energia,Zona Centro,Mantenimiento,Técnicos,M,1995-08-08,2016-10-06,2025-07-30,44,ENE-Mantenimiento-G4,4
+P0653,Energia,Zona Centro,Mantenimiento,Profesionales,M,1990-11-12,2011-02-08,,44,ENE-Mantenimiento-G2,2
+P0654,Energia,Zona Centro,Centro de despacho,Profesionales,M,1989-10-22,2021-01-15,,44,ENE-Centro de despacho-G3,3
+P0655,Energia,Zona Centro,Mantenimiento,Operarios,M,1981-08-26,2005-03-24,,44,ENE-Mantenimiento-G7,7
+P0656,Energia,Zona Centro,Centro de despacho,Profesionales,F,1999-03-20,2020-07-17,2025-03-21,44,ENE-Centro de despacho-G3,3
+P0657,Energia,Zona Centro,Mantenimiento,Técnicos,M,1993-11-06,2019-08-14,,44,ENE-Mantenimiento-G5,5
+P0658,Energia,Zona Centro,Comercial,Profesionales,F,1987-09-08,2023-10-10,,44,ENE-Comercial-G3,3
+P0659,Energia,Zona Centro,Transmisión,Profesionales,M,1987-02-04,2024-03-09,,44,ENE-Transmisión-G3,3
+P0660,Energia,Zona Centro,Mantenimiento,Técnicos,M,2002-06-06,2023-09-29,,44,ENE-Mantenimiento-G5,5
+P0661,Energia,Zona Centro,Comercial,Profesionales,M,1992-08-11,2023-02-23,,44,ENE-Comercial-G3,3
+P0662,Energia,Zona Centro,Centro de despacho,Profesionales,F,1989-09-14,2018-07-18,,44,ENE-Centro de despacho-G2,2
+P0663,Energia,Zona Centro,Gestión corporativa,Administrativos,F,1984-08-05,2006-04-24,,44,ENE-Gestión corporativa-G6,6
+P0664,Energia,Zona Centro,Mantenimiento,Operarios,M,2000-01-22,2021-01-31,,44,ENE-Mantenimiento-G7,7
+P0665,Energia,Zona Centro,Gestión corporativa,Directivos,M,1967-11-23,2014-11-16,,44,ENE-Gestión corporativa-G1,1
+P0666,Energia,Zona Centro,Comercial,Administrativos,F,1995-09-20,2024-06-13,,44,ENE-Comercial-G6,6
+P0667,Energia,Zona Centro,Comercial,Administrativos,M,1985-04-10,2017-04-30,,44,ENE-Comercial-G6,6
+P0668,Energia,Zona Centro,Centro de despacho,Técnicos,M,1998-04-03,2020-02-03,,44,ENE-Centro de despacho-G5,5
+P0669,Energia,Zona Centro,Transmisión,Profesionales,M,1981-05-24,2011-03-31,,44,ENE-Transmisión-G2,2
+P0670,Energia,Zona Centro,Mantenimiento,Profesionales,M,1969-08-10,2016-01-10,,44,ENE-Mantenimiento-G2,2
+P0671,Energia,Zona Centro,Operación de centrales,Operarios,M,1976-10-08,2019-04-10,,44,ENE-Operación de centrales-G7,7
+P0672,Energia,Zona Centro,Transmisión,Operarios,M,1996-12-14,2021-10-23,,44,ENE-Transmisión-G7,7
+P0673,Energia,Zona Centro,Gestión corporativa,Administrativos,F,1999-09-25,2020-12-14,,44,ENE-Gestión corporativa-G6,6
+P0674,Energia,Zona Centro,Mantenimiento,Técnicos,M,1979-07-27,2008-06-18,,44,ENE-Mantenimiento-G4,4
+P0675,Energia,Zona Centro,Mantenimiento,Operarios,M,1993-01-24,2020-03-07,,44,ENE-Mantenimiento-G7,7
+P0676,Energia,Zona Centro,Operación de centrales,Técnicos,M,2001-02-12,2022-06-13,,44,ENE-Operación de centrales-G5,5
+P0677,Energia,Zona Centro,Operación de centrales,Profesionales,M,1977-05-07,2015-04-25,2025-04-24,44,ENE-Operación de centrales-G2,2
+P0678,Energia,Zona Centro,Transmisión,Profesionales,M,1996-05-19,2024-03-22,,44,ENE-Transmisión-G3,3
+P0679,Energia,Zona Centro,Comercial,Administrativos,F,2002-11-15,2023-08-23,2026-10-09,44,ENE-Comercial-G6,6
+P0680,Energia,Zona Centro,Transmisión,Técnicos,M,2000-06-18,2021-07-24,,22,ENE-Transmisión-G5,5
+P0681,Energia,Zona Centro,Operación de centrales,Profesionales,M,1992-11-18,2018-07-14,2026-01-01,44,ENE-Operación de centrales-G2,2
+P0683,Energia,Zona Centro,Comercial,Profesionales,M,1996-10-11,2017-03-01,,44,ENE-Comercial-G2,2
+P0684,Energia,Zona Centro,Operación de centrales,Técnicos,M,1985-06-13,2021-04-14,,44,ENE-Operación de centrales-G5,5
+P0685,Energia,Zona Centro,Operación de centrales,Profesionales,F,1995-03-02,2022-09-23,,44,ENE-Operación de centrales-G3,3
+P0686,Energia,Zona Centro,Operación de centrales,Técnicos,M,1983-06-09,2022-03-09,,44,ENE-Operación de centrales-G5,5
+P0687,Energia,Zona Centro,Operación de centrales,Operarios,M,1988-02-09,2019-03-18,,22,ENE-Operación de centrales-G7,7
+P0688,Energia,Zona Centro,Mantenimiento,Técnicos,M,2000-05-18,2022-11-25,,44,ENE-Mantenimiento-G5,5
+P0689,Energia,Zona Centro,Transmisión,Operarios,M,1980-04-26,2022-04-27,,44,ENE-Transmisión-G7,7
+P0690,Energia,Zona Centro,Mantenimiento,Operarios,F,1983-08-27,2020-11-22,,44,ENE-Mantenimiento-G7,7
+P0691,Energia,Zona Centro,Operación de centrales,Operarios,M,2001-11-07,2022-08-01,,44,ENE-Operación de centrales-G7,7
+P0692,Energia,Zona Centro,Centro de despacho,Técnicos,M,2001-02-27,2022-05-09,2026-12-07,44,ENE-Centro de despacho-G5,5
+P0693,Energia,Zona Centro,Mantenimiento,Operarios,M,1978-05-25,2005-07-28,,44,ENE-Mantenimiento-G7,7
+P0694,Energia,Zona Centro,Mantenimiento,Técnicos,M,1982-12-05,2005-05-07,,44,ENE-Mantenimiento-G4,4
+P0695,Energia,Zona Centro,Gestión corporativa,Administrativos,M,1995-09-03,2021-04-20,2025-10-29,44,ENE-Gestión corporativa-G6,6
+P0696,Energia,Zona Centro,Operación de centrales,Operarios,M,1996-06-27,2017-10-27,,44,ENE-Operación de centrales-G7,7
+P0697,Energia,Zona Centro,Comercial,Administrativos,F,1973-01-08,1999-10-12,,44,ENE-Comercial-G6,6
+P0699,Energia,Zona Centro,Gestión corporativa,Administrativos,F,1998-04-22,2023-10-17,,44,ENE-Gestión corporativa-G6,6
+P0700,Energia,Zona Centro,Comercial,Profesionales,M,1978-09-24,2008-03-28,,44,ENE-Comercial-G2,2
+P0701,Energia,Zona Centro,Gestión corporativa,Administrativos,F,1998-07-21,2019-12-07,,44,ENE-Gestión corporativa-G6,6
+P0702,Energia,Zona Centro,Mantenimiento,Técnicos,F,1993-12-08,2020-02-18,,22,ENE-Mantenimiento-G5,5
+P0703,Energia,Zona Centro,Mantenimiento,Técnicos,M,1982-04-23,2022-01-20,,44,ENE-Mantenimiento-G5,5
+P0704,Energia,Zona Centro,Operación de centrales,Técnicos,F,1997-08-14,2018-08-08,2026-06-01,44,ENE-Operación de centrales-G4,4
+P0705,Energia,Zona Centro,Operación de centrales,Profesionales,F,1999-02-25,2021-12-31,,44,ENE-Operación de centrales-G3,3
+P0707,Energia,Zona Centro,Operación de centrales,Operarios,M,1988-07-13,2021-02-08,2026-02-06,44,ENE-Operación de centrales-G7,7
+P0708,Energia,Zona Centro,Transmisión,Técnicos,M,1992-07-20,2024-06-07,,44,ENE-Transmisión-G5,5
+P0709,Energia,Zona Centro,Mantenimiento,Técnicos,M,1978-04-19,2023-11-06,,44,ENE-Mantenimiento-G5,5
+P0710,Energia,Zona Centro,Mantenimiento,Operarios,M,1986-01-02,2023-04-07,,44,ENE-Mantenimiento-G7,7
+P0711,Energia,Zona Centro,Transmisión,Técnicos,M,1998-01-17,2023-07-22,,44,ENE-Transmisión-G5,5
+P0712,Energia,Zona Centro,Mantenimiento,Operarios,M,1986-04-07,2012-10-06,,44,ENE-Mantenimiento-G7,7
+P0713,Energia,Zona Centro,Operación de centrales,Técnicos,M,1993-10-11,2017-06-10,,44,ENE-Operación de centrales-G4,4
+P0714,Energia,Zona Centro,Mantenimiento,Operarios,M,2003-01-21,2024-03-28,,44,ENE-Mantenimiento-G7,7
+P0715,Energia,Zona Centro,Operación de centrales,Operarios,M,1976-03-27,2006-03-20,,44,ENE-Operación de centrales-G7,7
+P0716,Energia,Zona Centro,Operación de centrales,Profesionales,F,1998-10-25,2022-06-10,2025-07-08,44,ENE-Operación de centrales-G3,3
+P0717,Energia,Zona Centro,Mantenimiento,Técnicos,M,1988-04-01,2022-09-04,,44,ENE-Mantenimiento-G5,5
+P0718,Energia,Zona Centro,Comercial,Profesionales,M,1993-06-07,2018-02-13,,44,ENE-Comercial-G2,2
+P0719,Energia,Zona Centro,Operación de centrales,Profesionales,M,1975-06-11,2009-01-12,,44,ENE-Operación de centrales-G2,2
+P0720,Energia,Zona Centro,Operación de centrales,Operarios,M,1984-03-11,2023-03-29,,44,ENE-Operación de centrales-G7,7
+P0721,Energia,Zona Centro,Operación de centrales,Técnicos,M,1991-11-20,2019-03-28,,22,ENE-Operación de centrales-G5,5
+P0722,Energia,Zona Centro,Mantenimiento,Técnicos,M,1996-08-16,2017-05-22,,44,ENE-Mantenimiento-G4,4
+P0723,Energia,Zona Centro,Operación de centrales,Profesionales,M,1988-10-06,2012-07-28,,44,ENE-Operación de centrales-G2,2
+P0724,Energia,Zona Centro,Operación de centrales,Profesionales,M,1972-10-02,2020-12-21,,44,ENE-Operación de centrales-G3,3
+P0725,Energia,Zona Centro,Mantenimiento,Técnicos,M,1988-04-09,2014-09-17,,44,ENE-Mantenimiento-G4,4
+P0726,Energia,Zona Centro,Comercial,Administrativos,M,1984-04-04,2018-04-24,2025-05-07,44,ENE-Comercial-G6,6
+P0728,Energia,Zona Centro,Centro de despacho,Profesionales,M,2001-05-27,2022-09-07,,44,ENE-Centro de despacho-G3,3
+P0729,Energia,Zona Centro,Operación de centrales,Operarios,M,1962-12-24,1997-04-22,,44,ENE-Operación de centrales-G7,7
+P0730,Energia,Zona Centro,Transmisión,Técnicos,M,1988-02-11,2014-05-26,,44,ENE-Transmisión-G4,4
+P0731,Energia,Zona Sur,Comercial,Profesionales,M,1998-08-26,2023-08-08,,44,ENE-Comercial-G3,3
+P0732,Energia,Zona Sur,Mantenimiento,Operarios,M,1971-05-11,2015-11-14,,44,ENE-Mantenimiento-G7,7
+P0733,Energia,Zona Sur,Operación de centrales,Directivos,M,1950-10-28,1994-07-08,2025-03-24,44,ENE-Operación de centrales-G1,1
+P0734,Energia,Zona Sur,Gestión corporativa,Profesionales,M,2000-06-19,2021-07-27,,44,ENE-Gestión corporativa-G3,3
+P0735,Energia,Zona Sur,Operación de centrales,Operarios,M,1994-04-03,2023-04-29,,44,ENE-Operación de centrales-G7,7
+P0736,Energia,Zona Sur,Mantenimiento,Técnicos,M,1991-01-06,2020-11-11,,44,ENE-Mantenimiento-G5,5
+P0737,Energia,Zona Sur,Gestión corporativa,Profesionales,M,2000-04-05,2021-04-01,,44,ENE-Gestión corporativa-G3,3
+P0738,Energia,Zona Sur,Transmisión,Técnicos,M,1980-08-09,2023-02-20,2026-07-01,44,ENE-Transmisión-G5,5
+P0739,Energia,Zona Sur,Comercial,Administrativos,F,2001-08-19,2022-10-19,,22,ENE-Comercial-G6,6
+P0740,Energia,Zona Sur,Gestión corporativa,Profesionales,M,1987-07-20,2013-05-30,,44,ENE-Gestión corporativa-G2,2
+P0741,Energia,Zona Sur,Operación de centrales,Operarios,M,1998-02-13,2021-02-07,,44,ENE-Operación de centrales-G7,7
+P0743,Energia,Zona Sur,Comercial,Administrativos,F,1981-01-15,2015-06-07,,22,ENE-Comercial-G6,6
+P0744,Energia,Zona Sur,Mantenimiento,Técnicos,M,1988-12-05,2024-04-07,2026-01-16,44,ENE-Mantenimiento-G5,5
+P0745,Energia,Zona Sur,Operación de centrales,Operarios,M,1990-01-20,2023-08-05,,44,ENE-Operación de centrales-G7,7
+P0746,Energia,Zona Sur,Mantenimiento,Profesionales,M,1989-03-15,2015-11-07,2025-03-17,44,ENE-Mantenimiento-G2,2
+P0747,Energia,Zona Sur,Centro de despacho,Profesionales,M,1982-12-22,2017-05-05,,44,ENE-Centro de despacho-G2,2
+P0748,Energia,Zona Sur,Operación de centrales,Profesionales,M,1994-04-12,2015-08-16,,44,ENE-Operación de centrales-G2,2
+P0751,Energia,Zona Sur,Mantenimiento,Técnicos,M,1998-02-22,2021-05-31,,44,ENE-Mantenimiento-G5,5
+P0752,Energia,Zona Sur,Operación de centrales,Profesionales,M,1985-02-23,2022-05-07,,44,ENE-Operación de centrales-G3,3
+P0753,Energia,Zona Sur,Mantenimiento,Operarios,M,1974-06-01,2011-08-02,,44,ENE-Mantenimiento-G7,7
+P0755,Energia,Zona Sur,Centro de despacho,Técnicos,F,1993-03-13,2018-09-13,,44,ENE-Centro de despacho-G4,4
+P0756,Energia,Zona Sur,Transmisión,Operarios,M,1980-05-11,2016-06-09,,44,ENE-Transmisión-G7,7
+P0757,Energia,Zona Sur,Mantenimiento,Profesionales,M,1982-11-08,2013-03-30,,44,ENE-Mantenimiento-G2,2
+P0758,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1981-02-28,2023-04-13,2025-09-24,44,ENE-Gestión corporativa-G6,6
+P0759,Energia,Zona Sur,Gestión corporativa,Directivos,F,2001-04-08,2023-09-11,,44,ENE-Gestión corporativa-G1,1
+P0760,Energia,Zona Sur,Mantenimiento,Técnicos,M,1997-10-08,2023-03-07,,44,ENE-Mantenimiento-G5,5
+P0761,Energia,Zona Sur,Mantenimiento,Técnicos,M,1975-08-01,2018-11-11,,44,ENE-Mantenimiento-G4,4
+P0762,Energia,Zona Sur,Gestión corporativa,Profesionales,M,1970-03-09,2019-11-17,,44,ENE-Gestión corporativa-G3,3
+P0763,Energia,Zona Sur,Transmisión,Técnicos,M,1985-01-01,2022-01-25,,44,ENE-Transmisión-G5,5
+P0764,Energia,Zona Sur,Mantenimiento,Técnicos,M,1972-07-16,2021-06-27,2025-12-03,44,ENE-Mantenimiento-G5,5
+P0765,Energia,Zona Sur,Gestión corporativa,Directivos,M,1978-05-25,2023-09-13,,44,ENE-Gestión corporativa-G1,1
+P0766,Energia,Zona Sur,Mantenimiento,Técnicos,M,1973-11-13,2017-07-03,,44,ENE-Mantenimiento-G4,4
+P0767,Energia,Zona Sur,Operación de centrales,Operarios,M,1992-05-20,2018-07-09,2026-10-05,44,ENE-Operación de centrales-G7,7
+P0768,Energia,Zona Sur,Transmisión,Operarios,F,1992-02-21,2013-06-14,,44,ENE-Transmisión-G7,7
+P0769,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1996-09-22,2023-05-30,,44,ENE-Gestión corporativa-G6,6
+P0770,Energia,Zona Sur,Transmisión,Operarios,M,1993-04-24,2014-05-28,,44,ENE-Transmisión-G7,7
+P0771,Energia,Zona Sur,Operación de centrales,Operarios,M,1990-06-06,2020-01-13,,44,ENE-Operación de centrales-G7,7
+P0772,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1989-01-24,2014-05-27,,44,ENE-Gestión corporativa-G6,6
+P0773,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1984-05-03,2018-08-03,,44,ENE-Gestión corporativa-G6,6
+P0774,Energia,Zona Sur,Transmisión,Técnicos,F,1990-01-09,2017-10-19,,44,ENE-Transmisión-G4,4
+P0775,Energia,Zona Sur,Gestión corporativa,Profesionales,F,1999-05-16,2020-01-25,,44,ENE-Gestión corporativa-G3,3
+P0776,Energia,Zona Sur,Mantenimiento,Operarios,M,1973-06-22,1994-07-08,,44,ENE-Mantenimiento-G7,7
+P0777,Energia,Zona Sur,Operación de centrales,Operarios,M,1989-02-28,2021-06-01,,44,ENE-Operación de centrales-G7,7
+P0778,Energia,Zona Sur,Operación de centrales,Técnicos,M,1987-09-14,2017-07-19,,44,ENE-Operación de centrales-G4,4
+P0779,Energia,Zona Sur,Gestión corporativa,Profesionales,M,1973-11-15,2018-06-23,,44,ENE-Gestión corporativa-G2,2
+P0780,Energia,Zona Sur,Gestión corporativa,Directivos,M,1985-12-04,2020-08-15,2026-04-24,44,ENE-Gestión corporativa-G1,1
+P0781,Energia,Zona Sur,Operación de centrales,Profesionales,M,1983-03-16,2020-02-05,,44,ENE-Operación de centrales-G3,3
+P0782,Energia,Zona Sur,Transmisión,Operarios,M,2001-02-16,2023-05-25,,44,ENE-Transmisión-G7,7
+P0783,Energia,Zona Sur,Comercial,Administrativos,F,1994-06-13,2023-12-08,2025-07-03,44,ENE-Comercial-G6,6
+P0784,Energia,Zona Sur,Mantenimiento,Operarios,M,1998-09-21,2023-09-17,,44,ENE-Mantenimiento-G7,7
+P0785,Energia,Zona Sur,Gestión corporativa,Directivos,M,1983-12-24,2015-10-13,,44,ENE-Gestión corporativa-G1,1
+P0786,Energia,Zona Sur,Transmisión,Técnicos,M,1988-04-09,2012-11-14,,44,ENE-Transmisión-G4,4
+P0787,Energia,Zona Sur,Comercial,Administrativos,F,1995-07-19,2016-04-24,2025-08-29,44,ENE-Comercial-G6,6
+P0788,Energia,Zona Sur,Operación de centrales,Técnicos,M,1977-11-26,2021-03-12,,44,ENE-Operación de centrales-G5,5
+P0789,Energia,Zona Sur,Comercial,Profesionales,F,1981-03-20,2014-05-05,,44,ENE-Comercial-G2,2
+P0790,Energia,Zona Sur,Mantenimiento,Técnicos,M,1973-12-19,2017-07-02,,44,ENE-Mantenimiento-G4,4
+P0791,Energia,Zona Sur,Centro de despacho,Profesionales,M,1967-12-26,2000-09-08,,44,ENE-Centro de despacho-G2,2
+P0792,Energia,Zona Sur,Centro de despacho,Profesionales,M,1989-03-01,2014-05-19,2025-04-22,44,ENE-Centro de despacho-G2,2
+P0793,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1993-04-23,2021-07-10,,44,ENE-Gestión corporativa-G6,6
+P0794,Energia,Zona Sur,Comercial,Administrativos,M,1970-12-10,2014-09-11,,44,ENE-Comercial-G6,6
+P0796,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1992-02-12,2013-06-12,,44,ENE-Gestión corporativa-G6,6
+P0797,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1995-01-04,2019-02-07,,44,ENE-Gestión corporativa-G6,6
+P0798,Energia,Zona Sur,Mantenimiento,Operarios,M,1990-08-28,2014-12-26,,44,ENE-Mantenimiento-G7,7
+P0799,Energia,Zona Sur,Mantenimiento,Profesionales,F,2002-04-01,2023-10-03,,44,ENE-Mantenimiento-G3,3
+P0800,Energia,Zona Sur,Centro de despacho,Profesionales,M,1998-11-23,2019-02-09,2025-07-09,44,ENE-Centro de despacho-G3,3
+P0801,Energia,Zona Sur,Operación de centrales,Operarios,M,1983-09-27,2014-12-28,,44,ENE-Operación de centrales-G7,7
+P0803,Energia,Zona Sur,Operación de centrales,Técnicos,M,1979-03-03,2014-10-31,,44,ENE-Operación de centrales-G4,4
+P0804,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1986-07-22,2021-10-15,2025-06-03,22,ENE-Gestión corporativa-G6,6
+P0805,Energia,Zona Sur,Operación de centrales,Profesionales,F,1981-04-05,2014-03-23,,44,ENE-Operación de centrales-G2,2
+P0806,Energia,Zona Sur,Operación de centrales,Operarios,M,1986-07-21,2024-01-13,,44,ENE-Operación de centrales-G7,7
+P0808,Energia,Zona Sur,Mantenimiento,Operarios,M,1984-04-03,2021-08-22,,44,ENE-Mantenimiento-G7,7
+P0809,Energia,Zona Sur,Operación de centrales,Operarios,M,1982-02-13,2015-06-22,,44,ENE-Operación de centrales-G7,7
+P0810,Energia,Zona Sur,Transmisión,Operarios,M,1995-02-17,2019-03-03,2026-09-02,44,ENE-Transmisión-G7,7
+P0811,Energia,Zona Sur,Operación de centrales,Profesionales,M,1993-12-22,2024-03-15,2026-10-26,44,ENE-Operación de centrales-G3,3
+P0812,Energia,Zona Sur,Operación de centrales,Profesionales,F,1995-03-05,2020-03-05,,44,ENE-Operación de centrales-G3,3
+P0813,Energia,Zona Sur,Centro de despacho,Directivos,F,1990-03-15,2017-02-15,2025-01-02,44,ENE-Centro de despacho-G1,1
+P0814,Energia,Zona Sur,Mantenimiento,Operarios,M,1989-05-21,2011-09-19,,44,ENE-Mantenimiento-G7,7
+P0815,Energia,Zona Sur,Mantenimiento,Profesionales,M,1988-01-03,2024-01-01,,44,ENE-Mantenimiento-G3,3
+P0816,Energia,Zona Sur,Gestión corporativa,Directivos,M,1985-12-05,2021-03-10,2026-02-17,44,ENE-Gestión corporativa-G1,1
+P0817,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1996-12-01,2017-04-27,,44,ENE-Gestión corporativa-G6,6
+P0818,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1990-10-02,2011-10-08,,44,ENE-Gestión corporativa-G6,6
+P0819,Energia,Zona Sur,Gestión corporativa,Administrativos,F,1986-01-14,2022-12-20,,44,ENE-Gestión corporativa-G6,6
+P0820,Energia,Zona Sur,Comercial,Administrativos,F,1991-08-10,2012-10-20,,44,ENE-Comercial-G6,6
+P0821,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1987-08-20,2008-08-17,2026-12-30,44,SAL-Hospitalización-G7,7
+P0822,Salud,Clínica Oriente,Pabellón,Profesionales,F,1994-12-06,2023-10-26,,44,SAL-Pabellón-G3,3
+P0823,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1979-11-09,2010-10-12,2026-11-12,44,SAL-Hospitalización-G4,4
+P0824,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1984-08-22,2014-06-29,,44,SAL-Hospitalización-G2,2
+P0825,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1981-07-14,2012-03-29,,44,SAL-Hospitalización-G4,4
+P0826,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1984-07-16,2017-12-08,,44,SAL-Hospitalización-G4,4
+P0827,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1965-07-05,2011-09-12,2026-07-29,44,SAL-Hospitalización-G7,7
+P0828,Salud,Clínica Oriente,Urgencia,Técnicos,F,1993-11-27,2015-10-03,2025-07-29,44,SAL-Urgencia-G4,4
+P0829,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1989-09-06,2020-07-04,,44,SAL-Hospitalización-G3,3
+P0830,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,1981-12-24,2017-02-23,,44,SAL-Ambulatorio-G2,2
+P0831,Salud,Clínica Oriente,Urgencia,Directivos,F,1973-01-13,2008-08-18,,44,SAL-Urgencia-G1,1
+P0832,Salud,Clínica Oriente,UCI,Profesionales,F,1994-09-14,2022-01-15,,44,SAL-UCI-G3,3
+P0833,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1988-01-22,2021-04-02,2025-03-03,44,SAL-Hospitalización-G5,5
+P0834,Salud,Clínica Oriente,Apoyo,Administrativos,M,1992-06-11,2023-04-10,,44,SAL-Apoyo-G6,6
+P0835,Salud,Clínica Oriente,Pabellón,Auxiliares,M,2001-09-20,2022-01-31,,44,SAL-Pabellón-G7,7
+P0836,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1981-02-02,2023-08-29,,44,SAL-Hospitalización-G7,7
+P0838,Salud,Clínica Oriente,Urgencia,Profesionales,F,1991-09-12,2019-09-14,,44,SAL-Urgencia-G3,3
+P0839,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1999-03-10,2020-04-17,,22,SAL-Hospitalización-G7,7
+P0840,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1999-03-01,2021-06-05,2025-12-19,44,SAL-Hospitalización-G7,7
+P0841,Salud,Clínica Oriente,Apoyo,Auxiliares,M,1997-04-10,2020-11-07,,44,SAL-Apoyo-G7,7
+P0842,Salud,Clínica Oriente,Urgencia,Profesionales,F,1995-05-05,2024-04-04,,44,SAL-Urgencia-G3,3
+P0843,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1996-06-11,2019-11-29,,44,SAL-Hospitalización-G7,7
+P0844,Salud,Clínica Oriente,Urgencia,Auxiliares,F,1973-05-06,2014-01-31,,44,SAL-Urgencia-G7,7
+P0845,Salud,Clínica Oriente,Apoyo,Directivos,M,1990-05-28,2019-04-02,2026-08-27,44,SAL-Apoyo-G1,1
+P0846,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1997-07-05,2018-07-16,,44,SAL-Hospitalización-G2,2
+P0847,Salud,Clínica Oriente,Pabellón,Técnicos,F,1993-03-21,2014-05-12,,44,SAL-Pabellón-G4,4
+P0848,Salud,Clínica Oriente,Hospitalización,Profesionales,F,2000-11-13,2021-03-01,2026-09-29,44,SAL-Hospitalización-G3,3
+P0849,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1984-04-25,2013-12-29,,44,SAL-Hospitalización-G2,2
+P0850,Salud,Clínica Oriente,Urgencia,Auxiliares,F,1977-12-27,2005-07-18,,44,SAL-Urgencia-G7,7
+P0851,Salud,Clínica Oriente,Pabellón,Técnicos,F,1992-01-18,2020-12-22,,44,SAL-Pabellón-G5,5
+P0852,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1987-07-05,2022-05-22,,22,SAL-Ambulatorio-G3,3
+P0853,Salud,Clínica Oriente,Hospitalización,Técnicos,M,1997-12-27,2022-06-21,,44,SAL-Hospitalización-G5,5
+P0854,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1987-01-20,2008-12-27,2025-05-02,44,SAL-Hospitalización-G4,4
+P0855,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1986-02-09,2011-02-03,,44,SAL-Hospitalización-G4,4
+P0856,Salud,Clínica Oriente,Urgencia,Profesionales,F,1983-11-05,2008-04-13,2025-03-28,44,SAL-Urgencia-G2,2
+P0857,Salud,Clínica Oriente,Urgencia,Técnicos,F,1950-03-25,2005-04-05,2025-08-07,44,SAL-Urgencia-G4,4
+P0858,Salud,Clínica Oriente,UCI,Profesionales,F,1969-11-08,2015-01-15,,44,SAL-UCI-G2,2
+P0859,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1983-04-23,2016-12-21,,44,SAL-Hospitalización-G2,2
+P0860,Salud,Clínica Oriente,Apoyo,Administrativos,F,1999-02-02,2020-08-24,,44,SAL-Apoyo-G6,6
+P0861,Salud,Clínica Oriente,Pabellón,Auxiliares,M,1994-04-02,2019-09-09,,44,SAL-Pabellón-G7,7
+P0862,Salud,Clínica Oriente,Urgencia,Técnicos,F,1984-01-23,2017-05-10,,44,SAL-Urgencia-G4,4
+P0863,Salud,Clínica Oriente,UCI,Profesionales,F,1992-07-05,2023-07-19,,44,SAL-UCI-G3,3
+P0864,Salud,Clínica Oriente,Pabellón,Auxiliares,M,1988-08-26,2020-09-08,2025-02-05,44,SAL-Pabellón-G7,7
+P0865,Salud,Clínica Oriente,Urgencia,Técnicos,F,1983-07-22,2018-12-10,,44,SAL-Urgencia-G4,4
+P0866,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1970-02-17,2008-06-05,,44,SAL-Hospitalización-G2,2
+P0867,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1978-02-27,2021-07-06,2025-11-27,44,SAL-Hospitalización-G3,3
+P0868,Salud,Clínica Oriente,Urgencia,Técnicos,F,1992-02-03,2021-03-10,,44,SAL-Urgencia-G5,5
+P0869,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1973-04-18,2023-10-28,,44,SAL-Hospitalización-G3,3
+P0870,Salud,Clínica Oriente,Urgencia,Técnicos,M,1992-08-02,2024-03-22,,22,SAL-Urgencia-G5,5
+P0871,Salud,Clínica Oriente,Apoyo,Auxiliares,F,1978-06-05,2005-05-20,,44,SAL-Apoyo-G7,7
+P0872,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1975-10-26,2014-08-14,,44,SAL-Ambulatorio-G2,2
+P0873,Salud,Clínica Oriente,Pabellón,Auxiliares,M,1980-11-05,2023-11-29,,44,SAL-Pabellón-G7,7
+P0874,Salud,Clínica Oriente,Apoyo,Administrativos,M,1990-07-08,2011-03-24,,44,SAL-Apoyo-G6,6
+P0875,Salud,Clínica Oriente,Urgencia,Técnicos,M,1978-09-28,2020-05-15,2025-08-18,44,SAL-Urgencia-G5,5
+P0876,Salud,Clínica Oriente,Urgencia,Profesionales,F,1963-05-19,2008-03-12,,44,SAL-Urgencia-G2,2
+P0877,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1980-03-04,2020-08-27,2026-09-23,44,SAL-Ambulatorio-G3,3
+P0878,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1997-08-12,2018-09-13,,44,SAL-Hospitalización-G4,4
+P0879,Salud,Clínica Oriente,Urgencia,Técnicos,M,1987-11-02,2020-11-29,2025-01-06,44,SAL-Urgencia-G5,5
+P0880,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1991-07-28,2021-06-10,,44,SAL-Hospitalización-G3,3
+P0881,Salud,Clínica Oriente,UCI,Auxiliares,F,1992-07-25,2020-09-30,2026-08-10,44,SAL-UCI-G7,7
+P0882,Salud,Clínica Oriente,Hospitalización,Técnicos,F,2002-02-09,2023-01-24,,44,SAL-Hospitalización-G5,5
+P0883,Salud,Clínica Oriente,Pabellón,Directivos,F,1972-08-07,2015-07-29,,44,SAL-Pabellón-G1,1
+P0884,Salud,Clínica Oriente,Apoyo,Administrativos,F,2001-02-05,2022-08-12,,22,SAL-Apoyo-G6,6
+P0885,Salud,Clínica Oriente,Ambulatorio,Administrativos,F,1991-02-14,2020-01-14,,44,SAL-Ambulatorio-G6,6
+P0886,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1973-03-23,2020-08-17,2025-03-24,44,SAL-Hospitalización-G5,5
+P0887,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1983-03-11,2011-01-20,,44,SAL-Ambulatorio-G4,4
+P0889,Salud,Clínica Oriente,Urgencia,Técnicos,F,1992-02-02,2013-10-13,2025-03-14,44,SAL-Urgencia-G4,4
+P0890,Salud,Clínica Oriente,Pabellón,Profesionales,F,1983-04-22,2021-08-27,,44,SAL-Pabellón-G3,3
+P0891,Salud,Clínica Oriente,Urgencia,Auxiliares,M,1994-08-14,2020-04-25,,44,SAL-Urgencia-G7,7
+P0892,Salud,Clínica Oriente,Pabellón,Técnicos,F,2002-07-12,2023-10-11,,44,SAL-Pabellón-G5,5
+P0894,Salud,Clínica Oriente,Pabellón,Profesionales,M,1974-06-26,2012-11-11,,44,SAL-Pabellón-G2,2
+P0895,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1972-07-22,2011-10-21,2026-04-23,44,SAL-Hospitalización-G2,2
+P0896,Salud,Clínica Oriente,Urgencia,Profesionales,M,2000-12-20,2021-09-07,2025-07-29,44,SAL-Urgencia-G3,3
+P0897,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1993-10-14,2021-07-09,,44,SAL-Hospitalización-G5,5
+P0898,Salud,Clínica Oriente,Urgencia,Auxiliares,F,1988-07-27,2020-04-16,,44,SAL-Urgencia-G7,7
+P0899,Salud,Clínica Oriente,Urgencia,Profesionales,F,1977-03-01,2023-11-29,,44,SAL-Urgencia-G3,3
+P0901,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1991-01-09,2016-09-23,,44,SAL-Hospitalización-G7,7
+P0902,Salud,Clínica Oriente,Apoyo,Auxiliares,M,1988-02-04,2023-10-17,,44,SAL-Apoyo-G7,7
+P0903,Salud,Clínica Oriente,Urgencia,Auxiliares,F,1966-07-03,2009-11-16,,44,SAL-Urgencia-G7,7
+P0904,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1978-03-06,2018-06-24,,44,SAL-Hospitalización-G7,7
+P0905,Salud,Clínica Oriente,UCI,Auxiliares,F,2002-10-18,2023-10-01,,22,SAL-UCI-G7,7
+P0906,Salud,Clínica Oriente,Urgencia,Técnicos,F,1964-03-07,2019-11-23,,44,SAL-Urgencia-G5,5
+P0907,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1987-02-12,2016-09-11,,44,SAL-Hospitalización-G2,2
+P0908,Salud,Clínica Oriente,Apoyo,Directivos,F,1974-12-09,2022-10-09,,44,SAL-Apoyo-G1,1
+P0909,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1994-08-14,2023-05-31,,44,SAL-Ambulatorio-G5,5
+P0910,Salud,Clínica Oriente,Urgencia,Técnicos,F,2002-11-27,2023-03-01,,22,SAL-Urgencia-G5,5
+P0911,Salud,Clínica Oriente,Pabellón,Técnicos,M,2001-06-13,2022-06-01,,22,SAL-Pabellón-G5,5
+P0912,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,2003-06-05,2024-01-17,,44,SAL-Ambulatorio-G3,3
+P0913,Salud,Clínica Oriente,Urgencia,Profesionales,M,1980-07-10,2020-09-28,,44,SAL-Urgencia-G3,3
+P0915,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1994-03-20,2020-05-10,,44,SAL-Hospitalización-G7,7
+P0916,Salud,Clínica Oriente,Hospitalización,Técnicos,M,1979-08-10,2012-11-15,,44,SAL-Hospitalización-G4,4
+P0917,Salud,Clínica Oriente,Pabellón,Técnicos,F,2001-07-24,2022-01-11,,44,SAL-Pabellón-G5,5
+P0919,Salud,Clínica Oriente,Apoyo,Administrativos,M,1973-12-24,2022-12-23,2026-03-04,44,SAL-Apoyo-G6,6
+P0920,Salud,Clínica Oriente,Apoyo,Administrativos,M,1958-12-28,2010-07-08,2026-04-15,22,SAL-Apoyo-G6,6
+P0921,Salud,Clínica Oriente,Urgencia,Profesionales,F,1989-12-06,2022-08-30,2025-01-17,44,SAL-Urgencia-G3,3
+P0922,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1997-07-21,2019-03-28,,44,SAL-Hospitalización-G3,3
+P0923,Salud,Clínica Oriente,Pabellón,Técnicos,F,1972-05-25,2002-01-17,,44,SAL-Pabellón-G4,4
+P0924,Salud,Clínica Oriente,Apoyo,Administrativos,F,1992-02-03,2016-07-12,,44,SAL-Apoyo-G6,6
+P0926,Salud,Clínica Oriente,Pabellón,Profesionales,M,1978-04-12,2020-04-15,2025-04-24,44,SAL-Pabellón-G3,3
+P0927,Salud,Clínica Oriente,Urgencia,Técnicos,M,1990-08-04,2017-07-19,,44,SAL-Urgencia-G4,4
+P0928,Salud,Clínica Oriente,UCI,Técnicos,M,1993-02-12,2022-08-25,,44,SAL-UCI-G5,5
+P0929,Salud,Clínica Oriente,Pabellón,Profesionales,F,2000-07-07,2022-08-04,,44,SAL-Pabellón-G3,3
+P0930,Salud,Clínica Oriente,Pabellón,Técnicos,F,2000-11-08,2021-02-02,,44,SAL-Pabellón-G5,5
+P0931,Salud,Clínica Oriente,Urgencia,Profesionales,F,1992-12-13,2024-02-02,,44,SAL-Urgencia-G3,3
+P0932,Salud,Clínica Oriente,Apoyo,Administrativos,M,1980-06-21,2023-02-12,,44,SAL-Apoyo-G6,6
+P0933,Salud,Clínica Oriente,Ambulatorio,Técnicos,M,1991-02-06,2022-04-25,,44,SAL-Ambulatorio-G5,5
+P0935,Salud,Clínica Oriente,Hospitalización,Técnicos,M,1996-01-19,2024-06-28,,44,SAL-Hospitalización-G5,5
+P0936,Salud,Clínica Oriente,Pabellón,Técnicos,F,1984-12-11,2015-07-19,2026-01-12,44,SAL-Pabellón-G4,4
+P0937,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1978-10-16,2021-11-21,,44,SAL-Hospitalización-G3,3
+P0938,Salud,Clínica Oriente,Apoyo,Administrativos,F,2002-04-19,2023-08-01,,44,SAL-Apoyo-G6,6
+P0939,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1957-11-18,2005-12-05,,44,SAL-Ambulatorio-G2,2
+P0940,Salud,Clínica Oriente,UCI,Auxiliares,F,1994-05-10,2021-07-10,,44,SAL-UCI-G7,7
+P0941,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1984-11-05,2015-01-25,,44,SAL-Ambulatorio-G4,4
+P0942,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1993-10-04,2024-03-31,,22,SAL-Ambulatorio-G3,3
+P0943,Salud,Clínica Oriente,UCI,Profesionales,F,1995-11-25,2022-10-05,,44,SAL-UCI-G3,3
+P0944,Salud,Clínica Oriente,Urgencia,Técnicos,M,1973-05-08,2021-02-08,,22,SAL-Urgencia-G5,5
+P0945,Salud,Clínica Oriente,UCI,Profesionales,M,1975-10-10,2021-06-11,2026-12-24,44,SAL-UCI-G3,3
+P0946,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,2000-05-03,2021-04-08,,44,SAL-Ambulatorio-G3,3
+P0948,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1996-07-03,2024-04-30,,44,SAL-Hospitalización-G5,5
+P0949,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1999-07-05,2023-09-06,,44,SAL-Hospitalización-G5,5
+P0950,Salud,Clínica Oriente,Apoyo,Administrativos,F,1997-11-04,2024-02-29,,44,SAL-Apoyo-G6,6
+P0951,Salud,Clínica Oriente,Pabellón,Profesionales,M,2000-01-23,2024-02-14,,44,SAL-Pabellón-G3,3
+P0952,Salud,Clínica Oriente,Pabellón,Profesionales,M,1996-05-21,2017-09-30,2026-04-29,44,SAL-Pabellón-G2,2
+P0953,Salud,Clínica Oriente,Pabellón,Técnicos,F,1996-02-08,2023-10-08,,44,SAL-Pabellón-G5,5
+P0954,Salud,Clínica Oriente,Urgencia,Técnicos,M,1972-09-09,2000-03-04,,44,SAL-Urgencia-G4,4
+P0955,Salud,Clínica Oriente,UCI,Profesionales,F,1976-09-07,2014-04-07,,44,SAL-UCI-G2,2
+P0956,Salud,Clínica Oriente,Apoyo,Administrativos,F,1973-12-26,2017-11-22,2026-01-19,44,SAL-Apoyo-G6,6
+P0957,Salud,Clínica Oriente,Urgencia,Técnicos,F,1993-11-20,2019-07-09,,44,SAL-Urgencia-G5,5
+P0958,Salud,Clínica Oriente,Urgencia,Auxiliares,F,1977-03-12,2020-10-27,,44,SAL-Urgencia-G7,7
+P0959,Salud,Clínica Oriente,Apoyo,Administrativos,F,1982-10-11,2020-03-08,,44,SAL-Apoyo-G6,6
+P0960,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1968-11-16,2009-02-01,,44,SAL-Ambulatorio-G4,4
+P0961,Salud,Clínica Oriente,Urgencia,Profesionales,F,1981-01-01,2005-11-17,,44,SAL-Urgencia-G2,2
+P0962,Salud,Clínica Oriente,Urgencia,Auxiliares,M,1996-12-26,2020-08-13,,44,SAL-Urgencia-G7,7
+P0963,Salud,Clínica Oriente,Apoyo,Auxiliares,F,1994-12-03,2021-03-25,,44,SAL-Apoyo-G7,7
+P0964,Salud,Clínica Oriente,Urgencia,Profesionales,F,1995-03-21,2023-10-25,,44,SAL-Urgencia-G3,3
+P0965,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1986-04-03,2023-02-25,,44,SAL-Hospitalización-G3,3
+P0966,Salud,Clínica Oriente,Apoyo,Administrativos,F,2000-02-11,2021-05-09,2025-05-19,44,SAL-Apoyo-G6,6
+P0967,Salud,Clínica Oriente,Pabellón,Profesionales,F,1985-07-21,2018-09-20,,44,SAL-Pabellón-G2,2
+P0968,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1990-10-18,2023-09-30,,44,SAL-Ambulatorio-G3,3
+P0969,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,1971-09-20,2012-03-12,,44,SAL-Ambulatorio-G2,2
+P0970,Salud,Clínica Oriente,UCI,Profesionales,M,1984-05-21,2020-09-05,,22,SAL-UCI-G3,3
+P0971,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1995-11-02,2023-08-07,,44,SAL-Hospitalización-G7,7
+P0972,Salud,Clínica Oriente,Apoyo,Auxiliares,F,1994-02-14,2015-10-20,,44,SAL-Apoyo-G7,7
+P0974,Salud,Clínica Oriente,Urgencia,Técnicos,F,1981-07-22,2014-07-01,,44,SAL-Urgencia-G4,4
+P0975,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1997-02-20,2023-09-11,2025-04-10,44,SAL-Hospitalización-G5,5
+P0976,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1993-04-14,2022-11-30,,44,SAL-Hospitalización-G3,3
+P0979,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1999-04-15,2020-05-27,,44,SAL-Hospitalización-G5,5
+P0980,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1974-12-18,2020-01-05,,44,SAL-Hospitalización-G5,5
+P0981,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1975-04-10,2022-07-13,2025-05-07,44,SAL-Ambulatorio-G5,5
+P0982,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1952-11-25,2001-08-21,2026-04-15,44,SAL-Ambulatorio-G2,2
+P0983,Salud,Clínica Oriente,Urgencia,Profesionales,M,1984-10-13,2021-08-04,,44,SAL-Urgencia-G3,3
+P0984,Salud,Clínica Oriente,Urgencia,Profesionales,F,1989-01-22,2023-04-11,,44,SAL-Urgencia-G3,3
+P0985,Salud,Clínica Oriente,Urgencia,Técnicos,M,1967-10-07,2011-02-02,,44,SAL-Urgencia-G4,4
+P0986,Salud,Clínica Oriente,Ambulatorio,Administrativos,F,2003-07-24,2024-02-23,,44,SAL-Ambulatorio-G6,6
+P0987,Salud,Clínica Oriente,Ambulatorio,Administrativos,M,2001-04-05,2022-09-10,,44,SAL-Ambulatorio-G6,6
+P0988,Salud,Clínica Oriente,Hospitalización,Directivos,F,1972-10-13,2015-08-26,,44,SAL-Hospitalización-G1,1
+P0989,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1980-11-11,2018-02-24,,44,SAL-Hospitalización-G2,2
+P0990,Salud,Clínica Oriente,Urgencia,Profesionales,F,1993-11-28,2024-04-09,,44,SAL-Urgencia-G3,3
+P0991,Salud,Clínica Oriente,Urgencia,Auxiliares,M,1995-05-09,2019-09-10,,44,SAL-Urgencia-G7,7
+P0992,Salud,Clínica Oriente,Urgencia,Técnicos,F,1991-01-06,2024-03-11,,44,SAL-Urgencia-G5,5
+P0993,Salud,Clínica Oriente,Urgencia,Técnicos,F,1994-11-28,2024-02-14,,44,SAL-Urgencia-G5,5
+P0994,Salud,Clínica Oriente,Urgencia,Técnicos,F,1983-06-19,2020-03-17,,44,SAL-Urgencia-G5,5
+P0995,Salud,Clínica Oriente,UCI,Auxiliares,F,1991-07-21,2023-07-28,,44,SAL-UCI-G7,7
+P0996,Salud,Clínica Oriente,Urgencia,Técnicos,F,1999-10-01,2022-06-09,,44,SAL-Urgencia-G5,5
+P0997,Salud,Clínica Oriente,Ambulatorio,Administrativos,M,1976-10-02,2015-04-29,,44,SAL-Ambulatorio-G6,6
+P0998,Salud,Clínica Oriente,UCI,Auxiliares,M,1978-10-17,2005-05-26,,44,SAL-UCI-G7,7
+P0999,Salud,Clínica Oriente,Apoyo,Auxiliares,M,1995-04-27,2018-11-24,2025-04-15,44,SAL-Apoyo-G7,7
+P1000,Salud,Clínica Oriente,Ambulatorio,Directivos,F,1986-02-23,2022-12-04,,44,SAL-Ambulatorio-G1,1
+P1001,Salud,Clínica Oriente,Apoyo,Administrativos,F,1979-10-08,2021-11-23,,44,SAL-Apoyo-G6,6
+P1004,Salud,Clínica Oriente,Urgencia,Técnicos,F,1986-08-24,2015-10-20,,44,SAL-Urgencia-G4,4
+P1005,Salud,Clínica Oriente,Urgencia,Profesionales,F,2002-07-12,2024-01-16,,44,SAL-Urgencia-G3,3
+P1006,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1985-10-20,2014-01-21,2025-03-24,44,SAL-Hospitalización-G4,4
+P1007,Salud,Clínica Oriente,Apoyo,Directivos,M,1973-08-23,2010-01-06,,44,SAL-Apoyo-G1,1
+P1008,Salud,Clínica Oriente,Ambulatorio,Administrativos,F,1986-01-19,2007-12-16,2025-07-24,44,SAL-Ambulatorio-G6,6
+P1009,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1987-09-17,2015-08-10,2026-09-08,44,SAL-Ambulatorio-G2,2
+P1010,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1992-12-24,2023-04-27,2026-07-01,44,SAL-Hospitalización-G5,5
+P1011,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1986-05-20,2022-07-31,,44,SAL-Hospitalización-G3,3
+P1012,Salud,Clínica Oriente,Urgencia,Profesionales,M,1987-01-20,2013-07-22,,44,SAL-Urgencia-G2,2
+P1013,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1976-10-14,2013-10-13,2026-10-13,44,SAL-Ambulatorio-G2,2
+P1014,Salud,Clínica Oriente,Ambulatorio,Administrativos,F,1969-05-03,2020-12-21,,44,SAL-Ambulatorio-G6,6
+P1015,Salud,Clínica Oriente,Urgencia,Técnicos,F,1995-09-11,2024-01-02,2025-05-15,44,SAL-Urgencia-G5,5
+P1016,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1998-09-11,2021-02-02,,44,SAL-Hospitalización-G7,7
+P1018,Salud,Clínica Oriente,Urgencia,Técnicos,F,1984-07-03,2016-10-17,,44,SAL-Urgencia-G4,4
+P1019,Salud,Clínica Oriente,UCI,Técnicos,F,2001-05-27,2022-11-23,,44,SAL-UCI-G5,5
+P1020,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1995-02-08,2021-11-06,,44,SAL-Ambulatorio-G3,3
+P1021,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1984-06-22,2022-02-19,,44,SAL-Hospitalización-G7,7
+P1022,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1984-05-09,2021-04-25,2025-01-13,44,SAL-Ambulatorio-G5,5
+P1023,Salud,Clínica Oriente,Urgencia,Técnicos,F,1999-07-09,2022-09-05,2026-11-10,44,SAL-Urgencia-G5,5
+P1024,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1985-10-06,2022-04-15,,44,SAL-Hospitalización-G7,7
+P1025,Salud,Clínica Oriente,Apoyo,Administrativos,F,1991-07-03,2023-09-01,,44,SAL-Apoyo-G6,6
+P1027,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,2002-04-01,2023-06-11,,22,SAL-Ambulatorio-G3,3
+P1028,Salud,Clínica Oriente,Urgencia,Técnicos,F,1984-05-01,2020-07-09,,44,SAL-Urgencia-G5,5
+P1029,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1974-05-28,2015-04-23,2025-02-11,44,SAL-Hospitalización-G2,2
+P1030,Salud,Clínica Oriente,Ambulatorio,Técnicos,M,1983-10-05,2024-05-29,,44,SAL-Ambulatorio-G5,5
+P1031,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1985-08-07,2015-04-16,2025-08-22,44,SAL-Ambulatorio-G6,6
+P1032,Salud,Clínica Centro,Hospitalización,Técnicos,F,1999-05-16,2022-12-28,,44,SAL-Hospitalización-G5,5
+P1033,Salud,Clínica Centro,Urgencia,Técnicos,F,1983-03-26,2020-12-11,2025-10-03,44,SAL-Urgencia-G5,5
+P1034,Salud,Clínica Centro,Hospitalización,Auxiliares,F,1984-07-20,2019-02-07,,44,SAL-Hospitalización-G7,7
+P1035,Salud,Clínica Centro,Pabellón,Técnicos,M,1972-10-14,2016-05-29,,44,SAL-Pabellón-G4,4
+P1036,Salud,Clínica Centro,Pabellón,Técnicos,M,1986-04-11,2020-05-05,,44,SAL-Pabellón-G5,5
+P1037,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1974-01-06,2009-04-05,,44,SAL-Ambulatorio-G6,6
+P1038,Salud,Clínica Centro,Apoyo,Administrativos,F,1978-11-26,2011-07-03,,44,SAL-Apoyo-G6,6
+P1039,Salud,Clínica Centro,Hospitalización,Profesionales,M,1996-05-17,2023-10-01,2026-06-01,44,SAL-Hospitalización-G3,3
+P1040,Salud,Clínica Centro,Urgencia,Profesionales,M,1996-12-12,2017-07-27,,44,SAL-Urgencia-G2,2
+P1041,Salud,Clínica Centro,Apoyo,Directivos,M,1971-08-01,2016-11-11,,44,SAL-Apoyo-G1,1
+P1042,Salud,Clínica Centro,Pabellón,Directivos,M,1978-04-23,2024-06-18,,44,SAL-Pabellón-G1,1
+P1043,Salud,Clínica Centro,Urgencia,Técnicos,F,1998-06-21,2019-02-01,,22,SAL-Urgencia-G5,5
+P1044,Salud,Clínica Centro,Apoyo,Administrativos,F,1995-07-09,2016-08-30,2025-11-27,44,SAL-Apoyo-G6,6
+P1045,Salud,Clínica Centro,UCI,Profesionales,F,1997-09-19,2023-01-13,,44,SAL-UCI-G3,3
+P1046,Salud,Clínica Centro,Apoyo,Administrativos,M,1975-10-22,2004-02-08,,44,SAL-Apoyo-G6,6
+P1048,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1981-02-08,2020-09-02,2025-11-11,44,SAL-Ambulatorio-G5,5
+P1049,Salud,Clínica Centro,Pabellón,Profesionales,F,1977-03-21,2020-01-27,,44,SAL-Pabellón-G3,3
+P1050,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1998-06-06,2019-08-09,,22,SAL-Ambulatorio-G5,5
+P1051,Salud,Clínica Centro,UCI,Técnicos,F,1971-07-12,2023-01-21,,44,SAL-UCI-G5,5
+P1053,Salud,Clínica Centro,Hospitalización,Técnicos,F,1973-05-21,2018-05-06,,22,SAL-Hospitalización-G4,4
+P1054,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1988-03-16,2018-11-21,,44,SAL-Ambulatorio-G4,4
+P1055,Salud,Clínica Centro,UCI,Técnicos,F,1984-02-02,2017-03-01,,44,SAL-UCI-G4,4
+P1057,Salud,Clínica Centro,Apoyo,Auxiliares,F,1995-11-22,2021-10-06,,22,SAL-Apoyo-G7,7
+P1058,Salud,Clínica Centro,Urgencia,Profesionales,F,2001-10-07,2023-05-13,2026-04-13,44,SAL-Urgencia-G3,3
+P1059,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1984-12-03,2022-04-06,,44,SAL-Ambulatorio-G6,6
+P1060,Salud,Clínica Centro,Urgencia,Técnicos,F,1986-01-25,2023-04-08,2025-05-09,44,SAL-Urgencia-G5,5
+P1061,Salud,Clínica Centro,Pabellón,Auxiliares,F,1986-04-24,2007-04-19,,44,SAL-Pabellón-G7,7
+P1063,Salud,Clínica Centro,Hospitalización,Técnicos,F,1999-11-17,2022-08-28,,44,SAL-Hospitalización-G5,5
+P1064,Salud,Clínica Centro,Hospitalización,Técnicos,F,1996-06-21,2023-01-29,2025-05-29,44,SAL-Hospitalización-G5,5
+P1065,Salud,Clínica Centro,UCI,Técnicos,F,1969-05-07,2013-11-17,,44,SAL-UCI-G4,4
+P1066,Salud,Clínica Centro,UCI,Profesionales,F,1984-06-19,2023-08-06,,44,SAL-UCI-G3,3
+P1067,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1989-11-04,2012-04-18,2025-05-23,44,SAL-Ambulatorio-G4,4
+P1068,Salud,Clínica Centro,Pabellón,Técnicos,F,1987-10-19,2021-01-12,,44,SAL-Pabellón-G5,5
+P1069,Salud,Clínica Centro,UCI,Técnicos,F,1985-09-04,2021-06-04,,44,SAL-UCI-G5,5
+P1070,Salud,Clínica Centro,Hospitalización,Profesionales,M,1992-10-23,2020-03-11,,44,SAL-Hospitalización-G3,3
+P1071,Salud,Clínica Centro,Hospitalización,Auxiliares,F,1971-08-13,2003-05-29,,44,SAL-Hospitalización-G7,7
+P1072,Salud,Clínica Centro,Apoyo,Administrativos,F,2002-04-14,2023-12-30,,44,SAL-Apoyo-G6,6
+P1073,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1999-12-07,2020-08-10,,44,SAL-Ambulatorio-G3,3
+P1074,Salud,Clínica Centro,Ambulatorio,Profesionales,M,1982-11-24,2015-08-08,,44,SAL-Ambulatorio-G2,2
+P1075,Salud,Clínica Centro,Apoyo,Administrativos,F,1980-09-27,2011-07-02,,22,SAL-Apoyo-G6,6
+P1076,Salud,Clínica Centro,Urgencia,Profesionales,F,1981-05-14,2020-05-05,,44,SAL-Urgencia-G3,3
+P1077,Salud,Clínica Centro,Urgencia,Profesionales,F,1988-03-06,2017-10-02,,44,SAL-Urgencia-G2,2
+P1078,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1963-07-26,2016-08-02,2026-01-27,44,SAL-Ambulatorio-G2,2
+P1080,Salud,Clínica Centro,Ambulatorio,Administrativos,M,1998-12-11,2020-04-25,2025-05-28,44,SAL-Ambulatorio-G6,6
+P1082,Salud,Clínica Centro,Pabellón,Profesionales,F,1981-01-20,2012-05-12,,44,SAL-Pabellón-G2,2
+P1084,Salud,Clínica Centro,Urgencia,Técnicos,F,1990-02-05,2022-10-13,,44,SAL-Urgencia-G5,5
+P1085,Salud,Clínica Centro,Hospitalización,Directivos,F,1972-12-27,2017-06-30,,44,SAL-Hospitalización-G1,1
+P1086,Salud,Clínica Centro,Urgencia,Técnicos,M,2002-11-26,2023-07-19,2026-12-07,44,SAL-Urgencia-G5,5
+P1087,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1994-02-27,2024-05-12,,44,SAL-Ambulatorio-G5,5
+P1088,Salud,Clínica Centro,Pabellón,Directivos,M,1967-04-23,2018-10-07,,44,SAL-Pabellón-G1,1
+P1089,Salud,Clínica Centro,Pabellón,Técnicos,F,1989-11-02,2021-01-20,,44,SAL-Pabellón-G5,5
+P1090,Salud,Clínica Centro,Hospitalización,Técnicos,F,2001-03-09,2024-05-20,,44,SAL-Hospitalización-G5,5
+P1092,Salud,Clínica Centro,Apoyo,Administrativos,F,2001-08-05,2022-01-01,,44,SAL-Apoyo-G6,6
+P1093,Salud,Clínica Centro,UCI,Técnicos,F,1977-11-16,2022-09-23,,44,SAL-UCI-G5,5
+P1094,Salud,Clínica Centro,Apoyo,Administrativos,F,2001-11-15,2022-06-06,2025-03-06,22,SAL-Apoyo-G6,6
+P1095,Salud,Clínica Centro,Hospitalización,Técnicos,F,1952-08-08,1994-07-08,2026-09-07,44,SAL-Hospitalización-G4,4
+P1096,Salud,Clínica Centro,Apoyo,Administrativos,F,1992-02-19,2021-06-23,,44,SAL-Apoyo-G6,6
+P1097,Salud,Clínica Centro,Apoyo,Directivos,F,1978-05-11,2019-09-16,2025-02-14,44,SAL-Apoyo-G1,1
+P1098,Salud,Clínica Centro,Hospitalización,Técnicos,F,1967-08-06,2016-01-08,,44,SAL-Hospitalización-G4,4
+P1099,Salud,Clínica Centro,Pabellón,Profesionales,F,1982-11-14,2020-10-04,,44,SAL-Pabellón-G3,3
+P1100,Salud,Clínica Centro,UCI,Directivos,M,1986-01-11,2019-01-04,2025-08-19,44,SAL-UCI-G1,1
+P1101,Salud,Clínica Centro,UCI,Técnicos,F,1985-07-18,2006-04-23,,44,SAL-UCI-G4,4
+P1102,Salud,Clínica Centro,Ambulatorio,Profesionales,F,2002-01-07,2023-08-24,2025-08-05,44,SAL-Ambulatorio-G3,3
+P1103,Salud,Clínica Centro,Urgencia,Técnicos,M,1978-03-08,2018-05-08,2025-09-11,44,SAL-Urgencia-G4,4
+P1104,Salud,Clínica Centro,Urgencia,Técnicos,M,1991-07-03,2012-05-25,2025-09-22,44,SAL-Urgencia-G4,4
+P1106,Salud,Clínica Centro,Ambulatorio,Administrativos,M,1976-12-06,2019-04-20,,44,SAL-Ambulatorio-G6,6
+P1107,Salud,Clínica Centro,Hospitalización,Técnicos,F,1995-12-16,2022-08-28,,44,SAL-Hospitalización-G5,5
+P1108,Salud,Clínica Centro,UCI,Profesionales,F,1999-05-20,2020-11-28,2026-11-17,22,SAL-UCI-G3,3
+P1109,Salud,Clínica Centro,Urgencia,Auxiliares,M,1993-10-21,2019-07-12,,44,SAL-Urgencia-G7,7
+P1110,Salud,Clínica Centro,Urgencia,Técnicos,F,1968-04-01,2012-09-29,,44,SAL-Urgencia-G4,4
+P1111,Salud,Clínica Centro,Urgencia,Técnicos,M,1999-03-12,2020-03-28,,44,SAL-Urgencia-G5,5
+P1112,Salud,Clínica Centro,Apoyo,Administrativos,F,1983-08-13,2012-03-24,2025-09-19,22,SAL-Apoyo-G6,6
+P1113,Salud,Clínica Centro,Hospitalización,Profesionales,M,1988-06-16,2022-07-17,,44,SAL-Hospitalización-G3,3
+P1114,Salud,Clínica Centro,Ambulatorio,Técnicos,F,2001-11-02,2022-12-11,,44,SAL-Ambulatorio-G5,5
+P1115,Salud,Clínica Centro,Urgencia,Técnicos,F,1972-01-15,2019-11-29,,44,SAL-Urgencia-G5,5
+P1116,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1997-12-23,2018-03-10,,44,SAL-Ambulatorio-G4,4
+P1117,Salud,Clínica Centro,Pabellón,Profesionales,M,1975-09-10,2023-03-27,,22,SAL-Pabellón-G3,3
+P1118,Salud,Clínica Centro,UCI,Técnicos,F,1981-06-26,2019-11-18,,44,SAL-UCI-G5,5
+P1119,Salud,Clínica Centro,Urgencia,Profesionales,F,1998-10-14,2019-10-24,,44,SAL-Urgencia-G3,3
+P1120,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1983-08-01,2014-09-03,,44,SAL-Ambulatorio-G2,2
+P1121,Salud,Clínica Centro,UCI,Profesionales,F,1994-09-08,2020-07-16,,44,SAL-UCI-G3,3
+P1122,Salud,Clínica Centro,Ambulatorio,Profesionales,M,1999-09-16,2024-06-16,2026-10-05,44,SAL-Ambulatorio-G3,3
+P1123,Salud,Clínica Centro,UCI,Profesionales,F,1988-04-25,2012-08-15,,44,SAL-UCI-G2,2
+P1124,Salud,Clínica Centro,Hospitalización,Auxiliares,M,1999-10-07,2020-09-01,,44,SAL-Hospitalización-G7,7
+P1125,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1970-08-21,2013-01-10,,44,SAL-Ambulatorio-G6,6
+P1126,Salud,Clínica Centro,Apoyo,Auxiliares,F,1972-12-12,2021-09-20,,44,SAL-Apoyo-G7,7
+P1127,Salud,Clínica Centro,Pabellón,Técnicos,M,1985-11-26,2024-06-18,,44,SAL-Pabellón-G5,5
+P1128,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1983-06-01,2017-12-29,,44,SAL-Ambulatorio-G2,2
+P1129,Salud,Clínica Centro,Pabellón,Profesionales,F,1990-04-06,2023-01-17,,44,SAL-Pabellón-G3,3
+P1130,Salud,Clínica Centro,UCI,Auxiliares,F,1993-10-19,2020-06-30,,44,SAL-UCI-G7,7
+P1131,Salud,Clínica Centro,Hospitalización,Técnicos,F,1969-06-25,2009-01-28,2025-05-14,44,SAL-Hospitalización-G4,4
+P1132,Salud,Clínica Centro,UCI,Técnicos,F,1977-06-19,2019-07-20,,44,SAL-UCI-G5,5
+P1133,Salud,Clínica Centro,Urgencia,Técnicos,F,1983-06-25,2012-03-25,2026-03-02,44,SAL-Urgencia-G4,4
+P1134,Salud,Clínica Centro,Pabellón,Técnicos,F,2001-12-09,2022-01-26,2026-08-28,44,SAL-Pabellón-G5,5
+P1135,Salud,Clínica Centro,Urgencia,Técnicos,F,1980-09-12,2021-06-21,,22,SAL-Urgencia-G5,5
+P1136,Salud,Clínica Centro,Pabellón,Técnicos,F,1981-10-11,2015-02-19,,44,SAL-Pabellón-G4,4
+P1137,Salud,Clínica Centro,Pabellón,Técnicos,F,1972-04-25,2013-04-08,,22,SAL-Pabellón-G4,4
+P1138,Salud,Clínica Centro,Hospitalización,Profesionales,F,1994-12-24,2019-05-13,,44,SAL-Hospitalización-G3,3
+P1139,Salud,Clínica Centro,Pabellón,Profesionales,F,1981-05-28,2013-12-08,,44,SAL-Pabellón-G2,2
+P1140,Salud,Clínica Centro,Pabellón,Técnicos,F,1975-06-23,2015-09-09,,44,SAL-Pabellón-G4,4
+P1142,Salud,Clínica Centro,Hospitalización,Profesionales,F,2001-05-08,2022-05-02,2026-08-04,44,SAL-Hospitalización-G3,3
+P1143,Salud,Clínica Centro,Urgencia,Auxiliares,M,1997-12-28,2021-01-09,2025-01-08,44,SAL-Urgencia-G7,7
+P1144,Salud,Clínica Centro,Hospitalización,Profesionales,M,1984-02-06,2021-08-17,,44,SAL-Hospitalización-G3,3
+P1145,Salud,Clínica Centro,Apoyo,Auxiliares,M,1996-02-26,2021-11-02,,44,SAL-Apoyo-G7,7
+P1146,Salud,Clínica Centro,Apoyo,Administrativos,F,1987-02-12,2021-08-18,2026-05-15,44,SAL-Apoyo-G6,6
+P1147,Salud,Clínica Centro,Apoyo,Administrativos,M,2001-08-01,2022-12-08,,44,SAL-Apoyo-G6,6
+P1148,Salud,Clínica Centro,Hospitalización,Profesionales,F,2001-03-17,2022-10-12,2025-09-04,44,SAL-Hospitalización-G3,3
+P1149,Salud,Clínica Centro,Apoyo,Administrativos,F,1987-09-05,2021-09-17,,44,SAL-Apoyo-G6,6
+P1150,Salud,Clínica Centro,Apoyo,Administrativos,F,1988-05-13,2023-06-08,2026-09-23,44,SAL-Apoyo-G6,6
+P1151,Salud,Clínica Centro,Hospitalización,Auxiliares,M,1974-07-02,2022-01-30,,44,SAL-Hospitalización-G7,7
+P1152,Salud,Clínica Centro,Hospitalización,Profesionales,F,1987-08-15,2021-03-26,,44,SAL-Hospitalización-G3,3
+P1153,Salud,Clínica Centro,Urgencia,Técnicos,F,1997-03-11,2018-06-04,,44,SAL-Urgencia-G4,4
+P1154,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1982-04-05,2016-03-20,,44,SAL-Ambulatorio-G4,4
+P1155,Salud,Clínica Centro,Urgencia,Técnicos,F,1980-11-10,2011-06-06,,44,SAL-Urgencia-G4,4
+P1156,Salud,Clínica Centro,Pabellón,Técnicos,F,1975-03-11,2011-08-09,,44,SAL-Pabellón-G4,4
+P1157,Salud,Clínica Centro,Apoyo,Administrativos,F,1991-01-27,2024-03-15,2025-06-25,44,SAL-Apoyo-G6,6
+P1158,Salud,Clínica Centro,Pabellón,Técnicos,F,1986-10-13,2021-12-21,,44,SAL-Pabellón-G5,5
+P1159,Salud,Clínica Centro,Pabellón,Profesionales,M,1984-03-09,2022-07-14,,44,SAL-Pabellón-G3,3
+P1160,Salud,Clínica Centro,Pabellón,Profesionales,M,1985-05-03,2012-11-13,,44,SAL-Pabellón-G2,2
+P1161,Salud,Clínica Centro,Pabellón,Profesionales,M,1961-03-28,2002-05-11,,44,SAL-Pabellón-G2,2
+P1163,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1983-09-17,2016-04-24,,22,SAL-Ambulatorio-G2,2
+P1164,Salud,Clínica Centro,UCI,Técnicos,F,1991-12-05,2012-10-02,2026-10-26,44,SAL-UCI-G4,4
+P1165,Salud,Clínica Centro,Hospitalización,Profesionales,F,1981-07-16,2003-08-23,,44,SAL-Hospitalización-G2,2
+P1166,Salud,Clínica Centro,Pabellón,Profesionales,F,1972-02-02,2009-02-13,2026-01-08,44,SAL-Pabellón-G2,2
+P1167,Salud,Clínica Centro,Urgencia,Directivos,M,1969-07-13,2002-01-08,,44,SAL-Urgencia-G1,1
+P1168,Salud,Clínica Centro,Hospitalización,Profesionales,F,1972-07-04,2006-08-25,,44,SAL-Hospitalización-G2,2
+P1169,Salud,Clínica Centro,Hospitalización,Técnicos,F,1997-10-16,2018-06-05,,44,SAL-Hospitalización-G4,4
+P1170,Salud,Clínica Centro,Hospitalización,Técnicos,F,1993-12-23,2021-03-03,,44,SAL-Hospitalización-G5,5
+P1171,Salud,Clínica Centro,Pabellón,Profesionales,M,1981-11-16,2016-08-10,,44,SAL-Pabellón-G2,2
+P1172,Salud,Clínica Centro,UCI,Auxiliares,M,1997-05-09,2022-07-11,,44,SAL-UCI-G7,7
+P1173,Salud,Clínica Centro,Hospitalización,Técnicos,F,2003-04-19,2024-06-02,,44,SAL-Hospitalización-G5,5
+P1174,Salud,Clínica Centro,UCI,Técnicos,M,1986-11-13,2018-11-26,,22,SAL-UCI-G4,4
+P1175,Salud,Clínica Centro,UCI,Profesionales,M,1992-12-20,2023-11-25,,44,SAL-UCI-G3,3
+P1176,Salud,Clínica Centro,Pabellón,Auxiliares,F,1972-07-22,2014-06-10,2025-10-14,44,SAL-Pabellón-G7,7
+P1177,Salud,Clínica Centro,UCI,Profesionales,F,1982-05-12,2022-06-04,,44,SAL-UCI-G3,3
+P1178,Salud,Clínica Centro,Urgencia,Técnicos,F,1964-03-07,1996-04-08,2025-07-04,44,SAL-Urgencia-G4,4
+P1179,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1988-06-20,2015-05-24,2025-06-03,44,SAL-Ambulatorio-G6,6
+P1180,Salud,Clínica Centro,Hospitalización,Técnicos,F,1978-07-11,2009-10-10,,44,SAL-Hospitalización-G4,4
+P1181,Salud,Clínica Centro,Hospitalización,Técnicos,F,1987-05-17,2023-06-17,,44,SAL-Hospitalización-G5,5
+P1182,Salud,Clínica Centro,UCI,Profesionales,F,1992-11-13,2023-12-06,,44,SAL-UCI-G3,3
+P1183,Salud,Clínica Centro,Hospitalización,Profesionales,M,1992-05-20,2021-07-31,,44,SAL-Hospitalización-G3,3
+P1185,Salud,Clínica Centro,Hospitalización,Profesionales,F,2001-07-18,2022-10-28,,44,SAL-Hospitalización-G3,3
+P1186,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1997-07-24,2018-07-31,2025-01-30,44,SAL-Ambulatorio-G4,4
+P1187,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1989-02-23,2021-10-12,2026-08-14,44,SAL-Ambulatorio-G5,5
+P1188,Salud,Clínica Centro,Urgencia,Directivos,M,1966-08-18,2015-04-21,2026-10-21,44,SAL-Urgencia-G1,1
+P1189,Salud,Clínica Centro,Urgencia,Técnicos,F,1984-09-15,2020-05-17,,44,SAL-Urgencia-G5,5
+P1190,Salud,Clínica Centro,Apoyo,Administrativos,F,1988-12-09,2017-08-17,,44,SAL-Apoyo-G6,6
+P1191,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1980-08-10,2017-03-12,,44,SAL-Ambulatorio-G4,4
+P1192,Salud,Clínica Centro,Pabellón,Auxiliares,F,1976-09-22,2006-12-20,,44,SAL-Pabellón-G7,7
+P1193,Salud,Clínica Centro,UCI,Técnicos,F,1998-04-08,2024-01-21,,44,SAL-UCI-G5,5
+P1194,Salud,Clínica Centro,Ambulatorio,Profesionales,M,1975-06-03,2008-08-26,,44,SAL-Ambulatorio-G2,2
+P1195,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1998-02-06,2022-04-06,,44,SAL-Ambulatorio-G3,3
+P1196,Salud,Clínica Centro,UCI,Profesionales,F,1987-05-01,2020-11-22,,44,SAL-UCI-G3,3
+P1197,Salud,Clínica Centro,UCI,Profesionales,M,1986-05-01,2024-06-27,,44,SAL-UCI-G3,3
+P1198,Salud,Clínica Centro,Urgencia,Profesionales,F,1987-09-07,2018-06-06,,44,SAL-Urgencia-G2,2
+P1199,Salud,Clínica Centro,Urgencia,Técnicos,F,1984-09-05,2023-05-01,,44,SAL-Urgencia-G5,5
+P1200,Salud,Clínica Centro,Apoyo,Directivos,M,1998-10-17,2023-10-25,2025-03-25,44,SAL-Apoyo-G1,1
+P1201,Salud,Clínica Centro,Hospitalización,Profesionales,F,1997-07-26,2018-10-20,,44,SAL-Hospitalización-G2,2
+P1203,Salud,Clínica Centro,Apoyo,Auxiliares,F,1992-06-17,2013-07-18,,44,SAL-Apoyo-G7,7
+P1204,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1989-07-03,2018-08-06,,44,SAL-Ambulatorio-G2,2
+P1205,Salud,Clínica Centro,Pabellón,Profesionales,M,1993-01-17,2020-05-15,,44,SAL-Pabellón-G3,3
+P1206,Salud,Clínica Centro,Apoyo,Auxiliares,F,1975-06-24,2019-06-03,,22,SAL-Apoyo-G7,7
+P1207,Salud,Clínica Centro,Hospitalización,Técnicos,M,1992-09-17,2019-11-15,,44,SAL-Hospitalización-G5,5
+P1208,Salud,Clínica Centro,Pabellón,Profesionales,F,2000-12-07,2022-12-30,,44,SAL-Pabellón-G3,3
+P1210,Salud,Clínica Centro,Ambulatorio,Profesionales,F,2002-11-09,2023-08-01,,44,SAL-Ambulatorio-G3,3
+P1212,Salud,Clínica Centro,Apoyo,Auxiliares,F,1997-11-23,2020-06-25,2025-12-01,44,SAL-Apoyo-G7,7
+P1213,Salud,Clínica Centro,UCI,Profesionales,F,1976-12-09,2010-07-23,,44,SAL-UCI-G2,2
+P1214,Salud,Clínica Centro,Apoyo,Administrativos,F,1977-04-03,2015-12-01,,44,SAL-Apoyo-G6,6
+P1215,Salud,Clínica Centro,Apoyo,Administrativos,F,1990-12-26,2023-10-21,,22,SAL-Apoyo-G6,6
+P1216,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1989-09-25,2015-09-16,,44,SAL-Ambulatorio-G4,4
+P1217,Salud,Clínica Centro,Urgencia,Auxiliares,F,2001-01-13,2022-10-07,,44,SAL-Urgencia-G7,7
+P1218,Salud,Clínica Centro,Hospitalización,Técnicos,F,1987-01-28,2022-01-16,,44,SAL-Hospitalización-G5,5
+P1219,Salud,Clínica Centro,Hospitalización,Profesionales,F,1986-09-18,2019-10-01,,22,SAL-Hospitalización-G3,3
+P1220,Salud,Clínica Centro,Apoyo,Administrativos,F,1991-01-27,2024-06-18,2026-06-12,44,SAL-Apoyo-G6,6
+P1221,Salud,Clínica Centro,Pabellón,Profesionales,F,1992-11-20,2014-01-30,,44,SAL-Pabellón-G2,2
+P1222,Salud,Clínica Centro,Pabellón,Profesionales,F,1974-08-05,2001-01-01,,44,SAL-Pabellón-G2,2
+P1223,Salud,Clínica Centro,Hospitalización,Técnicos,F,1974-12-01,2004-09-21,,44,SAL-Hospitalización-G4,4
+P1224,Salud,Clínica Centro,Hospitalización,Auxiliares,M,1977-03-27,2013-01-20,,44,SAL-Hospitalización-G7,7
+P1225,Salud,Clínica Centro,Apoyo,Administrativos,M,1997-11-13,2020-11-20,,44,SAL-Apoyo-G6,6
+P1226,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1974-10-12,2006-10-09,,44,SAL-Ambulatorio-G4,4
+P1227,Salud,Clínica Centro,Urgencia,Técnicos,M,1990-01-07,2022-05-10,,44,SAL-Urgencia-G5,5
+P1228,Salud,Clínica Centro,Hospitalización,Técnicos,F,2002-12-07,2023-04-22,2026-12-09,44,SAL-Hospitalización-G5,5
+P1229,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1991-07-11,2023-06-25,,44,SAL-Ambulatorio-G5,5
+P1230,Salud,Clínica Centro,Apoyo,Administrativos,F,1983-12-21,2008-04-15,,44,SAL-Apoyo-G6,6
+P1231,Salud,Clínica Centro,Apoyo,Administrativos,F,1978-03-07,2013-01-07,,44,SAL-Apoyo-G6,6
+P1232,Salud,Clínica Centro,Hospitalización,Auxiliares,F,1993-03-10,2020-12-13,,44,SAL-Hospitalización-G7,7
+P1233,Salud,Clínica Centro,Apoyo,Administrativos,M,2002-11-16,2023-09-28,,44,SAL-Apoyo-G6,6
+P1234,Salud,Clínica Centro,Apoyo,Directivos,F,1979-07-16,2023-11-20,2025-10-27,44,SAL-Apoyo-G1,1
+P1235,Salud,Clínica Centro,Urgencia,Técnicos,M,1988-01-16,2014-04-14,,44,SAL-Urgencia-G4,4
+P1236,Salud,Clínica Centro,Hospitalización,Técnicos,M,1995-11-07,2023-07-12,,44,SAL-Hospitalización-G5,5
+P1237,Salud,Clínica Centro,Apoyo,Administrativos,M,1969-07-06,2018-12-17,2026-05-07,44,SAL-Apoyo-G6,6
+P1238,Salud,Clínica Centro,Apoyo,Directivos,F,1985-03-02,2024-05-10,,44,SAL-Apoyo-G1,1
+P1239,Salud,Clínica Centro,Apoyo,Administrativos,F,1970-10-01,2018-01-15,2025-03-03,44,SAL-Apoyo-G6,6
+P1240,Salud,Clínica Centro,Apoyo,Administrativos,F,1990-12-13,2024-04-11,,44,SAL-Apoyo-G6,6
+P1241,Salud,Clínica Centro,Ambulatorio,Técnicos,M,1993-08-10,2021-12-26,,44,SAL-Ambulatorio-G5,5
+P1242,Salud,Clínica Centro,Hospitalización,Técnicos,M,2002-02-08,2023-10-11,2025-10-30,22,SAL-Hospitalización-G5,5
+P1244,Salud,Clínica Centro,Urgencia,Técnicos,F,1991-02-06,2023-03-01,,44,SAL-Urgencia-G5,5
+P1245,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1998-08-27,2024-03-10,,44,SAL-Ambulatorio-G3,3
+P1246,Salud,Clínica Centro,Hospitalización,Profesionales,M,1977-01-15,2017-09-26,2025-05-30,44,SAL-Hospitalización-G2,2
+P1248,Salud,Clínica Centro,UCI,Técnicos,F,1999-07-09,2020-04-05,,44,SAL-UCI-G5,5
+P1249,Salud,Clínica Centro,Urgencia,Profesionales,M,2000-02-22,2021-12-19,,44,SAL-Urgencia-G3,3
+P1250,Salud,Clínica Centro,Ambulatorio,Profesionales,M,1998-06-23,2019-03-07,,44,SAL-Ambulatorio-G3,3
+P1251,Salud,Clínica Centro,Hospitalización,Auxiliares,M,1999-08-11,2020-11-26,,44,SAL-Hospitalización-G7,7
+P1253,Salud,Clínica Centro,Apoyo,Administrativos,M,1994-03-26,2023-07-31,,44,SAL-Apoyo-G6,6
+P1254,Salud,Clínica Centro,Hospitalización,Profesionales,F,1984-03-05,2015-02-06,,44,SAL-Hospitalización-G2,2
+P1255,Salud,Clínica Centro,Hospitalización,Profesionales,F,1997-09-09,2022-01-11,2025-10-29,44,SAL-Hospitalización-G3,3
+P1256,Salud,Clínica Centro,Pabellón,Profesionales,M,1987-04-14,2022-11-21,,44,SAL-Pabellón-G3,3
+P1257,Salud,Clínica Centro,Hospitalización,Técnicos,F,1996-06-24,2018-09-20,,44,SAL-Hospitalización-G4,4
+P1258,Salud,Clínica Centro,Pabellón,Técnicos,F,2000-04-07,2024-05-22,,44,SAL-Pabellón-G5,5
+P1259,Salud,Clínica Centro,Apoyo,Administrativos,F,1988-03-11,2022-07-10,,44,SAL-Apoyo-G6,6
+P1260,Salud,Clínica Centro,Pabellón,Auxiliares,M,2001-07-25,2022-03-30,2026-02-16,44,SAL-Pabellón-G7,7
+P1261,Salud,Clínica Centro,Pabellón,Auxiliares,M,1967-04-26,2006-11-13,,44,SAL-Pabellón-G7,7
+P1262,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1988-06-27,2022-12-25,,44,SAL-Ambulatorio-G5,5
+P1263,Salud,Clínica Centro,Hospitalización,Auxiliares,M,1985-10-04,2023-02-28,2026-11-13,44,SAL-Hospitalización-G7,7
+P1264,Salud,Clínica Centro,Pabellón,Técnicos,F,1973-12-27,2022-10-15,,44,SAL-Pabellón-G5,5
+P1265,Salud,Clínica Centro,Hospitalización,Profesionales,F,1997-03-15,2018-04-22,,44,SAL-Hospitalización-G2,2
+P1266,Salud,Clínica Centro,Hospitalización,Profesionales,F,1975-03-19,2017-02-24,,44,SAL-Hospitalización-G2,2
+P1267,Salud,Clínica Centro,Apoyo,Administrativos,F,1993-11-14,2021-09-27,,44,SAL-Apoyo-G6,6
+P1268,Salud,Clínica Centro,Ambulatorio,Profesionales,F,2001-10-02,2022-07-03,,44,SAL-Ambulatorio-G3,3
+P1269,Salud,Clínica Centro,Urgencia,Profesionales,F,2003-04-03,2024-01-29,,44,SAL-Urgencia-G3,3
+P1270,Salud,Clínica Centro,Hospitalización,Auxiliares,F,1993-09-14,2020-06-06,,44,SAL-Hospitalización-G7,7
+P1271,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1984-04-02,2020-12-05,2026-08-21,44,SAL-Ambulatorio-G6,6
+P1272,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,1997-04-05,2024-03-28,,44,SAL-Ambulatorio-G3,3
+P1273,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1991-12-23,2021-06-23,,44,SAL-Hospitalización-G5,5
+P1274,Salud,Clínica Poniente,Urgencia,Profesionales,F,1988-02-19,2020-06-11,2025-09-22,44,SAL-Urgencia-G3,3
+P1275,Salud,Clínica Poniente,Urgencia,Técnicos,F,1994-04-25,2018-08-26,,44,SAL-Urgencia-G4,4
+P1276,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1985-10-21,2022-06-26,,44,SAL-Hospitalización-G3,3
+P1277,Salud,Clínica Poniente,Urgencia,Técnicos,M,1988-12-24,2023-10-27,,44,SAL-Urgencia-G5,5
+P1278,Salud,Clínica Poniente,UCI,Profesionales,F,1975-04-19,2020-10-05,,44,SAL-UCI-G3,3
+P1280,Salud,Clínica Poniente,Urgencia,Técnicos,F,1968-11-28,2019-07-25,,44,SAL-Urgencia-G5,5
+P1281,Salud,Clínica Poniente,Urgencia,Profesionales,F,1994-08-13,2024-03-10,,44,SAL-Urgencia-G3,3
+P1282,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1972-06-03,2003-04-13,,44,SAL-Hospitalización-G4,4
+P1283,Salud,Clínica Poniente,Urgencia,Profesionales,F,1969-04-04,2023-08-01,2025-01-22,44,SAL-Urgencia-G3,3
+P1285,Salud,Clínica Poniente,Pabellón,Técnicos,F,1993-08-14,2023-07-02,,44,SAL-Pabellón-G5,5
+P1286,Salud,Clínica Poniente,Urgencia,Técnicos,F,1993-08-07,2022-07-10,,44,SAL-Urgencia-G5,5
+P1287,Salud,Clínica Poniente,Apoyo,Administrativos,F,1999-07-18,2020-12-07,,44,SAL-Apoyo-G6,6
+P1288,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,2000-08-27,2021-10-13,,44,SAL-Ambulatorio-G3,3
+P1289,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1996-07-12,2023-07-22,2026-10-02,44,SAL-Hospitalización-G5,5
+P1291,Salud,Clínica Poniente,Apoyo,Administrativos,F,1998-06-17,2020-11-26,,44,SAL-Apoyo-G6,6
+P1292,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1995-10-05,2016-04-23,,44,SAL-Hospitalización-G4,4
+P1293,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1990-10-01,2011-10-01,2026-04-10,44,SAL-Hospitalización-G7,7
+P1294,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1993-09-22,2021-09-11,,44,SAL-Hospitalización-G7,7
+P1295,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,2002-04-23,2023-10-28,,22,SAL-Hospitalización-G7,7
+P1296,Salud,Clínica Poniente,Urgencia,Profesionales,M,1989-04-25,2024-01-18,,44,SAL-Urgencia-G3,3
+P1297,Salud,Clínica Poniente,Urgencia,Auxiliares,F,1989-11-03,2024-05-09,,22,SAL-Urgencia-G7,7
+P1298,Salud,Clínica Poniente,Apoyo,Administrativos,F,1990-06-13,2024-06-07,,44,SAL-Apoyo-G6,6
+P1299,Salud,Clínica Poniente,Apoyo,Administrativos,F,1978-06-01,2019-02-07,2025-09-26,44,SAL-Apoyo-G6,6
+P1300,Salud,Clínica Poniente,Apoyo,Directivos,M,1981-07-02,2017-07-29,,44,SAL-Apoyo-G1,1
+P1301,Salud,Clínica Poniente,Urgencia,Profesionales,F,1986-02-15,2023-12-02,,44,SAL-Urgencia-G3,3
+P1302,Salud,Clínica Poniente,Pabellón,Profesionales,M,1998-08-07,2019-09-04,2025-01-09,44,SAL-Pabellón-G3,3
+P1303,Salud,Clínica Poniente,UCI,Técnicos,F,1988-05-23,2024-04-29,,44,SAL-UCI-G5,5
+P1304,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,1990-03-15,2023-09-30,,44,SAL-Ambulatorio-G3,3
+P1305,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1989-01-13,2023-06-28,,44,SAL-Hospitalización-G3,3
+P1306,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,1983-11-19,2023-04-16,,44,SAL-Ambulatorio-G3,3
+P1307,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1994-10-01,2023-11-09,,44,SAL-Ambulatorio-G6,6
+P1308,Salud,Clínica Poniente,UCI,Técnicos,F,2002-05-14,2023-10-28,,44,SAL-UCI-G5,5
+P1309,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1973-03-04,2021-11-04,,22,SAL-Hospitalización-G7,7
+P1310,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1998-08-03,2019-10-07,,44,SAL-Hospitalización-G5,5
+P1311,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1993-01-04,2016-04-07,,44,SAL-Hospitalización-G4,4
+P1313,Salud,Clínica Poniente,Pabellón,Técnicos,F,1990-03-28,2012-10-06,,44,SAL-Pabellón-G4,4
+P1314,Salud,Clínica Poniente,UCI,Profesionales,M,1997-05-14,2018-08-10,,22,SAL-UCI-G2,2
+P1315,Salud,Clínica Poniente,UCI,Auxiliares,F,1980-03-16,2021-07-11,,44,SAL-UCI-G7,7
+P1316,Salud,Clínica Poniente,UCI,Técnicos,F,2002-05-16,2023-06-22,2026-12-09,44,SAL-UCI-G5,5
+P1317,Salud,Clínica Poniente,Urgencia,Profesionales,F,1986-07-09,2011-03-04,,44,SAL-Urgencia-G2,2
+P1318,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1998-08-17,2022-02-14,,44,SAL-Hospitalización-G5,5
+P1319,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1974-11-09,2002-04-29,,44,SAL-Hospitalización-G4,4
+P1320,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1994-04-12,2022-02-23,,44,SAL-Hospitalización-G7,7
+P1321,Salud,Clínica Poniente,UCI,Profesionales,F,1984-03-26,2019-01-14,,44,SAL-UCI-G3,3
+P1322,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1980-10-17,2022-03-05,,44,SAL-Hospitalización-G5,5
+P1323,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1999-08-23,2023-04-15,,44,SAL-Ambulatorio-G6,6
+P1324,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1983-01-03,2014-06-10,,44,SAL-Hospitalización-G7,7
+P1325,Salud,Clínica Poniente,Pabellón,Profesionales,F,1981-08-14,2024-03-08,,44,SAL-Pabellón-G3,3
+P1327,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1995-05-10,2019-06-27,,44,SAL-Hospitalización-G7,7
+P1329,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1989-12-20,2023-02-19,,44,SAL-Ambulatorio-G6,6
+P1330,Salud,Clínica Poniente,Urgencia,Auxiliares,F,1994-03-06,2023-01-01,,44,SAL-Urgencia-G7,7
+P1331,Salud,Clínica Poniente,UCI,Técnicos,M,1988-02-14,2012-09-02,,44,SAL-UCI-G4,4
+P1332,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1989-08-14,2022-08-06,,44,SAL-Hospitalización-G5,5
+P1333,Salud,Clínica Poniente,Pabellón,Técnicos,F,1992-10-27,2013-07-29,,44,SAL-Pabellón-G4,4
+P1334,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1981-10-16,2022-06-09,2026-12-21,44,SAL-Hospitalización-G3,3
+P1335,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,1979-08-14,2019-06-01,,44,SAL-Ambulatorio-G3,3
+P1336,Salud,Clínica Poniente,Hospitalización,Directivos,F,1981-10-21,2020-08-05,,44,SAL-Hospitalización-G1,1
+P1337,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1989-03-03,2021-08-13,,44,SAL-Hospitalización-G3,3
+P1338,Salud,Clínica Poniente,Pabellón,Profesionales,F,1979-07-09,2023-07-13,2026-11-18,44,SAL-Pabellón-G3,3
+P1339,Salud,Clínica Poniente,Urgencia,Profesionales,F,1991-12-06,2012-03-07,,44,SAL-Urgencia-G2,2
+P1340,Salud,Clínica Poniente,Urgencia,Profesionales,F,1980-02-03,2004-12-28,,44,SAL-Urgencia-G2,2
+P1341,Salud,Clínica Poniente,Urgencia,Técnicos,F,1995-05-17,2023-04-05,,44,SAL-Urgencia-G5,5
+P1342,Salud,Clínica Poniente,Pabellón,Auxiliares,F,1987-06-19,2022-11-02,,44,SAL-Pabellón-G7,7
+P1343,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1968-03-01,2023-06-09,,44,SAL-Ambulatorio-G6,6
+P1344,Salud,Clínica Poniente,Ambulatorio,Técnicos,M,1979-08-21,2016-09-23,2026-11-16,44,SAL-Ambulatorio-G4,4
+P1345,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1994-08-05,2016-02-23,,44,SAL-Ambulatorio-G6,6
+P1346,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1982-07-10,2018-12-09,,44,SAL-Hospitalización-G2,2
+P1347,Salud,Clínica Poniente,Urgencia,Técnicos,F,1977-12-05,2018-05-25,2026-06-23,44,SAL-Urgencia-G4,4
+P1348,Salud,Clínica Poniente,Urgencia,Profesionales,F,2000-08-23,2021-01-12,,44,SAL-Urgencia-G3,3
+P1349,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1969-01-12,2006-10-20,2025-10-08,44,SAL-Hospitalización-G2,2
+P1350,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1994-08-02,2021-11-14,,44,SAL-Hospitalización-G5,5
+P1351,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1973-12-18,2009-03-15,,44,SAL-Hospitalización-G2,2
+P1352,Salud,Clínica Poniente,Pabellón,Profesionales,M,1991-08-12,2021-05-26,,44,SAL-Pabellón-G3,3
+P1353,Salud,Clínica Poniente,Pabellón,Profesionales,F,1990-09-24,2021-01-14,,44,SAL-Pabellón-G3,3
+P1354,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1988-03-05,2016-08-12,,44,SAL-Hospitalización-G4,4
+P1355,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1987-04-14,2024-03-24,,44,SAL-Hospitalización-G3,3
+P1356,Salud,Clínica Poniente,Pabellón,Directivos,M,1979-03-28,2023-01-30,,44,SAL-Pabellón-G1,1
+P1357,Salud,Clínica Poniente,Ambulatorio,Profesionales,F,1981-11-15,2009-09-15,,44,SAL-Ambulatorio-G2,2
+P1358,Salud,Clínica Poniente,Apoyo,Administrativos,M,1992-12-11,2019-09-27,2026-10-13,44,SAL-Apoyo-G6,6
+P1359,Salud,Clínica Poniente,UCI,Técnicos,F,1999-04-27,2020-02-05,2025-01-16,22,SAL-UCI-G5,5
+P1360,Salud,Clínica Poniente,Pabellón,Técnicos,F,1995-10-10,2016-10-09,,44,SAL-Pabellón-G4,4
+P1361,Salud,Clínica Poniente,Urgencia,Técnicos,F,1998-02-08,2021-10-17,,44,SAL-Urgencia-G5,5
+P1362,Salud,Clínica Poniente,Apoyo,Administrativos,F,1980-08-01,2014-05-18,,44,SAL-Apoyo-G6,6
+P1363,Salud,Clínica Poniente,Pabellón,Directivos,F,1968-04-10,2008-09-25,,44,SAL-Pabellón-G1,1
+P1364,Salud,Clínica Poniente,UCI,Auxiliares,F,1983-12-01,2023-11-11,,44,SAL-UCI-G7,7
+P1365,Salud,Clínica Poniente,UCI,Profesionales,F,1986-06-22,2024-03-07,,44,SAL-UCI-G3,3
+P1366,Salud,Clínica Poniente,Pabellón,Profesionales,F,1979-01-19,2011-02-07,2026-05-25,44,SAL-Pabellón-G2,2
+P1367,Salud,Clínica Poniente,Apoyo,Auxiliares,M,1987-05-20,2010-11-12,,44,SAL-Apoyo-G7,7
+P1368,Salud,Clínica Poniente,Urgencia,Técnicos,F,1982-12-17,2013-01-10,,44,SAL-Urgencia-G4,4
+P1369,Salud,Clínica Poniente,UCI,Técnicos,F,1991-12-27,2014-07-13,,44,SAL-UCI-G4,4
+P1370,Salud,Clínica Poniente,Apoyo,Administrativos,F,1992-03-23,2022-02-16,,44,SAL-Apoyo-G6,6
+P1371,Salud,Clínica Poniente,Urgencia,Profesionales,F,1976-12-11,2020-12-04,2026-09-11,44,SAL-Urgencia-G3,3
+P1372,Salud,Clínica Poniente,Apoyo,Administrativos,M,1982-04-16,2019-03-09,,44,SAL-Apoyo-G6,6
+P1373,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1992-08-22,2013-06-20,,44,SAL-Hospitalización-G2,2
+P1374,Salud,Clínica Poniente,Pabellón,Auxiliares,M,1975-11-11,2016-04-18,2026-08-17,44,SAL-Pabellón-G7,7
+P1375,Salud,Clínica Poniente,Urgencia,Auxiliares,F,1985-08-09,2022-01-21,,44,SAL-Urgencia-G7,7
+P1376,Salud,Clínica Poniente,Pabellón,Auxiliares,F,1981-06-22,2020-04-30,,44,SAL-Pabellón-G7,7
+P1377,Salud,Clínica Poniente,UCI,Técnicos,M,1985-09-10,2006-07-23,,44,SAL-UCI-G4,4
+P1378,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1983-08-27,2018-08-02,,44,SAL-Hospitalización-G4,4
+P1380,Salud,Clínica Poniente,Pabellón,Profesionales,F,1978-07-01,2006-04-16,,44,SAL-Pabellón-G2,2
+P1382,Salud,Clínica Poniente,Apoyo,Administrativos,F,1988-02-28,2018-01-03,,44,SAL-Apoyo-G6,6
+P1383,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1981-08-01,2023-02-27,,44,SAL-Hospitalización-G5,5
+P1384,Salud,Clínica Poniente,Urgencia,Profesionales,F,1985-07-07,2022-09-19,,44,SAL-Urgencia-G3,3
+P1386,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1999-11-20,2020-09-28,,44,SAL-Ambulatorio-G6,6
+P1387,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1996-10-26,2023-03-29,,44,SAL-Hospitalización-G5,5
+P1388,Salud,Clínica Poniente,Pabellón,Técnicos,M,2002-11-12,2023-03-16,,22,SAL-Pabellón-G5,5
+P1389,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1978-08-25,2015-07-13,,44,SAL-Hospitalización-G7,7
+P1390,Salud,Clínica Poniente,Pabellón,Técnicos,F,1981-01-02,2022-03-02,,44,SAL-Pabellón-G5,5
+P1391,Salud,Clínica Poniente,Apoyo,Directivos,F,1968-08-03,2018-03-23,,44,SAL-Apoyo-G1,1
+P1392,Salud,Clínica Poniente,Pabellón,Técnicos,F,1998-09-18,2019-02-09,,44,SAL-Pabellón-G5,5
+P1393,Salud,Clínica Poniente,Urgencia,Auxiliares,F,1988-02-02,2022-03-18,,44,SAL-Urgencia-G7,7
+P1394,Salud,Clínica Poniente,Ambulatorio,Directivos,F,1971-08-10,2002-05-07,2026-02-10,44,SAL-Ambulatorio-G1,1
+P1395,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1996-02-04,2023-08-12,,44,SAL-Hospitalización-G3,3
+P1396,Salud,Clínica Poniente,Urgencia,Técnicos,F,1991-01-09,2019-04-07,,44,SAL-Urgencia-G5,5
+P1397,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1971-02-13,2012-04-01,2026-06-16,44,SAL-Ambulatorio-G6,6
+P1398,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1999-02-04,2022-08-14,,44,SAL-Hospitalización-G5,5
+P1399,Salud,Clínica Poniente,Pabellón,Técnicos,F,1992-09-26,2021-10-23,2026-07-22,44,SAL-Pabellón-G5,5
+P1400,Salud,Clínica Poniente,Apoyo,Auxiliares,M,1981-08-07,2023-11-03,,44,SAL-Apoyo-G7,7
+P1401,Salud,Clínica Poniente,Ambulatorio,Técnicos,F,1999-10-26,2022-11-12,,44,SAL-Ambulatorio-G5,5
+P1402,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1997-09-10,2018-10-20,,44,SAL-Hospitalización-G4,4
+P1403,Salud,Clínica Poniente,Apoyo,Administrativos,M,1985-11-20,2022-10-12,,44,SAL-Apoyo-G6,6
+P1404,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1986-11-19,2023-09-04,,44,SAL-Hospitalización-G3,3
+P1405,Salud,Clínica Poniente,Urgencia,Directivos,M,1980-04-09,2016-04-22,2025-01-08,44,SAL-Urgencia-G1,1
+P1407,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1999-08-22,2022-02-20,,44,SAL-Ambulatorio-G6,6
+P1408,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1991-08-16,2012-10-15,,44,SAL-Hospitalización-G7,7
+P1409,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1985-04-14,2015-05-20,,44,SAL-Hospitalización-G2,2
+P1410,Salud,Clínica Poniente,Urgencia,Técnicos,F,1999-02-19,2020-08-27,,44,SAL-Urgencia-G5,5
+P1411,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1984-08-05,2013-07-12,,22,SAL-Hospitalización-G7,7
+P1412,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1979-02-09,2020-03-23,,44,SAL-Hospitalización-G7,7
+P1413,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1988-05-09,2024-05-17,,44,SAL-Ambulatorio-G6,6
+P1414,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1993-01-11,2019-12-29,2026-12-10,44,SAL-Hospitalización-G5,5
+P1415,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1988-04-21,2016-11-05,,44,SAL-Hospitalización-G4,4
+P1416,Salud,Clínica Poniente,Pabellón,Profesionales,F,1996-04-11,2020-09-01,,22,SAL-Pabellón-G3,3
+P1417,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1988-10-05,2022-12-13,,44,SAL-Hospitalización-G5,5
+P1418,Salud,Clínica Poniente,Hospitalización,Directivos,M,1986-09-15,2024-01-17,,44,SAL-Hospitalización-G1,1
+P1419,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1997-05-21,2024-04-10,,44,SAL-Hospitalización-G5,5
+P1421,Salud,Clínica Poniente,Pabellón,Profesionales,M,1995-08-27,2023-05-27,,44,SAL-Pabellón-G3,3
+P1423,Salud,Clínica Poniente,Pabellón,Profesionales,M,1995-04-06,2016-06-12,,44,SAL-Pabellón-G2,2
+P1424,Salud,Clínica Poniente,Urgencia,Auxiliares,F,1998-01-22,2023-03-06,,44,SAL-Urgencia-G7,7
+P1425,Salud,Clínica Poniente,Ambulatorio,Administrativos,M,1989-07-05,2021-10-04,,44,SAL-Ambulatorio-G6,6
+P1426,Salud,Clínica Poniente,Hospitalización,Profesionales,F,2003-07-04,2024-04-13,2025-03-05,44,SAL-Hospitalización-G3,3
+P1427,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1990-11-17,2017-04-14,,44,SAL-Hospitalización-G4,4
+P1428,Salud,Clínica Poniente,Apoyo,Administrativos,M,1998-07-06,2019-06-23,,44,SAL-Apoyo-G6,6
+P1429,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1976-07-25,2016-07-27,2026-05-25,44,SAL-Hospitalización-G2,2
+P1430,Salud,Clínica Poniente,Apoyo,Administrativos,M,1985-02-18,2017-04-10,,44,SAL-Apoyo-G6,6
+P1431,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,1990-07-10,2024-08-05,2026-04-21,44,SAL-Ambulatorio-G3,3
+P1432,Salud,Clínica Centro,Pabellón,Técnicos,M,1984-10-04,2024-08-08,,22,SAL-Pabellón-G5,5
+P1433,Energia,Zona Centro,Mantenimiento,Profesionales,M,2003-04-17,2024-08-13,2025-03-05,44,ENE-Mantenimiento-G3,3
+P1434,Energia,Zona Sur,Operación de centrales,Profesionales,M,1986-09-27,2024-08-14,2025-10-29,44,ENE-Operación de centrales-G3,3
+P1435,Salud,Clínica Oriente,UCI,Auxiliares,F,1983-04-11,2024-08-14,,44,SAL-UCI-G7,7
+P1437,Salud,Clínica Oriente,Apoyo,Auxiliares,M,1980-05-16,2024-08-19,,44,SAL-Apoyo-G7,7
+P1438,Manufactura,Concepción,Producción,Técnicos,M,1987-09-16,2024-08-23,2025-09-17,44,MAN-Producción-G5,5
+P1439,Salud,Clínica Oriente,Ambulatorio,Directivos,M,1976-03-02,2024-08-26,,44,SAL-Ambulatorio-G1,1
+P1440,Manufactura,Concepción,Bodega y logística,Operarios,M,1980-05-22,2024-08-26,,44,MAN-Bodega y logística-G7,7
+P1442,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1990-09-04,2024-08-28,,44,SAL-Hospitalización-G3,3
+P1443,Energia,Zona Norte,Gestión corporativa,Directivos,M,1995-05-06,2024-08-28,,44,ENE-Gestión corporativa-G1,1
+P1444,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1995-01-22,2024-09-03,2025-11-04,44,MAN-Mantenimiento industrial-G5,5
+P1445,Manufactura,Santiago,Calidad,Técnicos,M,2000-08-15,2024-09-10,2026-09-21,44,MAN-Calidad-G5,5
+P1446,Energia,Zona Sur,Operación de centrales,Operarios,M,1999-05-22,2024-09-11,,44,ENE-Operación de centrales-G7,7
+P1447,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1987-04-06,2024-09-11,,44,MAN-Administración y finanzas-G6,6
+P1448,Salud,Clínica Centro,Apoyo,Administrativos,F,1989-05-26,2024-09-13,,44,SAL-Apoyo-G6,6
+P1449,Manufactura,Concepción,Ventas,Profesionales,M,1996-11-08,2024-09-16,2025-07-08,44,MAN-Ventas-G3,3
+P1450,Salud,Clínica Centro,Hospitalización,Profesionales,F,2003-09-06,2024-09-16,,44,SAL-Hospitalización-G3,3
+P1451,Salud,Clínica Centro,Apoyo,Administrativos,F,1987-09-06,2024-09-17,,44,SAL-Apoyo-G6,6
+P1452,Manufactura,Santiago,Producción,Profesionales,M,1990-11-17,2024-09-19,,44,MAN-Producción-G3,3
+P1453,Salud,Clínica Centro,Urgencia,Técnicos,F,1984-04-28,2024-09-20,2025-05-30,44,SAL-Urgencia-G5,5
+P1454,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1981-04-18,2024-09-25,2025-04-14,44,SAL-Hospitalización-G7,7
+P1455,Energia,Zona Sur,Comercial,Profesionales,M,1994-01-11,2024-09-25,,44,ENE-Comercial-G3,3
+P1456,Salud,Clínica Oriente,Urgencia,Técnicos,F,2003-03-25,2024-09-26,,44,SAL-Urgencia-G5,5
+P1457,Salud,Clínica Centro,Apoyo,Administrativos,F,2001-07-28,2024-09-27,,44,SAL-Apoyo-G6,6
+P1458,Manufactura,Santiago,Producción,Profesionales,M,1991-09-16,2024-09-30,,44,MAN-Producción-G3,3
+P1459,Salud,Clínica Poniente,Urgencia,Auxiliares,F,2003-12-16,2024-10-04,2025-11-17,44,SAL-Urgencia-G7,7
+P1460,Manufactura,Concepción,Ventas,Administrativos,F,1982-03-09,2024-10-07,,44,MAN-Ventas-G6,6
+P1461,Manufactura,Santiago,Producción,Operarios,M,2003-08-22,2024-10-07,2025-12-19,44,MAN-Producción-G7,7
+P1462,Energia,Zona Norte,Comercial,Directivos,M,1984-05-15,2024-10-08,,44,ENE-Comercial-G1,1
+P1463,Manufactura,Santiago,Bodega y logística,Administrativos,M,1985-12-25,2024-10-10,,44,MAN-Bodega y logística-G6,6
+P1464,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1991-05-14,2024-10-10,,44,MAN-Mantenimiento industrial-G5,5
+P1465,Salud,Clínica Oriente,Ambulatorio,Administrativos,M,1987-05-22,2024-10-14,,44,SAL-Ambulatorio-G6,6
+P1466,Salud,Clínica Centro,Ambulatorio,Profesionales,F,2002-07-02,2024-10-14,,44,SAL-Ambulatorio-G3,3
+P1467,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1999-10-02,2024-10-15,,44,MAN-Administración y finanzas-G6,6
+P1468,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,1997-11-11,2024-10-17,2025-08-18,44,SAL-Ambulatorio-G3,3
+P1469,Salud,Clínica Centro,Hospitalización,Técnicos,F,2003-05-18,2024-10-17,,44,SAL-Hospitalización-G5,5
+P1471,Salud,Clínica Poniente,Pabellón,Profesionales,M,1997-02-03,2024-10-21,,44,SAL-Pabellón-G3,3
+P1472,Manufactura,Santiago,Producción,Operarios,M,1986-01-06,2024-10-21,,44,MAN-Producción-G7,7
+P1473,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1990-10-21,2024-10-22,2026-09-09,44,MAN-Administración y finanzas-G6,6
+P1474,Energia,Zona Norte,Transmisión,Técnicos,M,1990-11-02,2024-10-23,,44,ENE-Transmisión-G5,5
+P1475,Energia,Zona Sur,Transmisión,Profesionales,F,1984-12-13,2024-10-23,,44,ENE-Transmisión-G3,3
+P1476,Energia,Zona Centro,Comercial,Administrativos,F,1991-10-13,2024-10-24,2026-09-29,44,ENE-Comercial-G6,6
+P1477,Salud,Clínica Oriente,Pabellón,Directivos,M,1985-08-08,2024-10-24,2026-07-24,44,SAL-Pabellón-G1,1
+P1478,Energia,Zona Norte,Mantenimiento,Técnicos,F,1988-12-27,2024-10-24,,44,ENE-Mantenimiento-G5,5
+P1479,Manufactura,Santiago,Bodega y logística,Operarios,M,1990-06-16,2024-10-24,2026-05-14,44,MAN-Bodega y logística-G7,7
+P1481,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1991-10-07,2024-10-25,,44,SAL-Hospitalización-G5,5
+P1482,Salud,Clínica Centro,Pabellón,Técnicos,M,2002-11-21,2024-10-25,,44,SAL-Pabellón-G5,5
+P1483,Manufactura,Antofagasta,Producción,Operarios,M,2001-09-17,2024-10-30,2025-01-06,44,MAN-Producción-G7,7
+P1484,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1998-10-02,2024-11-04,2025-03-18,44,MAN-Administración y finanzas-G6,6
+P1485,Manufactura,Santiago,Ventas,Profesionales,F,1986-09-03,2024-11-05,2025-08-07,44,MAN-Ventas-G3,3
+P1486,Salud,Clínica Centro,Pabellón,Técnicos,M,1996-03-11,2024-11-05,,44,SAL-Pabellón-G5,5
+P1487,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1990-11-28,2024-11-06,2025-07-30,44,SAL-Hospitalización-G5,5
+P1488,Energia,Zona Centro,Comercial,Directivos,M,1991-02-14,2024-11-11,2025-07-07,44,ENE-Comercial-G1,1
+P1489,Manufactura,Concepción,Administración y finanzas,Profesionales,F,1993-06-02,2024-11-13,2026-12-23,44,MAN-Administración y finanzas-G3,3
+P1490,Manufactura,Santiago,Producción,Directivos,M,1980-09-24,2024-11-14,2025-06-10,44,MAN-Producción-G1,1
+P1491,Salud,Clínica Poniente,UCI,Técnicos,F,1998-08-13,2024-11-15,,44,SAL-UCI-G5,5
+P1492,Manufactura,Concepción,Calidad,Profesionales,F,1986-03-16,2024-11-19,2025-11-11,44,MAN-Calidad-G3,3
+P1493,Manufactura,Santiago,Administración y finanzas,Administrativos,M,2003-06-13,2024-11-20,2025-10-17,44,MAN-Administración y finanzas-G6,6
+P1494,Salud,Clínica Poniente,Urgencia,Técnicos,F,2003-11-04,2024-11-21,2026-04-15,44,SAL-Urgencia-G5,5
+P1495,Energia,Zona Centro,Comercial,Administrativos,M,1986-08-03,2024-11-21,,44,ENE-Comercial-G6,6
+P1496,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1977-10-21,2024-11-22,,44,SAL-Ambulatorio-G6,6
+P1497,Energia,Zona Norte,Mantenimiento,Técnicos,M,1998-03-09,2024-11-28,,44,ENE-Mantenimiento-G5,5
+P1498,Energia,Zona Sur,Operación de centrales,Técnicos,M,1998-11-28,2024-11-29,,44,ENE-Operación de centrales-G5,5
+P1499,Manufactura,Santiago,Bodega y logística,Operarios,F,2003-05-13,2024-12-02,,44,MAN-Bodega y logística-G7,7
+P1500,Manufactura,Antofagasta,Producción,Operarios,F,1992-08-06,2024-12-03,,44,MAN-Producción-G7,7
+P1501,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1980-03-08,2024-12-04,2025-05-22,44,SAL-Hospitalización-G7,7
+P1502,Salud,Clínica Poniente,Pabellón,Profesionales,M,1983-05-10,2024-12-09,,44,SAL-Pabellón-G3,3
+P1503,Energia,Zona Norte,Gestión corporativa,Directivos,M,1982-05-12,2024-12-09,2026-07-06,44,ENE-Gestión corporativa-G1,1
+P1504,Salud,Clínica Oriente,Pabellón,Auxiliares,F,1996-02-28,2024-12-13,,44,SAL-Pabellón-G7,7
+P1505,Salud,Clínica Centro,Hospitalización,Profesionales,F,1984-09-15,2024-12-18,,44,SAL-Hospitalización-G3,3
+P1506,Energia,Zona Norte,Mantenimiento,Operarios,M,1995-03-21,2024-12-25,,44,ENE-Mantenimiento-G7,7
+P1507,Manufactura,Concepción,Producción,Operarios,M,1996-11-05,2024-12-30,,44,MAN-Producción-G7,7
+P1508,Manufactura,Concepción,Administración y finanzas,Administrativos,F,2003-04-18,2024-12-31,,44,MAN-Administración y finanzas-G6,6
+P1509,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1988-11-19,2024-12-31,,44,SAL-Hospitalización-G7,7
+P1510,Manufactura,Santiago,Calidad,Técnicos,M,1999-06-05,2025-01-01,,44,MAN-Calidad-G5,5
+P1511,Salud,Clínica Centro,Urgencia,Profesionales,F,1994-10-27,2025-01-03,2025-03-20,44,SAL-Urgencia-G3,3
+P1512,Salud,Clínica Centro,Urgencia,Técnicos,F,1994-10-01,2025-01-03,,44,SAL-Urgencia-G5,5
+P1513,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1978-11-28,2025-01-06,2025-12-11,44,SAL-Hospitalización-G7,7
+P1514,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1999-08-26,2025-01-06,,44,SAL-Hospitalización-G5,5
+P1515,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1998-11-22,2025-01-07,,22,MAN-Bodega y logística-G7,7
+P1516,Manufactura,Santiago,Producción,Operarios,M,1992-06-14,2025-01-08,,44,MAN-Producción-G7,7
+P1517,Energia,Zona Sur,Mantenimiento,Técnicos,M,1991-04-03,2025-01-13,2025-04-02,44,ENE-Mantenimiento-G5,5
+P1518,Salud,Clínica Centro,Hospitalización,Auxiliares,F,1988-03-26,2025-01-17,,44,SAL-Hospitalización-G7,7
+P1519,Manufactura,Concepción,Producción,Operarios,M,1992-10-17,2025-01-20,,44,MAN-Producción-G7,7
+P1520,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1991-07-27,2025-01-20,2025-02-03,44,SAL-Hospitalización-G5,5
+P1521,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1992-12-02,2025-01-20,2025-02-06,44,MAN-Bodega y logística-G7,7
+P1522,Salud,Clínica Oriente,Hospitalización,Técnicos,F,2004-07-26,2025-01-20,,44,SAL-Hospitalización-G5,5
+P1523,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1985-12-21,2025-01-20,,44,SAL-Ambulatorio-G6,6
+P1524,Manufactura,Concepción,Producción,Operarios,F,1989-06-12,2025-01-21,,44,MAN-Producción-G7,7
+P1525,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1998-07-19,2025-01-21,,44,MAN-Mantenimiento industrial-G5,5
+P1526,Manufactura,Antofagasta,Producción,Técnicos,F,1982-02-27,2025-01-22,2025-04-01,44,MAN-Producción-G5,5
+P1527,Salud,Clínica Poniente,Ambulatorio,Administrativos,F,1999-03-18,2025-01-22,,44,SAL-Ambulatorio-G6,6
+P1528,Energia,Zona Sur,Centro de despacho,Profesionales,M,2004-01-02,2025-01-24,,44,ENE-Centro de despacho-G3,3
+P1529,Manufactura,Concepción,Calidad,Técnicos,M,1984-02-25,2025-01-24,2025-05-05,22,MAN-Calidad-G5,5
+P1530,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,2002-09-14,2025-01-27,2025-02-12,44,MAN-Mantenimiento industrial-G5,5
+P1531,Energia,Zona Norte,Mantenimiento,Técnicos,M,1992-06-25,2025-01-27,,44,ENE-Mantenimiento-G5,5
+P1532,Salud,Clínica Centro,Apoyo,Directivos,M,1973-07-04,2025-02-03,2026-12-11,44,SAL-Apoyo-G1,1
+P1533,Salud,Clínica Centro,Hospitalización,Profesionales,F,1979-06-11,2025-02-03,,44,SAL-Hospitalización-G3,3
+P1534,Manufactura,Concepción,Bodega y logística,Operarios,M,1987-09-18,2025-02-10,,44,MAN-Bodega y logística-G7,7
+P1535,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1995-01-05,2025-02-10,2025-08-27,44,MAN-Administración y finanzas-G6,6
+P1536,Energia,Zona Norte,Centro de despacho,Técnicos,M,1995-08-21,2025-02-13,,44,ENE-Centro de despacho-G5,5
+P1537,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1984-04-10,2025-02-14,,44,SAL-Hospitalización-G7,7
+P1538,Salud,Clínica Centro,Urgencia,Auxiliares,M,1984-11-01,2025-02-14,2025-08-13,44,SAL-Urgencia-G7,7
+P1539,Manufactura,Concepción,Producción,Operarios,F,1999-12-14,2025-02-17,,44,MAN-Producción-G7,7
+P1540,Salud,Clínica Poniente,Urgencia,Directivos,F,1979-06-16,2025-02-17,,44,SAL-Urgencia-G1,1
+P1541,Salud,Clínica Poniente,Pabellón,Profesionales,M,1996-06-10,2025-02-17,,44,SAL-Pabellón-G3,3
+P1542,Salud,Clínica Oriente,Ambulatorio,Técnicos,M,1996-06-15,2025-02-17,2026-04-10,44,SAL-Ambulatorio-G5,5
+P1543,Salud,Clínica Poniente,Urgencia,Profesionales,M,1986-02-27,2025-02-19,2026-07-28,44,SAL-Urgencia-G3,3
+P1544,Salud,Clínica Oriente,Urgencia,Técnicos,F,2004-01-12,2025-02-19,2026-06-23,44,SAL-Urgencia-G5,5
+P1545,Salud,Clínica Oriente,Urgencia,Técnicos,F,1999-01-17,2025-02-20,,44,SAL-Urgencia-G5,5
+P1546,Salud,Clínica Poniente,UCI,Técnicos,F,1987-03-15,2025-02-24,2025-09-08,44,SAL-UCI-G5,5
+P1547,Energia,Zona Norte,Mantenimiento,Técnicos,M,1992-12-10,2025-02-24,2025-06-25,44,ENE-Mantenimiento-G5,5
+P1548,Energia,Zona Centro,Mantenimiento,Operarios,M,2004-07-03,2025-02-26,2025-09-25,44,ENE-Mantenimiento-G7,7
+P1549,Energia,Zona Centro,Transmisión,Profesionales,M,2004-08-02,2025-02-26,,44,ENE-Transmisión-G3,3
+P1550,Manufactura,Concepción,Producción,Operarios,F,1979-09-12,2025-03-03,2026-05-28,44,MAN-Producción-G7,7
+P1551,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1991-01-05,2025-03-03,,44,MAN-Administración y finanzas-G6,6
+P1552,Manufactura,Antofagasta,Producción,Operarios,M,1989-04-17,2025-03-05,,44,MAN-Producción-G7,7
+P1553,Energia,Zona Sur,Centro de despacho,Directivos,M,1982-02-24,2025-03-07,2025-10-07,44,ENE-Centro de despacho-G1,1
+P1554,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1997-12-25,2025-03-07,,44,SAL-Ambulatorio-G5,5
+P1555,Manufactura,Santiago,Mantenimiento industrial,Directivos,M,1999-04-18,2025-03-10,,44,MAN-Mantenimiento industrial-G1,1
+P1556,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1994-11-26,2025-03-10,,44,MAN-Mantenimiento industrial-G5,5
+P1557,Energia,Zona Norte,Mantenimiento,Técnicos,M,1998-06-09,2025-03-10,,44,ENE-Mantenimiento-G5,5
+P1558,Manufactura,Concepción,Producción,Operarios,M,1988-02-16,2025-03-11,,22,MAN-Producción-G7,7
+P1559,Salud,Clínica Oriente,Urgencia,Profesionales,F,1988-08-20,2025-03-11,,44,SAL-Urgencia-G3,3
+P1560,Manufactura,Santiago,Bodega y logística,Operarios,M,1982-12-20,2025-03-14,2026-05-07,44,MAN-Bodega y logística-G7,7
+P1561,Salud,Clínica Poniente,Urgencia,Profesionales,F,2004-07-24,2025-03-17,,44,SAL-Urgencia-G3,3
+P1562,Salud,Clínica Oriente,Pabellón,Auxiliares,M,1982-10-25,2025-03-17,2025-04-10,44,SAL-Pabellón-G7,7
+P1563,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1999-12-20,2025-03-17,2025-03-26,44,MAN-Mantenimiento industrial-G5,5
+P1564,Energia,Zona Norte,Comercial,Administrativos,M,1990-02-20,2025-03-21,,44,ENE-Comercial-G6,6
+P1565,Manufactura,Concepción,Producción,Operarios,M,2004-10-04,2025-03-21,2025-07-31,44,MAN-Producción-G7,7
+P1566,Manufactura,Concepción,Bodega y logística,Operarios,M,1988-02-26,2025-03-28,,44,MAN-Bodega y logística-G7,7
+P1567,Manufactura,Santiago,Bodega y logística,Administrativos,F,1973-04-07,2025-03-31,2026-12-16,44,MAN-Bodega y logística-G6,6
+P1568,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1992-03-02,2025-04-01,,44,SAL-Hospitalización-G5,5
+P1569,Manufactura,Santiago,Producción,Operarios,M,1994-02-09,2025-04-03,,44,MAN-Producción-G7,7
+P1570,Manufactura,Santiago,Bodega y logística,Operarios,M,1984-12-21,2025-04-08,,44,MAN-Bodega y logística-G7,7
+P1571,Salud,Clínica Centro,Apoyo,Administrativos,F,1968-04-22,2025-04-11,,44,SAL-Apoyo-G6,6
+P1572,Salud,Clínica Centro,Apoyo,Administrativos,F,1989-08-01,2025-04-14,,44,SAL-Apoyo-G6,6
+P1573,Energia,Zona Centro,Mantenimiento,Profesionales,F,2001-10-24,2025-04-14,,44,ENE-Mantenimiento-G3,3
+P1574,Salud,Clínica Poniente,Hospitalización,Profesionales,M,1986-04-14,2025-04-16,2026-02-03,44,SAL-Hospitalización-G3,3
+P1575,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1990-12-02,2025-04-21,2025-08-26,44,MAN-Bodega y logística-G7,7
+P1576,Salud,Clínica Oriente,Hospitalización,Profesionales,F,2000-08-10,2025-04-21,,44,SAL-Hospitalización-G3,3
+P1577,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1993-06-15,2025-04-21,,44,SAL-Hospitalización-G5,5
+P1578,Salud,Clínica Centro,Urgencia,Profesionales,F,1982-04-23,2025-04-22,2026-09-07,44,SAL-Urgencia-G3,3
+P1579,Manufactura,Concepción,Ventas,Administrativos,F,1999-09-08,2025-04-24,,44,MAN-Ventas-G6,6
+P1580,Energia,Zona Sur,Mantenimiento,Profesionales,F,1991-05-23,2025-04-24,2026-10-29,44,ENE-Mantenimiento-G3,3
+P1581,Salud,Clínica Centro,Apoyo,Directivos,M,1991-07-11,2025-04-29,,44,SAL-Apoyo-G1,1
+P1582,Energia,Zona Norte,Mantenimiento,Operarios,M,1997-09-20,2025-04-30,,44,ENE-Mantenimiento-G7,7
+P1583,Manufactura,Santiago,Producción,Operarios,M,1981-07-28,2025-04-30,,44,MAN-Producción-G7,7
+P1584,Manufactura,Concepción,Calidad,Técnicos,M,1982-11-19,2025-05-05,2025-07-30,44,MAN-Calidad-G5,5
+P1585,Salud,Clínica Oriente,Urgencia,Técnicos,F,2004-01-08,2025-05-07,,44,SAL-Urgencia-G5,5
+P1586,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1991-10-27,2025-05-07,,44,MAN-Administración y finanzas-G6,6
+P1587,Energia,Zona Sur,Operación de centrales,Directivos,M,1986-12-24,2025-05-12,,44,ENE-Operación de centrales-G1,1
+P1588,Salud,Clínica Oriente,Hospitalización,Técnicos,F,2004-05-02,2025-05-12,,44,SAL-Hospitalización-G5,5
+P1589,Salud,Clínica Oriente,Pabellón,Auxiliares,F,2000-09-26,2025-05-13,2026-01-29,44,SAL-Pabellón-G7,7
+P1590,Salud,Clínica Oriente,Urgencia,Profesionales,M,2000-06-14,2025-05-14,2025-10-09,44,SAL-Urgencia-G3,3
+P1591,Salud,Clínica Centro,Apoyo,Directivos,F,1992-02-06,2025-05-16,,44,SAL-Apoyo-G1,1
+P1592,Manufactura,Antofagasta,Producción,Técnicos,M,1994-09-08,2025-05-19,2025-12-18,44,MAN-Producción-G5,5
+P1593,Salud,Clínica Oriente,Hospitalización,Técnicos,F,2003-02-03,2025-05-19,,44,SAL-Hospitalización-G5,5
+P1594,Energia,Zona Centro,Centro de despacho,Profesionales,M,2004-06-15,2025-05-28,,44,ENE-Centro de despacho-G3,3
+P1595,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1984-07-10,2025-05-29,,44,SAL-Hospitalización-G7,7
+P1596,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,2004-05-20,2025-05-30,,44,MAN-Mantenimiento industrial-G5,5
+P1597,Manufactura,Santiago,Bodega y logística,Operarios,M,1977-01-08,2025-06-02,2026-03-09,44,MAN-Bodega y logística-G7,7
+P1598,Manufactura,Concepción,Producción,Operarios,M,2004-06-02,2025-06-02,,44,MAN-Producción-G7,7
+P1599,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1988-02-14,2025-06-03,,44,SAL-Hospitalización-G5,5
+P1600,Energia,Zona Sur,Mantenimiento,Técnicos,M,2000-05-25,2025-06-06,,44,ENE-Mantenimiento-G5,5
+P1601,Energia,Zona Norte,Operación de centrales,Técnicos,M,1990-03-03,2025-06-09,,44,ENE-Operación de centrales-G5,5
+P1602,Manufactura,Concepción,Bodega y logística,Administrativos,F,1987-02-26,2025-06-10,,44,MAN-Bodega y logística-G6,6
+P1603,Salud,Clínica Oriente,Apoyo,Auxiliares,F,1999-12-27,2025-06-13,,44,SAL-Apoyo-G7,7
+P1604,Manufactura,Antofagasta,Producción,Operarios,M,2002-06-14,2025-06-16,,44,MAN-Producción-G7,7
+P1605,Energia,Zona Centro,Operación de centrales,Profesionales,M,1995-02-04,2025-06-16,,44,ENE-Operación de centrales-G3,3
+P1606,Energia,Zona Centro,Comercial,Administrativos,F,1978-12-06,2025-06-16,,44,ENE-Comercial-G6,6
+P1607,Salud,Clínica Oriente,Urgencia,Técnicos,F,2001-02-13,2025-06-17,,44,SAL-Urgencia-G5,5
+P1608,Salud,Clínica Oriente,Pabellón,Profesionales,F,1986-02-04,2025-06-23,,44,SAL-Pabellón-G3,3
+P1609,Salud,Clínica Centro,Hospitalización,Técnicos,F,1990-06-08,2025-06-23,,44,SAL-Hospitalización-G5,5
+P1610,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1981-12-13,2025-06-24,,44,SAL-Hospitalización-G5,5
+P1611,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,1990-03-03,2025-06-30,2026-06-30,44,SAL-Ambulatorio-G5,5
+P1612,Salud,Clínica Centro,Urgencia,Técnicos,F,1991-01-21,2025-06-30,,44,SAL-Urgencia-G5,5
+P1613,Manufactura,Santiago,Producción,Operarios,M,1994-12-17,2025-06-30,,44,MAN-Producción-G7,7
+P1614,Manufactura,Santiago,Mantenimiento industrial,Técnicos,F,1993-03-12,2025-07-03,,44,MAN-Mantenimiento industrial-G5,5
+P1615,Manufactura,Santiago,Producción,Técnicos,M,1988-09-02,2025-07-03,,44,MAN-Producción-G5,5
+P1616,Energia,Zona Sur,Centro de despacho,Profesionales,M,1995-07-12,2025-07-04,,44,ENE-Centro de despacho-G3,3
+P1617,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1997-11-09,2025-07-07,,22,SAL-Ambulatorio-G5,5
+P1618,Salud,Clínica Centro,Urgencia,Técnicos,F,1988-12-17,2025-07-09,,44,SAL-Urgencia-G5,5
+P1619,Salud,Clínica Poniente,Hospitalización,Auxiliares,M,1993-11-02,2025-07-14,,44,SAL-Hospitalización-G7,7
+P1620,Manufactura,Concepción,Calidad,Técnicos,F,1995-05-28,2025-07-21,,44,MAN-Calidad-G5,5
+P1621,Salud,Clínica Oriente,Apoyo,Administrativos,F,1999-05-03,2025-07-21,2026-07-10,44,SAL-Apoyo-G6,6
+P1622,Manufactura,Santiago,Calidad,Técnicos,F,1989-07-04,2025-07-21,,44,MAN-Calidad-G5,5
+P1623,Manufactura,Concepción,Bodega y logística,Operarios,M,1988-03-23,2025-07-21,2026-07-27,44,MAN-Bodega y logística-G7,7
+P1624,Salud,Clínica Centro,Hospitalización,Profesionales,F,1979-08-27,2025-07-21,,44,SAL-Hospitalización-G3,3
+P1625,Energia,Zona Norte,Centro de despacho,Profesionales,M,1993-11-18,2025-07-28,,44,ENE-Centro de despacho-G3,3
+P1626,Manufactura,Concepción,Bodega y logística,Operarios,F,1998-04-21,2025-07-28,2026-02-16,44,MAN-Bodega y logística-G7,7
+P1627,Salud,Clínica Centro,Hospitalización,Técnicos,M,1995-04-22,2025-07-28,,44,SAL-Hospitalización-G5,5
+P1628,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1990-10-13,2025-07-31,,44,SAL-Ambulatorio-G6,6
+P1629,Salud,Clínica Centro,Apoyo,Administrativos,F,1985-05-22,2025-07-31,,44,SAL-Apoyo-G6,6
+P1630,Manufactura,Santiago,Ventas,Administrativos,M,1983-06-13,2025-08-04,2025-12-15,44,MAN-Ventas-G6,6
+P1631,Energia,Zona Centro,Mantenimiento,Profesionales,M,1986-02-27,2025-08-04,2026-08-28,44,ENE-Mantenimiento-G3,3
+P1632,Manufactura,Santiago,Producción,Directivos,M,1983-05-04,2025-08-04,,44,MAN-Producción-G1,1
+P1633,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1992-10-28,2025-08-04,,44,MAN-Administración y finanzas-G6,6
+P1634,Manufactura,Concepción,Producción,Operarios,M,2003-06-25,2025-08-07,,44,MAN-Producción-G7,7
+P1635,Salud,Clínica Centro,Urgencia,Técnicos,F,1993-11-04,2025-08-07,,44,SAL-Urgencia-G5,5
+P1636,Salud,Clínica Centro,Ambulatorio,Administrativos,F,1991-08-13,2025-08-11,,44,SAL-Ambulatorio-G6,6
+P1637,Energia,Zona Sur,Comercial,Administrativos,M,1998-04-10,2025-08-11,,44,ENE-Comercial-G6,6
+P1638,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1996-08-28,2025-08-14,,44,ENE-Gestión corporativa-G6,6
+P1639,Energia,Zona Centro,Operación de centrales,Profesionales,M,2001-11-25,2025-08-14,,44,ENE-Operación de centrales-G3,3
+P1640,Energia,Zona Sur,Centro de despacho,Profesionales,M,1985-07-09,2025-08-18,,44,ENE-Centro de despacho-G3,3
+P1641,Energia,Zona Norte,Mantenimiento,Técnicos,M,1989-08-09,2025-08-20,2026-10-02,44,ENE-Mantenimiento-G5,5
+P1642,Manufactura,Antofagasta,Producción,Operarios,M,1991-10-01,2025-08-20,2026-08-18,44,MAN-Producción-G7,7
+P1643,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,1994-04-18,2025-08-21,,44,MAN-Administración y finanzas-G6,6
+P1644,Manufactura,Concepción,Ventas,Profesionales,M,2004-10-26,2025-08-22,2025-11-20,44,MAN-Ventas-G3,3
+P1645,Manufactura,Santiago,Producción,Operarios,M,1996-08-18,2025-08-25,2026-04-27,44,MAN-Producción-G7,7
+P1646,Manufactura,Santiago,Producción,Profesionales,F,1989-06-10,2025-08-25,,44,MAN-Producción-G3,3
+P1647,Salud,Clínica Oriente,Urgencia,Técnicos,M,1983-10-17,2025-08-29,,44,SAL-Urgencia-G5,5
+P1648,Manufactura,Concepción,Calidad,Técnicos,M,1998-03-01,2025-08-29,,44,MAN-Calidad-G5,5
+P1649,Manufactura,Santiago,Producción,Operarios,M,1991-06-17,2025-09-01,,44,MAN-Producción-G7,7
+P1650,Salud,Clínica Oriente,Ambulatorio,Administrativos,F,1996-11-21,2025-09-01,,44,SAL-Ambulatorio-G6,6
+P1651,Manufactura,Concepción,Producción,Operarios,M,2003-03-03,2025-09-01,,44,MAN-Producción-G7,7
+P1652,Manufactura,Concepción,Producción,Técnicos,M,1992-08-14,2025-09-08,,44,MAN-Producción-G5,5
+P1653,Energia,Zona Centro,Comercial,Directivos,M,2004-11-09,2025-09-10,,44,ENE-Comercial-G1,1
+P1654,Manufactura,Santiago,Mantenimiento industrial,Operarios,M,1999-04-20,2025-09-11,,44,MAN-Mantenimiento industrial-G7,7
+P1655,Manufactura,Concepción,Producción,Operarios,M,1992-02-23,2025-09-15,2026-07-02,44,MAN-Producción-G7,7
+P1656,Manufactura,Antofagasta,Mantenimiento industrial,Técnicos,M,2000-12-20,2025-09-17,2026-11-25,22,MAN-Mantenimiento industrial-G5,5
+P1657,Manufactura,Santiago,Bodega y logística,Operarios,F,1993-06-09,2025-09-18,,44,MAN-Bodega y logística-G7,7
+P1658,Manufactura,Concepción,Producción,Profesionales,M,1993-06-15,2025-09-22,,44,MAN-Producción-G3,3
+P1659,Manufactura,Antofagasta,Producción,Técnicos,M,1991-11-12,2025-09-22,2026-03-16,44,MAN-Producción-G5,5
+P1660,Manufactura,Santiago,Producción,Operarios,M,2003-09-28,2025-09-22,2026-04-03,44,MAN-Producción-G7,7
+P1661,Manufactura,Santiago,Producción,Operarios,M,2000-06-19,2025-09-22,2026-07-07,44,MAN-Producción-G7,7
+P1662,Salud,Clínica Poniente,Hospitalización,Técnicos,M,1991-09-07,2025-09-29,,44,SAL-Hospitalización-G5,5
+P1663,Salud,Clínica Centro,UCI,Directivos,F,1993-03-05,2025-09-29,,44,SAL-UCI-G1,1
+P1664,Manufactura,Santiago,Producción,Técnicos,M,1992-01-20,2025-09-29,,44,MAN-Producción-G5,5
+P1665,Manufactura,Antofagasta,Bodega y logística,Operarios,M,2000-08-08,2025-09-29,,44,MAN-Bodega y logística-G7,7
+P1666,Salud,Clínica Centro,Ambulatorio,Administrativos,M,1979-04-03,2025-10-02,,44,SAL-Ambulatorio-G6,6
+P1667,Salud,Clínica Oriente,Urgencia,Profesionales,M,2003-03-10,2025-10-06,,44,SAL-Urgencia-G3,3
+P1668,Manufactura,Santiago,Producción,Profesionales,F,2004-08-11,2025-10-06,2025-12-22,22,MAN-Producción-G3,3
+P1669,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-07-13,2025-10-06,2026-03-17,44,MAN-Bodega y logística-G7,7
+P1670,Manufactura,Santiago,Bodega y logística,Operarios,M,1989-06-06,2025-10-06,,44,MAN-Bodega y logística-G7,7
+P1671,Energia,Zona Centro,Mantenimiento,Técnicos,M,1990-11-02,2025-10-09,,44,ENE-Mantenimiento-G5,5
+P1672,Manufactura,Santiago,Ventas,Profesionales,M,1982-05-07,2025-10-10,2026-12-11,44,MAN-Ventas-G3,3
+P1673,Energia,Zona Sur,Comercial,Administrativos,M,1999-04-10,2025-10-13,2025-10-24,44,ENE-Comercial-G6,6
+P1674,Manufactura,Santiago,Mantenimiento industrial,Operarios,F,1985-08-01,2025-10-13,,44,MAN-Mantenimiento industrial-G7,7
+P1675,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1988-05-05,2025-10-16,,44,SAL-Ambulatorio-G3,3
+P1676,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1986-11-14,2025-10-16,,44,SAL-Ambulatorio-G3,3
+P1677,Salud,Clínica Oriente,Urgencia,Técnicos,F,2004-12-11,2025-10-20,,44,SAL-Urgencia-G5,5
+P1678,Salud,Clínica Centro,Urgencia,Auxiliares,M,1988-06-10,2025-10-20,,44,SAL-Urgencia-G7,7
+P1679,Salud,Clínica Centro,Hospitalización,Profesionales,M,1994-05-03,2025-10-22,,22,SAL-Hospitalización-G3,3
+P1680,Salud,Clínica Centro,Urgencia,Técnicos,F,2000-06-14,2025-10-24,,44,SAL-Urgencia-G5,5
+P1681,Salud,Clínica Oriente,Urgencia,Técnicos,F,2004-06-06,2025-10-27,,44,SAL-Urgencia-G5,5
+P1682,Manufactura,Santiago,Administración y finanzas,Administrativos,M,2004-04-20,2025-10-27,,22,MAN-Administración y finanzas-G6,6
+P1683,Manufactura,Concepción,Calidad,Técnicos,F,1995-11-11,2025-10-28,,44,MAN-Calidad-G5,5
+P1684,Salud,Clínica Poniente,Apoyo,Administrativos,F,1989-12-02,2025-11-03,2026-10-12,44,SAL-Apoyo-G6,6
+P1685,Salud,Clínica Centro,Urgencia,Técnicos,F,1977-08-21,2025-11-06,2026-05-14,44,SAL-Urgencia-G5,5
+P1686,Salud,Clínica Poniente,UCI,Técnicos,F,1991-06-09,2025-11-10,,44,SAL-UCI-G5,5
+P1687,Salud,Clínica Centro,Apoyo,Administrativos,F,2000-06-08,2025-11-10,,22,SAL-Apoyo-G6,6
+P1688,Manufactura,Antofagasta,Administración y finanzas,Administrativos,F,2004-05-09,2025-11-10,,44,MAN-Administración y finanzas-G6,6
+P1689,Manufactura,Antofagasta,Bodega y logística,Operarios,M,2003-08-17,2025-11-11,,44,MAN-Bodega y logística-G7,7
+P1690,Manufactura,Concepción,Producción,Técnicos,M,2000-06-17,2025-11-12,2026-12-15,44,MAN-Producción-G5,5
+P1691,Energia,Zona Sur,Gestión corporativa,Administrativos,M,1995-05-15,2025-11-17,,44,ENE-Gestión corporativa-G6,6
+P1692,Manufactura,Santiago,Producción,Operarios,F,2004-10-09,2025-11-18,,44,MAN-Producción-G7,7
+P1693,Salud,Clínica Centro,Urgencia,Técnicos,F,1995-06-09,2025-11-21,,44,SAL-Urgencia-G5,5
+P1694,Salud,Clínica Poniente,Urgencia,Profesionales,F,1984-03-12,2025-11-24,,44,SAL-Urgencia-G3,3
+P1695,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1995-01-20,2025-11-24,,44,MAN-Administración y finanzas-G6,6
+P1696,Energia,Zona Sur,Centro de despacho,Directivos,F,1994-06-18,2025-12-02,,44,ENE-Centro de despacho-G1,1
+P1697,Manufactura,Concepción,Bodega y logística,Administrativos,F,1984-03-27,2025-12-03,,44,MAN-Bodega y logística-G6,6
+P1698,Energia,Zona Centro,Mantenimiento,Operarios,F,2001-04-23,2025-12-04,,44,ENE-Mantenimiento-G7,7
+P1699,Energia,Zona Centro,Gestión corporativa,Administrativos,F,2003-09-10,2025-12-05,2026-10-28,22,ENE-Gestión corporativa-G6,6
+P1700,Salud,Clínica Poniente,Hospitalización,Profesionales,F,2001-12-21,2025-12-08,,44,SAL-Hospitalización-G3,3
+P1701,Manufactura,Concepción,Producción,Técnicos,M,1981-03-09,2025-12-11,2026-11-10,44,MAN-Producción-G5,5
+P1702,Manufactura,Antofagasta,Administración y finanzas,Profesionales,M,1999-06-08,2025-12-11,,44,MAN-Administración y finanzas-G3,3
+P1703,Energia,Zona Sur,Operación de centrales,Profesionales,F,2001-10-21,2025-12-12,,44,ENE-Operación de centrales-G3,3
+P1704,Salud,Clínica Centro,Pabellón,Auxiliares,F,1994-03-12,2025-12-18,,44,SAL-Pabellón-G7,7
+P1705,Salud,Clínica Centro,Apoyo,Directivos,F,1971-08-25,2025-12-18,2026-09-29,44,SAL-Apoyo-G1,1
+P1706,Manufactura,Antofagasta,Calidad,Técnicos,M,1986-09-28,2025-12-19,,22,MAN-Calidad-G5,5
+P1707,Salud,Clínica Oriente,Urgencia,Profesionales,M,2004-01-09,2025-12-19,,44,SAL-Urgencia-G3,3
+P1708,Manufactura,Concepción,Producción,Operarios,M,1996-07-13,2025-12-22,,44,MAN-Producción-G7,7
+P1709,Manufactura,Concepción,Bodega y logística,Operarios,M,1993-11-22,2025-12-22,2026-12-04,44,MAN-Bodega y logística-G7,7
+P1710,Manufactura,Concepción,Calidad,Profesionales,F,1998-01-28,2025-12-22,2026-07-21,44,MAN-Calidad-G3,3
+P1711,Manufactura,Santiago,Producción,Operarios,M,1994-05-20,2025-12-24,2026-04-13,44,MAN-Producción-G7,7
+P1712,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1998-02-14,2025-12-24,,44,MAN-Bodega y logística-G7,7
+P1713,Energia,Zona Sur,Comercial,Administrativos,M,1986-03-19,2025-12-25,,44,ENE-Comercial-G6,6
+P1714,Salud,Clínica Centro,Hospitalización,Técnicos,F,1994-01-17,2025-12-31,,44,SAL-Hospitalización-G5,5
+P1715,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1994-10-04,2025-12-31,2026-03-13,44,SAL-Ambulatorio-G5,5
+P1716,Salud,Clínica Centro,Hospitalización,Profesionales,F,1982-09-02,2026-01-05,2026-08-21,44,SAL-Hospitalización-G3,3
+P1717,Manufactura,Concepción,Mantenimiento industrial,Técnicos,M,1995-10-28,2026-01-12,,44,MAN-Mantenimiento industrial-G5,5
+P1718,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1999-01-22,2026-01-12,2026-08-12,44,MAN-Administración y finanzas-G6,6
+P1719,Manufactura,Concepción,Ventas,Profesionales,F,1995-02-03,2026-01-12,2026-01-20,44,MAN-Ventas-G3,3
+P1720,Energia,Zona Sur,Mantenimiento,Técnicos,F,1997-02-07,2026-01-12,,44,ENE-Mantenimiento-G5,5
+P1721,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1988-07-09,2026-01-12,2026-08-26,44,SAL-Hospitalización-G7,7
+P1722,Salud,Clínica Poniente,Urgencia,Auxiliares,M,2002-01-12,2026-01-26,,44,SAL-Urgencia-G7,7
+P1723,Energia,Zona Norte,Mantenimiento,Profesionales,M,1992-06-11,2026-01-26,2026-12-04,44,ENE-Mantenimiento-G3,3
+P1724,Salud,Clínica Oriente,Hospitalización,Profesionales,F,1996-07-28,2026-01-28,2026-11-20,44,SAL-Hospitalización-G3,3
+P1725,Manufactura,Antofagasta,Producción,Técnicos,M,2000-08-18,2026-01-30,,44,MAN-Producción-G5,5
+P1726,Manufactura,Santiago,Bodega y logística,Operarios,M,1991-06-11,2026-02-02,2026-06-01,44,MAN-Bodega y logística-G7,7
+P1727,Manufactura,Santiago,Producción,Profesionales,F,1981-01-07,2026-02-02,,44,MAN-Producción-G3,3
+P1728,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,2004-10-14,2026-02-03,,44,SAL-Hospitalización-G7,7
+P1729,Salud,Clínica Centro,Apoyo,Administrativos,F,2004-11-16,2026-02-04,2026-10-30,22,SAL-Apoyo-G6,6
+P1730,Salud,Clínica Centro,Apoyo,Auxiliares,M,2005-01-21,2026-02-05,,44,SAL-Apoyo-G7,7
+P1731,Manufactura,Santiago,Ventas,Administrativos,F,1995-06-27,2026-02-09,2026-04-20,44,MAN-Ventas-G6,6
+P1732,Manufactura,Santiago,Producción,Operarios,M,2005-06-24,2026-02-10,,44,MAN-Producción-G7,7
+P1733,Salud,Clínica Centro,Pabellón,Profesionales,F,2003-01-12,2026-02-10,2026-10-15,44,SAL-Pabellón-G3,3
+P1734,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-09-24,2026-02-24,,44,MAN-Bodega y logística-G7,7
+P1735,Energia,Zona Centro,Operación de centrales,Profesionales,M,1991-08-19,2026-03-02,,44,ENE-Operación de centrales-G3,3
+P1736,Manufactura,Santiago,Bodega y logística,Operarios,M,2005-02-18,2026-03-06,,44,MAN-Bodega y logística-G7,7
+P1737,Manufactura,Concepción,Ventas,Profesionales,F,1978-02-27,2026-03-09,,44,MAN-Ventas-G3,3
+P1738,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1979-07-16,2026-03-09,,44,SAL-Ambulatorio-G3,3
+P1739,Salud,Clínica Oriente,Pabellón,Técnicos,F,1999-01-26,2026-03-11,,44,SAL-Pabellón-G5,5
+P1740,Salud,Clínica Oriente,Pabellón,Auxiliares,F,1999-03-12,2026-03-12,2026-09-21,44,SAL-Pabellón-G7,7
+P1741,Manufactura,Santiago,Producción,Técnicos,M,1999-08-17,2026-03-17,2026-12-02,44,MAN-Producción-G5,5
+P1742,Energia,Zona Sur,Mantenimiento,Técnicos,F,1983-11-21,2026-03-24,,44,ENE-Mantenimiento-G5,5
+P1743,Energia,Zona Sur,Gestión corporativa,Directivos,M,1984-09-19,2026-03-24,,44,ENE-Gestión corporativa-G1,1
+P1744,Salud,Clínica Oriente,Apoyo,Administrativos,F,1983-06-05,2026-03-25,,44,SAL-Apoyo-G6,6
+P1745,Manufactura,Santiago,Ventas,Administrativos,F,1995-03-20,2026-03-27,2026-05-25,44,MAN-Ventas-G6,6
+P1746,Energia,Zona Norte,Gestión corporativa,Profesionales,M,1982-03-12,2026-03-30,,22,ENE-Gestión corporativa-G3,3
+P1747,Manufactura,Santiago,Administración y finanzas,Profesionales,F,2005-04-15,2026-03-30,,44,MAN-Administración y finanzas-G3,3
+P1748,Manufactura,Santiago,Producción,Operarios,M,1991-02-15,2026-03-31,,44,MAN-Producción-G7,7
+P1749,Salud,Clínica Poniente,Hospitalización,Profesionales,F,2005-03-28,2026-04-01,2026-06-23,44,SAL-Hospitalización-G3,3
+P1750,Salud,Clínica Centro,Pabellón,Auxiliares,F,1997-02-22,2026-04-03,,44,SAL-Pabellón-G7,7
+P1751,Energia,Zona Norte,Centro de despacho,Profesionales,F,1993-12-19,2026-04-06,,44,ENE-Centro de despacho-G3,3
+P1752,Salud,Clínica Poniente,Ambulatorio,Directivos,F,1983-10-11,2026-04-06,,44,SAL-Ambulatorio-G1,1
+P1753,Manufactura,Antofagasta,Ventas,Administrativos,F,1991-01-18,2026-04-07,,44,MAN-Ventas-G6,6
+P1754,Salud,Clínica Oriente,Apoyo,Administrativos,F,1992-07-21,2026-04-15,,44,SAL-Apoyo-G6,6
+P1755,Manufactura,Santiago,Producción,Operarios,M,2003-09-24,2026-04-16,,44,MAN-Producción-G7,7
+P1756,Manufactura,Concepción,Producción,Operarios,M,1996-05-02,2026-04-16,,44,MAN-Producción-G7,7
+P1757,Manufactura,Antofagasta,Producción,Operarios,M,1988-06-05,2026-04-20,,44,MAN-Producción-G7,7
+P1758,Energia,Zona Norte,Comercial,Profesionales,F,1995-02-04,2026-04-20,2026-09-22,44,ENE-Comercial-G3,3
+P1759,Manufactura,Santiago,Bodega y logística,Operarios,M,1997-01-04,2026-04-20,,44,MAN-Bodega y logística-G7,7
+P1760,Energia,Zona Centro,Operación de centrales,Operarios,M,2004-12-05,2026-04-22,,44,ENE-Operación de centrales-G7,7
+P1761,Manufactura,Santiago,Administración y finanzas,Profesionales,F,1998-09-11,2026-04-29,,44,MAN-Administración y finanzas-G3,3
+P1762,Manufactura,Concepción,Bodega y logística,Administrativos,F,2005-02-26,2026-04-29,,44,MAN-Bodega y logística-G6,6
+P1763,Manufactura,Antofagasta,Producción,Técnicos,M,1995-06-16,2026-04-29,2026-05-08,44,MAN-Producción-G5,5
+P1764,Manufactura,Concepción,Bodega y logística,Operarios,M,2004-04-24,2026-04-30,2026-10-16,44,MAN-Bodega y logística-G7,7
+P1765,Salud,Clínica Centro,Urgencia,Técnicos,F,1988-10-18,2026-05-01,,44,SAL-Urgencia-G5,5
+P1766,Manufactura,Antofagasta,Producción,Operarios,M,1995-12-08,2026-05-04,,44,MAN-Producción-G7,7
+P1767,Manufactura,Santiago,Producción,Operarios,M,1989-09-05,2026-05-04,,44,MAN-Producción-G7,7
+P1768,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1983-02-27,2026-05-06,,44,SAL-Ambulatorio-G5,5
+P1769,Energia,Zona Norte,Operación de centrales,Operarios,M,1984-03-07,2026-05-06,2026-10-26,44,ENE-Operación de centrales-G7,7
+P1770,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1990-07-22,2026-05-11,,44,MAN-Mantenimiento industrial-G5,5
+P1771,Energia,Zona Norte,Centro de despacho,Técnicos,M,2004-07-27,2026-05-11,,44,ENE-Centro de despacho-G5,5
+P1772,Manufactura,Concepción,Ventas,Administrativos,M,1997-05-22,2026-05-13,,44,MAN-Ventas-G6,6
+P1773,Salud,Clínica Oriente,Ambulatorio,Técnicos,F,2001-08-18,2026-05-14,,44,SAL-Ambulatorio-G5,5
+P1774,Manufactura,Santiago,Bodega y logística,Operarios,M,1998-11-14,2026-05-15,,44,MAN-Bodega y logística-G7,7
+P1775,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,2000-02-15,2026-05-18,2026-07-03,44,SAL-Ambulatorio-G3,3
+P1776,Manufactura,Santiago,Producción,Operarios,M,1990-03-17,2026-05-20,,44,MAN-Producción-G7,7
+P1777,Salud,Clínica Poniente,Urgencia,Técnicos,F,1990-03-25,2026-05-26,,22,SAL-Urgencia-G5,5
+P1778,Manufactura,Santiago,Bodega y logística,Operarios,M,1983-11-08,2026-06-01,2026-12-28,44,MAN-Bodega y logística-G7,7
+P1779,Manufactura,Santiago,Producción,Operarios,F,1989-10-19,2026-06-01,,44,MAN-Producción-G7,7
+P1780,Energia,Zona Centro,Centro de despacho,Profesionales,M,1996-10-01,2026-06-01,,44,ENE-Centro de despacho-G3,3
+P1781,Manufactura,Santiago,Administración y finanzas,Administrativos,M,2005-10-08,2026-06-01,2026-06-05,44,MAN-Administración y finanzas-G6,6
+P1782,Salud,Clínica Oriente,Pabellón,Profesionales,M,1989-04-21,2026-06-03,,44,SAL-Pabellón-G3,3
+P1783,Manufactura,Santiago,Producción,Operarios,M,2004-12-10,2026-06-05,,22,MAN-Producción-G7,7
+P1784,Manufactura,Santiago,Ventas,Administrativos,M,1999-01-04,2026-06-08,2026-06-17,44,MAN-Ventas-G6,6
+P1785,Energia,Zona Norte,Transmisión,Técnicos,M,1992-09-05,2026-06-08,,44,ENE-Transmisión-G5,5
+P1786,Manufactura,Santiago,Bodega y logística,Operarios,M,1995-07-17,2026-06-08,,22,MAN-Bodega y logística-G7,7
+P1787,Manufactura,Santiago,Bodega y logística,Administrativos,F,2005-08-08,2026-06-09,,44,MAN-Bodega y logística-G6,6
+P1788,Manufactura,Antofagasta,Producción,Técnicos,M,1987-10-03,2026-06-09,,44,MAN-Producción-G5,5
+P1789,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,1989-12-09,2026-06-11,,44,SAL-Hospitalización-G7,7
+P1790,Manufactura,Santiago,Producción,Operarios,M,1996-12-18,2026-06-11,,44,MAN-Producción-G7,7
+P1791,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1998-10-23,2026-06-15,,44,SAL-Ambulatorio-G3,3
+P1792,Salud,Clínica Oriente,Hospitalización,Profesionales,F,2000-12-06,2026-06-16,,22,SAL-Hospitalización-G3,3
+P1793,Manufactura,Antofagasta,Producción,Operarios,M,2005-05-17,2026-06-17,2026-07-23,44,MAN-Producción-G7,7
+P1794,Salud,Clínica Centro,Apoyo,Administrativos,M,1988-12-07,2026-06-17,,44,SAL-Apoyo-G6,6
+P1795,Salud,Clínica Centro,Urgencia,Profesionales,M,1996-01-24,2026-06-18,2026-11-18,44,SAL-Urgencia-G3,3
+P1796,Salud,Clínica Oriente,Apoyo,Administrativos,M,2005-06-25,2026-06-22,,44,SAL-Apoyo-G6,6
+P1797,Manufactura,Concepción,Bodega y logística,Operarios,M,1994-06-24,2026-06-25,,44,MAN-Bodega y logística-G7,7
+P1798,Manufactura,Santiago,Bodega y logística,Operarios,M,1991-06-01,2026-06-29,,22,MAN-Bodega y logística-G7,7
+P1799,Salud,Clínica Centro,Urgencia,Técnicos,F,1998-01-08,2026-06-30,,44,SAL-Urgencia-G5,5
+P1800,Energia,Zona Sur,Gestión corporativa,Directivos,F,1996-01-03,2026-07-06,2026-08-03,44,ENE-Gestión corporativa-G1,1
+P1801,Manufactura,Concepción,Calidad,Profesionales,M,1994-05-01,2026-07-06,,44,MAN-Calidad-G3,3
+P1802,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1990-10-02,2026-07-06,,44,MAN-Mantenimiento industrial-G5,5
+P1803,Energia,Zona Centro,Operación de centrales,Técnicos,M,1995-05-08,2026-07-07,,44,ENE-Operación de centrales-G5,5
+P1804,Salud,Clínica Poniente,Hospitalización,Profesionales,F,1985-07-19,2026-07-13,,44,SAL-Hospitalización-G3,3
+P1805,Manufactura,Santiago,Administración y finanzas,Administrativos,F,2005-02-28,2026-07-13,,44,MAN-Administración y finanzas-G6,6
+P1806,Manufactura,Santiago,Bodega y logística,Operarios,F,2005-02-26,2026-07-22,,44,MAN-Bodega y logística-G7,7
+P1807,Salud,Clínica Poniente,Pabellón,Profesionales,M,2000-04-10,2026-07-24,,44,SAL-Pabellón-G3,3
+P1808,Energia,Zona Norte,Mantenimiento,Técnicos,M,1988-11-04,2026-07-27,,44,ENE-Mantenimiento-G5,5
+P1809,Salud,Clínica Centro,Apoyo,Administrativos,M,2004-12-16,2026-07-27,,44,SAL-Apoyo-G6,6
+P1810,Manufactura,Santiago,Ventas,Administrativos,M,1993-08-28,2026-07-27,,44,MAN-Ventas-G6,6
+P1811,Energia,Zona Centro,Gestión corporativa,Administrativos,F,2002-05-06,2026-07-27,,44,ENE-Gestión corporativa-G6,6
+P1812,Manufactura,Concepción,Producción,Operarios,F,2005-08-23,2026-07-27,,44,MAN-Producción-G7,7
+P1813,Manufactura,Santiago,Bodega y logística,Operarios,M,1989-07-02,2026-07-29,,44,MAN-Bodega y logística-G7,7
+P1814,Manufactura,Santiago,Calidad,Profesionales,F,1996-08-26,2026-07-30,,44,MAN-Calidad-G3,3
+P1815,Manufactura,Concepción,Producción,Operarios,M,2005-08-21,2026-08-03,,44,MAN-Producción-G7,7
+P1816,Salud,Clínica Oriente,Ambulatorio,Técnicos,M,2005-08-07,2026-08-03,,44,SAL-Ambulatorio-G5,5
+P1817,Energia,Zona Norte,Comercial,Profesionales,F,1991-04-13,2026-08-04,,44,ENE-Comercial-G3,3
+P1818,Manufactura,Santiago,Producción,Operarios,M,2005-01-18,2026-08-04,,44,MAN-Producción-G7,7
+P1819,Salud,Clínica Centro,Hospitalización,Profesionales,F,1998-11-12,2026-08-07,,44,SAL-Hospitalización-G3,3
+P1820,Salud,Clínica Centro,Apoyo,Administrativos,F,1999-12-12,2026-08-10,,44,SAL-Apoyo-G6,6
+P1821,Manufactura,Santiago,Ventas,Administrativos,F,1992-08-07,2026-08-10,,44,MAN-Ventas-G6,6
+P1822,Manufactura,Santiago,Bodega y logística,Operarios,M,1999-06-25,2026-08-11,,44,MAN-Bodega y logística-G7,7
+P1823,Salud,Clínica Poniente,Hospitalización,Profesionales,F,2001-04-04,2026-08-12,,22,SAL-Hospitalización-G3,3
+P1824,Manufactura,Santiago,Producción,Profesionales,F,1988-12-13,2026-08-17,,44,MAN-Producción-G3,3
+P1825,Salud,Clínica Poniente,Urgencia,Técnicos,F,2005-05-27,2026-08-17,,22,SAL-Urgencia-G5,5
+P1826,Manufactura,Santiago,Producción,Operarios,M,2001-04-19,2026-08-18,,44,MAN-Producción-G7,7
+P1827,Salud,Clínica Oriente,Urgencia,Técnicos,F,2000-10-11,2026-08-20,,44,SAL-Urgencia-G5,5
+P1828,Manufactura,Concepción,Mantenimiento industrial,Directivos,M,1976-04-04,2026-08-24,,44,MAN-Mantenimiento industrial-G1,1
+P1829,Manufactura,Santiago,Producción,Directivos,F,1988-02-02,2026-08-24,,44,MAN-Producción-G1,1
+P1830,Manufactura,Concepción,Producción,Operarios,M,1998-04-24,2026-08-24,,22,MAN-Producción-G7,7
+P1831,Salud,Clínica Poniente,Pabellón,Técnicos,F,2005-02-10,2026-08-24,,22,SAL-Pabellón-G5,5
+P1832,Salud,Clínica Poniente,Ambulatorio,Administrativos,M,1983-02-01,2026-08-27,,44,SAL-Ambulatorio-G6,6
+P1833,Salud,Clínica Oriente,Apoyo,Administrativos,F,1978-11-10,2026-09-03,,44,SAL-Apoyo-G6,6
+P1834,Energia,Zona Sur,Transmisión,Técnicos,F,2005-07-23,2026-09-04,,44,ENE-Transmisión-G5,5
+P1835,Energia,Zona Centro,Transmisión,Técnicos,M,2005-04-03,2026-09-04,,44,ENE-Transmisión-G5,5
+P1836,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1996-06-05,2026-09-07,,44,SAL-Ambulatorio-G3,3
+P1837,Salud,Clínica Oriente,Pabellón,Directivos,F,1985-08-08,2026-09-07,,44,SAL-Pabellón-G1,1
+P1838,Energia,Zona Norte,Operación de centrales,Operarios,M,1998-11-03,2026-09-08,,44,ENE-Operación de centrales-G7,7
+P1839,Salud,Clínica Oriente,UCI,Auxiliares,F,1978-03-06,2026-09-09,,44,SAL-UCI-G7,7
+P1840,Manufactura,Antofagasta,Producción,Operarios,M,1991-01-19,2026-09-11,,44,MAN-Producción-G7,7
+P1841,Salud,Clínica Oriente,Hospitalización,Técnicos,M,1996-07-18,2026-09-14,,44,SAL-Hospitalización-G5,5
+P1842,Energia,Zona Norte,Operación de centrales,Profesionales,M,1991-05-02,2026-09-14,,44,ENE-Operación de centrales-G3,3
+P1843,Salud,Clínica Centro,Ambulatorio,Técnicos,F,1993-04-01,2026-09-15,,44,SAL-Ambulatorio-G5,5
+P1844,Energia,Zona Norte,Gestión corporativa,Directivos,F,1997-02-02,2026-09-18,,44,ENE-Gestión corporativa-G1,1
+P1845,Manufactura,Concepción,Bodega y logística,Operarios,M,2005-10-19,2026-09-18,2026-10-14,44,MAN-Bodega y logística-G7,7
+P1846,Manufactura,Antofagasta,Bodega y logística,Administrativos,M,1974-02-20,2026-09-21,,44,MAN-Bodega y logística-G6,6
+P1847,Salud,Clínica Centro,Hospitalización,Profesionales,M,2002-10-28,2026-09-21,2026-10-13,44,SAL-Hospitalización-G3,3
+P1848,Manufactura,Santiago,Bodega y logística,Operarios,M,1989-05-25,2026-09-22,,44,MAN-Bodega y logística-G7,7
+P1849,Manufactura,Concepción,Ventas,Administrativos,F,1997-03-13,2026-09-23,,44,MAN-Ventas-G6,6
+P1850,Manufactura,Santiago,Producción,Técnicos,F,1987-10-07,2026-09-28,,44,MAN-Producción-G5,5
+P1851,Energia,Zona Norte,Gestión corporativa,Administrativos,M,1997-03-02,2026-09-28,,44,ENE-Gestión corporativa-G6,6
+P1852,Manufactura,Concepción,Bodega y logística,Operarios,M,1996-03-03,2026-09-28,,22,MAN-Bodega y logística-G7,7
+P1853,Manufactura,Santiago,Administración y finanzas,Administrativos,F,1998-11-22,2026-09-28,,44,MAN-Administración y finanzas-G6,6
+P1854,Energia,Zona Norte,Comercial,Administrativos,F,1978-11-24,2026-09-29,,44,ENE-Comercial-G6,6
+P1855,Salud,Clínica Poniente,Urgencia,Profesionales,F,1988-09-06,2026-10-01,,44,SAL-Urgencia-G3,3
+P1856,Energia,Zona Sur,Gestión corporativa,Directivos,M,1998-12-01,2026-10-01,,44,ENE-Gestión corporativa-G1,1
+P1857,Manufactura,Concepción,Calidad,Profesionales,M,1998-09-19,2026-10-05,,44,MAN-Calidad-G3,3
+P1858,Energia,Zona Norte,Mantenimiento,Operarios,M,2002-08-11,2026-10-05,,44,ENE-Mantenimiento-G7,7
+P1859,Salud,Clínica Oriente,Hospitalización,Auxiliares,M,1982-04-03,2026-10-06,2026-11-05,44,SAL-Hospitalización-G7,7
+P1860,Manufactura,Santiago,Producción,Operarios,M,1995-01-12,2026-10-07,,44,MAN-Producción-G7,7
+P1861,Energia,Zona Norte,Mantenimiento,Operarios,M,2004-08-01,2026-10-09,,44,ENE-Mantenimiento-G7,7
+P1862,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1989-10-23,2026-10-12,,44,MAN-Administración y finanzas-G6,6
+P1863,Energia,Zona Norte,Centro de despacho,Profesionales,M,1993-10-25,2026-10-12,,44,ENE-Centro de despacho-G3,3
+P1864,Manufactura,Santiago,Bodega y logística,Operarios,M,1990-12-22,2026-10-12,,44,MAN-Bodega y logística-G7,7
+P1865,Salud,Clínica Centro,Hospitalización,Técnicos,M,1995-08-15,2026-10-13,,44,SAL-Hospitalización-G5,5
+P1866,Salud,Clínica Poniente,Pabellón,Auxiliares,M,2003-04-03,2026-10-16,,44,SAL-Pabellón-G7,7
+P1867,Salud,Clínica Centro,Hospitalización,Profesionales,M,1990-03-20,2026-10-19,,44,SAL-Hospitalización-G3,3
+P1868,Energia,Zona Sur,Transmisión,Operarios,M,2000-01-06,2026-10-19,,44,ENE-Transmisión-G7,7
+P1869,Manufactura,Antofagasta,Producción,Operarios,M,1981-01-26,2026-10-20,,44,MAN-Producción-G7,7
+P1870,Salud,Clínica Poniente,Ambulatorio,Administrativos,M,1987-07-14,2026-10-26,,44,SAL-Ambulatorio-G6,6
+P1871,Salud,Clínica Oriente,Apoyo,Directivos,F,1981-11-15,2026-10-26,,44,SAL-Apoyo-G1,1
+P1872,Salud,Clínica Centro,Urgencia,Profesionales,F,1979-12-17,2026-10-26,,44,SAL-Urgencia-G3,3
+P1873,Manufactura,Santiago,Mantenimiento industrial,Técnicos,M,1996-11-13,2026-10-26,,44,MAN-Mantenimiento industrial-G5,5
+P1874,Salud,Clínica Oriente,Ambulatorio,Profesionales,F,1999-03-22,2026-10-29,,44,SAL-Ambulatorio-G3,3
+P1875,Salud,Clínica Poniente,Hospitalización,Auxiliares,F,2001-02-25,2026-11-03,,44,SAL-Hospitalización-G7,7
+P1876,Salud,Clínica Centro,Pabellón,Técnicos,F,1983-09-25,2026-11-09,,44,SAL-Pabellón-G5,5
+P1877,Energia,Zona Centro,Mantenimiento,Profesionales,M,1998-01-13,2026-11-09,,44,ENE-Mantenimiento-G3,3
+P1878,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1991-05-19,2026-11-09,,44,MAN-Administración y finanzas-G6,6
+P1879,Manufactura,Concepción,Administración y finanzas,Administrativos,F,1991-02-17,2026-11-09,,44,MAN-Administración y finanzas-G6,6
+P1880,Salud,Clínica Poniente,Urgencia,Profesionales,M,2005-05-02,2026-11-09,2026-11-20,44,SAL-Urgencia-G3,3
+P1881,Energia,Zona Norte,Comercial,Profesionales,M,1984-05-02,2026-11-09,,44,ENE-Comercial-G3,3
+P1882,Manufactura,Santiago,Calidad,Profesionales,F,2001-07-04,2026-11-10,2026-11-13,44,MAN-Calidad-G3,3
+P1883,Salud,Clínica Oriente,Pabellón,Auxiliares,F,2002-12-18,2026-11-16,,44,SAL-Pabellón-G7,7
+P1884,Manufactura,Santiago,Calidad,Técnicos,F,1989-10-05,2026-11-19,,44,MAN-Calidad-G5,5
+P1885,Salud,Clínica Centro,Apoyo,Administrativos,F,1999-02-27,2026-11-19,,44,SAL-Apoyo-G6,6
+P1886,Manufactura,Concepción,Bodega y logística,Operarios,F,1978-08-14,2026-11-23,,44,MAN-Bodega y logística-G7,7
+P1887,Manufactura,Concepción,Bodega y logística,Operarios,M,2004-03-20,2026-11-23,,44,MAN-Bodega y logística-G7,7
+P1888,Energia,Zona Centro,Comercial,Administrativos,F,1985-07-27,2026-11-24,,22,ENE-Comercial-G6,6
+P1889,Energia,Zona Norte,Mantenimiento,Técnicos,M,1998-01-23,2026-11-25,,44,ENE-Mantenimiento-G5,5
+P1890,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,1991-08-14,2026-11-26,,44,SAL-Ambulatorio-G3,3
+P1891,Energia,Zona Norte,Operación de centrales,Operarios,M,1991-05-27,2026-11-26,,22,ENE-Operación de centrales-G7,7
+P1892,Salud,Clínica Centro,Urgencia,Directivos,F,1993-05-20,2026-11-27,,44,SAL-Urgencia-G1,1
+P1893,Manufactura,Antofagasta,Bodega y logística,Operarios,M,1982-10-16,2026-11-30,,44,MAN-Bodega y logística-G7,7
+P1894,Salud,Clínica Centro,Ambulatorio,Profesionales,F,1994-03-21,2026-11-30,,44,SAL-Ambulatorio-G3,3
+P1895,Energia,Zona Centro,Gestión corporativa,Administrativos,M,1996-11-13,2026-11-30,,44,ENE-Gestión corporativa-G6,6
+P1896,Salud,Clínica Oriente,Ambulatorio,Profesionales,M,2000-04-27,2026-12-01,,44,SAL-Ambulatorio-G3,3
+P1897,Salud,Clínica Centro,Apoyo,Directivos,F,2001-02-23,2026-12-02,,44,SAL-Apoyo-G1,1
+P1898,Salud,Clínica Centro,Pabellón,Profesionales,M,1991-08-21,2026-12-03,,44,SAL-Pabellón-G3,3
+P1899,Salud,Clínica Centro,Hospitalización,Profesionales,F,2002-05-10,2026-12-04,,44,SAL-Hospitalización-G3,3
+P1900,Manufactura,Concepción,Calidad,Técnicos,M,1988-01-03,2026-12-07,,44,MAN-Calidad-G5,5
+P1901,Energia,Zona Sur,Operación de centrales,Operarios,M,2003-05-20,2026-12-07,,44,ENE-Operación de centrales-G7,7
+P1902,Salud,Clínica Oriente,Hospitalización,Profesionales,M,1999-11-23,2026-12-08,,44,SAL-Hospitalización-G3,3
+P1903,Energia,Zona Centro,Comercial,Administrativos,M,1991-12-07,2026-12-11,,44,ENE-Comercial-G6,6
+P1904,Salud,Clínica Poniente,Hospitalización,Técnicos,F,1982-08-02,2026-12-14,,44,SAL-Hospitalización-G5,5
+P1905,Manufactura,Santiago,Producción,Operarios,M,2005-04-05,2026-12-14,,44,MAN-Producción-G7,7
+P1906,Salud,Clínica Centro,UCI,Técnicos,F,2004-08-07,2026-12-14,,22,SAL-UCI-G5,5
+P1907,Salud,Clínica Poniente,Apoyo,Administrativos,F,1987-12-11,2026-12-15,,44,SAL-Apoyo-G6,6
+P1908,Manufactura,Concepción,Administración y finanzas,Directivos,M,1986-04-08,2026-12-16,,44,MAN-Administración y finanzas-G1,1
+P1909,Manufactura,Santiago,Calidad,Profesionales,M,2001-12-14,2026-12-17,,44,MAN-Calidad-G3,3
+P1910,Manufactura,Santiago,Administración y finanzas,Administrativos,M,1982-07-02,2026-12-18,,44,MAN-Administración y finanzas-G6,6
+P1911,Salud,Clínica Poniente,Apoyo,Administrativos,F,1984-09-14,2026-12-21,,44,SAL-Apoyo-G6,6
+P1912,Energia,Zona Sur,Operación de centrales,Profesionales,F,1990-03-12,2026-12-21,,44,ENE-Operación de centrales-G3,3
+P1913,Manufactura,Santiago,Administración y finanzas,Directivos,M,1996-05-03,2026-12-21,,44,MAN-Administración y finanzas-G1,1
+P1914,Salud,Clínica Poniente,Pabellón,Profesionales,M,1996-04-14,2026-12-21,,44,SAL-Pabellón-G3,3
+P1915,Salud,Clínica Oriente,Hospitalización,Auxiliares,F,1995-06-20,2026-12-23,,44,SAL-Hospitalización-G7,7
+P1916,Manufactura,Concepción,Producción,Técnicos,M,2005-02-07,2026-12-24,,44,MAN-Producción-G5,5
+P1917,Salud,Clínica Oriente,Hospitalización,Técnicos,F,1996-03-06,2026-12-24,,44,SAL-Hospitalización-G5,5
+P1918,Energia,Zona Sur,Mantenimiento,Profesionales,M,2005-08-09,2026-12-25,,44,ENE-Mantenimiento-G3,3
+P1919,Salud,Clínica Centro,Apoyo,Administrativos,F,2001-12-16,2026-12-28,,44,SAL-Apoyo-G6,6
+P1920,Manufactura,Concepción,Bodega y logística,Operarios,M,2002-03-15,2026-12-29,,44,MAN-Bodega y logística-G7,7
+P1921,Salud,Clínica Poniente,Urgencia,Profesionales,F,2002-07-14,2026-12-29,,44,SAL-Urgencia-G3,3

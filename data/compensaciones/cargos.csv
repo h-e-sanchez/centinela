@@ -1,0 +1,93 @@
+cargo,industria,servicio,grado,estamento
+ENE-Centro de despacho-G1,Energia,Centro de despacho,1,Directivos
+ENE-Centro de despacho-G2,Energia,Centro de despacho,2,Profesionales
+ENE-Centro de despacho-G3,Energia,Centro de despacho,3,Profesionales
+ENE-Centro de despacho-G4,Energia,Centro de despacho,4,Técnicos
+ENE-Centro de despacho-G5,Energia,Centro de despacho,5,Técnicos
+ENE-Comercial-G1,Energia,Comercial,1,Directivos
+ENE-Comercial-G2,Energia,Comercial,2,Profesionales
+ENE-Comercial-G3,Energia,Comercial,3,Profesionales
+ENE-Comercial-G6,Energia,Comercial,6,Administrativos
+ENE-Gestión corporativa-G1,Energia,Gestión corporativa,1,Directivos
+ENE-Gestión corporativa-G2,Energia,Gestión corporativa,2,Profesionales
+ENE-Gestión corporativa-G3,Energia,Gestión corporativa,3,Profesionales
+ENE-Gestión corporativa-G6,Energia,Gestión corporativa,6,Administrativos
+ENE-Mantenimiento-G1,Energia,Mantenimiento,1,Directivos
+ENE-Mantenimiento-G2,Energia,Mantenimiento,2,Profesionales
+ENE-Mantenimiento-G3,Energia,Mantenimiento,3,Profesionales
+ENE-Mantenimiento-G4,Energia,Mantenimiento,4,Técnicos
+ENE-Mantenimiento-G5,Energia,Mantenimiento,5,Técnicos
+ENE-Mantenimiento-G7,Energia,Mantenimiento,7,Operarios
+ENE-Operación de centrales-G1,Energia,Operación de centrales,1,Directivos
+ENE-Operación de centrales-G2,Energia,Operación de centrales,2,Profesionales
+ENE-Operación de centrales-G3,Energia,Operación de centrales,3,Profesionales
+ENE-Operación de centrales-G4,Energia,Operación de centrales,4,Técnicos
+ENE-Operación de centrales-G5,Energia,Operación de centrales,5,Técnicos
+ENE-Operación de centrales-G7,Energia,Operación de centrales,7,Operarios
+ENE-Transmisión-G1,Energia,Transmisión,1,Directivos
+ENE-Transmisión-G2,Energia,Transmisión,2,Profesionales
+ENE-Transmisión-G3,Energia,Transmisión,3,Profesionales
+ENE-Transmisión-G4,Energia,Transmisión,4,Técnicos
+ENE-Transmisión-G5,Energia,Transmisión,5,Técnicos
+ENE-Transmisión-G7,Energia,Transmisión,7,Operarios
+MAN-Administración y finanzas-G1,Manufactura,Administración y finanzas,1,Directivos
+MAN-Administración y finanzas-G2,Manufactura,Administración y finanzas,2,Profesionales
+MAN-Administración y finanzas-G3,Manufactura,Administración y finanzas,3,Profesionales
+MAN-Administración y finanzas-G6,Manufactura,Administración y finanzas,6,Administrativos
+MAN-Bodega y logística-G1,Manufactura,Bodega y logística,1,Directivos
+MAN-Bodega y logística-G6,Manufactura,Bodega y logística,6,Administrativos
+MAN-Bodega y logística-G7,Manufactura,Bodega y logística,7,Operarios
+MAN-Calidad-G1,Manufactura,Calidad,1,Directivos
+MAN-Calidad-G2,Manufactura,Calidad,2,Profesionales
+MAN-Calidad-G3,Manufactura,Calidad,3,Profesionales
+MAN-Calidad-G4,Manufactura,Calidad,4,Técnicos
+MAN-Calidad-G5,Manufactura,Calidad,5,Técnicos
+MAN-Mantenimiento industrial-G1,Manufactura,Mantenimiento industrial,1,Directivos
+MAN-Mantenimiento industrial-G2,Manufactura,Mantenimiento industrial,2,Profesionales
+MAN-Mantenimiento industrial-G3,Manufactura,Mantenimiento industrial,3,Profesionales
+MAN-Mantenimiento industrial-G4,Manufactura,Mantenimiento industrial,4,Técnicos
+MAN-Mantenimiento industrial-G5,Manufactura,Mantenimiento industrial,5,Técnicos
+MAN-Mantenimiento industrial-G7,Manufactura,Mantenimiento industrial,7,Operarios
+MAN-Producción-G1,Manufactura,Producción,1,Directivos
+MAN-Producción-G2,Manufactura,Producción,2,Profesionales
+MAN-Producción-G3,Manufactura,Producción,3,Profesionales
+MAN-Producción-G4,Manufactura,Producción,4,Técnicos
+MAN-Producción-G5,Manufactura,Producción,5,Técnicos
+MAN-Producción-G7,Manufactura,Producción,7,Operarios
+MAN-Ventas-G1,Manufactura,Ventas,1,Directivos
+MAN-Ventas-G2,Manufactura,Ventas,2,Profesionales
+MAN-Ventas-G3,Manufactura,Ventas,3,Profesionales
+MAN-Ventas-G6,Manufactura,Ventas,6,Administrativos
+SAL-Ambulatorio-G1,Salud,Ambulatorio,1,Directivos
+SAL-Ambulatorio-G2,Salud,Ambulatorio,2,Profesionales
+SAL-Ambulatorio-G3,Salud,Ambulatorio,3,Profesionales
+SAL-Ambulatorio-G4,Salud,Ambulatorio,4,Técnicos
+SAL-Ambulatorio-G5,Salud,Ambulatorio,5,Técnicos
+SAL-Ambulatorio-G6,Salud,Ambulatorio,6,Administrativos
+SAL-Apoyo-G1,Salud,Apoyo,1,Directivos
+SAL-Apoyo-G6,Salud,Apoyo,6,Administrativos
+SAL-Apoyo-G7,Salud,Apoyo,7,Auxiliares
+SAL-Hospitalización-G1,Salud,Hospitalización,1,Directivos
+SAL-Hospitalización-G2,Salud,Hospitalización,2,Profesionales
+SAL-Hospitalización-G3,Salud,Hospitalización,3,Profesionales
+SAL-Hospitalización-G4,Salud,Hospitalización,4,Técnicos
+SAL-Hospitalización-G5,Salud,Hospitalización,5,Técnicos
+SAL-Hospitalización-G7,Salud,Hospitalización,7,Auxiliares
+SAL-Pabellón-G1,Salud,Pabellón,1,Directivos
+SAL-Pabellón-G2,Salud,Pabellón,2,Profesionales
+SAL-Pabellón-G3,Salud,Pabellón,3,Profesionales
+SAL-Pabellón-G4,Salud,Pabellón,4,Técnicos
+SAL-Pabellón-G5,Salud,Pabellón,5,Técnicos
+SAL-Pabellón-G7,Salud,Pabellón,7,Auxiliares
+SAL-UCI-G1,Salud,UCI,1,Directivos
+SAL-UCI-G2,Salud,UCI,2,Profesionales
+SAL-UCI-G3,Salud,UCI,3,Profesionales
+SAL-UCI-G4,Salud,UCI,4,Técnicos
+SAL-UCI-G5,Salud,UCI,5,Técnicos
+SAL-UCI-G7,Salud,UCI,7,Auxiliares
+SAL-Urgencia-G1,Salud,Urgencia,1,Directivos
+SAL-Urgencia-G2,Salud,Urgencia,2,Profesionales
+SAL-Urgencia-G3,Salud,Urgencia,3,Profesionales
+SAL-Urgencia-G4,Salud,Urgencia,4,Técnicos
+SAL-Urgencia-G5,Salud,Urgencia,5,Técnicos
+SAL-Urgencia-G7,Salud,Urgencia,7,Auxiliares
