@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "pricing-margenes"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d6edab21-46c5-50ed-a31b-0ef8b7f87d8f"
+  }
+}

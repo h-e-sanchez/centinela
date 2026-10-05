@@ -1,0 +1,56 @@
+/// Dimensión: productos o prestaciones de cada cuenta de ingreso, con su costo variable sobre la lista.
+table productos
+	lineageTag: 5822976b-da92-54ca-a891-a58ae08e27a2
+
+	column producto
+		dataType: string
+		lineageTag: 0f61a9de-d88e-5870-9e68-971aafd89fd9
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: ea2327ba-4d5d-5ffb-b3ef-907e07beb889
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: string
+		lineageTag: a8e7c676-bd53-5813-8f14-807b5fcb8903
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		lineageTag: 9659119b-f2cf-5126-8f34-5a6e203399eb
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_variable_pct
+		dataType: double
+		isHidden
+		formatString: 0%
+		lineageTag: 3341e2ce-04a1-584e-993e-c46a28ed9b9a
+		summarizeBy: none
+		sourceColumn: costo_variable_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition productos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("productos.csv", {{"producto", type text}, {"industria", type text}, {"linea", type text}, {"unidad", type text}, {"costo_variable_pct", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

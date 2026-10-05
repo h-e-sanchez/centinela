@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** especificado el 2026-10-05 · **Slug:** `pricing-margenes` · **Tema:** Control de gestión · Comercial
+**Estado:** construido el 2026-10-05 (pendiente Desktop y publicación) · **Slug:** `pricing-margenes` · **Tema:** Control de gestión · Comercial
 
 ## Qué resuelve
 
@@ -51,6 +51,12 @@ Generador previsto: `data/generar_pricing.py` (`SEMILLA = 42`) → `data/pricing
 | 7 | Rentabilidad por cliente | Curva ballena: margen acumulado por cliente ordenado de mayor a menor |
 | 8 | **Glosario** | Conceptos y medidas, generado desde el TMDL |
 
+Al construirlo cambiaron cuatro cosas:
+- **Canales de Manufactura:** siguen las cuentas de ingreso del #1 (retail, distribuidores, industrial nacional, exportación y postventa) y no incluyen e-commerce.
+- **Comparación de precio-volumen-mezcla:** es contra 2025. El presupuesto se compara en ingreso total, porque el #1 no lo abre en precio y volumen.
+- **Costo de servir:** va en cada línea de venta y no en una tabla aparte.
+- **Página nueva:** se sumó un simulador de precio con elasticidad por canal.
+
 ## Medidas DAX clave
 
 - `Precio neto realizado` y `% de realización` = precio neto ÷ precio de lista.
@@ -65,9 +71,9 @@ Generador previsto: `data/generar_pricing.py` (`SEMILLA = 42`) → `data/pricing
 
 | Industria | Resultado | Historia |
 |---|---|---|
-| Manufactura | Retail 4% de contribución | Retail mueve el mayor volumen, pero con rappel y costo de logística queda con el margen de contribución más bajo; e-commerce es chico y rentable |
-| Energía | Efecto precio +8% | En el año seco el ingreso crece por el precio spot, no por el volumen: el efecto precio explica casi toda la variación |
-| Salud | 18% de convenios fuera de política | Los convenios con empresas acumulan descuentos sobre la política y cuatro clientes quedan con margen negativo en la curva ballena |
+| Manufactura | Retail 4,3% de contribución | Retail mueve el mayor volumen, pero con rappel y costo de servir queda con el margen de contribución más bajo; industrial y exportación superan 30% |
+| Energía | 100% precio | Los ingresos de 2026 crecen $29 M sobre 2025 con el mismo volumen: el efecto precio explica toda la variación |
+| Salud | 21% de convenios fuera de política | Tres convenios negocian sobre la política: uno de cada cinco cargos de convenios queda fuera y dos convenios quedan con margen negativo |
 
 ## Habilidades para el catálogo
 

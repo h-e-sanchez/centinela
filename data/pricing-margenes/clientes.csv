@@ -1,0 +1,82 @@
+cliente,industria,canal,segmento
+Supermercados Ejemplo Uno,Manufactura,Retail,Estándar
+Supermercados Ejemplo Dos,Manufactura,Retail,Estándar
+Hipermercado Ejemplo,Manufactura,Retail,Estándar
+Mayorista Retail Ejemplo,Manufactura,Retail,Estándar
+Distribuidora Ejemplo 01,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 02,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 03,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 04,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 05,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 06,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 07,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 08,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 09,Manufactura,Distribuidores,Estándar
+Distribuidora Ejemplo 10,Manufactura,Distribuidores,Estándar
+Industria Cliente Ejemplo 01,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 02,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 03,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 04,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 05,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 06,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 07,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 08,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 09,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 10,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 11,Manufactura,Industrial nacional,Estándar
+Industria Cliente Ejemplo 12,Manufactura,Industrial nacional,Estándar
+Importador Ejemplo 01,Manufactura,Exportación,Estándar
+Importador Ejemplo 02,Manufactura,Exportación,Estándar
+Importador Ejemplo 03,Manufactura,Exportación,Estándar
+Importador Ejemplo 04,Manufactura,Exportación,Estándar
+Importador Ejemplo 05,Manufactura,Exportación,Estándar
+Cliente Postventa Ejemplo 01,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 02,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 03,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 04,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 05,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 06,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 07,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 08,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 09,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 10,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 11,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 12,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 13,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 14,Manufactura,Postventa,Estándar
+Cliente Postventa Ejemplo 15,Manufactura,Postventa,Estándar
+Cliente Libre Ejemplo 01,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 02,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 03,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 04,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 05,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 06,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 07,Energia,Clientes libres,Estándar
+Cliente Libre Ejemplo 08,Energia,Clientes libres,Estándar
+Distribuidora Eléctrica Ejemplo 01,Energia,Distribuidoras,Estándar
+Distribuidora Eléctrica Ejemplo 02,Energia,Distribuidoras,Estándar
+Distribuidora Eléctrica Ejemplo 03,Energia,Distribuidoras,Estándar
+Mercado spot (coordinador),Energia,Mercado spot,Estándar
+Usuarios del sistema de transmisión,Energia,Peajes,Estándar
+Fonasa,Salud,Fonasa,Estándar
+Isapre Ejemplo 01,Salud,Isapres,Estándar
+Isapre Ejemplo 02,Salud,Isapres,Estándar
+Isapre Ejemplo 03,Salud,Isapres,Estándar
+Isapre Ejemplo 04,Salud,Isapres,Estándar
+Isapre Ejemplo 05,Salud,Isapres,Estándar
+Isapre Ejemplo 06,Salud,Isapres,Estándar
+Empresa Convenio Ejemplo 01,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 02,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 03,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 04,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 05,Salud,Convenios con empresas,Sobre la política
+Empresa Convenio Ejemplo 06,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 07,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 08,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 09,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 10,Salud,Convenios con empresas,Sobre la política
+Empresa Convenio Ejemplo 11,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 12,Salud,Convenios con empresas,Sobre la política
+Empresa Convenio Ejemplo 13,Salud,Convenios con empresas,Estándar
+Empresa Convenio Ejemplo 14,Salud,Convenios con empresas,Estándar
+Pacientes particulares,Salud,Particulares,Estándar

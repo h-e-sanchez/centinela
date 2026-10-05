@@ -1,0 +1,47 @@
+/// Dimensión: clientes ficticios por canal. El segmento marca a quienes negocian sobre la política.
+table clientes
+	lineageTag: d2adaa44-97e8-501a-afe5-95237cefe457
+
+	column cliente
+		dataType: string
+		lineageTag: eae9e837-24d4-59af-aa01-f4585146bfae
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 3db3627e-9ac7-5dc8-85e0-9d626b5d1553
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal
+		dataType: string
+		isHidden
+		lineageTag: e91f0e8f-c3f4-5f49-93d8-36c43db3e396
+		summarizeBy: none
+		sourceColumn: canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento
+		dataType: string
+		lineageTag: 0d930f73-cbbf-5da3-bbdb-1e93311b2c7c
+		summarizeBy: none
+		sourceColumn: segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clientes = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("clientes.csv", {{"cliente", type text}, {"industria", type text}, {"canal", type text}, {"segmento", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

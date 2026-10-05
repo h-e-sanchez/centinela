@@ -1,0 +1,35 @@
+producto,industria,anio,precio_lista
+Línea consumo · Producto A,Manufactura,2025,12000
+Línea consumo · Producto A,Manufactura,2026,12480
+Línea consumo · Producto B,Manufactura,2025,8500
+Línea consumo · Producto B,Manufactura,2026,8840
+Línea consumo · Producto C,Manufactura,2025,15500
+Línea consumo · Producto C,Manufactura,2026,16120
+Línea industrial · Producto D,Manufactura,2025,240000
+Línea industrial · Producto D,Manufactura,2026,249600
+Línea industrial · Producto E,Manufactura,2025,410000
+Línea industrial · Producto E,Manufactura,2026,426400
+Contrato de mantención (mes),Manufactura,2025,1150000
+Contrato de mantención (mes),Manufactura,2026,1196000
+Kit de repuestos,Manufactura,2025,180000
+Kit de repuestos,Manufactura,2026,187200
+Energía contratada (MWh),Energia,2025,92000
+Energía contratada (MWh),Energia,2026,92000
+Energía regulada (MWh),Energia,2025,98000
+Energía regulada (MWh),Energia,2026,98000
+Energía spot (MWh),Energia,2025,110000
+Energía spot (MWh),Energia,2026,110000
+Peaje de transmisión (MWh),Energia,2025,18000
+Peaje de transmisión (MWh),Energia,2026,18000
+Consulta ambulatoria,Salud,2025,45000
+Consulta ambulatoria,Salud,2026,46800
+Examen de laboratorio,Salud,2025,28000
+Examen de laboratorio,Salud,2026,29120
+Día cama,Salud,2025,420000
+Día cama,Salud,2026,436800
+Medicamento facturado,Salud,2025,38000
+Medicamento facturado,Salud,2026,39520
+Cirugía programada,Salud,2025,3800000
+Cirugía programada,Salud,2026,3952000
+Cirugía de urgencia,Salud,2025,4600000
+Cirugía de urgencia,Salud,2026,4784000

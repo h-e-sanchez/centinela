@@ -1,0 +1,72 @@
+/// Cuentas de ingreso del Presupuesto del reporte #1, para comparar.
+table presupuesto_ingresos
+	lineageTag: 9a615548-5661-5261-b5a8-61b26eb0ff71
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: acbce0eb-1c6f-5f97-88ba-51109a98b9e1
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d2a50098-6dda-528b-bb4b-5c36aa3cd916
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: b4045014-c2c2-5d6a-a45a-2f965589dc55
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: fdf29150-a628-5885-9d9b-28f40bb8231e
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		isHidden
+		lineageTag: 674bd9cf-6111-558a-9fa9-d4322dbcf20a
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: f9f5495f-1ab6-5a4e-b9e4-fcd1b8873bab
+		summarizeBy: none
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition presupuesto_ingresos = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("presupuesto_ingresos.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"industria", type text}, {"sucursal", type text}, {"cuenta", type text}, {"monto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,14 @@
+canal,industria,descuento_maximo,costo_servir_pct,elasticidad,orden
+Retail,Manufactura,0.24,0.115,-1.6,1
+Distribuidores,Manufactura,0.15,0.04,-1.2,2
+Industrial nacional,Manufactura,0.08,0.03,-0.6,3
+Exportación,Manufactura,0.05,0.06,-0.8,4
+Postventa,Manufactura,0.05,0.1,-0.3,5
+Clientes libres,Energia,0.08,0.02,-0.3,1
+Distribuidoras,Energia,0.1,0.01,-0.1,2
+Mercado spot,Energia,0.0,0.005,0.0,3
+Peajes,Energia,0.0,0.01,0.0,4
+Fonasa,Salud,0.4,0.03,-0.2,1
+Isapres,Salud,0.22,0.04,-0.5,2
+Convenios con empresas,Salud,0.25,0.05,-0.9,3
+Particulares,Salud,0.05,0.03,-1.1,4

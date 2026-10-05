@@ -1,0 +1,30 @@
+/// Escalones de la cascada de precio de lista a margen de contribución.
+table 'Cascada de precios'
+	lineageTag: 45f4489b-5c40-5c87-bcf9-7a8885a0e1f6
+
+	column Orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bb87dfa1-4997-5457-80d3-86df25bbd758
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Escalón'
+		dataType: string
+		lineageTag: fdf5533a-b627-5db9-a293-0b1bea5bbc05
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Escalón]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Cascada de precios' = calculated
+		mode: import
+		source = DATATABLE("Orden", INTEGER, "Escalón", STRING, {{1, "Ingreso de lista"}, {2, "Descuento comercial"}, {3, "Rappel"}, {4, "Bonificación"}, {5, "Costo variable"}, {6, "Costo de servir"}})
+
+	annotation PBI_ResultType = Table

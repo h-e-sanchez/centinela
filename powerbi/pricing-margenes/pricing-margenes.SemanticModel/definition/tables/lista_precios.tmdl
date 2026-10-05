@@ -1,0 +1,55 @@
+/// Lista de precios por producto y año (en Energía, el promedio de referencia: el precio lo fija el mercado).
+table lista_precios
+	lineageTag: 443d6579-e86d-5570-9fc3-d6101e8991df
+
+	/// Precio de lista del producto en el año.
+	measure 'Precio de lista' = AVERAGE(lista_precios[precio_lista])
+		formatString: \$ #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: 2dacc121-b275-5d0a-84a5-d791934784e6
+
+	column producto
+		dataType: string
+		isHidden
+		lineageTag: d81a0fc9-1c66-5040-9d6c-4cdb81f8bb05
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: c9407346-01f6-5812-8d2b-f45392f4b62b
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: afc21127-ea84-5459-bd36-9220a4b771be
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column precio_lista
+		dataType: int64
+		formatString: \$ #,##0
+		lineageTag: e35c417a-d5b6-5bb0-8a69-8872755636b7
+		summarizeBy: none
+		sourceColumn: precio_lista
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lista_precios = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("lista_precios.csv", {{"producto", type text}, {"industria", type text}, {"anio", Int64.Type}, {"precio_lista", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
