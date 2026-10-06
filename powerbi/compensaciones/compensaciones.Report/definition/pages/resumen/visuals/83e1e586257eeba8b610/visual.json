@@ -185,6 +185,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Masa salarial = sueldo base más variable pagados en el mes, de toda la dotación filtrada. Glosario: medida Masa salarial del periodo.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

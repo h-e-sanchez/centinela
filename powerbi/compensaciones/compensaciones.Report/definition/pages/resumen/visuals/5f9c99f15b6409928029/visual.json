@@ -215,6 +215,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compa-ratio de cada mes: sube con los reajustes y baja cuando entra gente bajo el punto medio. Glosario: Compa-ratio.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

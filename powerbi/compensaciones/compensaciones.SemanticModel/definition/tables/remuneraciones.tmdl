@@ -381,6 +381,56 @@ table remuneraciones
 		displayFolder: 0. Portada
 		lineageTag: d6060c5f-4fc4-5a68-b6be-402ae0afcc9c
 
+	/// Servicio y grado del dato sobre el que está el mouse, para el tooltip.
+	measure 'Ayuda contexto' =
+			VAR s = SELECTEDVALUE(servicios[servicio])
+			VAR g = SELECTEDVALUE(grados[nombre])
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        NOT ISBLANK(s) && NOT ISBLANK(g), s & " · " & g,
+			        NOT ISBLANK(s), s,
+			        NOT ISBLANK(g), g,
+			        "Toda la selección"
+			    )
+		displayFolder: 7. Ayudas
+		lineageTag: 5a5e0e0a-9d83-5dab-81e9-3989155a8430
+
+	/// Explica el compa-ratio del dato con sus cifras: sueldo, punto medio y lectura.
+	measure 'Ayuda compa-ratio' =
+			VAR c = [Compa-ratio]
+			VAR s = [Sueldo base promedio]
+			VAR pm = [Punto medio de banda]
+			RETURN
+			    IF(
+			        NOT ISBLANK(c),
+			        "Sueldo base promedio de " & FORMAT(s, "$ #,0") & " frente a un punto medio de " & FORMAT(pm, "$ #,0") & ": "
+			            & FORMAT(ABS(c - 1), "0%") & IF(c >= 1, " sobre", " bajo") & " el punto medio. "
+			            & SWITCH(
+			                TRUE(),
+			                c < 0.9, "Bajo 0,90: mal pagado para su grado.",
+			                c > 1.1, "Sobre 1,10: paga por sobre su banda.",
+			                "Dentro del rango esperado (0,90 a 1,10)."
+			            )
+			    )
+		displayFolder: 7. Ayudas
+		lineageTag: da47c304-2b1d-583c-97ae-085be07e1c1c
+
+	/// Explica el % fuera de banda del dato: cuántas personas, en qué lado y cuánto cuesta corregir.
+	measure 'Ayuda fuera de banda' =
+			VAR b = COALESCE([Bajo el mínimo], 0)
+			VAR o = COALESCE([Sobre el máximo], 0)
+			VAR d = [Dotación]
+			RETURN
+			    IF(
+			        d > 0,
+			        FORMAT(b + o, "0") & " de " & FORMAT(d, "0") & " personas fuera de banda: " & FORMAT(b, "0") & " bajo el mínimo y "
+			            & FORMAT(o, "0") & " sobre el máximo. Subir a los de abajo hasta el mínimo cuesta "
+			            & FORMAT(COALESCE([Costo anual de llevar al mínimo], 0), "$ #,0") & " al año."
+			    )
+		displayFolder: 7. Ayudas
+		lineageTag: 101f8342-33f0-5a4e-a1f9-963cab6486b8
+
 	column id_persona
 		dataType: string
 		isHidden

@@ -51,7 +51,7 @@
 
 ## Medidas del modelo
 
-El modelo tiene 37 medidas, agrupadas por carpeta como aparecen en el panel de datos de Power BI. Las de *portada* y *tarjetas* solo dan formato de texto a otras medidas.
+El modelo tiene 40 medidas, agrupadas por carpeta como aparecen en el panel de datos de Power BI. Las de *portada* y *tarjetas* solo dan formato de texto a otras medidas.
 
 ### 0. Auxiliares
 
@@ -581,3 +581,67 @@ Costo anual de un reajuste general sobre el sueldo base, según el parámetro el
 ```
 
 *Tabla `remuneraciones` · formato `\$ #,##0`*
+
+### 7. Ayudas
+
+#### Ayuda contexto
+
+Servicio y grado del dato sobre el que está el mouse, para el tooltip.
+
+```dax
+VAR s = SELECTEDVALUE(servicios[servicio])
+VAR g = SELECTEDVALUE(grados[nombre])
+RETURN
+    SWITCH(
+        TRUE(),
+        NOT ISBLANK(s) && NOT ISBLANK(g), s & " · " & g,
+        NOT ISBLANK(s), s,
+        NOT ISBLANK(g), g,
+        "Toda la selección"
+    )
+```
+
+*Tabla `remuneraciones`*
+
+#### Ayuda compa-ratio
+
+Explica el compa-ratio del dato con sus cifras: sueldo, punto medio y lectura.
+
+```dax
+VAR c = [Compa-ratio]
+VAR s = [Sueldo base promedio]
+VAR pm = [Punto medio de banda]
+RETURN
+    IF(
+        NOT ISBLANK(c),
+        "Sueldo base promedio de " & FORMAT(s, "$ #,0") & " frente a un punto medio de " & FORMAT(pm, "$ #,0") & ": "
+            & FORMAT(ABS(c - 1), "0%") & IF(c >= 1, " sobre", " bajo") & " el punto medio. "
+            & SWITCH(
+                TRUE(),
+                c < 0.9, "Bajo 0,90: mal pagado para su grado.",
+                c > 1.1, "Sobre 1,10: paga por sobre su banda.",
+                "Dentro del rango esperado (0,90 a 1,10)."
+            )
+    )
+```
+
+*Tabla `remuneraciones`*
+
+#### Ayuda fuera de banda
+
+Explica el % fuera de banda del dato: cuántas personas, en qué lado y cuánto cuesta corregir.
+
+```dax
+VAR b = COALESCE([Bajo el mínimo], 0)
+VAR o = COALESCE([Sobre el máximo], 0)
+VAR d = [Dotación]
+RETURN
+    IF(
+        d > 0,
+        FORMAT(b + o, "0") & " de " & FORMAT(d, "0") & " personas fuera de banda: " & FORMAT(b, "0") & " bajo el mínimo y "
+            & FORMAT(o, "0") & " sobre el máximo. Subir a los de abajo hasta el mínimo cuesta "
+            & FORMAT(COALESCE([Costo anual de llevar al mínimo], 0), "$ #,0") & " al año."
+    )
+```
+
+*Tabla `remuneraciones`*

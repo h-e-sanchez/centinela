@@ -9,7 +9,9 @@
     "genero",
     "mercado",
     "costo",
-    "glosario"
+    "glosario",
+    "ayuda-compa",
+    "ayuda-fuera"
   ],
   "activePageName": "portada"
 }

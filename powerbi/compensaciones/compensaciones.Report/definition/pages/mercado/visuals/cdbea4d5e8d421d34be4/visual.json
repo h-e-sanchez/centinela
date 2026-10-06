@@ -308,6 +308,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sueldo base promedio frente a la encuesta de mercado (P25, P50 y P75) de cada grado. Ej.: en Energía la posición vs. mercado es 0,94: paga 6% menos que la mediana del mercado. Glosario: Encuesta de mercado.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

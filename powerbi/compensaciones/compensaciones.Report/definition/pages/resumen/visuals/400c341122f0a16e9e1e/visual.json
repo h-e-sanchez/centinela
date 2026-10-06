@@ -285,6 +285,59 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Una fila por servicio. El color marca el compa-ratio: rojo bajo 0,90 y ámbar sobre 1,10. Ej.: en Energía, Transmisión está en 0,99 y Gestión corporativa en 0,95. Glosario: Compa-ratio y Fuera de banda.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ayuda-compa'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

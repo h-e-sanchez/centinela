@@ -93,6 +93,8 @@ Algunas decisiones de diseño:
 | **Brecha de género en el grado** | Positiva: las mujeres ganan menos que los hombres en cargos equivalentes. |
 | **Posición vs. mercado** | Sueldo sobre el P50 de mercado: bajo 1,00 la empresa paga menos que la mitad del mercado. |
 
+**Ayudas de lectura:** cada visual tiene un ícono ⓘ en su encabezado con qué mide, cómo leerlo y un ejemplo con cifras del reporte. En el compa-ratio y el % fuera de banda, al pasar el mouse sobre un dato aparece un tooltip que explica ese dato con sus propias cifras. El botón **Glosario →** de cada página lleva a la página del glosario.
+
 El reporte abre en **Energía**, la misma industria con que abren los demás reportes de la vitrina. Estos son los valores de control a diciembre de 2026, para revisar al abrir el reporte:
 
 | Indicador | Energía (al abrir) | Las tres empresas (sin filtro) |

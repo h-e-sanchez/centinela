@@ -202,6 +202,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Costo anual de llevar a cada persona al menos al P25 de su banda (el primer cuarto). Es la meta más exigente: en Energía, $141,5 M al año. Glosario: Costo de llevar al P25.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

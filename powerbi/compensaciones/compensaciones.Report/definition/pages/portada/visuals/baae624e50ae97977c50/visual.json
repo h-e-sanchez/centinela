@@ -229,6 +229,59 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compa-ratio = sueldo base (44 h) / punto medio de la banda del grado; 1,00 es el punto medio. Ej.: en las tres empresas, la UCI está en 1,11 y Ambulatorio en 0,90. Pasa el mouse sobre una barra para ver sus cifras. Glosario: Compa-ratio.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ayuda-compa'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }
