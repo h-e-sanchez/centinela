@@ -3,11 +3,11 @@
   "name": "1f71cfa67324306b1332",
   "position": {
     "x": 24,
-    "y": 216,
-    "z": 900,
-    "height": 492,
+    "y": 364,
+    "z": 1200,
+    "height": 344,
     "width": 760,
-    "tabOrder": 900
+    "tabOrder": 1200
   },
   "visual": {
     "visualType": "pivotTable",
@@ -62,6 +62,20 @@
               },
               "queryRef": "remuneraciones.Costo anual de llevar al mínimo",
               "nativeQueryRef": "Costo anual de llevar al mínimo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "remuneraciones"
+                    }
+                  },
+                  "Property": "Bajo el primer cuartil"
+                }
+              },
+              "queryRef": "remuneraciones.Bajo el primer cuartil",
+              "nativeQueryRef": "Bajo el primer cuartil"
             },
             {
               "field": {

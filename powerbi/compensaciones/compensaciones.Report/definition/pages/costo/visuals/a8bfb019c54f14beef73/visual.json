@@ -201,6 +201,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Las cuatro cifras usan a las personas vigentes en el último mes del periodo. Las fichas «Cómo se calcula» muestran la operación de cada una con las cifras de tu selección.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

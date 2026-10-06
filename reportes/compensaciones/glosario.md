@@ -51,7 +51,7 @@
 
 ## Medidas del modelo
 
-El modelo tiene 40 medidas, agrupadas por carpeta como aparecen en el panel de datos de Power BI. Las de *portada* y *tarjetas* solo dan formato de texto a otras medidas.
+El modelo tiene 44 medidas, agrupadas por carpeta como aparecen en el panel de datos de Power BI. Las de *portada* y *tarjetas* solo dan formato de texto a otras medidas.
 
 ### 0. Auxiliares
 
@@ -582,6 +582,26 @@ Costo anual de un reajuste general sobre el sueldo base, según el parámetro el
 
 *Tabla `remuneraciones` · formato `\$ #,##0`*
 
+#### Bajo el primer cuartil
+
+Personas con sueldo base (44 h) bajo el primer cuartil de su banda.
+
+```dax
+VAR ultimo = MAX(remuneraciones[fecha])
+RETURN
+    CALCULATE(
+        COUNTROWS(
+    FILTER(
+        remuneraciones,
+        remuneraciones[sueldo_base_44h] < RELATED(bandas[minimo]) + 0.25 * (RELATED(bandas[maximo]) - RELATED(bandas[minimo]))
+    )
+),
+        remuneraciones[fecha] = ultimo
+    )
+```
+
+*Tabla `remuneraciones` · formato `#,##0`*
+
 ### 7. Ayudas
 
 #### Ayuda contexto
@@ -642,6 +662,58 @@ RETURN
             & FORMAT(o, "0") & " sobre el máximo. Subir a los de abajo hasta el mínimo cuesta "
             & FORMAT(COALESCE([Costo anual de llevar al mínimo], 0), "$ #,0") & " al año."
     )
+```
+
+*Tabla `remuneraciones`*
+
+#### Cálculo llevar al mínimo
+
+La operación del costo de llevar al mínimo, con las cifras de la selección.
+
+```dax
+VAR n = COALESCE([Bajo el mínimo], 0)
+VAR mes = [Costo de llevar al mínimo (mes)]
+RETURN
+    IF(
+        n = 0,
+        "Nadie está bajo el mínimo de su banda: no hay costo.",
+        FORMAT(n, "#,0") & " personas bajo el mínimo. Les faltan en promedio " & FORMAT(DIVIDE(mes, n), "$ #,0")
+            & " al mes (ajustado por jornada): " & FORMAT(mes, "$ #,0") & " al mes × 12 = " & FORMAT(mes * 12, "$ #,0") & " al año."
+    )
+```
+
+*Tabla `remuneraciones`*
+
+#### Cálculo llevar al primer cuartil
+
+La operación del costo de llevar al primer cuartil, con las cifras de la selección.
+
+```dax
+VAR n = COALESCE([Bajo el primer cuartil], 0)
+VAR mes = [Costo de llevar al primer cuartil (mes)]
+RETURN
+    IF(
+        n = 0,
+        "Nadie está bajo el primer cuartil de su banda: no hay costo.",
+        FORMAT(n, "#,0") & " personas bajo el primer cuartil (el mínimo más 25% del rango, 90% del punto medio). Les faltan en "
+            & "promedio " & FORMAT(DIVIDE(mes, n), "$ #,0") & " al mes: " & FORMAT(mes, "$ #,0") & " al mes × 12 = "
+            & FORMAT(mes * 12, "$ #,0") & " al año. Incluye a quienes ya superan el mínimo; por eso cuesta más."
+    )
+```
+
+*Tabla `remuneraciones`*
+
+#### Cálculo del reajuste
+
+La operación del impacto anual del reajuste, con las cifras de la selección.
+
+```dax
+VAR base = [Sueldo base del mes]
+VAR r = [Reajuste negociado %]
+RETURN
+    "Suma de los sueldos base del mes de " & FORMAT([Dotación], "#,0") & " personas: " & FORMAT(base, "$ #,0")
+        & " × 12 meses × " & FORMAT(r, "0.0%") & " = " & FORMAT(base * 12 * r, "$ #,0")
+        & " al año. Solo sueldo base: no incluye variable ni cargas."
 ```
 
 *Tabla `remuneraciones`*

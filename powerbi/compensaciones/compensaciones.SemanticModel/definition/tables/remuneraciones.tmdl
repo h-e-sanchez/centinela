@@ -431,6 +431,63 @@ table remuneraciones
 		displayFolder: 7. Ayudas
 		lineageTag: 101f8342-33f0-5a4e-a1f9-963cab6486b8
 
+	/// Personas con sueldo base (44 h) bajo el primer cuartil de su banda.
+	measure 'Bajo el primer cuartil' =
+			VAR ultimo = MAX(remuneraciones[fecha])
+			RETURN
+			    CALCULATE(
+			        COUNTROWS(
+			    FILTER(
+			        remuneraciones,
+			        remuneraciones[sueldo_base_44h] < RELATED(bandas[minimo]) + 0.25 * (RELATED(bandas[maximo]) - RELATED(bandas[minimo]))
+			    )
+			),
+			        remuneraciones[fecha] = ultimo
+			    )
+		formatString: #,##0
+		displayFolder: 5. Costo de corregir
+		lineageTag: dc8c9425-bdc5-58c1-8e3d-a34e5f770b80
+
+	/// La operación del costo de llevar al mínimo, con las cifras de la selección.
+	measure 'Cálculo llevar al mínimo' =
+			VAR n = COALESCE([Bajo el mínimo], 0)
+			VAR mes = [Costo de llevar al mínimo (mes)]
+			RETURN
+			    IF(
+			        n = 0,
+			        "Nadie está bajo el mínimo de su banda: no hay costo.",
+			        FORMAT(n, "#,0") & " personas bajo el mínimo. Les faltan en promedio " & FORMAT(DIVIDE(mes, n), "$ #,0")
+			            & " al mes (ajustado por jornada): " & FORMAT(mes, "$ #,0") & " al mes × 12 = " & FORMAT(mes * 12, "$ #,0") & " al año."
+			    )
+		displayFolder: 7. Ayudas
+		lineageTag: 6654403b-2e40-5235-a927-1d48cd071462
+
+	/// La operación del costo de llevar al primer cuartil, con las cifras de la selección.
+	measure 'Cálculo llevar al primer cuartil' =
+			VAR n = COALESCE([Bajo el primer cuartil], 0)
+			VAR mes = [Costo de llevar al primer cuartil (mes)]
+			RETURN
+			    IF(
+			        n = 0,
+			        "Nadie está bajo el primer cuartil de su banda: no hay costo.",
+			        FORMAT(n, "#,0") & " personas bajo el primer cuartil (el mínimo más 25% del rango, 90% del punto medio). Les faltan en "
+			            & "promedio " & FORMAT(DIVIDE(mes, n), "$ #,0") & " al mes: " & FORMAT(mes, "$ #,0") & " al mes × 12 = "
+			            & FORMAT(mes * 12, "$ #,0") & " al año. Incluye a quienes ya superan el mínimo; por eso cuesta más."
+			    )
+		displayFolder: 7. Ayudas
+		lineageTag: 80b278fb-f332-54d0-bfd4-b0d2086cdbbc
+
+	/// La operación del impacto anual del reajuste, con las cifras de la selección.
+	measure 'Cálculo del reajuste' =
+			VAR base = [Sueldo base del mes]
+			VAR r = [Reajuste negociado %]
+			RETURN
+			    "Suma de los sueldos base del mes de " & FORMAT([Dotación], "#,0") & " personas: " & FORMAT(base, "$ #,0")
+			        & " × 12 meses × " & FORMAT(r, "0.0%") & " = " & FORMAT(base * 12 * r, "$ #,0")
+			        & " al año. Solo sueldo base: no incluye variable ni cargas."
+		displayFolder: 7. Ayudas
+		lineageTag: 6af659b5-ebb9-5b56-87be-687f2b5bfefc
+
 	column id_persona
 		dataType: string
 		isHidden
