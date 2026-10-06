@@ -13,7 +13,6 @@ table 'Saldo mínimo'
 		formatString: \$ #,##0
 		lineageTag: 5661cc9e-b1fe-5ae2-8479-6b5f1464252b
 		summarizeBy: none
-		isNameInferred
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =

@@ -13,7 +13,6 @@ table 'Reajuste negociado'
 		formatString: 0.0%
 		lineageTag: 56e4c89f-7844-5580-b446-adb0f6a9779f
 		summarizeBy: none
-		isNameInferred
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =

@@ -199,3 +199,16 @@ def test_filtros_de_visual_van_fuera_de_visual(proyecto):
     # Desktop rechaza el archivo: «Se ha incluido una propiedad 'filterConfig' adicional en /visual».
     for ruta in _visuales(proyecto):
         assert "filterConfig" not in json.loads(ruta.read_text(encoding="utf-8"))["visual"], ruta.parent.name
+
+
+@pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
+def test_columnas_con_nombre_inferido_se_llaman_como_su_origen(proyecto):
+    # Con isNameInferred, Desktop renombra la columna como su origen: un parámetro what-if
+    # (GENERATESERIES → [Value]) pasaría a llamarse «Value» y sus medidas no lo encontrarían.
+    for archivo in (_modelo(proyecto) / "definition" / "tables").glob("*.tmdl"):
+        texto = archivo.read_text(encoding="utf-8")
+        for m in re.finditer(r"^\tcolumn (?:'((?:[^']|'')+)'|(\S+))\n((?:\t\t.*\n|\n)*?)\t\tsourceColumn: \[([^\]]+)\]",
+                             texto.replace("\r\n", "\n"), re.MULTILINE):
+            if "\t\tisNameInferred" in m.group(3):
+                nombre = (m.group(1) or m.group(2)).replace("''", "'")
+                assert nombre == m.group(4), f"{archivo.name}: {nombre} se renombraría a {m.group(4)}"
