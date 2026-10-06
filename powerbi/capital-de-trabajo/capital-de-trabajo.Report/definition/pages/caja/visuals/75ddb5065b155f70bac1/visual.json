@@ -1,0 +1,304 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "75ddb5065b155f70bac1",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 800,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "semana"
+                }
+              },
+              "queryRef": "caja_semanal.semana",
+              "nativeQueryRef": "semana",
+              "active": true,
+              "displayName": "Semana"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "tipo"
+                }
+              },
+              "queryRef": "caja_semanal.tipo",
+              "nativeQueryRef": "tipo",
+              "active": true,
+              "displayName": "Tipo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "Saldo real"
+                }
+              },
+              "queryRef": "caja_semanal.Saldo real",
+              "nativeQueryRef": "Saldo real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "Saldo proyectado"
+                }
+              },
+              "queryRef": "caja_semanal.Saldo proyectado",
+              "nativeQueryRef": "Saldo proyectado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "Cobros en caja"
+                }
+              },
+              "queryRef": "caja_semanal.Cobros en caja",
+              "nativeQueryRef": "Cobros en caja",
+              "displayName": "Cobros"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "Pagos en caja"
+                }
+              },
+              "queryRef": "caja_semanal.Pagos en caja",
+              "nativeQueryRef": "Pagos en caja",
+              "displayName": "Pagos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "caja_semanal"
+                    }
+                  },
+                  "Property": "Causa"
+                }
+              },
+              "queryRef": "caja_semanal.Causa",
+              "nativeQueryRef": "Causa"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "caja_semanal"
+                  }
+                },
+                "Property": "Pagos en caja"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "filterConfig": {
+      "filters": [
+        {
+          "name": "solo-con-datos",
+          "field": {
+            "Measure": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "caja_semanal"
+                }
+              },
+              "Property": "Bajo el mínimo"
+            }
+          },
+          "type": "Advanced",
+          "filter": {
+            "Version": 2,
+            "From": [
+              {
+                "Name": "x",
+                "Entity": "caja_semanal",
+                "Type": 0
+              }
+            ],
+            "Where": [
+              {
+                "Condition": {
+                  "Comparison": {
+                    "ComparisonKind": 1,
+                    "Left": {
+                      "Measure": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "x"
+                          }
+                        },
+                        "Property": "Bajo el mínimo"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "0D"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Semanas bajo el saldo mínimo (toda la historia y la proyección)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

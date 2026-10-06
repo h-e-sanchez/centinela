@@ -1,0 +1,41 @@
+/// Dimensión: las nueve sucursales, las mismas del reporte Presupuesto vs. Real.
+table sucursales
+	lineageTag: e7c70db4-4490-56c2-919a-4096a6f97f66
+
+	column sucursal
+		dataType: string
+		lineageTag: 7dfb11c4-8d98-5c00-a8fe-43d105fe6b48
+		summarizeBy: none
+		sourceColumn: sucursal
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 7c08ea35-56d4-50ed-b607-5e07fa12ca58
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a1a114b0-bf69-58aa-9ec2-d5dfd1fe3542
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sucursales = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("sucursales.csv", {{"sucursal", type text}, {"industria", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

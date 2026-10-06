@@ -1,0 +1,82 @@
+cliente,industria,segmento,condicion_dias,limite_credito,perfil_pago
+Supermercados Ejemplo Uno,Manufactura,Retail,60,13000000,Puntual
+Supermercados Ejemplo Dos,Manufactura,Retail,60,11000000,Puntual
+Hipermercado Ejemplo,Manufactura,Retail,60,19000000,Puntual
+Mayorista Retail Ejemplo,Manufactura,Retail,60,11000000,Puntual
+Distribuidora Ejemplo 01,Manufactura,Distribuidores,45,3000000,Puntual
+Distribuidora Ejemplo 02,Manufactura,Distribuidores,45,2000000,Puntual
+Distribuidora Ejemplo 03,Manufactura,Distribuidores,45,3000000,Moroso
+Distribuidora Ejemplo 04,Manufactura,Distribuidores,45,3000000,Puntual
+Distribuidora Ejemplo 05,Manufactura,Distribuidores,45,3000000,Puntual
+Distribuidora Ejemplo 06,Manufactura,Distribuidores,45,3000000,Puntual
+Distribuidora Ejemplo 07,Manufactura,Distribuidores,45,3000000,Moroso
+Distribuidora Ejemplo 08,Manufactura,Distribuidores,45,2000000,Puntual
+Distribuidora Ejemplo 09,Manufactura,Distribuidores,45,3000000,Puntual
+Distribuidora Ejemplo 10,Manufactura,Distribuidores,45,3000000,Puntual
+Industria Cliente Ejemplo 01,Manufactura,Industrial nacional,30,4000000,Puntual
+Industria Cliente Ejemplo 02,Manufactura,Industrial nacional,30,4000000,Puntual
+Industria Cliente Ejemplo 03,Manufactura,Industrial nacional,30,3000000,Puntual
+Industria Cliente Ejemplo 04,Manufactura,Industrial nacional,30,5000000,Puntual
+Industria Cliente Ejemplo 05,Manufactura,Industrial nacional,30,1000000,Puntual
+Industria Cliente Ejemplo 06,Manufactura,Industrial nacional,30,6000000,Puntual
+Industria Cliente Ejemplo 07,Manufactura,Industrial nacional,30,4000000,Puntual
+Industria Cliente Ejemplo 08,Manufactura,Industrial nacional,30,3000000,Puntual
+Industria Cliente Ejemplo 09,Manufactura,Industrial nacional,30,3000000,Puntual
+Industria Cliente Ejemplo 10,Manufactura,Industrial nacional,30,5000000,Puntual
+Industria Cliente Ejemplo 11,Manufactura,Industrial nacional,30,3000000,Puntual
+Industria Cliente Ejemplo 12,Manufactura,Industrial nacional,30,2000000,Puntual
+Importador Ejemplo 01,Manufactura,Exportación,60,8000000,Puntual
+Importador Ejemplo 02,Manufactura,Exportación,60,8000000,Puntual
+Importador Ejemplo 03,Manufactura,Exportación,60,8000000,Puntual
+Importador Ejemplo 04,Manufactura,Exportación,60,6000000,Puntual
+Importador Ejemplo 05,Manufactura,Exportación,60,9000000,Puntual
+Cliente Postventa Ejemplo 01,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 02,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 03,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 04,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 05,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 06,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 07,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 08,Manufactura,Postventa,30,0,Puntual
+Cliente Postventa Ejemplo 09,Manufactura,Postventa,30,0,Moroso
+Cliente Postventa Ejemplo 10,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 11,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 12,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 13,Manufactura,Postventa,30,0,Puntual
+Cliente Postventa Ejemplo 14,Manufactura,Postventa,30,1000000,Puntual
+Cliente Postventa Ejemplo 15,Manufactura,Postventa,30,1000000,Puntual
+Cliente Libre Ejemplo 01,Energia,Clientes libres,20,6000000,Puntual
+Cliente Libre Ejemplo 02,Energia,Clientes libres,20,5000000,Puntual
+Cliente Libre Ejemplo 03,Energia,Clientes libres,20,7000000,Puntual
+Cliente Libre Ejemplo 04,Energia,Clientes libres,20,9000000,Puntual
+Cliente Libre Ejemplo 05,Energia,Clientes libres,20,5000000,Puntual
+Cliente Libre Ejemplo 06,Energia,Clientes libres,20,4000000,Puntual
+Cliente Libre Ejemplo 07,Energia,Clientes libres,20,8000000,Puntual
+Cliente Libre Ejemplo 08,Energia,Clientes libres,20,7000000,Puntual
+Distribuidora Eléctrica Ejemplo 01,Energia,Distribuidoras,30,10000000,Puntual
+Distribuidora Eléctrica Ejemplo 02,Energia,Distribuidoras,30,10000000,Puntual
+Distribuidora Eléctrica Ejemplo 03,Energia,Distribuidoras,30,13000000,Puntual
+Mercado spot (coordinador),Energia,Mercado spot,15,18000000,Puntual
+Usuarios del sistema de transmisión,Energia,Peajes,15,12000000,Puntual
+Fonasa,Salud,Fonasa,60,80000000,Lento
+Isapre Ejemplo 01,Salud,Isapres,45,13000000,Lento
+Isapre Ejemplo 02,Salud,Isapres,45,15000000,Lento
+Isapre Ejemplo 03,Salud,Isapres,45,14000000,Lento
+Isapre Ejemplo 04,Salud,Isapres,45,13000000,Moroso
+Isapre Ejemplo 05,Salud,Isapres,45,11000000,Lento
+Isapre Ejemplo 06,Salud,Isapres,45,13000000,Lento
+Empresa Convenio Ejemplo 01,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 02,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 03,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 04,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 05,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 06,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 07,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 08,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 09,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 10,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 11,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 12,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 13,Salud,Convenios con empresas,30,1000000,Puntual
+Empresa Convenio Ejemplo 14,Salud,Convenios con empresas,30,1000000,Puntual
+Pacientes particulares,Salud,Particulares,0,8000000,Puntual

@@ -156,7 +156,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reportes #4 a #7: especificación en [`docs/especificaciones/`](docs/especificaciones/) y tarjetas «En preparación» en la vitrina (`proximos` del catálogo)
 - [x] Reporte #4 · Proyectos tecnológicos: generador y tests, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #4: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
-- [ ] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
+- [x] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 9 páginas con RLS por servicio, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
@@ -215,6 +215,22 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-06 — Reporte #5: Capital de trabajo y ciclo de caja
+
+Generador `data/generar_capital_de_trabajo.py`: facturas de venta a los mismos clientes del #7 y
+facturas de compra a proveedores ficticios, con condición de pago por canal y atraso por cliente.
+Cuadran al peso con los ingresos Real y las cuentas de Costos compradas a proveedores del #1. Suma
+inventario mensual por familia y caja semanal real hasta el corte (27-12-2026), con 13 semanas
+proyectadas. `tests/test_capital_de_trabajo.py` verifica la cuadratura, las fechas, que la caja
+sume semana a semana y que sus cobros sean las facturas pagadas, y tres historias:
+- Salud con DSO de 93 días, el ciclo más largo y 7 semanas bajo $60 M en 2026;
+- Antofagasta cierra 2025 con unos 25 días más de inventario que las otras sucursales;
+- Energía con ciclo de −15 días.
+
+Proyecto PBIP `powerbi/capital-de-trabajo/`: 14 tablas (relaciones inactivas por vencimiento y
+pago, fecha de corte, tramos de antigüedad, cascada del ciclo y parámetro de saldo mínimo) y 8
+páginas, como en la especificación.
 
 ### 2026-10-05 — Reporte #6: Equidad salarial y bandas
 

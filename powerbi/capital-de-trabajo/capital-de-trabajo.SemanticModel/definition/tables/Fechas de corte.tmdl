@@ -1,0 +1,37 @@
+/// Parámetro: cierres de mes para medir saldos y antigüedad a una fecha anterior.
+table 'Fechas de corte'
+	lineageTag: 404a3f6f-86d9-502b-8dfb-4666846b68d1
+
+	column Corte
+		dataType: dateTime
+		isHidden
+		formatString: dd-mm-yyyy
+		lineageTag: a4b6c18e-21fb-51fc-8793-148acc9b1964
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Corte]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Mes de corte'
+		dataType: string
+		lineageTag: 8ffaa8b5-3789-5660-90e7-c02243756eed
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes de corte]
+		sortByColumn: Corte
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Fechas de corte' = calculated
+		mode: import
+		source =
+				SELECTCOLUMNS(
+				    FILTER(CALENDAR(DATE(2025, 1, 1), DATE(2026, 12, 31)), DAY([Date] + 1) = 1),
+				    "Corte", [Date],
+				    "Mes de corte", FORMAT([Date], "mmm yyyy")
+				)
+
+	annotation PBI_ResultType = Table

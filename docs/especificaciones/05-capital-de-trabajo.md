@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** especificado el 2026-10-05 · **Slug:** `capital-de-trabajo` · **Tema:** Finanzas operativas
+**Estado:** construido el 2026-10-06 (pendiente Desktop y publicación) · **Slug:** `capital-de-trabajo` · **Tema:** Finanzas operativas
 
 ## Qué resuelve
 
@@ -50,6 +50,12 @@ Generador previsto: `data/generar_capital_de_trabajo.py` (`SEMILLA = 42`) → `d
 | 7 | Flujo de caja a 13 semanas | Saldo real y proyectado, semanas con saldo bajo el mínimo y su causa (cobro o pago) |
 | 8 | **Glosario** | Conceptos y medidas, generado desde el TMDL |
 
+Al construirlo cambiaron cuatro cosas:
+- **Facturas de compra:** cuadran con las cuentas de Costos que se compran a proveedores. Remuneraciones y gastos operacionales se pagan en el mes, sin factura.
+- **Caja:** suma dividendos (Manufactura y Energía) e inversión en equipos (Salud), que no están en el estado de resultados del #1.
+- **Cartera de apertura:** facturas de 2024 abiertas el 1 de enero de 2025, para que la cobranza no parta en cero. No cuentan en la cuadratura.
+- **Fecha de corte:** 27 de diciembre de 2026 para los pagos conocidos. El reporte mide saldos al último día del periodo o al cierre de mes elegido.
+
 ## Medidas DAX clave
 
 - `DSO` = cuentas por cobrar ÷ ventas del período × días; `DPO` y `DIO` con la misma lógica
@@ -65,9 +71,9 @@ Generador previsto: `data/generar_capital_de_trabajo.py` (`SEMILLA = 42`) → `d
 
 | Industria | Resultado | Historia |
 |---|---|---|
-| Salud | DSO > 90 días | Las aseguradoras pagan lento y el CCC es el más largo de las tres; la caja se estrecha en invierno, cuando sube la actividad |
-| Manufactura | DIO +25 días | El año flojo de ventas del #1 deja sobrestock de producto terminado en Antofagasta y alarga el ciclo |
-| Energía | CCC negativo | Cobra antes de pagar: contratos con facturación mensual y proveedores de combustible a 60 días |
+| Salud | DSO de 93 días | Fonasa y las isapres pagan lento y el CCC es el más largo de las tres (77 días); la caja queda bajo $60 M en 7 semanas de 2026, con la compra de equipos y el invierno |
+| Manufactura | DIO +25 días | El año flojo de 2025 deja sobrestock de producto terminado en Antofagasta: cierra 2025 con unos 25 días más de inventario que Santiago y Concepción |
+| Energía | CCC de −15 días | Cobra antes de pagar: DSO de 23 días contra DPO de 51, con combustibles y mantención a 60 días |
 
 ## Habilidades para el catálogo
 
