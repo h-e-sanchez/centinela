@@ -80,7 +80,7 @@ Algunas decisiones de diseño:
 - **Compa-ratio sobre el equivalente a 44 horas:** si no, una persona con media jornada aparecería bajo el mínimo sin estarlo.
 - **Brecha en la banda, no en el total:** la brecha de género se calcula dentro de cada banda (empresa × grado) y se pondera por su dotación. Así compara cargos equivalentes y no mezcla la composición de los estamentos. La brecha cruda queda a la vista para mostrar cuánto engaña.
 - **Medianas en vez de promedios:** unos pocos sueldos directivos mueven mucho el promedio.
-- **Costo de corregir con dos metas:** el mínimo de la banda (lo indispensable) y el P25 (una corrección más sana, que deja margen para el mérito).
+- **Costo de corregir con dos metas:** el mínimo de la banda (lo indispensable) y el primer cuartil de la banda (una corrección más sana, que deja margen para el mérito; no es el P25 de mercado).
 
 ## Cómo leerlo
 
@@ -93,6 +93,8 @@ Algunas decisiones de diseño:
 | **Brecha de género en el grado** | Positiva: las mujeres ganan menos que los hombres en cargos equivalentes. |
 | **Posición vs. mercado** | Sueldo sobre el P50 de mercado: bajo 1,00 la empresa paga menos que la mitad del mercado. |
 
+**Ayudas de lectura:** cada visual tiene un ícono ⓘ en su encabezado con qué mide, cómo leerlo y un ejemplo con cifras del reporte. En el compa-ratio y el % fuera de banda, al pasar el mouse sobre un dato aparece un tooltip que explica ese dato con sus propias cifras. El botón **Glosario →** de cada página lleva a la página del glosario.
+
 El reporte abre en **Energía**, la misma industria con que abren los demás reportes de la vitrina. Estos son los valores de control a diciembre de 2026, para revisar al abrir el reporte:
 
 | Indicador | Energía (al abrir) | Las tres empresas (sin filtro) |
@@ -102,7 +104,7 @@ El reporte abre en **Energía**, la misma industria con que abren los demás rep
 | Compa-ratio | 0,97 | 0,97 |
 | Fuera de banda | 9,2% (32 bajo el mínimo, 2 sobre el máximo) | 3,4% (38 bajo, 10 sobre) |
 | Posición vs. mercado | 0,94 | 0,94 |
-| Costo anual de llevar al mínimo / al P25 | $48,9 M / $141,5 M | $52,4 M / $273,8 M |
+| Costo anual de llevar al mínimo / al primer cuartil | $48,9 M / $141,5 M | $52,4 M / $273,8 M |
 | Brecha de género cruda / en el grado | 2,2% / 1,1% | −1,1% / 2,4% |
 | Impacto anual de un reajuste de 4,5% | $348 M | $1.124 M |
 | Servicio con mayor / menor compa-ratio | Transmisión 0,99 / Gestión corporativa 0,95 | UCI 1,11 / Ambulatorio 0,90 |

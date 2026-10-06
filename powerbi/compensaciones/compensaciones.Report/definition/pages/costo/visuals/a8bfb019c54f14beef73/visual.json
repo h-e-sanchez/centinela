@@ -37,11 +37,11 @@
                       "Entity": "remuneraciones"
                     }
                   },
-                  "Property": "Costo anual de llevar al P25"
+                  "Property": "Costo anual de llevar al primer cuartil"
                 }
               },
-              "queryRef": "remuneraciones.Costo anual de llevar al P25",
-              "nativeQueryRef": "Costo anual de llevar al P25"
+              "queryRef": "remuneraciones.Costo anual de llevar al primer cuartil",
+              "nativeQueryRef": "Costo anual de llevar al primer cuartil"
             },
             {
               "field": {

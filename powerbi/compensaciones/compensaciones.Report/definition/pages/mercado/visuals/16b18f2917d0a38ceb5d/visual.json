@@ -202,6 +202,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Posición vs. mercado = sueldo base / P50 de mercado del mismo grado. Bajo 1,00, el servicio paga menos que la mitad del mercado. Glosario: Posición vs. mercado.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

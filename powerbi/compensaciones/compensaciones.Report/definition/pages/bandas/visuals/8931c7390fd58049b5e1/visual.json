@@ -276,6 +276,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Barra azul: sueldo base promedio del grado. Barras grises: mínimo y máximo de su banda (80% y 120% del punto medio). Si la azul queda bajo la gris de la izquierda, el grado completo paga bajo su banda. Glosario: Banda salarial.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

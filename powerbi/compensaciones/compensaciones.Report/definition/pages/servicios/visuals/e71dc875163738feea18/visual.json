@@ -202,6 +202,59 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% de la dotación del servicio bajo el mínimo o sobre el máximo de su banda. Ej.: Energía tiene 9,2% fuera de banda. Pasa el mouse sobre una barra para ver cuántas personas son y cuánto cuesta corregir. Glosario: Fuera de banda.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ayuda-fuera'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

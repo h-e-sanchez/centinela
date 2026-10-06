@@ -235,6 +235,59 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compa-ratio de cada servicio en cada grado: compara lo que pagan distintos servicios por el mismo nivel. Ej.: en Manufactura, los directivos de Calidad están en 1,18, es decir, 18% sobre el punto medio. Pasa el mouse sobre una celda para ver sus cifras. Glosario: Equidad interna.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Canvas'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ayuda-compa'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

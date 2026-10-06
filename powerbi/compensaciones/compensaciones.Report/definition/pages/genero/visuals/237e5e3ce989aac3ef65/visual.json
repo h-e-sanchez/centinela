@@ -227,6 +227,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Medianas de sueldo base por sexo en cada grado. Brecha cruda = 1 − mediana de mujeres / mediana de hombres. Grupos de menos de 5 personas no permiten conclusiones. Glosario: Brecha de género cruda y Mediana.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

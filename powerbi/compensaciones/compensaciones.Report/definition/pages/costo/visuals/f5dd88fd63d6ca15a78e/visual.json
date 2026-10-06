@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Cuánto cuesta llevar a cada persona al mínimo o al primer cuarto (P25) de su banda, y cuánto cuesta un reajuste general. Elige el reajuste en el segmentador (sin elegir: 4,5%).",
+                    "value": "Cuánto cuesta llevar a cada persona al mínimo o al primer cuartil de su banda (no es el P25 de mercado), y un reajuste general. Elige el reajuste en el segmentador (sin elegir: 4,5%).",
                     "textStyle": {
                       "fontSize": "8pt",
                       "color": "#6a6357"

@@ -202,6 +202,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cuánto varía el sueldo promedio del mismo grado entre servicios: desviación estándar sobre el promedio. Sobre 5%, la equidad interna se resiente. Glosario: Equidad interna.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }

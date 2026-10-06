@@ -49,7 +49,7 @@ empleador real.
 | 4 | **Por persona** | Tabla con compa-ratio, posición en la banda y alerta de fuera de banda, ordenable y filtrable. Solo IDs sintéticos, sin nombres |
 | 5 | **Por servicio** | Mapa de calor servicio × grado del compa-ratio promedio, % fuera de banda por servicio y dispersión del mismo cargo entre servicios |
 | 6 | Brecha de género | Brecha dentro del mismo grado y cargo, por servicio, con el tamaño de cada grupo visible (sin conclusiones con grupos chicos) |
-| 7 | Costo de corregir | Parámetro what-if para llevar a todos al mínimo o al P25 de su banda; costo mensual y anual por servicio y empresa |
+| 7 | Costo de corregir | Parámetro what-if para llevar a todos al mínimo o al primer cuartil de su banda; costo mensual y anual por servicio y empresa |
 | 8 | **Glosario** | Conceptos y medidas, generado desde el TMDL |
 
 **Seguridad por fila (RLS):** un rol por servicio, para que cada jefatura vea solo su
@@ -71,7 +71,7 @@ Al construirlo, el reporte se enriqueció con cuatro cambios:
   hombres del mismo grado, promediada con el peso de la dotación.
 - `Dispersión del cargo entre servicios`: coeficiente de variación del sueldo base de un mismo
   cargo entre servicios.
-- `Costo de corregir`, sobre el parámetro what-if (mínimo o P25).
+- `Costo de corregir`, sobre el parámetro what-if (mínimo o primer cuartil de la banda).
 
 ## Historias sembradas en los datos
 

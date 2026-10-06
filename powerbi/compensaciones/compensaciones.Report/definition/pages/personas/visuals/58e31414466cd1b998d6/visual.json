@@ -295,6 +295,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showTooltipButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeaderTooltip": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Una fila por persona vigente en el último mes, con ID sintético. Alerta de banda marca a quien está bajo el mínimo o sobre el máximo. Glosario: Compa-ratio y Fuera de banda.'"
+                }
+              }
+            }
+          }
+        }
       ]
     }
   }
