@@ -526,7 +526,7 @@ CALCULATE(COUNTROWS(transiciones), transiciones[estado_hasta] = "bloqueado")
 
 ### 6. Pronóstico
 
-#### Probabilidad
+#### Probabilidad de término
 
 Parte de las simulaciones que termina esa semana.
 
@@ -552,7 +552,7 @@ RETURN
 
 *Tabla `pronostico_distribucion` · formato `0%`*
 
-#### Estado
+#### Estado del proyecto
 
 Terminado o en curso al corte.
 

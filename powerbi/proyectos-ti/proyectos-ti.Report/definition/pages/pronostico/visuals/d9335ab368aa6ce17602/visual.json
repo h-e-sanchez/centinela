@@ -43,11 +43,12 @@
                       "Entity": "pronostico_distribucion"
                     }
                   },
-                  "Property": "Probabilidad"
+                  "Property": "Probabilidad de término"
                 }
               },
-              "queryRef": "pronostico_distribucion.Probabilidad",
-              "nativeQueryRef": "Probabilidad"
+              "queryRef": "pronostico_distribucion.Probabilidad de término",
+              "nativeQueryRef": "Probabilidad de término",
+              "displayName": "Probabilidad"
             }
           ]
         }
@@ -109,7 +110,7 @@
             }
           },
           "selector": {
-            "metadata": "pronostico_distribucion.Probabilidad"
+            "metadata": "pronostico_distribucion.Probabilidad de término"
           }
         }
       ]

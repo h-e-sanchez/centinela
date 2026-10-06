@@ -59,11 +59,11 @@
                       "Entity": "transacciones"
                     }
                   },
-                  "Property": "Cantidad"
+                  "Property": "Unidades vendidas"
                 }
               },
-              "queryRef": "transacciones.Cantidad",
-              "nativeQueryRef": "Cantidad"
+              "queryRef": "transacciones.Unidades vendidas",
+              "nativeQueryRef": "Unidades vendidas"
             },
             {
               "field": {

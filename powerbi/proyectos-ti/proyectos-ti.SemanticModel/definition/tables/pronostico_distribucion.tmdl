@@ -3,10 +3,10 @@ table pronostico_distribucion
 	lineageTag: 57c82337-1227-5307-8c16-c1a0a0a7c687
 
 	/// Parte de las simulaciones que termina esa semana.
-	measure Probabilidad = SUM(pronostico_distribucion[probabilidad])
+	measure 'Probabilidad de término' = SUM(pronostico_distribucion[probabilidad])
 		formatString: 0.0%
 		displayFolder: 6. Pronóstico
-		lineageTag: 3ae30a61-e747-57e3-9bd7-9f3fc3445a9b
+		lineageTag: bc1c08e2-49a9-5ff3-9b70-5311462dde13
 
 	/// Probabilidad de haber terminado a más tardar esa semana.
 	measure 'Probabilidad acumulada' =

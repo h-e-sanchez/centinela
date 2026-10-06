@@ -150,7 +150,7 @@ SUM(transacciones[ingreso_neto])
 
 *Tabla `transacciones` · formato `\$ #,##0`*
 
-#### Cantidad
+#### Unidades vendidas
 
 Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).
 
@@ -165,7 +165,7 @@ SUM(transacciones[cantidad])
 Ingreso neto por unidad vendida.
 
 ```dax
-DIVIDE([Ingreso neto], [Cantidad])
+DIVIDE([Ingreso neto], [Unidades vendidas])
 ```
 
 *Tabla `transacciones` · formato `\$ #,##0`*
@@ -202,7 +202,7 @@ SUM(transacciones[descuento_comercial])
 
 *Tabla `transacciones` · formato `\$ #,##0`*
 
-#### Rappel
+#### Rappel otorgado
 
 Descuento por volumen que se devuelve al cliente al cumplir metas.
 
@@ -212,7 +212,7 @@ SUM(transacciones[rappel])
 
 *Tabla `transacciones` · formato `\$ #,##0`*
 
-#### Bonificación
+#### Bonificación otorgada
 
 Aportes al cliente fuera de la factura (promociones, exhibición).
 
@@ -241,8 +241,8 @@ SWITCH(
     SELECTEDVALUE('Cascada de precios'[Escalón]),
     "Ingreso de lista", [Ingreso de lista],
     "Descuento comercial", -[Descuento comercial],
-    "Rappel", -[Rappel],
-    "Bonificación", -[Bonificación],
+    "Rappel", -[Rappel otorgado],
+    "Bonificación", -[Bonificación otorgada],
     "Costo variable", -[Costo variable],
     "Costo de servir", -[Costo de servir]
 )
@@ -534,7 +534,7 @@ SELECTEDVALUE('Cambio de precio'[Cambio de precio], 0)
 
 *Tabla `Cambio de precio` · formato `0%`*
 
-#### Elasticidad
+#### Elasticidad supuesta
 
 Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).
 
