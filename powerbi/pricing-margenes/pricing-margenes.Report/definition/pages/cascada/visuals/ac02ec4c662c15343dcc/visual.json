@@ -51,11 +51,12 @@
                       "Entity": "transacciones"
                     }
                   },
-                  "Property": "Rappel"
+                  "Property": "Rappel otorgado"
                 }
               },
-              "queryRef": "transacciones.Rappel",
-              "nativeQueryRef": "Rappel"
+              "queryRef": "transacciones.Rappel otorgado",
+              "nativeQueryRef": "Rappel otorgado",
+              "displayName": "Rappel"
             },
             {
               "field": {
@@ -65,11 +66,12 @@
                       "Entity": "transacciones"
                     }
                   },
-                  "Property": "Bonificación"
+                  "Property": "Bonificación otorgada"
                 }
               },
-              "queryRef": "transacciones.Bonificación",
-              "nativeQueryRef": "Bonificación"
+              "queryRef": "transacciones.Bonificación otorgada",
+              "nativeQueryRef": "Bonificación otorgada",
+              "displayName": "Bonificación"
             },
             {
               "field": {

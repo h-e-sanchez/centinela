@@ -60,9 +60,9 @@ n,tipo,seccion,termino,explicacion,formula
 59,Medida,5. Colaboración,Horas bloqueadas,Horas hábiles que las issues pasaron en «bloqueado» esperando a otro equipo.,SUM(issues[horas_bloqueado])
 60,Medida,5. Colaboración,% del tiempo en bloqueo,Horas bloqueadas sobre horas bloqueadas más horas trabajadas en las mismas issues.,"DIVIDE([Horas bloqueadas], [Horas bloqueadas] + [Horas registradas])"
 61,Medida,5. Colaboración,Entradas a bloqueado,Veces que una issue pasó a «bloqueado» por una dependencia.,"CALCULATE(COUNTROWS(transiciones), transiciones[estado_hasta] = ""bloqueado"")"
-62,Medida,6. Pronóstico,Probabilidad,Parte de las simulaciones que termina esa semana.,SUM(pronostico_distribucion[probabilidad])
+62,Medida,6. Pronóstico,Probabilidad de término,Parte de las simulaciones que termina esa semana.,SUM(pronostico_distribucion[probabilidad])
 63,Medida,6. Pronóstico,Probabilidad acumulada,Probabilidad de haber terminado a más tardar esa semana.,"VAR semana = MAX(pronostico_distribucion[semana_termino]) RETURN CALCULATE( SUM(pronostico_distribucion[probabilidad]), pronostico_distribucion[semana_termino] <= semana, REMOVEFILTERS(pronostico_distribucion[semana_termino]) )"
-64,Medida,6. Pronóstico,Estado,Terminado o en curso al corte.,SELECTEDVALUE(pronostico_termino[estado])
+64,Medida,6. Pronóstico,Estado del proyecto,Terminado o en curso al corte.,SELECTEDVALUE(pronostico_termino[estado])
 65,Medida,6. Pronóstico,Fecha P50,"Fecha de término con 50% de probabilidad (si terminó, la fecha real).",MAX(pronostico_termino[fecha_p50])
 66,Medida,6. Pronóstico,Fecha P85,Fecha de término con 85% de probabilidad: la que conviene comprometer.,MAX(pronostico_termino[fecha_p85])
 67,Medida,6. Pronóstico,Fecha P95,Fecha de término con 95% de probabilidad.,MAX(pronostico_termino[fecha_p95])

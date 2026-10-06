@@ -43,11 +43,12 @@
                       "Entity": "pronostico_termino"
                     }
                   },
-                  "Property": "Estado"
+                  "Property": "Estado del proyecto"
                 }
               },
-              "queryRef": "pronostico_termino.Estado",
-              "nativeQueryRef": "Estado"
+              "queryRef": "pronostico_termino.Estado del proyecto",
+              "nativeQueryRef": "Estado del proyecto",
+              "displayName": "Estado"
             },
             {
               "field": {

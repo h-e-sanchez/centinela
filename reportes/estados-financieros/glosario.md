@@ -148,7 +148,7 @@ COUNTROWS(asientos)
 
 *Tabla `asientos` · formato `#,##0`*
 
-#### Debe
+#### Total debe
 
 Suma de cargos (debe).
 
@@ -158,7 +158,7 @@ SUM(lineas_asiento[debe])
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*
 
-#### Haber
+#### Total haber
 
 Suma de abonos (haber).
 
@@ -173,7 +173,7 @@ SUM(lineas_asiento[haber])
 Debe menos haber: positivo = saldo deudor.
 
 ```dax
-[Debe] - [Haber]
+[Total debe] - [Total haber]
 ```
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*
@@ -185,7 +185,7 @@ Debe menos haber: positivo = saldo deudor.
 Ingresos en positivo y costos o gastos en negativo, sin los asientos de cierre.
 
 ```dax
-CALCULATE([Haber] - [Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
+CALCULATE([Total haber] - [Total debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
 ```
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*
@@ -606,7 +606,7 @@ DIVIDE([Deudores por ventas], [Ingresos]) * [Días del periodo]
 Costo de los materiales consumidos en el periodo.
 
 ```dax
-CALCULATE([Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[inventariable] = 1)
+CALCULATE([Total debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[inventariable] = 1)
 ```
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*
@@ -626,7 +626,7 @@ DIVIDE([Inventarios], [Consumo de materiales]) * [Días del periodo]
 Lo que se compró a proveedores en el periodo.
 
 ```dax
-CALCULATE([Haber], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[linea] = "Proveedores")
+CALCULATE([Total haber], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[linea] = "Proveedores")
 ```
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*
@@ -658,7 +658,7 @@ Días entre pagar al proveedor y cobrarle al cliente.
 En todo el libro debe ser 0: partida doble.
 
 ```dax
-[Debe] - [Haber]
+[Total debe] - [Total haber]
 ```
 
 *Tabla `lineas_asiento` · formato `\$ #,##0`*

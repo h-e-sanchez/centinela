@@ -119,11 +119,12 @@
                       "Entity": "lineas_asiento"
                     }
                   },
-                  "Property": "Debe"
+                  "Property": "Total debe"
                 }
               },
-              "queryRef": "lineas_asiento.Debe",
-              "nativeQueryRef": "Debe"
+              "queryRef": "lineas_asiento.Total debe",
+              "nativeQueryRef": "Total debe",
+              "displayName": "Debe"
             },
             {
               "field": {
@@ -133,11 +134,12 @@
                       "Entity": "lineas_asiento"
                     }
                   },
-                  "Property": "Haber"
+                  "Property": "Total haber"
                 }
               },
-              "queryRef": "lineas_asiento.Haber",
-              "nativeQueryRef": "Haber"
+              "queryRef": "lineas_asiento.Total haber",
+              "nativeQueryRef": "Total haber",
+              "displayName": "Haber"
             }
           ]
         }
@@ -152,7 +154,7 @@
                     "Entity": "lineas_asiento"
                   }
                 },
-                "Property": "Debe"
+                "Property": "Total debe"
               }
             },
             "direction": "Descending"

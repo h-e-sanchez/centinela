@@ -25,15 +25,15 @@ n,tipo,seccion,termino,explicacion,formula
 24,Medida,1. Ingresos,Precio de lista,Precio de lista del producto en el año.,AVERAGE(lista_precios[precio_lista])
 25,Medida,1. Ingresos,Ingreso de lista,Lo que se habría facturado a precio de lista.,SUM(transacciones[ingreso_lista])
 26,Medida,1. Ingresos,Ingreso neto,Ingreso después de todos los descuentos: cuadra con el Real del reporte Presupuesto vs. Real.,SUM(transacciones[ingreso_neto])
-27,Medida,1. Ingresos,Cantidad,"Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).",SUM(transacciones[cantidad])
-28,Medida,1. Ingresos,Precio neto unitario,Ingreso neto por unidad vendida.,"DIVIDE([Ingreso neto], [Cantidad])"
+27,Medida,1. Ingresos,Unidades vendidas,"Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).",SUM(transacciones[cantidad])
+28,Medida,1. Ingresos,Precio neto unitario,Ingreso neto por unidad vendida.,"DIVIDE([Ingreso neto], [Unidades vendidas])"
 29,Medida,1. Ingresos,Ingreso presupuestado,Ingreso del Presupuesto del reporte #1.,SUM(presupuesto_ingresos[monto])
 30,Medida,1. Ingresos,Variación vs. presupuesto %,"Ingreso neto sobre el presupuestado, menos 1.","DIVIDE([Ingreso neto], [Ingreso presupuestado]) - 1"
 31,Medida,2. Cascada,Descuento comercial,Descuento negociado en la factura.,SUM(transacciones[descuento_comercial])
-32,Medida,2. Cascada,Rappel,Descuento por volumen que se devuelve al cliente al cumplir metas.,SUM(transacciones[rappel])
-33,Medida,2. Cascada,Bonificación,"Aportes al cliente fuera de la factura (promociones, exhibición).",SUM(transacciones[bonificacion])
+32,Medida,2. Cascada,Rappel otorgado,Descuento por volumen que se devuelve al cliente al cumplir metas.,SUM(transacciones[rappel])
+33,Medida,2. Cascada,Bonificación otorgada,"Aportes al cliente fuera de la factura (promociones, exhibición).",SUM(transacciones[bonificacion])
 34,Medida,2. Cascada,% de realización,Parte del precio de lista que de verdad se cobra.,"DIVIDE([Ingreso neto], [Ingreso de lista])"
-35,Medida,2. Cascada,Monto de la cascada,Cada escalón de la cascada de precio a bolsillo; el total es el margen de contribución.,"SWITCH( SELECTEDVALUE('Cascada de precios'[Escalón]), ""Ingreso de lista"", [Ingreso de lista], ""Descuento comercial"", -[Descuento comercial], ""Rappel"", -[Rappel], ""Bonificación"", -[Bonificación], ""Costo variable"", -[Costo variable], ""Costo de servir"", -[Costo de servir] )"
+35,Medida,2. Cascada,Monto de la cascada,Cada escalón de la cascada de precio a bolsillo; el total es el margen de contribución.,"SWITCH( SELECTEDVALUE('Cascada de precios'[Escalón]), ""Ingreso de lista"", [Ingreso de lista], ""Descuento comercial"", -[Descuento comercial], ""Rappel"", -[Rappel otorgado], ""Bonificación"", -[Bonificación otorgada], ""Costo variable"", -[Costo variable], ""Costo de servir"", -[Costo de servir] )"
 36,Medida,3. Márgenes,Costo variable,Costo directo de lo vendido.,SUM(transacciones[costo_variable])
 37,Medida,3. Márgenes,Costo de servir,"Logística, comisiones y atención propios del canal.",SUM(transacciones[costo_servir])
 38,Medida,3. Márgenes,Margen bruto,Ingreso neto menos costo variable.,[Ingreso neto] - [Costo variable]
@@ -58,7 +58,7 @@ n,tipo,seccion,termino,explicacion,formula
 57,Medida,"5. Precio, volumen y mezcla",Efecto precio % de la variación,Parte de la variación de ingresos que explica el precio.,"DIVIDE([Efecto precio], [Variación de ingresos])"
 58,Medida,"5. Precio, volumen y mezcla",Monto PVM,Escalones del puente de 2025 a 2026; el total es el ingreso 2026.,"SWITCH( SELECTEDVALUE('Escalones PVM'[Efecto]), ""Ingreso 2025"", [Ingreso 2025], ""Volumen"", [Efecto volumen], ""Mezcla"", [Efecto mezcla], ""Precio"", [Efecto precio] )"
 59,Medida,6. Simulador,Cambio de precio %,"Valor elegido en el segmentador; si no hay uno elegido, 0%.","SELECTEDVALUE('Cambio de precio'[Cambio de precio], 0)"
-60,Medida,6. Simulador,Elasticidad,Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).,MAX(canales[elasticidad])
+60,Medida,6. Simulador,Elasticidad supuesta,Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).,MAX(canales[elasticidad])
 61,Medida,6. Simulador,Ingreso simulado,Ingreso neto con el cambio de precio y la reacción del volumen según la elasticidad del canal.,"VAR dp = [Cambio de precio %] RETURN SUMX( VALUES(canales[canal]), VAR e = CALCULATE(MAX(canales[elasticidad])) VAR f = MAX(0, 1 + e * dp) RETURN [Ingreso neto] * (1 + dp) * f )"
 62,Medida,6. Simulador,Margen simulado,Margen de contribución con el cambio de precio y el volumen ajustado.,"VAR dp = [Cambio de precio %] RETURN SUMX( VALUES(canales[canal]), VAR e = CALCULATE(MAX(canales[elasticidad])) VAR f = MAX(0, 1 + e * dp) RETURN [Ingreso neto] * (1 + dp) * f - [Costo variable] * f - [Costo de servir] * (1 + dp) * f )"
 63,Medida,6. Simulador,Variación del margen simulada,Margen simulado menos margen actual.,[Margen simulado] - [Margen de contribución]

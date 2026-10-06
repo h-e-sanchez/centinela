@@ -3,9 +3,9 @@ table pronostico_termino
 	lineageTag: bd18ce13-de58-58f8-993a-60325920d67c
 
 	/// Terminado o en curso al corte.
-	measure Estado = SELECTEDVALUE(pronostico_termino[estado])
+	measure 'Estado del proyecto' = SELECTEDVALUE(pronostico_termino[estado])
 		displayFolder: 6. Pronóstico
-		lineageTag: 65350aa6-4e5c-5ead-bd80-c266312a743f
+		lineageTag: dd0f5c36-b01f-5e9f-b695-8a3b742f97d7
 
 	/// Fecha de término con 50% de probabilidad (si terminó, la fecha real).
 	measure 'Fecha P50' = MAX(pronostico_termino[fecha_p50])

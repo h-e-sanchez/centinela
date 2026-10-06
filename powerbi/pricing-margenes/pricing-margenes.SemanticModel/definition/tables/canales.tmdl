@@ -9,10 +9,10 @@ table canales
 		lineageTag: e0535bf6-4169-58e3-b420-7de6ab5f1f07
 
 	/// Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).
-	measure Elasticidad = MAX(canales[elasticidad])
+	measure 'Elasticidad supuesta' = MAX(canales[elasticidad])
 		formatString: 0.0
 		displayFolder: 6. Simulador
-		lineageTag: f7bd9391-ff70-5f36-bdf6-59b052527bab
+		lineageTag: b00c4bcd-b8f8-53aa-ad16-0d4181092561
 
 	column canal
 		dataType: string

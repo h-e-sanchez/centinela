@@ -15,16 +15,16 @@ table transacciones
 		lineageTag: 44f5b9d5-f97d-5ede-9aba-f2978a37cc42
 
 	/// Descuento por volumen que se devuelve al cliente al cumplir metas.
-	measure Rappel = SUM(transacciones[rappel])
+	measure 'Rappel otorgado' = SUM(transacciones[rappel])
 		formatString: \$ #,##0
 		displayFolder: 2. Cascada
-		lineageTag: d9cd24a3-32df-52db-9217-a8158519c2d5
+		lineageTag: 2822d7bd-6ef0-548c-9311-5998fb8d3f53
 
 	/// Aportes al cliente fuera de la factura (promociones, exhibición).
-	measure 'Bonificación' = SUM(transacciones[bonificacion])
+	measure 'Bonificación otorgada' = SUM(transacciones[bonificacion])
 		formatString: \$ #,##0
 		displayFolder: 2. Cascada
-		lineageTag: c87bc9fe-e94a-50e9-a59f-3c765daca86a
+		lineageTag: 1de99224-b3da-5fbe-89d5-de0fcc78aeef
 
 	/// Ingreso después de todos los descuentos: cuadra con el Real del reporte Presupuesto vs. Real.
 	measure 'Ingreso neto' = SUM(transacciones[ingreso_neto])
@@ -45,13 +45,13 @@ table transacciones
 		lineageTag: 3e5f6832-7eca-5998-8939-7e3ea6f7214b
 
 	/// Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).
-	measure Cantidad = SUM(transacciones[cantidad])
+	measure 'Unidades vendidas' = SUM(transacciones[cantidad])
 		formatString: #,##0
 		displayFolder: 1. Ingresos
-		lineageTag: 4e1b0aef-ecce-57bc-9ab0-ae12bf276804
+		lineageTag: 10e63ad1-47d7-504e-bce2-66dce701e272
 
 	/// Ingreso neto por unidad vendida.
-	measure 'Precio neto unitario' = DIVIDE([Ingreso neto], [Cantidad])
+	measure 'Precio neto unitario' = DIVIDE([Ingreso neto], [Unidades vendidas])
 		formatString: \$ #,##0
 		displayFolder: 1. Ingresos
 		lineageTag: 1ec930b2-ccbe-57bf-a019-dfb97991bc49
@@ -264,8 +264,8 @@ table transacciones
 			    SELECTEDVALUE('Cascada de precios'[Escalón]),
 			    "Ingreso de lista", [Ingreso de lista],
 			    "Descuento comercial", -[Descuento comercial],
-			    "Rappel", -[Rappel],
-			    "Bonificación", -[Bonificación],
+			    "Rappel", -[Rappel otorgado],
+			    "Bonificación", -[Bonificación otorgada],
 			    "Costo variable", -[Costo variable],
 			    "Costo de servir", -[Costo de servir]
 			)

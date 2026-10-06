@@ -3,25 +3,25 @@ table lineas_asiento
 	lineageTag: d4cdb5c6-7f19-5c67-98ae-617d385929b0
 
 	/// Suma de cargos (debe).
-	measure Debe = SUM(lineas_asiento[debe])
+	measure 'Total debe' = SUM(lineas_asiento[debe])
 		formatString: \$ #,##0
 		displayFolder: 1. Libro diario
-		lineageTag: 52025d0e-049b-599e-a4e6-4d53f8f8600c
+		lineageTag: 3d4bd294-92b2-528d-aa25-0734a097d4b7
 
 	/// Suma de abonos (haber).
-	measure Haber = SUM(lineas_asiento[haber])
+	measure 'Total haber' = SUM(lineas_asiento[haber])
 		formatString: \$ #,##0
 		displayFolder: 1. Libro diario
-		lineageTag: 1cf0e8d1-4d7e-51a5-a917-c86a8bc0fa68
+		lineageTag: c03efedf-7560-5bb4-9f61-07d198d9e559
 
 	/// Debe menos haber: positivo = saldo deudor.
-	measure Monto = [Debe] - [Haber]
+	measure Monto = [Total debe] - [Total haber]
 		formatString: \$ #,##0
 		displayFolder: 1. Libro diario
 		lineageTag: 58e991dc-5ce0-5700-a093-b87782b5120d
 
 	/// En todo el libro debe ser 0: partida doble.
-	measure 'Diferencia debe - haber' = [Debe] - [Haber]
+	measure 'Diferencia debe - haber' = [Total debe] - [Total haber]
 		formatString: \$ #,##0
 		displayFolder: 6. Cierre
 		lineageTag: e9f60be5-39c8-5a15-9da8-6294d757bac8
@@ -45,7 +45,7 @@ table lineas_asiento
 		lineageTag: d3864402-992e-5b63-bac6-e3a06633dd08
 
 	/// Ingresos en positivo y costos o gastos en negativo, sin los asientos de cierre.
-	measure 'Monto EERR' = CALCULATE([Haber] - [Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
+	measure 'Monto EERR' = CALCULATE([Total haber] - [Total debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[tipo] IN {"Ingreso", "Costo", "Gasto"})
 		formatString: \$ #,##0
 		displayFolder: 2. Estado de resultados
 		lineageTag: a77b0707-b698-505b-9cc4-d891a3332297
@@ -237,7 +237,7 @@ table lineas_asiento
 		lineageTag: de3b6dee-4fb0-5ebe-9bd9-0229616bba31
 
 	/// Costo de los materiales consumidos en el periodo.
-	measure 'Consumo de materiales' = CALCULATE([Debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[inventariable] = 1)
+	measure 'Consumo de materiales' = CALCULATE([Total debe], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[inventariable] = 1)
 		formatString: \$ #,##0
 		displayFolder: 5. Indicadores
 		lineageTag: 681b0628-0a6e-5f02-8d0e-6f4bb8baa476
@@ -249,7 +249,7 @@ table lineas_asiento
 		lineageTag: 99a4acee-5614-573c-837a-45bc889c7004
 
 	/// Lo que se compró a proveedores en el periodo.
-	measure 'Compras y servicios' = CALCULATE([Haber], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[linea] = "Proveedores")
+	measure 'Compras y servicios' = CALCULATE([Total haber], NOT asientos[tipo] IN {"Apertura", "Cierre", "Traspaso"}, plan_cuentas[linea] = "Proveedores")
 		formatString: \$ #,##0
 		displayFolder: 5. Indicadores
 		lineageTag: 7a52cd3b-80f0-507d-958d-a2e22c04ae85

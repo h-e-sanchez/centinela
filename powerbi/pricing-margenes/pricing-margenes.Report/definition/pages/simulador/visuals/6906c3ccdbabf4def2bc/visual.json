@@ -43,11 +43,12 @@
                       "Entity": "canales"
                     }
                   },
-                  "Property": "Elasticidad"
+                  "Property": "Elasticidad supuesta"
                 }
               },
-              "queryRef": "canales.Elasticidad",
-              "nativeQueryRef": "Elasticidad"
+              "queryRef": "canales.Elasticidad supuesta",
+              "nativeQueryRef": "Elasticidad supuesta",
+              "displayName": "Elasticidad"
             },
             {
               "field": {

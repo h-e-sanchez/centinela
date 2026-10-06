@@ -10,6 +10,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import re
+import unicodedata
 from pathlib import Path
 
 import pytest
@@ -64,6 +65,24 @@ def test_hay_un_proyecto_por_reporte():
     assert PBI in PROYECTOS
     for proyecto in PROYECTOS:
         assert len(list(proyecto.glob("*.pbip"))) == 1
+
+
+@pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
+def test_ninguna_medida_se_llama_como_una_columna_de_su_tabla(proyecto):
+    """Desktop no abre el modelo si una medida se llama igual que una columna de su tabla.
+
+    La comparación ignora mayúsculas y tildes, como Analysis Services. Pasó con «Estado» frente a la
+    columna `estado` en proyectos-ti.
+    """
+    def clave(nombre: str) -> str:
+        return "".join(ch for ch in unicodedata.normalize("NFKD", nombre.lower()) if not unicodedata.combining(ch))
+
+    for archivo in (_modelo(proyecto) / "definition" / "tables").glob("*.tmdl"):
+        objetos = {"measure": set(), "column": set()}
+        for m in re.finditer(r"^\t(measure|column) (?:'((?:[^']|'')+)'|(\S+))", archivo.read_text(encoding="utf-8"), re.MULTILINE):
+            objetos[m.group(1)].add(clave((m.group(2) or m.group(3)).replace("''", "'")))
+        choques = objetos["measure"] & objetos["column"]
+        assert not choques, f"{archivo.name}: medida y columna con el mismo nombre: {choques}"
 
 
 @pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
