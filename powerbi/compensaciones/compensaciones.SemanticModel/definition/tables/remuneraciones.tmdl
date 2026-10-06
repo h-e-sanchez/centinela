@@ -293,7 +293,7 @@ table remuneraciones
 		lineageTag: 8ab8c8b9-e648-5ca3-9775-0c68dab4b54e
 
 	/// Lo que cuesta al mes llevar a todos al menos al primer cuarto de su banda.
-	measure 'Costo de llevar al P25 (mes)' =
+	measure 'Costo de llevar al primer cuartil (mes)' =
 			VAR ultimo = MAX(remuneraciones[fecha])
 			RETURN
 			    CALCULATE(
@@ -306,7 +306,7 @@ table remuneraciones
 			    )
 		formatString: \$ #,##0
 		displayFolder: 5. Costo de corregir
-		lineageTag: 9079fc93-6d68-511a-ae92-8f64427550fd
+		lineageTag: f486ca84-9310-50ab-884c-aae7bcd434e6
 
 	/// Costo de llevar al mínimo, por 12 meses.
 	measure 'Costo anual de llevar al mínimo' = [Costo de llevar al mínimo (mes)] * 12
@@ -314,11 +314,11 @@ table remuneraciones
 		displayFolder: 5. Costo de corregir
 		lineageTag: fa687752-34a9-5878-9e54-99009feca5f5
 
-	/// Costo de llevar al P25 de la banda, por 12 meses.
-	measure 'Costo anual de llevar al P25' = [Costo de llevar al P25 (mes)] * 12
+	/// Costo de llevar al primer cuartil de la banda, por 12 meses.
+	measure 'Costo anual de llevar al primer cuartil' = [Costo de llevar al primer cuartil (mes)] * 12
 		formatString: \$ #,##0
 		displayFolder: 5. Costo de corregir
-		lineageTag: 0c40d2a2-b945-5f1d-b3e5-9f4e9a1c74b2
+		lineageTag: 68e2740a-5364-5ecf-9da6-75b3269cb8a4
 
 	/// Suma de sueldos base del último mes, sobre la que se aplica un reajuste.
 	measure 'Sueldo base del mes' =

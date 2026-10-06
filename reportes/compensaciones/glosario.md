@@ -43,7 +43,7 @@
 
 **Costo de llevar al mínimo.** Lo que cuesta al mes subir a cada persona bajo el mínimo hasta el mínimo de su banda. Es la corrección indispensable.
 
-**Costo de llevar al P25.** Lo que cuesta llevar a todos al menos al primer cuarto de su banda. Es una corrección más sana, que deja espacio para el mérito.
+**Costo de llevar al primer cuartil.** Lo que cuesta llevar a todos al menos al primer cuartil de su banda: el mínimo más un cuarto del rango entre mínimo y máximo. No es el P25 de la encuesta de mercado. Es una corrección más sana, que deja espacio para el mérito.
 
 **Reajuste negociado.** Un aumento general del sueldo base, por ejemplo el que resulta de una negociación colectiva. El parámetro del reporte calcula su impacto anual sobre la masa salarial.
 
@@ -518,7 +518,7 @@ RETURN
 
 *Tabla `remuneraciones` · formato `\$ #,##0`*
 
-#### Costo de llevar al P25 (mes)
+#### Costo de llevar al primer cuartil (mes)
 
 Lo que cuesta al mes llevar a todos al menos al primer cuarto de su banda.
 
@@ -547,12 +547,12 @@ Costo de llevar al mínimo, por 12 meses.
 
 *Tabla `remuneraciones` · formato `\$ #,##0`*
 
-#### Costo anual de llevar al P25
+#### Costo anual de llevar al primer cuartil
 
-Costo de llevar al P25 de la banda, por 12 meses.
+Costo de llevar al primer cuartil de la banda, por 12 meses.
 
 ```dax
-[Costo de llevar al P25 (mes)] * 12
+[Costo de llevar al primer cuartil (mes)] * 12
 ```
 
 *Tabla `remuneraciones` · formato `\$ #,##0`*

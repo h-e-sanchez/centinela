@@ -39,7 +39,7 @@
 
 **Costo de llevar al mínimo.** Lo que cuesta al mes subir a cada persona bajo el mínimo hasta el mínimo de su banda. Es la corrección indispensable.
 
-**Costo de llevar al P25.** Lo que cuesta llevar a todos al menos al primer cuarto de su banda. Es una corrección más sana, que deja espacio para el mérito.
+**Costo de llevar al primer cuartil.** Lo que cuesta llevar a todos al menos al primer cuartil de su banda: el mínimo más un cuarto del rango entre mínimo y máximo. No es el P25 de la encuesta de mercado. Es una corrección más sana, que deja espacio para el mérito.
 
 **Reajuste negociado.** Un aumento general del sueldo base, por ejemplo el que resulta de una negociación colectiva. El parámetro del reporte calcula su impacto anual sobre la masa salarial.
 
