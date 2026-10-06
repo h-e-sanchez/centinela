@@ -134,63 +134,6 @@
         }
       ]
     },
-    "filterConfig": {
-      "filters": [
-        {
-          "name": "solo-energia",
-          "field": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "empresas"
-                }
-              },
-              "Property": "industria"
-            }
-          },
-          "type": "Categorical",
-          "filter": {
-            "Version": 2,
-            "From": [
-              {
-                "Name": "f",
-                "Entity": "empresas",
-                "Type": 0
-              }
-            ],
-            "Where": [
-              {
-                "Condition": {
-                  "In": {
-                    "Expressions": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "f"
-                            }
-                          },
-                          "Property": "industria"
-                        }
-                      }
-                    ],
-                    "Values": [
-                      [
-                        {
-                          "Literal": {
-                            "Value": "'Energia'"
-                          }
-                        }
-                      ]
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "border": [
         {
@@ -264,5 +207,62 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "solo-energia",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "empresas"
+              }
+            },
+            "Property": "industria"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "empresas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "industria"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Energia'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

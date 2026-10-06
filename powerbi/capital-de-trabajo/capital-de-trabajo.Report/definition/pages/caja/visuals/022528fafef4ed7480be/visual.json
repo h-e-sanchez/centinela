@@ -175,70 +175,6 @@
         }
       ]
     },
-    "filterConfig": {
-      "filters": [
-        {
-          "name": "ventana-26-semanas",
-          "field": {
-            "Column": {
-              "Expression": {
-                "SourceRef": {
-                  "Entity": "caja_semanal"
-                }
-              },
-              "Property": "ventana"
-            }
-          },
-          "type": "Categorical",
-          "filter": {
-            "Version": 2,
-            "From": [
-              {
-                "Name": "f",
-                "Entity": "caja_semanal",
-                "Type": 0
-              }
-            ],
-            "Where": [
-              {
-                "Condition": {
-                  "In": {
-                    "Expressions": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "f"
-                            }
-                          },
-                          "Property": "ventana"
-                        }
-                      }
-                    ],
-                    "Values": [
-                      [
-                        {
-                          "Literal": {
-                            "Value": "'Últimas 13 semanas'"
-                          }
-                        }
-                      ],
-                      [
-                        {
-                          "Literal": {
-                            "Value": "'Próximas 13 semanas'"
-                          }
-                        }
-                      ]
-                    ]
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "border": [
         {
@@ -312,5 +248,69 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ventana-26-semanas",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "caja_semanal"
+              }
+            },
+            "Property": "ventana"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "caja_semanal",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "ventana"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Últimas 13 semanas'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Próximas 13 semanas'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }
