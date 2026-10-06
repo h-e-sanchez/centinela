@@ -192,3 +192,10 @@ def test_segmentadores_sin_seleccion_guardada(proyecto):
                 f"{ruta.parent.name}: industria debe abrir en {industria_inicial.INDUSTRIA_INICIAL}"
         else:
             assert not valores, f"{ruta.parent.name}: segmentador con selección guardada"
+
+
+@pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
+def test_filtros_de_visual_van_fuera_de_visual(proyecto):
+    # Desktop rechaza el archivo: «Se ha incluido una propiedad 'filterConfig' adicional en /visual».
+    for ruta in _visuales(proyecto):
+        assert "filterConfig" not in json.loads(ruta.read_text(encoding="utf-8"))["visual"], ruta.parent.name
