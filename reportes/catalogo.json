@@ -334,7 +334,6 @@
       "color": "#2E7D8C",
       "fecha": "2026-10-06",
       "destacado": false,
-      "estado": "en-preparacion",
       "modelo": "powerbi/capital-de-trabajo",
       "datos": "data/capital-de-trabajo",
       "prefijo": "capital-de-trabajo",
@@ -408,7 +407,8 @@
           "etiqueta": "Especificación",
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/05-capital-de-trabajo.md"
         }
-      ]
+      ],
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiODM5ZjgwZTAtYzk0Mi00OTI5LThkNjUtYTVjNTlhMDk1ODhjIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada"
     },
     {
       "slug": "compensaciones",

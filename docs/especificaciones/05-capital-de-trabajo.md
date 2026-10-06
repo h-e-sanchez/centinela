@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** construido el 2026-10-06 (pendiente Desktop y publicación) · **Slug:** `capital-de-trabajo` · **Tema:** Finanzas operativas
+**Estado:** construido y publicado el 2026-10-06 · **Slug:** `capital-de-trabajo` · **Tema:** Finanzas operativas
 
 ## Qué resuelve
 
