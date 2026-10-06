@@ -46,7 +46,7 @@ Se generan con `data/generar_compensaciones.py` (semilla fija), que lee `data/wo
   - `bandas`, `grados` y `Calendario` filtran `remuneraciones`.
 - **Foto al último mes:** las medidas de estructura (dotación, compa-ratio, fuera de banda, brecha y costo) miran el último mes con remuneraciones del periodo filtrado. Con el segmentador de año se compara diciembre de 2025 con diciembre de 2026.
 - **Parámetro what-if `Reajuste negociado`:** de 0% a 10%, para simular una negociación colectiva. Sin elegir, usa 4,5%.
-- **Seguridad por fila:** un rol por servicio (`Jefatura UCI`, `Jefatura Ambulatorio`, etc.) filtra `servicios`, y con eso a sus personas y remuneraciones. Cada jefatura ve solo su servicio. Se prueba en Desktop con **Modelado → Ver como**.
+- **Seguridad por fila:** un rol por servicio (`Jefatura UCI`, `Jefatura Ambulatorio`, etc.) filtra `servicios`, y con eso a sus personas y remuneraciones. Cada jefatura ve solo su servicio. Se prueba en Desktop con **Modelado → Ver como**. La versión publicada en la web no lleva los roles, porque Power BI no permite publicar en la web un modelo con seguridad por fila: muestra todos los servicios. Los roles están en el proyecto PBIP.
 
 ## Medidas clave
 
