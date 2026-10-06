@@ -1,0 +1,109 @@
+cuenta_codigo,industria,cuenta,tipo,clasificacion,linea,naturaleza,componente,inventariable,orden
+MAN-1101,Manufactura,Caja y bancos,Activo,Activo corriente,Efectivo,1,,0,1101
+MAN-1102,Manufactura,Deudores por ventas,Activo,Activo corriente,Deudores por ventas,1,,0,1102
+MAN-1103,Manufactura,Inventarios,Activo,Activo corriente,Inventarios,1,,0,1103
+MAN-1201,Manufactura,"Propiedades, planta y equipo",Activo,Activo no corriente,Activo fijo neto,1,,0,1201
+MAN-1202,Manufactura,Depreciación acumulada,Activo,Activo no corriente,Activo fijo neto,1,,0,1202
+MAN-2101,Manufactura,Proveedores,Pasivo,Pasivo corriente,Proveedores,-1,,0,2101
+MAN-2102,Manufactura,Remuneraciones por pagar,Pasivo,Pasivo corriente,Remuneraciones por pagar,-1,,0,2102
+MAN-2103,Manufactura,Préstamos bancarios de corto plazo,Pasivo,Pasivo corriente,Deuda financiera de corto plazo,-1,,0,2103
+MAN-2104,Manufactura,Impuesto a la renta por pagar,Pasivo,Pasivo corriente,Impuestos por pagar,-1,,0,2104
+MAN-2201,Manufactura,Deuda financiera de largo plazo,Pasivo,Pasivo no corriente,Deuda financiera de largo plazo,-1,,0,2201
+MAN-3101,Manufactura,Capital pagado,Patrimonio,Patrimonio,Capital,-1,,0,3101
+MAN-3102,Manufactura,Resultados acumulados,Patrimonio,Patrimonio,Resultados acumulados,-1,,0,3102
+MAN-3103,Manufactura,Resultado del ejercicio,Patrimonio,Patrimonio,Resultado del ejercicio,-1,,0,3103
+MAN-6901,Manufactura,Depreciación,Gasto,Depreciación,Depreciación,1,,0,6901
+MAN-6902,Manufactura,Intereses,Gasto,Gastos financieros,Gastos financieros,1,,0,6902
+MAN-6903,Manufactura,Impuesto a la renta,Gasto,Impuesto a la renta,Impuesto a la renta,1,,0,6903
+MAN-4101,Manufactura,Contratos de mantención,Ingreso,Estado de resultados,Ingresos,-1,servicios_postventa,0,4101
+MAN-4102,Manufactura,Repuestos,Ingreso,Estado de resultados,Ingresos,-1,servicios_postventa,0,4102
+MAN-4103,Manufactura,Canal mayorista,Ingreso,Estado de resultados,Ingresos,-1,ventas_linea_consumo,0,4103
+MAN-4104,Manufactura,Canal supermercados,Ingreso,Estado de resultados,Ingresos,-1,ventas_linea_consumo,0,4104
+MAN-4105,Manufactura,Exportaciones,Ingreso,Estado de resultados,Ingresos,-1,ventas_linea_industrial,0,4105
+MAN-4106,Manufactura,Ventas nacionales,Ingreso,Estado de resultados,Ingresos,-1,ventas_linea_industrial,0,4106
+MAN-5101,Manufactura,Electricidad,Costo,Estado de resultados,Costos,1,energia_planta,0,5101
+MAN-5102,Manufactura,Gas,Costo,Estado de resultados,Costos,1,energia_planta,0,5102
+MAN-5103,Manufactura,Horas extra,Costo,Estado de resultados,Costos,1,mano_de_obra_directa,0,5103
+MAN-5104,Manufactura,Sueldos operarios,Costo,Estado de resultados,Costos,1,mano_de_obra_directa,0,5104
+MAN-5105,Manufactura,Acero y metales,Costo,Estado de resultados,Costos,1,materias_primas,1,5105
+MAN-5106,Manufactura,Insumos químicos,Costo,Estado de resultados,Costos,1,materias_primas,1,5106
+MAN-6101,Manufactura,Arriendo oficinas,Gasto,Estado de resultados,Gastos operacionales,1,arriendo,0,6101
+MAN-6102,Manufactura,Bonos por meta,Gasto,Estado de resultados,Gastos operacionales,1,comisiones,0,6102
+MAN-6103,Manufactura,Comisiones directas,Gasto,Estado de resultados,Gastos operacionales,1,comisiones,0,6103
+MAN-6104,Manufactura,Bodegaje,Gasto,Estado de resultados,Gastos operacionales,1,logistica_distribucion,0,6104
+MAN-6105,Manufactura,Fletes,Gasto,Estado de resultados,Gastos operacionales,1,logistica_distribucion,0,6105
+MAN-6106,Manufactura,Ferias y eventos,Gasto,Estado de resultados,Gastos operacionales,1,marketing,0,6106
+MAN-6107,Manufactura,Medios digitales,Gasto,Estado de resultados,Gastos operacionales,1,marketing,0,6107
+MAN-6108,Manufactura,Beneficios,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6108
+MAN-6109,Manufactura,Sueldos administrativos,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6109
+MAN-6110,Manufactura,Licencias,Gasto,Estado de resultados,Gastos operacionales,1,software,0,6110
+MAN-6111,Manufactura,Soporte TI,Gasto,Estado de resultados,Gastos operacionales,1,software,0,6111
+ENE-1101,Energia,Caja y bancos,Activo,Activo corriente,Efectivo,1,,0,1101
+ENE-1102,Energia,Deudores por ventas,Activo,Activo corriente,Deudores por ventas,1,,0,1102
+ENE-1103,Energia,Inventarios,Activo,Activo corriente,Inventarios,1,,0,1103
+ENE-1201,Energia,"Propiedades, planta y equipo",Activo,Activo no corriente,Activo fijo neto,1,,0,1201
+ENE-1202,Energia,Depreciación acumulada,Activo,Activo no corriente,Activo fijo neto,1,,0,1202
+ENE-2101,Energia,Proveedores,Pasivo,Pasivo corriente,Proveedores,-1,,0,2101
+ENE-2102,Energia,Remuneraciones por pagar,Pasivo,Pasivo corriente,Remuneraciones por pagar,-1,,0,2102
+ENE-2103,Energia,Préstamos bancarios de corto plazo,Pasivo,Pasivo corriente,Deuda financiera de corto plazo,-1,,0,2103
+ENE-2104,Energia,Impuesto a la renta por pagar,Pasivo,Pasivo corriente,Impuestos por pagar,-1,,0,2104
+ENE-2201,Energia,Deuda financiera de largo plazo,Pasivo,Pasivo no corriente,Deuda financiera de largo plazo,-1,,0,2201
+ENE-3101,Energia,Capital pagado,Patrimonio,Patrimonio,Capital,-1,,0,3101
+ENE-3102,Energia,Resultados acumulados,Patrimonio,Patrimonio,Resultados acumulados,-1,,0,3102
+ENE-3103,Energia,Resultado del ejercicio,Patrimonio,Patrimonio,Resultado del ejercicio,-1,,0,3103
+ENE-6901,Energia,Depreciación,Gasto,Depreciación,Depreciación,1,,0,6901
+ENE-6902,Energia,Intereses,Gasto,Gastos financieros,Gastos financieros,1,,0,6902
+ENE-6903,Energia,Impuesto a la renta,Gasto,Impuesto a la renta,Impuesto a la renta,1,,0,6903
+ENE-4101,Energia,Peajes nacionales,Ingreso,Estado de resultados,Ingresos,-1,peajes_transmision,0,4101
+ENE-4102,Energia,Peajes zonales,Ingreso,Estado de resultados,Ingresos,-1,peajes_transmision,0,4102
+ENE-4103,Energia,Clientes libres,Ingreso,Estado de resultados,Ingresos,-1,venta_energia_contratos,0,4103
+ENE-4104,Energia,Distribuidoras,Ingreso,Estado de resultados,Ingresos,-1,venta_energia_contratos,0,4104
+ENE-4105,Energia,Mercado spot,Ingreso,Estado de resultados,Ingresos,-1,venta_energia_spot,0,4105
+ENE-5101,Energia,Diésel,Costo,Estado de resultados,Costos,1,combustibles,1,5101
+ENE-5102,Energia,Gas natural,Costo,Estado de resultados,Costos,1,combustibles,1,5102
+ENE-5103,Energia,Compras a terceros,Costo,Estado de resultados,Costos,1,compras_energia,0,5103
+ENE-5104,Energia,Mantención correctiva,Costo,Estado de resultados,Costos,1,mantenimiento_centrales,0,5104
+ENE-5105,Energia,Mantención preventiva,Costo,Estado de resultados,Costos,1,mantenimiento_centrales,0,5105
+ENE-6101,Energia,Monitoreo ambiental,Gasto,Estado de resultados,Gastos operacionales,1,permisos_ambientales,0,6101
+ENE-6102,Energia,Permisos y tasas,Gasto,Estado de resultados,Gastos operacionales,1,permisos_ambientales,0,6102
+ENE-6103,Energia,Beneficios,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6103
+ENE-6104,Energia,Sueldos administrativos,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6104
+ENE-6105,Energia,Seguros de activos,Gasto,Estado de resultados,Gastos operacionales,1,seguros,0,6105
+ENE-6106,Energia,Infraestructura nube,Gasto,Estado de resultados,Gastos operacionales,1,tecnologia,0,6106
+ENE-6107,Energia,Licencias,Gasto,Estado de resultados,Gastos operacionales,1,tecnologia,0,6107
+SAL-1101,Salud,Caja y bancos,Activo,Activo corriente,Efectivo,1,,0,1101
+SAL-1102,Salud,Deudores por ventas,Activo,Activo corriente,Deudores por ventas,1,,0,1102
+SAL-1103,Salud,Inventarios,Activo,Activo corriente,Inventarios,1,,0,1103
+SAL-1201,Salud,"Propiedades, planta y equipo",Activo,Activo no corriente,Activo fijo neto,1,,0,1201
+SAL-1202,Salud,Depreciación acumulada,Activo,Activo no corriente,Activo fijo neto,1,,0,1202
+SAL-2101,Salud,Proveedores,Pasivo,Pasivo corriente,Proveedores,-1,,0,2101
+SAL-2102,Salud,Remuneraciones por pagar,Pasivo,Pasivo corriente,Remuneraciones por pagar,-1,,0,2102
+SAL-2103,Salud,Préstamos bancarios de corto plazo,Pasivo,Pasivo corriente,Deuda financiera de corto plazo,-1,,0,2103
+SAL-2104,Salud,Impuesto a la renta por pagar,Pasivo,Pasivo corriente,Impuestos por pagar,-1,,0,2104
+SAL-2201,Salud,Deuda financiera de largo plazo,Pasivo,Pasivo no corriente,Deuda financiera de largo plazo,-1,,0,2201
+SAL-3101,Salud,Capital pagado,Patrimonio,Patrimonio,Capital,-1,,0,3101
+SAL-3102,Salud,Resultados acumulados,Patrimonio,Patrimonio,Resultados acumulados,-1,,0,3102
+SAL-3103,Salud,Resultado del ejercicio,Patrimonio,Patrimonio,Resultado del ejercicio,-1,,0,3103
+SAL-6901,Salud,Depreciación,Gasto,Depreciación,Depreciación,1,,0,6901
+SAL-6902,Salud,Intereses,Gasto,Gastos financieros,Gastos financieros,1,,0,6902
+SAL-6903,Salud,Impuesto a la renta,Gasto,Impuesto a la renta,Impuesto a la renta,1,,0,6903
+SAL-4101,Salud,Días cama,Ingreso,Estado de resultados,Ingresos,-1,hospitalizacion,0,4101
+SAL-4102,Salud,Medicamentos facturados,Ingreso,Estado de resultados,Ingresos,-1,hospitalizacion,0,4102
+SAL-4103,Salud,Cirugías de urgencia,Ingreso,Estado de resultados,Ingresos,-1,pabellon,0,4103
+SAL-4104,Salud,Cirugías programadas,Ingreso,Estado de resultados,Ingresos,-1,pabellon,0,4104
+SAL-4105,Salud,Pacientes Fonasa,Ingreso,Estado de resultados,Ingresos,-1,prestaciones_ambulatorias,0,4105
+SAL-4106,Salud,Pacientes Isapre,Ingreso,Estado de resultados,Ingresos,-1,prestaciones_ambulatorias,0,4106
+SAL-5101,Salud,Guardias médicas,Costo,Estado de resultados,Costos,1,honorarios_medicos,0,5101
+SAL-5102,Salud,Honorarios por acto,Costo,Estado de resultados,Costos,1,honorarios_medicos,0,5102
+SAL-5103,Salud,Material clínico,Costo,Estado de resultados,Costos,1,insumos_medicos,1,5103
+SAL-5104,Salud,Medicamentos,Costo,Estado de resultados,Costos,1,insumos_medicos,1,5104
+SAL-5105,Salud,Sueldos base clínicos,Costo,Estado de resultados,Costos,1,remuneraciones_clinicas,0,5105
+SAL-5106,Salud,Turnos extra y reemplazos,Costo,Estado de resultados,Costos,1,remuneraciones_clinicas,0,5106
+SAL-6101,Salud,Alimentación pacientes,Gasto,Estado de resultados,Gastos operacionales,1,aseo_y_alimentacion,0,6101
+SAL-6102,Salud,Aseo,Gasto,Estado de resultados,Gastos operacionales,1,aseo_y_alimentacion,0,6102
+SAL-6103,Salud,Contratos de mantención,Gasto,Estado de resultados,Gastos operacionales,1,mantencion_equipos,0,6103
+SAL-6104,Salud,Reparaciones,Gasto,Estado de resultados,Gastos operacionales,1,mantencion_equipos,0,6104
+SAL-6105,Salud,Beneficios,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6105
+SAL-6106,Salud,Sueldos administrativos,Gasto,Estado de resultados,Gastos operacionales,1,remuneraciones_administrativas,0,6106
+SAL-6107,Salud,Infraestructura nube,Gasto,Estado de resultados,Gastos operacionales,1,tecnologia,0,6107
+SAL-6108,Salud,Licencias,Gasto,Estado de resultados,Gastos operacionales,1,tecnologia,0,6108

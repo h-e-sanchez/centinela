@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "estados-financieros"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "aa8957bd-8af2-51c8-be0f-3ce3f6dd91b5"
+  }
+}

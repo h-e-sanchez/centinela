@@ -1,0 +1,303 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "1e46811f838a47fd5a3d",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 900,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 900
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "empresas"
+                    }
+                  },
+                  "Property": "industria"
+                }
+              },
+              "queryRef": "empresas.industria",
+              "nativeQueryRef": "industria",
+              "active": true,
+              "displayName": "Industria"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Liquidez corriente"
+                }
+              },
+              "queryRef": "lineas_asiento.Liquidez corriente",
+              "nativeQueryRef": "Liquidez corriente"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Prueba ácida"
+                }
+              },
+              "queryRef": "lineas_asiento.Prueba ácida",
+              "nativeQueryRef": "Prueba ácida"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Endeudamiento"
+                }
+              },
+              "queryRef": "lineas_asiento.Endeudamiento",
+              "nativeQueryRef": "Endeudamiento"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Capital de trabajo neto"
+                }
+              },
+              "queryRef": "lineas_asiento.Capital de trabajo neto",
+              "nativeQueryRef": "Capital de trabajo neto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Días de cobro"
+                }
+              },
+              "queryRef": "lineas_asiento.Días de cobro",
+              "nativeQueryRef": "Días de cobro"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Días de inventario"
+                }
+              },
+              "queryRef": "lineas_asiento.Días de inventario",
+              "nativeQueryRef": "Días de inventario"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Días de pago"
+                }
+              },
+              "queryRef": "lineas_asiento.Días de pago",
+              "nativeQueryRef": "Días de pago"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "Ciclo de caja"
+                }
+              },
+              "queryRef": "lineas_asiento.Ciclo de caja",
+              "nativeQueryRef": "Ciclo de caja"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas_asiento"
+                    }
+                  },
+                  "Property": "ROE anualizado"
+                }
+              },
+              "queryRef": "lineas_asiento.ROE anualizado",
+              "nativeQueryRef": "ROE anualizado"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Las tres empresas'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

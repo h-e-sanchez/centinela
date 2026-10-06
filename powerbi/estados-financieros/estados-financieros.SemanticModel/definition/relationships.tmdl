@@ -1,0 +1,27 @@
+relationship e2b584d7-2890-5e14-b4f6-788a357c0fcb
+	fromColumn: asientos.industria
+	toColumn: empresas.industria
+
+relationship 177c2f3c-ca2d-5d19-b647-6f3a27f0b0b6
+	fromColumn: lineas_asiento.asiento
+	toColumn: asientos.asiento
+
+relationship 9ba846b0-767c-5717-a2ce-b7c72e6fcab2
+	fromColumn: lineas_asiento.cuenta_codigo
+	toColumn: plan_cuentas.cuenta_codigo
+
+relationship d0f76be1-6da5-5b9d-9622-025c7ef9da3f
+	fromColumn: asientos.fecha
+	toColumn: Calendario.Date
+
+relationship b5c8e956-646f-5abf-8d38-93359c3c26bb
+	fromColumn: eerr_reporte1.cuenta_codigo
+	toColumn: plan_cuentas.cuenta_codigo
+
+relationship 16b6f979-fc2f-5f44-8627-0bad3480d478
+	fromColumn: eerr_reporte1.industria
+	toColumn: empresas.industria
+
+relationship d57af761-4601-5b10-b241-c3f46d8e8ca1
+	fromColumn: eerr_reporte1.fecha
+	toColumn: Calendario.Date

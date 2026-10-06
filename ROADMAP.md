@@ -162,7 +162,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
 - [x] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 9 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
-- [ ] Reporte #8: Del libro diario a los EEFF (en espera; capital de trabajo pasó al #5)
+- [x] Reporte #8 · Del libro diario a los EEFF: especificación, libro diario en partida doble cuadrado con el #1, PBIP de 10 páginas, guía, glosario y descargas (catálogo «en preparación»; sin consolidación)
+- [ ] Reporte #8: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 
 ## Backlog P1 — robustez
 
@@ -241,6 +242,23 @@ variación, y tres historias:
 
 Proyecto PBIP `powerbi/pricing-margenes/`: 13 tablas (dos cascadas desconectadas y un parámetro de
 cambio de precio) y 9 páginas, que suman a la especificación el simulador de precio.
+
+### 2026-10-05 — Reporte #8: Del libro diario a los EEFF
+
+Sale de la espera con un alcance acotado: contabilidad por empresa, sin consolidación.
+Especificación en `docs/especificaciones/08-estados-financieros.md`. El generador
+`data/generar_estados_financieros.py` lleva el Real del #1 a un libro diario en partida doble y le
+suma cobranza, inventario, pagos, depreciación, deuda (con una línea de crédito automática),
+impuesto, cierre y traspaso. `tests/test_estados_financieros.py` verifica:
+- debe = haber en cada asiento;
+- el balance cuadrado en los 24 meses;
+- el EBITDA igual al #1;
+- el cierre y el traspaso;
+- que el flujo indirecto explique la variación de caja;
+- tres historias: Salud cobra a 95 días, Energía tiene 81% de activo fijo y Manufactura llega a 117 días de inventario.
+
+Proyecto PBIP `powerbi/estados-financieros/` de 10 páginas, con saldos acumulados, cascada del flujo y
+página de cuadraturas.
 
 ### 2026-10-05 — Reporte #4: Proyectos tecnológicos
 

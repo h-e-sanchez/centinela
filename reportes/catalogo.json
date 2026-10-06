@@ -493,6 +493,89 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/07-pricing-margenes.md"
         }
       ]
+    },
+    {
+      "slug": "estados-financieros",
+      "titulo": "Del libro diario a los EEFF",
+      "resumen": "Contabilidad de punta a punta de las tres empresas sintéticas de la vitrina: libro diario en partida doble, balance de comprobación, estado de resultados frente al presupuesto, balance general, flujo de efectivo indirecto, indicadores financieros y las cuadraturas del cierre anual. El EBITDA cuadra con el reporte Presupuesto vs. Real.",
+      "tema": "Finanzas · Contabilidad",
+      "color": "#2F5D50",
+      "fecha": "2026-10-05",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/estados-financieros",
+      "datos": "data/estados-financieros",
+      "prefijo": "estados-financieros",
+      "habilidades": [
+        "Partida doble y libro diario",
+        "Balance, estado de resultados y flujo de efectivo indirecto",
+        "Saldos acumulados en DAX",
+        "Cierre anual y cuadraturas",
+        "Indicadores de liquidez, endeudamiento y capital de trabajo",
+        "Modelo que cuadra con el reporte Presupuesto vs. Real",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Salud",
+          "resultado": "95 días",
+          "tono": "critica",
+          "texto": "Las aseguradoras pagan lento: la clínica tiene la liquidez más justa y gira su línea de crédito para pagar sueldos y proveedores."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "81%",
+          "tono": "neutro",
+          "texto": "Activo fijo sobre el activo total: la mayor depreciación sobre ingresos y el mayor endeudamiento de las tres."
+        },
+        {
+          "industria": "Manufactura",
+          "resultado": "60 → 117 días",
+          "tono": "critica",
+          "texto": "En su año flojo de ventas siguió comprando según presupuesto: el inventario casi se duplica en 2025 y baja en 2026."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/estados-financieros-datos-csv.zip",
+          "detalle": "cinco tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/estados-financieros-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/estados-financieros.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/estados-financieros-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/estados-financieros"
+        },
+        {
+          "etiqueta": "Generador del libro diario",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_estados_financieros.py"
+        },
+        {
+          "etiqueta": "Tests de partida doble y cuadraturas",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_estados_financieros.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/08-estados-financieros.md"
+        }
+      ]
     }
   ],
   "proximos": [

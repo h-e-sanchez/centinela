@@ -1,0 +1,71 @@
+/// Real y Presupuesto del reporte #1 por cuenta contable, para comparar y cuadrar.
+table eerr_reporte1
+	lineageTag: 17be2a59-50f9-53b4-99e8-8581d22d34a1
+
+	column version
+		dataType: string
+		isHidden
+		lineageTag: 7fd40979-357f-5f51-a4b8-891b7449be90
+		summarizeBy: none
+		sourceColumn: version
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 2d1e745b-0b16-5008-a33f-5e6d9b80b1f8
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: defa46b7-5803-5339-9073-210958130296
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 522d428c-8da8-5beb-8d1d-0c108b414fd9
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta_codigo
+		dataType: string
+		isHidden
+		lineageTag: adaf87c6-58f6-5626-bf27-7552a3a69228
+		summarizeBy: none
+		sourceColumn: cuenta_codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: c2450bcf-abc1-5ea3-923d-a1ef290ef7f4
+		summarizeBy: none
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition eerr_reporte1 = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("eerr_reporte1.csv", {{"version", type text}, {"fecha", type date}, {"industria", type text}, {"sucursal", type text}, {"cuenta_codigo", type text}, {"monto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

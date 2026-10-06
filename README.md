@@ -85,6 +85,9 @@ python data/generar_compensaciones.py
 # Datos sintéticos del reporte de pricing y márgenes (cuadra con los ingresos del reporte #1)
 python data/generar_pricing.py
 
+# Libro diario y EEFF de las tres empresas (cuadra con el Real del reporte #1)
+python data/generar_estados_financieros.py
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -143,6 +146,12 @@ abre los ingresos del #1 (cuadran al peso) en una cascada de lista a bolsillo, c
 contribución por canal, efecto precio-volumen-mezcla, descuentos fuera de política, curva ballena de
 clientes y un simulador de precio. Guía en
 [`reportes/pricing-margenes/guia.md`](reportes/pricing-margenes/guia.md).
+
+El reporte #8, **Del libro diario a los EEFF** ([`powerbi/estados-financieros/`](powerbi/estados-financieros/)),
+lleva el Real del #1 a un libro diario en partida doble y sube hasta el balance, el estado de
+resultados y el flujo de efectivo indirecto de cada empresa. Incluye indicadores financieros, cierre
+anual y una página de cuadraturas, todas en cero. Guía en
+[`reportes/estados-financieros/guia.md`](reportes/estados-financieros/guia.md).
 
 ## Demo
 
