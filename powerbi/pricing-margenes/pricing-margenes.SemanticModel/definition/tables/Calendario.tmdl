@@ -1,0 +1,83 @@
+/// Dimensión de fechas 2025-2026.
+table Calendario
+	lineageTag: b7256f58-b163-53dd-a126-b48667192732
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: eefa6199-88ef-5dab-be76-3487abbb0ff1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 6acc013c-dac0-5b43-8c3a-57e584dfc44c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Anio]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ce19df78-daa5-5bd2-8557-6113f72ff9cc
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Mes'
+		dataType: string
+		lineageTag: de341363-b840-5101-8124-f3acfaccede9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Nombre Mes]
+		sortByColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Periodo Num'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3ee35ada-7fb3-5792-8e9a-d9c7977c67ae
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Periodo Num]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Año'
+		dataType: string
+		lineageTag: 34b870b2-a22d-5ff0-bb44-17f2848f381e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Año]
+		sortByColumn: 'Periodo Num'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendario = calculated
+		mode: import
+		source =
+				ADDCOLUMNS(
+				    CALENDAR(DATE(2025, 1, 1), DATE(2026, 12, 31)),
+				    "Anio", YEAR([Date]),
+				    "Mes", MONTH([Date]),
+				    "Nombre Mes", FORMAT([Date], "mmm"),
+				    "Periodo Num", YEAR([Date]) * 100 + MONTH([Date]),
+				    "Mes Año", FORMAT([Date], "mmm yyyy")
+				)
+
+	annotation PBI_ResultType = Table

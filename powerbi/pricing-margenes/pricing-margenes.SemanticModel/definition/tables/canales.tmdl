@@ -1,0 +1,83 @@
+/// Dimensión: canales de venta con su política de descuento máximo, costo de servir y elasticidad supuesta.
+table canales
+	lineageTag: 10bce6d1-1212-5015-b575-c4cd5b79bfb3
+
+	/// Descuento total máximo que permite la política comercial del canal.
+	measure 'Descuento máximo de la política' = MAX(canales[descuento_maximo])
+		formatString: 0%
+		displayFolder: 4. Descuentos
+		lineageTag: e0535bf6-4169-58e3-b420-7de6ab5f1f07
+
+	/// Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).
+	measure Elasticidad = MAX(canales[elasticidad])
+		formatString: 0.0
+		displayFolder: 6. Simulador
+		lineageTag: f7bd9391-ff70-5f36-bdf6-59b052527bab
+
+	column canal
+		dataType: string
+		lineageTag: 61f2efed-d005-5ee8-a4f0-fb29d0b37167
+		summarizeBy: none
+		sourceColumn: canal
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 10c2f2a4-0c31-57ff-b209-b8c45bdb3955
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column descuento_maximo
+		dataType: double
+		isHidden
+		formatString: 0%
+		lineageTag: ed9fcb40-f5db-5bd1-b162-5e374204310e
+		summarizeBy: none
+		sourceColumn: descuento_maximo
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_servir_pct
+		dataType: double
+		isHidden
+		formatString: 0.0%
+		lineageTag: 128bdf9b-6922-529d-ba2e-f2707e8661a2
+		summarizeBy: none
+		sourceColumn: costo_servir_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column elasticidad
+		dataType: double
+		isHidden
+		formatString: 0.0
+		lineageTag: 653e584d-f840-583c-8f99-389e7eb72d04
+		summarizeBy: none
+		sourceColumn: elasticidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 525c7bfb-16aa-57a3-9d0e-3be610575f4d
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition canales = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("canales.csv", {{"canal", type text}, {"industria", type text}, {"descuento_maximo", type number}, {"costo_servir_pct", type number}, {"elasticidad", type number}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

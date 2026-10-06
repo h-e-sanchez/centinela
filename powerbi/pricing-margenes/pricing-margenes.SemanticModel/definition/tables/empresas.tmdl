@@ -1,0 +1,40 @@
+/// Dimensión: las tres empresas ficticias de la vitrina.
+table empresas
+	lineageTag: c823cbfa-159d-5d2c-9a95-c7914253ef1b
+
+	column industria
+		dataType: string
+		lineageTag: e4971f33-5026-55e8-9785-2187f491c3f5
+		summarizeBy: none
+		sourceColumn: industria
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: b9fe41db-c576-5959-89ba-fdf4e44ae055
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3e428638-0ac9-5e69-8582-53778bdbd537
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition empresas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("empresas.csv", {{"industria", type text}, {"empresa", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

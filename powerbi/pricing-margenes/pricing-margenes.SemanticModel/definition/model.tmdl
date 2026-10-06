@@ -1,0 +1,31 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","transacciones","presupuesto_ingresos","lista_precios","productos","clientes","canales","sucursales","empresas","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table transacciones
+ref table presupuesto_ingresos
+ref table lista_precios
+ref table productos
+ref table clientes
+ref table canales
+ref table sucursales
+ref table empresas
+ref table 'Cascada de precios'
+ref table 'Escalones PVM'
+ref table 'Cambio de precio'
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

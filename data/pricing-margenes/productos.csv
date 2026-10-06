@@ -1,0 +1,18 @@
+producto,industria,linea,unidad,costo_variable_pct
+Línea consumo · Producto A,Manufactura,Línea consumo,unidad,0.66
+Línea consumo · Producto B,Manufactura,Línea consumo,unidad,0.64
+Línea consumo · Producto C,Manufactura,Línea consumo,unidad,0.68
+Línea industrial · Producto D,Manufactura,Línea industrial,unidad,0.58
+Línea industrial · Producto E,Manufactura,Línea industrial,unidad,0.6
+Contrato de mantención (mes),Manufactura,Contrato de mantención,mes,0.45
+Kit de repuestos,Manufactura,Kit de repuestos,unidad,0.55
+Energía contratada (MWh),Energia,Energía contratada,MWh,0.52
+Energía regulada (MWh),Energia,Energía regulada,MWh,0.55
+Energía spot (MWh),Energia,Energía spot,MWh,0.6
+Peaje de transmisión (MWh),Energia,Peaje de transmisión,MWh,0.2
+Consulta ambulatoria,Salud,Consulta ambulatoria,unidad,0.55
+Examen de laboratorio,Salud,Examen de laboratorio,unidad,0.5
+Día cama,Salud,Día cama,unidad,0.55
+Medicamento facturado,Salud,Medicamento facturado,unidad,0.62
+Cirugía programada,Salud,Cirugía programada,unidad,0.55
+Cirugía de urgencia,Salud,Cirugía de urgencia,unidad,0.58

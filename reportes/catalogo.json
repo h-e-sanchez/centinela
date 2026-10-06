@@ -409,6 +409,90 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/06-compensaciones.md"
         }
       ]
+    },
+    {
+      "slug": "pricing-margenes",
+      "titulo": "Pricing y márgenes por canal",
+      "resumen": "Control de gestión comercial de las tres empresas sintéticas de la vitrina, con ingresos que cuadran al peso con el reporte Presupuesto vs. Real: cascada del precio de lista al bolsillo, margen de contribución por canal y producto, efecto precio-volumen-mezcla, descuentos fuera de política, rentabilidad por cliente y un simulador de precio.",
+      "tema": "Control de gestión · Comercial",
+      "color": "#7A6A1F",
+      "fecha": "2026-10-05",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/pricing-margenes",
+      "datos": "data/pricing-margenes",
+      "prefijo": "pricing-margenes",
+      "habilidades": [
+        "Cascada de precios (de lista a bolsillo)",
+        "Margen de contribución por canal",
+        "Análisis precio-volumen-mezcla",
+        "Curva ballena de rentabilidad por cliente",
+        "Tablas desconectadas para cascadas",
+        "Parámetro what-if de precio con elasticidad",
+        "Modelo que cuadra con el reporte Presupuesto vs. Real",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Manufactura",
+          "resultado": "4,3%",
+          "tono": "critica",
+          "texto": "Retail mueve el mayor volumen, pero con rappel y su costo de servir deja el margen de contribución más bajo; industrial y exportación superan 30%."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "100% precio",
+          "tono": "neutro",
+          "texto": "Los ingresos de 2026 crecen $29 M sobre 2025 y todo lo explica el precio: el volumen en MWh no cambió."
+        },
+        {
+          "industria": "Salud",
+          "resultado": "21%",
+          "tono": "critica",
+          "texto": "Tres convenios con empresas negocian sobre la política: uno de cada cinco cargos de convenios queda fuera y dos convenios pierden margen."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/pricing-margenes-datos-csv.zip",
+          "detalle": "ocho tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/pricing-margenes-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/pricing-margenes.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/pricing-margenes-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/pricing-margenes"
+        },
+        {
+          "etiqueta": "Generador de datos",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_pricing.py"
+        },
+        {
+          "etiqueta": "Tests de cuadratura y calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_pricing.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/07-pricing-margenes.md"
+        }
+      ]
     }
   ],
   "proximos": [
@@ -417,12 +501,6 @@
       "tema": "Finanzas operativas",
       "color": "#2E7D8C",
       "resumen": "Cobranza, pagos e inventario con DSO, DPO, DIO y ciclo de conversión de caja, más un flujo de caja a 13 semanas que cuadra con el reporte de Presupuesto vs. Real."
-    },
-    {
-      "titulo": "Pricing y márgenes por canal",
-      "tema": "Control de gestión · Comercial",
-      "color": "#7A6A1F",
-      "resumen": "Cascada de precios de lista a bolsillo, margen de contribución por canal, efecto precio-volumen-mezcla y rentabilidad por cliente."
     }
   ]
 }

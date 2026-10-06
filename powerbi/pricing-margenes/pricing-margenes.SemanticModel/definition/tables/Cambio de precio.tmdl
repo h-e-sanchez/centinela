@@ -1,0 +1,30 @@
+/// Parámetro what-if: cambio de precio de lista, de −10% a +10%.
+table 'Cambio de precio'
+	lineageTag: bca051f4-1662-512b-998b-d5006c757f14
+
+	/// Valor elegido en el segmentador; si no hay uno elegido, 0%.
+	measure 'Cambio de precio %' = SELECTEDVALUE('Cambio de precio'[Cambio de precio], 0)
+		formatString: 0%
+		displayFolder: 6. Simulador
+		lineageTag: df4c59d0-6331-567a-9990-c9f677d0a9a4
+
+	column 'Cambio de precio'
+		dataType: double
+		formatString: 0%
+		lineageTag: f5d764cb-50e7-5d80-8266-50fab518056c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Cambio de precio' = calculated
+		mode: import
+		source = GENERATESERIES(-0.1, 0.1, 0.01)
+
+	annotation PBI_ResultType = Table

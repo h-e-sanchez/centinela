@@ -1,0 +1,35 @@
+relationship dc659fd9-4aab-58b8-ab4a-cfa43a8fb784
+	fromColumn: sucursales.industria
+	toColumn: empresas.industria
+
+relationship 65b85ec0-3216-5fe1-afb6-324710905d2c
+	fromColumn: transacciones.sucursal
+	toColumn: sucursales.sucursal
+
+relationship d47d4c1c-6edd-57d0-9deb-2f6e3b33effe
+	fromColumn: transacciones.cliente
+	toColumn: clientes.cliente
+
+relationship 502d44d4-ce66-5a9e-8bc6-1f9aad2f00b3
+	fromColumn: clientes.canal
+	toColumn: canales.canal
+
+relationship 7af12a30-3a26-5c82-8ea7-6c6bd7c19931
+	fromColumn: transacciones.producto
+	toColumn: productos.producto
+
+relationship b9458040-6e98-548a-b12c-fd5c4161166b
+	fromColumn: transacciones.fecha
+	toColumn: Calendario.Date
+
+relationship ac270886-0720-5627-8d26-30f56c76d54d
+	fromColumn: lista_precios.producto
+	toColumn: productos.producto
+
+relationship 1e88186a-6937-504f-9569-5306b107bfe1
+	fromColumn: presupuesto_ingresos.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 2e32ebdb-0078-5226-93cf-be9a34c157cf
+	fromColumn: presupuesto_ingresos.fecha
+	toColumn: Calendario.Date

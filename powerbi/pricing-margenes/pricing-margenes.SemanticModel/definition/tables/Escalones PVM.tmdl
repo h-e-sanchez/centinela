@@ -1,0 +1,30 @@
+/// Escalones del puente de ingresos de 2025 a 2026.
+table 'Escalones PVM'
+	lineageTag: 4866ef5c-3e83-537d-8056-18e6f401d5fa
+
+	column Orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: decc876a-cbad-5fbf-821e-9127440d384c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Efecto
+		dataType: string
+		lineageTag: 9afcb42f-7f01-5037-9492-745b3a633e83
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Efecto]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Escalones PVM' = calculated
+		mode: import
+		source = DATATABLE("Orden", INTEGER, "Efecto", STRING, {{1, "Ingreso 2025"}, {2, "Volumen"}, {3, "Mezcla"}, {4, "Precio"}})
+
+	annotation PBI_ResultType = Table

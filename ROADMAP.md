@@ -160,7 +160,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 9 páginas con RLS por servicio, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
-- [ ] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
+- [x] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 9 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [ ] Reporte #8: Del libro diario a los EEFF (en espera; capital de trabajo pasó al #5)
 
@@ -228,6 +228,19 @@ están vigentes, la jornada parcial, un rol de seguridad por servicio y las tres
 Proyecto PBIP `powerbi/compensaciones/`: 10 tablas, un parámetro what-if de reajuste negociado,
 18 roles (uno por servicio) y 9 páginas, que suman a la especificación la de competitividad de
 mercado.
+
+### 2026-10-05 — Reporte #7: Pricing y márgenes por canal
+
+Generador `data/generar_pricing.py`: líneas de venta con cascada de lista a neto, costo variable y
+costo de servir. Los ingresos netos cuadran al peso con las cuentas de ingreso Real del #1.
+`tests/test_pricing.py` verifica la cuadratura, la cascada, que precio + volumen + mezcla sumen la
+variación, y tres historias:
+- Retail queda con 4,3% de margen de contribución;
+- en Energía, el precio explica el 100% de la variación;
+- en Salud, el 21% de los convenios está fuera de política.
+
+Proyecto PBIP `powerbi/pricing-margenes/`: 13 tablas (dos cascadas desconectadas y un parámetro de
+cambio de precio) y 9 páginas, que suman a la especificación el simulador de precio.
 
 ### 2026-10-05 — Reporte #4: Proyectos tecnológicos
 

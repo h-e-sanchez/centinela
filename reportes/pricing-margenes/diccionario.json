@@ -1,0 +1,33 @@
+{
+  "leeme": "centinela · Pricing y márgenes por canal\nDatos 100% sintéticos de tres empresas ficticias (Manufactura, Energía y Salud), generados con data/generar_pricing.py (semilla 42).\nLos ingresos netos cuadran con las cuentas de ingreso Real de data/escenarios/montos.csv (reporte Presupuesto vs. Real).\nhttps://h-e-sanchez.github.io/centinela/ficha.html?r=pricing-margenes\n\nArchivos (separador coma, UTF-8): empresas, sucursales, canales, clientes, productos, lista_precios, transacciones y\npresupuesto_ingresos. Columnas:\n\n{columnas}\n\nMontos en CLP. La lista de precios sube 4% en 2026, salvo en Energía, donde el precio lo fija el mercado.",
+  "columnas": {
+    "industria": "Manufactura, Energia o Salud",
+    "empresa": "Razón social ficticia (la misma de los otros reportes de la vitrina)",
+    "orden": "Orden en los segmentadores",
+    "sucursal": "Sucursal (la misma del reporte Presupuesto vs. Real)",
+    "canal": "Canal de venta",
+    "descuento_maximo": "Descuento total máximo que permite la política del canal",
+    "costo_servir_pct": "Costo de servir del canal, sobre el ingreso neto",
+    "elasticidad": "Cambio % de volumen por cada 1% de cambio de precio (supuesto del simulador)",
+    "cliente": "Cliente ficticio",
+    "segmento": "Estándar o Sobre la política (clientes que negocian descuentos sobre el máximo)",
+    "producto": "Producto o prestación",
+    "linea": "Línea de producto",
+    "unidad": "Unidad de venta (unidad, mes o MWh)",
+    "costo_variable_pct": "Costo variable sobre el ingreso de lista",
+    "anio": "Año",
+    "precio_lista": "Precio de lista unitario",
+    "id_linea": "ID de la línea de venta",
+    "fecha": "Mes (primer día)",
+    "cuenta": "Cuenta de ingreso del reporte Presupuesto vs. Real",
+    "cantidad": "Cantidad vendida",
+    "ingreso_lista": "Ingreso a precio de lista",
+    "descuento_comercial": "Descuento comercial en la factura",
+    "rappel": "Descuento por volumen",
+    "bonificacion": "Aportes fuera de la factura",
+    "ingreso_neto": "Ingreso después de descuentos",
+    "costo_variable": "Costo directo de lo vendido",
+    "costo_servir": "Costo de atender el canal (logística, comisiones, atención)",
+    "monto": "Ingreso presupuestado"
+  }
+}

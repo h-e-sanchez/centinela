@@ -82,6 +82,9 @@ python data/generar_proyectos_ti.py
 # Datos sintéticos del reporte de compensaciones (lee las personas de Workforce)
 python data/generar_compensaciones.py
 
+# Datos sintéticos del reporte de pricing y márgenes (cuadra con los ingresos del reporte #1)
+python data/generar_pricing.py
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -134,6 +137,12 @@ toma las mismas personas del reporte Workforce y mide bandas, compa-ratio, equid
 persona y por servicio, brecha de género en cargos equivalentes y competitividad de mercado. Calcula
 el costo de corregir, con un parámetro de reajuste negociado y seguridad por fila por servicio. Guía
 en [`reportes/compensaciones/guia.md`](reportes/compensaciones/guia.md).
+
+El reporte #7, **Pricing y márgenes por canal** ([`powerbi/pricing-margenes/`](powerbi/pricing-margenes/)),
+abre los ingresos del #1 (cuadran al peso) en una cascada de lista a bolsillo, con margen de
+contribución por canal, efecto precio-volumen-mezcla, descuentos fuera de política, curva ballena de
+clientes y un simulador de precio. Guía en
+[`reportes/pricing-margenes/guia.md`](reportes/pricing-margenes/guia.md).
 
 ## Demo
 

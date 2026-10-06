@@ -1,0 +1,64 @@
+n,tipo,seccion,termino,explicacion,formula
+1,Concepto,Del precio de lista al bolsillo,Precio de lista,"El precio publicado de cada producto o prestación, antes de cualquier descuento.",
+2,Concepto,Del precio de lista al bolsillo,Descuento comercial,La rebaja negociada que aparece en la factura.,
+3,Concepto,Del precio de lista al bolsillo,Rappel,"Un descuento por volumen que se devuelve al cliente cuando cumple metas de compra, típico del retail.",
+4,Concepto,Del precio de lista al bolsillo,Bonificación,"Aportes al cliente fuera de la factura: promociones, exhibición o material de punto de venta.",
+5,Concepto,Del precio de lista al bolsillo,Ingreso neto,Lo que de verdad se cobra: precio de lista menos los tres descuentos. Es la cifra que cuadra con el reporte Presupuesto vs. Real.,
+6,Concepto,Del precio de lista al bolsillo,% de realización,% de realización = ingreso neto / ingreso de lista. Parte del precio de lista que llega a la caja.,
+7,Concepto,Del precio de lista al bolsillo,Cascada de precios,"El gráfico que muestra cuánto se queda en cada escalón entre la lista y el margen final (en inglés, price waterfall o pocket price).",
+8,Concepto,Márgenes,Costo variable,"El costo directo de lo vendido: materia prima, energía comprada o insumos clínicos.",
+9,Concepto,Márgenes,Margen bruto,Margen bruto = ingreso neto − costo variable.,
+10,Concepto,Márgenes,Costo de servir,"Lo que cuesta atender a un canal además de producir: logística, comisiones, trade marketing y atención. Retail y postventa son caros de servir; un cliente industrial grande, barato.",
+11,Concepto,Márgenes,Margen de contribución,Margen de contribución = margen bruto − costo de servir. Es la medida justa para comparar canales: lo que cada uno aporta a cubrir los costos fijos.,
+12,Concepto,"Precio, volumen y mezcla",Efecto precio,"Cuánto cambió el ingreso porque cambió el precio de cada producto, a las cantidades de 2026.",
+13,Concepto,"Precio, volumen y mezcla",Efecto volumen,"Cuánto cambió porque se vendió más o menos en total, al precio promedio de 2025.",
+14,Concepto,"Precio, volumen y mezcla",Efecto mezcla,"Cuánto cambió porque se vendieron productos más caros o más baratos que antes, con el mismo volumen total. Los tres efectos suman exactamente la variación de ingresos. Solo tiene sentido dentro de una industria, donde las unidades son comparables.",
+15,Concepto,Política comercial y clientes,Política de descuentos,El descuento total máximo que la empresa autoriza en cada canal.,
+16,Concepto,Política comercial y clientes,Fuga,Fuga (descuento fuera de política). El descuento dado por sobre ese máximo. Suele concentrarse en pocos clientes que negocian fuerte.,
+17,Concepto,Política comercial y clientes,Curva ballena,"Clientes ordenados del más al menos rentable, con el margen acumulado. Sube sobre 100% mientras los clientes suman margen y baja al final por los que lo restan: muestra cuánto margen se pierde en la cola.",
+18,Concepto,Política comercial y clientes,Elasticidad precio,"Cuánto cambia el volumen (en %) por cada 1% de cambio de precio. En el simulador es un supuesto por canal: retail reacciona mucho; el mercado spot y los peajes, nada.",
+19,Medida,0. Portada,Portada ingreso,Ingreso neto abreviado.,"VAR v = [Ingreso neto] RETURN SWITCH( TRUE(), ISBLANK(v), BLANK(), ABS(v) >= 1000000000, FORMAT(v / 1000000000, ""$ #,0.0"") & "" mil M"", ABS(v) >= 1000000, FORMAT(v / 1000000, ""$ #,0.0"") & "" M"", FORMAT(v, ""$ #,0"") )"
+20,Medida,0. Portada,Portada realización,% de realización para la tarjeta.,"FORMAT([% de realización], ""0.0%"")"
+21,Medida,0. Portada,Portada margen,Margen de contribución % para la tarjeta.,"FORMAT([Margen de contribución %], ""0.0%"")"
+22,Medida,0. Portada,Portada frase 1,Primera frase: el canal con menor margen de contribución y su peso en el ingreso.,"VAR menor = TOPN(1, FILTER(VALUES(canales[canal]), NOT ISBLANK([Ingreso neto])), [Margen de contribución %], ASC) VAR canal = MAXX(menor, canales[canal]) RETURN canal & "": "" & FORMAT(CALCULATE([Ingreso neto], canales[canal] = canal) / [Ingreso neto], ""0%"") & "" del ingreso, "" & FORMAT(CALCULATE([Margen de contribución %], canales[canal] = canal), ""0.0%"") & "" de margen"""
+23,Medida,0. Portada,Portada frase 2,Segunda frase: cuánto de la variación de ingresos explica el precio.,"""2026 vs. 2025: el precio explica "" & FORMAT([Efecto precio % de la variación], ""0%"") & "" de la variación"""
+24,Medida,1. Ingresos,Precio de lista,Precio de lista del producto en el año.,AVERAGE(lista_precios[precio_lista])
+25,Medida,1. Ingresos,Ingreso de lista,Lo que se habría facturado a precio de lista.,SUM(transacciones[ingreso_lista])
+26,Medida,1. Ingresos,Ingreso neto,Ingreso después de todos los descuentos: cuadra con el Real del reporte Presupuesto vs. Real.,SUM(transacciones[ingreso_neto])
+27,Medida,1. Ingresos,Cantidad,"Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).",SUM(transacciones[cantidad])
+28,Medida,1. Ingresos,Precio neto unitario,Ingreso neto por unidad vendida.,"DIVIDE([Ingreso neto], [Cantidad])"
+29,Medida,1. Ingresos,Ingreso presupuestado,Ingreso del Presupuesto del reporte #1.,SUM(presupuesto_ingresos[monto])
+30,Medida,1. Ingresos,Variación vs. presupuesto %,"Ingreso neto sobre el presupuestado, menos 1.","DIVIDE([Ingreso neto], [Ingreso presupuestado]) - 1"
+31,Medida,2. Cascada,Descuento comercial,Descuento negociado en la factura.,SUM(transacciones[descuento_comercial])
+32,Medida,2. Cascada,Rappel,Descuento por volumen que se devuelve al cliente al cumplir metas.,SUM(transacciones[rappel])
+33,Medida,2. Cascada,Bonificación,"Aportes al cliente fuera de la factura (promociones, exhibición).",SUM(transacciones[bonificacion])
+34,Medida,2. Cascada,% de realización,Parte del precio de lista que de verdad se cobra.,"DIVIDE([Ingreso neto], [Ingreso de lista])"
+35,Medida,2. Cascada,Monto de la cascada,Cada escalón de la cascada de precio a bolsillo; el total es el margen de contribución.,"SWITCH( SELECTEDVALUE('Cascada de precios'[Escalón]), ""Ingreso de lista"", [Ingreso de lista], ""Descuento comercial"", -[Descuento comercial], ""Rappel"", -[Rappel], ""Bonificación"", -[Bonificación], ""Costo variable"", -[Costo variable], ""Costo de servir"", -[Costo de servir] )"
+36,Medida,3. Márgenes,Costo variable,Costo directo de lo vendido.,SUM(transacciones[costo_variable])
+37,Medida,3. Márgenes,Costo de servir,"Logística, comisiones y atención propios del canal.",SUM(transacciones[costo_servir])
+38,Medida,3. Márgenes,Margen bruto,Ingreso neto menos costo variable.,[Ingreso neto] - [Costo variable]
+39,Medida,3. Márgenes,Margen bruto %,Margen bruto sobre ingreso neto.,"DIVIDE([Margen bruto], [Ingreso neto])"
+40,Medida,3. Márgenes,Margen de contribución,Lo que deja la venta después del costo variable y del costo de servir al canal.,[Margen bruto] - [Costo de servir]
+41,Medida,3. Márgenes,Margen de contribución %,Margen de contribución sobre ingreso neto.,"DIVIDE([Margen de contribución], [Ingreso neto])"
+42,Medida,3. Márgenes,Clientes con margen negativo,Clientes cuyo margen de contribución es negativo en el periodo.,"COUNTROWS(FILTER(VALUES(clientes[cliente]), [Margen de contribución] < 0))"
+43,Medida,3. Márgenes,Margen acumulado %,"Curva ballena: margen acumulado desde el cliente más rentable hasta este, sobre el margen total.","VAR propio = [Margen de contribución] VAR total = CALCULATE([Margen de contribución], ALLSELECTED(clientes[cliente])) RETURN DIVIDE( SUMX(FILTER(ALLSELECTED(clientes[cliente]), [Margen de contribución] >= propio), [Margen de contribución]), total )"
+44,Medida,4. Descuentos,Descuento máximo de la política,Descuento total máximo que permite la política comercial del canal.,MAX(canales[descuento_maximo])
+45,Medida,4. Descuentos,Descuento total %,"Descuento comercial, rappel y bonificación sobre el ingreso de lista.",1 - [% de realización]
+46,Medida,4. Descuentos,Descuento fuera de política,Descuento dado por sobre el máximo de la política del canal: la fuga.,"SUMX( transacciones, MAX(0, transacciones[ingreso_lista] - transacciones[ingreso_neto] - transacciones[ingreso_lista] * RELATED(canales[descuento_maximo])) )"
+47,Medida,4. Descuentos,Líneas fuera de política,Líneas de venta con descuento total sobre el máximo de la política.,"COUNTROWS( FILTER( transacciones, 1 - DIVIDE(transacciones[ingreso_neto], transacciones[ingreso_lista]) > RELATED(canales[descuento_maximo]) ) )"
+48,Medida,4. Descuentos,Líneas de venta,Líneas de venta.,COUNTROWS(transacciones)
+49,Medida,4. Descuentos,% de líneas fuera de política,Parte de las líneas con descuento sobre la política.,"DIVIDE([Líneas fuera de política], [Líneas de venta])"
+50,Medida,"5. Precio, volumen y mezcla",Ingreso 2025,Ingreso neto de 2025 (no depende del segmentador de año).,"CALCULATE([Ingreso neto], REMOVEFILTERS(Calendario), transacciones[anio] = 2025)"
+51,Medida,"5. Precio, volumen y mezcla",Ingreso 2026,Ingreso neto de 2026 (no depende del segmentador de año).,"CALCULATE([Ingreso neto], REMOVEFILTERS(Calendario), transacciones[anio] = 2026)"
+52,Medida,"5. Precio, volumen y mezcla",Variación de ingresos,Ingreso 2026 menos ingreso 2025.,[Ingreso 2026] - [Ingreso 2025]
+53,Medida,"5. Precio, volumen y mezcla",Efecto precio,"Lo que cambió el ingreso por el precio, a los volúmenes de 2026.","SUMX( VALUES(productos[producto]), VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026) VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025) VAR r1 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026) VAR r0 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025) RETURN IF(q0 > 0 && q1 > 0, (DIVIDE(r1, q1) - DIVIDE(r0, q0)) * q1) )"
+54,Medida,"5. Precio, volumen y mezcla",Efecto volumen y mezcla,"Lo que cambió el ingreso por las cantidades, a los precios de 2025.","SUMX( VALUES(productos[producto]), VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026) VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025) VAR r1 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026) VAR r0 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025) RETURN IF(q0 > 0 && q1 > 0, (q1 - q0) * DIVIDE(r0, q0)) )"
+55,Medida,"5. Precio, volumen y mezcla",Efecto volumen,"Lo que cambió el ingreso por la cantidad total, al precio promedio de 2025. Tiene sentido dentro de una industria.","VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026) VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025) RETURN (q1 - q0) * DIVIDE([Ingreso 2025], q0)"
+56,Medida,"5. Precio, volumen y mezcla",Efecto mezcla,Lo que cambió el ingreso porque se vendieron productos más caros o más baratos.,[Efecto volumen y mezcla] - [Efecto volumen]
+57,Medida,"5. Precio, volumen y mezcla",Efecto precio % de la variación,Parte de la variación de ingresos que explica el precio.,"DIVIDE([Efecto precio], [Variación de ingresos])"
+58,Medida,"5. Precio, volumen y mezcla",Monto PVM,Escalones del puente de 2025 a 2026; el total es el ingreso 2026.,"SWITCH( SELECTEDVALUE('Escalones PVM'[Efecto]), ""Ingreso 2025"", [Ingreso 2025], ""Volumen"", [Efecto volumen], ""Mezcla"", [Efecto mezcla], ""Precio"", [Efecto precio] )"
+59,Medida,6. Simulador,Cambio de precio %,"Valor elegido en el segmentador; si no hay uno elegido, 0%.","SELECTEDVALUE('Cambio de precio'[Cambio de precio], 0)"
+60,Medida,6. Simulador,Elasticidad,Cambio porcentual de volumen por cada 1% de cambio de precio (supuesto del simulador).,MAX(canales[elasticidad])
+61,Medida,6. Simulador,Ingreso simulado,Ingreso neto con el cambio de precio y la reacción del volumen según la elasticidad del canal.,"VAR dp = [Cambio de precio %] RETURN SUMX( VALUES(canales[canal]), VAR e = CALCULATE(MAX(canales[elasticidad])) VAR f = MAX(0, 1 + e * dp) RETURN [Ingreso neto] * (1 + dp) * f )"
+62,Medida,6. Simulador,Margen simulado,Margen de contribución con el cambio de precio y el volumen ajustado.,"VAR dp = [Cambio de precio %] RETURN SUMX( VALUES(canales[canal]), VAR e = CALCULATE(MAX(canales[elasticidad])) VAR f = MAX(0, 1 + e * dp) RETURN [Ingreso neto] * (1 + dp) * f - [Costo variable] * f - [Costo de servir] * (1 + dp) * f )"
+63,Medida,6. Simulador,Variación del margen simulada,Margen simulado menos margen actual.,[Margen simulado] - [Margen de contribución]

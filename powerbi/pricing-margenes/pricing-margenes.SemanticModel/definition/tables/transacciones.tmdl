@@ -1,0 +1,500 @@
+/// Líneas de venta 2025-2026: cascada de lista a neto, costo variable y costo de servir. Los ingresos netos cuadran con el Real del reporte #1.
+table transacciones
+	lineageTag: ec799ae1-027c-5943-9cb1-b38e5d9e2a5b
+
+	/// Lo que se habría facturado a precio de lista.
+	measure 'Ingreso de lista' = SUM(transacciones[ingreso_lista])
+		formatString: \$ #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: d934b5ca-317a-5f81-8dcd-ceb247d9aae3
+
+	/// Descuento negociado en la factura.
+	measure 'Descuento comercial' = SUM(transacciones[descuento_comercial])
+		formatString: \$ #,##0
+		displayFolder: 2. Cascada
+		lineageTag: 44f5b9d5-f97d-5ede-9aba-f2978a37cc42
+
+	/// Descuento por volumen que se devuelve al cliente al cumplir metas.
+	measure Rappel = SUM(transacciones[rappel])
+		formatString: \$ #,##0
+		displayFolder: 2. Cascada
+		lineageTag: d9cd24a3-32df-52db-9217-a8158519c2d5
+
+	/// Aportes al cliente fuera de la factura (promociones, exhibición).
+	measure 'Bonificación' = SUM(transacciones[bonificacion])
+		formatString: \$ #,##0
+		displayFolder: 2. Cascada
+		lineageTag: c87bc9fe-e94a-50e9-a59f-3c765daca86a
+
+	/// Ingreso después de todos los descuentos: cuadra con el Real del reporte Presupuesto vs. Real.
+	measure 'Ingreso neto' = SUM(transacciones[ingreso_neto])
+		formatString: \$ #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: a3391b62-dc02-56af-ae0e-fa6c91495e18
+
+	/// Parte del precio de lista que de verdad se cobra.
+	measure '% de realización' = DIVIDE([Ingreso neto], [Ingreso de lista])
+		formatString: 0.0%
+		displayFolder: 2. Cascada
+		lineageTag: 67afc3be-6dfd-5889-a3ba-06f5cd8cdc93
+
+	/// Descuento comercial, rappel y bonificación sobre el ingreso de lista.
+	measure 'Descuento total %' = 1 - [% de realización]
+		formatString: 0.0%
+		displayFolder: 4. Descuentos
+		lineageTag: 3e5f6832-7eca-5998-8939-7e3ea6f7214b
+
+	/// Unidades vendidas (unidades, meses de contrato, MWh o prestaciones según el producto).
+	measure Cantidad = SUM(transacciones[cantidad])
+		formatString: #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: 4e1b0aef-ecce-57bc-9ab0-ae12bf276804
+
+	/// Ingreso neto por unidad vendida.
+	measure 'Precio neto unitario' = DIVIDE([Ingreso neto], [Cantidad])
+		formatString: \$ #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: 1ec930b2-ccbe-57bf-a019-dfb97991bc49
+
+	/// Costo directo de lo vendido.
+	measure 'Costo variable' = SUM(transacciones[costo_variable])
+		formatString: \$ #,##0
+		displayFolder: 3. Márgenes
+		lineageTag: 0c276fa3-f758-5871-8c04-49a1ce202f58
+
+	/// Logística, comisiones y atención propios del canal.
+	measure 'Costo de servir' = SUM(transacciones[costo_servir])
+		formatString: \$ #,##0
+		displayFolder: 3. Márgenes
+		lineageTag: 0f62736f-01d4-5718-be54-c03d6fc4e4e0
+
+	/// Ingreso neto menos costo variable.
+	measure 'Margen bruto' = [Ingreso neto] - [Costo variable]
+		formatString: \$ #,##0
+		displayFolder: 3. Márgenes
+		lineageTag: 68ece015-068d-5252-b432-3e1e69eefb53
+
+	/// Margen bruto sobre ingreso neto.
+	measure 'Margen bruto %' = DIVIDE([Margen bruto], [Ingreso neto])
+		formatString: 0.0%
+		displayFolder: 3. Márgenes
+		lineageTag: 8de463fd-19f0-5cae-90c7-c0bb581aced4
+
+	/// Lo que deja la venta después del costo variable y del costo de servir al canal.
+	measure 'Margen de contribución' = [Margen bruto] - [Costo de servir]
+		formatString: \$ #,##0
+		displayFolder: 3. Márgenes
+		lineageTag: b03a4419-a243-5538-9258-72b986e788ed
+
+	/// Margen de contribución sobre ingreso neto.
+	measure 'Margen de contribución %' = DIVIDE([Margen de contribución], [Ingreso neto])
+		formatString: 0.0%
+		displayFolder: 3. Márgenes
+		lineageTag: c9c4d345-57b2-5f18-9b7a-5ca4884f3f6b
+
+	/// Ingreso neto de 2025 (no depende del segmentador de año).
+	measure 'Ingreso 2025' = CALCULATE([Ingreso neto], REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: b64d3d7c-c1a1-5ad9-8c18-4c0e1445f922
+
+	/// Ingreso neto de 2026 (no depende del segmentador de año).
+	measure 'Ingreso 2026' = CALCULATE([Ingreso neto], REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 9329e892-22ed-54a0-a786-2982dcd7eb6f
+
+	/// Ingreso 2026 menos ingreso 2025.
+	measure 'Variación de ingresos' = [Ingreso 2026] - [Ingreso 2025]
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: be31b0d7-7c34-5875-8f68-327d147679e6
+
+	/// Lo que cambió el ingreso por el precio, a los volúmenes de 2026.
+	measure 'Efecto precio' =
+			SUMX(
+			    VALUES(productos[producto]),
+			    VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+			    VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+			    VAR r1 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+			    VAR r0 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+			    RETURN IF(q0 > 0 && q1 > 0, (DIVIDE(r1, q1) - DIVIDE(r0, q0)) * q1)
+			)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 83f3a160-3e82-58dd-9d72-c4c0db0c3108
+
+	/// Lo que cambió el ingreso por las cantidades, a los precios de 2025.
+	measure 'Efecto volumen y mezcla' =
+			SUMX(
+			    VALUES(productos[producto]),
+			    VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+			    VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+			    VAR r1 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+			    VAR r0 = CALCULATE(SUM(transacciones[ingreso_neto]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+			    RETURN IF(q0 > 0 && q1 > 0, (q1 - q0) * DIVIDE(r0, q0))
+			)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 4deb9d59-9181-5b2f-b302-6ab7d4bae92c
+
+	/// Lo que cambió el ingreso por la cantidad total, al precio promedio de 2025. Tiene sentido dentro de una industria.
+	measure 'Efecto volumen' =
+			VAR q1 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2026)
+			VAR q0 = CALCULATE(SUM(transacciones[cantidad]), REMOVEFILTERS(Calendario), transacciones[anio] = 2025)
+			RETURN (q1 - q0) * DIVIDE([Ingreso 2025], q0)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 4e84b40a-cb76-538a-8e26-75373259da38
+
+	/// Lo que cambió el ingreso porque se vendieron productos más caros o más baratos.
+	measure 'Efecto mezcla' = [Efecto volumen y mezcla] - [Efecto volumen]
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: c30ec46a-a9d3-5cfd-b3ef-6f7ecb05b55e
+
+	/// Parte de la variación de ingresos que explica el precio.
+	measure 'Efecto precio % de la variación' = DIVIDE([Efecto precio], [Variación de ingresos])
+		formatString: 0%
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 69d54a55-c1fa-5cd9-a7da-2f203f2aad3d
+
+	/// Descuento dado por sobre el máximo de la política del canal: la fuga.
+	measure 'Descuento fuera de política' =
+			SUMX(
+			    transacciones,
+			    MAX(0, transacciones[ingreso_lista] - transacciones[ingreso_neto] - transacciones[ingreso_lista] * RELATED(canales[descuento_maximo]))
+			)
+		formatString: \$ #,##0
+		displayFolder: 4. Descuentos
+		lineageTag: 29edf580-cf1b-5bdb-bdf4-6b724d82f2fc
+
+	/// Líneas de venta con descuento total sobre el máximo de la política.
+	measure 'Líneas fuera de política' =
+			COUNTROWS(
+			    FILTER(
+			        transacciones,
+			        1 - DIVIDE(transacciones[ingreso_neto], transacciones[ingreso_lista]) > RELATED(canales[descuento_maximo])
+			    )
+			)
+		formatString: #,##0
+		displayFolder: 4. Descuentos
+		lineageTag: e428f566-592c-5615-9dd7-d327d49e1376
+
+	/// Líneas de venta.
+	measure 'Líneas de venta' = COUNTROWS(transacciones)
+		formatString: #,##0
+		displayFolder: 4. Descuentos
+		lineageTag: ab3be674-841d-5b50-8f82-5547c2731bb5
+
+	/// Parte de las líneas con descuento sobre la política.
+	measure '% de líneas fuera de política' = DIVIDE([Líneas fuera de política], [Líneas de venta])
+		formatString: 0.0%
+		displayFolder: 4. Descuentos
+		lineageTag: c585eacc-2c34-5b54-85c7-d46692e55ea3
+
+	/// Clientes cuyo margen de contribución es negativo en el periodo.
+	measure 'Clientes con margen negativo' = COUNTROWS(FILTER(VALUES(clientes[cliente]), [Margen de contribución] < 0))
+		formatString: #,##0
+		displayFolder: 3. Márgenes
+		lineageTag: b70a4478-3f51-5a57-bd7f-69d526a153ab
+
+	/// Curva ballena: margen acumulado desde el cliente más rentable hasta este, sobre el margen total.
+	measure 'Margen acumulado %' =
+			VAR propio = [Margen de contribución]
+			VAR total = CALCULATE([Margen de contribución], ALLSELECTED(clientes[cliente]))
+			RETURN
+			    DIVIDE(
+			        SUMX(FILTER(ALLSELECTED(clientes[cliente]), [Margen de contribución] >= propio), [Margen de contribución]),
+			        total
+			    )
+		formatString: 0%
+		displayFolder: 3. Márgenes
+		lineageTag: 8ba0a4ca-da48-59ab-85e8-d1b2025ea5eb
+
+	/// Ingreso del Presupuesto del reporte #1.
+	measure 'Ingreso presupuestado' = SUM(presupuesto_ingresos[monto])
+		formatString: \$ #,##0
+		displayFolder: 1. Ingresos
+		lineageTag: e8105474-3aed-5c2d-a2f8-f6eecad729db
+
+	/// Ingreso neto sobre el presupuestado, menos 1.
+	measure 'Variación vs. presupuesto %' = DIVIDE([Ingreso neto], [Ingreso presupuestado]) - 1
+		formatString: 0.0%
+		displayFolder: 1. Ingresos
+		lineageTag: 23e2f19b-f622-5129-9800-1ee1c4196e5a
+
+	/// Ingreso neto con el cambio de precio y la reacción del volumen según la elasticidad del canal.
+	measure 'Ingreso simulado' =
+			VAR dp = [Cambio de precio %]
+			RETURN
+			    SUMX(
+			        VALUES(canales[canal]),
+			        VAR e = CALCULATE(MAX(canales[elasticidad]))
+			        VAR f = MAX(0, 1 + e * dp)
+			        RETURN [Ingreso neto] * (1 + dp) * f
+			    )
+		formatString: \$ #,##0
+		displayFolder: 6. Simulador
+		lineageTag: 31560c06-3185-591a-a825-c5ca7e406a6c
+
+	/// Margen de contribución con el cambio de precio y el volumen ajustado.
+	measure 'Margen simulado' =
+			VAR dp = [Cambio de precio %]
+			RETURN
+			    SUMX(
+			        VALUES(canales[canal]),
+			        VAR e = CALCULATE(MAX(canales[elasticidad]))
+			        VAR f = MAX(0, 1 + e * dp)
+			        RETURN [Ingreso neto] * (1 + dp) * f - [Costo variable] * f - [Costo de servir] * (1 + dp) * f
+			    )
+		formatString: \$ #,##0
+		displayFolder: 6. Simulador
+		lineageTag: 3401d507-0e45-53d6-ae4b-3170c430c21b
+
+	/// Margen simulado menos margen actual.
+	measure 'Variación del margen simulada' = [Margen simulado] - [Margen de contribución]
+		formatString: \$ #,##0
+		displayFolder: 6. Simulador
+		lineageTag: 55e7e282-86ff-5f00-8010-d8683b4982d4
+
+	/// Cada escalón de la cascada de precio a bolsillo; el total es el margen de contribución.
+	measure 'Monto de la cascada' =
+			SWITCH(
+			    SELECTEDVALUE('Cascada de precios'[Escalón]),
+			    "Ingreso de lista", [Ingreso de lista],
+			    "Descuento comercial", -[Descuento comercial],
+			    "Rappel", -[Rappel],
+			    "Bonificación", -[Bonificación],
+			    "Costo variable", -[Costo variable],
+			    "Costo de servir", -[Costo de servir]
+			)
+		formatString: \$ #,##0
+		displayFolder: 2. Cascada
+		lineageTag: f2beec7e-8012-5826-944e-37e055e555c0
+
+	/// Escalones del puente de 2025 a 2026; el total es el ingreso 2026.
+	measure 'Monto PVM' =
+			SWITCH(
+			    SELECTEDVALUE('Escalones PVM'[Efecto]),
+			    "Ingreso 2025", [Ingreso 2025],
+			    "Volumen", [Efecto volumen],
+			    "Mezcla", [Efecto mezcla],
+			    "Precio", [Efecto precio]
+			)
+		formatString: \$ #,##0
+		displayFolder: 5. Precio, volumen y mezcla
+		lineageTag: 0e67dd0c-1ae2-5830-86e3-24116ca0cd99
+
+	/// Ingreso neto abreviado.
+	measure 'Portada ingreso' =
+			VAR v = [Ingreso neto]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0.0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: 4f82e687-e0ac-5340-ba86-324523bc9d3e
+
+	/// % de realización para la tarjeta.
+	measure 'Portada realización' = FORMAT([% de realización], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 664d5a60-8e9a-5ed3-8c54-356beba42644
+
+	/// Margen de contribución % para la tarjeta.
+	measure 'Portada margen' = FORMAT([Margen de contribución %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 00a51a2f-ec1c-5bb4-8bcb-3d03c15e017f
+
+	/// Primera frase: el canal con menor margen de contribución y su peso en el ingreso.
+	measure 'Portada frase 1' =
+			VAR menor = TOPN(1, FILTER(VALUES(canales[canal]), NOT ISBLANK([Ingreso neto])), [Margen de contribución %], ASC)
+			VAR canal = MAXX(menor, canales[canal])
+			RETURN
+			    canal & ": " & FORMAT(CALCULATE([Ingreso neto], canales[canal] = canal) / [Ingreso neto], "0%")
+			        & " del ingreso, " & FORMAT(CALCULATE([Margen de contribución %], canales[canal] = canal), "0.0%") & " de margen"
+		displayFolder: 0. Portada
+		lineageTag: db406ea0-976d-517f-a092-9b6196924f54
+
+	/// Segunda frase: cuánto de la variación de ingresos explica el precio.
+	measure 'Portada frase 2' = "2026 vs. 2025: el precio explica " & FORMAT([Efecto precio % de la variación], "0%") & " de la variación"
+		displayFolder: 0. Portada
+		lineageTag: 8812776d-479e-56a4-a377-e218589d46b9
+
+	column id_linea
+		dataType: string
+		isHidden
+		lineageTag: 26d50e02-f6c5-59b6-8262-6fd322bd142c
+		summarizeBy: none
+		sourceColumn: id_linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 0b2c98d6-3705-583b-a32a-007e6ed9e0ce
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7c788ad8-035b-5fdd-a34e-461ac7488b8d
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 2d781b37-eeb8-5aa7-9cc6-dfe03e1a1bfb
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 6646cc8c-f848-5426-bf43-ee22aa2e22b1
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		lineageTag: 01e49de3-c577-59ad-8137-b895bbf76097
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal
+		dataType: string
+		isHidden
+		lineageTag: 4e53327b-f478-5b44-98c7-625eb38d3047
+		summarizeBy: none
+		sourceColumn: canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		isHidden
+		lineageTag: c9eeaffb-8db6-522f-8305-12fd8a2b4e9e
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column producto
+		dataType: string
+		isHidden
+		lineageTag: 4c3b39b1-2c89-5319-8031-05b992fda7af
+		summarizeBy: none
+		sourceColumn: producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column cantidad
+		dataType: double
+		isHidden
+		formatString: #,##0.00
+		lineageTag: d16ff4ed-4ae6-552b-b814-c639713c5df7
+		summarizeBy: none
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingreso_lista
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 7a32d4db-87d2-59c6-9cc5-9c64496aa56e
+		summarizeBy: none
+		sourceColumn: ingreso_lista
+
+		annotation SummarizationSetBy = Automatic
+
+	column descuento_comercial
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 84566900-8990-5305-b6e0-8fb4ddc1ebda
+		summarizeBy: none
+		sourceColumn: descuento_comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column rappel
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 12ed8d19-e3fb-55c7-baab-f2e3882c77a4
+		summarizeBy: none
+		sourceColumn: rappel
+
+		annotation SummarizationSetBy = Automatic
+
+	column bonificacion
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 7c62ae9f-a3e6-5791-85e0-1f981143033b
+		summarizeBy: none
+		sourceColumn: bonificacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingreso_neto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: bbb561d3-87e6-5204-b11f-7a1fdf857fc4
+		summarizeBy: none
+		sourceColumn: ingreso_neto
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_variable
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 8d6060b5-631d-54a4-8aa0-da849ba66c37
+		summarizeBy: none
+		sourceColumn: costo_variable
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_servir
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: cb46732c-aab7-5e75-b2b1-ee0cc51e766d
+		summarizeBy: none
+		sourceColumn: costo_servir
+
+		annotation SummarizationSetBy = Automatic
+
+	partition transacciones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("transacciones.csv", {{"id_linea", type text}, {"fecha", type date}, {"anio", Int64.Type}, {"industria", type text}, {"sucursal", type text}, {"cuenta", type text}, {"canal", type text}, {"cliente", type text}, {"producto", type text}, {"cantidad", type number}, {"ingreso_lista", Int64.Type}, {"descuento_comercial", Int64.Type}, {"rappel", Int64.Type}, {"bonificacion", Int64.Type}, {"ingreso_neto", Int64.Type}, {"costo_variable", Int64.Type}, {"costo_servir", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
