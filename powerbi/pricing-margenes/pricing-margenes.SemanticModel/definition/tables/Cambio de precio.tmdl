@@ -24,6 +24,6 @@ table 'Cambio de precio'
 
 	partition 'Cambio de precio' = calculated
 		mode: import
-		source = GENERATESERIES(-0.1, 0.1, 0.01)
+		source = SELECTCOLUMNS(GENERATESERIES(-10, 10, 1), "Value", [Value] / 100)
 
 	annotation PBI_ResultType = Table
