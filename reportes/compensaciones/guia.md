@@ -109,6 +109,11 @@ El reporte abre en **Energía**, la misma industria con que abren los demás rep
 | Impacto anual de un reajuste de 4,5% | $348 M | $1.124 M |
 | Servicio con mayor / menor compa-ratio | Transmisión 0,99 / Gestión corporativa 0,95 | UCI 1,11 / Ambulatorio 0,90 |
 
+**Ejemplo de cálculo (Energía, diciembre de 2026).** La página «Costo de corregir» muestra esta operación con las cifras de cualquier selección:
+- **Llevar al mínimo:** 32 personas están bajo el mínimo y les faltan en promedio $127.422 al mes. Son $4.077.500 al mes × 12 = **$48,9 M** al año.
+- **Llevar al primer cuartil:** 65 personas están bajo el primer cuartil (las 32 anteriores y 33 que superan el mínimo). Les faltan en promedio $181.412 al mes: $11.791.750 al mes × 12 = **$141,5 M** al año. Cuesta casi el triple porque suma personas y porque la meta es más alta: el mínimo es 80% del punto medio y el primer cuartil, 90%.
+- **Reajuste de 4,5%:** suma de sueldos base del mes, $644.083.000 × 12 × 4,5% = **$347,8 M** al año. Solo sueldo base, sin variable ni cargas.
+
 ## Cómo abrirlo
 
 - **`.pbix`:** doble clic con Power BI Desktop.

@@ -1,39 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c4d65d7499c11d2c0383",
+  "name": "db928af87214303f19c4",
   "position": {
-    "x": 800,
-    "y": 364,
-    "z": 1300,
-    "height": 344,
-    "width": 456,
-    "tabOrder": 1300
+    "x": 856,
+    "y": 216,
+    "z": 1100,
+    "height": 136,
+    "width": 400,
+    "tabOrder": 1100
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "servicios"
-                    }
-                  },
-                  "Property": "servicio"
-                }
-              },
-              "queryRef": "servicios.servicio",
-              "nativeQueryRef": "servicio",
-              "active": true,
-              "displayName": "Servicio"
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -43,61 +23,55 @@
                       "Entity": "remuneraciones"
                     }
                   },
-                  "Property": "Costo anual de llevar al primer cuartil"
+                  "Property": "Cálculo del reajuste"
                 }
               },
-              "queryRef": "remuneraciones.Costo anual de llevar al primer cuartil",
-              "nativeQueryRef": "Costo anual de llevar al primer cuartil"
+              "queryRef": "remuneraciones.Cálculo del reajuste",
+              "nativeQueryRef": "Cálculo del reajuste"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "remuneraciones"
-                  }
-                },
-                "Property": "Costo anual de llevar al primer cuartil"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
-      "categoryAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "wordWrap": [
         {
           "properties": {
             "show": {
@@ -107,26 +81,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#A67A2E'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "remuneraciones.Costo anual de llevar al primer cuartil"
           }
         }
       ]
@@ -171,7 +125,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Costo anual de llevar al primer cuartil de la banda, por servicio'"
+                  "Value": "'Cómo se calcula: impacto del reajuste'"
                 }
               }
             },
@@ -203,26 +157,31 @@
           }
         }
       ],
-      "visualHeader": [
+      "background": [
         {
           "properties": {
-            "showTooltipButton": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            }
-          }
-        }
-      ],
-      "visualHeaderTooltip": [
-        {
-          "properties": {
-            "text": {
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F7F5F0'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "'Costo anual de llevar a cada persona al menos al primer cuartil de su banda: el mínimo más 25% del rango entre mínimo y máximo. No es el P25 de la encuesta de mercado. Es la meta más exigente: en Energía, $141,5 M al año. Glosario: Costo de llevar al primer cuartil.'"
+                  "Value": "0D"
                 }
               }
             }
