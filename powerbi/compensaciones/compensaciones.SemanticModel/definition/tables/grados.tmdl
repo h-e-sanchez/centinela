@@ -1,0 +1,42 @@
+/// Dimensión: los siete grados de la estructura salarial, del directivo al operario o auxiliar.
+table grados
+	lineageTag: ad20cb57-1e55-5de6-afed-41bc8e84c939
+
+	column grado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 46125472-aa08-5f8f-ad7f-890bc5f61772
+		summarizeBy: none
+		sourceColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	column nombre
+		dataType: string
+		lineageTag: 0ce5b9de-276f-5f13-862b-57aa276273d0
+		summarizeBy: none
+		sourceColumn: nombre
+		sortByColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_variable
+		dataType: double
+		isHidden
+		formatString: 0%
+		lineageTag: a4f52e32-5729-5b52-9f21-7109be146115
+		summarizeBy: none
+		sourceColumn: pct_variable
+
+		annotation SummarizationSetBy = Automatic
+
+	partition grados = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("grados.csv", {{"grado", Int64.Type}, {"nombre", type text}, {"pct_variable", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

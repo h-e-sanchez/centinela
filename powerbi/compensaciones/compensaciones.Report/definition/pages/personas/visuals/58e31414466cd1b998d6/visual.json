@@ -1,0 +1,301 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "58e31414466cd1b998d6",
+  "position": {
+    "x": 24,
+    "y": 92,
+    "z": 700,
+    "height": 616,
+    "width": 1232,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "personas"
+                    }
+                  },
+                  "Property": "id_persona"
+                }
+              },
+              "queryRef": "personas.id_persona",
+              "nativeQueryRef": "id_persona",
+              "active": true,
+              "displayName": "Persona"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "personas"
+                    }
+                  },
+                  "Property": "sede"
+                }
+              },
+              "queryRef": "personas.sede",
+              "nativeQueryRef": "sede",
+              "active": true,
+              "displayName": "Sede"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "servicios"
+                    }
+                  },
+                  "Property": "servicio"
+                }
+              },
+              "queryRef": "servicios.servicio",
+              "nativeQueryRef": "servicio",
+              "active": true,
+              "displayName": "Servicio"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cargos"
+                    }
+                  },
+                  "Property": "cargo"
+                }
+              },
+              "queryRef": "cargos.cargo",
+              "nativeQueryRef": "cargo",
+              "active": true,
+              "displayName": "Cargo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "grados"
+                    }
+                  },
+                  "Property": "nombre"
+                }
+              },
+              "queryRef": "grados.nombre",
+              "nativeQueryRef": "nombre",
+              "active": true,
+              "displayName": "Grado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "personas"
+                    }
+                  },
+                  "Property": "sexo_nombre"
+                }
+              },
+              "queryRef": "personas.sexo_nombre",
+              "nativeQueryRef": "sexo_nombre",
+              "active": true,
+              "displayName": "Sexo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "remuneraciones"
+                    }
+                  },
+                  "Property": "Sueldo base promedio"
+                }
+              },
+              "queryRef": "remuneraciones.Sueldo base promedio",
+              "nativeQueryRef": "Sueldo base promedio",
+              "displayName": "Sueldo base (44 h)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "remuneraciones"
+                    }
+                  },
+                  "Property": "Compa-ratio"
+                }
+              },
+              "queryRef": "remuneraciones.Compa-ratio",
+              "nativeQueryRef": "Compa-ratio"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "remuneraciones"
+                    }
+                  },
+                  "Property": "Posición en banda %"
+                }
+              },
+              "queryRef": "remuneraciones.Posición en banda %",
+              "nativeQueryRef": "Posición en banda %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "remuneraciones"
+                    }
+                  },
+                  "Property": "Alerta de banda"
+                }
+              },
+              "queryRef": "remuneraciones.Alerta de banda",
+              "nativeQueryRef": "Alerta de banda"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "remuneraciones"
+                  }
+                },
+                "Property": "Compa-ratio"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Personas y su posición en la banda'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

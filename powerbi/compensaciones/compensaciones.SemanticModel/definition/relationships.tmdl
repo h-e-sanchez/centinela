@@ -1,0 +1,27 @@
+relationship 7a097e57-6439-5a19-afae-6331d522c1bf
+	fromColumn: servicios.industria
+	toColumn: empresas.industria
+
+relationship 19f89356-270a-5eb7-a5da-94230a200b1f
+	fromColumn: personas.servicio
+	toColumn: servicios.servicio
+
+relationship 777c0613-73bf-5097-83be-7b49c1c3815a
+	fromColumn: personas.cargo
+	toColumn: cargos.cargo
+
+relationship 2c0a9955-7c66-50ac-9f3a-7052c01fadd2
+	fromColumn: remuneraciones.id_persona
+	toColumn: personas.id_persona
+
+relationship e9c390e5-01c5-50dd-a843-8a6d7d41e27f
+	fromColumn: remuneraciones.banda
+	toColumn: bandas.banda
+
+relationship dee68e22-7282-5d2f-ad5f-27ccd9324c27
+	fromColumn: remuneraciones.grado
+	toColumn: grados.grado
+
+relationship de8d50c1-fcb2-538e-aebf-f10ae697de2f
+	fromColumn: remuneraciones.fecha
+	toColumn: Calendario.Date

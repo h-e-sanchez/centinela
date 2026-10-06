@@ -158,7 +158,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #4: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [ ] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
 - [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
-- [ ] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 8 páginas con RLS por servicio, guía, glosario y descargas
+- [x] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 9 páginas con RLS por servicio, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
 - [ ] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
@@ -214,6 +214,20 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-05 — Reporte #6: Equidad salarial y bandas
+
+Generador `data/generar_compensaciones.py` sobre las mismas personas de Workforce: siete grados,
+bandas por empresa y año con encuesta de mercado, y remuneraciones mensuales 2025-2026.
+`tests/test_compensaciones.py` verifica que sean las mismas personas, que solo cobren mientras
+están vigentes, la jornada parcial, un rol de seguridad por servicio y las tres historias:
+- la UCI con compa-ratio de 1,11;
+- el 8,6% de Energía bajo el mínimo;
+- en Manufactura, la brecha cruda negativa frente al 4,3% en la misma banda.
+
+Proyecto PBIP `powerbi/compensaciones/`: 10 tablas, un parámetro what-if de reajuste negociado,
+18 roles (uno por servicio) y 9 páginas, que suman a la especificación la de competitividad de
+mercado.
 
 ### 2026-10-05 — Reporte #4: Proyectos tecnológicos
 

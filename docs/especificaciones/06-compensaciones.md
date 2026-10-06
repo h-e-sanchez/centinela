@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** especificado el 2026-10-05 · **Slug:** `compensaciones` · **Tema:** People Analytics · Compensaciones
+**Estado:** construido el 2026-10-05 (pendiente Desktop y publicación) · **Slug:** `compensaciones` · **Tema:** People Analytics · Compensaciones
 
 ## Qué resuelve
 
@@ -56,6 +56,12 @@ empleador real.
 servicio y el promedio de la empresa como referencia. Se documenta en la guía cómo probarlo
 con "Ver como" en Desktop.
 
+Al construirlo, el reporte se enriqueció con cuatro cambios:
+- **Competitividad:** página nueva frente a una encuesta de mercado sintética (P25, P50 y P75 por grado, en `bandas.csv`).
+- **Reajuste negociado:** parámetro what-if en «Costo de corregir».
+- **Brecha por banda:** la brecha de género se calcula por banda (empresa × grado).
+- **Gráfico de la portada:** compa-ratio por servicio.
+
 ## Medidas DAX clave
 
 - `Compa-ratio` = sueldo base ÷ punto medio de la banda.
@@ -71,9 +77,9 @@ con "Ver como" en Desktop.
 
 | Industria | Resultado | Historia |
 |---|---|---|
-| Salud | UCI con compa-ratio 1,12 | La UCI paga sobre la banda para retener técnicos, mientras ambulatorio queda bajo el punto medio por el mismo cargo |
-| Energía | 9% bajo el mínimo | Las incorporaciones de 2026 en Zona Norte entraron bajo el mínimo de su banda: corregirlas cuesta poco y se concentra en un solo servicio |
-| Manufactura | Brecha de 4% en el grado | La brecha de género cruda es grande por la composición de los estamentos, pero dentro del mismo grado se reduce a cerca de 4% |
+| Salud | UCI con compa-ratio 1,11 | La UCI paga sobre la banda para retener técnicos, mientras ambulatorio queda bajo el punto medio por el mismo cargo |
+| Energía | 8,6% bajo el mínimo | Las contrataciones de Zona Norte desde mediados de 2024 entraron bajo el mínimo de su banda: corregirlas cuesta $49 M al año |
+| Manufactura | −9,7% cruda / 4,3% en la banda | La brecha cruda engaña: por la composición de los estamentos, en el agregado las mujeres parecen ganar más, pero en la misma banda ganan 4,3% menos |
 
 ## Habilidades para el catálogo
 

@@ -325,6 +325,90 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/04-proyectos-ti.md"
         }
       ]
+    },
+    {
+      "slug": "compensaciones",
+      "titulo": "Equidad salarial y bandas: por persona y por servicio",
+      "resumen": "People Analytics de la estructura salarial de las tres empresas sintéticas de la vitrina, con las mismas personas del reporte Workforce: bandas por grado, compa-ratio, quién está fuera de banda, qué servicio paga distinto por el mismo grado, brecha de género en cargos equivalentes, competitividad frente al mercado y costo de corregir, con seguridad por fila por servicio.",
+      "tema": "People Analytics · Compensaciones",
+      "color": "#8A5A44",
+      "fecha": "2026-10-05",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/compensaciones",
+      "datos": "data/compensaciones",
+      "prefijo": "compensaciones",
+      "habilidades": [
+        "Bandas salariales y compa-ratio",
+        "Equidad interna por persona y por servicio",
+        "Brecha de género ajustada por banda",
+        "Competitividad frente a encuesta de mercado",
+        "Parámetro what-if de reajuste",
+        "Seguridad por fila (RLS) por servicio",
+        "Modelo que reutiliza las personas del reporte Workforce",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Salud",
+          "resultado": "1,11 vs. 0,90",
+          "tono": "critica",
+          "texto": "La UCI paga sobre la banda para retener técnicos, mientras ambulatorio queda bajo el punto medio por el mismo grado."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "8,6%",
+          "tono": "critica",
+          "texto": "Las contrataciones de Zona Norte desde 2024 entraron bajo el mínimo de la banda; corregirlas cuesta $49 M al año."
+        },
+        {
+          "industria": "Manufactura",
+          "resultado": "−9,7% / +4,3%",
+          "tono": "neutro",
+          "texto": "La brecha cruda engaña: en el agregado las mujeres parecen ganar más, pero en la misma banda ganan 4,3% menos."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/compensaciones-datos-csv.zip",
+          "detalle": "siete tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/compensaciones-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/compensaciones.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/compensaciones-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/compensaciones"
+        },
+        {
+          "etiqueta": "Generador de datos",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_compensaciones.py"
+        },
+        {
+          "etiqueta": "Tests de coherencia, seguridad y calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_compensaciones.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/06-compensaciones.md"
+        }
+      ]
     }
   ],
   "proximos": [
@@ -333,12 +417,6 @@
       "tema": "Finanzas operativas",
       "color": "#2E7D8C",
       "resumen": "Cobranza, pagos e inventario con DSO, DPO, DIO y ciclo de conversión de caja, más un flujo de caja a 13 semanas que cuadra con el reporte de Presupuesto vs. Real."
-    },
-    {
-      "titulo": "Equidad salarial y bandas: por persona y por servicio",
-      "tema": "People Analytics · Compensaciones",
-      "color": "#8A5A44",
-      "resumen": "Bandas por grado, compa-ratio, fuera de banda y brecha de género dentro del mismo grado, por persona y por servicio, con el costo de corregir y seguridad por fila."
     },
     {
       "titulo": "Pricing y márgenes por canal",

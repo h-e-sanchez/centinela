@@ -1,0 +1,49 @@
+/// Dimensión: los servicios o unidades de cada empresa (los mismos del reporte Workforce). Filtro de la seguridad por fila.
+table servicios
+	lineageTag: 8a677f65-f164-5d8c-b9b4-17c361b43eb2
+
+	column servicio
+		dataType: string
+		lineageTag: 516f0a81-091e-5133-98a2-ca738975cd1c
+		summarizeBy: none
+		sourceColumn: servicio
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: ee7499f5-7c84-567c-a51c-4cf40969629e
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column area
+		dataType: string
+		lineageTag: f1ce41ce-2889-5aa9-ba68-a99f23d3b1fb
+		summarizeBy: none
+		sourceColumn: area
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1b45d937-8e57-5dd1-b1fd-ad644e3d1054
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition servicios = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("servicios.csv", {{"servicio", type text}, {"industria", type text}, {"area", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

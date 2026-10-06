@@ -1,0 +1,28 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","remuneraciones","personas","bandas","cargos","grados","servicios","empresas","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table remuneraciones
+ref table personas
+ref table bandas
+ref table cargos
+ref table grados
+ref table servicios
+ref table empresas
+ref table 'Reajuste negociado'
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

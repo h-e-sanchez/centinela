@@ -1,0 +1,19 @@
+servicio,industria,area,orden
+Producción,Manufactura,Operación,1
+Mantenimiento industrial,Manufactura,Operación,2
+Calidad,Manufactura,Operación,3
+Bodega y logística,Manufactura,Operación,4
+Ventas,Manufactura,Soporte,5
+Administración y finanzas,Manufactura,Soporte,6
+Operación de centrales,Energia,Operación,7
+Mantenimiento,Energia,Operación,8
+Transmisión,Energia,Operación,9
+Centro de despacho,Energia,Operación,10
+Comercial,Energia,Soporte,11
+Gestión corporativa,Energia,Soporte,12
+Urgencia,Salud,Clínica,13
+Hospitalización,Salud,Clínica,14
+Pabellón,Salud,Clínica,15
+UCI,Salud,Clínica,16
+Ambulatorio,Salud,Clínica,17
+Apoyo,Salud,Soporte,18

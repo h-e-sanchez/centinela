@@ -1,0 +1,4 @@
+role 'Jefatura Bodega y logística'
+	modelPermission: read
+
+	tablePermission servicios = servicios[servicio] = "Bodega y logística"

@@ -1,0 +1,111 @@
+/// Bandas salariales por empresa, grado y año (mínimo, punto medio y máximo), con el P25, P50 y P75 de la encuesta de mercado.
+table bandas
+	lineageTag: 8d967b18-cc8f-5bb8-933d-2b50fe85f1b6
+
+	column banda
+		dataType: string
+		isHidden
+		lineageTag: 3fe6f8f7-41b2-55ae-9cce-64c2277fe496
+		summarizeBy: none
+		sourceColumn: banda
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: d1704a2f-0c4c-56cd-a6f4-74a0cf91f45f
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column grado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 91cbfc26-d6df-56de-8b35-a63c9b7ddc01
+		summarizeBy: none
+		sourceColumn: grado
+
+		annotation SummarizationSetBy = Automatic
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5d068540-a757-5a6b-99dd-2b7e79d7fe97
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column minimo
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 2d267bd4-e154-5391-b389-d49b716c41cb
+		summarizeBy: none
+		sourceColumn: minimo
+
+		annotation SummarizationSetBy = Automatic
+
+	column punto_medio
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: b6ff3203-b0ba-541f-98cd-c87995bc8531
+		summarizeBy: none
+		sourceColumn: punto_medio
+
+		annotation SummarizationSetBy = Automatic
+
+	column maximo
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 976c02c3-a1fe-57d4-89b5-fa1d7b166369
+		summarizeBy: none
+		sourceColumn: maximo
+
+		annotation SummarizationSetBy = Automatic
+
+	column mercado_p25
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 776bbf0c-d1ca-55d6-b6b7-5cfce6b14866
+		summarizeBy: none
+		sourceColumn: mercado_p25
+
+		annotation SummarizationSetBy = Automatic
+
+	column mercado_p50
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: bd299d07-2d0c-59ec-8cb7-6c0f575ebb07
+		summarizeBy: none
+		sourceColumn: mercado_p50
+
+		annotation SummarizationSetBy = Automatic
+
+	column mercado_p75
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: da1526bc-a1a4-5fd8-bc51-ba445c5d153e
+		summarizeBy: none
+		sourceColumn: mercado_p75
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bandas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("bandas.csv", {{"banda", type text}, {"industria", type text}, {"grado", Int64.Type}, {"anio", Int64.Type}, {"minimo", Int64.Type}, {"punto_medio", Int64.Type}, {"maximo", Int64.Type}, {"mercado_p25", Int64.Type}, {"mercado_p50", Int64.Type}, {"mercado_p75", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
