@@ -251,7 +251,6 @@
       "color": "#5B4B8A",
       "fecha": "2026-10-05",
       "destacado": false,
-      "estado": "en-preparacion",
       "modelo": "powerbi/proyectos-ti",
       "datos": "data/proyectos-ti",
       "prefijo": "proyectos-ti",
@@ -324,7 +323,8 @@
           "etiqueta": "Especificación",
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/04-proyectos-ti.md"
         }
-      ]
+      ],
+      "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiOWYwN2JiYTUtZjAwMC00MGU1LWFkYmYtOTMzOTgyYjI5NGRiIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada"
     },
     {
       "slug": "compensaciones",
