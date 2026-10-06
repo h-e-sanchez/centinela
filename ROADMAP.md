@@ -164,6 +164,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #8 · Del libro diario a los EEFF: especificación, libro diario en partida doble cuadrado con el #1, PBIP de 10 páginas, guía, glosario y descargas (catálogo «en preparación»; sin consolidación)
 - [ ] Reporte #8: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [x] Ayudas de lectura, piloto en el #6: ícono ⓘ por visual, tooltips con cifras, botón «Glosario →» y fichas «Cómo se calcula» (PR #45 y #48)
+- [ ] Ayudas de lectura en los otros siete reportes: plan por tandas en [`docs/plan-ayudas-de-lectura.md`](docs/plan-ayudas-de-lectura.md)
 
 ## Backlog P1 — robustez
 
