@@ -30,6 +30,22 @@
               "nativeQueryRef": "Comparar por",
               "active": true
             }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Comparar por"
+                    }
+                  },
+                  "Property": "Comparar por"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
           ]
         },
         "Y": {

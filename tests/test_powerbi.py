@@ -212,3 +212,22 @@ def test_columnas_con_nombre_inferido_se_llaman_como_su_origen(proyecto):
             if "\t\tisNameInferred" in m.group(3):
                 nombre = (m.group(1) or m.group(2)).replace("''", "'")
                 assert nombre == m.group(4), f"{archivo.name}: {nombre} se renombraría a {m.group(4)}"
+
+
+@pytest.mark.parametrize("proyecto", PROYECTOS, ids=IDS)
+def test_visuales_con_parametro_de_campo_lo_declaran(proyecto):
+    # Sin «fieldParameters», Power BI trata el parámetro como texto: el eje muestra «Sexo» en vez de cambiar a sexo.
+    tablas = set()
+    for ruta in (_modelo(proyecto) / "definition" / "tables").glob("*.tmdl"):
+        texto = ruta.read_text(encoding="utf-8")
+        if '"kind": 2' in texto:
+            tabla = re.search(r"^table (?:'([^']+)'|(\S+))", texto, re.MULTILINE)
+            tablas.add(tabla.group(1) or tabla.group(2))
+    for ruta in _visuales(proyecto):
+        visual = json.loads(ruta.read_text(encoding="utf-8"))["visual"]
+        if visual["visualType"] == "slicer":
+            continue
+        for rol, estado in visual.get("query", {}).get("queryState", {}).items():
+            usa = any(p["field"].get("Column", {}).get("Expression", {}).get("SourceRef", {}).get("Entity") in tablas
+                      for p in estado["projections"])
+            assert not usa or estado.get("fieldParameters"), f"{ruta.parent.name}: {rol} usa un parámetro de campo sin fieldParameters"
