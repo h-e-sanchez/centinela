@@ -1,0 +1,32 @@
+proveedor,industria,categoria,condicion_dias
+Aceros Ejemplo,Manufactura,Materias primas,45
+Metales del Norte Ejemplo,Manufactura,Materias primas,45
+Fundición Ejemplo,Manufactura,Materias primas,45
+Química Ejemplo,Manufactura,Materias primas,30
+Insumos Industriales Ejemplo,Manufactura,Materias primas,30
+Distribuidora Eléctrica Ejemplo Norte,Manufactura,Energía,30
+Gas Industrial Ejemplo,Manufactura,Energía,30
+Generadora Ejemplo 01,Energia,Energía comprada,45
+Generadora Ejemplo 02,Energia,Energía comprada,45
+Generadora Ejemplo 03,Energia,Energía comprada,45
+GNL Ejemplo,Energia,Combustibles,60
+Gas Andino Ejemplo,Energia,Combustibles,60
+Combustibles Ejemplo,Energia,Combustibles,60
+Petrolera Ejemplo,Energia,Combustibles,60
+Servicios Técnicos Ejemplo 01,Energia,Mantención,60
+Servicios Técnicos Ejemplo 02,Energia,Mantención,60
+Servicios Técnicos Ejemplo 03,Energia,Mantención,60
+Servicios Técnicos Ejemplo 04,Energia,Mantención,60
+Sociedad Médica Ejemplo 01,Salud,Honorarios médicos,30
+Sociedad Médica Ejemplo 02,Salud,Honorarios médicos,30
+Sociedad Médica Ejemplo 03,Salud,Honorarios médicos,30
+Sociedad Médica Ejemplo 04,Salud,Honorarios médicos,30
+Sociedad Médica Ejemplo 05,Salud,Honorarios médicos,30
+Sociedad Médica Ejemplo 06,Salud,Honorarios médicos,30
+Laboratorio Ejemplo 01,Salud,Medicamentos,60
+Laboratorio Ejemplo 02,Salud,Medicamentos,60
+Laboratorio Ejemplo 03,Salud,Medicamentos,60
+Droguería Ejemplo,Salud,Medicamentos,60
+Insumos Clínicos Ejemplo 01,Salud,Material clínico,60
+Insumos Clínicos Ejemplo 02,Salud,Material clínico,60
+Insumos Clínicos Ejemplo 03,Salud,Material clínico,60

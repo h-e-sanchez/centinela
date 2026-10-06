@@ -1,0 +1,30 @@
+/// Escalones de la cascada del ciclo de conversión de caja.
+table 'Escalones del ciclo'
+	lineageTag: d1534dfa-4194-5523-b9ba-8e6902a9d2c0
+
+	column Orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: da3173ca-8aad-523e-ac1b-ddac23e0fc1b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Componente
+		dataType: string
+		lineageTag: 2580c94f-0c3f-5f7c-b1f0-37706ad58f29
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Componente]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Escalones del ciclo' = calculated
+		mode: import
+		source = DATATABLE("Orden", INTEGER, "Componente", STRING, {{1, "DSO"}, {2, "DIO"}, {3, "DPO"}})
+
+	annotation PBI_ResultType = Table

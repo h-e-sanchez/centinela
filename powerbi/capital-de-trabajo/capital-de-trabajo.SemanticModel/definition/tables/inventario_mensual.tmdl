@@ -1,0 +1,167 @@
+/// Saldo y consumo de inventario por sucursal, familia y mes.
+table inventario_mensual
+	lineageTag: 0098d986-6287-56a8-921f-7fb0e694d038
+
+	/// Saldo de inventario al cierre del mes de la fecha de corte.
+	measure 'Inventario al corte' =
+			VAR c = [Fecha de corte]
+			RETURN CALCULATE(SUM(inventario_mensual[saldo]), REMOVEFILTERS(Calendario), inventario_mensual[fecha] = DATE(YEAR(c), MONTH(c), 1))
+		formatString: \$ #,##0
+		displayFolder: 3. Inventario
+		lineageTag: 3c379f36-f4d3-5172-90cc-d3e9d8c24aac
+
+	/// Consumo de inventario de los tres meses que terminan en la fecha de corte.
+	measure 'Consumo de la ventana' =
+			VAR c = [Fecha de corte]
+			VAR i = [Inicio de la ventana]
+			RETURN CALCULATE(SUM(inventario_mensual[consumo]), REMOVEFILTERS(Calendario), inventario_mensual[fecha] >= i, inventario_mensual[fecha] <= c)
+		formatString: \$ #,##0
+		displayFolder: 3. Inventario
+		lineageTag: d1a1f53c-1fd5-53cd-8e08-73883204a354
+
+	/// Días de inventario: saldo al corte sobre el consumo de la ventana, por sus días.
+	measure DIO = DIVIDE([Inventario al corte], [Consumo de la ventana]) * [Días de la ventana]
+		formatString: 0
+		displayFolder: 3. Inventario
+		lineageTag: 05903f10-f20c-5980-897b-e4a601e7e42f
+
+	/// Veces que el inventario se renueva en un año al ritmo de consumo de la ventana.
+	measure 'Rotación de inventario' = DIVIDE(365, [DIO])
+		formatString: 0.0
+		displayFolder: 3. Inventario
+		lineageTag: 5ec57c34-ee08-5b3d-89c2-79bc2f2e620e
+
+	/// Consumo de inventario del periodo (cuentas de materiales del #1).
+	measure 'Consumo del periodo' = SUM(inventario_mensual[consumo])
+		formatString: \$ #,##0
+		displayFolder: 3. Inventario
+		lineageTag: 36a79e1e-1848-5890-aa61-3cd2236240bc
+
+	/// Días de consumo que cubre el saldo del mes.
+	measure 'Cobertura en días' = DIVIDE(SUM(inventario_mensual[saldo]), SUM(inventario_mensual[consumo])) * 30
+		formatString: 0
+		displayFolder: 3. Inventario
+		lineageTag: faeaea28-05bf-553e-9e14-327b5a2bbb71
+
+	/// Cobertura objetivo de la familia, en días de consumo.
+	measure 'Días objetivo' = AVERAGE(inventario_mensual[cobertura_objetivo])
+		formatString: 0
+		displayFolder: 3. Inventario
+		lineageTag: ca3ba0ad-d01c-5eb8-ae6f-812dc7f5b91a
+
+	/// Saldo sobre 1,3 veces la cobertura objetivo, al cierre del mes de corte.
+	measure Sobrestock =
+			VAR c = [Fecha de corte]
+			RETURN
+			    CALCULATE(
+			        SUMX(inventario_mensual, MAX(0, inventario_mensual[saldo] - inventario_mensual[consumo] / 30 * inventario_mensual[cobertura_objetivo] * 1.3)),
+			        REMOVEFILTERS(Calendario),
+			        inventario_mensual[fecha] = DATE(YEAR(c), MONTH(c), 1)
+			    )
+		formatString: \$ #,##0
+		displayFolder: 3. Inventario
+		lineageTag: 42659f50-f223-565d-8e8f-4c2059c466a5
+
+	/// Familias y sucursales que cerraron un mes con menos de 5 días de cobertura.
+	measure 'Meses con quiebre' = COUNTROWS(FILTER(inventario_mensual, inventario_mensual[saldo] < inventario_mensual[consumo] / 30 * 5))
+		formatString: #,##0
+		displayFolder: 3. Inventario
+		lineageTag: bf60d32e-8547-53d5-a4f4-9e8179d1055d
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 878966b7-5584-5838-a8e9-3922902a30d6
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fe9b3115-78bc-5e97-9e70-0479900e7c16
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 865d77d2-b71b-57b3-a64c-2c726a4da2e0
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 6a23fd5e-2537-5e2a-a2a4-15283507b84b
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: de58985d-5fd6-5074-8058-676acf18899d
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 2b1cc50e-5976-539d-ac33-35adab1b5fa6
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column saldo
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 2eb299da-4cc9-592a-978f-f42127192890
+		summarizeBy: none
+		sourceColumn: saldo
+
+		annotation SummarizationSetBy = Automatic
+
+	column consumo
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: ee06e4d4-82fc-5af7-b2a6-8cb00e7b4253
+		summarizeBy: none
+		sourceColumn: consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column cobertura_objetivo
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6b68877f-1f89-5e5e-bfe1-edf561faa25a
+		summarizeBy: none
+		sourceColumn: cobertura_objetivo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition inventario_mensual = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("inventario_mensual.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"industria", type text}, {"sucursal", type text}, {"familia", type text}, {"saldo", Int64.Type}, {"consumo", Int64.Type}, {"cobertura_objetivo", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

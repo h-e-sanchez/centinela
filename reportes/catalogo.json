@@ -327,6 +327,90 @@
       "embed_url": "https://app.powerbi.com/view?r=eyJrIjoiOWYwN2JiYTUtZjAwMC00MGU1LWFkYmYtOTMzOTgyYjI5NGRiIiwidCI6IjdjMTM5MTRjLTZiZTAtNDM2OC05MjMwLTVhMjNlYjhmZjQ3ZiIsImMiOjR9&pageName=portada"
     },
     {
+      "slug": "capital-de-trabajo",
+      "titulo": "Capital de trabajo y ciclo de caja",
+      "resumen": "Finanzas operativas de las tres empresas sintéticas de la vitrina, con facturas que cuadran al peso con el reporte Presupuesto vs. Real: cobranza y antigüedad de cartera, pagos a proveedores, inventario, ciclo de conversión de caja (DSO + DIO − DPO) y un flujo de caja a 13 semanas con saldo mínimo ajustable.",
+      "tema": "Finanzas operativas",
+      "color": "#2E7D8C",
+      "fecha": "2026-10-06",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/capital-de-trabajo",
+      "datos": "data/capital-de-trabajo",
+      "prefijo": "capital-de-trabajo",
+      "habilidades": [
+        "Capital de trabajo (DSO, DIO, DPO, ciclo de caja)",
+        "Antigüedad de cartera con fecha de corte",
+        "Pareto de deudores",
+        "Relaciones inactivas con USERELATIONSHIP",
+        "Parámetro what-if de saldo mínimo",
+        "Flujo de caja proyectado a 13 semanas",
+        "Modelo que cuadra con el reporte Presupuesto vs. Real",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Salud",
+          "resultado": "93 días",
+          "tono": "critica",
+          "texto": "Fonasa y las isapres pagan lento: el DSO pasa los 90 días, el ciclo es el más largo de las tres y la caja cae bajo el mínimo en 7 semanas de 2026."
+        },
+        {
+          "industria": "Manufactura",
+          "resultado": "+25 días",
+          "tono": "critica",
+          "texto": "El año flojo de 2025 deja sobrestock de producto terminado en Antofagasta: cierra 2025 con unos 25 días más de inventario que las otras sucursales."
+        },
+        {
+          "industria": "Energía",
+          "resultado": "−15 días",
+          "tono": "ok",
+          "texto": "Cobra a 23 días y paga a 51: el ciclo de conversión de caja es negativo y los proveedores financian la operación."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/capital-de-trabajo-datos-csv.zip",
+          "detalle": "ocho tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/capital-de-trabajo-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/capital-de-trabajo.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/capital-de-trabajo-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/capital-de-trabajo"
+        },
+        {
+          "etiqueta": "Generador de datos",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_capital_de_trabajo.py"
+        },
+        {
+          "etiqueta": "Tests de cuadratura y calibración",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_capital_de_trabajo.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/05-capital-de-trabajo.md"
+        }
+      ]
+    },
+    {
       "slug": "compensaciones",
       "titulo": "Equidad salarial y bandas: por persona y por servicio",
       "resumen": "People Analytics de la estructura salarial de las tres empresas sintéticas de la vitrina, con las mismas personas del reporte Workforce: bandas por grado, compa-ratio, quién está fuera de banda, qué servicio paga distinto por el mismo grado, brecha de género en cargos equivalentes, competitividad frente al mercado y costo de corregir, con seguridad por fila por servicio.",
@@ -578,12 +662,5 @@
       ]
     }
   ],
-  "proximos": [
-    {
-      "titulo": "Capital de trabajo y ciclo de caja",
-      "tema": "Finanzas operativas",
-      "color": "#2E7D8C",
-      "resumen": "Cobranza, pagos e inventario con DSO, DPO, DIO y ciclo de conversión de caja, más un flujo de caja a 13 semanas que cuadra con el reporte de Presupuesto vs. Real."
-    }
-  ]
+  "proximos": []
 }

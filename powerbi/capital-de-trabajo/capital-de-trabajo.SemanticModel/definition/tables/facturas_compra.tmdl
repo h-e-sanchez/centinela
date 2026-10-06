@@ -1,0 +1,208 @@
+/// Facturas de compra 2025-2026 más la apertura de 2024. Cuadran con las cuentas de Costos compradas a proveedores.
+table facturas_compra
+	lineageTag: 1cbcd978-2a78-50c8-840e-164250debb93
+
+	/// Facturas de compra emitidas en el periodo: cuadran con las cuentas de Costos compradas a proveedores del reporte #1.
+	measure Compras = CALCULATE(SUM(facturas_compra[monto]), KEEPFILTERS(facturas_compra[emision] >= DATE(2025, 1, 1)))
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 00e5bcdd-cd00-5c3a-8bcf-37a1ff6a4861
+
+	/// Compras de los tres meses que terminan en la fecha de corte.
+	measure 'Compras de la ventana' =
+			VAR c = [Fecha de corte]
+			VAR i = [Inicio de la ventana]
+			RETURN
+			    CALCULATE(
+			        SUM(facturas_compra[monto]),
+			        REMOVEFILTERS(Calendario),
+			        facturas_compra[emision] >= i,
+			        facturas_compra[emision] <= c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: ec1522e1-9507-5c28-be8b-0b11e588b740
+
+	/// Facturas de compra recibidas hasta la fecha de corte y no pagadas a esa fecha.
+	measure 'Cuentas por pagar' =
+			VAR c = [Fecha de corte]
+			RETURN
+			    CALCULATE(
+			        SUM(facturas_compra[monto]),
+			        REMOVEFILTERS(Calendario),
+			        facturas_compra[emision] <= c,
+			    ISBLANK(facturas_compra[pago]) || facturas_compra[pago] > c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: b29d61da-23b8-5d9f-9684-e9d11d24b8fb
+
+	/// Días de compra pendientes de pago: cuentas por pagar sobre las compras de la ventana, por sus días.
+	measure DPO = DIVIDE([Cuentas por pagar], [Compras de la ventana]) * [Días de la ventana]
+		formatString: 0
+		displayFolder: 2. Pagos
+		lineageTag: 89771ab2-b2ac-5527-9b9b-63152b684563
+
+	/// Facturas de compra pagadas en el periodo (por fecha de pago).
+	measure 'Pagado a proveedores' = CALCULATE(SUM(facturas_compra[monto]), USERELATIONSHIP(facturas_compra[pago], Calendario[Date]))
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 940d03d4-573a-5fd8-928b-5181a9c892bc
+
+	/// Facturas de compra que vencían en el periodo: el calendario de pagos.
+	measure 'Vencimientos de proveedores' = CALCULATE(SUM(facturas_compra[monto]), USERELATIONSHIP(facturas_compra[vencimiento], Calendario[Date]))
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 0e4d4f60-314c-5e4c-968a-05bc2c0c0257
+
+	/// Facturas de compra pagadas en el periodo.
+	measure 'Facturas pagadas' =
+			CALCULATE(
+			    COUNTROWS(FILTER(facturas_compra, NOT ISBLANK(facturas_compra[pago]))),
+			    USERELATIONSHIP(facturas_compra[pago], Calendario[Date])
+			)
+		formatString: #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 43e21f36-b6fe-5af2-a959-40e7c7e5af25
+
+	/// Facturas pagadas más de 7 días después de su vencimiento.
+	measure 'Facturas pagadas con atraso' =
+			CALCULATE(
+			    COUNTROWS(FILTER(facturas_compra, NOT ISBLANK(facturas_compra[pago]) && facturas_compra[pago] > facturas_compra[vencimiento] + 7)),
+			    USERELATIONSHIP(facturas_compra[pago], Calendario[Date])
+			)
+		formatString: #,##0
+		displayFolder: 2. Pagos
+		lineageTag: b7eeaf25-301b-593c-9cce-a2c5f1d6bd87
+
+	/// Monto de las facturas pagadas más de 7 días después de su vencimiento.
+	measure 'Monto pagado con atraso' =
+			CALCULATE(
+			    SUMX(FILTER(facturas_compra, NOT ISBLANK(facturas_compra[pago]) && facturas_compra[pago] > facturas_compra[vencimiento] + 7), facturas_compra[monto]),
+			    USERELATIONSHIP(facturas_compra[pago], Calendario[Date])
+			)
+		formatString: \$ #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 36fee536-9113-5891-b70a-294e87ca77ad
+
+	/// Parte de las facturas pagadas con más de 7 días de atraso.
+	measure '% pagado con atraso' = DIVIDE([Facturas pagadas con atraso], [Facturas pagadas])
+		formatString: 0.0%
+		displayFolder: 2. Pagos
+		lineageTag: 6a5bc2ee-e0ea-50c9-b2c1-56d6ddefea56
+
+	/// Facturas pagadas 7 días o más antes del vencimiento (por descuento de pronto pago).
+	measure 'Facturas pagadas antes de plazo' =
+			CALCULATE(
+			    COUNTROWS(FILTER(facturas_compra, NOT ISBLANK(facturas_compra[pago]) && facturas_compra[pago] <= facturas_compra[vencimiento] - 7)),
+			    USERELATIONSHIP(facturas_compra[pago], Calendario[Date])
+			)
+		formatString: #,##0
+		displayFolder: 2. Pagos
+		lineageTag: 9a16270a-e1ce-5d7a-98d3-1ea0a2c70e25
+
+	/// Días promedio entre el vencimiento y el pago (negativo: se pagó antes).
+	measure 'Atraso promedio de pago' =
+			CALCULATE(
+			    AVERAGEX(FILTER(facturas_compra, NOT ISBLANK(facturas_compra[pago])), INT(facturas_compra[pago] - facturas_compra[vencimiento])),
+			    USERELATIONSHIP(facturas_compra[pago], Calendario[Date])
+			)
+		formatString: 0.0
+		displayFolder: 2. Pagos
+		lineageTag: 026239d3-b319-5f74-8d67-4e7648864c68
+
+	column factura
+		dataType: string
+		lineageTag: 7dc9570d-16a9-5dce-bade-b7c15f142f42
+		summarizeBy: none
+		sourceColumn: factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: e125ed59-5d63-55c0-ad0a-2e89ac9cefe9
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 0eee21ac-8a80-50c1-9cce-4db4cc522aaa
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column proveedor
+		dataType: string
+		isHidden
+		lineageTag: 11476b6c-c970-50bc-83f5-d699e77560d0
+		summarizeBy: none
+		sourceColumn: proveedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		lineageTag: 3f57a333-f0bf-515d-b7a3-31ae98a127e2
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column emision
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: b8326a5e-c59a-5c45-a114-20447249361d
+		summarizeBy: none
+		sourceColumn: emision
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vencimiento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 0b39cfed-2efd-54ed-82bd-a37b023dd157
+		summarizeBy: none
+		sourceColumn: vencimiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pago
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 5310d268-bb0d-5759-a0c9-914b2f4df6e2
+		summarizeBy: none
+		sourceColumn: pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 3284d27c-db04-528e-b85a-3ee089130081
+		summarizeBy: none
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition facturas_compra = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("facturas_compra.csv", {{"factura", type text}, {"industria", type text}, {"sucursal", type text}, {"proveedor", type text}, {"cuenta", type text}, {"emision", type date}, {"vencimiento", type date}, {"pago", type date}, {"monto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

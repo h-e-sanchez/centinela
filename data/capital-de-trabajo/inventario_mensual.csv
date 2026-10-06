@@ -1,0 +1,361 @@
+fecha,anio,mes,industria,sucursal,familia,saldo,consumo,cobertura_objetivo
+2025-01-01,2025,1,Manufactura,Santiago,Materias primas,12446563,10263462,35
+2025-02-01,2025,2,Manufactura,Santiago,Materias primas,11494679,10023654,35
+2025-03-01,2025,3,Manufactura,Santiago,Materias primas,12454356,11355242,35
+2025-04-01,2025,4,Manufactura,Santiago,Materias primas,12572341,11232735,35
+2025-05-01,2025,5,Manufactura,Santiago,Materias primas,15001609,11511375,35
+2025-06-01,2025,6,Manufactura,Santiago,Materias primas,14746979,11470794,35
+2025-07-01,2025,7,Manufactura,Santiago,Materias primas,14844227,11367775,35
+2025-08-01,2025,8,Manufactura,Santiago,Materias primas,13391897,11278627,35
+2025-09-01,2025,9,Manufactura,Santiago,Materias primas,13636278,11268165,35
+2025-10-01,2025,10,Manufactura,Santiago,Materias primas,16087932,12175029,35
+2025-11-01,2025,11,Manufactura,Santiago,Materias primas,16202348,13140012,35
+2025-12-01,2025,12,Manufactura,Santiago,Materias primas,14108789,13598699,35
+2026-01-01,2026,1,Manufactura,Santiago,Materias primas,13849669,10733675,35
+2026-02-01,2026,2,Manufactura,Santiago,Materias primas,13473202,10319736,35
+2026-03-01,2026,3,Manufactura,Santiago,Materias primas,12445742,11945685,35
+2026-04-01,2026,4,Manufactura,Santiago,Materias primas,15489067,11749927,35
+2026-05-01,2026,5,Manufactura,Santiago,Materias primas,15655738,11846872,35
+2026-06-01,2026,6,Manufactura,Santiago,Materias primas,15427272,11824893,35
+2026-07-01,2026,7,Manufactura,Santiago,Materias primas,14982785,11868110,35
+2026-08-01,2026,8,Manufactura,Santiago,Materias primas,14540169,11942645,35
+2026-09-01,2026,9,Manufactura,Santiago,Materias primas,13913434,11923570,35
+2026-10-01,2026,10,Manufactura,Santiago,Materias primas,16220791,12844475,35
+2026-11-01,2026,11,Manufactura,Santiago,Materias primas,13955878,13713509,35
+2026-12-01,2026,12,Manufactura,Santiago,Materias primas,17419976,14287972,35
+2025-01-01,2025,1,Manufactura,Santiago,Producto terminado,9524388,16255363,20
+2025-02-01,2025,2,Manufactura,Santiago,Producto terminado,9204327,15867153,20
+2025-03-01,2025,3,Manufactura,Santiago,Producto terminado,12508248,18062526,20
+2025-04-01,2025,4,Manufactura,Santiago,Producto terminado,10828095,17937363,20
+2025-05-01,2025,5,Manufactura,Santiago,Producto terminado,11382296,18166894,20
+2025-06-01,2025,6,Manufactura,Santiago,Producto terminado,13560556,18124187,20
+2025-07-01,2025,7,Manufactura,Santiago,Producto terminado,12010707,18062520,20
+2025-08-01,2025,8,Manufactura,Santiago,Producto terminado,12747145,17984802,20
+2025-09-01,2025,9,Manufactura,Santiago,Producto terminado,11365389,18023119,20
+2025-10-01,2025,10,Manufactura,Santiago,Producto terminado,11190748,19338568,20
+2025-11-01,2025,11,Manufactura,Santiago,Producto terminado,12647563,20816684,20
+2025-12-01,2025,12,Manufactura,Santiago,Producto terminado,15628617,21569653,20
+2026-01-01,2026,1,Manufactura,Santiago,Producto terminado,11954739,17087258,20
+2026-02-01,2026,2,Manufactura,Santiago,Producto terminado,10914535,16502581,20
+2026-03-01,2026,3,Manufactura,Santiago,Producto terminado,12201726,18952368,20
+2026-04-01,2026,4,Manufactura,Santiago,Producto terminado,12998819,18804560,20
+2026-05-01,2026,5,Manufactura,Santiago,Producto terminado,11705883,18908450,20
+2026-06-01,2026,6,Manufactura,Santiago,Producto terminado,11486146,18917734,20
+2026-07-01,2026,7,Manufactura,Santiago,Producto terminado,12644383,18893508,20
+2026-08-01,2026,8,Manufactura,Santiago,Producto terminado,13684111,18963865,20
+2026-09-01,2026,9,Manufactura,Santiago,Producto terminado,11298935,18990892,20
+2026-10-01,2026,10,Manufactura,Santiago,Producto terminado,15532472,20521685,20
+2026-11-01,2026,11,Manufactura,Santiago,Producto terminado,13207141,21852479,20
+2026-12-01,2026,12,Manufactura,Santiago,Producto terminado,16268416,22835331,20
+2025-01-01,2025,1,Manufactura,Concepción,Materias primas,7585435,6163075,35
+2025-02-01,2025,2,Manufactura,Concepción,Materias primas,6477806,6018269,35
+2025-03-01,2025,3,Manufactura,Concepción,Materias primas,8484457,6815427,35
+2025-04-01,2025,4,Manufactura,Concepción,Materias primas,6893437,6733757,35
+2025-05-01,2025,5,Manufactura,Concepción,Materias primas,7270009,6919517,35
+2025-06-01,2025,6,Manufactura,Concepción,Materias primas,9228127,6892462,35
+2025-07-01,2025,7,Manufactura,Concepción,Materias primas,8863994,6823783,35
+2025-08-01,2025,8,Manufactura,Concepción,Materias primas,7384456,6764351,35
+2025-09-01,2025,9,Manufactura,Concepción,Materias primas,8443622,6757377,35
+2025-10-01,2025,10,Manufactura,Concepción,Materias primas,7682525,7301586,35
+2025-11-01,2025,11,Manufactura,Concepción,Materias primas,8379513,7892075,35
+2025-12-01,2025,12,Manufactura,Concepción,Materias primas,10299580,8160132,35
+2026-01-01,2026,1,Manufactura,Concepción,Materias primas,6908233,6435784,35
+2026-02-01,2026,2,Manufactura,Concepción,Materias primas,7516360,6175825,35
+2026-03-01,2026,3,Manufactura,Concepción,Materias primas,9095658,7163790,35
+2026-04-01,2026,4,Manufactura,Concepción,Materias primas,7028959,7033285,35
+2026-05-01,2026,5,Manufactura,Concepción,Materias primas,7661111,7097915,35
+2026-06-01,2026,6,Manufactura,Concepción,Materias primas,7460633,7083263,35
+2026-07-01,2026,7,Manufactura,Concepción,Materias primas,8836459,7112073,35
+2026-08-01,2026,8,Manufactura,Concepción,Materias primas,9164377,7161763,35
+2026-09-01,2026,9,Manufactura,Concepción,Materias primas,9344368,7149046,35
+2026-10-01,2026,10,Manufactura,Concepción,Materias primas,8609471,7698983,35
+2026-11-01,2026,11,Manufactura,Concepción,Materias primas,10543714,8222340,35
+2026-12-01,2026,12,Manufactura,Concepción,Materias primas,8987883,8565315,35
+2025-01-01,2025,1,Manufactura,Concepción,Producto terminado,6463178,9758602,20
+2025-02-01,2025,2,Manufactura,Concepción,Producto terminado,6000567,9523748,20
+2025-03-01,2025,3,Manufactura,Concepción,Producto terminado,7376907,10843557,20
+2025-04-01,2025,4,Manufactura,Concepción,Producto terminado,7619744,10760115,20
+2025-05-01,2025,5,Manufactura,Concepción,Producto terminado,6800295,10913136,20
+2025-06-01,2025,6,Manufactura,Concepción,Producto terminado,7947182,10884664,20
+2025-07-01,2025,7,Manufactura,Concepción,Producto terminado,7462784,10843553,20
+2025-08-01,2025,8,Manufactura,Concepción,Producto terminado,6661124,10791741,20
+2025-09-01,2025,9,Manufactura,Concepción,Producto terminado,6424665,10817286,20
+2025-10-01,2025,10,Manufactura,Concepción,Producto terminado,8685430,11598419,20
+2025-11-01,2025,11,Manufactura,Concepción,Producto terminado,7674970,12499950,20
+2025-12-01,2025,12,Manufactura,Concepción,Producto terminado,7732081,12942035,20
+2026-01-01,2026,1,Manufactura,Concepción,Producto terminado,6427494,10248506,20
+2026-02-01,2026,2,Manufactura,Concepción,Producto terminado,5617135,9884122,20
+2026-03-01,2026,3,Manufactura,Concepción,Producto terminado,7698640,11364912,20
+2026-04-01,2026,4,Manufactura,Concepción,Producto terminado,7723498,11266374,20
+2026-05-01,2026,5,Manufactura,Concepción,Producto terminado,8588205,11335634,20
+2026-06-01,2026,6,Manufactura,Concepción,Producto terminado,8200278,11341823,20
+2026-07-01,2026,7,Manufactura,Concepción,Producto terminado,6879847,11325672,20
+2026-08-01,2026,8,Manufactura,Concepción,Producto terminado,7132739,11372577,20
+2026-09-01,2026,9,Manufactura,Concepción,Producto terminado,8649029,11390595,20
+2026-10-01,2026,10,Manufactura,Concepción,Producto terminado,9381648,12309524,20
+2026-11-01,2026,11,Manufactura,Concepción,Producto terminado,8114578,13107820,20
+2026-12-01,2026,12,Manufactura,Concepción,Producto terminado,9139447,13699555,20
+2025-01-01,2025,1,Manufactura,Antofagasta,Materias primas,4704705,4200337,35
+2025-02-01,2025,2,Manufactura,Antofagasta,Materias primas,4151074,4086923,35
+2025-03-01,2025,3,Manufactura,Antofagasta,Materias primas,4891253,4585469,35
+2025-04-01,2025,4,Manufactura,Antofagasta,Materias primas,5521149,4381292,35
+2025-05-01,2025,5,Manufactura,Antofagasta,Materias primas,5862614,4845692,35
+2025-06-01,2025,6,Manufactura,Antofagasta,Materias primas,5895326,4778057,35
+2025-07-01,2025,7,Manufactura,Antofagasta,Materias primas,6006871,4606357,35
+2025-08-01,2025,8,Manufactura,Antofagasta,Materias primas,5087654,4457778,35
+2025-09-01,2025,9,Manufactura,Antofagasta,Materias primas,5049871,4440343,35
+2025-10-01,2025,10,Manufactura,Antofagasta,Materias primas,5076962,4804815,35
+2025-11-01,2025,11,Manufactura,Antofagasta,Materias primas,5817104,5409285,35
+2025-12-01,2025,12,Manufactura,Antofagasta,Materias primas,6976295,5456830,35
+2026-01-01,2026,1,Manufactura,Antofagasta,Materias primas,4345247,4209459,35
+2026-02-01,2026,2,Manufactura,Antofagasta,Materias primas,3947599,3823560,35
+2026-03-01,2026,3,Manufactura,Antofagasta,Materias primas,4712953,4709474,35
+2026-04-01,2026,4,Manufactura,Antofagasta,Materias primas,4600466,4383211,35
+2026-05-01,2026,5,Manufactura,Antofagasta,Materias primas,4644208,4544786,35
+2026-06-01,2026,6,Manufactura,Antofagasta,Materias primas,5568468,4508156,35
+2026-07-01,2026,7,Manufactura,Antofagasta,Materias primas,4868746,4580184,35
+2026-08-01,2026,8,Manufactura,Antofagasta,Materias primas,4802827,4704407,35
+2026-09-01,2026,9,Manufactura,Antofagasta,Materias primas,4999664,4672616,35
+2026-10-01,2026,10,Manufactura,Antofagasta,Materias primas,5111053,4991457,35
+2026-11-01,2026,11,Manufactura,Antofagasta,Materias primas,6445044,5375848,35
+2026-12-01,2026,12,Manufactura,Antofagasta,Materias primas,6122407,5573287,35
+2025-01-01,2025,1,Manufactura,Antofagasta,Producto terminado,4485053,6604444,20
+2025-02-01,2025,2,Manufactura,Antofagasta,Producto terminado,5780211,6412542,20
+2025-03-01,2025,3,Manufactura,Antofagasta,Producto terminado,7879213,7339804,20
+2025-04-01,2025,4,Manufactura,Antofagasta,Producto terminado,7124330,7131199,20
+2025-05-01,2025,5,Manufactura,Antofagasta,Producto terminado,9042436,7513751,20
+2025-06-01,2025,6,Manufactura,Antofagasta,Producto terminado,9717456,7442572,20
+2025-07-01,2025,7,Manufactura,Antofagasta,Producto terminado,9685611,7339793,20
+2025-08-01,2025,8,Manufactura,Antofagasta,Producto terminado,10722239,7210262,20
+2025-09-01,2025,9,Manufactura,Antofagasta,Producto terminado,11632056,7274125,20
+2025-10-01,2025,10,Manufactura,Antofagasta,Producto terminado,13640980,7645706,20
+2025-11-01,2025,11,Manufactura,Antofagasta,Producto terminado,14981635,8515513,20
+2025-12-01,2025,12,Manufactura,Antofagasta,Producto terminado,16028254,8632486,20
+2026-01-01,2026,1,Manufactura,Antofagasta,Producto terminado,11743005,6761763,20
+2026-02-01,2026,2,Manufactura,Antofagasta,Producto terminado,9695343,6269901,20
+2026-03-01,2026,3,Manufactura,Antofagasta,Producto terminado,10244601,7457279,20
+2026-04-01,2026,4,Manufactura,Antofagasta,Producto terminado,7182875,7210933,20
+2026-05-01,2026,5,Manufactura,Antofagasta,Producto terminado,5970723,7384083,20
+2026-06-01,2026,6,Manufactura,Antofagasta,Producto terminado,5185661,7399557,20
+2026-07-01,2026,7,Manufactura,Antofagasta,Producto terminado,4453079,7359180,20
+2026-08-01,2026,8,Manufactura,Antofagasta,Producto terminado,4823632,7476440,20
+2026-09-01,2026,9,Manufactura,Antofagasta,Producto terminado,5106970,7521486,20
+2026-10-01,2026,10,Manufactura,Antofagasta,Producto terminado,5943915,8142407,20
+2026-11-01,2026,11,Manufactura,Antofagasta,Producto terminado,5272548,8671297,20
+2026-12-01,2026,12,Manufactura,Antofagasta,Producto terminado,5963486,9102886,20
+2025-01-01,2025,1,Energia,Zona Norte,Combustibles,2049101,4903430,14
+2025-02-01,2025,2,Energia,Zona Norte,Combustibles,2490359,4949838,14
+2025-03-01,2025,3,Energia,Zona Norte,Combustibles,2821503,5425895,14
+2025-04-01,2025,4,Energia,Zona Norte,Combustibles,2629944,5430273,14
+2025-05-01,2025,5,Energia,Zona Norte,Combustibles,2506702,5389199,14
+2025-06-01,2025,6,Energia,Zona Norte,Combustibles,3800352,7096765,14
+2025-07-01,2025,7,Energia,Zona Norte,Combustibles,3810207,7148625,14
+2025-08-01,2025,8,Energia,Zona Norte,Combustibles,3627603,7309588,14
+2025-09-01,2025,9,Energia,Zona Norte,Combustibles,2688509,5441502,14
+2025-10-01,2025,10,Energia,Zona Norte,Combustibles,2184712,5376359,14
+2025-11-01,2025,11,Energia,Zona Norte,Combustibles,2516667,5418455,14
+2025-12-01,2025,12,Energia,Zona Norte,Combustibles,2009540,5045863,14
+2026-01-01,2026,1,Energia,Zona Norte,Combustibles,2516309,5152213,14
+2026-02-01,2026,2,Energia,Zona Norte,Combustibles,2628272,5327117,14
+2026-03-01,2026,3,Energia,Zona Norte,Combustibles,2846629,5443567,14
+2026-04-01,2026,4,Energia,Zona Norte,Combustibles,2317572,5658404,14
+2026-05-01,2026,5,Energia,Zona Norte,Combustibles,2300993,5574275,14
+2026-06-01,2026,6,Energia,Zona Norte,Combustibles,3084805,6598068,14
+2026-07-01,2026,7,Energia,Zona Norte,Combustibles,3421681,6796485,14
+2026-08-01,2026,8,Energia,Zona Norte,Combustibles,2889606,6607150,14
+2026-09-01,2026,9,Energia,Zona Norte,Combustibles,2556173,5788239,14
+2026-10-01,2026,10,Energia,Zona Norte,Combustibles,2881671,5562860,14
+2026-11-01,2026,11,Energia,Zona Norte,Combustibles,2321293,5629443,14
+2026-12-01,2026,12,Energia,Zona Norte,Combustibles,2545637,5114067,14
+2025-01-01,2025,1,Energia,Zona Centro,Combustibles,2171456,4290502,14
+2025-02-01,2025,2,Energia,Zona Centro,Combustibles,1731908,4331109,14
+2025-03-01,2025,3,Energia,Zona Centro,Combustibles,2473037,4747658,14
+2025-04-01,2025,4,Energia,Zona Centro,Combustibles,2050404,4751488,14
+2025-05-01,2025,5,Energia,Zona Centro,Combustibles,2499442,4715549,14
+2025-06-01,2025,6,Energia,Zona Centro,Combustibles,2692240,6209669,14
+2025-07-01,2025,7,Energia,Zona Centro,Combustibles,2803323,6255047,14
+2025-08-01,2025,8,Energia,Zona Centro,Combustibles,2561943,6395890,14
+2025-09-01,2025,9,Energia,Zona Centro,Combustibles,2217342,4761314,14
+2025-10-01,2025,10,Energia,Zona Centro,Combustibles,2034715,4704315,14
+2025-11-01,2025,11,Energia,Zona Centro,Combustibles,2225306,4741149,14
+2025-12-01,2025,12,Energia,Zona Centro,Combustibles,2227253,4415130,14
+2026-01-01,2026,1,Energia,Zona Centro,Combustibles,2005956,4508186,14
+2026-02-01,2026,2,Energia,Zona Centro,Combustibles,2388224,4661228,14
+2026-03-01,2026,3,Energia,Zona Centro,Combustibles,2220076,4763120,14
+2026-04-01,2026,4,Energia,Zona Centro,Combustibles,2204291,4951103,14
+2026-05-01,2026,5,Energia,Zona Centro,Combustibles,2415024,4877492,14
+2026-06-01,2026,6,Energia,Zona Centro,Combustibles,2579524,5773310,14
+2026-07-01,2026,7,Energia,Zona Centro,Combustibles,3074676,5946925,14
+2026-08-01,2026,8,Energia,Zona Centro,Combustibles,2664922,5781257,14
+2026-09-01,2026,9,Energia,Zona Centro,Combustibles,2169315,5064709,14
+2026-10-01,2026,10,Energia,Zona Centro,Combustibles,2493320,4867502,14
+2026-11-01,2026,11,Energia,Zona Centro,Combustibles,2475162,4925763,14
+2026-12-01,2026,12,Energia,Zona Centro,Combustibles,1905920,4474809,14
+2025-01-01,2025,1,Energia,Zona Sur,Combustibles,1384848,3064643,14
+2025-02-01,2025,2,Energia,Zona Sur,Combustibles,1588902,3093649,14
+2025-03-01,2025,3,Energia,Zona Sur,Combustibles,1659530,3391184,14
+2025-04-01,2025,4,Energia,Zona Sur,Combustibles,1802246,3393920,14
+2025-05-01,2025,5,Energia,Zona Sur,Combustibles,1573655,3368250,14
+2025-06-01,2025,6,Energia,Zona Sur,Combustibles,1807115,4435478,14
+2025-07-01,2025,7,Energia,Zona Sur,Combustibles,2180295,4467891,14
+2025-08-01,2025,8,Energia,Zona Sur,Combustibles,2357595,4568492,14
+2025-09-01,2025,9,Energia,Zona Sur,Combustibles,1703449,3400938,14
+2025-10-01,2025,10,Energia,Zona Sur,Combustibles,1694732,3360225,14
+2025-11-01,2025,11,Energia,Zona Sur,Combustibles,1492889,3386535,14
+2025-12-01,2025,12,Energia,Zona Sur,Combustibles,1643376,3153664,14
+2026-01-01,2026,1,Energia,Zona Sur,Combustibles,1617707,3220133,14
+2026-02-01,2026,2,Energia,Zona Sur,Combustibles,1775875,3329448,14
+2026-03-01,2026,3,Energia,Zona Sur,Combustibles,1812071,3402229,14
+2026-04-01,2026,4,Energia,Zona Sur,Combustibles,1875201,3536503,14
+2026-05-01,2026,5,Energia,Zona Sur,Combustibles,1752495,3483922,14
+2026-06-01,2026,6,Energia,Zona Sur,Combustibles,1966773,4123793,14
+2026-07-01,2026,7,Energia,Zona Sur,Combustibles,1910420,4247804,14
+2026-08-01,2026,8,Energia,Zona Sur,Combustibles,2084039,4129469,14
+2026-09-01,2026,9,Energia,Zona Sur,Combustibles,1465606,3617650,14
+2026-10-01,2026,10,Energia,Zona Sur,Combustibles,1573308,3476787,14
+2026-11-01,2026,11,Energia,Zona Sur,Combustibles,1623034,3518402,14
+2026-12-01,2026,12,Energia,Zona Sur,Combustibles,1273977,3196292,14
+2025-01-01,2025,1,Salud,Clínica Oriente,Medicamentos,2067642,2154692,28
+2025-02-01,2025,2,Salud,Clínica Oriente,Medicamentos,1588297,1821452,28
+2025-03-01,2025,3,Salud,Clínica Oriente,Medicamentos,2228860,2124236,28
+2025-04-01,2025,4,Salud,Clínica Oriente,Medicamentos,2225060,2150068,28
+2025-05-01,2025,5,Salud,Clínica Oriente,Medicamentos,2293122,2154520,28
+2025-06-01,2025,6,Salud,Clínica Oriente,Medicamentos,2222469,2456980,28
+2025-07-01,2025,7,Salud,Clínica Oriente,Medicamentos,2386630,2479306,28
+2025-08-01,2025,8,Salud,Clínica Oriente,Medicamentos,2538449,2453802,28
+2025-09-01,2025,9,Salud,Clínica Oriente,Medicamentos,1770543,2128895,28
+2025-10-01,2025,10,Salud,Clínica Oriente,Medicamentos,2134390,2117920,28
+2025-11-01,2025,11,Salud,Clínica Oriente,Medicamentos,1849388,2164472,28
+2025-12-01,2025,12,Salud,Clínica Oriente,Medicamentos,1989419,2156615,28
+2026-01-01,2026,1,Salud,Clínica Oriente,Medicamentos,1837126,2292021,28
+2026-02-01,2026,2,Salud,Clínica Oriente,Medicamentos,1589845,1930361,28
+2026-03-01,2026,3,Salud,Clínica Oriente,Medicamentos,2213632,2249476,28
+2026-04-01,2026,4,Salud,Clínica Oriente,Medicamentos,2159677,2298141,28
+2026-05-01,2026,5,Salud,Clínica Oriente,Medicamentos,1812133,2277046,28
+2026-06-01,2026,6,Salud,Clínica Oriente,Medicamentos,355391,2786550,28
+2026-07-01,2026,7,Salud,Clínica Oriente,Medicamentos,268427,2833785,28
+2026-08-01,2026,8,Salud,Clínica Oriente,Medicamentos,227834,2811631,28
+2026-09-01,2026,9,Salud,Clínica Oriente,Medicamentos,1819382,2268819,28
+2026-10-01,2026,10,Salud,Clínica Oriente,Medicamentos,2269116,2259915,28
+2026-11-01,2026,11,Salud,Clínica Oriente,Medicamentos,2031733,2288312,28
+2026-12-01,2026,12,Salud,Clínica Oriente,Medicamentos,2117143,2245119,28
+2025-01-01,2025,1,Salud,Clínica Oriente,Material clínico,1758128,1762930,30
+2025-02-01,2025,2,Salud,Clínica Oriente,Material clínico,1394296,1490279,30
+2025-03-01,2025,3,Salud,Clínica Oriente,Material clínico,1840126,1738012,30
+2025-04-01,2025,4,Salud,Clínica Oriente,Material clínico,1861259,1759146,30
+2025-05-01,2025,5,Salud,Clínica Oriente,Material clínico,1790320,1762789,30
+2025-06-01,2025,6,Salud,Clínica Oriente,Material clínico,2084466,2010257,30
+2025-07-01,2025,7,Salud,Clínica Oriente,Material clínico,2120470,2028523,30
+2025-08-01,2025,8,Salud,Clínica Oriente,Material clínico,1853110,2007656,30
+2025-09-01,2025,9,Salud,Clínica Oriente,Material clínico,1655631,1741823,30
+2025-10-01,2025,10,Salud,Clínica Oriente,Material clínico,1853557,1732843,30
+2025-11-01,2025,11,Salud,Clínica Oriente,Material clínico,1951954,1770931,30
+2025-12-01,2025,12,Salud,Clínica Oriente,Material clínico,1760738,1764503,30
+2026-01-01,2026,1,Salud,Clínica Oriente,Material clínico,1673962,1875289,30
+2026-02-01,2026,2,Salud,Clínica Oriente,Material clínico,1745656,1579386,30
+2026-03-01,2026,3,Salud,Clínica Oriente,Material clínico,1743867,1840480,30
+2026-04-01,2026,4,Salud,Clínica Oriente,Material clínico,1903842,1880297,30
+2026-05-01,2026,5,Salud,Clínica Oriente,Material clínico,1970601,1863037,30
+2026-06-01,2026,6,Salud,Clínica Oriente,Material clínico,2407053,2279905,30
+2026-07-01,2026,7,Salud,Clínica Oriente,Material clínico,203471,2318552,30
+2026-08-01,2026,8,Salud,Clínica Oriente,Material clínico,271342,2300426,30
+2026-09-01,2026,9,Salud,Clínica Oriente,Material clínico,2075813,1856306,30
+2026-10-01,2026,10,Salud,Clínica Oriente,Material clínico,2101311,1849022,30
+2026-11-01,2026,11,Salud,Clínica Oriente,Material clínico,2030493,1872256,30
+2026-12-01,2026,12,Salud,Clínica Oriente,Material clínico,2092534,1836915,30
+2025-01-01,2025,1,Salud,Clínica Centro,Medicamentos,1786241,1699971,28
+2025-02-01,2025,2,Salud,Clínica Centro,Medicamentos,1342244,1429806,28
+2025-03-01,2025,3,Salud,Clínica Centro,Medicamentos,1388872,1654287,28
+2025-04-01,2025,4,Salud,Clínica Centro,Medicamentos,1699147,1693034,28
+2025-05-01,2025,5,Salud,Clínica Centro,Medicamentos,1552306,1699712,28
+2025-06-01,2025,6,Salud,Clínica Centro,Medicamentos,1861698,1969471,28
+2025-07-01,2025,7,Salud,Clínica Centro,Medicamentos,2098738,2002959,28
+2025-08-01,2025,8,Salud,Clínica Centro,Medicamentos,1860021,1964703,28
+2025-09-01,2025,9,Salud,Clínica Centro,Medicamentos,1545425,1661275,28
+2025-10-01,2025,10,Salud,Clínica Centro,Medicamentos,1487436,1644812,28
+2025-11-01,2025,11,Salud,Clínica Centro,Medicamentos,1630381,1714640,28
+2025-12-01,2025,12,Salud,Clínica Centro,Medicamentos,1653654,1702855,28
+2026-01-01,2026,1,Salud,Clínica Centro,Medicamentos,1525688,1829281,28
+2026-02-01,2026,2,Salud,Clínica Centro,Medicamentos,1315207,1528104,28
+2026-03-01,2026,3,Salud,Clínica Centro,Medicamentos,1409002,1765464,28
+2026-04-01,2026,4,Salud,Clínica Centro,Medicamentos,1591373,1838461,28
+2026-05-01,2026,5,Salud,Clínica Centro,Medicamentos,1552493,1806818,28
+2026-06-01,2026,6,Salud,Clínica Centro,Medicamentos,207871,2378026,28
+2026-07-01,2026,7,Salud,Clínica Centro,Medicamentos,2231513,2448878,28
+2026-08-01,2026,8,Salud,Clínica Centro,Medicamentos,2266279,2415647,28
+2026-09-01,2026,9,Salud,Clínica Centro,Medicamentos,1897800,1794478,28
+2026-10-01,2026,10,Salud,Clínica Centro,Medicamentos,1545557,1781123,28
+2026-11-01,2026,11,Salud,Clínica Centro,Medicamentos,1647445,1823718,28
+2026-12-01,2026,12,Salud,Clínica Centro,Medicamentos,1637280,1758928,28
+2025-01-01,2025,1,Salud,Clínica Centro,Material clínico,1219112,1390885,30
+2025-02-01,2025,2,Salud,Clínica Centro,Material clínico,1007908,1169841,30
+2025-03-01,2025,3,Salud,Clínica Centro,Material clínico,1243055,1353507,30
+2025-04-01,2025,4,Salud,Clínica Centro,Material clínico,1367493,1385209,30
+2025-05-01,2025,5,Salud,Clínica Centro,Material clínico,1326093,1390673,30
+2025-06-01,2025,6,Salud,Clínica Centro,Material clínico,1451209,1611385,30
+2025-07-01,2025,7,Salud,Clínica Centro,Material clínico,1610399,1638784,30
+2025-08-01,2025,8,Salud,Clínica Centro,Material clínico,1559085,1607485,30
+2025-09-01,2025,9,Salud,Clínica Centro,Material clínico,1205018,1359224,30
+2025-10-01,2025,10,Salud,Clínica Centro,Material clínico,1288567,1345755,30
+2025-11-01,2025,11,Salud,Clínica Centro,Material clínico,1319517,1402887,30
+2025-12-01,2025,12,Salud,Clínica Centro,Material clínico,1398625,1393245,30
+2026-01-01,2026,1,Salud,Clínica Centro,Material clínico,1321980,1496684,30
+2026-02-01,2026,2,Salud,Clínica Centro,Material clínico,1353884,1250267,30
+2026-03-01,2026,3,Salud,Clínica Centro,Material clínico,1337461,1444470,30
+2026-04-01,2026,4,Salud,Clínica Centro,Material clínico,1314429,1504196,30
+2026-05-01,2026,5,Salud,Clínica Centro,Material clínico,1451436,1478306,30
+2026-06-01,2026,6,Salud,Clínica Centro,Material clínico,1971369,1945657,30
+2026-07-01,2026,7,Salud,Clínica Centro,Material clínico,2130661,2003627,30
+2026-08-01,2026,8,Salud,Clínica Centro,Material clínico,202785,1976439,30
+2026-09-01,2026,9,Salud,Clínica Centro,Material clínico,1300069,1468210,30
+2026-10-01,2026,10,Salud,Clínica Centro,Material clínico,1372869,1457283,30
+2026-11-01,2026,11,Salud,Clínica Centro,Material clínico,1678993,1492133,30
+2026-12-01,2026,12,Salud,Clínica Centro,Material clínico,1594439,1439123,30
+2025-01-01,2025,1,Salud,Clínica Poniente,Medicamentos,1066276,1026233,28
+2025-02-01,2025,2,Salud,Clínica Poniente,Medicamentos,689909,846879,28
+2025-03-01,2025,3,Salud,Clínica Poniente,Medicamentos,891116,950093,28
+2025-04-01,2025,4,Salud,Clínica Poniente,Medicamentos,852245,1014672,28
+2025-05-01,2025,5,Salud,Clínica Poniente,Medicamentos,1028795,1025802,28
+2025-06-01,2025,6,Salud,Clínica Poniente,Medicamentos,1006171,1258451,28
+2025-07-01,2025,7,Salud,Clínica Poniente,Medicamentos,1165136,1314265,28
+2025-08-01,2025,8,Salud,Clínica Poniente,Medicamentos,1111041,1250506,28
+2025-09-01,2025,9,Salud,Clínica Poniente,Medicamentos,932790,961739,28
+2025-10-01,2025,10,Salud,Clínica Poniente,Medicamentos,840383,934302,28
+2025-11-01,2025,11,Salud,Clínica Poniente,Medicamentos,936694,1050682,28
+2025-12-01,2025,12,Salud,Clínica Poniente,Medicamentos,892499,1031039,28
+2026-01-01,2026,1,Salud,Clínica Poniente,Medicamentos,1152405,1151301,28
+2026-02-01,2026,2,Salud,Clínica Poniente,Medicamentos,871903,933964,28
+2026-03-01,2026,3,Salud,Clínica Poniente,Medicamentos,901195,1044940,28
+2026-04-01,2026,4,Salud,Clínica Poniente,Medicamentos,1090970,1166602,28
+2026-05-01,2026,5,Salud,Clínica Poniente,Medicamentos,963348,1113864,28
+2026-06-01,2026,6,Salud,Clínica Poniente,Medicamentos,1895409,1838176,28
+2026-07-01,2026,7,Salud,Clínica Poniente,Medicamentos,189376,1956263,28
+2026-08-01,2026,8,Salud,Clínica Poniente,Medicamentos,2034230,1900879,28
+2026-09-01,2026,9,Salud,Clínica Poniente,Medicamentos,928085,1093297,28
+2026-10-01,2026,10,Salud,Clínica Poniente,Medicamentos,1112781,1071039,28
+2026-11-01,2026,11,Salud,Clínica Poniente,Medicamentos,1122385,1142031,28
+2026-12-01,2026,12,Salud,Clínica Poniente,Medicamentos,1003295,1034047,28
+2025-01-01,2025,1,Salud,Clínica Poniente,Material clínico,792985,839646,30
+2025-02-01,2025,2,Salud,Clínica Poniente,Material clínico,795148,692901,30
+2025-03-01,2025,3,Salud,Clínica Poniente,Material clínico,858411,777349,30
+2025-04-01,2025,4,Salud,Clínica Poniente,Material clínico,793867,830186,30
+2025-05-01,2025,5,Salud,Clínica Poniente,Material clínico,816700,839293,30
+2025-06-01,2025,6,Salud,Clínica Poniente,Material clínico,1006163,1029642,30
+2025-07-01,2025,7,Salud,Clínica Poniente,Material clínico,916872,1075308,30
+2025-08-01,2025,8,Salud,Clínica Poniente,Material clínico,1174303,1023141,30
+2025-09-01,2025,9,Salud,Clínica Poniente,Material clínico,869790,786878,30
+2025-10-01,2025,10,Salud,Clínica Poniente,Material clínico,671027,764429,30
+2025-11-01,2025,11,Salud,Clínica Poniente,Material clínico,977064,859649,30
+2025-12-01,2025,12,Salud,Clínica Poniente,Material clínico,879901,843578,30
+2026-01-01,2026,1,Salud,Clínica Poniente,Material clínico,839581,941974,30
+2026-02-01,2026,2,Salud,Clínica Poniente,Material clínico,763361,764153,30
+2026-03-01,2026,3,Salud,Clínica Poniente,Material clínico,765138,854950,30
+2026-04-01,2026,4,Salud,Clínica Poniente,Material clínico,874472,954493,30
+2026-05-01,2026,5,Salud,Clínica Poniente,Material clínico,917538,911343,30
+2026-06-01,2026,6,Salud,Clínica Poniente,Material clínico,127040,1503962,30
+2026-07-01,2026,7,Salud,Clínica Poniente,Material clínico,198177,1600579,30
+2026-08-01,2026,8,Salud,Clínica Poniente,Material clínico,194127,1555265,30
+2026-09-01,2026,9,Salud,Clínica Poniente,Material clínico,816065,894516,30
+2026-10-01,2026,10,Salud,Clínica Poniente,Material clínico,954605,876305,30
+2026-11-01,2026,11,Salud,Clínica Poniente,Material clínico,859195,934389,30
+2026-12-01,2026,12,Salud,Clínica Poniente,Material clínico,812447,846039,30

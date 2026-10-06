@@ -1,0 +1,277 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "c243284784588bf77c1c",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 1000,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "proveedores"
+                    }
+                  },
+                  "Property": "categoria"
+                }
+              },
+              "queryRef": "proveedores.categoria",
+              "nativeQueryRef": "categoria",
+              "active": true,
+              "displayName": "Categoría"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "proveedores"
+                    }
+                  },
+                  "Property": "proveedor"
+                }
+              },
+              "queryRef": "proveedores.proveedor",
+              "nativeQueryRef": "proveedor",
+              "active": true,
+              "displayName": "Proveedor"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "Compras"
+                }
+              },
+              "queryRef": "facturas_compra.Compras",
+              "nativeQueryRef": "Compras"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "Cuentas por pagar"
+                }
+              },
+              "queryRef": "facturas_compra.Cuentas por pagar",
+              "nativeQueryRef": "Cuentas por pagar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "DPO"
+                }
+              },
+              "queryRef": "facturas_compra.DPO",
+              "nativeQueryRef": "DPO"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "Atraso promedio de pago"
+                }
+              },
+              "queryRef": "facturas_compra.Atraso promedio de pago",
+              "nativeQueryRef": "Atraso promedio de pago"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "Facturas pagadas con atraso"
+                }
+              },
+              "queryRef": "facturas_compra.Facturas pagadas con atraso",
+              "nativeQueryRef": "Facturas pagadas con atraso"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "facturas_compra"
+                    }
+                  },
+                  "Property": "Facturas pagadas antes de plazo"
+                }
+              },
+              "queryRef": "facturas_compra.Facturas pagadas antes de plazo",
+              "nativeQueryRef": "Facturas pagadas antes de plazo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por categoría y proveedor'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

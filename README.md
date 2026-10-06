@@ -85,6 +85,9 @@ python data/generar_compensaciones.py
 # Datos sintéticos del reporte de pricing y márgenes (cuadra con los ingresos del reporte #1)
 python data/generar_pricing.py
 
+# Datos sintéticos del reporte de capital de trabajo (cuadra con ingresos y costos del reporte #1)
+python data/generar_capital_de_trabajo.py
+
 # Libro diario y EEFF de las tres empresas (cuadra con el Real del reporte #1)
 python data/generar_estados_financieros.py
 
@@ -134,6 +137,12 @@ el control de gestión a la cartera de TI desde el historial de un Jira ágil: v
 previsibilidad por sprint, tiempo de ciclo por percentil, carga de los equipos, horas bloqueadas
 por dependencias entre equipos y fecha de término pronosticada con Monte Carlo. Guía en
 [`reportes/proyectos-ti/guia.md`](reportes/proyectos-ti/guia.md).
+
+El reporte #5, **Capital de trabajo y ciclo de caja** ([`powerbi/capital-de-trabajo/`](powerbi/capital-de-trabajo/)),
+muestra cuándo llega a la caja el resultado del #1: facturas de venta y compra que cuadran al peso,
+DSO, DIO, DPO y ciclo de conversión de caja a una fecha de corte, antigüedad de cartera, Pareto de
+deudores y un flujo de caja a 13 semanas con saldo mínimo ajustable. Guía en
+[`reportes/capital-de-trabajo/guia.md`](reportes/capital-de-trabajo/guia.md).
 
 El reporte #6, **Equidad salarial y bandas** ([`powerbi/compensaciones/`](powerbi/compensaciones/)),
 toma las mismas personas del reporte Workforce y mide bandas, compa-ratio, equidad interna por

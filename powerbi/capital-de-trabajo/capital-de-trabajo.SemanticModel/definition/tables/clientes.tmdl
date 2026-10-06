@@ -1,0 +1,64 @@
+/// Dimensión: los clientes del reporte de pricing, con la condición de pago de su canal y su perfil de pago.
+table clientes
+	lineageTag: bce35567-1363-5009-b6a3-a15c00e8aa51
+
+	column cliente
+		dataType: string
+		lineageTag: aad2cbe6-f8e9-5523-b1ad-1c4524abbbe4
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: 3ea03b3f-e907-5aa7-8a85-d7f2be9a1b49
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column segmento
+		dataType: string
+		lineageTag: c86c8542-2fd0-506a-b4f4-bc4cc3578d18
+		summarizeBy: none
+		sourceColumn: segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicion_dias
+		dataType: int64
+		formatString: 0
+		lineageTag: 85932349-beb0-5143-bf90-aac3d853b1a8
+		summarizeBy: none
+		sourceColumn: condicion_dias
+
+		annotation SummarizationSetBy = Automatic
+
+	column limite_credito
+		dataType: int64
+		formatString: \$ #,##0
+		lineageTag: 10f14817-7ad5-5ea1-a299-33285cddb53b
+		summarizeBy: none
+		sourceColumn: limite_credito
+
+		annotation SummarizationSetBy = Automatic
+
+	column perfil_pago
+		dataType: string
+		lineageTag: cf3af0db-d359-5f81-b4e1-bb1428ca05d5
+		summarizeBy: none
+		sourceColumn: perfil_pago
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clientes = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("clientes.csv", {{"cliente", type text}, {"industria", type text}, {"segmento", type text}, {"condicion_dias", Int64.Type}, {"limite_credito", Int64.Type}, {"perfil_pago", type text}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

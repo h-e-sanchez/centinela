@@ -1,0 +1,32 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","facturas_venta","facturas_compra","inventario_mensual","caja_semanal","clientes","proveedores","sucursales","empresas","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table facturas_venta
+ref table facturas_compra
+ref table inventario_mensual
+ref table caja_semanal
+ref table clientes
+ref table proveedores
+ref table sucursales
+ref table empresas
+ref table 'Fechas de corte'
+ref table 'Tramos de antigüedad'
+ref table 'Escalones del ciclo'
+ref table 'Saldo mínimo'
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

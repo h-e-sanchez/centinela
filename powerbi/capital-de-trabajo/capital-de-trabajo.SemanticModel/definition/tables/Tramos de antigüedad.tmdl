@@ -1,0 +1,30 @@
+/// Tramos de antigüedad de la cartera, en días desde el vencimiento.
+table 'Tramos de antigüedad'
+	lineageTag: 59c6cb71-699f-5a09-932d-54b752e12389
+
+	column Orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0c668436-25d6-52c2-8c47-2b3e2e5558c2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Orden]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tramo
+		dataType: string
+		lineageTag: 0377f17c-6f73-55eb-bae2-553633f985f7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tramo]
+		sortByColumn: Orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Tramos de antigüedad' = calculated
+		mode: import
+		source = DATATABLE("Orden", INTEGER, "Tramo", STRING, {{1, "Al día"}, {2, "1-30 días"}, {3, "31-60 días"}, {4, "61-90 días"}, {5, "Más de 90 días"}})
+
+	annotation PBI_ResultType = Table

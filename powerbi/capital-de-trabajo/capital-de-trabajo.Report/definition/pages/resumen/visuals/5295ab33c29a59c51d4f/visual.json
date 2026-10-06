@@ -1,0 +1,111 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "5295ab33c29a59c51d4f",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 1000,
+    "height": 240,
+    "width": 1232,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Tres hallazgos",
+                    "textStyle": {
+                      "fontSize": "12pt",
+                      "color": "#23211C",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Salud: Fonasa y las isapres pagan después de 90 días. El ciclo es el más largo de las tres empresas y la caja cae bajo el mínimo entre abril y noviembre de 2026, con la compra de equipos y el invierno.",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "color": "#6a6357"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Manufactura: el año flojo de 2025 deja sobrestock de producto terminado en Antofagasta, que cierra 2025 con unos 25 días más de inventario que Santiago y Concepción; 2026 lo liquida.",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "color": "#6a6357"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Energía: cobra a menos de 30 días y paga combustibles y mantención a 60. El ciclo es negativo: los proveedores financian la operación.",
+                    "textStyle": {
+                      "fontSize": "10pt",
+                      "color": "#6a6357"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

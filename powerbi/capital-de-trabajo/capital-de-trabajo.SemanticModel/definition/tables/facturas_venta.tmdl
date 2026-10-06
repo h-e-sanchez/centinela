@@ -1,0 +1,326 @@
+/// Facturas de venta 2025-2026 más la cartera de apertura de 2024. Cuadran con los ingresos Real del reporte #1.
+table facturas_venta
+	lineageTag: db281d67-2a96-56c6-a08a-663fa68a7ba6
+
+	/// Fecha a la que se miden saldos y antigüedad: el último día del periodo filtrado o el corte elegido, si es anterior.
+	measure 'Fecha de corte' = MIN(MAX(Calendario[Date]), SELECTEDVALUE('Fechas de corte'[Corte], DATE(2026, 12, 31)))
+		formatString: dd-mm-yyyy
+		displayFolder: 0. Corte
+		lineageTag: 90046bce-f554-56fd-b664-8cc34497440b
+
+	/// Primer día de los tres meses que terminan en la fecha de corte: la ventana de DSO, DPO y DIO.
+	measure 'Inicio de la ventana' =
+			VAR c = [Fecha de corte]
+			RETURN DATE(YEAR(EDATE(c, -2)), MONTH(EDATE(c, -2)), 1)
+		formatString: dd-mm-yyyy
+		isHidden
+		displayFolder: 0. Corte
+		lineageTag: 622e64b3-cab0-5b0d-927a-db1a8501ca98
+
+	/// Días de la ventana de tres meses.
+	measure 'Días de la ventana' = INT([Fecha de corte] - [Inicio de la ventana]) + 1
+		formatString: 0
+		isHidden
+		displayFolder: 0. Corte
+		lineageTag: a400433e-3919-5780-9c52-dd2e71e225f5
+
+	/// Facturas de venta emitidas en el periodo: cuadran con los ingresos Real del reporte Presupuesto vs. Real.
+	measure Ventas = CALCULATE(SUM(facturas_venta[monto]), KEEPFILTERS(facturas_venta[emision] >= DATE(2025, 1, 1)))
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: ce09f06c-c44c-508e-b9cc-aeb956b50b37
+
+	/// Ventas de los tres meses que terminan en la fecha de corte.
+	measure 'Ventas de la ventana' =
+			VAR c = [Fecha de corte]
+			VAR i = [Inicio de la ventana]
+			RETURN
+			    CALCULATE(
+			        SUM(facturas_venta[monto]),
+			        REMOVEFILTERS(Calendario),
+			        facturas_venta[emision] >= i,
+			        facturas_venta[emision] <= c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: cfbff637-5024-586f-90ae-cd5a43c03687
+
+	/// Facturas de venta emitidas hasta la fecha de corte y no pagadas a esa fecha.
+	measure 'Cuentas por cobrar' =
+			VAR c = [Fecha de corte]
+			RETURN
+			    CALCULATE(
+			        SUM(facturas_venta[monto]),
+			        REMOVEFILTERS(Calendario),
+			        facturas_venta[emision] <= c,
+			    ISBLANK(facturas_venta[pago]) || facturas_venta[pago] > c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: 6257b810-e6a6-5a39-b73e-8db6c1e1d77b
+
+	/// Días de venta pendientes de cobro: cuentas por cobrar sobre las ventas de la ventana, por sus días.
+	measure DSO = DIVIDE([Cuentas por cobrar], [Ventas de la ventana]) * [Días de la ventana]
+		formatString: 0
+		displayFolder: 1. Cobranza
+		lineageTag: 9a079ad9-1c42-5821-a815-3f9cff591d83
+
+	/// Cuentas por cobrar con el vencimiento ya pasado a la fecha de corte.
+	measure 'Cartera vencida' =
+			VAR c = [Fecha de corte]
+			RETURN
+			    CALCULATE(
+			        SUM(facturas_venta[monto]),
+			        REMOVEFILTERS(Calendario),
+			        facturas_venta[emision] <= c,
+			    ISBLANK(facturas_venta[pago]) || facturas_venta[pago] > c,
+			        facturas_venta[vencimiento] < c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: 7109b427-01d5-5349-8c60-3c6e028c0675
+
+	/// Parte de las cuentas por cobrar que ya venció.
+	measure '% vencido' = DIVIDE([Cartera vencida], [Cuentas por cobrar])
+		formatString: 0.0%
+		displayFolder: 1. Cobranza
+		lineageTag: 79e4c61d-83aa-53d2-b3c9-eca5a94de85a
+
+	/// Cuentas por cobrar del tramo de antigüedad: días desde el vencimiento a la fecha de corte.
+	measure 'Cartera por tramo' =
+			VAR c = [Fecha de corte]
+			VAR tramo = SELECTEDVALUE('Tramos de antigüedad'[Orden])
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            facturas_venta,
+			            VAR d = INT(c - facturas_venta[vencimiento])
+			            RETURN
+			                IF(
+			                    SWITCH(tramo, 1, d <= 0, 2, d >= 1 && d <= 30, 3, d >= 31 && d <= 60, 4, d >= 61 && d <= 90, 5, d > 90, TRUE()),
+			                    facturas_venta[monto]
+			                )
+			        ),
+			        REMOVEFILTERS(Calendario),
+			        facturas_venta[emision] <= c,
+			    ISBLANK(facturas_venta[pago]) || facturas_venta[pago] > c
+			    )
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: 51766b0a-353b-56d3-9643-e0c38b0e04f6
+
+	/// Peso del tramo en las cuentas por cobrar.
+	measure '% de la cartera' = DIVIDE([Cartera por tramo], [Cuentas por cobrar])
+		formatString: 0.0%
+		displayFolder: 1. Cobranza
+		lineageTag: f9f7862a-2bd5-5d99-be61-4cd2647f07bd
+
+	/// Facturas de venta pagadas en el periodo (por fecha de pago).
+	measure Cobrado = CALCULATE(SUM(facturas_venta[monto]), USERELATIONSHIP(facturas_venta[pago], Calendario[Date]))
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: 8596304a-1eb5-560a-91a5-e4f305241b8c
+
+	/// Facturas de venta que vencían en el periodo (por fecha de vencimiento).
+	measure 'Vencimientos de clientes' = CALCULATE(SUM(facturas_venta[monto]), USERELATIONSHIP(facturas_venta[vencimiento], Calendario[Date]))
+		formatString: \$ #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: b109a4af-2ce5-5b1f-a5db-d4179d0a9687
+
+	/// Cobrado sobre lo que vencía en el periodo.
+	measure 'Cumplimiento de cobranza' = DIVIDE([Cobrado], [Vencimientos de clientes])
+		formatString: 0%
+		displayFolder: 1. Cobranza
+		lineageTag: ebf65077-2b1b-5b92-9845-dbeacd110275
+
+	/// Pareto de deudores: cartera vencida acumulada desde el cliente que más debe hasta este, sobre el total.
+	measure 'Cartera vencida acumulada %' =
+			VAR propio = [Cartera vencida]
+			VAR total = CALCULATE([Cartera vencida], ALLSELECTED(clientes[cliente]))
+			RETURN
+			    IF(
+			        propio > 0,
+			        DIVIDE(SUMX(FILTER(ALLSELECTED(clientes[cliente]), [Cartera vencida] >= propio), [Cartera vencida]), total)
+			    )
+		formatString: 0%
+		displayFolder: 1. Cobranza
+		lineageTag: fa4161dd-4f6e-5c18-aa36-9edc05740367
+
+	/// Clientes con al menos una factura vencida a la fecha de corte.
+	measure 'Clientes con cartera vencida' = COUNTROWS(FILTER(VALUES(clientes[cliente]), [Cartera vencida] > 0))
+		formatString: #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: 72b3e6d9-2a1b-53e0-8480-b1397eb42643
+
+	/// Clientes cuyas cuentas por cobrar superan su límite de crédito.
+	measure 'Clientes sobre su límite' =
+			COUNTROWS(
+			    FILTER(VALUES(clientes[cliente]), [Cuentas por cobrar] > CALCULATE(MAX(clientes[limite_credito])))
+			)
+		formatString: #,##0
+		displayFolder: 1. Cobranza
+		lineageTag: fc8c19f4-bb65-51dd-a8ec-89eeb2ccab14
+
+	/// Días entre pagarle al proveedor y cobrarle al cliente: DSO + DIO − DPO.
+	measure 'Ciclo de conversión de caja' = [DSO] + [DIO] - [DPO]
+		formatString: 0
+		displayFolder: 4. Ciclo de caja
+		lineageTag: d258555d-f02d-545d-a3a3-2aa8026e1460
+
+	/// Cuentas por cobrar más inventario menos cuentas por pagar, a la fecha de corte.
+	measure 'Capital de trabajo neto' = [Cuentas por cobrar] + [Inventario al corte] - [Cuentas por pagar]
+		formatString: \$ #,##0
+		displayFolder: 4. Ciclo de caja
+		lineageTag: 561568a9-90dd-586d-b113-2971b9c7b51a
+
+	/// Cada escalón de la cascada del ciclo; el total es el ciclo de conversión de caja.
+	measure 'Días del ciclo' =
+			SWITCH(
+			    SELECTEDVALUE('Escalones del ciclo'[Componente]),
+			    "DSO", [DSO],
+			    "DIO", [DIO],
+			    "DPO", -[DPO]
+			)
+		formatString: 0
+		displayFolder: 4. Ciclo de caja
+		lineageTag: 4dfae7a1-9292-5719-a625-f781ac21c16a
+
+	/// Ciclo de conversión de caja para la tarjeta.
+	measure 'Portada ciclo' = FORMAT([Ciclo de conversión de caja], "0") & " días"
+		displayFolder: 0. Portada
+		lineageTag: 09d3d994-8a98-5389-8123-ded6bf533753
+
+	/// DSO para la tarjeta.
+	measure 'Portada DSO' = FORMAT([DSO], "0") & " días"
+		displayFolder: 0. Portada
+		lineageTag: 399e356b-3612-58f5-9510-57107ff3a368
+
+	/// Capital de trabajo neto abreviado.
+	measure 'Portada capital' =
+			VAR v = [Capital de trabajo neto]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        ISBLANK(v), BLANK(),
+			        ABS(v) >= 1000000000, FORMAT(v / 1000000000, "$ #,0.0") & " mil M",
+			        ABS(v) >= 1000000, FORMAT(v / 1000000, "$ #,0.0") & " M",
+			        FORMAT(v, "$ #,0")
+			    )
+		displayFolder: 0. Portada
+		lineageTag: e8878d74-393f-588b-98de-d17d8f414b4e
+
+	/// Primera frase: DSO, DPO y lo que significa el ciclo.
+	measure 'Portada frase 1' =
+			VAR ciclo = [Ciclo de conversión de caja]
+			RETURN
+			    "Cobra a " & FORMAT([DSO], "0") & " días y paga a " & FORMAT([DPO], "0") & ": "
+			        & IF(ciclo < 0, "los proveedores financian la operación", "la caja espera " & FORMAT(ciclo, "0") & " días")
+		displayFolder: 0. Portada
+		lineageTag: f2ed053a-cc94-5b10-8ed8-5dc1909fb989
+
+	/// Segunda frase: cómo termina la proyección de caja a 13 semanas.
+	measure 'Portada frase 2' =
+			VAR semanas = CALCULATE([Semanas bajo el mínimo], caja_semanal[tipo] = "Proyectado")
+			VAR saldo = [Saldo en 13 semanas]
+			RETURN
+			    "Próximas 13 semanas: "
+			        & IF(semanas > 0, FORMAT(semanas, "0") & " bajo el saldo mínimo",
+			             "saldo proyectado de " & FORMAT(saldo / 1000000, "$ #,0") & " M")
+		displayFolder: 0. Portada
+		lineageTag: eaf89e57-bcd5-567a-b34e-236cc45fdde1
+
+	column factura
+		dataType: string
+		lineageTag: fa76a80d-31ec-5b71-b720-df5dbcd67fae
+		summarizeBy: none
+		sourceColumn: factura
+
+		annotation SummarizationSetBy = Automatic
+
+	column industria
+		dataType: string
+		isHidden
+		lineageTag: a267231b-a752-55c7-8f97-347294e4fa98
+		summarizeBy: none
+		sourceColumn: industria
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 7153cf16-8848-5fdf-b119-080b61e813cb
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cliente
+		dataType: string
+		isHidden
+		lineageTag: e34c9251-ac9a-5744-ade4-f28ca8723055
+		summarizeBy: none
+		sourceColumn: cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column cuenta
+		dataType: string
+		lineageTag: dca9bbb8-b91f-5714-b00f-341942e2d1ee
+		summarizeBy: none
+		sourceColumn: cuenta
+
+		annotation SummarizationSetBy = Automatic
+
+	column emision
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 49a3fbe8-5991-5b70-8de5-3406b99e37d0
+		summarizeBy: none
+		sourceColumn: emision
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vencimiento
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 7426cd34-ef3b-5101-9464-fd63a6ed4dba
+		summarizeBy: none
+		sourceColumn: vencimiento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pago
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: f16795be-818c-5d46-84a2-25e3de67a9c9
+		summarizeBy: none
+		sourceColumn: pago
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column monto
+		dataType: int64
+		isHidden
+		formatString: \$ #,##0
+		lineageTag: 2fbc80b1-1341-5983-b593-6ce1d9804df2
+		summarizeBy: none
+		sourceColumn: monto
+
+		annotation SummarizationSetBy = Automatic
+
+	partition facturas_venta = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("facturas_venta.csv", {{"factura", type text}, {"industria", type text}, {"sucursal", type text}, {"cliente", type text}, {"cuenta", type text}, {"emision", type date}, {"vencimiento", type date}, {"pago", type date}, {"monto", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

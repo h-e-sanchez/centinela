@@ -1,0 +1,59 @@
+relationship 3c1526c7-02cf-53df-acfd-b04c7184105b
+	fromColumn: sucursales.industria
+	toColumn: empresas.industria
+
+relationship b9a2b2e3-3f12-57c8-93c5-967ab06e99e3
+	fromColumn: facturas_venta.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 67883d44-371e-5933-b5cf-23c2de78ec07
+	fromColumn: facturas_venta.cliente
+	toColumn: clientes.cliente
+
+relationship c5bc51a7-e5b1-5b76-86d2-0fdab7f5b094
+	fromColumn: facturas_venta.emision
+	toColumn: Calendario.Date
+
+relationship 61d7acc2-7b71-52f7-a5f8-83fab9e75cf2
+	isActive: false
+	fromColumn: facturas_venta.vencimiento
+	toColumn: Calendario.Date
+
+relationship 8bab1937-dd43-5f4a-af1d-00b45ab89c8d
+	isActive: false
+	fromColumn: facturas_venta.pago
+	toColumn: Calendario.Date
+
+relationship 6b0aa60a-2a12-5406-8151-9af2f5b7e5f6
+	fromColumn: facturas_compra.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 1c4a2b8b-abcd-53c1-8c48-2f9a19e0fae2
+	fromColumn: facturas_compra.proveedor
+	toColumn: proveedores.proveedor
+
+relationship 93b92029-1e4e-5617-a0e4-8da479106a8d
+	fromColumn: facturas_compra.emision
+	toColumn: Calendario.Date
+
+relationship ea364090-e8aa-551f-9417-9943d2535a18
+	isActive: false
+	fromColumn: facturas_compra.vencimiento
+	toColumn: Calendario.Date
+
+relationship 09397889-24d6-5f1a-b27d-6396d90f2b60
+	isActive: false
+	fromColumn: facturas_compra.pago
+	toColumn: Calendario.Date
+
+relationship 913a4fec-c709-507b-ba94-01b6893917bb
+	fromColumn: inventario_mensual.sucursal
+	toColumn: sucursales.sucursal
+
+relationship f003313f-81d8-5793-8dd5-e30288cd158b
+	fromColumn: inventario_mensual.fecha
+	toColumn: Calendario.Date
+
+relationship 6f5e68d7-f0be-5f16-bea0-2ca5720bceca
+	fromColumn: caja_semanal.industria
+	toColumn: empresas.industria

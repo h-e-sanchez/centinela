@@ -1,0 +1,66 @@
+/// Glosario del reporte: conceptos explicados y todas las medidas DAX con su fórmula.
+/// Lo genera herramientas/generar_glosario.py en reportes/<slug>/glosario.csv.
+table glosario
+	lineageTag: bf6eed7d-c383-5fbf-8916-7375a9dc7f32
+
+	column N°
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fb0ff71-79c1-511b-bbf5-2e53091e8feb
+		summarizeBy: none
+		sourceColumn: n
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo
+		dataType: string
+		lineageTag: 8d12c7e7-81b5-5e97-9dfc-69c87d1206f7
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sección
+		dataType: string
+		lineageTag: 703cc066-ad26-5f5f-93f4-6b4a470188d8
+		summarizeBy: none
+		sourceColumn: seccion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Término
+		dataType: string
+		lineageTag: 5e924af7-2366-574d-83e3-35417a8b104a
+		summarizeBy: none
+		sourceColumn: termino
+
+		annotation SummarizationSetBy = Automatic
+
+	column Explicación
+		dataType: string
+		lineageTag: e6ead190-6b44-568f-a233-6964c7918f0f
+		summarizeBy: none
+		sourceColumn: explicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fórmula DAX'
+		dataType: string
+		lineageTag: 4bb749a1-b3a6-571d-86f5-a6cc9f9f1edf
+		summarizeBy: none
+		sourceColumn: formula
+
+		annotation SummarizationSetBy = Automatic
+
+	partition glosario = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(Web.Contents("https://raw.githubusercontent.com/h-e-sanchez/centinela/main/reportes/capital-de-trabajo/glosario.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),
+				    Tipos = Table.TransformColumnTypes(Encabezados, {{"n", Int64.Type}, {"tipo", type text}, {"seccion", type text}, {"termino", type text}, {"explicacion", type text}, {"formula", type text}}, "en-US")
+				in
+				    Tipos
+
+	annotation PBI_ResultType = Table
+
