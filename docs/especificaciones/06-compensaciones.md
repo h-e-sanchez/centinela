@@ -3,7 +3,7 @@
 > Especificación previa a la construcción. Define datos, páginas y medidas del reporte para
 > que el generador, el modelo PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** construido el 2026-10-05 (pendiente Desktop y publicación) · **Slug:** `compensaciones` · **Tema:** People Analytics · Compensaciones
+**Estado:** construido el 2026-10-05 y publicado el 2026-10-06 (la versión web va sin roles) · **Slug:** `compensaciones` · **Tema:** People Analytics · Compensaciones
 
 ## Qué resuelve
 

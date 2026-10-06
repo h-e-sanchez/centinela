@@ -159,7 +159,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [x] Reporte #5: abierto en Desktop y publicado en la web (falta `.pbix` exportado, manual)
 - [x] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 9 páginas con RLS por servicio, guía, glosario y descargas (catálogo «en preparación»)
-- [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
+- [x] Reporte #6: abierto en Desktop y publicado en la web, en una copia sin roles: Power BI no publica en la web un modelo con RLS (faltan probar los roles con «Ver como» y exportar el `.pbix`, manual)
 - [x] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 9 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #8 · Del libro diario a los EEFF: especificación, libro diario en partida doble cuadrado con el #1, PBIP de 10 páginas, guía, glosario y descargas (catálogo «en preparación»; sin consolidación)
