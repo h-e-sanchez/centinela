@@ -157,7 +157,7 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [x] Reporte #4 · Proyectos tecnológicos: generador y tests, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #4: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #5 · Capital de trabajo y ciclo de caja: generador cuadrado con el #1, PBIP de 8 páginas, guía, glosario y descargas (catálogo «en preparación»)
-- [ ] Reporte #5: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [x] Reporte #5: abierto en Desktop y publicado en la web (falta `.pbix` exportado, manual)
 - [x] Reporte #6 · Equidad salarial y bandas: generador sobre las personas del #2, PBIP de 9 páginas con RLS por servicio, guía, glosario y descargas (catálogo «en preparación»)
 - [ ] Reporte #6: abierto en Desktop, roles probados con «Ver como», publicado y `.pbix` exportado (manual)
 - [x] Reporte #7 · Pricing y márgenes por canal: generador cuadrado con el #1, PBIP de 9 páginas, guía, glosario y descargas (catálogo «en preparación»)
