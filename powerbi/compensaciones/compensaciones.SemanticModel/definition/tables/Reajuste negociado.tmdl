@@ -24,6 +24,6 @@ table 'Reajuste negociado'
 
 	partition 'Reajuste negociado' = calculated
 		mode: import
-		source = GENERATESERIES(0, 0.1, 0.005)
+		source = SELECTCOLUMNS(GENERATESERIES(0, 20, 1), "Value", [Value] / 200)
 
 	annotation PBI_ResultType = Table
