@@ -13,7 +13,6 @@ table 'Cambio de precio'
 		formatString: 0%
 		lineageTag: f5d764cb-50e7-5d80-8266-50fab518056c
 		summarizeBy: none
-		isNameInferred
 		sourceColumn: [Value]
 
 		extendedProperty ParameterMetadata =
