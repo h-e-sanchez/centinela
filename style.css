@@ -120,6 +120,29 @@ tr.subtotal td { border-top: 2px solid var(--border-strong); background: var(--s
 .kpi:has(.dax:not([hidden])) { grid-column: 1 / -1; }
 #t-escenarios tr.seleccionada td { background: var(--accent-weak); font-weight: 600; }
 
+/* ------------------------------------------------------------------ portada: encabezado a dos columnas
+   Izquierda: etiqueta, nombre y titular corto. Derecha, separada por una regla: qué es, áreas y firma. */
+.site-header.portada {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--sp-4) var(--sp-8); align-items: end; padding-bottom: var(--sp-6);
+}
+.portada-marca h1 { font-size: 2.5rem; }
+.portada .titular { margin: var(--sp-3) 0 0; font-size: 1.9rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; max-width: 14ch; }
+.portada-detalle {
+  display: grid; gap: var(--sp-3); align-content: end;
+  padding: var(--sp-8) 0 0 var(--sp-6); border-left: 1px solid var(--border);
+}
+.portada .tagline { margin: 0; color: var(--text); font-size: 1.02rem; max-width: 60ch; }
+.areas { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.areas li { font-size: var(--fs-xs); color: var(--muted); background: var(--surface-2); border-radius: var(--r-chip); padding: 2px 8px; }
+.portada .firma { margin: 0; }
+@media (max-width: 760px) {
+  .site-header.portada { grid-template-columns: 1fr; gap: var(--sp-4); }
+  .portada-marca h1 { font-size: 2rem; }
+  .portada .titular { font-size: 1.45rem; max-width: none; }
+  .portada-detalle { padding: var(--sp-4) 0 0; border-left: 0; border-top: 1px solid var(--border); }
+}
+
 /* ------------------------------------------------------------------ vitrina (index, ficha)
    Cada reporte trae su color (--acento, desde vitrina.js). En Grafito ese color ya no pinta rieles
    ni bordes: queda como un punto junto a la etiqueta del reporte. */
