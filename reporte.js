@@ -254,6 +254,7 @@ async function iniciar() {
     iframe.allowFullscreen = true;
     iframe.loading = "lazy";
     $("#pbi-embed").replaceChildren(iframe);
+    window.analitica?.alVer(iframe, "reporte-cargado/presupuesto-vs-real");
   }
   const [datos, tmdl] = await Promise.all([
     fetch("data/escenarios-web.json").then((r) => r.json()),

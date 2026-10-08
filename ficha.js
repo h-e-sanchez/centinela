@@ -44,6 +44,7 @@ async function iniciar() {
   if (rep.embed_url) {
     const iframe = el("iframe", { title: `${rep.titulo} en Power BI`, src: rep.embed_url, loading: "lazy", allowfullscreen: "" });
     $("#f-embed").replaceChildren(iframe);
+    window.analitica?.alVer(iframe, `reporte-cargado/${rep.slug}`);
     $("#f-pantalla").href = rep.embed_url;
   } else {
     // En preparación: el modelo y los datos ya están en el repo; falta publicarlo desde Desktop.
