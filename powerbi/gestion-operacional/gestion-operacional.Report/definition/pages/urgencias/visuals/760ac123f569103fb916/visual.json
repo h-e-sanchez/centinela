@@ -1,0 +1,267 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "760ac123f569103fb916",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 600,
+    "height": 240,
+    "width": 700,
+    "tabOrder": 600
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "categoria"
+                }
+              },
+              "queryRef": "urgencia.categoria",
+              "nativeQueryRef": "categoria",
+              "active": true,
+              "displayName": "Categoría"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Atenciones de urgencia"
+                }
+              },
+              "queryRef": "urgencia.Atenciones de urgencia",
+              "nativeQueryRef": "Atenciones de urgencia",
+              "displayName": "Atenciones"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Meta de espera (min)"
+                }
+              },
+              "queryRef": "urgencia.Meta de espera (min)",
+              "nativeQueryRef": "Meta de espera (min)",
+              "displayName": "Meta (min)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Espera hasta la atención (min)"
+                }
+              },
+              "queryRef": "urgencia.Espera hasta la atención (min)",
+              "nativeQueryRef": "Espera hasta la atención (min)",
+              "displayName": "Espera (min)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Atenciones en meta de espera %"
+                }
+              },
+              "queryRef": "urgencia.Atenciones en meta de espera %",
+              "nativeQueryRef": "Atenciones en meta de espera %",
+              "displayName": "En meta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Abandono de urgencia %"
+                }
+              },
+              "queryRef": "urgencia.Abandono de urgencia %",
+              "nativeQueryRef": "Abandono de urgencia %",
+              "displayName": "Abandono"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "urgencia"
+                    }
+                  },
+                  "Property": "Hospitalización desde urgencia %"
+                }
+              },
+              "queryRef": "urgencia.Hospitalización desde urgencia %",
+              "nativeQueryRef": "Hospitalización desde urgencia %",
+              "displayName": "Hospitalización"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por categoría de triage'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

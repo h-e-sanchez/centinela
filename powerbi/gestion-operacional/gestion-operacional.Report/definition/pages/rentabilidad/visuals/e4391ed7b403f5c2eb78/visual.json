@@ -1,0 +1,280 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "e4391ed7b403f5c2eb78",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 800,
+    "height": 492,
+    "width": 760,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas"
+                    }
+                  },
+                  "Property": "area"
+                }
+              },
+              "queryRef": "lineas.area",
+              "nativeQueryRef": "area",
+              "active": true,
+              "displayName": "Área"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas"
+                    }
+                  },
+                  "Property": "linea"
+                }
+              },
+              "queryRef": "lineas.linea",
+              "nativeQueryRef": "linea",
+              "active": true,
+              "displayName": "Servicio"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Total de prestaciones"
+                }
+              },
+              "queryRef": "produccion.Total de prestaciones",
+              "nativeQueryRef": "Total de prestaciones",
+              "displayName": "Prestaciones"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Ingreso total"
+                }
+              },
+              "queryRef": "produccion.Ingreso total",
+              "nativeQueryRef": "Ingreso total",
+              "displayName": "Ingreso"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Ingreso por prestación"
+                }
+              },
+              "queryRef": "produccion.Ingreso por prestación",
+              "nativeQueryRef": "Ingreso por prestación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Costo directo por prestación"
+                }
+              },
+              "queryRef": "produccion.Costo directo por prestación",
+              "nativeQueryRef": "Costo directo por prestación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Margen de contribución"
+                }
+              },
+              "queryRef": "produccion.Margen de contribución",
+              "nativeQueryRef": "Margen de contribución"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "produccion"
+                    }
+                  },
+                  "Property": "Margen de contribución %"
+                }
+              },
+              "queryRef": "produccion.Margen de contribución %",
+              "nativeQueryRef": "Margen de contribución %",
+              "displayName": "Margen %"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por área y línea'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

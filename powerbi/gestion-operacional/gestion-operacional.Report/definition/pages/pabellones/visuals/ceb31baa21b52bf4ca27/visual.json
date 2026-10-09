@@ -1,0 +1,251 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "ceb31baa21b52bf4ca27",
+  "position": {
+    "x": 656,
+    "y": 216,
+    "z": 700,
+    "height": 240,
+    "width": 600,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "sucursales"
+                    }
+                  },
+                  "Property": "sucursal"
+                }
+              },
+              "queryRef": "sucursales.sucursal",
+              "nativeQueryRef": "sucursal",
+              "active": true,
+              "displayName": "Clínica"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Utilización de pabellón %"
+                }
+              },
+              "queryRef": "pabellones.Utilización de pabellón %",
+              "nativeQueryRef": "Utilización de pabellón %",
+              "displayName": "Utilización"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Suspensión de cirugías %"
+                }
+              },
+              "queryRef": "pabellones.Suspensión de cirugías %",
+              "nativeQueryRef": "Suspensión de cirugías %",
+              "displayName": "Suspensión"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "suspensiones"
+                    }
+                  },
+                  "Property": "Suspensiones evitables %"
+                }
+              },
+              "queryRef": "suspensiones.Suspensiones evitables %",
+              "nativeQueryRef": "Suspensiones evitables %",
+              "displayName": "Evitables"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Primera cirugía a la hora %"
+                }
+              },
+              "queryRef": "pabellones.Primera cirugía a la hora %",
+              "nativeQueryRef": "Primera cirugía a la hora %",
+              "displayName": "Primera a la hora"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Horas ociosas"
+                }
+              },
+              "queryRef": "pabellones.Horas ociosas",
+              "nativeQueryRef": "Horas ociosas"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por clínica'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

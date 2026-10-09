@@ -1,0 +1,134 @@
+/// Laboratorio e imagenología por clínica, origen del paciente y mes: exámenes y tiempo de respuesta (TAT).
+table apoyo
+	lineageTag: a41adfe9-cc7a-585f-83fe-0790c9f55c4c
+
+	/// Exámenes informados.
+	measure 'Total de exámenes' = SUM(apoyo[examenes])
+		formatString: #,##0
+		displayFolder: 5. Apoyo
+		lineageTag: 15ee7b89-e000-5356-8a61-b7eb985ed622
+
+	/// Exámenes informados dentro del tiempo de respuesta comprometido para su origen.
+	measure 'TAT en meta %' = DIVIDE(SUM(apoyo[examenes_en_meta]), [Total de exámenes])
+		formatString: 0.0%
+		displayFolder: 5. Apoyo
+		lineageTag: 2c03fe55-7a0d-5a62-bc56-bccd6d72b3fb
+
+	/// Minutos promedio desde la toma u orden hasta el informe.
+	measure 'TAT promedio (min)' = DIVIDE(SUM(apoyo[minutos_respuesta]), [Total de exámenes])
+		formatString: #,##0
+		displayFolder: 5. Apoyo
+		lineageTag: ecd54765-462c-5ba8-89a8-a243eff9cd8b
+
+	/// TAT en meta de los exámenes pedidos desde urgencia, donde el tiempo de respuesta frena el alta o la hospitalización.
+	measure 'Exámenes de urgencia en meta %' = CALCULATE([TAT en meta %], apoyo[origen] = "Urgencia")
+		formatString: 0.0%
+		displayFolder: 5. Apoyo
+		lineageTag: 2f600b5b-1531-51d8-b9a0-1d461e3d4a2a
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: fa25c887-9d6d-5563-a0ba-6a72ce66c14d
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dc2d7e53-01de-51dd-b44e-f0746c59f7d3
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 08864730-fda6-563e-addf-8ea0862bb952
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 8f6941b9-7204-5df3-ab13-f772df3936dd
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		lineageTag: fd633ff0-0d6c-55f8-9a81-07411010b5fb
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column origen
+		dataType: string
+		lineageTag: 6b390275-677a-5e6f-9d8b-25de01e7e651
+		summarizeBy: none
+		sourceColumn: origen
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_minutos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7adea03a-c3f5-5e1f-821e-2e28de03673b
+		summarizeBy: none
+		sourceColumn: meta_minutos
+
+		annotation SummarizationSetBy = Automatic
+
+	column examenes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fc6ff72d-4402-51db-9ae0-9adec2af757a
+		summarizeBy: none
+		sourceColumn: examenes
+
+		annotation SummarizationSetBy = Automatic
+
+	column examenes_en_meta
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b6b78fde-4587-5b7b-a007-0f489448c902
+		summarizeBy: none
+		sourceColumn: examenes_en_meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column minutos_respuesta
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a00b7725-5816-58f2-a177-e6434148f928
+		summarizeBy: none
+		sourceColumn: minutos_respuesta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition apoyo = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("apoyo.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"unidad", type text}, {"origen", type text}, {"meta_minutos", Int64.Type}, {"examenes", Int64.Type}, {"examenes_en_meta", Int64.Type}, {"minutos_respuesta", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

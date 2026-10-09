@@ -1,0 +1,249 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4a15f57fc9c2ee25a06c",
+  "position": {
+    "x": 24,
+    "y": 468,
+    "z": 800,
+    "height": 240,
+    "width": 616,
+    "tabOrder": 800
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "especialidad"
+                }
+              },
+              "queryRef": "pabellones.especialidad",
+              "nativeQueryRef": "especialidad",
+              "active": true,
+              "displayName": "Especialidad"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Horas habilitadas"
+                }
+              },
+              "queryRef": "pabellones.Horas habilitadas",
+              "nativeQueryRef": "Horas habilitadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Horas utilizadas"
+                }
+              },
+              "queryRef": "pabellones.Horas utilizadas",
+              "nativeQueryRef": "Horas utilizadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Utilización de pabellón %"
+                }
+              },
+              "queryRef": "pabellones.Utilización de pabellón %",
+              "nativeQueryRef": "Utilización de pabellón %",
+              "displayName": "Utilización"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Cirugías realizadas"
+                }
+              },
+              "queryRef": "pabellones.Cirugías realizadas",
+              "nativeQueryRef": "Cirugías realizadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pabellones"
+                    }
+                  },
+                  "Property": "Suspensión de cirugías %"
+                }
+              },
+              "queryRef": "pabellones.Suspensión de cirugías %",
+              "nativeQueryRef": "Suspensión de cirugías %",
+              "displayName": "Suspensión"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por especialidad'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

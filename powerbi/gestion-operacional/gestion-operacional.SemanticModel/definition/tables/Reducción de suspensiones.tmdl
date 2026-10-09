@@ -1,0 +1,29 @@
+/// Parámetro what-if: parte de las suspensiones evitables que se recupera, de 0% a 100%.
+table 'Reducción de suspensiones'
+	lineageTag: 75a35383-b492-5994-9b8d-a2f0fed5a524
+
+	/// Valor elegido en el segmentador; si no hay uno elegido, 50%.
+	measure 'Reducción de suspensiones %' = SELECTEDVALUE('Reducción de suspensiones'[Reducción de suspensiones], 0.5)
+		formatString: 0%
+		displayFolder: 7. Capacidad
+		lineageTag: ec273885-387f-5e39-bbaa-282bbff1c4ff
+
+	column 'Reducción de suspensiones'
+		dataType: double
+		formatString: 0%
+		lineageTag: ad6588f3-d6e2-51e7-a0c5-ff2143215028
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Reducción de suspensiones' = calculated
+		mode: import
+		source = SELECTCOLUMNS(GENERATESERIES(0, 10, 1), "Value", [Value] / 10)
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,442 @@
+fecha,anio,mes,sucursal,causa,evitable,suspendidas
+2025-01-01,2025,1,Clínica Oriente,Paciente no preparado o sin exámenes,1,7
+2025-01-01,2025,1,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2025-01-01,2025,1,Clínica Oriente,Falta de cama crítica o de sala,1,6
+2025-01-01,2025,1,Clínica Oriente,Falta de insumo o equipo,1,3
+2025-01-01,2025,1,Clínica Oriente,Administrativa (previsión o presupuesto),1,6
+2025-01-01,2025,1,Clínica Oriente,Inasistencia del paciente,1,4
+2025-01-01,2025,1,Clínica Oriente,Causa médica del paciente,0,11
+2025-01-01,2025,1,Clínica Centro,Paciente no preparado o sin exámenes,1,9
+2025-01-01,2025,1,Clínica Centro,Atraso de la cirugía anterior,1,7
+2025-01-01,2025,1,Clínica Centro,Falta de cama crítica o de sala,1,7
+2025-01-01,2025,1,Clínica Centro,Falta de insumo o equipo,1,4
+2025-01-01,2025,1,Clínica Centro,Administrativa (previsión o presupuesto),1,5
+2025-01-01,2025,1,Clínica Centro,Inasistencia del paciente,1,5
+2025-01-01,2025,1,Clínica Centro,Causa médica del paciente,0,11
+2025-01-01,2025,1,Clínica Poniente,Paciente no preparado o sin exámenes,1,30
+2025-01-01,2025,1,Clínica Poniente,Atraso de la cirugía anterior,1,17
+2025-01-01,2025,1,Clínica Poniente,Falta de cama crítica o de sala,1,7
+2025-01-01,2025,1,Clínica Poniente,Falta de insumo o equipo,1,5
+2025-01-01,2025,1,Clínica Poniente,Administrativa (previsión o presupuesto),1,8
+2025-01-01,2025,1,Clínica Poniente,Inasistencia del paciente,1,6
+2025-01-01,2025,1,Clínica Poniente,Causa médica del paciente,0,4
+2025-02-01,2025,2,Clínica Oriente,Paciente no preparado o sin exámenes,1,8
+2025-02-01,2025,2,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2025-02-01,2025,2,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2025-02-01,2025,2,Clínica Oriente,Falta de insumo o equipo,1,4
+2025-02-01,2025,2,Clínica Oriente,Administrativa (previsión o presupuesto),1,6
+2025-02-01,2025,2,Clínica Oriente,Inasistencia del paciente,1,4
+2025-02-01,2025,2,Clínica Oriente,Causa médica del paciente,0,8
+2025-02-01,2025,2,Clínica Centro,Paciente no preparado o sin exámenes,1,12
+2025-02-01,2025,2,Clínica Centro,Atraso de la cirugía anterior,1,6
+2025-02-01,2025,2,Clínica Centro,Falta de cama crítica o de sala,1,6
+2025-02-01,2025,2,Clínica Centro,Falta de insumo o equipo,1,5
+2025-02-01,2025,2,Clínica Centro,Administrativa (previsión o presupuesto),1,7
+2025-02-01,2025,2,Clínica Centro,Inasistencia del paciente,1,3
+2025-02-01,2025,2,Clínica Centro,Causa médica del paciente,0,12
+2025-02-01,2025,2,Clínica Poniente,Paciente no preparado o sin exámenes,1,26
+2025-02-01,2025,2,Clínica Poniente,Atraso de la cirugía anterior,1,10
+2025-02-01,2025,2,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2025-02-01,2025,2,Clínica Poniente,Falta de insumo o equipo,1,5
+2025-02-01,2025,2,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2025-02-01,2025,2,Clínica Poniente,Inasistencia del paciente,1,5
+2025-02-01,2025,2,Clínica Poniente,Causa médica del paciente,0,4
+2025-03-01,2025,3,Clínica Oriente,Paciente no preparado o sin exámenes,1,12
+2025-03-01,2025,3,Clínica Oriente,Atraso de la cirugía anterior,1,6
+2025-03-01,2025,3,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2025-03-01,2025,3,Clínica Oriente,Falta de insumo o equipo,1,4
+2025-03-01,2025,3,Clínica Oriente,Administrativa (previsión o presupuesto),1,6
+2025-03-01,2025,3,Clínica Oriente,Inasistencia del paciente,1,7
+2025-03-01,2025,3,Clínica Oriente,Causa médica del paciente,0,15
+2025-03-01,2025,3,Clínica Centro,Paciente no preparado o sin exámenes,1,9
+2025-03-01,2025,3,Clínica Centro,Atraso de la cirugía anterior,1,8
+2025-03-01,2025,3,Clínica Centro,Falta de cama crítica o de sala,1,6
+2025-03-01,2025,3,Clínica Centro,Falta de insumo o equipo,1,3
+2025-03-01,2025,3,Clínica Centro,Administrativa (previsión o presupuesto),1,5
+2025-03-01,2025,3,Clínica Centro,Inasistencia del paciente,1,4
+2025-03-01,2025,3,Clínica Centro,Causa médica del paciente,0,8
+2025-03-01,2025,3,Clínica Poniente,Paciente no preparado o sin exámenes,1,20
+2025-03-01,2025,3,Clínica Poniente,Atraso de la cirugía anterior,1,12
+2025-03-01,2025,3,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2025-03-01,2025,3,Clínica Poniente,Falta de insumo o equipo,1,4
+2025-03-01,2025,3,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2025-03-01,2025,3,Clínica Poniente,Inasistencia del paciente,1,4
+2025-03-01,2025,3,Clínica Poniente,Causa médica del paciente,0,3
+2025-04-01,2025,4,Clínica Oriente,Paciente no preparado o sin exámenes,1,8
+2025-04-01,2025,4,Clínica Oriente,Atraso de la cirugía anterior,1,9
+2025-04-01,2025,4,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2025-04-01,2025,4,Clínica Oriente,Falta de insumo o equipo,1,4
+2025-04-01,2025,4,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-04-01,2025,4,Clínica Oriente,Inasistencia del paciente,1,4
+2025-04-01,2025,4,Clínica Oriente,Causa médica del paciente,0,12
+2025-04-01,2025,4,Clínica Centro,Paciente no preparado o sin exámenes,1,8
+2025-04-01,2025,4,Clínica Centro,Atraso de la cirugía anterior,1,9
+2025-04-01,2025,4,Clínica Centro,Falta de cama crítica o de sala,1,10
+2025-04-01,2025,4,Clínica Centro,Falta de insumo o equipo,1,6
+2025-04-01,2025,4,Clínica Centro,Administrativa (previsión o presupuesto),1,8
+2025-04-01,2025,4,Clínica Centro,Inasistencia del paciente,1,7
+2025-04-01,2025,4,Clínica Centro,Causa médica del paciente,0,11
+2025-04-01,2025,4,Clínica Poniente,Paciente no preparado o sin exámenes,1,26
+2025-04-01,2025,4,Clínica Poniente,Atraso de la cirugía anterior,1,14
+2025-04-01,2025,4,Clínica Poniente,Falta de cama crítica o de sala,1,5
+2025-04-01,2025,4,Clínica Poniente,Falta de insumo o equipo,1,3
+2025-04-01,2025,4,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2025-04-01,2025,4,Clínica Poniente,Inasistencia del paciente,1,4
+2025-04-01,2025,4,Clínica Poniente,Causa médica del paciente,0,5
+2025-05-01,2025,5,Clínica Oriente,Paciente no preparado o sin exámenes,1,12
+2025-05-01,2025,5,Clínica Oriente,Atraso de la cirugía anterior,1,13
+2025-05-01,2025,5,Clínica Oriente,Falta de cama crítica o de sala,1,9
+2025-05-01,2025,5,Clínica Oriente,Falta de insumo o equipo,1,4
+2025-05-01,2025,5,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-05-01,2025,5,Clínica Oriente,Inasistencia del paciente,1,8
+2025-05-01,2025,5,Clínica Oriente,Causa médica del paciente,0,13
+2025-05-01,2025,5,Clínica Centro,Paciente no preparado o sin exámenes,1,11
+2025-05-01,2025,5,Clínica Centro,Atraso de la cirugía anterior,1,9
+2025-05-01,2025,5,Clínica Centro,Falta de cama crítica o de sala,1,9
+2025-05-01,2025,5,Clínica Centro,Falta de insumo o equipo,1,5
+2025-05-01,2025,5,Clínica Centro,Administrativa (previsión o presupuesto),1,6
+2025-05-01,2025,5,Clínica Centro,Inasistencia del paciente,1,6
+2025-05-01,2025,5,Clínica Centro,Causa médica del paciente,0,15
+2025-05-01,2025,5,Clínica Poniente,Paciente no preparado o sin exámenes,1,27
+2025-05-01,2025,5,Clínica Poniente,Atraso de la cirugía anterior,1,10
+2025-05-01,2025,5,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2025-05-01,2025,5,Clínica Poniente,Falta de insumo o equipo,1,5
+2025-05-01,2025,5,Clínica Poniente,Administrativa (previsión o presupuesto),1,9
+2025-05-01,2025,5,Clínica Poniente,Inasistencia del paciente,1,6
+2025-05-01,2025,5,Clínica Poniente,Causa médica del paciente,0,4
+2025-06-01,2025,6,Clínica Oriente,Paciente no preparado o sin exámenes,1,12
+2025-06-01,2025,6,Clínica Oriente,Atraso de la cirugía anterior,1,9
+2025-06-01,2025,6,Clínica Oriente,Falta de cama crítica o de sala,1,15
+2025-06-01,2025,6,Clínica Oriente,Falta de insumo o equipo,1,5
+2025-06-01,2025,6,Clínica Oriente,Administrativa (previsión o presupuesto),1,10
+2025-06-01,2025,6,Clínica Oriente,Inasistencia del paciente,1,7
+2025-06-01,2025,6,Clínica Oriente,Causa médica del paciente,0,12
+2025-06-01,2025,6,Clínica Centro,Paciente no preparado o sin exámenes,1,15
+2025-06-01,2025,6,Clínica Centro,Atraso de la cirugía anterior,1,11
+2025-06-01,2025,6,Clínica Centro,Falta de cama crítica o de sala,1,16
+2025-06-01,2025,6,Clínica Centro,Falta de insumo o equipo,1,5
+2025-06-01,2025,6,Clínica Centro,Administrativa (previsión o presupuesto),1,10
+2025-06-01,2025,6,Clínica Centro,Inasistencia del paciente,1,8
+2025-06-01,2025,6,Clínica Centro,Causa médica del paciente,0,14
+2025-06-01,2025,6,Clínica Poniente,Paciente no preparado o sin exámenes,1,28
+2025-06-01,2025,6,Clínica Poniente,Atraso de la cirugía anterior,1,17
+2025-06-01,2025,6,Clínica Poniente,Falta de cama crítica o de sala,1,8
+2025-06-01,2025,6,Clínica Poniente,Falta de insumo o equipo,1,4
+2025-06-01,2025,6,Clínica Poniente,Administrativa (previsión o presupuesto),1,9
+2025-06-01,2025,6,Clínica Poniente,Inasistencia del paciente,1,6
+2025-06-01,2025,6,Clínica Poniente,Causa médica del paciente,0,6
+2025-07-01,2025,7,Clínica Oriente,Paciente no preparado o sin exámenes,1,18
+2025-07-01,2025,7,Clínica Oriente,Atraso de la cirugía anterior,1,16
+2025-07-01,2025,7,Clínica Oriente,Falta de cama crítica o de sala,1,20
+2025-07-01,2025,7,Clínica Oriente,Falta de insumo o equipo,1,9
+2025-07-01,2025,7,Clínica Oriente,Administrativa (previsión o presupuesto),1,13
+2025-07-01,2025,7,Clínica Oriente,Inasistencia del paciente,1,14
+2025-07-01,2025,7,Clínica Oriente,Causa médica del paciente,0,22
+2025-07-01,2025,7,Clínica Centro,Paciente no preparado o sin exámenes,1,14
+2025-07-01,2025,7,Clínica Centro,Atraso de la cirugía anterior,1,14
+2025-07-01,2025,7,Clínica Centro,Falta de cama crítica o de sala,1,20
+2025-07-01,2025,7,Clínica Centro,Falta de insumo o equipo,1,6
+2025-07-01,2025,7,Clínica Centro,Administrativa (previsión o presupuesto),1,12
+2025-07-01,2025,7,Clínica Centro,Inasistencia del paciente,1,8
+2025-07-01,2025,7,Clínica Centro,Causa médica del paciente,0,15
+2025-07-01,2025,7,Clínica Poniente,Paciente no preparado o sin exámenes,1,35
+2025-07-01,2025,7,Clínica Poniente,Atraso de la cirugía anterior,1,19
+2025-07-01,2025,7,Clínica Poniente,Falta de cama crítica o de sala,1,12
+2025-07-01,2025,7,Clínica Poniente,Falta de insumo o equipo,1,7
+2025-07-01,2025,7,Clínica Poniente,Administrativa (previsión o presupuesto),1,9
+2025-07-01,2025,7,Clínica Poniente,Inasistencia del paciente,1,6
+2025-07-01,2025,7,Clínica Poniente,Causa médica del paciente,0,7
+2025-08-01,2025,8,Clínica Oriente,Paciente no preparado o sin exámenes,1,16
+2025-08-01,2025,8,Clínica Oriente,Atraso de la cirugía anterior,1,16
+2025-08-01,2025,8,Clínica Oriente,Falta de cama crítica o de sala,1,14
+2025-08-01,2025,8,Clínica Oriente,Falta de insumo o equipo,1,6
+2025-08-01,2025,8,Clínica Oriente,Administrativa (previsión o presupuesto),1,9
+2025-08-01,2025,8,Clínica Oriente,Inasistencia del paciente,1,8
+2025-08-01,2025,8,Clínica Oriente,Causa médica del paciente,0,20
+2025-08-01,2025,8,Clínica Centro,Paciente no preparado o sin exámenes,1,13
+2025-08-01,2025,8,Clínica Centro,Atraso de la cirugía anterior,1,11
+2025-08-01,2025,8,Clínica Centro,Falta de cama crítica o de sala,1,17
+2025-08-01,2025,8,Clínica Centro,Falta de insumo o equipo,1,5
+2025-08-01,2025,8,Clínica Centro,Administrativa (previsión o presupuesto),1,8
+2025-08-01,2025,8,Clínica Centro,Inasistencia del paciente,1,6
+2025-08-01,2025,8,Clínica Centro,Causa médica del paciente,0,12
+2025-08-01,2025,8,Clínica Poniente,Paciente no preparado o sin exámenes,1,16
+2025-08-01,2025,8,Clínica Poniente,Atraso de la cirugía anterior,1,16
+2025-08-01,2025,8,Clínica Poniente,Falta de cama crítica o de sala,1,8
+2025-08-01,2025,8,Clínica Poniente,Falta de insumo o equipo,1,5
+2025-08-01,2025,8,Clínica Poniente,Administrativa (previsión o presupuesto),1,7
+2025-08-01,2025,8,Clínica Poniente,Inasistencia del paciente,1,5
+2025-08-01,2025,8,Clínica Poniente,Causa médica del paciente,0,3
+2025-09-01,2025,9,Clínica Oriente,Paciente no preparado o sin exámenes,1,11
+2025-09-01,2025,9,Clínica Oriente,Atraso de la cirugía anterior,1,14
+2025-09-01,2025,9,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2025-09-01,2025,9,Clínica Oriente,Falta de insumo o equipo,1,5
+2025-09-01,2025,9,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-09-01,2025,9,Clínica Oriente,Inasistencia del paciente,1,8
+2025-09-01,2025,9,Clínica Oriente,Causa médica del paciente,0,12
+2025-09-01,2025,9,Clínica Centro,Paciente no preparado o sin exámenes,1,9
+2025-09-01,2025,9,Clínica Centro,Atraso de la cirugía anterior,1,10
+2025-09-01,2025,9,Clínica Centro,Falta de cama crítica o de sala,1,10
+2025-09-01,2025,9,Clínica Centro,Falta de insumo o equipo,1,5
+2025-09-01,2025,9,Clínica Centro,Administrativa (previsión o presupuesto),1,6
+2025-09-01,2025,9,Clínica Centro,Inasistencia del paciente,1,5
+2025-09-01,2025,9,Clínica Centro,Causa médica del paciente,0,11
+2025-09-01,2025,9,Clínica Poniente,Paciente no preparado o sin exámenes,1,19
+2025-09-01,2025,9,Clínica Poniente,Atraso de la cirugía anterior,1,15
+2025-09-01,2025,9,Clínica Poniente,Falta de cama crítica o de sala,1,7
+2025-09-01,2025,9,Clínica Poniente,Falta de insumo o equipo,1,4
+2025-09-01,2025,9,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2025-09-01,2025,9,Clínica Poniente,Inasistencia del paciente,1,4
+2025-09-01,2025,9,Clínica Poniente,Causa médica del paciente,0,6
+2025-10-01,2025,10,Clínica Oriente,Paciente no preparado o sin exámenes,1,11
+2025-10-01,2025,10,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2025-10-01,2025,10,Clínica Oriente,Falta de cama crítica o de sala,1,7
+2025-10-01,2025,10,Clínica Oriente,Falta de insumo o equipo,1,5
+2025-10-01,2025,10,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-10-01,2025,10,Clínica Oriente,Inasistencia del paciente,1,5
+2025-10-01,2025,10,Clínica Oriente,Causa médica del paciente,0,12
+2025-10-01,2025,10,Clínica Centro,Paciente no preparado o sin exámenes,1,10
+2025-10-01,2025,10,Clínica Centro,Atraso de la cirugía anterior,1,10
+2025-10-01,2025,10,Clínica Centro,Falta de cama crítica o de sala,1,6
+2025-10-01,2025,10,Clínica Centro,Falta de insumo o equipo,1,4
+2025-10-01,2025,10,Clínica Centro,Administrativa (previsión o presupuesto),1,5
+2025-10-01,2025,10,Clínica Centro,Inasistencia del paciente,1,5
+2025-10-01,2025,10,Clínica Centro,Causa médica del paciente,0,14
+2025-10-01,2025,10,Clínica Poniente,Paciente no preparado o sin exámenes,1,19
+2025-10-01,2025,10,Clínica Poniente,Atraso de la cirugía anterior,1,15
+2025-10-01,2025,10,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2025-10-01,2025,10,Clínica Poniente,Falta de insumo o equipo,1,4
+2025-10-01,2025,10,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2025-10-01,2025,10,Clínica Poniente,Inasistencia del paciente,1,4
+2025-10-01,2025,10,Clínica Poniente,Causa médica del paciente,0,4
+2025-11-01,2025,11,Clínica Oriente,Paciente no preparado o sin exámenes,1,10
+2025-11-01,2025,11,Clínica Oriente,Atraso de la cirugía anterior,1,10
+2025-11-01,2025,11,Clínica Oriente,Falta de cama crítica o de sala,1,7
+2025-11-01,2025,11,Clínica Oriente,Falta de insumo o equipo,1,4
+2025-11-01,2025,11,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-11-01,2025,11,Clínica Oriente,Inasistencia del paciente,1,6
+2025-11-01,2025,11,Clínica Oriente,Causa médica del paciente,0,10
+2025-11-01,2025,11,Clínica Centro,Paciente no preparado o sin exámenes,1,7
+2025-11-01,2025,11,Clínica Centro,Atraso de la cirugía anterior,1,7
+2025-11-01,2025,11,Clínica Centro,Falta de cama crítica o de sala,1,5
+2025-11-01,2025,11,Clínica Centro,Falta de insumo o equipo,1,3
+2025-11-01,2025,11,Clínica Centro,Administrativa (previsión o presupuesto),1,5
+2025-11-01,2025,11,Clínica Centro,Inasistencia del paciente,1,4
+2025-11-01,2025,11,Clínica Centro,Causa médica del paciente,0,8
+2025-11-01,2025,11,Clínica Poniente,Paciente no preparado o sin exámenes,1,17
+2025-11-01,2025,11,Clínica Poniente,Atraso de la cirugía anterior,1,10
+2025-11-01,2025,11,Clínica Poniente,Falta de cama crítica o de sala,1,2
+2025-11-01,2025,11,Clínica Poniente,Falta de insumo o equipo,1,3
+2025-11-01,2025,11,Clínica Poniente,Administrativa (previsión o presupuesto),1,4
+2025-11-01,2025,11,Clínica Poniente,Inasistencia del paciente,1,4
+2025-11-01,2025,11,Clínica Poniente,Causa médica del paciente,0,4
+2025-12-01,2025,12,Clínica Oriente,Paciente no preparado o sin exámenes,1,11
+2025-12-01,2025,12,Clínica Oriente,Atraso de la cirugía anterior,1,9
+2025-12-01,2025,12,Clínica Oriente,Falta de cama crítica o de sala,1,6
+2025-12-01,2025,12,Clínica Oriente,Falta de insumo o equipo,1,6
+2025-12-01,2025,12,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2025-12-01,2025,12,Clínica Oriente,Inasistencia del paciente,1,6
+2025-12-01,2025,12,Clínica Oriente,Causa médica del paciente,0,12
+2025-12-01,2025,12,Clínica Centro,Paciente no preparado o sin exámenes,1,11
+2025-12-01,2025,12,Clínica Centro,Atraso de la cirugía anterior,1,12
+2025-12-01,2025,12,Clínica Centro,Falta de cama crítica o de sala,1,9
+2025-12-01,2025,12,Clínica Centro,Falta de insumo o equipo,1,5
+2025-12-01,2025,12,Clínica Centro,Administrativa (previsión o presupuesto),1,9
+2025-12-01,2025,12,Clínica Centro,Inasistencia del paciente,1,5
+2025-12-01,2025,12,Clínica Centro,Causa médica del paciente,0,11
+2025-12-01,2025,12,Clínica Poniente,Paciente no preparado o sin exámenes,1,20
+2025-12-01,2025,12,Clínica Poniente,Atraso de la cirugía anterior,1,12
+2025-12-01,2025,12,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2025-12-01,2025,12,Clínica Poniente,Falta de insumo o equipo,1,4
+2025-12-01,2025,12,Clínica Poniente,Administrativa (previsión o presupuesto),1,7
+2025-12-01,2025,12,Clínica Poniente,Inasistencia del paciente,1,3
+2025-12-01,2025,12,Clínica Poniente,Causa médica del paciente,0,4
+2026-01-01,2026,1,Clínica Oriente,Paciente no preparado o sin exámenes,1,9
+2026-01-01,2026,1,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2026-01-01,2026,1,Clínica Oriente,Falta de cama crítica o de sala,1,7
+2026-01-01,2026,1,Clínica Oriente,Falta de insumo o equipo,1,4
+2026-01-01,2026,1,Clínica Oriente,Administrativa (previsión o presupuesto),1,5
+2026-01-01,2026,1,Clínica Oriente,Inasistencia del paciente,1,6
+2026-01-01,2026,1,Clínica Oriente,Causa médica del paciente,0,8
+2026-01-01,2026,1,Clínica Centro,Paciente no preparado o sin exámenes,1,8
+2026-01-01,2026,1,Clínica Centro,Atraso de la cirugía anterior,1,6
+2026-01-01,2026,1,Clínica Centro,Falta de cama crítica o de sala,1,4
+2026-01-01,2026,1,Clínica Centro,Falta de insumo o equipo,1,2
+2026-01-01,2026,1,Clínica Centro,Administrativa (previsión o presupuesto),1,5
+2026-01-01,2026,1,Clínica Centro,Inasistencia del paciente,1,4
+2026-01-01,2026,1,Clínica Centro,Causa médica del paciente,0,9
+2026-01-01,2026,1,Clínica Poniente,Paciente no preparado o sin exámenes,1,17
+2026-01-01,2026,1,Clínica Poniente,Atraso de la cirugía anterior,1,9
+2026-01-01,2026,1,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2026-01-01,2026,1,Clínica Poniente,Falta de insumo o equipo,1,4
+2026-01-01,2026,1,Clínica Poniente,Administrativa (previsión o presupuesto),1,5
+2026-01-01,2026,1,Clínica Poniente,Inasistencia del paciente,1,4
+2026-01-01,2026,1,Clínica Poniente,Causa médica del paciente,0,3
+2026-02-01,2026,2,Clínica Oriente,Paciente no preparado o sin exámenes,1,11
+2026-02-01,2026,2,Clínica Oriente,Atraso de la cirugía anterior,1,10
+2026-02-01,2026,2,Clínica Oriente,Falta de cama crítica o de sala,1,7
+2026-02-01,2026,2,Clínica Oriente,Falta de insumo o equipo,1,4
+2026-02-01,2026,2,Clínica Oriente,Administrativa (previsión o presupuesto),1,5
+2026-02-01,2026,2,Clínica Oriente,Inasistencia del paciente,1,6
+2026-02-01,2026,2,Clínica Oriente,Causa médica del paciente,0,11
+2026-02-01,2026,2,Clínica Centro,Paciente no preparado o sin exámenes,1,9
+2026-02-01,2026,2,Clínica Centro,Atraso de la cirugía anterior,1,9
+2026-02-01,2026,2,Clínica Centro,Falta de cama crítica o de sala,1,5
+2026-02-01,2026,2,Clínica Centro,Falta de insumo o equipo,1,3
+2026-02-01,2026,2,Clínica Centro,Administrativa (previsión o presupuesto),1,6
+2026-02-01,2026,2,Clínica Centro,Inasistencia del paciente,1,4
+2026-02-01,2026,2,Clínica Centro,Causa médica del paciente,0,13
+2026-02-01,2026,2,Clínica Poniente,Paciente no preparado o sin exámenes,1,15
+2026-02-01,2026,2,Clínica Poniente,Atraso de la cirugía anterior,1,16
+2026-02-01,2026,2,Clínica Poniente,Falta de cama crítica o de sala,1,7
+2026-02-01,2026,2,Clínica Poniente,Falta de insumo o equipo,1,4
+2026-02-01,2026,2,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2026-02-01,2026,2,Clínica Poniente,Inasistencia del paciente,1,4
+2026-02-01,2026,2,Clínica Poniente,Causa médica del paciente,0,6
+2026-03-01,2026,3,Clínica Oriente,Paciente no preparado o sin exámenes,1,8
+2026-03-01,2026,3,Clínica Oriente,Atraso de la cirugía anterior,1,7
+2026-03-01,2026,3,Clínica Oriente,Falta de cama crítica o de sala,1,7
+2026-03-01,2026,3,Clínica Oriente,Falta de insumo o equipo,1,4
+2026-03-01,2026,3,Clínica Oriente,Administrativa (previsión o presupuesto),1,6
+2026-03-01,2026,3,Clínica Oriente,Inasistencia del paciente,1,6
+2026-03-01,2026,3,Clínica Oriente,Causa médica del paciente,0,13
+2026-03-01,2026,3,Clínica Centro,Paciente no preparado o sin exámenes,1,6
+2026-03-01,2026,3,Clínica Centro,Atraso de la cirugía anterior,1,7
+2026-03-01,2026,3,Clínica Centro,Falta de cama crítica o de sala,1,7
+2026-03-01,2026,3,Clínica Centro,Falta de insumo o equipo,1,4
+2026-03-01,2026,3,Clínica Centro,Administrativa (previsión o presupuesto),1,6
+2026-03-01,2026,3,Clínica Centro,Inasistencia del paciente,1,4
+2026-03-01,2026,3,Clínica Centro,Causa médica del paciente,0,8
+2026-03-01,2026,3,Clínica Poniente,Paciente no preparado o sin exámenes,1,18
+2026-03-01,2026,3,Clínica Poniente,Atraso de la cirugía anterior,1,20
+2026-03-01,2026,3,Clínica Poniente,Falta de cama crítica o de sala,1,7
+2026-03-01,2026,3,Clínica Poniente,Falta de insumo o equipo,1,5
+2026-03-01,2026,3,Clínica Poniente,Administrativa (previsión o presupuesto),1,7
+2026-03-01,2026,3,Clínica Poniente,Inasistencia del paciente,1,5
+2026-03-01,2026,3,Clínica Poniente,Causa médica del paciente,0,5
+2026-04-01,2026,4,Clínica Oriente,Paciente no preparado o sin exámenes,1,13
+2026-04-01,2026,4,Clínica Oriente,Atraso de la cirugía anterior,1,9
+2026-04-01,2026,4,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2026-04-01,2026,4,Clínica Oriente,Falta de insumo o equipo,1,6
+2026-04-01,2026,4,Clínica Oriente,Administrativa (previsión o presupuesto),1,7
+2026-04-01,2026,4,Clínica Oriente,Inasistencia del paciente,1,7
+2026-04-01,2026,4,Clínica Oriente,Causa médica del paciente,0,12
+2026-04-01,2026,4,Clínica Centro,Paciente no preparado o sin exámenes,1,11
+2026-04-01,2026,4,Clínica Centro,Atraso de la cirugía anterior,1,10
+2026-04-01,2026,4,Clínica Centro,Falta de cama crítica o de sala,1,7
+2026-04-01,2026,4,Clínica Centro,Falta de insumo o equipo,1,4
+2026-04-01,2026,4,Clínica Centro,Administrativa (previsión o presupuesto),1,7
+2026-04-01,2026,4,Clínica Centro,Inasistencia del paciente,1,4
+2026-04-01,2026,4,Clínica Centro,Causa médica del paciente,0,10
+2026-04-01,2026,4,Clínica Poniente,Paciente no preparado o sin exámenes,1,13
+2026-04-01,2026,4,Clínica Poniente,Atraso de la cirugía anterior,1,13
+2026-04-01,2026,4,Clínica Poniente,Falta de cama crítica o de sala,1,5
+2026-04-01,2026,4,Clínica Poniente,Falta de insumo o equipo,1,4
+2026-04-01,2026,4,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2026-04-01,2026,4,Clínica Poniente,Inasistencia del paciente,1,3
+2026-04-01,2026,4,Clínica Poniente,Causa médica del paciente,0,3
+2026-05-01,2026,5,Clínica Oriente,Paciente no preparado o sin exámenes,1,10
+2026-05-01,2026,5,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2026-05-01,2026,5,Clínica Oriente,Falta de cama crítica o de sala,1,8
+2026-05-01,2026,5,Clínica Oriente,Falta de insumo o equipo,1,5
+2026-05-01,2026,5,Clínica Oriente,Administrativa (previsión o presupuesto),1,6
+2026-05-01,2026,5,Clínica Oriente,Inasistencia del paciente,1,6
+2026-05-01,2026,5,Clínica Oriente,Causa médica del paciente,0,11
+2026-05-01,2026,5,Clínica Centro,Paciente no preparado o sin exámenes,1,11
+2026-05-01,2026,5,Clínica Centro,Atraso de la cirugía anterior,1,10
+2026-05-01,2026,5,Clínica Centro,Falta de cama crítica o de sala,1,9
+2026-05-01,2026,5,Clínica Centro,Falta de insumo o equipo,1,4
+2026-05-01,2026,5,Clínica Centro,Administrativa (previsión o presupuesto),1,6
+2026-05-01,2026,5,Clínica Centro,Inasistencia del paciente,1,4
+2026-05-01,2026,5,Clínica Centro,Causa médica del paciente,0,11
+2026-05-01,2026,5,Clínica Poniente,Paciente no preparado o sin exámenes,1,12
+2026-05-01,2026,5,Clínica Poniente,Atraso de la cirugía anterior,1,13
+2026-05-01,2026,5,Clínica Poniente,Falta de cama crítica o de sala,1,5
+2026-05-01,2026,5,Clínica Poniente,Falta de insumo o equipo,1,4
+2026-05-01,2026,5,Clínica Poniente,Administrativa (previsión o presupuesto),1,5
+2026-05-01,2026,5,Clínica Poniente,Inasistencia del paciente,1,4
+2026-05-01,2026,5,Clínica Poniente,Causa médica del paciente,0,5
+2026-06-01,2026,6,Clínica Oriente,Paciente no preparado o sin exámenes,1,14
+2026-06-01,2026,6,Clínica Oriente,Atraso de la cirugía anterior,1,14
+2026-06-01,2026,6,Clínica Oriente,Falta de cama crítica o de sala,1,12
+2026-06-01,2026,6,Clínica Oriente,Falta de insumo o equipo,1,4
+2026-06-01,2026,6,Clínica Oriente,Administrativa (previsión o presupuesto),1,11
+2026-06-01,2026,6,Clínica Oriente,Inasistencia del paciente,1,5
+2026-06-01,2026,6,Clínica Oriente,Causa médica del paciente,0,14
+2026-06-01,2026,6,Clínica Centro,Paciente no preparado o sin exámenes,1,12
+2026-06-01,2026,6,Clínica Centro,Atraso de la cirugía anterior,1,11
+2026-06-01,2026,6,Clínica Centro,Falta de cama crítica o de sala,1,15
+2026-06-01,2026,6,Clínica Centro,Falta de insumo o equipo,1,8
+2026-06-01,2026,6,Clínica Centro,Administrativa (previsión o presupuesto),1,9
+2026-06-01,2026,6,Clínica Centro,Inasistencia del paciente,1,7
+2026-06-01,2026,6,Clínica Centro,Causa médica del paciente,0,17
+2026-06-01,2026,6,Clínica Poniente,Paciente no preparado o sin exámenes,1,29
+2026-06-01,2026,6,Clínica Poniente,Atraso de la cirugía anterior,1,18
+2026-06-01,2026,6,Clínica Poniente,Falta de cama crítica o de sala,1,9
+2026-06-01,2026,6,Clínica Poniente,Falta de insumo o equipo,1,6
+2026-06-01,2026,6,Clínica Poniente,Administrativa (previsión o presupuesto),1,7
+2026-06-01,2026,6,Clínica Poniente,Inasistencia del paciente,1,5
+2026-06-01,2026,6,Clínica Poniente,Causa médica del paciente,0,5
+2026-07-01,2026,7,Clínica Oriente,Paciente no preparado o sin exámenes,1,18
+2026-07-01,2026,7,Clínica Oriente,Atraso de la cirugía anterior,1,18
+2026-07-01,2026,7,Clínica Oriente,Falta de cama crítica o de sala,1,23
+2026-07-01,2026,7,Clínica Oriente,Falta de insumo o equipo,1,10
+2026-07-01,2026,7,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2026-07-01,2026,7,Clínica Oriente,Inasistencia del paciente,1,9
+2026-07-01,2026,7,Clínica Oriente,Causa médica del paciente,0,24
+2026-07-01,2026,7,Clínica Centro,Paciente no preparado o sin exámenes,1,14
+2026-07-01,2026,7,Clínica Centro,Atraso de la cirugía anterior,1,12
+2026-07-01,2026,7,Clínica Centro,Falta de cama crítica o de sala,1,18
+2026-07-01,2026,7,Clínica Centro,Falta de insumo o equipo,1,5
+2026-07-01,2026,7,Clínica Centro,Administrativa (previsión o presupuesto),1,9
+2026-07-01,2026,7,Clínica Centro,Inasistencia del paciente,1,8
+2026-07-01,2026,7,Clínica Centro,Causa médica del paciente,0,18
+2026-07-01,2026,7,Clínica Poniente,Paciente no preparado o sin exámenes,1,26
+2026-07-01,2026,7,Clínica Poniente,Atraso de la cirugía anterior,1,24
+2026-07-01,2026,7,Clínica Poniente,Falta de cama crítica o de sala,1,11
+2026-07-01,2026,7,Clínica Poniente,Falta de insumo o equipo,1,5
+2026-07-01,2026,7,Clínica Poniente,Administrativa (previsión o presupuesto),1,6
+2026-07-01,2026,7,Clínica Poniente,Inasistencia del paciente,1,4
+2026-07-01,2026,7,Clínica Poniente,Causa médica del paciente,0,5
+2026-08-01,2026,8,Clínica Oriente,Paciente no preparado o sin exámenes,1,17
+2026-08-01,2026,8,Clínica Oriente,Atraso de la cirugía anterior,1,11
+2026-08-01,2026,8,Clínica Oriente,Falta de cama crítica o de sala,1,16
+2026-08-01,2026,8,Clínica Oriente,Falta de insumo o equipo,1,6
+2026-08-01,2026,8,Clínica Oriente,Administrativa (previsión o presupuesto),1,9
+2026-08-01,2026,8,Clínica Oriente,Inasistencia del paciente,1,8
+2026-08-01,2026,8,Clínica Oriente,Causa médica del paciente,0,21
+2026-08-01,2026,8,Clínica Centro,Paciente no preparado o sin exámenes,1,13
+2026-08-01,2026,8,Clínica Centro,Atraso de la cirugía anterior,1,7
+2026-08-01,2026,8,Clínica Centro,Falta de cama crítica o de sala,1,16
+2026-08-01,2026,8,Clínica Centro,Falta de insumo o equipo,1,5
+2026-08-01,2026,8,Clínica Centro,Administrativa (previsión o presupuesto),1,8
+2026-08-01,2026,8,Clínica Centro,Inasistencia del paciente,1,7
+2026-08-01,2026,8,Clínica Centro,Causa médica del paciente,0,17
+2026-08-01,2026,8,Clínica Poniente,Paciente no preparado o sin exámenes,1,25
+2026-08-01,2026,8,Clínica Poniente,Atraso de la cirugía anterior,1,19
+2026-08-01,2026,8,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2026-08-01,2026,8,Clínica Poniente,Falta de insumo o equipo,1,4
+2026-08-01,2026,8,Clínica Poniente,Administrativa (previsión o presupuesto),1,8
+2026-08-01,2026,8,Clínica Poniente,Inasistencia del paciente,1,4
+2026-08-01,2026,8,Clínica Poniente,Causa médica del paciente,0,5
+2026-09-01,2026,9,Clínica Oriente,Paciente no preparado o sin exámenes,1,11
+2026-09-01,2026,9,Clínica Oriente,Atraso de la cirugía anterior,1,8
+2026-09-01,2026,9,Clínica Oriente,Falta de cama crítica o de sala,1,11
+2026-09-01,2026,9,Clínica Oriente,Falta de insumo o equipo,1,5
+2026-09-01,2026,9,Clínica Oriente,Administrativa (previsión o presupuesto),1,8
+2026-09-01,2026,9,Clínica Oriente,Inasistencia del paciente,1,5
+2026-09-01,2026,9,Clínica Oriente,Causa médica del paciente,0,12
+2026-09-01,2026,9,Clínica Centro,Paciente no preparado o sin exámenes,1,11
+2026-09-01,2026,9,Clínica Centro,Atraso de la cirugía anterior,1,10
+2026-09-01,2026,9,Clínica Centro,Falta de cama crítica o de sala,1,11
+2026-09-01,2026,9,Clínica Centro,Falta de insumo o equipo,1,5
+2026-09-01,2026,9,Clínica Centro,Administrativa (previsión o presupuesto),1,8
+2026-09-01,2026,9,Clínica Centro,Inasistencia del paciente,1,7
+2026-09-01,2026,9,Clínica Centro,Causa médica del paciente,0,16
+2026-09-01,2026,9,Clínica Poniente,Paciente no preparado o sin exámenes,1,23
+2026-09-01,2026,9,Clínica Poniente,Atraso de la cirugía anterior,1,14
+2026-09-01,2026,9,Clínica Poniente,Falta de cama crítica o de sala,1,6
+2026-09-01,2026,9,Clínica Poniente,Falta de insumo o equipo,1,5
+2026-09-01,2026,9,Clínica Poniente,Administrativa (previsión o presupuesto),1,8
+2026-09-01,2026,9,Clínica Poniente,Inasistencia del paciente,1,5
+2026-09-01,2026,9,Clínica Poniente,Causa médica del paciente,0,6

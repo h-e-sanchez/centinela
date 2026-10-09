@@ -1,0 +1,200 @@
+/// Ambulatorio por clínica, especialidad y mes: horas de box, agenda, consultas, inasistencias y lista de espera.
+table ambulatorio
+	lineageTag: 9fa9f092-bd8f-5928-be47-11d4fdaf735f
+
+	/// Horas de box disponibles (boxes × horario de atención).
+	measure 'Horas de box' = SUM(ambulatorio[horas_box])
+		formatString: #,##0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 47aa6b9d-2fdb-5b72-959e-b85b8a26a238
+
+	/// Horas de agenda médica abiertas.
+	measure 'Horas ofertadas' = SUM(ambulatorio[horas_ofertadas])
+		formatString: #,##0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 5ce60189-7633-505f-80e3-7d36d1d0a8ee
+
+	/// Horas de agenda abiertas sobre horas de box disponibles.
+	measure 'Utilización de box %' = DIVIDE([Horas ofertadas], [Horas de box])
+		formatString: 0.0%
+		displayFolder: 4. Ambulatorio
+		lineageTag: 14b85ef8-1b05-5291-960e-a7d4c4f76eb8
+
+	/// Horas con paciente agendado sobre horas ofertadas.
+	measure 'Ocupación de agenda %' = DIVIDE(SUM(ambulatorio[horas_agendadas]), [Horas ofertadas])
+		formatString: 0.0%
+		displayFolder: 4. Ambulatorio
+		lineageTag: cf47014a-8d29-5fe1-908e-2c8c6a86463d
+
+	/// Horas tomadas por pacientes.
+	measure 'Consultas agendadas' = SUM(ambulatorio[consultas_agendadas])
+		formatString: #,##0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 9788948e-2047-5bde-917f-04a41c52c207
+
+	/// Consultas agendadas a las que el paciente llegó.
+	measure 'Consultas realizadas' = SUM(ambulatorio[consultas_realizadas])
+		formatString: #,##0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 25a29bc6-8807-50f4-a766-702645df5a80
+
+	/// Pacientes agendados que no llegan (no-show).
+	measure 'Inasistencia %' = DIVIDE(SUM(ambulatorio[inasistencias]), [Consultas agendadas])
+		formatString: 0.0%
+		displayFolder: 4. Ambulatorio
+		lineageTag: 2b180fc0-76a0-5798-b202-92e85a28981c
+
+	/// Pacientes esperando hora al cierre del último mes del periodo.
+	measure 'Lista de espera (último mes)' =
+			VAR ultimo = MAX(ambulatorio[fecha])
+			RETURN CALCULATE(SUM(ambulatorio[lista_espera]), ambulatorio[fecha] = ultimo)
+		formatString: #,##0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 62af00ed-c5a1-5172-9c8f-9be0a80ea48a
+
+	/// Días hasta la tercera hora disponible en el último mes: mide el acceso sin el ruido de las anulaciones.
+	measure 'Días al tercer cupo' =
+			VAR ultimo = MAX(ambulatorio[fecha])
+			RETURN CALCULATE(AVERAGE(ambulatorio[dias_tercer_cupo]), ambulatorio[fecha] = ultimo)
+		formatString: 0
+		displayFolder: 4. Ambulatorio
+		lineageTag: 6ff791cb-bbb6-5ca8-8ab1-f72ccbde14ec
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 228e276a-6f37-543c-928a-a21acd111c1f
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c3e4227b-8ac1-59e2-9fb8-2f4ecf06bba6
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c1e8ca68-ad9c-51e5-b5bc-cbbb1ca86aaa
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 3313f28f-00e2-5e26-b4bd-ae7fa0e8f904
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidad
+		dataType: string
+		lineageTag: e6ce9cff-4604-5a3b-a6e8-54e49e7f038d
+		summarizeBy: none
+		sourceColumn: especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_box
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 29791485-c77d-5689-aa3a-3a1e3bfebb32
+		summarizeBy: none
+		sourceColumn: horas_box
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_ofertadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5f36a130-8c2d-56c4-864c-c119baf836cc
+		summarizeBy: none
+		sourceColumn: horas_ofertadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_agendadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a5a4e98b-64aa-550f-a474-83d06308ad2a
+		summarizeBy: none
+		sourceColumn: horas_agendadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column consultas_agendadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1708992f-e3f7-59a6-90f9-615c5a73e5f2
+		summarizeBy: none
+		sourceColumn: consultas_agendadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column consultas_realizadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fac2b5b7-874d-55d1-8d68-5191b19d99ac
+		summarizeBy: none
+		sourceColumn: consultas_realizadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column inasistencias
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1dfe7354-fb4c-525b-b79c-076807069fe3
+		summarizeBy: none
+		sourceColumn: inasistencias
+
+		annotation SummarizationSetBy = Automatic
+
+	column lista_espera
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: eaf301b5-afaa-5f02-b1a0-19a661be1d0b
+		summarizeBy: none
+		sourceColumn: lista_espera
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_tercer_cupo
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d99d0797-ea47-558c-b294-a69b8031c2bd
+		summarizeBy: none
+		sourceColumn: dias_tercer_cupo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ambulatorio = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("ambulatorio.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"especialidad", type text}, {"horas_box", Int64.Type}, {"horas_ofertadas", Int64.Type}, {"horas_agendadas", Int64.Type}, {"consultas_agendadas", Int64.Type}, {"consultas_realizadas", Int64.Type}, {"inasistencias", Int64.Type}, {"lista_espera", Int64.Type}, {"dias_tercer_cupo", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

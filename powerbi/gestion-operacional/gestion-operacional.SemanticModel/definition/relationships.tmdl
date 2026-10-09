@@ -1,0 +1,63 @@
+relationship d632bbc3-94c7-5292-ac6c-ccc447db5cf7
+	fromColumn: camas.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 9e3d7ec5-6e65-57a4-820a-038688307df8
+	fromColumn: pabellones.sucursal
+	toColumn: sucursales.sucursal
+
+relationship b4e0cb74-8e08-559f-a50f-377ba6fd1b4e
+	fromColumn: suspensiones.sucursal
+	toColumn: sucursales.sucursal
+
+relationship e9234132-435c-5642-851e-b0834c675cdc
+	fromColumn: urgencia.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 0782557b-04ba-5cc5-8a57-22510aa030a9
+	fromColumn: ambulatorio.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 2855f83c-0e06-50b0-bc84-adc799c9abea
+	fromColumn: apoyo.sucursal
+	toColumn: sucursales.sucursal
+
+relationship 5785b30b-7ce0-5fd4-bfb4-4992f230b2dc
+	fromColumn: produccion.sucursal
+	toColumn: sucursales.sucursal
+
+relationship d5340846-843f-56ce-8a58-331573017861
+	fromColumn: camas.fecha
+	toColumn: Calendario.Date
+
+relationship 1ba0f703-6e51-5da1-84bb-7b2e80f62c5d
+	fromColumn: pabellones.fecha
+	toColumn: Calendario.Date
+
+relationship 20431b30-0870-5008-a31e-ce1f429bbbe7
+	fromColumn: suspensiones.fecha
+	toColumn: Calendario.Date
+
+relationship 0488ebbb-57ac-590a-abc6-951fc90d9bb7
+	fromColumn: urgencia.fecha
+	toColumn: Calendario.Date
+
+relationship 5fee52fc-543d-5b8e-8129-7578a5361b5f
+	fromColumn: ambulatorio.fecha
+	toColumn: Calendario.Date
+
+relationship 0e6218a9-c870-57fb-baf0-1193a179460e
+	fromColumn: apoyo.fecha
+	toColumn: Calendario.Date
+
+relationship e5cea644-a066-5e53-8ee6-18f3fba79d5b
+	fromColumn: produccion.fecha
+	toColumn: Calendario.Date
+
+relationship aa51d89a-e959-5cde-ae85-9f90c7246c6d
+	fromColumn: camas.linea
+	toColumn: lineas.linea
+
+relationship 55182258-d21e-5ca3-aaaf-a5f7fb51ade9
+	fromColumn: produccion.linea
+	toColumn: lineas.linea

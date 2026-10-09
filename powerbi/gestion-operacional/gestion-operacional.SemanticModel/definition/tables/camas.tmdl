@@ -1,0 +1,205 @@
+/// Hospitalizado por clínica, servicio y mes: camas, días cama, egresos, días de estada (real y según la norma) y reingresos.
+table camas
+	lineageTag: 2cde3fd3-a78a-597e-88b9-3401cb76867d
+
+	/// Camas dotadas por los días del mes.
+	measure 'Días cama disponibles' = SUM(camas[dias_cama_disponibles])
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: b97025c3-d068-5146-9937-c0edc32a96df
+
+	/// Días paciente: camas ocupadas cada día, sumadas en el periodo.
+	measure 'Días cama ocupados' = SUM(camas[dias_cama_ocupados])
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 27ffd6e1-cd62-57e4-a15c-45b609bb00e5
+
+	/// Índice ocupacional: días cama ocupados sobre disponibles.
+	measure 'Ocupación de camas %' = DIVIDE([Días cama ocupados], [Días cama disponibles])
+		formatString: 0.0%
+		displayFolder: 1. Hospitalizado
+		lineageTag: e251035f-2614-5360-a77e-286799f5e852
+
+	/// Pacientes que dejan el servicio (altas, traslados y fallecidos).
+	measure 'Egresos hospitalarios' = SUM(camas[egresos])
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 0fbd5855-4025-5ada-a680-35a812ead55f
+
+	/// Promedio de días de estada por egreso (ALOS).
+	measure 'Estada media (días)' = DIVIDE(SUM(camas[dias_estada]), [Egresos hospitalarios])
+		formatString: 0.0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 67970905-5a14-526e-89c6-658681723b76
+
+	/// Estada que correspondería según la norma por diagnóstico (GRD simplificado).
+	measure 'Estada esperada (días)' = DIVIDE(SUM(camas[dias_estada_esperados]), [Egresos hospitalarios])
+		formatString: 0.0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 1c95c819-7401-50e9-a5db-f683dc247288
+
+	/// Estada real sobre la esperada: sobre 1, los pacientes se quedan más de lo que indica la norma.
+	measure 'Índice de estada (IEMA)' = DIVIDE(SUM(camas[dias_estada]), SUM(camas[dias_estada_esperados]))
+		formatString: 0.00
+		displayFolder: 1. Hospitalizado
+		lineageTag: 1f070ce7-f360-5d8e-beac-0eb746ab7f5d
+
+	/// Días cama usados por sobre la estada esperada: capacidad inmovilizada.
+	measure 'Días de estada sobre la norma' = SUMX(camas, MAX(0, camas[dias_estada] - camas[dias_estada_esperados]))
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 003f741c-a133-501f-90a2-c7f84bae679d
+
+	/// Camas dotadas promedio de los meses del periodo.
+	measure 'Camas dotadas (promedio)' = AVERAGEX(VALUES(camas[fecha]), CALCULATE(SUM(camas[camas_dotadas])))
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 43407310-e609-52c0-8bd7-735028346f70
+
+	/// Días calendario de los meses del periodo.
+	measure 'Días del periodo' = SUMX(VALUES(camas[fecha]), DAY(EOMONTH(camas[fecha], 0)))
+		formatString: #,##0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 4ec1abd6-3774-5d98-be53-1da5c733e5d2
+
+	/// Egresos por cama en el periodo: cuántos pacientes pasan por cada cama.
+	measure 'Índice de rotación' = DIVIDE([Egresos hospitalarios], [Camas dotadas (promedio)])
+		formatString: 0.0
+		displayFolder: 1. Hospitalizado
+		lineageTag: 44eaaa32-c68a-5cf3-9b69-ca0a5340d69d
+
+	/// Egresos que vuelven a hospitalizarse antes de 30 días.
+	measure 'Reingresos a 30 días %' = DIVIDE(SUM(camas[reingresos_30d]), [Egresos hospitalarios])
+		formatString: 0.0%
+		displayFolder: 1. Hospitalizado
+		lineageTag: 889963cd-d91c-548a-96e2-938a4332b210
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 6cf0d26c-75d5-5c43-ba08-4a8a8259b4da
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 4a5a863a-1c72-5593-be36-9bf4b8fbd42d
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8c7642e4-6d2a-5809-a8a8-4591d4dc1fd8
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: e5a2f6e2-192f-5f9f-b39e-e7dfa5aa9154
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: string
+		isHidden
+		lineageTag: fd738651-57de-5200-bc82-500ffb4fc886
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column camas_dotadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 61629e4a-3c85-5339-849d-5afb05154ba5
+		summarizeBy: none
+		sourceColumn: camas_dotadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_cama_disponibles
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fcaa9aba-fc05-5222-9b1f-a00a8d953a32
+		summarizeBy: none
+		sourceColumn: dias_cama_disponibles
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_cama_ocupados
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0926e4b2-7141-52c1-b72f-7b7c1c9d9a88
+		summarizeBy: none
+		sourceColumn: dias_cama_ocupados
+
+		annotation SummarizationSetBy = Automatic
+
+	column egresos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 40713765-e439-5fe2-b57d-5b55e3d5d95d
+		summarizeBy: none
+		sourceColumn: egresos
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_estada
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 96b1dbd3-474c-5a34-8745-da53a59b29f3
+		summarizeBy: none
+		sourceColumn: dias_estada
+
+		annotation SummarizationSetBy = Automatic
+
+	column dias_estada_esperados
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 79a9b45b-4b29-598e-8a7a-6026b98a09a9
+		summarizeBy: none
+		sourceColumn: dias_estada_esperados
+
+		annotation SummarizationSetBy = Automatic
+
+	column reingresos_30d
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 59f2e0a9-d115-5c35-88da-1a6f0867a4f2
+		summarizeBy: none
+		sourceColumn: reingresos_30d
+
+		annotation SummarizationSetBy = Automatic
+
+	partition camas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("camas.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"linea", type text}, {"camas_dotadas", Int64.Type}, {"dias_cama_disponibles", Int64.Type}, {"dias_cama_ocupados", Int64.Type}, {"egresos", Int64.Type}, {"dias_estada", Int64.Type}, {"dias_estada_esperados", Int64.Type}, {"reingresos_30d", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

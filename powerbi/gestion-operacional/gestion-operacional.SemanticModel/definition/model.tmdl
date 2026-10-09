@@ -1,0 +1,32 @@
+model Model
+	culture: es-CL
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-CL
+	dataAccessOptions
+		fastCombine
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["UrlDatos","LeerCsv","camas","pabellones","suspensiones","urgencia","ambulatorio","apoyo","produccion","sucursales","lineas","metas","glosario"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table camas
+ref table pabellones
+ref table suspensiones
+ref table urgencia
+ref table ambulatorio
+ref table apoyo
+ref table produccion
+ref table sucursales
+ref table lineas
+ref table metas
+ref table 'Reducción de estada'
+ref table 'Reducción de suspensiones'
+ref table glosario
+ref table Calendario
+
+ref cultureInfo es-CL

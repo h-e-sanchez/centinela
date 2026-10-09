@@ -1,0 +1,279 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4b23414595b67c664533",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 600,
+    "height": 492,
+    "width": 760,
+    "tabOrder": 600
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "especialidad"
+                }
+              },
+              "queryRef": "ambulatorio.especialidad",
+              "nativeQueryRef": "especialidad",
+              "active": true,
+              "displayName": "Especialidad"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Horas ofertadas"
+                }
+              },
+              "queryRef": "ambulatorio.Horas ofertadas",
+              "nativeQueryRef": "Horas ofertadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Utilización de box %"
+                }
+              },
+              "queryRef": "ambulatorio.Utilización de box %",
+              "nativeQueryRef": "Utilización de box %",
+              "displayName": "Utilización de box"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Ocupación de agenda %"
+                }
+              },
+              "queryRef": "ambulatorio.Ocupación de agenda %",
+              "nativeQueryRef": "Ocupación de agenda %",
+              "displayName": "Ocupación de agenda"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Consultas realizadas"
+                }
+              },
+              "queryRef": "ambulatorio.Consultas realizadas",
+              "nativeQueryRef": "Consultas realizadas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Inasistencia %"
+                }
+              },
+              "queryRef": "ambulatorio.Inasistencia %",
+              "nativeQueryRef": "Inasistencia %",
+              "displayName": "Inasistencia"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Lista de espera (último mes)"
+                }
+              },
+              "queryRef": "ambulatorio.Lista de espera (último mes)",
+              "nativeQueryRef": "Lista de espera (último mes)",
+              "displayName": "Lista de espera"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ambulatorio"
+                    }
+                  },
+                  "Property": "Días al tercer cupo"
+                }
+              },
+              "queryRef": "ambulatorio.Días al tercer cupo",
+              "nativeQueryRef": "Días al tercer cupo"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por especialidad'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

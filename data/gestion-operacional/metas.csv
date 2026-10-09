@@ -1,0 +1,14 @@
+indicador,area,meta,sentido,formato,orden
+Ocupación de camas,Hospitalizado,0.85,menor,pct,1
+Índice de estada (IEMA),Hospitalizado,1.0,menor,num,2
+Reingresos a 30 días,Hospitalizado,0.05,menor,pct,3
+Utilización de pabellón,Pabellones,0.8,mayor,pct,4
+Suspensión de cirugías,Pabellones,0.07,menor,pct,5
+Primera cirugía a la hora,Pabellones,0.8,mayor,pct,6
+Atenciones de urgencia en meta,Urgencia,0.85,mayor,pct,7
+Abandono de urgencia,Urgencia,0.03,menor,pct,8
+Espera de cama desde urgencia,Urgencia,4.0,menor,horas,9
+Inasistencia ambulatoria,Ambulatorio,0.1,menor,pct,10
+Utilización de box,Ambulatorio,0.75,mayor,pct,11
+Exámenes de urgencia en meta,Apoyo,0.9,mayor,pct,12
+Margen de contribución,Resultado,0.15,mayor,pct,13
