@@ -16,6 +16,14 @@ function el(tag, attrs = {}, hijos = []) {
 const chips = (lista) => el("ul", { clase: "chips" }, lista.map((h) => el("li", { texto: h })));
 const fichaDe = (rep) => `ficha.html?r=${encodeURIComponent(rep.slug)}`;
 
+// Titular de una historia con su cifra en negrita: «**3,2% a 6,1%** de ausentismo, según la empresa».
+function titular(h) {
+  const texto = h.titular || `${h.resultado} · ${h.industria}`;
+  const i = texto.indexOf(h.resultado);
+  if (i < 0) return [texto];
+  return [texto.slice(0, i), el("strong", { texto: h.resultado }), texto.slice(i + h.resultado.length)];
+}
+
 // ------------------------------------------------------------------ panel "en una pantalla"
 // Una opción por reporte (publicados y en preparación) a la izquierda; a la derecha, el resumen,
 // las cifras de la historia y el reporte embebido de la opción elegida.
@@ -26,7 +34,7 @@ function opcion(rep, i, alElegir) {
                                "aria-controls": "visor", "aria-selected": "false" }, [
     el("span", { clase: "eyebrow", texto: rep.publicado ? rep.tema : `En preparación · ${rep.tema}` }),
     el("strong", { texto: rep.titulo }),
-    cifra ? el("span", { clase: `opcion-cifra ${cifra.tono}`, texto: `${cifra.resultado} · ${cifra.industria}` }) : null,
+    cifra ? el("span", { clase: `opcion-cifra ${cifra.tono}` }, titular(cifra)) : null,
   ]);
   if (rep.color) boton.style.setProperty("--acento", rep.color);
   boton.addEventListener("click", () => alElegir(i));
@@ -40,7 +48,7 @@ function visor(rep) {
   ];
   if (rep.historias?.length) {
     partes.push(el("ul", { clase: "cifras" }, rep.historias.map((h) =>
-      el("li", { clase: h.tono, title: h.texto }, [el("strong", { texto: h.resultado }), el("span", { texto: h.industria })])
+      el("li", { clase: h.tono, title: h.texto }, [el("span", {}, titular(h))])
     )));
   }
   if (rep.publicado) {

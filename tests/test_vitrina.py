@@ -57,6 +57,16 @@ def test_catalogo_completo_y_archivos_presentes(rep):
             assert d["archivo"].startswith(f"descargas/{rep['prefijo']}-"), d["archivo"]
 
 
+
+@pytest.mark.parametrize("rep", CATALOGO, ids=IDS)
+def test_cada_historia_tiene_un_titular_que_dice_que_mide(rep):
+    # La vitrina muestra el titular con la cifra en negrita: «3,2% a 6,1%» sola no dice qué mide.
+    for h in rep.get("historias", []):
+        assert h.get("titular"), f"{h['resultado']} sin titular"
+        assert h["resultado"] in h["titular"], f"el titular no contiene la cifra {h['resultado']}"
+        assert len(h["titular"]) <= 70, f"titular largo ({len(h['titular'])}): {h['titular']}"
+        assert h["titular"] != h["resultado"], "el titular debe decir qué mide la cifra"
+
 def test_un_solo_reporte_destacado():
     assert sum(1 for r in CATALOGO if r.get("destacado")) == 1
 
