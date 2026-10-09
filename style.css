@@ -149,7 +149,8 @@ tr.subtotal td { border-top: 2px solid var(--border-strong); background: var(--s
 .opcion[aria-selected="true"] { background: var(--surface-2); border-color: var(--text); }
 .opcion .eyebrow { margin: 0; }
 .opcion strong { font-size: var(--fs-md); line-height: 1.3; }
-.opcion-cifra { font-size: var(--fs-sm); color: var(--muted); }
+.opcion-cifra { font-size: var(--fs-sm); line-height: 1.35; color: var(--muted); }
+.opcion-cifra strong { font-size: inherit; font-weight: 600; font-variant-numeric: tabular-nums; }
 .opcion-cifra.ok { color: var(--ok); }
 .opcion-cifra.critica { color: var(--critica); }
 .visor { padding-top: 0; }
@@ -166,6 +167,7 @@ tr.subtotal td { border-top: 2px solid var(--border-strong); background: var(--s
 .cifras li.critica::before { background: var(--critica); }
 .cifras li strong { font-weight: 600; font-variant-numeric: tabular-nums; }
 .cifras li span { color: var(--muted); }
+.cifras li span strong { color: var(--text); }
 @media (max-width: 760px) {
   .panel-vitrina { grid-template-columns: 1fr; }
   .selector { flex-direction: row; overflow-x: auto; }

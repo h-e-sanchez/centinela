@@ -28,18 +28,21 @@
         {
           "industria": "Manufactura",
           "resultado": "+20,4%",
+          "titular": "Resultado operacional +20,4% vs. presupuesto",
           "tono": "ok",
           "texto": "Ingresos sobre el presupuesto, con peak en el cuarto trimestre, y costos controlados."
         },
         {
           "industria": "Energía",
           "resultado": "+0,3%",
+          "titular": "Energía cierra a +0,3% del presupuesto",
           "tono": "neutro",
           "texto": "La demanda de invierno estaba bien presupuestada: el real se mueve dentro del ruido."
         },
         {
           "industria": "Salud",
           "resultado": "−72,1%",
+          "titular": "Salud: resultado operacional −72,1% vs. presupuesto",
           "tono": "critica",
           "texto": "La campaña de invierno dispara los costos clínicos: resultado negativo de junio a agosto. El forecast de marzo no lo anticipó y la mitad del sobregasto cae en la Clínica Poniente."
         }
@@ -107,18 +110,21 @@
         {
           "industria": "Ausentismo",
           "resultado": "3,2% a 6,1%",
+          "titular": "3,2% a 6,1% de ausentismo, según la empresa",
           "tono": "neutro",
           "texto": "Energía, Manufactura y Salud: más ausencia donde hay turnos y trabajo físico; pico en invierno en las tres."
         },
         {
           "industria": "Pilotos",
           "resultado": "−17% a −20%",
+          "titular": "Los pilotos bajan −17% a −20% el costo por hora cubierta",
           "tono": "ok",
           "texto": "El pool interno baja el costo por hora cubierta en Concepción, Zona Norte y Clínica Oriente; las sedes de control no cambian."
         },
         {
           "industria": "Bradford",
           "resultado": "207",
+          "titular": "207 personas sobre 200 en el Factor Bradford",
           "tono": "critica",
           "texto": "Personas sobre 200 en el Factor Bradford en las tres empresas: ausencias cortas y frecuentes que piden seguimiento."
         }
@@ -185,18 +191,21 @@
         {
           "industria": "Control",
           "resultado": "9,5% → 3,5%",
+          "titular": "Cobros sin respaldo: 9,5% → 3,5% de lo facturado",
           "tono": "ok",
           "texto": "Observado sobre lo facturado antes y después de cruzar cada estado de pago con sus OT, en las tres empresas."
         },
         {
           "industria": "Evitado",
           "resultado": "$403 M",
+          "titular": "$403 M rechazados antes de pagar",
           "tono": "ok",
           "texto": "Rechazado antes de pagar desde julio de 2025; en el semestre anterior se pagaron $357 M de más."
         },
         {
           "industria": "Riesgosos",
           "resultado": "70% vs. 92%",
+          "titular": "Plan preventivo cumplido: 70% vs. 92% (riesgosos vs. resto)",
           "tono": "critica",
           "texto": "Los contratistas que más cobran sin respaldo también cumplen peor el plan preventivo."
         }
@@ -267,18 +276,21 @@
         {
           "industria": "Salud",
           "resultado": "+75 días",
+          "titular": "Ficha clínica: +75 días de atraso al P85",
           "tono": "critica",
           "texto": "La ficha clínica crece 28% en alcance a mitad de proyecto: la velocidad se mantiene, pero su P85 queda 75 días después de lo comprometido."
         },
         {
           "industria": "Energía",
           "resultado": "39%",
+          "titular": "Integraciones genera el 39% de las horas bloqueadas",
           "tono": "critica",
           "texto": "Integraciones, con un equipo corto y despliegues en ventanas semanales, genera el 39% de las horas bloqueadas de la empresa."
         },
         {
           "industria": "Manufactura",
           "resultado": "90%",
+          "titular": "El ERP cumple el 90% de lo que compromete por sprint",
           "tono": "ok",
           "texto": "El ERP cumple el 90% de lo que compromete cada sprint, con historias chicas, y su P50 cae antes de la fecha comprometida."
         }
@@ -351,18 +363,21 @@
         {
           "industria": "Salud",
           "resultado": "93 días",
+          "titular": "Salud cobra a 93 días (DSO)",
           "tono": "critica",
           "texto": "Fonasa y las isapres pagan lento: el DSO pasa los 90 días, el ciclo es el más largo de las tres y la caja cae bajo el mínimo en 7 semanas de 2026."
         },
         {
           "industria": "Manufactura",
           "resultado": "+25 días",
+          "titular": "Antofagasta cierra 2025 con +25 días de inventario",
           "tono": "critica",
           "texto": "El año flojo de 2025 deja sobrestock de producto terminado en Antofagasta: cierra 2025 con unos 25 días más de inventario que las otras sucursales."
         },
         {
           "industria": "Energía",
           "resultado": "−15 días",
+          "titular": "Energía opera con un ciclo de caja de −15 días",
           "tono": "ok",
           "texto": "Cobra a 23 días y paga a 51: el ciclo de conversión de caja es negativo y los proveedores financian la operación."
         }
@@ -435,18 +450,21 @@
         {
           "industria": "Salud",
           "resultado": "1,11 vs. 0,90",
+          "titular": "Compa-ratio de UCI vs. ambulatorio: 1,11 vs. 0,90",
           "tono": "critica",
           "texto": "La UCI paga sobre la banda para retener técnicos, mientras ambulatorio queda bajo el punto medio por el mismo grado."
         },
         {
           "industria": "Energía",
           "resultado": "8,6%",
+          "titular": "8,6% de la dotación de Energía bajo el mínimo de su banda",
           "tono": "critica",
           "texto": "Las contrataciones de Zona Norte desde 2024 entraron bajo el mínimo de la banda; corregirlas cuesta $49 M al año."
         },
         {
           "industria": "Manufactura",
           "resultado": "−9,7% / +4,3%",
+          "titular": "Brecha de género cruda vs. en la misma banda: −9,7% / +4,3%",
           "tono": "neutro",
           "texto": "La brecha cruda engaña: en el agregado las mujeres parecen ganar más, pero en la misma banda ganan 4,3% menos."
         }
@@ -520,18 +538,21 @@
         {
           "industria": "Manufactura",
           "resultado": "4,3%",
+          "titular": "Retail deja 4,3% de margen de contribución",
           "tono": "critica",
           "texto": "Retail mueve el mayor volumen, pero con rappel y su costo de servir deja el margen de contribución más bajo; industrial y exportación superan 30%."
         },
         {
           "industria": "Energía",
           "resultado": "100% precio",
+          "titular": "Alza de ingresos de Energía: 100% precio",
           "tono": "neutro",
           "texto": "Los ingresos de 2026 crecen $29 M sobre 2025 y todo lo explica el precio: el volumen en MWh no cambió."
         },
         {
           "industria": "Salud",
           "resultado": "21%",
+          "titular": "21% de los cargos de convenios, fuera de política",
           "tono": "critica",
           "texto": "Tres convenios con empresas negocian sobre la política: uno de cada cinco cargos de convenios queda fuera y dos convenios pierden margen."
         }
@@ -603,18 +624,21 @@
         {
           "industria": "Salud",
           "resultado": "95 días",
+          "titular": "Salud cobra a 95 días y gira su línea de crédito",
           "tono": "critica",
           "texto": "Las aseguradoras pagan lento: la clínica tiene la liquidez más justa y gira su línea de crédito para pagar sueldos y proveedores."
         },
         {
           "industria": "Energía",
           "resultado": "81%",
+          "titular": "Activo fijo: 81% del activo total de Energía",
           "tono": "neutro",
           "texto": "Activo fijo sobre el activo total: la mayor depreciación sobre ingresos y el mayor endeudamiento de las tres."
         },
         {
           "industria": "Manufactura",
           "resultado": "60 → 117 días",
+          "titular": "Inventario de Manufactura: 60 → 117 días en 2025",
           "tono": "critica",
           "texto": "En su año flojo de ventas siguió comprando según presupuesto: el inventario casi se duplica en 2025 y baja en 2026."
         }
@@ -686,18 +710,21 @@
         {
           "industria": "Invierno",
           "resultado": "6,2 h",
+          "titular": "6,2 h de espera de cama en urgencia (julio)",
           "tono": "critica",
           "texto": "En julio de 2026 la ocupación llega a 92% (UCI y pediatría en 97%): la espera de cama en urgencia casi se triplica y las atenciones en meta caen a 67%."
         },
         {
           "industria": "Pabellones",
           "resultado": "15,4%",
+          "titular": "Clínica Poniente suspende el 15,4% de sus cirugías",
           "tono": "critica",
           "texto": "La Clínica Poniente suspende el doble que Oriente, más de 9 de cada 10 por causas evitables, y solo el 45% de sus primeras cirugías parte a la hora."
         },
         {
           "industria": "Estada",
           "resultado": "IEMA 1,26",
+          "titular": "Estada en Clínica Centro: IEMA 1,26 (26% sobre la norma)",
           "tono": "neutro",
           "texto": "Médico-quirúrgico de la Clínica Centro está 26% sobre la norma de estada: camas inmovilizadas justo cuando el invierno las necesita."
         }
