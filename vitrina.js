@@ -29,7 +29,9 @@ function titular(h) {
 // las cifras de la historia y el reporte embebido de la opción elegida.
 
 function opcion(rep, i, alElegir) {
-  const cifra = rep.historias?.[0];
+  // Una historia al azar en cada carga: así la lista alterna tonos (ok, neutro y crítico) entre visitas.
+  const historias = rep.historias || [];
+  const cifra = historias[Math.floor(Math.random() * historias.length)];
   const boton = el("button", { type: "button", role: "tab", clase: "opcion", id: `opcion-${i}`,
                                "aria-controls": "visor", "aria-selected": "false" }, [
     el("span", { clase: "eyebrow", texto: rep.publicado ? rep.tema : `En preparación · ${rep.tema}` }),
