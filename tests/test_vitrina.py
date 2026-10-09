@@ -154,3 +154,15 @@ def test_enlaces_cruzados_del_portafolio():
             "github.com/h-e-sanchez/consulta" in (RAIZ / rel).read_text(encoding="utf-8"), rel
     for rel in ("index.html", "ficha.html", "reporte.html", "datos.html"):
         assert 'class="firma-pie"' in (RAIZ / rel).read_text(encoding="utf-8"), f"{rel} sin firma en el pie"
+
+
+@pytest.mark.parametrize("pagina", sorted(p.name for p in RAIZ.glob("*.html")))
+def test_cada_pagina_mide_visitas_y_lo_declara(pagina):
+    html = (RAIZ / pagina).read_text(encoding="utf-8")
+    assert '<script src="analitica.js?v=1" data-sitio="centinela"></script>' in html
+    assert "GoatCounter" in html.split("<footer", 1)[-1], "el pie debe avisar que medimos visitas"
+
+
+def test_los_iframes_de_power_bi_cuentan_su_vista():
+    for js in ("ficha.js", "reporte.js"):
+        assert "analitica?.alVer(iframe" in (RAIZ / js).read_text(encoding="utf-8"), js
