@@ -3,7 +3,7 @@
 > Especificación del reporte. Define datos, páginas y medidas para que el generador, el modelo
 > PBIP y la guía se construyan contra un mismo contrato.
 
-**Estado:** construido el 2026-10-09 (pendiente Desktop y publicación) · **Slug:** `gestion-operacional` · **Tema:** Gestión operacional · Salud
+**Estado:** construido y publicado el 2026-10-09 · **Slug:** `gestion-operacional` · **Tema:** Gestión operacional · Salud
 
 ## Qué resuelve
 
