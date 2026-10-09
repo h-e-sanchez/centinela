@@ -1,0 +1,40 @@
+/// Dimensión: las tres clínicas de la empresa de Salud de la vitrina (las sucursales del reporte #1).
+table sucursales
+	lineageTag: 80c3bc58-ed9d-55f1-a918-74aceaa6054c
+
+	column sucursal
+		dataType: string
+		lineageTag: 6eb8b9c8-c732-5dcb-a5af-88d2648fb881
+		summarizeBy: none
+		sourceColumn: sucursal
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: d767dd05-c4ae-52e4-83c0-4441349663dd
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 110bedbb-09ba-597a-a0e7-1a5fa1823be7
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sucursales = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("sucursales.csv", {{"sucursal", type text}, {"empresa", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

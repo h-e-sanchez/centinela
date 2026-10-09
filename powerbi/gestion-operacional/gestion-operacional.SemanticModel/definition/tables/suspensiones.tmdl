@@ -1,0 +1,100 @@
+/// Cirugías suspendidas por clínica, causa y mes, con la marca de causa evitable.
+table suspensiones
+	lineageTag: 6a2174d6-0d7a-58cc-924a-a65bbcbe4fa7
+
+	/// Cirugías suspendidas, para abrir por causa.
+	measure 'Suspensiones por causa' = SUM(suspensiones[suspendidas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 115650d3-3754-5b05-af9d-06e2e08ecced
+
+	/// Suspensiones por causas que la gestión puede evitar (todas menos la causa médica del paciente).
+	measure 'Suspensiones evitables' = CALCULATE([Suspensiones por causa], suspensiones[evitable] = 1)
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 3bbd7ab2-7b0b-596b-b15e-fd9cde9b4b70
+
+	/// Parte de las suspensiones que era evitable.
+	measure 'Suspensiones evitables %' = DIVIDE([Suspensiones evitables], [Suspensiones por causa])
+		formatString: 0%
+		displayFolder: 2. Pabellones
+		lineageTag: e070057a-203f-576b-b73b-30f93621f950
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 9ca1d227-2d4f-5bdd-9d5d-9b749eb6acd3
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: dc3ce915-6767-5f16-a44f-1a490041cc2f
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9d3d0bfb-8d99-542c-976f-d6f9262b7bd7
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: b98f6302-50c7-5b5e-a640-fc4967ebb546
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column causa
+		dataType: string
+		lineageTag: d32ce452-68d5-5d4a-8439-8ebf3c2e6aef
+		summarizeBy: none
+		sourceColumn: causa
+
+		annotation SummarizationSetBy = Automatic
+
+	column evitable
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b1a2e865-f712-5fc0-8c31-c9d63328a4b3
+		summarizeBy: none
+		sourceColumn: evitable
+
+		annotation SummarizationSetBy = Automatic
+
+	column suspendidas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b7ba2b52-21e3-569f-8bb6-e9d80716df95
+		summarizeBy: none
+		sourceColumn: suspendidas
+
+		annotation SummarizationSetBy = Automatic
+
+	partition suspensiones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("suspensiones.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"causa", type text}, {"evitable", Int64.Type}, {"suspendidas", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

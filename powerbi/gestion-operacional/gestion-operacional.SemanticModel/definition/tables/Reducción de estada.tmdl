@@ -1,0 +1,29 @@
+/// Parámetro what-if: parte de los días de estada sobre la norma que se recupera, de 0% a 100%.
+table 'Reducción de estada'
+	lineageTag: aaf3d6b4-0763-5319-b8f6-b5eb123c1ec4
+
+	/// Valor elegido en el segmentador; si no hay uno elegido, 30%.
+	measure 'Reducción de estada %' = SELECTEDVALUE('Reducción de estada'[Reducción de estada], 0.3)
+		formatString: 0%
+		displayFolder: 7. Capacidad
+		lineageTag: 0cb7cbf6-92ad-5e38-ad19-2eea347c0f05
+
+	column 'Reducción de estada'
+		dataType: double
+		formatString: 0%
+		lineageTag: f93fa755-e8b0-54e4-ae03-e881c9ef8d2b
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Reducción de estada' = calculated
+		mode: import
+		source = SELECTCOLUMNS(GENERATESERIES(0, 10, 1), "Value", [Value] / 10)
+
+	annotation PBI_ResultType = Table

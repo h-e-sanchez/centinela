@@ -91,6 +91,9 @@ python data/generar_capital_de_trabajo.py
 # Libro diario y EEFF de las tres empresas (cuadra con el Real del reporte #1)
 python data/generar_estados_financieros.py
 
+# Operación de las tres clínicas de Salud: camas, pabellones, urgencia, ambulatorio y apoyo
+python data/generar_gestion_operacional.py
+
 # Generar presupuesto.csv y real.csv sintéticos
 python data/generar_datos_sinteticos.py
 
@@ -161,6 +164,13 @@ lleva el Real del #1 a un libro diario en partida doble y sube hasta el balance,
 resultados y el flujo de efectivo indirecto de cada empresa. Incluye indicadores financieros, cierre
 anual y una página de cuadraturas, todas en cero. Guía en
 [`reportes/estados-financieros/guia.md`](reportes/estados-financieros/guia.md).
+
+El reporte #9, **Gestión operacional clínica** ([`powerbi/gestion-operacional/`](powerbi/gestion-operacional/)),
+mira la empresa de Salud desde la operación de sus tres clínicas: ocupación y estada (IEMA),
+pabellones y suspensiones, tiempos de urgencia por categoría de triage, box y lista de espera,
+TAT de apoyo diagnóstico, un tablero de 13 indicadores con semáforo, la capacidad que se libera sin
+invertir y el margen por línea y previsión. Guía en
+[`reportes/gestion-operacional/guia.md`](reportes/gestion-operacional/guia.md).
 
 ## Demo
 

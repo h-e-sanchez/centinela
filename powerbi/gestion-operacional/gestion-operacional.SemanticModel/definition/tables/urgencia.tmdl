@@ -1,0 +1,174 @@
+/// Urgencia por clínica, categoría de triage (C1 a C5) y mes: atenciones, espera, abandonos y espera de cama.
+table urgencia
+	lineageTag: ac7a4a2d-ebbb-5e93-a52e-16944440fa13
+
+	/// Pacientes atendidos en urgencia.
+	measure 'Atenciones de urgencia' = SUM(urgencia[atenciones])
+		formatString: #,##0
+		displayFolder: 3. Urgencia
+		lineageTag: f3cf83ce-abf9-5232-a018-9e7570bda14b
+
+	/// Atenciones cuya espera hasta el médico quedó dentro de la meta de su categoría.
+	measure 'Atenciones en meta de espera %' = DIVIDE(SUM(urgencia[atenciones_en_meta]), [Atenciones de urgencia])
+		formatString: 0.0%
+		displayFolder: 3. Urgencia
+		lineageTag: 1dcc7d0a-0865-5317-ba0a-5533648d6782
+
+	/// Minutos promedio desde la llegada hasta la atención médica.
+	measure 'Espera hasta la atención (min)' = DIVIDE(SUM(urgencia[minutos_espera]), [Atenciones de urgencia])
+		formatString: #,##0
+		displayFolder: 3. Urgencia
+		lineageTag: b2afff8d-5c13-5ecc-adb7-83b1f4e654fa
+
+	/// Espera máxima de la categoría de triage.
+	measure 'Meta de espera (min)' = MAX(urgencia[meta_minutos])
+		formatString: #,##0
+		displayFolder: 3. Urgencia
+		lineageTag: f44dea7e-d37e-59d6-9e86-047737aa2d6c
+
+	/// Pacientes que se van sin ser atendidos.
+	measure 'Abandono de urgencia %' = DIVIDE(SUM(urgencia[abandonos]), [Atenciones de urgencia])
+		formatString: 0.0%
+		displayFolder: 3. Urgencia
+		lineageTag: 33928fff-437d-5e91-b034-260187964c3a
+
+	/// Atenciones que terminan en hospitalización.
+	measure 'Hospitalización desde urgencia %' = DIVIDE(SUM(urgencia[hospitalizados]), [Atenciones de urgencia])
+		formatString: 0.0%
+		displayFolder: 3. Urgencia
+		lineageTag: 7d41398a-3241-54bd-83bf-211def573d31
+
+	/// Horas que un paciente con indicación de hospitalización espera cama en urgencia.
+	measure 'Espera de cama promedio (h)' = DIVIDE(SUM(urgencia[horas_espera_cama]), SUM(urgencia[hospitalizados]))
+		formatString: 0.0
+		displayFolder: 3. Urgencia
+		lineageTag: a193195a-acf9-5f61-a4b0-bc791b06f89c
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 3c614661-4496-5ace-8ecc-89dff9ce42f9
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 48838bce-a594-5750-b3f1-53538159af9e
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ecf5966a-2157-5870-a7b7-1f7ac32e258a
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: e6d7db99-0144-5403-ae92-053fd0e82e8f
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: d7d7bd6d-7078-597f-925e-4eb6593e79c3
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta_minutos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1665a74c-aded-578d-a7c3-6781b374d83a
+		summarizeBy: none
+		sourceColumn: meta_minutos
+
+		annotation SummarizationSetBy = Automatic
+
+	column atenciones
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 47c85017-3a54-5f3e-8e79-c3d069cabf03
+		summarizeBy: none
+		sourceColumn: atenciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column atenciones_en_meta
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: de73f874-ab6b-5d76-bafd-ec3c9d2531fd
+		summarizeBy: none
+		sourceColumn: atenciones_en_meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column minutos_espera
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 44dacac5-eb95-5944-8315-6697e6b5cfe7
+		summarizeBy: none
+		sourceColumn: minutos_espera
+
+		annotation SummarizationSetBy = Automatic
+
+	column abandonos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e88b6938-ca03-5b0b-b3da-391da030a8b2
+		summarizeBy: none
+		sourceColumn: abandonos
+
+		annotation SummarizationSetBy = Automatic
+
+	column hospitalizados
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6d58e783-8683-5bb7-815f-1ae19985196f
+		summarizeBy: none
+		sourceColumn: hospitalizados
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_espera_cama
+		dataType: double
+		isHidden
+		formatString: #,##0.0
+		lineageTag: b6f75964-dfe6-5f71-a056-f10773c5d3f0
+		summarizeBy: none
+		sourceColumn: horas_espera_cama
+
+		annotation SummarizationSetBy = Automatic
+
+	partition urgencia = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("urgencia.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"categoria", type text}, {"meta_minutos", Int64.Type}, {"atenciones", Int64.Type}, {"atenciones_en_meta", Int64.Type}, {"minutos_espera", Int64.Type}, {"abandonos", Int64.Type}, {"hospitalizados", Int64.Type}, {"horas_espera_cama", type number}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

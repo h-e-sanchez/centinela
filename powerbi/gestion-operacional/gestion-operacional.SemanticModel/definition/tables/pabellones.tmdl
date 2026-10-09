@@ -1,0 +1,196 @@
+/// Pabellones por clínica, especialidad y mes: horas habilitadas, programadas y utilizadas, cirugías y puntualidad.
+table pabellones
+	lineageTag: 2f3a7d63-2f6c-5622-b274-aca6138d3619
+
+	/// Horas de pabellón disponibles (pabellones × horas por día hábil).
+	measure 'Horas habilitadas' = SUM(pabellones[horas_habilitadas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 0471dfc9-4bef-5c3b-9e3b-b712d515d562
+
+	/// Horas de pabellón con paciente, incluido el recambio.
+	measure 'Horas utilizadas' = SUM(pabellones[horas_utilizadas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: b411199a-6c56-5dee-809f-4e79495710e1
+
+	/// Horas habilitadas que no se usaron.
+	measure 'Horas ociosas' = [Horas habilitadas] - [Horas utilizadas]
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 9934ee27-6a1b-5d5d-9107-502a08c224da
+
+	/// Horas utilizadas sobre habilitadas.
+	measure 'Utilización de pabellón %' = DIVIDE([Horas utilizadas], [Horas habilitadas])
+		formatString: 0.0%
+		displayFolder: 2. Pabellones
+		lineageTag: c6e441b1-fbc7-5af2-8af7-187ab96404df
+
+	/// Cirugías en la tabla quirúrgica.
+	measure 'Cirugías programadas' = SUM(pabellones[cirugias_programadas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 1c1d88ac-0290-593e-a143-356498fe793a
+
+	/// Cirugías programadas que se hicieron.
+	measure 'Cirugías realizadas' = SUM(pabellones[cirugias_realizadas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: f7575ed4-7bb9-5ac2-a673-c7d9837486c5
+
+	/// Cirugías programadas que no se hicieron el día previsto.
+	measure 'Cirugías suspendidas' = SUM(pabellones[cirugias_suspendidas])
+		formatString: #,##0
+		displayFolder: 2. Pabellones
+		lineageTag: 94ef3831-2884-578c-9739-26d67be45b38
+
+	/// Cirugías suspendidas sobre programadas.
+	measure 'Suspensión de cirugías %' = DIVIDE([Cirugías suspendidas], [Cirugías programadas])
+		formatString: 0.0%
+		displayFolder: 2. Pabellones
+		lineageTag: 173cf777-17e0-5a2c-aba1-9ce454de6859
+
+	/// Primeras cirugías del día que parten a la hora programada: si la primera parte tarde, toda la tabla se corre.
+	measure 'Primera cirugía a la hora %' = DIVIDE(SUM(pabellones[primeras_a_la_hora]), SUM(pabellones[primeras_del_dia]))
+		formatString: 0.0%
+		displayFolder: 2. Pabellones
+		lineageTag: 6b0b4302-3648-557e-9140-60663b5d5af7
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 447a8cb7-43ab-5c21-967e-b86b77620839
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1ca5f303-31c2-56fc-bebd-44e5e0fa63ab
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e03fabf5-fa46-59ee-8b13-940670dc0297
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 24d11d83-88e2-53a6-b0f9-502de1264fb3
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column especialidad
+		dataType: string
+		lineageTag: 2682ae10-3e7a-5d6e-901f-cdd16dff48cb
+		summarizeBy: none
+		sourceColumn: especialidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_habilitadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2646dae2-a3cb-596f-8fb7-81686be91aac
+		summarizeBy: none
+		sourceColumn: horas_habilitadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_programadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 72c529bc-fc03-56a3-beae-d9f80db8f62e
+		summarizeBy: none
+		sourceColumn: horas_programadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column horas_utilizadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2c9b30d8-a652-511f-878d-383063e54921
+		summarizeBy: none
+		sourceColumn: horas_utilizadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column cirugias_programadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c2c3507f-efd7-5f7e-99d7-9afe4da84b9f
+		summarizeBy: none
+		sourceColumn: cirugias_programadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column cirugias_realizadas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5cbe242a-95ad-570f-9e33-015e8cc180dd
+		summarizeBy: none
+		sourceColumn: cirugias_realizadas
+
+		annotation SummarizationSetBy = Automatic
+
+	column cirugias_suspendidas
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d7c392ab-ad5f-5172-9437-99611e0640be
+		summarizeBy: none
+		sourceColumn: cirugias_suspendidas
+
+		annotation SummarizationSetBy = Automatic
+
+	column primeras_del_dia
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 26ab04d6-2610-5a97-a5bf-d13627e5207e
+		summarizeBy: none
+		sourceColumn: primeras_del_dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column primeras_a_la_hora
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: f77f1717-6c8c-5d39-9579-ad2e3cd0b2ad
+		summarizeBy: none
+		sourceColumn: primeras_a_la_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pabellones = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("pabellones.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"especialidad", type text}, {"horas_habilitadas", Int64.Type}, {"horas_programadas", Int64.Type}, {"horas_utilizadas", Int64.Type}, {"cirugias_programadas", Int64.Type}, {"cirugias_realizadas", Int64.Type}, {"cirugias_suspendidas", Int64.Type}, {"primeras_del_dia", Int64.Type}, {"primeras_a_la_hora", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

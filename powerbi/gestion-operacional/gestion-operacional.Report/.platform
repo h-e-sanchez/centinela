@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "gestion-operacional"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "13c8fb11-55f6-5583-9fd0-5e49a0755c0f"
+  }
+}

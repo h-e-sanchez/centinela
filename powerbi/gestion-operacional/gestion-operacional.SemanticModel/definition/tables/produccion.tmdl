@@ -1,0 +1,282 @@
+/// Prestaciones, ingresos por previsión y costos directos por clínica, línea y mes.
+table produccion
+	lineageTag: 3d3c081a-a85e-5586-9f4e-37e058011e49
+
+	/// Días cama, cirugías, atenciones, consultas o exámenes, según la línea.
+	measure 'Total de prestaciones' = SUM(produccion[prestaciones])
+		formatString: #,##0
+		displayFolder: 6. Resultado
+		lineageTag: 25248ccd-345f-5dbd-9f8e-fb4bcdb11878
+
+	/// Ingreso facturado a la previsión y al paciente.
+	measure 'Ingreso total' = SUM(produccion[ingreso])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: e048299b-7dea-5a67-ad51-5177b489c342
+
+	/// Dotación propia de la línea: es fijo en el mes, no cambia con el volumen.
+	measure 'Costo de personal' = SUM(produccion[costo_personal])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: f0e1b631-b2ac-508a-9cdc-8eea315ebad8
+
+	/// Medicamentos e insumos clínicos: variable con las prestaciones.
+	measure 'Costo de insumos' = SUM(produccion[costo_insumos])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: 9ec3bbe6-27f0-563e-8ed5-fbe53c55fde8
+
+	/// Honorarios médicos por acto: variable con el ingreso.
+	measure 'Costo de honorarios' = SUM(produccion[costo_honorarios])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: 15ddcf5c-e21e-5fed-8366-2a7d438d1224
+
+	/// Personal, insumos y honorarios de la línea.
+	measure 'Costo directo' = [Costo de personal] + [Costo de insumos] + [Costo de honorarios]
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: eaab3fe2-2af4-5196-a6e4-bdeec79d7707
+
+	/// Lo que deja la línea después de sus costos directos, para cubrir gastos generales.
+	measure 'Margen de contribución' = [Ingreso total] - [Costo directo]
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: f1880fdc-8456-54a7-a61f-0e685e0e0215
+
+	/// Margen de contribución sobre ingreso.
+	measure 'Margen de contribución %' = DIVIDE([Margen de contribución], [Ingreso total])
+		formatString: 0.0%
+		displayFolder: 6. Resultado
+		lineageTag: 1cc29703-ec24-5005-b1b6-7a22bfb05e17
+
+	/// Ingreso menos costos variables: lo que suma una prestación más con la dotación ya pagada.
+	measure 'Margen variable' = [Ingreso total] - [Costo de insumos] - [Costo de honorarios]
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: e38d6fc3-4b57-5605-9eeb-7876ee481609
+
+	/// Ingreso promedio de cada prestación.
+	measure 'Ingreso por prestación' = DIVIDE([Ingreso total], [Total de prestaciones])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: d5438069-c175-5dc2-843e-eda5e0fb96ad
+
+	/// Costo directo promedio de cada prestación.
+	measure 'Costo directo por prestación' = DIVIDE([Costo directo], [Total de prestaciones])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: a8547aff-906d-56d1-9dd0-212346607876
+
+	/// Margen variable promedio de cada prestación.
+	measure 'Margen variable por prestación' = DIVIDE([Margen variable], [Total de prestaciones])
+		formatString: \$ #,##0
+		displayFolder: 6. Resultado
+		lineageTag: 7eb51ec8-5584-57aa-ac41-800433206839
+
+	/// Días de estada sobre la norma que se recuperan con la reducción elegida.
+	measure 'Días liberables' = [Días de estada sobre la norma] * [Reducción de estada %]
+		formatString: #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: e95e08f9-7b49-50f6-b157-d5fa7d12dabe
+
+	/// Días liberables expresados en camas disponibles todo el periodo.
+	measure 'Camas equivalentes liberadas' = DIVIDE([Días liberables], [Días del periodo])
+		formatString: #,##0.0
+		displayFolder: 7. Capacidad
+		lineageTag: 17b261cc-7f23-57b7-bf47-46c7f14d64da
+
+	/// Pacientes más que caben en los días liberados, a la estada esperada.
+	measure 'Egresos adicionales posibles' = DIVIDE([Días liberables], [Estada esperada (días)])
+		formatString: #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: 1dbab78e-31d5-52be-b28b-a966b28aa8ab
+
+	/// Margen variable de ocupar los días liberados con pacientes nuevos, servicio por servicio.
+	measure 'Margen por estada recuperada' =
+			SUMX(
+			    VALUES(lineas[linea]),
+			    [Días liberables] * CALCULATE([Margen variable por prestación], lineas[area] = "Hospitalizado")
+			)
+		formatString: \$ #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: 7b8f16b8-4b9d-576d-8e28-0727f25ad20c
+
+	/// Suspensiones evitables que se recuperan con la reducción elegida.
+	measure 'Cirugías recuperables' = [Suspensiones evitables] * [Reducción de suspensiones %]
+		formatString: #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: b78b472c-a6e1-5314-901a-b63e88471a27
+
+	/// Margen variable de las cirugías recuperadas, al margen variable promedio de pabellón.
+	measure 'Margen por cirugías recuperadas' = [Cirugías recuperables] * CALCULATE([Margen variable por prestación], lineas[linea] = "Pabellón")
+		formatString: \$ #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: 97ffc722-db3b-5780-8965-1d22ba34144f
+
+	/// Margen variable que se recupera con las dos palancas.
+	measure 'Margen potencial' = [Margen por estada recuperada] + [Margen por cirugías recuperadas]
+		formatString: \$ #,##0
+		displayFolder: 7. Capacidad
+		lineageTag: fe2c2c69-d4c7-59b1-ae8e-8cbe541bfddc
+
+	/// Ocupación de camas para la tarjeta.
+	measure 'Portada ocupación' = FORMAT([Ocupación de camas %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 12b61103-60bb-5006-b040-32a7e135156d
+
+	/// Suspensión de cirugías para la tarjeta.
+	measure 'Portada suspensión' = FORMAT([Suspensión de cirugías %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 9782dbfd-321f-5abf-8f90-ca25cb2dd180
+
+	/// Atenciones de urgencia en meta para la tarjeta.
+	measure 'Portada urgencia' = FORMAT([Atenciones en meta de espera %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 9b948513-ed7a-5ad8-809d-733a21b53006
+
+	/// Margen de contribución para la tarjeta.
+	measure 'Portada margen' = FORMAT([Margen de contribución %], "0.0%")
+		displayFolder: 0. Portada
+		lineageTag: 0df63bfa-e810-517e-b4c4-335ff73cb732
+
+	/// Primera frase: el mes de mayor ocupación y la espera de cama en urgencia de ese mes.
+	measure 'Portada frase 1' =
+			VAR meses = ADDCOLUMNS(VALUES(camas[fecha]), "@ocupacion", [Ocupación de camas %])
+			VAR pico = TOPN(1, meses, [@ocupacion], DESC)
+			VAR mes = MAXX(pico, camas[fecha])
+			VAR espera = CALCULATE([Espera de cama promedio (h)], REMOVEFILTERS(Calendario), urgencia[fecha] = mes)
+			RETURN
+			    "Mes más exigido: " & FORMAT(mes, "mmm yyyy") & ", con " & FORMAT(MAXX(pico, [@ocupacion]), "0%")
+			        & " de ocupación y " & FORMAT(espera, "0.0") & " h de espera de cama en urgencia"
+		displayFolder: 0. Portada
+		lineageTag: 67d3473e-06f6-53cf-b321-3c3c71273a20
+
+	/// Segunda frase: la clínica que más suspende y cuánto de eso era evitable.
+	measure 'Portada frase 2' =
+			VAR peor = TOPN(1, VALUES(sucursales[sucursal]), [Suspensión de cirugías %], DESC)
+			VAR clinica = MAXX(peor, sucursales[sucursal])
+			RETURN
+			    clinica & " suspende " & FORMAT(CALCULATE([Suspensión de cirugías %], sucursales[sucursal] = clinica), "0.0%")
+			        & " de sus cirugías; " & FORMAT(CALCULATE([Suspensiones evitables %], sucursales[sucursal] = clinica), "0%")
+			        & " por causas evitables"
+		displayFolder: 0. Portada
+		lineageTag: ff1c33e3-5187-5bf7-9270-1f229e4f5d72
+
+	column fecha
+		dataType: dateTime
+		isHidden
+		formatString: Short Date
+		lineageTag: 034440eb-0e1f-5528-bdd2-379454b46f69
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column anio
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 07a17d0a-5cab-5e36-a898-6aa297704aa4
+		summarizeBy: none
+		sourceColumn: anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mes
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ba14d61a-d718-560c-bb89-f8f8401f87af
+		summarizeBy: none
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column sucursal
+		dataType: string
+		isHidden
+		lineageTag: 3664e0b3-c918-589c-b0b9-f5b01e1e1f5d
+		summarizeBy: none
+		sourceColumn: sucursal
+
+		annotation SummarizationSetBy = Automatic
+
+	column linea
+		dataType: string
+		isHidden
+		lineageTag: 3af95d7d-c80e-5893-90e4-173d834a42c6
+		summarizeBy: none
+		sourceColumn: linea
+
+		annotation SummarizationSetBy = Automatic
+
+	column prevision
+		dataType: string
+		lineageTag: c4df7ae4-ff7b-5172-bc46-844e8dc3a675
+		summarizeBy: none
+		sourceColumn: prevision
+
+		annotation SummarizationSetBy = Automatic
+
+	column prestaciones
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e2a1c8f1-772f-57d1-97dd-f36f1f13e8ec
+		summarizeBy: none
+		sourceColumn: prestaciones
+
+		annotation SummarizationSetBy = Automatic
+
+	column ingreso
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 01d42f05-d899-57a1-9d2d-d9db32055363
+		summarizeBy: none
+		sourceColumn: ingreso
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_personal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b7229f02-8e63-5c52-bd63-992939d78893
+		summarizeBy: none
+		sourceColumn: costo_personal
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_insumos
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 18ca138d-de75-5a25-b1ea-ce9238783897
+		summarizeBy: none
+		sourceColumn: costo_insumos
+
+		annotation SummarizationSetBy = Automatic
+
+	column costo_honorarios
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6bda840b-b7dc-5a67-a066-385eb5558bd1
+		summarizeBy: none
+		sourceColumn: costo_honorarios
+
+		annotation SummarizationSetBy = Automatic
+
+	partition produccion = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("produccion.csv", {{"fecha", type date}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"sucursal", type text}, {"linea", type text}, {"prevision", type text}, {"prestaciones", Int64.Type}, {"ingreso", Int64.Type}, {"costo_personal", Int64.Type}, {"costo_insumos", Int64.Type}, {"costo_honorarios", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

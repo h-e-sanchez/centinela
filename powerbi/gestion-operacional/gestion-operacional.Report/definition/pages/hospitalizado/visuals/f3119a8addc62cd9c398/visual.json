@@ -1,0 +1,267 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "f3119a8addc62cd9c398",
+  "position": {
+    "x": 24,
+    "y": 216,
+    "z": 700,
+    "height": 240,
+    "width": 700,
+    "tabOrder": 700
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "lineas"
+                    }
+                  },
+                  "Property": "linea"
+                }
+              },
+              "queryRef": "lineas.linea",
+              "nativeQueryRef": "linea",
+              "active": true,
+              "displayName": "Servicio"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Camas dotadas (promedio)"
+                }
+              },
+              "queryRef": "camas.Camas dotadas (promedio)",
+              "nativeQueryRef": "Camas dotadas (promedio)",
+              "displayName": "Camas"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Ocupación de camas %"
+                }
+              },
+              "queryRef": "camas.Ocupación de camas %",
+              "nativeQueryRef": "Ocupación de camas %",
+              "displayName": "Ocupación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Estada media (días)"
+                }
+              },
+              "queryRef": "camas.Estada media (días)",
+              "nativeQueryRef": "Estada media (días)",
+              "displayName": "Estada"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Estada esperada (días)"
+                }
+              },
+              "queryRef": "camas.Estada esperada (días)",
+              "nativeQueryRef": "Estada esperada (días)",
+              "displayName": "Esperada"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Índice de estada (IEMA)"
+                }
+              },
+              "queryRef": "camas.Índice de estada (IEMA)",
+              "nativeQueryRef": "Índice de estada (IEMA)",
+              "displayName": "IEMA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "camas"
+                    }
+                  },
+                  "Property": "Días de estada sobre la norma"
+                }
+              },
+              "queryRef": "camas.Días de estada sobre la norma",
+              "nativeQueryRef": "Días de estada sobre la norma",
+              "displayName": "Días sobre la norma"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Por servicio'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#23211C'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -660,6 +660,90 @@
           "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/08-estados-financieros.md"
         }
       ]
+    },
+    {
+      "slug": "gestion-operacional",
+      "titulo": "Gestión operacional clínica",
+      "resumen": "Gestión operacional de la red de tres clínicas de la empresa de Salud: ocupación y estada hospitalaria (IEMA), utilización y suspensiones de pabellón, tiempos de urgencia por categoría de triage, box y lista de espera ambulatoria, TAT de laboratorio e imagenología, un tablero de 13 indicadores con semáforo, capacidad liberable con what-if y margen de contribución por línea y previsión.",
+      "tema": "Gestión operacional · Salud",
+      "color": "#2F6B6B",
+      "fecha": "2026-10-09",
+      "destacado": false,
+      "estado": "en-preparacion",
+      "modelo": "powerbi/gestion-operacional",
+      "datos": "data/gestion-operacional",
+      "prefijo": "gestion-operacional",
+      "habilidades": [
+        "Indicadores hospitalarios (ocupación, IEMA, rotación)",
+        "Eficiencia de pabellones y Pareto de suspensiones",
+        "Tiempos de urgencia por categoría de triage",
+        "Tablero de metas con semáforo",
+        "What-if de capacidad liberable al margen variable",
+        "Margen de contribución por línea y previsión",
+        "Producción que cuadra con la operación",
+        "Proyecto PBIP versionado en Git"
+      ],
+      "historias": [
+        {
+          "industria": "Invierno",
+          "resultado": "6,2 h",
+          "tono": "critica",
+          "texto": "En julio de 2026 la ocupación llega a 92% (UCI y pediatría en 97%): la espera de cama en urgencia casi se triplica y las atenciones en meta caen a 67%."
+        },
+        {
+          "industria": "Pabellones",
+          "resultado": "15,4%",
+          "tono": "critica",
+          "texto": "La Clínica Poniente suspende el doble que Oriente, más de 9 de cada 10 por causas evitables, y solo el 45% de sus primeras cirugías parte a la hora."
+        },
+        {
+          "industria": "Estada",
+          "resultado": "IEMA 1,26",
+          "tono": "neutro",
+          "texto": "Médico-quirúrgico de la Clínica Centro está 26% sobre la norma de estada: camas inmovilizadas justo cuando el invierno las necesita."
+        }
+      ],
+      "descargas": [
+        {
+          "etiqueta": "Datos en CSV",
+          "archivo": "descargas/gestion-operacional-datos-csv.zip",
+          "detalle": "diez tablas, con diccionario de columnas"
+        },
+        {
+          "etiqueta": "Datos en Excel",
+          "archivo": "descargas/gestion-operacional-datos.xlsx",
+          "detalle": "una hoja por tabla y un diccionario"
+        },
+        {
+          "etiqueta": "Reporte .pbix",
+          "archivo": "descargas/gestion-operacional.pbix",
+          "detalle": "se abre con Power BI Desktop",
+          "opcional": true
+        },
+        {
+          "etiqueta": "Proyecto PBIP",
+          "archivo": "descargas/gestion-operacional-pbip.zip",
+          "detalle": "modelo TMDL y reporte PBIR como código"
+        }
+      ],
+      "tecnico": [
+        {
+          "etiqueta": "Proyecto Power BI en GitHub",
+          "url": "https://github.com/h-e-sanchez/centinela/tree/main/powerbi/gestion-operacional"
+        },
+        {
+          "etiqueta": "Generador de datos",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/data/generar_gestion_operacional.py"
+        },
+        {
+          "etiqueta": "Tests de coherencia e historias",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/tests/test_gestion_operacional.py"
+        },
+        {
+          "etiqueta": "Especificación",
+          "url": "https://github.com/h-e-sanchez/centinela/blob/main/docs/especificaciones/09-gestion-operacional.md"
+        }
+      ]
     }
   ],
   "proximos": []

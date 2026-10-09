@@ -1,0 +1,11 @@
+linea,area,unidad,orden
+UCI,Hospitalizado,día cama,1
+UTI,Hospitalizado,día cama,2
+Médico-quirúrgico,Hospitalizado,día cama,3
+Pediatría,Hospitalizado,día cama,4
+Maternidad,Hospitalizado,día cama,5
+Pabellón,Pabellones,cirugía,6
+Urgencia,Urgencia,atención,7
+Consultas,Ambulatorio,consulta,8
+Laboratorio,Apoyo,examen,9
+Imagenología,Apoyo,examen,10

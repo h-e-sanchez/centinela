@@ -68,6 +68,14 @@ medidas, historias sembradas y tests, y todos abren con **portada y resumen** y 
   cascada de precios, margen de contribución por canal, efecto precio-volumen-mezcla y curva
   ballena de clientes. Sus ingresos cuadran con el #1.
 
+### Reporte #9 — la empresa de Salud, vista desde la operación
+
+- **#9 Gestión operacional clínica** ([especificación](docs/especificaciones/09-gestion-operacional.md)):
+  camas, pabellones, urgencia, ambulatorio y apoyo diagnóstico de las tres clínicas, con un
+  tablero de metas, capacidad liberable y margen por línea. Es el primer reporte de una sola
+  empresa: los volúmenes son de tamaño real y no cuadran con el #1, pero la producción sí cuadra
+  con la operación.
+
 ---
 
 ## Camino A — Motor (Python) — hecho
@@ -164,6 +172,8 @@ interactivo, descargas y guía `.md`, y una sección secundaria "Cómo está hec
 - [ ] Reporte #7: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Reporte #8 · Del libro diario a los EEFF: especificación, libro diario en partida doble cuadrado con el #1, PBIP de 10 páginas, guía, glosario y descargas (catálogo «en preparación»; sin consolidación)
 - [ ] Reporte #8: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
+- [x] Reporte #9 · Gestión operacional clínica: especificación, generador con tests de coherencia, PBIP de 10 páginas, guía, glosario y descargas (catálogo «en preparación»)
+- [ ] Reporte #9: abierto en Desktop, publicado en la web y `.pbix` exportado (manual)
 - [x] Ayudas de lectura, piloto en el #6: ícono ⓘ por visual, tooltips con cifras, botón «Glosario →» y fichas «Cómo se calcula» (PR #45 y #48)
 - [ ] Ayudas de lectura en los otros siete reportes: plan por tandas en [`docs/plan-ayudas-de-lectura.md`](docs/plan-ayudas-de-lectura.md)
 
@@ -217,6 +227,20 @@ name or data appears anywhere in this repo.
 ---
 
 ## Bitácora
+
+### 2026-10-09 — Reporte #9: Gestión operacional clínica
+
+Generador `data/generar_gestion_operacional.py`: operación mensual de las tres clínicas de Salud
+(enero de 2025 a septiembre de 2026) en camas, pabellones, suspensiones por causa, urgencia por
+categoría de triage, ambulatorio, apoyo diagnóstico y producción con costos directos.
+`tests/test_gestion_operacional.py` verifica que la producción salga de la operación, que las
+suspensiones por causa cuadren con pabellones, la integridad de cada fila y tres historias:
+- invierno, con 92% de ocupación y 6,2 h de espera de cama;
+- Poniente, con 15,4% de suspensión, más de 90% evitable;
+- Centro, con IEMA 1,26 en médico-quirúrgico.
+
+Proyecto PBIP `powerbi/gestion-operacional/`: 14 tablas (tablero de metas y dos parámetros what-if
+desconectados) y 10 páginas.
 
 ### 2026-10-06 — Reporte #5: Capital de trabajo y ciclo de caja
 

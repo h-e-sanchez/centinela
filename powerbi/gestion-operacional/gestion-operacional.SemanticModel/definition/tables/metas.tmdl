@@ -1,0 +1,148 @@
+/// Tablero de indicadores: meta y sentido de cada indicador operacional (desconectada).
+table metas
+	lineageTag: 7a4ce50e-ad9f-5c3a-a28e-2b6c4d0910fb
+
+	/// Valor del indicador de la fila, calculado con su medida.
+	measure 'Valor del indicador' =
+			SWITCH(
+			    SELECTEDVALUE(metas[indicador]),
+			    "Ocupación de camas", [Ocupación de camas %],
+			    "Índice de estada (IEMA)", [Índice de estada (IEMA)],
+			    "Reingresos a 30 días", [Reingresos a 30 días %],
+			    "Utilización de pabellón", [Utilización de pabellón %],
+			    "Suspensión de cirugías", [Suspensión de cirugías %],
+			    "Primera cirugía a la hora", [Primera cirugía a la hora %],
+			    "Atenciones de urgencia en meta", [Atenciones en meta de espera %],
+			    "Abandono de urgencia", [Abandono de urgencia %],
+			    "Espera de cama desde urgencia", [Espera de cama promedio (h)],
+			    "Inasistencia ambulatoria", [Inasistencia %],
+			    "Utilización de box", [Utilización de box %],
+			    "Exámenes de urgencia en meta", [Exámenes de urgencia en meta %],
+			    "Margen de contribución", [Margen de contribución %]
+			)
+		formatString: 0.00
+		displayFolder: 8. Indicadores
+		lineageTag: c86e6b78-c6a5-522f-a5c2-016f9ce351d8
+
+	/// Meta del indicador de la fila.
+	measure 'Meta del indicador' = SELECTEDVALUE(metas[meta])
+		formatString: 0.00
+		displayFolder: 8. Indicadores
+		lineageTag: 3ff5f88b-bfa4-5782-a759-2d8328c4c6cf
+
+	/// Área a la que pertenece el indicador.
+	measure 'Área del indicador' = SELECTEDVALUE(metas[area])
+		displayFolder: 8. Indicadores
+		lineageTag: ca97dae2-047f-5d91-a717-c4dcfc803dda
+
+	/// Verdadero si el valor está del lado correcto de la meta (sobre ella si el sentido es «mayor», bajo ella si es «menor»).
+	measure 'Cumple la meta' =
+			VAR v = [Valor del indicador]
+			VAR objetivo = [Meta del indicador]
+			RETURN
+			    IF(
+			        NOT ISBLANK(v),
+			        IF(SELECTEDVALUE(metas[sentido]) = "mayor", v >= objetivo, v <= objetivo)
+			    )
+		displayFolder: 8. Indicadores
+		lineageTag: 3781e4f2-7e1d-5ca7-a672-17ee7b332d47
+
+	/// Valor del indicador con su formato (porcentaje, horas o índice).
+	measure 'Valor (texto)' =
+			VAR v = [Valor del indicador]
+			VAR f = SELECTEDVALUE(metas[formato])
+			RETURN
+			    IF(
+			        NOT ISBLANK(v),
+			        SWITCH(f, "pct", FORMAT(v, "0.0%"), "horas", FORMAT(v, "0.0") & " h", FORMAT(v, "0.00"))
+			    )
+		displayFolder: 8. Indicadores
+		lineageTag: 50a3ecc3-3a14-5eca-9b03-b6d312019dcd
+
+	/// Meta con su sentido: ≥ si hay que superarla, ≤ si no hay que pasarla.
+	measure 'Meta (texto)' =
+			VAR v = [Meta del indicador]
+			VAR f = SELECTEDVALUE(metas[formato])
+			RETURN
+			    IF(
+			        NOT ISBLANK(v),
+			        IF(SELECTEDVALUE(metas[sentido]) = "mayor", "≥ ", "≤ ") & SWITCH(f, "pct", FORMAT(v, "0.0%"), "horas", FORMAT(v, "0.0") & " h", FORMAT(v, "0.00"))
+			    )
+		displayFolder: 8. Indicadores
+		lineageTag: 87ea1571-e837-59c1-8394-0f043d64eea8
+
+	/// En meta o fuera de meta.
+	measure 'Estado del indicador' = IF(NOT ISBLANK([Cumple la meta]), IF([Cumple la meta], "En meta", "Fuera de meta"))
+		displayFolder: 8. Indicadores
+		lineageTag: 4aab92ba-36cc-5ccf-9741-a043814ca81c
+
+	/// Color de fondo del estado: verde en meta, rojo fuera de meta.
+	measure 'Color del estado' = IF(NOT ISBLANK([Cumple la meta]), IF([Cumple la meta], "#DCE8D5", "#F3D6CF"))
+		displayFolder: 8. Indicadores
+		lineageTag: d7b46947-4116-5bc4-9699-32a5767e621d
+
+	column indicador
+		dataType: string
+		lineageTag: 68cbacbd-99cc-5992-8503-43ecb6a25503
+		summarizeBy: none
+		sourceColumn: indicador
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column area
+		dataType: string
+		isHidden
+		lineageTag: d028ece7-8ae1-5ea7-8803-a5fa2b0e32a7
+		summarizeBy: none
+		sourceColumn: area
+
+		annotation SummarizationSetBy = Automatic
+
+	column meta
+		dataType: double
+		isHidden
+		formatString: 0.00
+		lineageTag: 71123cd0-6f4b-5b9e-afde-56c8c6884201
+		summarizeBy: none
+		sourceColumn: meta
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentido
+		dataType: string
+		isHidden
+		lineageTag: 853c979b-d657-5331-bb3c-4514e68cbc2f
+		summarizeBy: none
+		sourceColumn: sentido
+
+		annotation SummarizationSetBy = Automatic
+
+	column formato
+		dataType: string
+		isHidden
+		lineageTag: 26971d3b-d261-538c-95fb-e82525c5b46a
+		summarizeBy: none
+		sourceColumn: formato
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 32fdcfdf-dee8-5366-b2ce-23b5ebf91ce5
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition metas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("metas.csv", {{"indicador", type text}, {"area", type text}, {"meta", type number}, {"sentido", type text}, {"formato", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table

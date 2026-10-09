@@ -1,0 +1,49 @@
+/// Dimensión: líneas de producción (servicios clínicos, pabellón, urgencia, consultas y apoyo) y su área.
+table lineas
+	lineageTag: 99473c82-e2dc-5b3a-8cf2-e7a93a1f56db
+
+	column linea
+		dataType: string
+		lineageTag: 8f2ffe2b-2836-5582-8eb6-4bcd34799a6d
+		summarizeBy: none
+		sourceColumn: linea
+		sortByColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	column area
+		dataType: string
+		lineageTag: 0b41ae3d-ab57-5bdc-b36d-9d2429d17789
+		summarizeBy: none
+		sourceColumn: area
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidad
+		dataType: string
+		isHidden
+		lineageTag: 9bef0826-cf89-5e92-ae65-a0cae430da0c
+		summarizeBy: none
+		sourceColumn: unidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column orden
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 897960d5-86c0-5c26-897f-ce8d4505f8e3
+		summarizeBy: none
+		sourceColumn: orden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lineas = m
+		mode: import
+		source =
+				let
+				    Origen = LeerCsv("lineas.csv", {{"linea", type text}, {"area", type text}, {"unidad", type text}, {"orden", Int64.Type}})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
