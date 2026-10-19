@@ -1,4 +1,4 @@
-# Glosario: Presupuesto vs. Real por industria
+# Glosario: Control presupuestario y forecast 3+9
 
 > Qué significa cada concepto del reporte y cómo se calcula. La primera parte lo explica con palabras; la segunda lista **todas** las medidas DAX del modelo, leídas del proyecto PBIP con `herramientas/generar_glosario.py`, así que coinciden con lo que calcula Power BI.
 

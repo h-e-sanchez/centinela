@@ -25,7 +25,7 @@ function titular(h) {
 }
 
 // ------------------------------------------------------------------ panel "en una pantalla"
-// Una opción por reporte (publicados y en preparación) a la izquierda; a la derecha, el resumen,
+// Una opción por reporte (publicados y en preparación) a la izquierda; a la derecha, el subtítulo,
 // las cifras de la historia y el reporte embebido de la opción elegida.
 
 function opcion(rep, i, alElegir) {
@@ -46,7 +46,7 @@ function opcion(rep, i, alElegir) {
 function visor(rep) {
   const partes = [
     el("h2", { texto: rep.titulo }),
-    el("p", { clase: "hint", texto: rep.resumen }),
+    el("p", { clase: "hint", texto: rep.subtitulo || rep.resumen }),
   ];
   if (rep.historias?.length) {
     partes.push(el("ul", { clase: "cifras" }, rep.historias.map((h) =>
@@ -98,7 +98,7 @@ function tarjeta(rep) {
     img,
     el("p", { clase: "eyebrow", texto: tema }),
     el("h3", { texto: rep.titulo }),
-    el("p", { clase: "tarjeta-resumen", texto: rep.resumen }),
+    el("p", { clase: "tarjeta-resumen", texto: rep.subtitulo || rep.resumen }),
     chips(rep.habilidades.slice(0, 3)),
   ]);
   if (rep.color) t.style.setProperty("--acento", rep.color);
@@ -109,7 +109,7 @@ function proximo(p) {
   const t = el("div", { clase: "tarjeta-rep proximo" }, [
     el("p", { clase: "eyebrow", texto: `En preparación · ${p.tema}` }),
     el("h3", { texto: p.titulo }),
-    el("p", { clase: "tarjeta-resumen", texto: p.resumen }),
+    el("p", { clase: "tarjeta-resumen", texto: p.subtitulo || p.resumen }),
   ]);
   if (p.color) t.style.setProperty("--acento", p.color);
   return t;

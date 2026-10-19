@@ -1,4 +1,4 @@
-# Guía: Pricing y márgenes por canal
+# Guía: Control de gestión comercial: precio, volumen y mezcla
 
 > Reporte de control de gestión comercial en Power BI que abre la venta del reporte Presupuesto vs. Real: a qué precio se vendió, cuánto del precio de lista se pierde en descuentos, qué canal deja margen después de su costo de servir y si la variación de ingresos vino del precio, del volumen o de la mezcla. Todos los datos son sintéticos.
 

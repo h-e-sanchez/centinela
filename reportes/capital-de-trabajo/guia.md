@@ -1,4 +1,4 @@
-# Guía: Capital de trabajo y ciclo de caja
+# Guía: Finanzas operativas: ciclo de caja y flujo a 13 semanas
 
 > Reporte de finanzas operativas en Power BI que muestra cuándo llega a la caja lo que gana la empresa: cuánto tarda en cobrar, cuánto en pagar, cuánto inventario mantiene, cuántos días espera la caja entre pagar y cobrar, y cómo viene el saldo de las próximas 13 semanas. Todos los datos son sintéticos.
 

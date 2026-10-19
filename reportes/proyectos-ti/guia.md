@@ -1,4 +1,4 @@
-# Guía: Proyectos tecnológicos · entrega, capacidad y colaboración entre equipos
+# Guía: Control de gestión de proyectos tecnológicos
 
 > Reporte de control de gestión en Power BI sobre la cartera de TI de tres empresas, armado desde el historial de un Jira ágil: cuándo termina de verdad cada proyecto, qué equipo está cargado y dónde se traba el trabajo cuando pasa de un equipo a otro. Todos los datos son sintéticos.
 

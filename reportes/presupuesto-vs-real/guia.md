@@ -1,4 +1,4 @@
-# Guía: Presupuesto vs. Real por industria
+# Guía: Control presupuestario y forecast 3+9
 
 > Reporte de control de gestión en Power BI que muestra dónde y cuándo la ejecución se aleja del presupuesto y del forecast, qué efecto tiene en el Resultado Operacional y en qué sucursal y cuenta se origina. Todos los datos son sintéticos.
 

@@ -1,4 +1,4 @@
-# Guía: Equidad salarial y bandas · por persona y por servicio
+# Guía: Compensaciones: bandas, compa-ratio y equidad
 
 > Reporte de People Analytics en Power BI sobre la estructura salarial de tres empresas: quién está fuera de su banda, qué servicio paga distinto por el mismo grado, si hay brecha de género entre cargos equivalentes, cómo se compara con el mercado y cuánto cuesta corregir. Todos los datos son sintéticos.
 

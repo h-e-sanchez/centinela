@@ -15,7 +15,7 @@ import pytest
 RAIZ = Path(__file__).resolve().parent.parent
 REPORTES = RAIZ / "reportes"
 CATALOGO = json.loads((REPORTES / "catalogo.json").read_text(encoding="utf-8"))["reportes"]
-CAMPOS = {"slug", "titulo", "resumen", "tema", "fecha", "modelo", "datos", "prefijo", "habilidades", "descargas", "tecnico"}
+CAMPOS = {"slug", "titulo", "subtitulo", "resumen", "tema", "fecha", "modelo", "datos", "prefijo", "habilidades", "descargas", "tecnico"}
 IDS = [r["slug"] for r in CATALOGO]
 
 _spec = importlib.util.spec_from_file_location("empaquetar", RAIZ / "herramientas" / "empaquetar_descargas.py")

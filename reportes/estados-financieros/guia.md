@@ -1,4 +1,4 @@
-# Guía: Del libro diario a los EEFF
+# Guía: Cierre contable y estados financieros
 
 > Reporte de contabilidad y finanzas en Power BI que recorre el ciclo completo de tres empresas: cada hecho económico registrado en partida doble, y el balance, el estado de resultados y el flujo de efectivo que salen de esos asientos, con sus indicadores y las cuadraturas de cierre. Todos los datos son sintéticos.
 

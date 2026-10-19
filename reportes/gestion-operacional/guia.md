@@ -1,4 +1,4 @@
-# Guía: Gestión operacional clínica
+# Guía: Tablero operacional de una red de clínicas
 
 > Reporte de gestión operacional en Power BI para una red de tres clínicas: capacidad y uso de camas, pabellones, urgencia, ambulatorio y apoyo diagnóstico; un tablero de 13 indicadores contra su meta; la capacidad que se recupera sin invertir y el margen de cada línea. Todos los datos son sintéticos.
 
