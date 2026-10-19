@@ -2,7 +2,8 @@
   "reportes": [
     {
       "slug": "presupuesto-vs-real",
-      "titulo": "Presupuesto vs. Real por industria",
+      "titulo": "Control presupuestario y forecast 3+9",
+      "subtitulo": "El cierre mensual de un comité: KPI, estado de resultados contra presupuesto y proyección del año.",
       "resumen": "Control de gestión de tres empresas sintéticas, 2025 y 2026, por sucursal y cuenta: KPI ejecutivos, semáforo, Estado de Resultados, Forecast 3+9, comparación interanual con grupo de cálculo, puente del resultado con drill y estructura de gasto fijo y variable.",
       "tema": "Control de gestión · FP&A",
       "color": "#1F4E79",
@@ -87,7 +88,8 @@
     },
     {
       "slug": "workforce",
-      "titulo": "Workforce: dotación, ausentismo y cobertura",
+      "titulo": "People Analytics: dotación, rotación y ausentismo",
+      "subtitulo": "Los indicadores de una gerencia de personas, con pronóstico 2027 por credibilidad actuarial.",
       "resumen": "People Analytics de las tres empresas sintéticas de la vitrina (Manufactura, Energía y Salud): dotación y rotación, los tres índices de ausentismo de la Dipres, Factor Bradford, costo de cubrir las ausencias con tres pilotos evaluados contra su grupo de control y pronóstico 2027 con credibilidad actuarial.",
       "tema": "People Analytics",
       "color": "#3E7C59",
@@ -169,7 +171,8 @@
     },
     {
       "slug": "contratistas",
-      "titulo": "Contratistas y mantenimiento: del estado de pago a la orden de trabajo",
+      "titulo": "Control de contratistas y mantenimiento",
+      "subtitulo": "Auditoría de estados de pago, cumplimiento del plan preventivo, backlog, MTTR y MTBF.",
       "resumen": "Las tres empresas de la vitrina auditan los estados de pago de sus contratistas contra las órdenes de trabajo cerradas y las tarifas del contrato, con reglas en SQL versionado: cobros sin OT, cantidades sobre lo ejecutado y precios fuera de contrato. Incluye monto observado y evitado, cumplimiento del plan preventivo, backlog, MTTR y MTBF, y un ranking de contratistas.",
       "tema": "Control de gestión · Mantenimiento",
       "color": "#B5562E",
@@ -254,7 +257,8 @@
     },
     {
       "slug": "proyectos-ti",
-      "titulo": "Proyectos tecnológicos: entrega, capacidad y colaboración entre equipos",
+      "titulo": "Control de gestión de proyectos tecnológicos",
+      "subtitulo": "Entrega, capacidad de los equipos y dependencias entre ellos, desde el historial de Jira.",
       "resumen": "Control de gestión de la cartera de TI de las tres empresas sintéticas de la vitrina, desde el historial de un Jira ágil: avance y consumo de presupuesto, velocidad y previsibilidad por sprint, tiempo de ciclo por percentil, carga de los equipos, quién bloquea a quién y fecha de término pronosticada con Monte Carlo.",
       "tema": "Control de gestión · Proyectos TI",
       "color": "#5B4B8A",
@@ -340,7 +344,8 @@
     },
     {
       "slug": "capital-de-trabajo",
-      "titulo": "Capital de trabajo y ciclo de caja",
+      "titulo": "Finanzas operativas: ciclo de caja y flujo a 13 semanas",
+      "subtitulo": "Antigüedad de cartera, pagos a proveedores e inventario, cuadrados al peso con el presupuesto.",
       "resumen": "Finanzas operativas de las tres empresas sintéticas de la vitrina, con facturas que cuadran al peso con el reporte Presupuesto vs. Real: cobranza y antigüedad de cartera, pagos a proveedores, inventario, ciclo de conversión de caja (DSO + DIO − DPO) y un flujo de caja a 13 semanas con saldo mínimo ajustable.",
       "tema": "Finanzas operativas",
       "color": "#2E7D8C",
@@ -427,7 +432,8 @@
     },
     {
       "slug": "compensaciones",
-      "titulo": "Equidad salarial y bandas: por persona y por servicio",
+      "titulo": "Compensaciones: bandas, compa-ratio y equidad",
+      "subtitulo": "La estructura salarial por persona y por servicio, con seguridad por fila para cada jefatura.",
       "resumen": "People Analytics de la estructura salarial de las tres empresas sintéticas de la vitrina, con las mismas personas del reporte Workforce: bandas por grado, compa-ratio, quién está fuera de banda, qué servicio paga distinto por el mismo grado, brecha de género en cargos equivalentes, competitividad frente al mercado y costo de corregir, con seguridad por fila por servicio.",
       "tema": "People Analytics · Compensaciones",
       "color": "#8A5A44",
@@ -514,7 +520,8 @@
     },
     {
       "slug": "pricing-margenes",
-      "titulo": "Pricing y márgenes por canal",
+      "titulo": "Control de gestión comercial: precio, volumen y mezcla",
+      "subtitulo": "Rentabilidad por canal, cliente y producto, con un simulador de precio.",
       "resumen": "Control de gestión comercial de las tres empresas sintéticas de la vitrina, con ingresos que cuadran al peso con el reporte Presupuesto vs. Real: cascada del precio de lista al bolsillo, margen de contribución por canal y producto, efecto precio-volumen-mezcla, descuentos fuera de política, rentabilidad por cliente y un simulador de precio.",
       "tema": "Control de gestión · Comercial",
       "color": "#7A6A1F",
@@ -601,7 +608,8 @@
     },
     {
       "slug": "estados-financieros",
-      "titulo": "Del libro diario a los EEFF",
+      "titulo": "Cierre contable y estados financieros",
+      "subtitulo": "Balance, resultados y flujo de efectivo con indicadores financieros; el EBITDA cuadra con el presupuesto.",
       "resumen": "Contabilidad de punta a punta de las tres empresas sintéticas de la vitrina: libro diario en partida doble, balance de comprobación, estado de resultados frente al presupuesto, balance general, flujo de efectivo indirecto, indicadores financieros y las cuadraturas del cierre anual. El EBITDA cuadra con el reporte Presupuesto vs. Real.",
       "tema": "Finanzas · Contabilidad",
       "color": "#2F5D50",
@@ -687,7 +695,8 @@
     },
     {
       "slug": "gestion-operacional",
-      "titulo": "Gestión operacional clínica",
+      "titulo": "Tablero operacional de una red de clínicas",
+      "subtitulo": "13 indicadores con semáforo, capacidad liberable con what-if y margen por línea y previsión.",
       "resumen": "Gestión operacional de la red de tres clínicas de la empresa de Salud: ocupación y estada hospitalaria (IEMA), utilización y suspensiones de pabellón, tiempos de urgencia por categoría de triage, box y lista de espera ambulatoria, TAT de laboratorio e imagenología, un tablero de 13 indicadores con semáforo, capacidad liberable con what-if y margen de contribución por línea y previsión.",
       "tema": "Gestión operacional · Salud",
       "color": "#2F6B6B",

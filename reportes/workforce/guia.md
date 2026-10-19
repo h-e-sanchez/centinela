@@ -1,4 +1,4 @@
-# Guía: Workforce · dotación, ausentismo y cobertura
+# Guía: People Analytics: dotación, rotación y ausentismo
 
 > Reporte de People Analytics en Power BI que conecta tres preguntas que suelen vivir en planillas separadas: cuánta gente tenemos, cuánta falta y cuánto cuesta reemplazarla, en tres industrias. Todos los datos son sintéticos.
 

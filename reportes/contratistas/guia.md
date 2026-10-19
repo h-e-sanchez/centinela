@@ -1,4 +1,4 @@
-# Guía: Contratistas y mantenimiento · del estado de pago a la orden de trabajo
+# Guía: Control de contratistas y mantenimiento
 
 > Reporte de control de gestión en Power BI que cruza lo que cobran los contratistas de mantenimiento con lo que de verdad ejecutaron. Las reglas de auditoría están escritas en SQL versionado y tienen tests. Todos los datos son sintéticos.
 
